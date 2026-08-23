@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>글자수 세기 및 바이트(Byte) 계산기 | 자소서·블로그</title>
+  <meta name="description" content="공백 포함/제외 글자 수, 단어 수, 바이트(Byte) 용량 및 원고지 분량을 실시간으로 자동 계산합니다.">
+  
+  <!-- 구글 애드센스 메타 태그 & 스크립트 -->
+  <meta name="google-adsense-account" content="ca-pub-6122968996738347">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6122968996738347" crossorigin="anonymous"></script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased py-10 px-4">
+
+  <div class="max-w-2xl mx-auto bg-white rounded-2xl shadow-lg border border-gray-100 p-6 md:p-8">
+    
+    <!-- 상단 탭 -->
+    <nav class="flex flex-wrap gap-2 justify-between items-center mb-6 border-b pb-3 text-xs md:text-sm">
+      <div class="flex gap-3">
+        <a href="/" class="text-gray-500 hover:text-blue-600">대출</a>
+        <a href="/deposit.html" class="text-gray-500 hover:text-blue-600">예적금</a>
+        <a href="/salary.html" class="text-gray-500 hover:text-blue-600">연봉</a>
+        <a href="/realtor.html" class="text-gray-500 hover:text-blue-600">복비</a>
+      </div>
+      <span class="text-blue-600 font-bold">글자수 세기</span>
+    </nav>
+
+    <header class="text-center mb-6">
+      <h1 class="text-2xl md:text-3xl font-bold text-gray-900 mb-2">실시간 글자수 세기</h1>
+      <p class="text-sm text-gray-500">텍스트를 입력하면 글자 수와 바이트(Byte)가 즉시 계산됩니다.</p>
+    </header>
+
+    <!-- 입력창 -->
+    <div>
+      <textarea id="inputText" rows="8" placeholder="내용을 입력하거나 여기에 복사하여 붙여넣으세요..." oninput="countText()"
+                class="w-full p-4 rounded-xl border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:outline-none text-base leading-relaxed"></textarea>
+      
+      <div class="flex justify-end mt-2">
+        <button onclick="clearText()" class="text-xs text-gray-500 hover:text-red-500 underline">내용 지우기</button>
+      </div>
+    </div>
+
+    <!-- 결과 통계 카드 -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mt-6">
+      <div class="bg-blue-50 p-4 rounded-xl text-center">
+        <span class="text-xs text-blue-600 font-semibold">공백 포함</span>
+        <p id="charWithSpace" class="text-xl md:text-2xl font-black text-blue-950 mt-1">0자</p>
+      </div>
+      <div class="bg-indigo-50 p-4 rounded-xl text-center">
+        <span class="text-xs text-indigo-600 font-semibold">공백 제외</span>
+        <p id="charNoSpace" class="text-xl md:text-2xl font-black text-indigo-950 mt-1">0자</p>
+      </div>
+      <div class="bg-gray-100 p-4 rounded-xl text-center">
+        <span class="text-xs text-gray-600 font-semibold">바이트(Byte)</span>
+        <p id="byteCount" class="text-xl md:text-2xl font-black text-gray-900 mt-1">0 Byte</p>
+      </div>
+      <div class="bg-gray-100 p-4 rounded-xl text-center">
+        <span class="text-xs text-gray-600 font-semibold">단어 수</span>
+        <p id="wordCount" class="text-xl md:text-2xl font-black text-gray-900 mt-1">0개</p>
+      </div>
+    </div>
+
+    <article class="mt-8 pt-6 border-t border-gray-100 text-sm text-gray-600 leading-relaxed space-y-3">
+      <h3 class="font-bold text-gray-900">바이트(Byte) 계산 기준 안내</h3>
+      <ul class="list-disc pl-4 space-y-1">
+        <li><strong>한글/한자/특수문자:</strong> 1글자당 2 Byte 또는 UTF-8 기준 3 Byte로 계산됩니다 (본 도구는 취업 포털 기준인 한글 2 Byte 방식을 적용합니다).</li>
+        <li><strong>영문/숫자/기본 기호/공백:</strong> 1글자당 1 Byte로 계산됩니다.</li>
+      </ul>
+    </article>
+
+  </div>
+
+  <script>
+    function countText() {
+      const text = document.getElementById('inputText').value;
+
+      // 공백 포함 글자수
+      const withSpace = text.length;
+      // 공백 제외 글자수
+      const noSpace = text.replace(/\s/g, '').length;
+      
+      // 단어 수
+      const words = text.trim() ? text.trim().split(/\s+/).length : 0;
+
+      // 바이트 계산 (한글 2Byte, 영문/숫자 1Byte 기준)
+      let bytes = 0;
+      for (let i = 0; i < text.length; i++) {
+        const code = text.charCodeAt(i);
+        if (code > 127) {
+          bytes += 2;
+        } else {
+          bytes += 1;
+        }
+      }
+
+      document.getElementById('charWithSpace').innerText = withSpace.toLocaleString() + '자';
+      document.getElementById('charNoSpace').innerText = noSpace.toLocaleString() + '자';
+      document.getElementById('byteCount').innerText = bytes.toLocaleString() + ' Byte';
+      document.getElementById('wordCount').innerText = words.toLocaleString() + '개';
+    }
+
+    function clearText() {
+      document.getElementById('inputText').value = '';
+      countText();
+    }
+  </script>
+</body>
+</html>
