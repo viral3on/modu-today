@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>연봉 실수령액 계산기 | 4대보험 및 근로소득세 공제</title>
+  <meta name="description" content="국민연금, 건강보험, 장기요양보험, 고용보험 요율과 소득세 간이세액표를 반영한 월 예상 실수령액을 즉시 계산합니다.">
+  
+  <!-- 구글 애드센스 메타 태그 & 스크립트 -->
+  <meta name="google-adsense-account" content="ca-pub-6122968996738347">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6122968996738347" crossorigin="anonymous"></script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased py-10 px-4">
+
+  <div class="max-w-2xl mx-auto bg-white rounded-2xl shadow-lg border border-gray-100 p-6 md:p-8">
+    
+    <!-- 네비게이션 링크 -->
+    <div class="flex justify-between items-center mb-6 border-b pb-3 text-sm">
+      <a href="/" class="text-gray-500 hover:text-blue-600 font-medium">← 대출 계산기</a>
+      <span class="text-blue-600 font-bold">연봉 실수령액 계산기</span>
+    </div>
+
+    <!-- 헤더 -->
+    <header class="text-center mb-6">
+      <h1 class="text-2xl md:text-3xl font-bold text-gray-900 mb-2">연봉 실수령액 계산기</h1>
+      <p class="text-sm text-gray-500">4대 보험료 및 세금을 공제한 실제 월 입금액을 계산합니다.</p>
+    </header>
+
+    <!-- 입력 폼 -->
+    <div class="space-y-4">
+      <div>
+        <label class="block text-sm font-semibold text-gray-700 mb-1">연봉 (원, 세전)</label>
+        <input type="text" id="annualSalary" placeholder="45,000,000" oninput="formatCurrency(this)"
+               class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:outline-none text-base">
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+          <label class="block text-sm font-semibold text-gray-700 mb-1">비과세액 (월, 식대 등)</label>
+          <input type="text" id="nonTaxable" value="200,000" oninput="formatCurrency(this)"
+                 class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:outline-none text-base">
+        </div>
+        <div>
+          <label class="block text-sm font-semibold text-gray-700 mb-1">부양가족 수 (본인 포함)</label>
+          <input type="number" id="familyCount" value="1" min="1" max="10"
+                 class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:outline-none text-base">
+        </div>
+      </div>
+
+      <button onclick="calculateNetSalary()" 
+              class="w-full mt-2 bg-blue-600 hover:bg-blue-700 text-white font-bold py-3.5 rounded-lg transition duration-200 shadow-md">
+        실수령액 계산하기
+      </button>
+    </div>
+
+    <!-- 결과 영역 -->
+    <div id="resultBox" class="hidden mt-8 pt-6 border-t border-gray-200">
+      <h2 class="text-lg font-bold text-gray-900 mb-4">💳 월 예상 수령액 요약</h2>
+      
+      <div class="bg-blue-50 p-5 rounded-xl mb-6 text-center">
+        <span class="text-xs text-blue-600 font-semibold">매월 통장에 입금되는 예상 실수령액</span>
+        <p id="netPayMonthly" class="text-2xl md:text-3xl font-black text-blue-900 mt-1">0원</p>
+      </div>
+
+      <div class="bg-gray-50 p-4 rounded-xl text-sm space-y-2">
+        <div class="flex justify-between font-semibold text-gray-800">
+          <span>세전 월 기본급:</span>
+          <span id="grossMonthly">0원</span>
+        </div>
+        <div class="flex justify-between text-red-600 font-semibold pt-2 border-t border-gray-200">
+          <span>총 공제 금액 (보험+세금):</span>
+          <span id="totalDeduction">- 0원</span>
+        </div>
+        <div class="pl-3 space-y-1 text-xs text-gray-500 border-l-2 border-red-200 ml-1 mt-1">
+          <div class="flex justify-between"><span>국민연금 (4.5%):</span><span id="nps">0원</span></div>
+          <div class="flex justify-between"><span>건강보험 (3.545%):</span><span id="nhic">0원</span></div>
+          <div class="flex justify-between"><span>장기요양 (건보의 12.95%):</span><span id="lti">0원</span></div>
+          <div class="flex justify-between"><span>고용보험 (0.9%):</span><span id="ei">0원</span></div>
+          <div class="flex justify-between"><span>근로소득세 (간이세액):</span><span id="incomeTax">0원</span></div>
+          <div class="flex justify-between"><span>지방소득세 (소득세 10%):</span><span id="localTax">0원</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SEO 설명 콘텐츠 -->
+    <article class="mt-8 pt-6 border-t border-gray-100 text-sm text-gray-600 leading-relaxed space-y-3">
+      <h3 class="font-bold text-gray-900">4대 보험 및 공제 요율 기준</h3>
+      <ul class="list-disc pl-4 space-y-1">
+        <li><strong>국민연금:</strong> 월 과세소득의 4.5% (상한액 기준 적용)</li>
+        <li><strong>건강보험:</strong> 월 과세소득의 3.545%</li>
+        <li><strong>장기요양보험:</strong> 건강보험료의 12.95%</li>
+        <li><strong>고용보험:</strong> 월 과세소득의 0.9%</li>
+      </ul>
+    </article>
+
+  </div>
+
+  <script>
+    function formatCurrency(target) {
+      let val = target.value.replace(/[^0-9]/g, '');
+      target.value = val ? Number(val).toLocaleString() : '';
+    }
+
+    function calculateNetSalary() {
+      const rawSalary = document.getElementById('annualSalary').value.replace(/,/g, '');
+      const annualSalary = parseFloat(rawSalary);
+      const rawNonTax = document.getElementById('nonTaxable').value.replace(/,/g, '');
+      const nonTaxable = parseFloat(rawNonTax) || 0;
+      const family = parseInt(document.getElementById('familyCount').value) || 1;
+
+      if (!annualSalary || annualSalary <= 0) {
+        alert('연봉을 올바르게 입력해 주세요.');
+        return;
+      }
+
+      const grossMonthly = Math.floor(annualSalary / 12);
+      const taxable = Math.max(0, grossMonthly - nonTaxable);
+
+      // 4대보험 계산
+      const nps = Math.min(Math.floor(taxable * 0.045), 271350); // 국민연금 상한액 반영
+      const nhic = Math.floor(taxable * 0.03545);
+      const lti = Math.floor(nhic * 0.1295);
+      const ei = Math.floor(taxable * 0.009);
+
+      // 간이 근로소득세 근사 계산
+      let approxTax = 0;
+      if (taxable > 1060000) {
+        const taxableAnnual = taxable * 12;
+        if (taxableAnnual <= 14000000) approxTax = taxableAnnual * 0.06 / 12;
+        else if (taxableAnnual <= 50000000) approxTax = (840000 + (taxableAnnual - 14000000) * 0.15) / 12;
+        else if (taxableAnnual <= 88000000) approxTax = (6240000 + (taxableAnnual - 50000000) * 0.24) / 12;
+        else approxTax = (15360000 + (taxableAnnual - 88000000) * 0.35) / 12;
+        
+        // 부양가족 공제 반영
+        approxTax = Math.max(0, Math.floor(approxTax * (1 - (family - 1) * 0.05)));
+      }
+      const localTax = Math.floor(approxTax * 0.1);
+
+      const totalDeduction = nps + nhic + lti + ei + approxTax + localTax;
+      const netPay = grossMonthly - totalDeduction;
+
+      document.getElementById('netPayMonthly').innerText = netPay.toLocaleString() + ' 원';
+      document.getElementById('grossMonthly').innerText = grossMonthly.toLocaleString() + ' 원';
+      document.getElementById('totalDeduction').innerText = '- ' + totalDeduction.toLocaleString() + ' 원';
+      document.getElementById('nps').innerText = nps.toLocaleString() + ' 원';
+      document.getElementById('nhic').innerText = nhic.toLocaleString() + ' 원';
+      document.getElementById('lti').innerText = lti.toLocaleString() + ' 원';
+      document.getElementById('ei').innerText = ei.toLocaleString() + ' 원';
+      document.getElementById('incomeTax').innerText = approxTax.toLocaleString() + ' 원';
+      document.getElementById('localTax').innerText = localTax.toLocaleString() + ' 원';
+
+      document.getElementById('resultBox').classList.remove('hidden');
+    }
+  </script>
+</body>
+</html>
