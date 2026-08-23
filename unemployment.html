@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>실업급여 계산기 및 수급조건·지급일수 완벽 가이드</title>
+  <meta name="description" content="퇴사 전 평균임금과 나이, 고용보험 가입기간을 기준으로 예상 실업급여(구직급여) 일액, 총 수급액 및 소정급여일수를 계산합니다.">
+  
+  <!-- 구글 애드센스 메타 태그 & 스크립트 -->
+  <meta name="google-adsense-account" content="ca-pub-6122968996738347">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6122968996738347" crossorigin="anonymous"></script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased py-10 px-4">
+
+  <div class="max-w-2xl mx-auto bg-white rounded-2xl shadow-lg border border-gray-100 p-6 md:p-8">
+    
+    <!-- 상단 탭 -->
+    <nav class="flex flex-wrap gap-2 justify-between items-center mb-6 border-b pb-3 text-xs md:text-sm">
+      <div class="flex gap-3">
+        <a href="/" class="text-gray-500 hover:text-blue-600">대출</a>
+        <a href="/salary.html" class="text-gray-500 hover:text-blue-600">연봉</a>
+        <a href="/severance.html" class="text-gray-500 hover:text-blue-600">퇴직금</a>
+        <a href="/parttime.html" class="text-gray-500 hover:text-blue-600">주휴수당</a>
+      </div>
+      <span class="text-blue-600 font-bold">실업급여 계산기</span>
+    </nav>
+
+    <header class="text-center mb-6">
+      <h1 class="text-2xl md:text-3xl font-bold text-gray-900 mb-2">실업급여 모의계산기</h1>
+      <p class="text-sm text-gray-500">나이와 고용보험 가입기간에 따른 예상 구직급여 총액을 계산합니다.</p>
+    </header>
+
+    <!-- 입력 폼 -->
+    <div class="space-y-4">
+      <div>
+        <label class="block text-sm font-semibold text-gray-700 mb-1">퇴사 시 만 나이</label>
+        <div class="grid grid-cols-2 gap-2">
+          <label class="cursor-pointer">
+            <input type="radio" name="ageGroup" value="under50" class="peer sr-only" checked>
+            <div class="text-center py-2.5 px-3 text-sm font-medium border border-gray-300 rounded-lg peer-checked:bg-blue-600 peer-checked:text-white peer-checked:border-blue-600 transition">
+              만 50세 미만
+            </div>
+          </label>
+          <label class="cursor-pointer">
+            <input type="radio" name="ageGroup" value="over50" class="peer sr-only">
+            <div class="text-center py-2.5 px-3 text-sm font-medium border border-gray-300 rounded-lg peer-checked:bg-blue-600 peer-checked:text-white peer-checked:border-blue-600 transition">
+              만 50세 이상 및 장애인
+            </div>
+          </label>
+        </div>
+      </div>
+
+      <div>
+        <label class="block text-sm font-semibold text-gray-700 mb-1">고용보험 가입 기간 (근속 기간)</label>
+        <select id="insPeriod" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:outline-none text-base bg-white">
+          <option value="1">1년 미만 (최소 180일 이상)</option>
+          <option value="3">1년 이상 ~ 3년 미만</option>
+          <option value="5">3년 이상 ~ 5년 미만</option>
+          <option value="10">5년 이상 ~ 10년 미만</option>
+          <option value="11">10년 이상</option>
+        </select>
+      </div>
+
+      <div>
+        <label class="block text-sm font-semibold text-gray-700 mb-1">퇴사 전 3개월간 월 평균 급여 (세전, 원)</label>
+        <input type="text" id="avgMonthlyWage" placeholder="3,000,000" oninput="formatCurrency(this)"
+               class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:outline-none text-base">
+      </div>
+
+      <button onclick="calculateUnemployment()" 
+              class="w-full mt-2 bg-blue-600 hover:bg-blue-700 text-white font-bold py-3.5 rounded-lg transition duration-200 shadow-md">
+        예상 실업급여 계산하기
+      </button>
+    </div>
+
+    <!-- 결과 영역 -->
+    <div id="resultBox" class="hidden mt-8 pt-6 border-t border-gray-200">
+      <h2 class="text-lg font-bold text-gray-900 mb-4">💰 실업급여 예상 수급액</h2>
+      
+      <div class="bg-blue-50 p-5 rounded-xl mb-6 text-center">
+        <span class="text-xs text-blue-600 font-semibold">예상 총 수급액 (1일 지급액 × 소정급여일수)</span>
+        <p id="totalBenefit" class="text-2xl md:text-3xl font-black text-blue-900 mt-1">0원</p>
+      </div>
+
+      <div class="bg-gray-50 p-4 rounded-xl text-sm space-y-2 text-gray-600">
+        <div class="flex justify-between">
+          <span>1일 구직급여 지급액:</span>
+          <span id="dailyBenefit" class="font-semibold text-gray-800">0원</span>
+        </div>
+        <div class="flex justify-between">
+          <span>예상 소정급여일수 (지급 기간):</span>
+          <span id="benefitDays" class="font-semibold text-blue-600">0일</span>
+        </div>
+        <div class="flex justify-between">
+          <span>월 환산 예상 수령액 (30일 기준):</span>
+          <span id="monthlyBenefit" class="font-semibold text-gray-800">0원</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- SEO 및 블로그 가이드 콘텐츠 -->
+    <article class="mt-10 pt-8 border-t border-gray-200 text-sm text-gray-700 leading-relaxed space-y-6">
+      
+      <section>
+        <h2 class="text-lg font-bold text-gray-900 mb-2">📌 1. 실업급여(구직급여) 수급 필수 3대 조건</h2>
+        <ul class="list-disc pl-5 space-y-1.5 text-gray-600">
+          <li><strong>피보험 단위기간 180일 이상:</strong> 이직일 이전 18개월(초단시간 근로자는 24개월) 동안 고용보험 피보험 단위기간이 통산 180일 이상이어야 합니다.</li>
+          <li><strong>비자발적 퇴사 사유:</strong> 권고사직, 계약기간 만료, 폐업, 해고 등 본인 의사가 아닌 사유로 이직해야 합니다. (단, 정당한 사유가 있는 자발적 퇴사는 예외 적용)</li>
+          <li><strong>재취업 활동 의지:</strong> 근로 의사와 능력이 있음에도 불구하고 취업하지 못한 상태에서 적극적으로 재취업 활동(구직활동)을 증명해야 합니다.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 class="text-lg font-bold text-gray-900 mb-2">💡 2. 자발적 퇴사여도 실업급여를 받을 수 있는 예외 사유</h2>
+        <p class="mb-2 text-gray-600">스스로 퇴사했더라도 아래와 같은 정당한 사유가 입증되면 실업급여 수급 자격이 인정됩니다.</p>
+        <div class="bg-gray-50 p-4 rounded-xl space-y-2 border border-gray-100 text-gray-600">
+          <p>• <strong>임금 체불 또는 근로조건 저하:</strong> 1년 이내에 2개월 이상 임금 체불이나 최저임금 미달이 발생한 경우</p>
+          <p>• <strong>직장 내 괴롭힘 또는 성희롱:</strong> 고용노동부 진정 등을 통해 확인된 경우</p>
+          <p>• <strong>사업장 이전 또는 통근 곤란:</strong> 통근 시간(왕복)이 대중교통 기준으로 3시간 이상 소요되는 경우</p>
+          <p>• <strong>질병 및 부상:</strong> 의사 소견상 업무 수행이 불가능하고 휴직이 허용되지 않아 퇴사한 경우</p>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="text-lg font-bold text-gray-900 mb-2">📋 3. 1일 구직급여 상한액 및 하한액 기준</h2>
+        <p class="text-gray-600">
+          실업급여 일액은 <strong>퇴직 전 3개월간 1일 평균임금의 60%</strong>로 계산되지만, 법적으로 정해진 상한액과 하한액이 적용됩니다.
+        </p>
+        <ul class="list-disc pl-5 mt-2 space-y-1 text-gray-600">
+          <li><strong>1일 상한액:</strong> 66,000원</li>
+          <li><strong>1일 하한액:</strong> 최저임금의 80% 기준 (1일 8시간 근무 기준 약 64,192원 이상 보장)</li>
+        </ul>
+      </section>
+
+    </article>
+
+  </div>
+
+  <script>
+    function formatCurrency(target) {
+      let val = target.value.replace(/[^0-9]/g, '');
+      target.value = val ? Number(val).toLocaleString() : '';
+    }
+
+    function calculateUnemployment() {
+      const rawWage = document.getElementById('avgMonthlyWage').value.replace(/,/g, '');
+      const monthlyWage = parseFloat(rawWage);
+      const ageGroup = document.querySelector('input[name="ageGroup"]:checked').value;
+      const insPeriod = parseInt(document.getElementById('insPeriod').value);
+
+      if (!monthlyWage || monthlyWage <= 0) {
+        alert('퇴사 전 월 평균 급여를 입력해 주세요.');
+        return;
+      }
+
+      // 1일 평균임금 추정 (3개월 91일 환산)
+      const dailyWage = (monthlyWage * 3) / 91;
+      let calculatedDaily = dailyWage * 0.6;
+
+      // 상한액 66,000원, 하한액 64,192원 (8시간 기준)
+      const maxDaily = 66000;
+      const minDaily = 64192;
+
+      let finalDaily = Math.round(calculatedDaily);
+      if (finalDaily > maxDaily) finalDaily = maxDaily;
+      if (finalDaily < minDaily) finalDaily = minDaily;
+
+      // 소정급여일수 매트릭스
+      let days = 0;
+      if (ageGroup === 'under50') {
+        if (insPeriod === 1) days = 120;
+        else if (insPeriod === 3) days = 150;
+        else if (insPeriod === 5) days = 180;
+        else if (insPeriod === 10) days = 210;
+        else days = 240;
+      } else {
+        // 만 50세 이상
+        if (insPeriod === 1) days = 120;
+        else if (insPeriod === 3) days = 180;
+        else if (insPeriod === 5) days = 210;
+        else if (insPeriod === 10) days = 240;
+        else days = 270;
+      }
+
+      const totalBenefit = finalDaily * days;
+      const monthlyBenefit = finalDaily * 30;
+
+      document.getElementById('totalBenefit').innerText = totalBenefit.toLocaleString() + ' 원';
+      document.getElementById('dailyBenefit').innerText = finalDaily.toLocaleString() + ' 원';
+      document.getElementById('benefitDays').innerText = days + ' 일';
+      document.getElementById('monthlyBenefit').innerText = monthlyBenefit.toLocaleString() + ' 원';
+
+      document.getElementById('resultBox').classList.remove('hidden');
+    }
+  </script>
+</body>
+</html>
