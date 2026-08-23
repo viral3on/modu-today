@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>부동산 평수 ㎡ 계산기 | 아파트 평형 전용면적 양방향 환산</title>
+  <meta name="description" content="제곱미터(㎡)와 평(坪)을 실시간으로 양방향 자동 환산하고 아파트 대표 평형(59㎡·84㎡) 환산표를 제공합니다.">
+  
+  <!-- 구글 애드센스 메타 태그 & 스크립트 -->
+  <meta name="google-adsense-account" content="ca-pub-6122968996738347">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6122968996738347" crossorigin="anonymous"></script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased py-10 px-4">
+
+  <div class="max-w-2xl mx-auto bg-white rounded-2xl shadow-lg border border-gray-100 p-6 md:p-8">
+    
+    <!-- 상단 네비게이션 -->
+    <nav class="flex flex-wrap gap-2 justify-between items-center mb-6 border-b pb-3 text-xs md:text-sm">
+      <div class="flex gap-3">
+        <a href="/" class="text-gray-500 hover:text-blue-600">대출</a>
+        <a href="/salary.html" class="text-gray-500 hover:text-blue-600">연봉</a>
+        <a href="/realtor.html" class="text-gray-500 hover:text-blue-600">복비</a>
+        <a href="/counter.html" class="text-gray-500 hover:text-blue-600">글자수</a>
+      </div>
+      <span class="text-blue-600 font-bold">면적(평수) 계산기</span>
+    </nav>
+
+    <header class="text-center mb-6">
+      <h1 class="text-2xl md:text-3xl font-bold text-gray-900 mb-2">부동산 평수 ↔ ㎡ 면적 계산기</h1>
+      <p class="text-sm text-gray-500">값을 입력하면 제곱미터(㎡)와 평(坪)으로 실시간 자동 환산됩니다.</p>
+    </header>
+
+    <!-- 입력 폼 -->
+    <div class="space-y-4">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <!-- 제곱미터 입력 -->
+        <div>
+          <label class="block text-sm font-semibold text-gray-700 mb-1">제곱미터 (㎡)</label>
+          <div class="relative">
+            <input type="number" step="any" id="m2Input" placeholder="84" oninput="convertFromM2()"
+                   class="w-full px-4 py-3.5 rounded-xl border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:outline-none text-lg font-bold">
+            <span class="absolute right-4 top-4 text-sm text-gray-400 font-medium">㎡</span>
+          </div>
+        </div>
+
+        <!-- 평수 입력 -->
+        <div>
+          <label class="block text-sm font-semibold text-gray-700 mb-1">평수 (坪)</label>
+          <div class="relative">
+            <input type="number" step="any" id="pyeongInput" placeholder="25.4" oninput="convertFromPyeong()"
+                   class="w-full px-4 py-3.5 rounded-xl border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:outline-none text-lg font-bold">
+            <span class="absolute right-4 top-4 text-sm text-gray-400 font-medium">평</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 빠른 선택 버튼 -->
+      <div class="pt-2">
+        <label class="block text-xs font-semibold text-gray-500 mb-2">🔥 아파트 대표 전용면적 바로가기</label>
+        <div class="flex flex-wrap gap-2">
+          <button onclick="setArea(59)" class="text-xs bg-gray-100 hover:bg-blue-50 hover:text-blue-600 px-3 py-2 rounded-lg border border-gray-200 font-medium">전용 59㎡ (구 24~25평형)</button>
+          <button onclick="setArea(74)" class="text-xs bg-gray-100 hover:bg-blue-50 hover:text-blue-600 px-3 py-2 rounded-lg border border-gray-200 font-medium">전용 74㎡ (구 29~30평형)</button>
+          <button onclick="setArea(84)" class="text-xs bg-gray-100 hover:bg-blue-50 hover:text-blue-600 px-3 py-2 rounded-lg border border-gray-200 font-medium">전용 84㎡ (구 33~34평형)</button>
+          <button onclick="setArea(114)" class="text-xs bg-gray-100 hover:bg-blue-50 hover:text-blue-600 px-3 py-2 rounded-lg border border-gray-200 font-medium">전용 114㎡ (구 43~45평형)</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 자주 쓰는 평형 환산표 -->
+    <div class="mt-8 pt-6 border-t border-gray-200">
+      <h2 class="text-base font-bold text-gray-900 mb-3">📋 주요 아파트 면적 환산표</h2>
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm text-left text-gray-600 border border-gray-200 rounded-lg overflow-hidden">
+          <thead class="bg-gray-50 text-xs text-gray-700 uppercase">
+            <tr>
+              <th class="px-4 py-2.5 border-b">전용면적 (㎡)</th>
+              <th class="px-4 py-2.5 border-b">순수 전용 평수</th>
+              <th class="px-4 py-2.5 border-b">통상 공급 분양평형</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-100">
+            <tr><td class="px-4 py-2 font-semibold text-gray-900">59 ㎡</td><td class="px-4 py-2">약 17.8 평</td><td class="px-4 py-2 text-blue-600 font-medium">24 ~ 25 평형</td></tr>
+            <tr><td class="px-4 py-2 font-semibold text-gray-900">74 ㎡</td><td class="px-4 py-2">약 22.3 평</td><td class="px-4 py-2 text-blue-600 font-medium">29 ~ 30 평형</td></tr>
+            <tr><td class="px-4 py-2 font-semibold text-gray-900">84 ㎡</td><td class="px-4 py-2">약 25.4 평</td><td class="px-4 py-2 text-blue-600 font-medium">33 ~ 34 평형</td></tr>
+            <tr><td class="px-4 py-2 font-semibold text-gray-900">102 ㎡</td><td class="px-4 py-2">약 30.8 평</td><td class="px-4 py-2 text-blue-600 font-medium">39 ~ 40 평형</td></tr>
+            <tr><td class="px-4 py-2 font-semibold text-gray-900">114 ㎡</td><td class="px-4 py-2">약 34.4 평</td><td class="px-4 py-2 text-blue-600 font-medium">43 ~ 45 평형</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- SEO 설명 콘텐츠 -->
+    <article class="mt-8 pt-6 border-t border-gray-100 text-sm text-gray-600 leading-relaxed space-y-3">
+      <h3 class="font-bold text-gray-900">평(坪)과 제곱미터(㎡) 공식 기준</h3>
+      <ul class="list-disc pl-4 space-y-1">
+        <li><strong>1평</strong> = 약 <strong>3.305785 ㎡</strong> (가로 1.818m × 세로 1.818m)</li>
+        <li><strong>1㎡</strong> = 약 <strong>0.3025 평</strong></li>
+        <li><strong>전용면적 vs 공급면적:</strong> 아파트 공고에 표기되는 84㎡는 순수 현관문 안쪽 실사용 면적(약 25.4평)이며, 계단·복도 등 주거공용면적을 합치면 흔히 말하는 33~34평형이 됩니다.</li>
+      </ul>
+    </article>
+
+  </div>
+
+  <script>
+    const M2_PER_PYEONG = 3.305785;
+    const PYEONG_PER_M2 = 0.3025;
+
+    function convertFromM2() {
+      const m2Val = parseFloat(document.getElementById('m2Input').value);
+      if (!isNaN(m2Val)) {
+        const pyeong = m2Val * PYEONG_PER_M2;
+        document.getElementById('pyeongInput').value = (Math.round(pyeong * 100) / 100).toFixed(2);
+      } else {
+        document.getElementById('pyeongInput').value = '';
+      }
+    }
+
+    function convertFromPyeong() {
+      const pVal = parseFloat(document.getElementById('pyeongInput').value);
+      if (!isNaN(pVal)) {
+        const m2 = pVal * M2_PER_PYEONG;
+        document.getElementById('m2Input').value = (Math.round(m2 * 100) / 100).toFixed(2);
+      } else {
+        document.getElementById('m2Input').value = '';
+      }
+    }
+
+    function setArea(val) {
+      document.getElementById('m2Input').value = val;
+      convertFromM2();
+    }
+  </script>
+</body>
+</html>
