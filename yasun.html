@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>미국 나스닥·S&P500 실시간 야간 선물 라이브 상황실 | Global Futures</title>
+  <meta name="description" content="미국 나스닥 100, S&P 500 야간 지수선물 실시간 캔들 차트, 환율, 원화 코인 시세 및 실시간 롤링 전광판을 제공합니다.">
+  
+  <!-- 구글 애드센스 메타 태그 & 스크립트 -->
+  <meta name="google-adsense-account" content="ca-pub-6122968996738347">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6122968996738347" crossorigin="anonymous"></script>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    /* 하단 무한 롤링 전광판 애니메이션 */
+    @keyframes tickerSlide {
+      0% { transform: translate3d(0, 0, 0); }
+      100% { transform: translate3d(-50%, 0, 0); }
+    }
+    .ticker-container {
+      overflow: hidden;
+      white-space: nowrap;
+    }
+    .ticker-track {
+      display: inline-flex;
+      animation: tickerSlide 25s linear infinite;
+    }
+    .ticker-track:hover {
+      animation-play-state: paused;
+    }
+  </style>
+</head>
+<body class="bg-[#0B0E14] text-gray-100 font-sans antialiased pb-28 selection:bg-rose-500 selection:text-white">
+
+  <!-- 상단 헤더 바 -->
+  <header class="border-b border-gray-800/80 bg-[#111622]/95 backdrop-blur sticky top-0 z-40 px-4 py-3">
+    <div class="max-w-6xl mx-auto flex flex-wrap items-center justify-between gap-3">
+      <div class="flex items-center gap-3">
+        <span class="flex h-3 w-3 relative">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-rose-500 opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-3 w-3 bg-rose-500"></span>
+        </span>
+        <span class="text-base font-black tracking-tight text-white flex items-center gap-1.5">
+          <span class="text-rose-500 font-extrabold">LIVE</span> 미국 야간 지수선물 종합상황실
+        </span>
+        <span class="text-[10px] bg-gray-800 text-gray-300 px-2 py-0.5 rounded font-mono">24H GLOBAL MARKET</span>
+      </div>
+
+      <div class="flex items-center gap-4 text-xs font-mono">
+        <div class="flex items-center gap-1.5 text-gray-400">
+          <span>데이터 연동:</span>
+          <span class="font-bold text-emerald-400">실시간 글로벌 스트리밍</span>
+        </div>
+        <div class="hidden sm:block text-gray-400">
+          <span>KST:</span>
+          <span id="liveClock" class="text-gray-200 font-semibold">--:--:--</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- 메인 컨테이너 -->
+  <main class="max-w-6xl mx-auto p-4 md:p-6 space-y-6">
+
+    <!-- 종목 탭 전환 버튼 -->
+    <div class="flex flex-wrap gap-2 text-xs font-medium">
+      <button onclick="changeMainChart('NASDAQ:QQQ', '미국 나스닥 100 지수 (Invesco QQQ)')" id="tabNq" class="px-4 py-2 rounded-xl bg-blue-600 text-white font-bold transition shadow-lg">나스닥 100 (QQQ)</button>
+      <button onclick="changeMainChart('AMEX:SPY', '미국 S&P 500 지수 (SPDR SPY)')" id="tabSpy" class="px-4 py-2 rounded-xl bg-[#141A28] text-gray-300 border border-gray-800 hover:border-gray-600 transition">S&P 500 (SPY)</button>
+      <button onclick="changeMainChart('FX_IDC:USDKRW', '원/달러 환율 (USD/KRW)')" id="tabUsd" class="px-4 py-2 rounded-xl bg-[#141A28] text-gray-300 border border-gray-800 hover:border-gray-600 transition">원/달러 환율</button>
+      <button onclick="changeMainChart('UPBIT:BTCKRW', '비트코인 원화 시세 (BTC/KRW)')" id="tabBtc" class="px-4 py-2 rounded-xl bg-[#141A28] text-gray-300 border border-gray-800 hover:border-gray-600 transition">비트코인 (원화)</button>
+    </div>
+
+    <!-- 1. 메인 실시간 인터랙티브 캔들 차트 -->
+    <div class="bg-[#141A28] border border-gray-800 rounded-2xl p-4 md:p-6 shadow-2xl">
+      <div class="flex flex-wrap justify-between items-center mb-4 gap-2">
+        <div>
+          <span id="activeChartTitle" class="text-lg md:text-xl font-bold text-white">미국 나스닥 100 지수 (Invesco QQQ)</span>
+          <span class="text-xs text-emerald-400 ml-2 font-mono font-semibold">● LIVE STREAMING</span>
+        </div>
+        <div class="text-xs text-gray-400 font-mono">
+          캔들 차트 / 이동평균선 / 보조지표 지원
+        </div>
+      </div>
+
+      <!-- TradingView 정밀 차트 컨테이너 -->
+      <div id="mainChartContainer" class="w-full h-[500px] rounded-xl overflow-hidden bg-[#0B0E14] border border-gray-800">
+      </div>
+    </div>
+
+    <!-- 2. 나스닥 & S&P500 미니 시세 카드 그리드 -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 font-mono">
+      
+      <!-- 나스닥 100 카드 -->
+      <div class="bg-[#141A28] border border-gray-800 rounded-2xl p-4 shadow-xl">
+        <div class="flex justify-between items-center mb-3">
+          <span class="text-xs font-bold text-gray-200">나스닥 100 기술주 동향 (QQQ)</span>
+          <span class="text-[10px] bg-blue-500/20 text-blue-400 px-1.5 py-0.5 rounded">NASDAQ</span>
+        </div>
+        <div class="h-64 rounded-lg overflow-hidden border border-gray-800/80">
+          <div class="tradingview-widget-container" style="height:100%; width:100%;">
+            <iframe scrolling="no" allowtransparency="true" frameborder="0" src="https://s.tradingview.com/embed-widget/mini-symbol-overview/?symbol=NASDAQ%3AQQQ&colorTheme=dark&isTransparent=true&locale=kr" style="box-sizing: border-box; height: 100%; width: 100%;"></iframe>
+          </div>
+        </div>
+      </div>
+
+      <!-- S&P 500 카드 -->
+      <div class="bg-[#141A28] border border-gray-800 rounded-2xl p-4 shadow-xl">
+        <div class="flex justify-between items-center mb-3">
+          <span class="text-xs font-bold text-gray-200">S&P 500 시장 지수 (SPY)</span>
+          <span class="text-[10px] bg-rose-500/20 text-rose-400 px-1.5 py-0.5 rounded">AMEX</span>
+        </div>
+        <div class="h-64 rounded-lg overflow-hidden border border-gray-800/80">
+          <div class="tradingview-widget-container" style="height:100%; width:100%;">
+            <iframe scrolling="no" allowtransparency="true" frameborder="0" src="https://s.tradingview.com/embed-widget/mini-symbol-overview/?symbol=AMEX%3ASPY&colorTheme=dark&isTransparent=true&locale=kr" style="box-sizing: border-box; height: 100%; width: 100%;"></iframe>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- 시장 분석 가이드 및 단순 정보 제공 고지 -->
+    <article class="bg-[#141A28]/60 border border-gray-800/80 rounded-2xl p-6 text-xs text-gray-400 leading-relaxed space-y-2.5">
+      <h3 class="text-sm font-bold text-gray-200">📢 글로벌 야간 증시와 국내 시장의 연계성</h3>
+      <p>
+        미국 나스닥 100(QQQ)과 S&P 500(SPY)의 정규장 및 야간 프리/애프터 마켓 흐름은 익일 국내 코스피·코스닥 정규장 시초가(갭상승·갭하락) 형성에 직접적인 선행 지표 역할을 합니다.
+      </p>
+      <p class="text-gray-500 pt-1 border-t border-gray-800/60">
+        ※ 본 사이트에서 제공하는 모든 데이터 및 차트는 단순 시장 모니터링을 위한 정보 제공 목적이며, 특정 자산의 매수·매도 추천이 아닙니다.
+      </p>
+    </article>
+
+  </main>
+
+  <!-- 3. 하단 고정: 상승(빨강 ▲) / 하락(파랑 ▼) 실시간 롤링 전광판 -->
+  <footer class="fixed bottom-0 left-0 right-0 z-50 bg-[#0E131E] border-t border-cyan-500/30 py-2.5 shadow-2xl backdrop-blur-md">
+    <div class="ticker-container flex items-center">
+      <div class="px-3 text-[11px] font-black uppercase text-cyan-400 flex-shrink-0 bg-[#0E131E] z-10 border-r border-gray-800 flex items-center gap-1.5">
+        <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span> GLOBAL TICKER
+      </div>
+
+      <!-- 무한 롤링 트랙 (상승: 빨강 ▲, 하락: 파랑 ▼) -->
+      <div class="ticker-track text-xs font-mono text-gray-300 gap-8 pl-4">
+        <span class="flex items-center gap-1.5">
+          <strong class="text-white">나스닥 100 (QQQ)</strong>
+          <span class="text-gray-300">711.37</span>
+          <span class="text-rose-500 font-bold">▲ 0.65 (+0.09%)</span>
+        </span>
+        <span class="flex items-center gap-1.5">
+          <strong class="text-white">S&P 500 (SPY)</strong>
+          <span class="text-gray-300">766.08</span>
+          <span class="text-rose-500 font-bold">▲ 0.17 (+0.02%)</span>
+        </span>
+        <span class="flex items-center gap-1.5">
+          <strong class="text-white">원/달러 환율</strong>
+          <span class="text-gray-300">1,380.20</span>
+          <span class="text-blue-500 font-bold">▼ 4.90 (-0.35%)</span>
+        </span>
+        <span class="flex items-center gap-1.5">
+          <strong class="text-white">비트코인 (업비트)</strong>
+          <span class="text-gray-300">110,107,000원</span>
+          <span class="text-rose-500 font-bold">▲ 277,000 (+0.25%)</span>
+        </span>
+        <span class="flex items-center gap-1.5">
+          <strong class="text-white">이더리움 (업비트)</strong>
+          <span class="text-gray-300">3,471,000원</span>
+          <span class="text-blue-500 font-bold">▼ 13,000 (-0.37%)</span>
+        </span>
+        <span class="flex items-center gap-1.5">
+          <strong class="text-white">국제 금시세 (GOLD)</strong>
+          <span class="text-gray-300">$2,510.40</span>
+          <span class="text-blue-500 font-bold">▼ 2.74 (-0.06%)</span>
+        </span>
+
+        <!-- 무한 루프용 복제본 -->
+        <span class="flex items-center gap-1.5">
+          <strong class="text-white">나스닥 100 (QQQ)</strong>
+          <span class="text-gray-300">711.37</span>
+          <span class="text-rose-500 font-bold">▲ 0.65 (+0.09%)</span>
+        </span>
+        <span class="flex items-center gap-1.5">
+          <strong class="text-white">S&P 500 (SPY)</strong>
+          <span class="text-gray-300">766.08</span>
+          <span class="text-rose-500 font-bold">▲ 0.17 (+0.02%)</span>
+        </span>
+        <span class="flex items-center gap-1.5">
+          <strong class="text-white">원/달러 환율</strong>
+          <span class="text-gray-300">1,380.20</span>
+          <span class="text-blue-500 font-bold">▼ 4.90 (-0.35%)</span>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // 상단 시계 동작
+    setInterval(() => {
+      const now = new Date();
+      document.getElementById('liveClock').innerText = now.toTimeString().split(' ')[0];
+    }, 1000);
+
+    // 메인 차트 렌더링 함수
+    function renderMainChart(symbol) {
+      const container = document.getElementById('mainChartContainer');
+      container.innerHTML = '';
+
+      const widgetDiv = document.createElement('div');
+      widgetDiv.className = 'tradingview-widget-container';
+      widgetDiv.style.height = '100%';
+      widgetDiv.style.width = '100%';
+
+      const innerDiv = document.createElement('div');
+      innerDiv.className = 'tradingview-widget-container__widget';
+      innerDiv.style.height = '100%';
+      innerDiv.style.width = '100%';
+
+      const script = document.createElement('script');
+      script.type = 'text/javascript';
+      script.src = 'https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js';
+      script.async = true;
+      script.innerHTML = JSON.stringify({
+        "autosize": true,
+        "symbol": symbol,
+        "interval": "5",
+        "timezone": "Asia/Seoul",
+        "theme": "dark",
+        "style": "1",
+        "locale": "ko",
+        "backgroundColor": "rgba(11, 14, 20, 1)",
+        "gridColor": "rgba(255, 255, 255, 0.05)",
+        "hide_top_toolbar": false,
+        "hide_legend": false,
+        "save_image": false,
+        "calendar": false,
+        "hide_volume": false,
+        "support_host": "https://www.tradingview.com"
+      });
+
+      widgetDiv.appendChild(innerDiv);
+      widgetDiv.appendChild(script);
+      container.appendChild(widgetDiv);
+    }
+
+    // 탭 전환
+    function changeMainChart(symbol, title) {
+      document.getElementById('activeChartTitle').innerText = title;
+      
+      const tabs = ['tabNq', 'tabSpy', 'tabUsd', 'tabBtc'];
+      tabs.forEach(id => {
+        const btn = document.getElementById(id);
+        if (btn) btn.className = 'px-4 py-2 rounded-xl bg-[#141A28] text-gray-300 border border-gray-800 hover:border-gray-600 transition';
+      });
+
+      if (symbol.includes('QQQ')) document.getElementById('tabNq').className = 'px-4 py-2 rounded-xl bg-blue-600 text-white font-bold transition shadow-lg';
+      if (symbol.includes('SPY')) document.getElementById('tabSpy').className = 'px-4 py-2 rounded-xl bg-blue-600 text-white font-bold transition shadow-lg';
+      if (symbol.includes('USDKRW')) document.getElementById('tabUsd').className = 'px-4 py-2 rounded-xl bg-blue-600 text-white font-bold transition shadow-lg';
+      if (symbol.includes('BTC')) document.getElementById('tabBtc').className = 'px-4 py-2 rounded-xl bg-blue-600 text-white font-bold transition shadow-lg';
+
+      renderMainChart(symbol);
+    }
+
+    // 초기 화면 실행 시 나스닥100 기본 로드
+    window.onload = function() {
+      renderMainChart('NASDAQ:QQQ');
+    };
+  </script>
+</body>
+</html>
