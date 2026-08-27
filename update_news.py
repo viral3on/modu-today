@@ -6,15 +6,23 @@ kst = timezone(timedelta(hours=9))
 today_str = datetime.now(kst).strftime("%Y년 %m월 %d일 %H:%M KST")
 date_badge = datetime.now(kst).strftime("%Y.%m.%d")
 
-# 1. 뉴스 RSS 피드 목록 (국내 증시 및 해외 증시)
+# 1. 확장된 뉴스 RSS 피드 목록 (더 다양한 키워드와 카테고리 적용)
 FEEDS = {
-    "국내 증시 / 금융 이슈": [
-        "https://news.google.com/rss/search?q=%ED%95%9C%EA%B5%AD%EC%A6%9D%EC%8B%9C+%EC%BD%94%EC%8A%A4%ED%94%BC+when:1d&hl=ko&gl=KR&ceid=KR:ko",
-        "https://news.google.com/rss/search?q=%EB%B0%98%EB%8F%84%EC%B2%B4+%ED%95%98%EC%9D%B4%EB%8B%89%EC%8A%A4+%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90+when:1d&hl=ko&gl=KR&ceid=KR:ko"
+    "국내 증시 / 코스피·코스닥": [
+        "https://news.google.com/rss/search?q=%ED%95%9C%EA%B5%AD%EC%A6%9D%EC%8B%9C+%EC%BD%94%EC%8A%A4%ED%94%BC+%EC%BD%94%EC%8A%A4%EB%8B%A5+when:1d&hl=ko&gl=KR&ceid=KR:ko",
+        "https://news.google.com/rss/search?q=%EC%A3%BC%EC%8B%9D+%ED%85%8c%EB%A7%88%EC%A3%BC+%EC%95%8﻿%A5%ED%85%8C%EB%A7%88+when:1d&hl=ko&gl=KR&ceid=KR:ko"
+    ],
+    "반도체 / AI / 대형주 핵심 이슈": [
+        "https://news.google.com/rss/search?q=%EC%82%BC%EC%84%B1%EC%A0%84%E﻿C%9E%90+SK%ED%95%98%EC%9D%B4%EB%8B%89%EC%8A%A4+%EB%B0%98%EB%8F%84%EC%B2%B4+when:1d&hl=ko&gl=KR&ceid=KR:ko",
+        "https://news.google.com/rss/search?q=%EC%97%94%EB%B9%84%EB%94%94%EC%95%84+AI+%EC%9D%B4%EC%8A%88+when:1d&hl=ko&gl=KR&ceid=KR:ko"
     ],
     "미국 증시 / 글로벌 매크로": [
-        "https://news.google.com/rss/search?q=%EB%82%98%EC%8A%A4%EB%8B%A5+SP500+%EB%89%B4%EC%9A%95%EC%A6%9D%EC%8B%9C+when:1d&hl=ko&gl=KR&ceid=KR:ko",
-        "https://news.google.com/rss/search?q=%ED%99%98%EC%9C%A8+%EA%B8%88%EB%A6%AC+%EC%97%B0%EC%A4%80+when:1d&hl=ko&gl=KR&ceid=KR:ko"
+        "https://news.google.com/rss/search?q=%EB%82%98%EC%8A%A4%EB%8B%A5+S%26P500+%EB%89%B4%EC%9A%95%EC%A6%9C%EC%8B%9C+when:1d&hl=ko&gl=KR&ceid=KR:ko",
+        "https://news.google.com/rss/search?q=%EC%97%B0%EC%A4%80+FOMC+%EA%B8%88%EB%A6%AC%EC%9D%B8%ED%95%98+when:1d&hl=ko&gl=KR&ceid=KR:ko"
+    ],
+    "환율 / 가상자산 / 원자재": [
+        "https://news.google.com/rss/search?q=%EC%9B%90%EB%8B%AC%EB%9F%AC+%ED%99%98%EC%9C%A8+%EA%B8%88%EC%8B%9C%EC%84%B8+when:1d&hl=ko&gl=KR&ceid=KR:ko",
+        "https://news.google.com/rss/search?q=%EB%B9%84%ED%8A%A0%EC%BD%94%EC%9D%B8+%EA%B0%80%EC%83%81%EC%9E%90%EC%82%B0+when:1d&hl=ko&gl=KR&ceid=KR:ko"
     ]
 }
 
@@ -25,10 +33,9 @@ def fetch_news():
         items = []
         for url in urls:
             feed = feedparser.parse(url)
-            for entry in feed.entries[:5]: # 피드당 상위 5개 추출
+            for entry in feed.entries[:8]: # 피드당 수집 개수 확대
                 title = entry.title.replace('"', '&quot;')
                 link = entry.link
-                # 신문사 이름 분리 (Google News 형식: "기사제목 - 언론사")
                 source = "주요 언론"
                 if " - " in title:
                     parts = title.rsplit(" - ", 1)
@@ -45,9 +52,9 @@ def fetch_news():
                 seen_titles.add(clean_title)
                 unique_items.append(it)
 
-        # HTML 카드 리스트 빌드
+        # HTML 카드 리스트 빌드 (카테고리당 최대 6개 노출)
         list_html = ""
-        for it in unique_items[:6]: # 카테고리당 최종 6개 선별
+        for it in unique_items[:6]:
             list_html += f"""
             <a href="{it['link']}" target="_blank" rel="noopener noreferrer nofollow" 
                class="block p-4 rounded-xl bg-[#141A28] border border-gray-800/80 hover:border-blue-500/50 hover:bg-[#192234] transition duration-200 group">
@@ -57,8 +64,9 @@ def fetch_news():
                 </span>
                 <span class="text-[11px] font-mono text-gray-500 flex-shrink-0">↗</span>
               </div>
-              <div class="mt-2 text-[11px] font-medium text-gray-400">
-                {it['source']} • <span>오늘의 브리핑</span>
+              <div class="mt-2 text-[11px] font-medium text-gray-400 flex items-center justify-between">
+                <span>{it['source']}</span>
+                <span class="text-blue-400/80">실시간 이슈</span>
               </div>
             </a>
             """
@@ -77,23 +85,21 @@ def fetch_news():
 
 news_content = fetch_news()
 
-# 전체 HTML 조립 (불펌 방지 + 다크테마 + 애드센스)
+# 전체 HTML 조립
 html_template = f"""<!DOCTYPE html>
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>국내 및 미국 증시 주요 뉴스 브리핑 | 매일 자동 갱신</title>
+  <title>국내 및 해외 증시 주요 뉴스 브리핑 | 매일 자동 갱신</title>
   <meta name="description" content="코스피, 나스닥, 반도체, 환율 등 국내외 금융 시장의 핵심 뉴스를 매일 실시간 자동 브리핑합니다.">
   <meta name="robots" content="index, follow, noarchive">
   
-  <!-- 구글 애드센스 -->
   <meta name="google-adsense-account" content="ca-pub-6122968996738347">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6122968996738347" crossorigin="anonymous"></script>
 
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- 타 사이트 불펌 및 봇 크롤링 방지 스타일 -->
   <style>
     body {{
       -webkit-user-select: none;
@@ -105,7 +111,6 @@ html_template = f"""<!DOCTYPE html>
 </head>
 <body class="bg-[#0B0E14] text-gray-100 font-sans antialiased pb-20" oncontextmenu="return false;">
 
-  <!-- 상단 헤더 -->
   <header class="border-b border-gray-800/80 bg-[#111622]/95 backdrop-blur sticky top-0 z-40 px-4 py-3">
     <div class="max-w-5xl mx-auto flex flex-wrap items-center justify-between gap-3">
       <div class="flex items-center gap-2.5">
@@ -122,7 +127,6 @@ html_template = f"""<!DOCTYPE html>
     </div>
   </header>
 
-  <!-- 메인 뉴스 컨테이너 -->
   <main class="max-w-5xl mx-auto p-4 md:p-6 space-y-8 mt-2">
     
     <div class="bg-[#141A28] border border-gray-800 rounded-2xl p-5 md:p-6 shadow-xl flex flex-wrap justify-between items-center gap-4">
@@ -135,10 +139,8 @@ html_template = f"""<!DOCTYPE html>
       </div>
     </div>
 
-    <!-- 파이썬 자동 수집 기사 영역 -->
     {news_content}
 
-    <!-- 안내 및 면책 공고 -->
     <article class="bg-[#141A28]/40 border border-gray-800/60 rounded-xl p-4 text-xs text-gray-500 leading-relaxed">
       ※ 본 페이지의 기사 링크 및 제목은 언론사 RSS를 통해 자동 수집된 정보이며, 기사 본문의 저작권은 각 언론사에 있습니다. 본 사이트는 투자 참고용 링크만을 제공하며 특정 종목에 대한 투자 권유를 하지 않습니다.
     </article>
