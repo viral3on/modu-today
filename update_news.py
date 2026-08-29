@@ -5,11 +5,10 @@ kst = timezone(timedelta(hours=9))
 today_str = datetime.now(kst).strftime("%Y년 %m월 %d일 %H:%M KST")
 date_badge = datetime.now(kst).strftime("%Y.%m.%d")
 
-# 수집 기간을 24시간(when:1d)으로 엄격하게 유지
 FEEDS = {
     "국내 증시 / 코스피 코스닥": [
         "https://news.google.com/rss/search?q=%EC%BD%94%EC%8A%A4%ED%94%BC+%EC%BD%94%EC%8A%A4%EB%8B%A5+%EC%A6%9D%EC%8B%9C+when:1d&hl=ko&gl=KR&ceid=KR:ko",
-        "https://news.google.com/rss/search?q=%EA%B5%AD%EB%82%B0+%EC%A3%BC%EC%8B%9D+%ED%85%8c%EB%A7%88%EC%A3%BC+%EC%A0%84%EB%A7%9D+when:1d&hl=ko&gl=KR&ceid=KR:ko"
+        "https://news.google.com/rss/search?q=%EA%B5%AD%EB%82%B0+%EC%A3%BC%EC%8B%9D+%ED%85%8c%EB%A7%88%EC%BC%80+%EC%A0%84%EB%A7%9D+when:1d&hl=ko&gl=KR&ceid=KR:ko"
     ],
     "환율 및 글로벌 원자재 시세": [
         "https://news.google.com/rss/search?q=%EC%9B%90%EB%8B%AC%EB%9F%AC+%ED%99%98%EC%9C%A8+%EC%A0%84%EB%A7%9D+when:1d&hl=ko&gl=KR&ceid=KR:ko",
@@ -28,7 +27,7 @@ FEEDS = {
         "https://news.google.com/rss/search?q=%EB%AF%B8%EA%B5%AD+%EA%B8%88%EC%A6%AC+%EC%97%B0%EC%A4%80+%EB%A7%88%EA%B0%80+when:1d&hl=ko&gl=KR&ceid=KR:ko"
     ],
     "야간선물 / 파생 / 투자시황": [
-        "https://news.google.com/rss/search?q=%EC%95%BC%EA%B0%84%EC%84%A0%EB%AC%BC+%ED%8C%8C%EC%83%9D%EC%83%81%ED%92%88+when:1d&hl=ko&gl=KR&ceid=KR:ko",
+        "https://news.google.com/rss/search?q=%EC%95%BC%EA%B0%84%EC%84%A0%EC%AC%BC+%EC%84%A0%EB%AC%BC+%EC%98%B5%EC%85%98+when:1d&hl=ko&gl=KR&ceid=KR:ko",
         "https://news.google.com/rss/search?q=%EC%A3%BC%EC%8B%9D+%EC%84%A0%EB%AC%BC+%EC%98%B5%EC%85%98+when:1d&hl=ko&gl=KR&ceid=KR:ko"
     ]
 }
@@ -64,9 +63,9 @@ def fetch_news():
         for it in unique_items[:6]: 
             list_html += f"""
             <a href="{it['link']}" target="_blank" rel="noopener noreferrer nofollow" 
-               class="block p-4 rounded-xl bg-[#141A28] border border-gray-800/80 hover:border-blue-500/50 hover:bg-[#192234] transition duration-200 group">
+               class="block p-4 rounded-xl bg-[#141A28] border border-gray-800/80 hover:border-emerald-500/50 hover:bg-[#192234] transition duration-200 group">
               <div class="flex justify-between items-start gap-2">
-                <span class="text-sm font-semibold text-gray-200 group-hover:text-blue-400 leading-snug line-clamp-2">
+                <span class="text-sm font-semibold text-gray-200 group-hover:text-emerald-400 leading-snug line-clamp-2">
                   {it['title']}
                 </span>
                 <span class="text-[11px] font-mono text-gray-500 flex-shrink-0">↗</span>
@@ -80,7 +79,7 @@ def fetch_news():
         sections_html += f"""
         <div class="space-y-3">
           <h2 class="text-base font-bold text-white flex items-center gap-2 border-b border-gray-800 pb-2">
-            <span class="w-2 h-2 rounded-full bg-rose-500"></span> {category}
+            <span class="w-2 h-2 rounded-full bg-emerald-400"></span> {category}
           </h2>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
             {list_html}
@@ -95,8 +94,8 @@ news_content, ticker_items = fetch_news()
 ticker_html = ""
 for it in ticker_items[:25]:
     ticker_html += f"""
-    <a href="{it['link']}" target="_blank" rel="noopener noreferrer nofollow" class="inline-flex items-center gap-2 mx-6 text-xs text-gray-300 hover:text-blue-400 transition">
-      <span class="text-blue-500 font-bold">▪</span> {it['title']} <span class="text-[10px] text-gray-500 font-mono">({it['source']})</span>
+    <a href="{it['link']}" target="_blank" rel="noopener noreferrer nofollow" class="inline-flex items-center gap-2 mx-6 text-xs text-emerald-300 hover:text-white transition font-medium">
+      <span class="text-emerald-400 font-black animate-pulse">⚡ LIVE</span> {it['title']} <span class="text-[10px] text-gray-400 font-mono">({it['source']})</span>
     </a>
     """
 
@@ -128,7 +127,8 @@ html_template = """<!DOCTYPE html>
     .animate-marquee {{
       display: flex;
       width: max-content;
-      animation: marquee 35s linear infinite;
+      /* 속도를 60초로 늦추어 천천히 읽기 쉽게 조정 */
+      animation: marquee 60s linear infinite;
     }}
     .animate-marquee:hover {{
       animation-play-state: paused;
@@ -137,6 +137,7 @@ html_template = """<!DOCTYPE html>
 </head>
 <body class="bg-[#0B0E14] text-gray-100 font-sans antialiased pb-20" oncontextmenu="return false;">
 
+  <!-- 상단 네비게이션 헤더 (고정) -->
   <header class="border-b border-gray-800/80 bg-[#111622]/95 backdrop-blur sticky top-0 z-40 px-4 py-3">
     <div class="max-w-6xl mx-auto flex flex-wrap items-center justify-between gap-3">
       <div class="flex items-center gap-2.5">
@@ -175,10 +176,10 @@ html_template = """<!DOCTYPE html>
     </div>
   </header>
 
-  <!-- 증권사 전광판 스타일 실시간 뉴스 흐름 띠 -->
-  <div class="bg-[#141A28] border-b border-gray-800 py-2.5 overflow-hidden whitespace-nowrap relative shadow-inner">
-    <div class="absolute left-0 top-0 bottom-0 w-12 bg-gradient-to-r from-[#141A28] to-transparent z-10 pointer-events-none"></div>
-    <div class="absolute right-0 top-0 bottom-0 w-12 bg-gradient-to-l from-[#141A28] to-transparent z-10 pointer-events-none"></div>
+  <!-- 형광 네온 테두리 & 스크롤 시에도 상단 고정되는 속보 전광판 띠 -->
+  <div class="sticky top-[49px] z-30 bg-[#061018] border-y-2 border-emerald-500 py-2.5 overflow-hidden whitespace-nowrap shadow-[0_0_15px_rgba(16,185,129,0.3)]">
+    <div class="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-[#061018] to-transparent z-10 pointer-events-none"></div>
+    <div class="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-[#061018] to-transparent z-10 pointer-events-none"></div>
     <div class="animate-marquee">
       {ticker_html}
       {ticker_html}
@@ -212,4 +213,4 @@ html_template = """<!DOCTYPE html>
 with open("index.html", "w", encoding="utf-8") as f:
     f.write(html_template)
 
-print(f"Successfully generated index.html with 24h filter and marquee ticker at {today_str}")
+print(f"Successfully generated index.html with sticky neon marquee at {today_str}")
