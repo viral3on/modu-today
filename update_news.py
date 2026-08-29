@@ -5,6 +5,7 @@ kst = timezone(timedelta(hours=9))
 today_str = datetime.now(kst).strftime("%Y년 %m월 %d일 %H:%M KST")
 date_badge = datetime.now(kst).strftime("%Y.%m.%d")
 
+# 모든 카테고리 쿼리 재점검 (기사가 안정적으로 꽉 차도록 구성)
 FEEDS = {
     "국내 증시 / 코스피 코스닥": [
         "https://news.google.com/rss/search?q=%EC%BD%94%EC%8A%A4%ED%94%BC+%EC%BD%94%EC%8A%A4%EB%8B%A5+%EC%A6%9D%EC%8B%9C+when:1d&hl=ko&gl=KR&ceid=KR:ko",
@@ -27,8 +28,8 @@ FEEDS = {
         "https://news.google.com/rss/search?q=%EB%AF%B8%EA%B5%AD+%EA%B8%88%EC%A6%AC+%EC%97%B0%EC%A4%80+%EB%A7%88%EA%B0%80+when:1d&hl=ko&gl=KR&ceid=KR:ko"
     ],
     "야간선물 / 파생 / 투자시황": [
-        "https://news.google.com/rss/search?q=%EC%95%BC%EA%B0%84%EC%84%A0%EC%AC%BC+%EC%84%A0%EC%AC%BC+%EC%98%B5%EC%85%98+when:1d&hl=ko&gl=KR&ceid=KR:ko",
-        "https://news.google.com/rss/search?q=%EC%A3%BC%EC%8B%9D+%EC%84%A0%EC%AC%BC+%EC%98%B5%EC%85%98+when:1d&hl=ko&gl=KR&ceid=KR:ko"
+        "https://news.google.com/rss/search?q=%EC%95%BC%EA%B0%84%EC%84%A0%EB%AC%BC+when:1d&hl=ko&gl=KR&ceid=KR:ko",
+        "https://news.google.com/rss/search?q=%EC%A3%BC%EC%8B%9D+%EC%84%A0%EB%AC%BC+%EC%98%B5%EC%85%98+when:1d&hl=ko&gl=KR&ceid=KR:ko"
     ]
 }
 
@@ -61,9 +62,10 @@ def fetch_news():
 
         list_html = ""
         for it in unique_items[:6]: 
+            # 기사 박스 테두리를 띠와 동일한 두께감(border-2)으로 업그레이드
             list_html += f"""
             <a href="{it['link']}" target="_blank" rel="noopener noreferrer nofollow" 
-               class="block p-4 rounded-xl bg-[#141A28] border border-yellow-400/40 hover:border-yellow-400 hover:bg-[#1C2538] transition duration-200 group shadow-sm">
+               class="block p-4 rounded-xl bg-[#141A28] border-2 border-yellow-400 hover:bg-[#1C2538] transition duration-200 group shadow-md">
               <div class="flex justify-between items-start gap-2">
                 <span class="text-sm font-semibold text-gray-100 group-hover:text-yellow-300 leading-snug line-clamp-2">
                   {it['title']}
@@ -71,7 +73,7 @@ def fetch_news():
                 <span class="text-[11px] font-mono text-yellow-400 flex-shrink-0">↗</span>
               </div>
               <div class="mt-2 text-[11px] font-medium text-gray-400">
-                {it['source']} • <span class="text-yellow-400/80">오늘의 브리핑</span>
+                {it['source']} • <span class="text-yellow-400/90 font-bold">오늘의 브리핑</span>
               </div>
             </a>
             """
@@ -136,9 +138,9 @@ html_template = """<!DOCTYPE html>
 </head>
 <body class="bg-[#0B0E14] text-gray-100 font-sans antialiased pb-20" oncontextmenu="return false;">
 
-  <!-- 상단 고정 영역 래퍼 (네비게이션 + 형광 뉴스 띠) -->
+  <!-- 상단 고정 영역 래퍼 -->
   <div class="sticky top-0 z-50 shadow-2xl">
-    <!-- 상단 네비게이션 헤더 (패딩 조절로 띠 두께 일치) -->
+    <!-- 상단 네비게이션 헤더 -->
     <header class="border-b border-gray-800 bg-[#111622] px-4 py-2.5">
       <div class="max-w-6xl mx-auto flex flex-wrap items-center justify-between gap-3">
         <div class="flex items-center gap-2.5">
@@ -177,7 +179,7 @@ html_template = """<!DOCTYPE html>
       </div>
     </header>
 
-    <!-- 형광 노랑 네온 전광판 띠 (동일한 py-2.5 두께 적용) -->
+    <!-- 형광 노랑 네온 전광판 띠 -->
     <div class="bg-[#042014] border-y-2 border-yellow-400 py-2.5 overflow-hidden whitespace-nowrap shadow-[0_0_20px_rgba(250,204,21,0.4)]">
       <div class="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-[#042014] to-transparent z-10 pointer-events-none"></div>
       <div class="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-[#042014] to-transparent z-10 pointer-events-none"></div>
@@ -215,4 +217,4 @@ html_template = """<!DOCTYPE html>
 with open("index.html", "w", encoding="utf-8") as f:
     f.write(html_template)
 
-print(f"Successfully generated index.html with matching header and ticker thickness at {today_str}")
+print(f"Successfully generated index.html with thick borders and fixed queries at {today_str}")
