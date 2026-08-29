@@ -27,8 +27,8 @@ FEEDS = {
         "https://news.google.com/rss/search?q=%EB%AF%B8%EA%B5%AD+%EA%B8%88%EC%A6%AC+%EC%97%B0%EC%A4%80+%EB%A7%88%EA%B0%80+when:1d&hl=ko&gl=KR&ceid=KR:ko"
     ],
     "야간선물 / 파생 / 투자시황": [
-        "https://news.google.com/rss/search?q=%EC%95%BC%EA%B0%84%EC%84%A0%EC%AC%BC+%EC%84%A0%EC%98%BC+%EC%98%B5%EC%85%98+when:1d&hl=ko&gl=KR&ceid=KR:ko",
-        "https://news.google.com/rss/search?q=%EC%A3%BC%EC%8B%9D+%EC%84%A0%EC%98%BC+%EC%98%B5%EC%85%98+when:1d&hl=ko&gl=KR&ceid=KR:ko"
+        "https://news.google.com/rss/search?q=%EC%95%BC%EA%B0%84%EC%84%A0%EC%AC%BC+%EC%84%A0%EC%AC%BC+%EC%98%B5%EC%85%98+when:1d&hl=ko&gl=KR&ceid=KR:ko",
+        "https://news.google.com/rss/search?q=%EC%A3%BC%EC%8B%9D+%EC%84%A0%EC%AC%BC+%EC%98%B5%EC%85%98+when:1d&hl=ko&gl=KR&ceid=KR:ko"
     ]
 }
 
@@ -61,7 +61,6 @@ def fetch_news():
 
         list_html = ""
         for it in unique_items[:6]: 
-            # 각 기사 카드 네모박스에 형광 노랑 테두리 및 호버 효과 적용
             list_html += f"""
             <a href="{it['link']}" target="_blank" rel="noopener noreferrer nofollow" 
                class="block p-4 rounded-xl bg-[#141A28] border border-yellow-400/40 hover:border-yellow-400 hover:bg-[#1C2538] transition duration-200 group shadow-sm">
@@ -139,8 +138,8 @@ html_template = """<!DOCTYPE html>
 
   <!-- 상단 고정 영역 래퍼 (네비게이션 + 형광 뉴스 띠) -->
   <div class="sticky top-0 z-50 shadow-2xl">
-    <!-- 상단 네비게이션 헤더 -->
-    <header class="border-b border-gray-800 bg-[#111622] px-4 py-3">
+    <!-- 상단 네비게이션 헤더 (패딩 조절로 띠 두께 일치) -->
+    <header class="border-b border-gray-800 bg-[#111622] px-4 py-2.5">
       <div class="max-w-6xl mx-auto flex flex-wrap items-center justify-between gap-3">
         <div class="flex items-center gap-2.5">
           <span class="flex h-2.5 w-2.5 relative">
@@ -178,7 +177,7 @@ html_template = """<!DOCTYPE html>
       </div>
     </header>
 
-    <!-- 형광 노랑 네온 전광판 띠 -->
+    <!-- 형광 노랑 네온 전광판 띠 (동일한 py-2.5 두께 적용) -->
     <div class="bg-[#042014] border-y-2 border-yellow-400 py-2.5 overflow-hidden whitespace-nowrap shadow-[0_0_20px_rgba(250,204,21,0.4)]">
       <div class="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-[#042014] to-transparent z-10 pointer-events-none"></div>
       <div class="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-[#042014] to-transparent z-10 pointer-events-none"></div>
@@ -216,4 +215,4 @@ html_template = """<!DOCTYPE html>
 with open("index.html", "w", encoding="utf-8") as f:
     f.write(html_template)
 
-print(f"Successfully generated index.html with yellow border news cards at {today_str}")
+print(f"Successfully generated index.html with matching header and ticker thickness at {today_str}")
