@@ -94,8 +94,8 @@ news_content, ticker_items = fetch_news()
 ticker_html = ""
 for it in ticker_items[:25]:
     ticker_html += f"""
-    <a href="{it['link']}" target="_blank" rel="noopener noreferrer nofollow" class="inline-flex items-center gap-2 mx-6 text-xs text-emerald-300 hover:text-white transition font-medium">
-      <span class="text-emerald-400 font-black animate-pulse">⚡ LIVE</span> {it['title']} <span class="text-[10px] text-gray-400 font-mono">({it['source']})</span>
+    <a href="{it['link']}" target="_blank" rel="noopener noreferrer nofollow" class="inline-flex items-center gap-2 mx-6 text-xs text-yellow-200 hover:text-white transition font-semibold">
+      <span class="text-yellow-400 font-extrabold animate-pulse">⚡ BREAKING</span> {it['title']} <span class="text-[10px] text-emerald-300 font-mono">({it['source']})</span>
     </a>
     """
 
@@ -127,8 +127,8 @@ html_template = """<!DOCTYPE html>
     .animate-marquee {{
       display: flex;
       width: max-content;
-      /* 속도를 60초로 늦추어 천천히 읽기 쉽게 조정 */
-      animation: marquee 60s linear infinite;
+      /* 속도를 기존의 절반 수준인 120초로 대폭 늦춤 */
+      animation: marquee 120s linear infinite;
     }}
     .animate-marquee:hover {{
       animation-play-state: paused;
@@ -137,56 +137,59 @@ html_template = """<!DOCTYPE html>
 </head>
 <body class="bg-[#0B0E14] text-gray-100 font-sans antialiased pb-20" oncontextmenu="return false;">
 
-  <!-- 상단 네비게이션 헤더 (고정) -->
-  <header class="border-b border-gray-800/80 bg-[#111622]/95 backdrop-blur sticky top-0 z-40 px-4 py-3">
-    <div class="max-w-6xl mx-auto flex flex-wrap items-center justify-between gap-3">
-      <div class="flex items-center gap-2.5">
-        <span class="flex h-2.5 w-2.5 relative">
-          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-          <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
-        </span>
-        <a href="/" class="text-base font-black tracking-tight text-white">MODU.TODAY</a>
+  <!-- 상단 고정 영역 래퍼 (네비게이션 + 형광 뉴스 띠가 함께 최상단에 고정됨) -->
+  <div class="sticky top-0 z-50 shadow-2xl">
+    <!-- 상단 네비게이션 헤더 -->
+    <header class="border-b border-gray-800 bg-[#111622] px-4 py-3">
+      <div class="max-w-6xl mx-auto flex flex-wrap items-center justify-between gap-3">
+        <div class="flex items-center gap-2.5">
+          <span class="flex h-2.5 w-2.5 relative">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+          </span>
+          <a href="/" class="text-base font-black tracking-tight text-white">MODU.TODAY</a>
+        </div>
+        
+        <nav class="flex flex-wrap gap-1 text-[11px] font-medium">
+          <a href="lotto.html" class="px-2 py-1 rounded bg-blue-600/20 text-blue-400 border border-blue-500/30 hover:bg-blue-600 hover:text-white transition">🍀로또</a>
+          <a href="loan.html" class="px-2 py-1 rounded bg-[#141A28] border border-gray-700 text-gray-300 hover:text-white transition">대출</a>
+          <a href="deposit.html" class="px-2 py-1 rounded bg-[#141A28] border border-gray-700 text-gray-300 hover:text-white transition">예적금</a>
+          <a href="salary.html" class="px-2 py-1 rounded bg-[#141A28] border border-gray-700 text-gray-300 hover:text-white transition">연봉</a>
+          <a href="realtor.html" class="px-2 py-1 rounded bg-[#141A28] border border-gray-700 text-gray-300 hover:text-white transition">복비</a>
+          <a href="parttime.html" class="px-2 py-1 rounded bg-[#141A28] border border-gray-700 text-gray-300 hover:text-white transition">주휴수당</a>
+          <a href="severance.html" class="px-2 py-1 rounded bg-[#141A28] border border-gray-700 text-gray-300 hover:text-white transition">퇴직금</a>
+          <a href="counter.html" class="px-2 py-1 rounded bg-[#141A28] border border-gray-700 text-gray-300 hover:text-white transition">카운터</a>
+          <a href="compound.html" class="px-2 py-1 rounded bg-[#141A28] border border-gray-700 text-gray-300 hover:text-white transition">복리</a>
+          <a href="annual-leave.html" class="px-2 py-1 rounded bg-[#141A28] border border-gray-700 text-gray-300 hover:text-white transition">연차</a>
+          <a href="unemployment.html" class="px-2 py-1 rounded bg-[#141A28] border border-gray-700 text-gray-300 hover:text-white transition">실업급여</a>
+          <a href="average-price.html" class="px-2 py-1 rounded bg-[#141A28] border border-gray-700 text-gray-300 hover:text-white transition">평단가</a>
+          <a href="rent-tax.html" class="px-2 py-1 rounded bg-[#141A28] border border-gray-700 text-gray-300 hover:text-white transition">임대세</a>
+          <a href="dday.html" class="px-2 py-1 rounded bg-[#141A28] border border-gray-700 text-gray-300 hover:text-white transition">D-day</a>
+          <a href="exchange.html" class="px-2 py-1 rounded bg-[#141A28] border border-gray-700 text-gray-300 hover:text-white transition">환율</a>
+          <a href="car-tax.html" class="px-2 py-1 rounded bg-[#141A28] border border-gray-700 text-gray-300 hover:text-white transition">자동차세</a>
+          <a href="bmi.html" class="px-2 py-1 rounded bg-[#141A28] border border-gray-700 text-gray-300 hover:text-white transition">BMI</a>
+          <a href="electricity.html" class="px-2 py-1 rounded bg-[#141A28] border border-gray-700 text-gray-300 hover:text-white transition">전기요금</a>
+          <a href="area.html" class="px-2 py-1 rounded bg-[#141A28] border border-gray-700 text-gray-300 hover:text-white transition">평형</a>
+          <a href="dividend.html" class="px-2 py-1 rounded bg-[#141A28] border border-gray-700 text-gray-300 hover:text-white transition">배당금</a>
+          <a href="customs.html" class="px-2 py-1 rounded bg-[#141A28] border border-gray-700 text-gray-300 hover:text-white transition">관세</a>
+          <a href="registration-tax.html" class="px-2 py-1 rounded bg-[#141A28] border border-gray-700 text-gray-300 hover:text-white transition">취득세</a>
+          <a href="yasun.html" class="px-2 py-1 rounded bg-amber-600/20 text-amber-400 border border-amber-500/30 hover:bg-amber-600 hover:text-white transition">🌙야간선물</a>
+        </nav>
       </div>
-      
-      <nav class="flex flex-wrap gap-1 text-[11px] font-medium">
-        <a href="lotto.html" class="px-2 py-1 rounded bg-blue-600/20 text-blue-400 border border-blue-500/30 hover:bg-blue-600 hover:text-white transition">🍀로또</a>
-        <a href="loan.html" class="px-2 py-1 rounded bg-[#141A28] border border-gray-700 text-gray-300 hover:text-white transition">대출</a>
-        <a href="deposit.html" class="px-2 py-1 rounded bg-[#141A28] border border-gray-700 text-gray-300 hover:text-white transition">예적금</a>
-        <a href="salary.html" class="px-2 py-1 rounded bg-[#141A28] border border-gray-700 text-gray-300 hover:text-white transition">연봉</a>
-        <a href="realtor.html" class="px-2 py-1 rounded bg-[#141A28] border border-gray-700 text-gray-300 hover:text-white transition">복비</a>
-        <a href="parttime.html" class="px-2 py-1 rounded bg-[#141A28] border border-gray-700 text-gray-300 hover:text-white transition">주휴수당</a>
-        <a href="severance.html" class="px-2 py-1 rounded bg-[#141A28] border border-gray-700 text-gray-300 hover:text-white transition">퇴직금</a>
-        <a href="counter.html" class="px-2 py-1 rounded bg-[#141A28] border border-gray-700 text-gray-300 hover:text-white transition">카운터</a>
-        <a href="compound.html" class="px-2 py-1 rounded bg-[#141A28] border border-gray-700 text-gray-300 hover:text-white transition">복리</a>
-        <a href="annual-leave.html" class="px-2 py-1 rounded bg-[#141A28] border border-gray-700 text-gray-300 hover:text-white transition">연차</a>
-        <a href="unemployment.html" class="px-2 py-1 rounded bg-[#141A28] border border-gray-700 text-gray-300 hover:text-white transition">실업급여</a>
-        <a href="average-price.html" class="px-2 py-1 rounded bg-[#141A28] border border-gray-700 text-gray-300 hover:text-white transition">평단가</a>
-        <a href="rent-tax.html" class="px-2 py-1 rounded bg-[#141A28] border border-gray-700 text-gray-300 hover:text-white transition">임대세</a>
-        <a href="dday.html" class="px-2 py-1 rounded bg-[#141A28] border border-gray-700 text-gray-300 hover:text-white transition">D-day</a>
-        <a href="exchange.html" class="px-2 py-1 rounded bg-[#141A28] border border-gray-700 text-gray-300 hover:text-white transition">환율</a>
-        <a href="car-tax.html" class="px-2 py-1 rounded bg-[#141A28] border border-gray-700 text-gray-300 hover:text-white transition">자동차세</a>
-        <a href="bmi.html" class="px-2 py-1 rounded bg-[#141A28] border border-gray-700 text-gray-300 hover:text-white transition">BMI</a>
-        <a href="electricity.html" class="px-2 py-1 rounded bg-[#141A28] border border-gray-700 text-gray-300 hover:text-white transition">전기요금</a>
-        <a href="area.html" class="px-2 py-1 rounded bg-[#141A28] border border-gray-700 text-gray-300 hover:text-white transition">평형</a>
-        <a href="dividend.html" class="px-2 py-1 rounded bg-[#141A28] border border-gray-700 text-gray-300 hover:text-white transition">배당금</a>
-        <a href="customs.html" class="px-2 py-1 rounded bg-[#141A28] border border-gray-700 text-gray-300 hover:text-white transition">관세</a>
-        <a href="registration-tax.html" class="px-2 py-1 rounded bg-[#141A28] border border-gray-700 text-gray-300 hover:text-white transition">취득세</a>
-        <a href="yasun.html" class="px-2 py-1 rounded bg-amber-600/20 text-amber-400 border border-amber-500/30 hover:bg-amber-600 hover:text-white transition">🌙야간선물</a>
-      </nav>
-    </div>
-  </header>
+    </header>
 
-  <!-- 형광 네온 테두리 & 스크롤 시에도 상단 고정되는 속보 전광판 띠 -->
-  <div class="sticky top-[49px] z-30 bg-[#061018] border-y-2 border-emerald-500 py-2.5 overflow-hidden whitespace-nowrap shadow-[0_0_15px_rgba(16,185,129,0.3)]">
-    <div class="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-[#061018] to-transparent z-10 pointer-events-none"></div>
-    <div class="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-[#061018] to-transparent z-10 pointer-events-none"></div>
-    <div class="animate-marquee">
-      {ticker_html}
-      {ticker_html}
+    <!-- 쨍하고 밝은 형광 컬러 & 천천히 흐르는 속보 전광판 띠 -->
+    <div class="bg-[#042014] border-y-2 border-yellow-400 py-2.5 overflow-hidden whitespace-nowrap shadow-[0_0_20px_rgba(250,204,21,0.4)]">
+      <div class="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-[#042014] to-transparent z-10 pointer-events-none"></div>
+      <div class="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-[#042014] to-transparent z-10 pointer-events-none"></div>
+      <div class="animate-marquee">
+        {ticker_html}
+        {ticker_html}
+      </div>
     </div>
   </div>
 
-  <main class="max-w-5xl mx-auto p-4 md:p-6 space-y-8 mt-4">
+  <main class="max-w-5xl mx-auto p-4 md:p-6 space-y-8 mt-6">
     
     <div class="bg-[#141A28] border border-gray-800 rounded-2xl p-5 md:p-6 shadow-xl flex flex-wrap justify-between items-center gap-4">
       <div>
@@ -213,4 +216,4 @@ html_template = """<!DOCTYPE html>
 with open("index.html", "w", encoding="utf-8") as f:
     f.write(html_template)
 
-print(f"Successfully generated index.html with sticky neon marquee at {today_str}")
+print(f"Successfully generated index.html with slow bright sticky marquee at {today_str}")
