@@ -603,8 +603,8 @@ button{
               style="margin-top:8px;color:#ffd43b;font-weight:900"
             ></div>
 
-            <div class="record-entry" id="recordEntry">
-              <label for="recordNameInput">🏆 새로운 최고기록! 기록할 아이디를 입력하세요.</label>
+            <div class="record-entry show" id="recordEntry">
+              <label for="recordNameInput" id="recordLabel">기록할 아이디를 입력하세요.</label>
               <input
                 id="recordNameInput"
                 type="text"
@@ -639,12 +639,16 @@ button{
 
         <button class="ctrl" id="downBtn">▼</button>
 
-        <button class="ctrl wide" id="holdBtn">
+        <button class="ctrl" id="holdBtn">
           HOLD
         </button>
 
         <button class="ctrl wide" id="dropBtn">
           HARD DROP
+        </button>
+
+        <button class="ctrl" id="pauseBtn">
+          PAUSE
         </button>
 
       </div>
@@ -758,6 +762,7 @@ const messageEl = document.getElementById("gameMessage");
 
 const bestNameText = document.getElementById("bestNameText");
 const recordEntry = document.getElementById("recordEntry");
+const recordLabel = document.getElementById("recordLabel");
 const recordNameInput = document.getElementById("recordNameInput");
 const saveRecordBtn = document.getElementById("saveRecordBtn");
 const recordSaveMsg = document.getElementById("recordSaveMsg");
@@ -1212,24 +1217,30 @@ function actuallyClearRows(){
 
 function hold(){
 
-  if(!running || paused || holdUsed || !piece){
+  if(!running || paused || !piece){
+    return;
+  }
+
+  if(holdUsed){
+    showMessage("HOLD USED");
     return;
   }
 
   const currentType = piece.type;
 
-  if(holdPiece){
-
-    const swapType = holdPiece;
-    holdPiece = currentType;
-    piece = createPiece(swapType);
-
-  } else {
+  if(holdPiece === null){
 
     holdPiece = currentType;
 
     fillQueue();
-    piece = createPiece(queue.shift());
+    const nextType = queue.shift();
+    piece = createPiece(nextType);
+
+  } else {
+
+    const swapType = holdPiece;
+    holdPiece = currentType;
+    piece = createPiece(swapType);
 
   }
 
@@ -1238,14 +1249,13 @@ function hold(){
 
   drawHold();
   updateNext();
+  drawBoard();
 
-  // HOLD로 꺼낸 블록이 시작 위치에서 바로 충돌하면 게임오버
+  showMessage("HOLD");
+
   if(collides(piece.matrix, piece.x, piece.y)){
     gameOver();
-    return;
   }
-
-  drawBoard();
 }
 
 function getGhostY(){
@@ -1308,6 +1318,9 @@ function startGame(){
   running = true;
   paused = false;
 
+  const pauseBtn = document.getElementById("pauseBtn");
+  if(pauseBtn) pauseBtn.textContent = "PAUSE";
+
   startOverlay.classList.add("hidden");
   gameOverOverlay.classList.add("hidden");
 
@@ -1316,7 +1329,7 @@ function startGame(){
   recordNameInput.value = "";
   recordSaveMsg.textContent = "";
   saveRecordBtn.disabled = false;
-  saveRecordBtn.textContent = "최고기록 저장";
+  saveRecordBtn.textContent = "기록 저장";
 
   lastTime =
     performance.now();
@@ -1336,72 +1349,55 @@ function gameOver(){
   const previousBest = best;
   const isNewRecord = score > previousBest;
 
-  finalScore.textContent =
-    score.toLocaleString();
+  finalScore.textContent = score.toLocaleString();
 
   if(score < 2000){
-
-    resultText.textContent =
-      "조금만 더 하면 감이 옵니다.";
-
+    resultText.textContent = "조금만 더 하면 감이 옵니다.";
   }
   else if(score < 6000){
-
-    resultText.textContent =
-      "블록 감각이 꽤 좋습니다.";
-
+    resultText.textContent = "블록 감각이 꽤 좋습니다.";
   }
   else if(score < 15000){
-
-    resultText.textContent =
-      "상당한 실력입니다.";
-
+    resultText.textContent = "상당한 실력입니다.";
   }
   else if(score < 30000){
-
-    resultText.textContent =
-      "MODU BLOCKS 고수";
-
+    resultText.textContent = "MODU BLOCKS 고수";
   }
   else{
-
-    resultText.textContent =
-      "👑 전설의 블록 마스터";
-
+    resultText.textContent = "👑 전설의 블록 마스터";
   }
+
+  // 게임오버 때 아이디 입력창은 항상 보여준다.
+  recordEntry.classList.add("show");
+  recordNameInput.value = "";
+  recordSaveMsg.textContent = "";
+  saveRecordBtn.disabled = false;
+  saveRecordBtn.textContent = "기록 저장";
 
   if(isNewRecord){
 
-    // 점수는 즉시 최고기록으로 반영하되,
-    // 아이디는 사용자가 저장 버튼을 눌렀을 때 확정 저장
     best = score;
     localStorage.setItem("moduBlocksBest", String(best));
 
     pendingNewRecord = true;
-    recordEntry.classList.add("show");
-    recordSaveMsg.textContent = "";
-
-    resultText.textContent =
-      "🏆 NEW BEST! 최고기록을 갱신했습니다.";
-
-    setTimeout(() => {
-      recordNameInput.focus();
-    }, 80);
+    recordLabel.textContent = "🏆 새로운 최고기록! 아이디를 입력해 기록하세요.";
+    resultText.textContent = "🏆 NEW BEST! 최고기록을 갱신했습니다.";
 
   } else {
 
     pendingNewRecord = false;
-    recordEntry.classList.remove("show");
+    recordLabel.textContent = "이번 점수에 사용할 아이디를 입력하세요.";
 
   }
 
   bestText.textContent = best.toLocaleString();
   bestNameText.textContent = bestName ? bestName : "NO RECORD";
 
-  gameOverOverlay
-    .classList
-    .remove("hidden");
+  gameOverOverlay.classList.remove("hidden");
 
+  setTimeout(() => {
+    recordNameInput.focus();
+  }, 80);
 }
 
 function togglePause(){
@@ -1410,18 +1406,21 @@ function togglePause(){
 
   paused = !paused;
 
+  const pauseBtn = document.getElementById("pauseBtn");
+
   if(paused){
 
+    if(pauseBtn) pauseBtn.textContent = "RESUME";
     showMessage("PAUSE");
 
+  } else {
+
+    if(pauseBtn) pauseBtn.textContent = "PAUSE";
+    lastTime = performance.now();
+
   }
-  else{
 
-    lastTime =
-      performance.now();
-
-  }
-
+  drawBoard();
 }
 
 function updateHUD(){
@@ -2128,11 +2127,12 @@ bindButton(
   hold
 );
 
-saveRecordBtn.addEventListener("click", () => {
+bindButton(
+  "pauseBtn",
+  togglePause
+);
 
-  if(!pendingNewRecord){
-    return;
-  }
+saveRecordBtn.addEventListener("click", () => {
 
   const name = recordNameInput.value.trim();
 
@@ -2142,20 +2142,30 @@ saveRecordBtn.addEventListener("click", () => {
     return;
   }
 
-  bestName = name.slice(0, 12);
+  const cleanName = name.slice(0, 12);
 
-  localStorage.setItem("moduBlocksBestName", bestName);
-  localStorage.setItem("moduBlocksBest", String(best));
+  // 최근 게임 기록
+  localStorage.setItem("moduBlocksLastName", cleanName);
+  localStorage.setItem("moduBlocksLastScore", String(score));
 
-  bestNameText.textContent = bestName;
+  if(pendingNewRecord){
+    bestName = cleanName;
+    localStorage.setItem("moduBlocksBestName", bestName);
+    localStorage.setItem("moduBlocksBest", String(best));
 
-  pendingNewRecord = false;
-  recordSaveMsg.textContent =
-    `${bestName} · ${best.toLocaleString()}점 기록 저장 완료`;
+    bestNameText.textContent = bestName;
+
+    recordSaveMsg.textContent =
+      `${bestName} · ${best.toLocaleString()}점 최고기록 저장 완료`;
+
+    pendingNewRecord = false;
+  } else {
+    recordSaveMsg.textContent =
+      `${cleanName} · ${score.toLocaleString()}점 기록 저장 완료`;
+  }
 
   saveRecordBtn.disabled = true;
   saveRecordBtn.textContent = "저장 완료";
-
 });
 
 recordNameInput.addEventListener("keydown", e => {
