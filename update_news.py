@@ -5,27 +5,31 @@ kst = timezone(timedelta(hours=9))
 today_str = datetime.now(kst).strftime("%Y년 %m월 %d일 %H:%M KST")
 date_badge = datetime.now(kst).strftime("%Y.%m.%d")
 
-# 검색어가 확실하게 매칭되도록 쿼리 검증 완료
+# 기존 증시 뉴스에 환율/원자재, 공모주, 정부 지원금 카테고리를 추가하여 자동 수집
 FEEDS = {
     "국내 증시 / 코스피 코스닥": [
         "https://news.google.com/rss/search?q=%EC%BD%94%EC%8A%A4%ED%94%BC+%EC%BD%94%EC%8A%A4%EB%8B%A5+%EC%A6%9D%EC%8B%9C+when:1d&hl=ko&gl=KR&ceid=KR:ko",
         "https://news.google.com/rss/search?q=%EA%B5%AD%EB%82%B0+%EC%A3%BC%EC%8B%9D+%ED%85%8c%EB%A7%88%EC%A3%BC+%EC%A0%84%EB%A7%9D+when:1d&hl=ko&gl=KR&ceid=KR:ko"
     ],
-    "반도체 / AI / 대형주": [
-        "https://news.google.com/rss/search?q=%EB%B0%98%EB%8F%84%EC%B2%B4+%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90+%ED%95%98%EC%9D%B4%EB%8B%89%EC%8A%A4+when:1d&hl=ko&gl=KR&ceid=KR:ko",
-        "https://news.google.com/rss/search?q=%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5+AI+%EA%B4%80%EB%A0%A8%EC%A3%BC+when:1d&hl=ko&gl=KR&ceid=KR:ko"
+    "환율 및 글로벌 원자재 시세": [
+        "https://news.google.com/rss/search?q=%EC%9B%90%EB%8B%AC%EB%9F%AC+%ED%99%98%EC%9C%A8+%EB%85%BC%EB%C%AC+when:1d&hl=ko&gl=KR&ceid=KR:ko",
+        "https://news.google.com/rss/search?q=%EA%B8%88%EA%B0%92+%EC%9C%A0%EA%B0%80+%EA%B5%AC%EB%A6%AC+%EC%9B%90%EC%9E%90%EC%9E%96+%EC%8B%9C%EC%84%B8+when:1d&hl=ko&gl=KR&ceid=KR:ko"
+    ],
+    "공모주 청약 및 IPO 일정": [
+        "https://news.google.com/rss/search?q=%EA%B3%B5%EB%AA%A8%EC%A3%BC+%EC%B2%AD%EC%95%BD+%EC%9D%BC%EC%A0%95+when:1d&hl=ko&gl=KR&ceid=KR:ko",
+        "https://news.google.com/rss/search?q=%EC%8B%A0%EA%B7%9C%EC%83%81%EC%9E%A5+IPO+%EC%B2%AD%EC%95%BD+when:1d&hl=ko&gl=KR&ceid=KR:ko"
+    ],
+    "정부 지원금 및 정책 소식": [
+        "https://news.google.com/rss/search?q=%EC%A0%95%EB%B6%80+%EC%A7%80%EC%9B%90%EA%B8%88+%EC%B2%AD%EB%85%84+%EC%86%8C%EC%83%81%EA%B3%B5%EC%9D%B8+when:1d&hl=ko&gl=KR&ceid=KR:ko",
+        "https://news.google.com/rss/search?q=%EC%A7%80%EC%9E%90%EC%B2%98+%EC%A7%80%EC%9B%90%EA%B8%88+%EC%A3%BC%EA%B1%B0+%EC%A7%80%EC%9B%90+when:1d&hl=ko&gl=KR&ceid=KR:ko"
     ],
     "미국 증시 / 글로벌 매크로": [
         "https://news.google.com/rss/search?q=%EB%82%98%EC%8A%A4%EB%8B%A5+SP500+%EB%89%B4%EC%9A%95%EC%A6%9D%EC%8B%9C+when:1d&hl=ko&gl=KR&ceid=KR:ko",
-        "https://news.google.com/rss/search?q=%EC%9B%90%EB%8B%AC%EB%9F%AC+%ED%99%98%EC%9C%A8+%EA%B8%88%EC%A6%AC+%EC%97%B0%EC%A4%80+when:1d&hl=ko&gl=KR&ceid=KR:ko"
+        "https://news.google.com/rss/search?q=%EB%AF%B8%EA%B5%AD+%EA%B8%88%EB%A6%AC+%EC%97%B0%EC%A4%80+%EB%A7%88%EA%B0%80+when:1d&hl=ko&gl=KR&ceid=KR:ko"
     ],
     "야간선물 / 파생 / 투자시황": [
-        "https://news.google.com/rss/search?q=%EC%95%BC%EA%B0%84%EC%84%A0%EB%AC%BC+%ED%8C%8C%EC%83%9D%EC%83%81%ED%92%88+when:1d&hl=ko&gl=KR&ceid=KR:ko",
+        "https://news.google.com/rss/search?q=%EC%95%BC%EA%B0%84%EC%84%A0%EC%98%BC+%EC%84%A0%EB%AC%BC+%EC%98%B5%EC%85%98+when:1d&hl=ko&gl=KR&ceid=KR:ko",
         "https://news.google.com/rss/search?q=%EC%A3%BC%EC%8B%9D+%EC%84%A0%EB%AC%BC+%EC%98%B5%EC%85%98+when:1d&hl=ko&gl=KR&ceid=KR:ko"
-    ],
-    "부동산 / 거시 경제": [
-        "https://news.google.com/rss/search?q=%EB%B6%80%EB%8F%99%EC%82%B0+%EC%A3%BC%ED%83%9D+%EC%B2%AD%EC%95%BD+when:1d&hl=ko&gl=KR&ceid=KR:ko",
-        "https://news.google.com/rss/search?q=%EA%B5%AD%EB%82%B0+%EA%B2%BD%EC%97%B0+%EB%AC%BC%EA%B0%80+%EC%88%98%EC%B6%9C+when:1d&hl=ko&gl=KR&ceid=KR:ko"
     ]
 }
 
@@ -89,8 +93,8 @@ html_template = """<!DOCTYPE html>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MODU.TODAY | 실시간 금융 뉴스 대시보드</title>
-  <meta name="description" content="코스피, 나스닥, 반도체, 환율 등 국내외 금융 시장의 핵심 뉴스를 매일 실시간 자동 브리핑합니다.">
+  <title>MODU.TODAY | 실시간 금융 및 정책 정보 대시보드</title>
+  <meta name="description" content="코스피, 환율, 원자재, 공모주, 정부 지원금 등 매일 실시간 자동 브리핑합니다.">
   <meta name="robots" content="index, follow, noarchive">
   
   <meta name="google-adsense-account" content="ca-pub-6122968996738347">
@@ -151,8 +155,8 @@ html_template = """<!DOCTYPE html>
     
     <div class="bg-[#141A28] border border-gray-800 rounded-2xl p-5 md:p-6 shadow-xl flex flex-wrap justify-between items-center gap-4">
       <div>
-        <h1 class="text-xl md:text-2xl font-black text-white tracking-tight">오늘의 국내 & 글로벌 금융 핵심 뉴스</h1>
-        <p class="text-xs text-gray-400 mt-1">국내외 주요 언론사의 핵심 경제 이슈를 실시간으로 자동 수집하여 제공합니다.</p>
+        <h1 class="text-xl md:text-2xl font-black text-white tracking-tight">오늘의 금융, 원자재 및 정책 핵심 브리핑</h1>
+        <p class="text-xs text-gray-400 mt-1">증시, 환율/원자재, 공모주 일정 및 정부 지원금 소식을 매일 실시간으로 자동 수집합니다.</p>
       </div>
       <div class="px-3 py-1.5 rounded-lg bg-gray-800/80 text-xs font-mono text-gray-300 border border-gray-700">
         업데이트: {today_str}
@@ -174,4 +178,4 @@ html_template = """<!DOCTYPE html>
 with open("index.html", "w", encoding="utf-8") as f:
     f.write(html_template)
 
-print(f"Successfully generated index.html with validated queries at {today_str}")
+print(f"Successfully generated index.html with expanded financial and policy feeds at {today_str}")
