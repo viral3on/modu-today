@@ -5,7 +5,7 @@ kst = timezone(timedelta(hours=9))
 today_str = datetime.now(kst).strftime("%Y년 %m월 %d일 %H:%M KST")
 date_badge = datetime.now(kst).strftime("%Y.%m.%d")
 
-# 기사가 안정적으로 풍부하게 수집되도록 원자재/환율 검색 쿼리를 대중적인 키워드로 재정비
+# 수집 기간을 24시간(when:1d)으로 엄격하게 유지
 FEEDS = {
     "국내 증시 / 코스피 코스닥": [
         "https://news.google.com/rss/search?q=%EC%BD%94%EC%8A%A4%ED%94%BC+%EC%BD%94%EC%8A%A4%EB%8B%A5+%EC%A6%9D%EC%8B%9C+when:1d&hl=ko&gl=KR&ceid=KR:ko",
@@ -13,7 +13,7 @@ FEEDS = {
     ],
     "환율 및 글로벌 원자재 시세": [
         "https://news.google.com/rss/search?q=%EC%9B%90%EB%8B%AC%EB%9F%AC+%ED%99%98%EC%9C%A8+%EC%A0%84%EB%A7%9D+when:1d&hl=ko&gl=KR&ceid=KR:ko",
-        "https://news.google.com/rss/search?q=%EA%B5%AC%EB%A6%AC+%EC%9C%A0%EA%B0%80+%EA%B8%88%EA%B0%92+%EC%9B%90%EC%9E%90%EC%9E%AC+when:1d&hl=ko&gl=KR&ceid=KR:ko"
+        "https://news.google.com/rss/search?q=%EA%B5%AC%EB%A6%AC+%EC%9C%A0%EA%B0%80+%EA%B8%88%EA%B0%92+when:1d&hl=ko&gl=KR&ceid=KR:ko"
     ],
     "공모주 청약 및 IPO 일정": [
         "https://news.google.com/rss/search?q=%EA%B3%B5%EB%AA%A8%EC%A3%BC+%EC%B2%AD%EC%95%BD+%EC%9D%BC%EC%A0%95+when:1d&hl=ko&gl=KR&ceid=KR:ko",
@@ -25,7 +25,7 @@ FEEDS = {
     ],
     "미국 증시 / 글로벌 매크로": [
         "https://news.google.com/rss/search?q=%EB%82%98%EC%8A%A4%EB%8B%A5+SP500+%EB%89%B4%EC%9A%95%EC%A6%9D%EC%8B%9C+when:1d&hl=ko&gl=KR&ceid=KR:ko",
-        "https://news.google.com/rss/search?q=%EB%AF%B8%EA%B5%AD+%EA%B8%88%EC%A6%AC+%EC%97%B0%EC%A4%80+%EB%A7%8%마감+when:1d&hl=ko&gl=KR&ceid=KR:ko"
+        "https://news.google.com/rss/search?q=%EB%AF%B8%EA%B5%AD+%EA%B8%88%EC%A6%AC+%EC%97%B0%EC%A4%80+%EB%A7%88%EA%B0%80+when:1d&hl=ko&gl=KR&ceid=KR:ko"
     ],
     "야간선물 / 파생 / 투자시황": [
         "https://news.google.com/rss/search?q=%EC%95%BC%EA%B0%84%EC%84%A0%EB%AC%BC+%ED%8C%8C%EC%83%9D%EC%83%81%ED%92%88+when:1d&hl=ko&gl=KR&ceid=KR:ko",
@@ -35,11 +35,13 @@ FEEDS = {
 
 def fetch_news():
     sections_html = ""
+    ticker_items = []
+    
     for category, urls in FEEDS.items():
         items = []
         for url in urls:
             feed = feedparser.parse(url)
-            for entry in feed.entries[:8]:
+            for entry in feed.entries[:10]:
                 title = entry.title.replace('"', '&quot;')
                 link = entry.link
                 source = "주요 언론"
@@ -56,6 +58,7 @@ def fetch_news():
             if clean_title not in seen_titles:
                 seen_titles.add(clean_title)
                 unique_items.append(it)
+                ticker_items.append(it)
 
         list_html = ""
         for it in unique_items[:6]: 
@@ -84,9 +87,18 @@ def fetch_news():
           </div>
         </div>
         """
-    return sections_html
+        
+    return sections_html, ticker_items
 
-news_content = fetch_news()
+news_content, ticker_items = fetch_news()
+
+ticker_html = ""
+for it in ticker_items[:25]:
+    ticker_html += f"""
+    <a href="{it['link']}" target="_blank" rel="noopener noreferrer nofollow" class="inline-flex items-center gap-2 mx-6 text-xs text-gray-300 hover:text-blue-400 transition">
+      <span class="text-blue-500 font-bold">▪</span> {it['title']} <span class="text-[10px] text-gray-500 font-mono">({it['source']})</span>
+    </a>
+    """
 
 html_template = """<!DOCTYPE html>
 <html lang="ko">
@@ -108,6 +120,18 @@ html_template = """<!DOCTYPE html>
       -moz-user-select: none;
       -ms-user-select: none;
       user-select: none;
+    }}
+    @keyframes marquee {{
+      0% {{ transform: translateX(0%); }}
+      100% {{ transform: translateX(-50%); }}
+    }}
+    .animate-marquee {{
+      display: flex;
+      width: max-content;
+      animation: marquee 35s linear infinite;
+    }}
+    .animate-marquee:hover {{
+      animation-play-state: paused;
     }}
   </style>
 </head>
@@ -151,7 +175,17 @@ html_template = """<!DOCTYPE html>
     </div>
   </header>
 
-  <main class="max-w-5xl mx-auto p-4 md:p-6 space-y-8 mt-2">
+  <!-- 증권사 전광판 스타일 실시간 뉴스 흐름 띠 -->
+  <div class="bg-[#141A28] border-b border-gray-800 py-2.5 overflow-hidden whitespace-nowrap relative shadow-inner">
+    <div class="absolute left-0 top-0 bottom-0 w-12 bg-gradient-to-r from-[#141A28] to-transparent z-10 pointer-events-none"></div>
+    <div class="absolute right-0 top-0 bottom-0 w-12 bg-gradient-to-l from-[#141A28] to-transparent z-10 pointer-events-none"></div>
+    <div class="animate-marquee">
+      {ticker_html}
+      {ticker_html}
+    </div>
+  </div>
+
+  <main class="max-w-5xl mx-auto p-4 md:p-6 space-y-8 mt-4">
     
     <div class="bg-[#141A28] border border-gray-800 rounded-2xl p-5 md:p-6 shadow-xl flex flex-wrap justify-between items-center gap-4">
       <div>
@@ -173,9 +207,9 @@ html_template = """<!DOCTYPE html>
 
 </body>
 </html>
-""".format(today_str=today_str, news_content=news_content)
+""".format(today_str=today_str, news_content=news_content, ticker_html=ticker_html)
 
 with open("index.html", "w", encoding="utf-8") as f:
     f.write(html_template)
 
-print(f"Successfully generated index.html with fixed queries at {today_str}")
+print(f"Successfully generated index.html with 24h filter and marquee ticker at {today_str}")
