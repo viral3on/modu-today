@@ -5,14 +5,23 @@ kst = timezone(timedelta(hours=9))
 today_str = datetime.now(kst).strftime("%Y년 %m월 %d일 %H:%M KST")
 date_badge = datetime.now(kst).strftime("%Y.%m.%d")
 
+# 기존보다 카테고리를 대폭 늘려 더 다양하고 풍성한 뉴스가 수집되도록 설정
 FEEDS = {
     "국내 증시 / 금융 이슈": [
         "https://news.google.com/rss/search?q=%ED%95%9C%EA%B5%AD%EC%A6%9D%EC%8B%9C+%EC%BD%94%EC%8A%A4%ED%94%BC+when:1d&hl=ko&gl=KR&ceid=KR:ko",
-        "https://news.google.com/rss/search?q=%EB%B0%98%EB%8F%84%EC%B2%B4+%ED%95%98%EC%9D%B4%EB%8B%89%EC%8A%A4+%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90+when:1d&hl=ko&gl=KR&ceid=KR:ko"
+        "https://news.google.com/rss/search?q=%EC%BD%94%EC%8A%A4%EB%8B%A5+%EC%A6%9D%EC%8B%9C+%ED%85%8c%EB%A7%88%EC%A3%BC+when:1d&hl=ko&gl=KR&ceid=KR:ko"
+    ],
+    "반도체 / IT / 테크": [
+        "https://news.google.com/rss/search?q=%EB%B0%98%EB%8F%84%EC%B2%B4+%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90+%ED%95%98%EC%9D%B4%EB%8B%89%EC%8A%A4+when:1d&hl=ko&gl=KR&ceid=KR:ko",
+        "https://news.google.com/rss/search?q=%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5+AI+%ED%85%8c%ED%81%AC+%EC%82%B0%EC%97%85+when:1d&hl=ko&gl=KR&ceid=KR:ko"
     ],
     "미국 증시 / 글로벌 매크로": [
         "https://news.google.com/rss/search?q=%EB%82%98%EC%8A%A4%EB%8B%A5+SP500+%EB%89%B4%EC%9A%95%EC%A6%9D%EC%8B%9C+when:1d&hl=ko&gl=KR&ceid=KR:ko",
-        "https://news.google.com/rss/search?q=%ED%99%98%EC%9C%A8+%EA%B8%88%EB%A6%AC+%EC%97%B0%EC%A4%80+when:1d&hl=ko&gl=KR&ceid=KR:ko"
+        "https://news.google.com/rss/search?q=%EC%9B%90%EB%8B%AC%EB%9F%AC+%ED%99%98%EC%9C%A8+%EA%B8%88%EB%A6%AC+%EC%97%B0%EC%A4%80+when:1d&hl=ko&gl=KR&ceid=KR:ko"
+    ],
+    "부동산 / 거시 경제": [
+        "https://news.google.com/rss/search?q=%EB%B6%80%EB%8F%99%EC%82%B0+%EC%A3%BC%ED%83%9D+%EC%B2%AD%EC%95%BD+when:1d&hl=ko&gl=KR&ceid=KR:ko",
+        "https://news.google.com/rss/search?q=%EA%B5%AD%EB%82%B0+%EA%B2%BD%EC%97%B0+%EB%AC%BC%EA%B0%80+%EC%88%98%EC%B6%9C+when:1d&hl=ko&gl=KR&ceid=KR:ko"
     ]
 }
 
@@ -22,7 +31,7 @@ def fetch_news():
         items = []
         for url in urls:
             feed = feedparser.parse(url)
-            for entry in feed.entries[:8]: # 피드당 8개씩 추출
+            for entry in feed.entries[:6]:
                 title = entry.title.replace('"', '&quot;')
                 link = entry.link
                 source = "주요 언론"
@@ -41,7 +50,7 @@ def fetch_news():
                 unique_items.append(it)
 
         list_html = ""
-        for it in unique_items[:8]: # 카테고리당 최종 8개씩 총 16개 출력
+        for it in unique_items[:6]: # 카테고리당 6개씩, 총 4개 카테고리 = 총 24개 뉴스 출력
             list_html += f"""
             <a href="{it['link']}" target="_blank" rel="noopener noreferrer nofollow" 
                class="block p-4 rounded-xl bg-[#141A28] border border-gray-800/80 hover:border-blue-500/50 hover:bg-[#192234] transition duration-200 group">
@@ -106,7 +115,7 @@ html_template = """<!DOCTYPE html>
         <a href="/" class="text-base font-black tracking-tight text-white">MODU.TODAY</a>
       </div>
       
-      <!-- 모든 HTML 파일 링크 포함 -->
+      <!-- 모든 계산기/유틸리티 파일 링크 유지 -->
       <nav class="flex flex-wrap gap-1 text-[11px] font-medium">
         <a href="lotto.html" class="px-2 py-1 rounded bg-blue-600/20 text-blue-400 border border-blue-500/30 hover:bg-blue-600 hover:text-white transition">🍀로또</a>
         <a href="loan.html" class="px-2 py-1 rounded bg-[#141A28] border border-gray-700 text-gray-300 hover:text-white transition">대출</a>
@@ -162,4 +171,4 @@ html_template = """<!DOCTYPE html>
 with open("index.html", "w", encoding="utf-8") as f:
     f.write(html_template)
 
-print(f"Successfully generated index.html at {today_str}")
+print(f"Successfully generated index.html with expanded categories at {today_str}")
