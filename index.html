@@ -1,216 +1,157 @@
-<!DOCTYPE html>
+import feedparser
+from datetime import datetime, timezone, timedelta
+
+# 한국 표준시(KST) 기준 날짜
+kst = timezone(timedelta(hours=9))
+today_str = datetime.now(kst).strftime("%Y년 %m월 %d일 %H:%M KST")
+date_badge = datetime.now(kst).strftime("%Y.%m.%d")
+
+# 1. 확장된 뉴스 RSS 피드 목록 (더 다양한 키워드와 카테고리 적용)
+FEEDS = {
+    "국내 증시 / 코스피·코스닥": [
+        "https://news.google.com/rss/search?q=%ED%95%9C%EA%B5%AD%EC%A6%9D%EC%8B%9C+%EC%BD%94%EC%8A%A4%ED%94%BC+%EC%BD%94%EC%8A%A4%EB%8B%A5+when:1d&hl=ko&gl=KR&ceid=KR:ko",
+        "https://news.google.com/rss/search?q=%EC%A3%BC%EC%8B%9D+%ED%85%8c%EB%A7%88%EC%A3%BC+%EC%95%8﻿%A5%ED%85%8C%EB%A7%88+when:1d&hl=ko&gl=KR&ceid=KR:ko"
+    ],
+    "반도체 / AI / 대형주 핵심 이슈": [
+        "https://news.google.com/rss/search?q=%EC%82%BC%EC%84%B1%EC%A0%84%E﻿C%9E%90+SK%ED%95%98%EC%9D%B4%EB%8B%89%EC%8A%A4+%EB%B0%98%EB%8F%84%EC%B2%B4+when:1d&hl=ko&gl=KR&ceid=KR:ko",
+        "https://news.google.com/rss/search?q=%EC%97%94%EB%B9%84%EB%94%94%EC%95%84+AI+%EC%9D%B4%EC%8A%88+when:1d&hl=ko&gl=KR&ceid=KR:ko"
+    ],
+    "미국 증시 / 글로벌 매크로": [
+        "https://news.google.com/rss/search?q=%EB%82%98%EC%8A%A4%EB%8B%A5+S%26P500+%EB%89%B4%EC%9A%95%EC%A6%9C%EC%8B%9C+when:1d&hl=ko&gl=KR&ceid=KR:ko",
+        "https://news.google.com/rss/search?q=%EC%97%B0%EC%A4%80+FOMC+%EA%B8%88%EB%A6%AC%EC%9D%B8%ED%95%98+when:1d&hl=ko&gl=KR&ceid=KR:ko"
+    ],
+    "환율 / 가상자산 / 원자재": [
+        "https://news.google.com/rss/search?q=%EC%9B%90%EB%8B%AC%EB%9F%AC+%ED%99%98%EC%9C%A8+%EA%B8%88%EC%8B%9C%EC%84%B8+when:1d&hl=ko&gl=KR&ceid=KR:ko",
+        "https://news.google.com/rss/search?q=%EB%B9%84%ED%8A%A0%EC%BD%94%EC%9D%B8+%EA%B0%80%EC%83%81%EC%9E%90%EC%82%B0+when:1d&hl=ko&gl=KR&ceid=KR:ko"
+    ]
+}
+
+def fetch_news():
+    sections_html = ""
+    
+    for category, urls in FEEDS.items():
+        items = []
+        for url in urls:
+            feed = feedparser.parse(url)
+            for entry in feed.entries[:8]: # 피드당 수집 개수 확대
+                title = entry.title.replace('"', '&quot;')
+                link = entry.link
+                source = "주요 언론"
+                if " - " in title:
+                    parts = title.rsplit(" - ", 1)
+                    title = parts[0]
+                    source = parts[1]
+                items.append({"title": title, "link": link, "source": source})
+        
+        # 중복 기사 제거
+        unique_items = []
+        seen_titles = set()
+        for it in items:
+            clean_title = it['title'][:25]
+            if clean_title not in seen_titles:
+                seen_titles.add(clean_title)
+                unique_items.append(it)
+
+        # HTML 카드 리스트 빌드 (카테고리당 최대 6개 노출)
+        list_html = ""
+        for it in unique_items[:6]:
+            list_html += f"""
+            <a href="{it['link']}" target="_blank" rel="noopener noreferrer nofollow" 
+               class="block p-4 rounded-xl bg-[#141A28] border border-gray-800/80 hover:border-blue-500/50 hover:bg-[#192234] transition duration-200 group">
+              <div class="flex justify-between items-start gap-2">
+                <span class="text-sm font-semibold text-gray-200 group-hover:text-blue-400 leading-snug line-clamp-2">
+                  {it['title']}
+                </span>
+                <span class="text-[11px] font-mono text-gray-500 flex-shrink-0">↗</span>
+              </div>
+              <div class="mt-2 text-[11px] font-medium text-gray-400 flex items-center justify-between">
+                <span>{it['source']}</span>
+                <span class="text-blue-400/80">실시간 이슈</span>
+              </div>
+            </a>
+            """
+
+        sections_html += f"""
+        <div class="space-y-3">
+          <h2 class="text-base font-bold text-white flex items-center gap-2 border-b border-gray-800 pb-2">
+            <span class="w-2 h-2 rounded-full bg-rose-500"></span> {category}
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+            {list_html}
+          </div>
+        </div>
+        """
+    return sections_html
+
+news_content = fetch_news()
+
+# 전체 HTML 조립
+html_template = f"""<!DOCTYPE html>
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>대출 이자 및 월 상환액 계산기 | 원리금균등·원금균등·만기일시</title>
-  <meta name="description" content="원리금균등, 원금균등, 만기일시상환 방식별 매월 납입금과 총 이자를 손쉽게 비교 계산해 드립니다.">
+  <title>국내 및 해외 증시 주요 뉴스 브리핑 | 매일 자동 갱신</title>
+  <meta name="description" content="코스피, 나스닥, 반도체, 환율 등 국내외 금융 시장의 핵심 뉴스를 매일 실시간 자동 브리핑합니다.">
+  <meta name="robots" content="index, follow, noarchive">
   
-  <!-- 구글 애드센스 소유권 확인 메타 태그 -->
   <meta name="google-adsense-account" content="ca-pub-6122968996738347">
-
-  <!-- 구글 애드센스 스크립트 코드 -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6122968996738347"
-     crossorigin="anonymous"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6122968996738347" crossorigin="anonymous"></script>
 
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    body {{
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }}
+  </style>
 </head>
-<body class="bg-gray-50 text-gray-800 antialiased py-10 px-4">
+<body class="bg-[#0B0E14] text-gray-100 font-sans antialiased pb-20" oncontextmenu="return false;">
 
-  <div class="max-w-2xl mx-auto bg-white rounded-2xl shadow-lg border border-gray-100 p-6 md:p-8">
+  <header class="border-b border-gray-800/80 bg-[#111622]/95 backdrop-blur sticky top-0 z-40 px-4 py-3">
+    <div class="max-w-5xl mx-auto flex flex-wrap items-center justify-between gap-3">
+      <div class="flex items-center gap-2.5">
+        <span class="flex h-2.5 w-2.5 relative">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+        </span>
+        <span class="text-base font-black tracking-tight text-white">DAILY MARKET NEWS</span>
+        <span class="text-[10px] bg-blue-500/20 text-blue-400 border border-blue-500/30 px-2 py-0.5 rounded font-mono font-bold">자동 갱신</span>
+      </div>
+      <div class="text-xs font-mono text-gray-400">
+        업데이트: <span class="text-gray-200 font-bold">{today_str}</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-5xl mx-auto p-4 md:p-6 space-y-8 mt-2">
     
-    <!-- 🟢 상단 다른 계산기 이동 탭 메뉴 -->
-    <nav class="flex flex-wrap gap-2 justify-between items-center mb-6 border-b pb-3 text-xs md:text-sm">
-      <span class="text-blue-600 font-bold">대출 계산기</span>
-      <div class="flex gap-3">
-        <a href="/deposit.html" class="text-gray-500 hover:text-blue-600 transition">예적금 계산기</a>
-        <a href="/salary.html" class="text-gray-500 hover:text-blue-600 transition">연봉 계산기</a>
-        <a href="/realtor.html" class="text-gray-500 hover:text-blue-600 transition">복비 계산기</a>
-      </div>
-    </nav>
-
-    <!-- 헤더 -->
-    <header class="text-center mb-6">
-      <h1 class="text-2xl md:text-3xl font-bold text-gray-900 mb-2">대출 이자 및 월 상환액 계산기</h1>
-      <p class="text-sm text-gray-500">상환 방식에 따른 월 납입금과 총 이자를 정확하게 계산합니다.</p>
-    </header>
-
-    <!-- 입력 폼 -->
-    <div class="space-y-4">
-      
-      <!-- 상환 방식 선택 -->
+    <div class="bg-[#141A28] border border-gray-800 rounded-2xl p-5 md:p-6 shadow-xl flex flex-wrap justify-between items-center gap-4">
       <div>
-        <label class="block text-sm font-semibold text-gray-700 mb-1">상환 방식</label>
-        <div class="grid grid-cols-3 gap-2">
-          <label class="cursor-pointer">
-            <input type="radio" name="repayType" value="equalPrincipalInterest" class="peer sr-only" checked>
-            <div class="text-center py-2.5 px-3 text-xs md:text-sm font-medium border border-gray-300 rounded-lg peer-checked:bg-blue-600 peer-checked:text-white peer-checked:border-blue-600 transition">
-              원리금 균등
-            </div>
-          </label>
-          <label class="cursor-pointer">
-            <input type="radio" name="repayType" value="equalPrincipal" class="peer sr-only">
-            <div class="text-center py-2.5 px-3 text-xs md:text-sm font-medium border border-gray-300 rounded-lg peer-checked:bg-blue-600 peer-checked:text-white peer-checked:border-blue-600 transition">
-              원금 균등
-            </div>
-          </label>
-          <label class="cursor-pointer">
-            <input type="radio" name="repayType" value="bullet" class="peer sr-only">
-            <div class="text-center py-2.5 px-3 text-xs md:text-sm font-medium border border-gray-300 rounded-lg peer-checked:bg-blue-600 peer-checked:text-white peer-checked:border-blue-600 transition">
-              만기 일시
-            </div>
-          </label>
-        </div>
+        <h1 class="text-xl md:text-2xl font-black text-white tracking-tight">오늘의 국내 & 글로벌 금융 핵심 뉴스</h1>
+        <p class="text-xs text-gray-400 mt-1">국내외 주요 언론사의 핵심 이슈를 자동으로 선별하여 링크를 제공합니다.</p>
       </div>
-
-      <!-- 대출 원금 입력 (천 단위 자동 콤마) -->
-      <div>
-        <label class="block text-sm font-semibold text-gray-700 mb-1">대출 원금 (원)</label>
-        <div class="relative">
-          <input type="text" id="principal" placeholder="50,000,000" oninput="formatCurrencyInput(this)"
-                 class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:outline-none text-base">
-        </div>
-      </div>
-
-      <!-- 금리 및 기간 -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <div>
-          <label class="block text-sm font-semibold text-gray-700 mb-1">연 이자율 (%)</label>
-          <input type="number" step="0.01" id="rate" placeholder="4.0" 
-                 class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:outline-none text-base">
-        </div>
-        <div>
-          <label class="block text-sm font-semibold text-gray-700 mb-1">대출 기간 (개월)</label>
-          <input type="number" id="months" placeholder="12" 
-                 class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:outline-none text-base">
-        </div>
-      </div>
-
-      <button onclick="calculateLoan()" 
-              class="w-full mt-2 bg-blue-600 hover:bg-blue-700 text-white font-bold py-3.5 rounded-lg transition duration-200 shadow-md">
-        계산하기
-      </button>
-    </div>
-
-    <!-- 계산 결과 출력 영역 -->
-    <div id="resultBox" class="hidden mt-8 pt-6 border-t border-gray-200">
-      <h2 class="text-lg font-bold text-gray-900 mb-4">📊 계산 결과 요약</h2>
-      
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-        <div class="bg-blue-50 p-4 rounded-xl">
-          <span id="monthlyPaymentLabel" class="text-xs text-blue-600 font-semibold">매월 납부 금액</span>
-          <p id="monthlyPayment" class="text-xl md:text-2xl font-extrabold text-blue-900 mt-1">0원</p>
-          <p id="paymentNote" class="text-xs text-blue-500 mt-1 hidden"></p>
-        </div>
-        <div class="bg-red-50 p-4 rounded-xl">
-          <span class="text-xs text-red-600 font-semibold">총 부담 이자</span>
-          <p id="totalInterest" class="text-xl md:text-2xl font-extrabold text-red-900 mt-1">0원</p>
-        </div>
-      </div>
-
-      <div class="bg-gray-50 p-4 rounded-xl text-sm text-gray-600 space-y-2">
-        <div class="flex justify-between">
-          <span>대출 원금:</span>
-          <span id="displayPrincipal" class="font-semibold text-gray-800">0원</span>
-        </div>
-        <div class="flex justify-between">
-          <span>총 상환 금액 (원금+이자):</span>
-          <span id="displayTotal" class="font-semibold text-gray-800">0원</span>
-        </div>
+      <div class="px-3 py-1.5 rounded-lg bg-gray-800/80 text-xs font-mono text-gray-300 border border-gray-700">
+        발행 기준: {date_badge}
       </div>
     </div>
 
-    <!-- SEO 및 설명 콘텐츠 -->
-    <article class="mt-8 pt-6 border-t border-gray-100 text-sm text-gray-600 leading-relaxed space-y-3">
-      <h3 class="font-bold text-gray-900">상환 방식 비교 안내</h3>
-      <ul class="list-disc pl-4 space-y-1">
-        <li><strong>원리금 균등상환:</strong> 매달 원금과 이자를 합쳐 동일한 금액을 갚아나가는 방식입니다. 매월 나가는 고정 지출이 일정하여 가계 자금 계획 수립에 유리합니다.</li>
-        <li><strong>원금 균등상환:</strong> 매달 동일한 원금을 갚고 남은 잔액에 대해서만 이자를 납부합니다. 회차가 지날수록 월 상환액과 총 이자 부담이 가장 적어지는 합리적인 방식입니다.</li>
-        <li><strong>만기 일시상환:</strong> 대출 기간 동안 매월 이자만 납입하다가 만기 시점에 원금 전액을 한 번에 갚는 방식입니다. 월 부담은 적으나 총 이자 비용이 가장 큽니다.</li>
-      </ul>
-      <h3 class="font-bold text-gray-900 pt-2">이자 절약 팁</h3>
-      <p>
-        중도상환 수수료 면제 시점을 확인하고 여유 자금이 발생할 때마다 원금을 조금씩 조기 상환하면 대출 잔액에 붙는 전체 이자 총액을 효과적으로 줄일 수 있습니다.
-      </p>
+    {news_content}
+
+    <article class="bg-[#141A28]/40 border border-gray-800/60 rounded-xl p-4 text-xs text-gray-500 leading-relaxed">
+      ※ 본 페이지의 기사 링크 및 제목은 언론사 RSS를 통해 자동 수집된 정보이며, 기사 본문의 저작권은 각 언론사에 있습니다. 본 사이트는 투자 참고용 링크만을 제공하며 특정 종목에 대한 투자 권유를 하지 않습니다.
     </article>
 
-  </div>
+  </main>
 
-  <script>
-    function formatCurrencyInput(target) {
-      let value = target.value.replace(/[^0-9]/g, '');
-      if (value) {
-        target.value = Number(value).toLocaleString();
-      } else {
-        target.value = '';
-      }
-    }
-
-    function calculateLoan() {
-      const rawPrincipal = document.getElementById('principal').value.replace(/,/g, '');
-      const principal = parseFloat(rawPrincipal);
-      const annualRate = parseFloat(document.getElementById('rate').value);
-      const months = parseInt(document.getElementById('months').value);
-      const repayType = document.querySelector('input[name="repayType"]:checked').value;
-
-      if (!principal || !annualRate || !months || principal <= 0 || annualRate <= 0 || months <= 0) {
-        alert('모든 항목을 올바른 숫자로 입력해 주세요.');
-        return;
-      }
-
-      const monthlyRate = (annualRate / 100) / 12;
-      let monthlyPaymentText = '';
-      let totalInterest = 0;
-      let noteText = '';
-
-      if (repayType === 'equalPrincipalInterest') {
-        const monthlyPayment = Math.round(
-          principal * (monthlyRate * Math.pow(1 + monthlyRate, months)) / (Math.pow(1 + monthlyRate, months) - 1)
-        );
-        totalInterest = (monthlyPayment * months) - principal;
-        monthlyPaymentText = monthlyPayment.toLocaleString() + ' 원';
-        document.getElementById('monthlyPaymentLabel').innerText = '매월 납부 금액 (원금+이자)';
-      } 
-      else if (repayType === 'equalPrincipal') {
-        const principalPerMonth = principal / months;
-        let totalInterestSum = 0;
-        const firstMonthPayment = Math.round(principalPerMonth + (principal * monthlyRate));
-        const lastMonthPayment = Math.round(principalPerMonth + (principalPerMonth * monthlyRate));
-
-        for (let i = 0; i < months; i++) {
-          const remainingPrincipal = principal - (principalPerMonth * i);
-          totalInterestSum += remainingPrincipal * monthlyRate;
-        }
-        totalInterest = Math.round(totalInterestSum);
-        monthlyPaymentText = `${firstMonthPayment.toLocaleString()} 원 ~ ${lastMonthPayment.toLocaleString()} 원`;
-        document.getElementById('monthlyPaymentLabel').innerText = '월 납부 금액 (첫달 ~ 마지막달)';
-        noteText = '※ 매달 대출 잔액이 줄어들어 납입금이 점차 감소합니다.';
-      } 
-      else if (repayType === 'bullet') {
-        const monthlyInterest = Math.round(principal * monthlyRate);
-        totalInterest = monthlyInterest * months;
-        monthlyPaymentText = monthlyInterest.toLocaleString() + ' 원 / 월';
-        document.getElementById('monthlyPaymentLabel').innerText = '매월 납부 이자 (원금은 만기 상환)';
-        noteText = `※ 만기(${months}개월 차)에 원금 ${principal.toLocaleString()}원을 일시 상환합니다.`;
-      }
-
-      const totalPayment = principal + totalInterest;
-
-      document.getElementById('monthlyPayment').innerText = monthlyPaymentText;
-      document.getElementById('totalInterest').innerText = totalInterest.toLocaleString() + ' 원';
-      document.getElementById('displayPrincipal').innerText = principal.toLocaleString() + ' 원';
-      document.getElementById('displayTotal').innerText = totalPayment.toLocaleString() + ' 원';
-
-      const noteElem = document.getElementById('paymentNote');
-      if (noteText) {
-        noteElem.innerText = noteText;
-        noteElem.classList.remove('hidden');
-      } else {
-        noteElem.classList.add('hidden');
-      }
-
-      document.getElementById('resultBox').classList.remove('hidden');
-    }
-  </script>
 </body>
 </html>
+"""
+
+with open("news.html", "w", encoding="utf-8") as f:
+    f.write(html_template)
+
+print(f"Successfully generated news.html at {today_str}")
