@@ -1,0 +1,1930 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<title>MODU BLOCKS | MODU.TODAY</title>
+<meta name="description" content="MODU.TODAY 무료 블록 퍼즐 게임. 기록에 도전해보세요." />
+
+<style>
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+:root{
+  --bg1:#101426;
+  --bg2:#080b14;
+  --panel:#171c31;
+  --panel2:#101527;
+  --border:rgba(255,255,255,.08);
+  --text:#f4f6ff;
+  --muted:#8f99b4;
+  --accent:#7387ff;
+}
+
+html,body{
+  width:100%;
+  min-height:100%;
+  background:
+    radial-gradient(circle at 50% -10%,#273462 0,#12172a 38%,#070a12 100%);
+  color:var(--text);
+  font-family:Pretendard,"Noto Sans KR",Arial,sans-serif;
+  overflow-x:hidden;
+}
+
+body{
+  display:flex;
+  justify-content:center;
+  padding:16px;
+}
+
+button{
+  font:inherit;
+}
+
+#app{
+  width:min(100%,1050px);
+}
+
+.brand{
+  text-align:center;
+  margin-bottom:12px;
+  font-weight:900;
+  letter-spacing:4px;
+  font-size:13px;
+  color:#91a7ff;
+}
+
+.game-shell{
+  display:grid;
+  grid-template-columns:180px minmax(280px,430px) 180px;
+  gap:14px;
+  justify-content:center;
+  align-items:start;
+}
+
+.panel{
+  background:linear-gradient(180deg,rgba(27,33,57,.94),rgba(14,18,33,.94));
+  border:1px solid var(--border);
+  border-radius:20px;
+  padding:14px;
+  box-shadow:0 20px 60px rgba(0,0,0,.28);
+}
+
+.panel-title{
+  font-size:11px;
+  color:#838da8;
+  font-weight:900;
+  letter-spacing:1px;
+  margin-bottom:8px;
+}
+
+.stat{
+  padding:12px 0;
+  border-bottom:1px solid rgba(255,255,255,.06);
+}
+
+.stat:last-child{
+  border-bottom:0;
+}
+
+.stat span{
+  display:block;
+  font-size:11px;
+  color:#818ca6;
+  margin-bottom:3px;
+}
+
+.stat b{
+  display:block;
+  font-size:25px;
+  letter-spacing:-1px;
+}
+
+#comboText{
+  color:#ffd43b;
+}
+
+.board-wrap{
+  position:relative;
+  border-radius:22px;
+  overflow:hidden;
+  background:#080b13;
+  border:1px solid rgba(255,255,255,.09);
+  box-shadow:0 28px 90px rgba(0,0,0,.5);
+}
+
+#board{
+  display:block;
+  width:100%;
+  aspect-ratio:10/20;
+  background:#090d18;
+}
+
+.overlay{
+  position:absolute;
+  inset:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:24px;
+  background:rgba(5,8,18,.88);
+  backdrop-filter:blur(6px);
+  z-index:5;
+}
+
+.overlay.hidden{
+  display:none;
+}
+
+.overlay-inner{
+  width:100%;
+  max-width:320px;
+}
+
+.logo-block{
+  width:78px;
+  height:78px;
+  margin:0 auto 14px;
+  border-radius:22px;
+  display:grid;
+  place-items:center;
+  font-size:40px;
+  background:linear-gradient(145deg,#6579ff,#7652e8);
+  box-shadow:0 16px 50px rgba(97,118,255,.3);
+}
+
+.overlay h1{
+  font-size:42px;
+  line-height:1;
+  letter-spacing:-2px;
+  font-weight:1000;
+}
+
+.overlay p{
+  color:#99a3bb;
+  font-size:13px;
+  line-height:1.6;
+  margin-top:12px;
+}
+
+.main-btn{
+  width:100%;
+  border:0;
+  border-radius:15px;
+  padding:15px 18px;
+  margin-top:20px;
+  font-size:16px;
+  font-weight:900;
+  color:white;
+  cursor:pointer;
+  background:linear-gradient(135deg,#6177ff,#754fea);
+  box-shadow:0 12px 30px rgba(99,119,255,.25);
+}
+
+.main-btn:hover{
+  transform:translateY(-1px);
+}
+
+.guide{
+  margin-top:15px;
+  color:#757f97;
+  font-size:11px;
+  line-height:1.6;
+}
+
+.mini-board{
+  width:100%;
+  aspect-ratio:1/1;
+  background:#0a0e1a;
+  border-radius:14px;
+  border:1px solid rgba(255,255,255,.06);
+  display:block;
+  margin-bottom:12px;
+}
+
+.next-item{
+  background:#0b0f1c;
+  border-radius:13px;
+  padding:6px;
+  margin-bottom:8px;
+}
+
+.next-item canvas{
+  display:block;
+  width:100%;
+  aspect-ratio:2/1;
+}
+
+.controls{
+  margin-top:14px;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:8px;
+}
+
+.ctrl{
+  min-height:54px;
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:14px;
+  color:white;
+  background:linear-gradient(180deg,#202843,#141a2d);
+  font-weight:900;
+  font-size:18px;
+  cursor:pointer;
+  touch-action:manipulation;
+  user-select:none;
+}
+
+.ctrl:active{
+  transform:scale(.97);
+  background:#293252;
+}
+
+.ctrl.wide{
+  grid-column:span 2;
+  font-size:13px;
+}
+
+.message{
+  position:absolute;
+  top:32%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  pointer-events:none;
+  font-size:27px;
+  font-weight:1000;
+  color:#fff;
+  text-shadow:0 4px 18px #000;
+  white-space:nowrap;
+  opacity:0;
+  z-index:4;
+}
+
+.flash{
+  animation:pop .8s ease;
+}
+
+@keyframes pop{
+  0%{opacity:0;transform:translate(-50%,-30%) scale(.7)}
+  15%{opacity:1;transform:translate(-50%,-50%) scale(1.15)}
+  75%{opacity:1}
+  100%{opacity:0;transform:translate(-50%,-80%) scale(1)}
+}
+
+.level-bar{
+  height:7px;
+  border-radius:20px;
+  background:#090d18;
+  overflow:hidden;
+  margin-top:8px;
+}
+
+.level-fill{
+  height:100%;
+  width:0%;
+  background:linear-gradient(90deg,#5c7cfa,#9775fa);
+}
+
+.footer{
+  text-align:center;
+  padding:13px;
+  color:#4f5970;
+  font-size:11px;
+}
+
+@media(max-width:800px){
+  body{
+    padding:0;
+  }
+
+  .brand{
+    margin:9px 0;
+  }
+
+  .game-shell{
+    grid-template-columns:72px minmax(230px,1fr) 72px;
+    gap:6px;
+  }
+
+  .panel{
+    padding:7px;
+    border-radius:12px;
+  }
+
+  .panel-title{
+    font-size:8px;
+  }
+
+  .stat{
+    padding:7px 0;
+  }
+
+  .stat span{
+    font-size:8px;
+  }
+
+  .stat b{
+    font-size:15px;
+  }
+
+  .next-item{
+    padding:2px;
+    margin-bottom:4px;
+  }
+
+  .board-wrap{
+    border-radius:10px;
+  }
+
+  .controls{
+    padding:0 6px;
+  }
+}
+
+@media(max-width:520px){
+  .game-shell{
+    grid-template-columns:58px minmax(220px,1fr) 58px;
+  }
+
+  .panel{
+    padding:4px;
+  }
+
+  .stat b{
+    font-size:13px;
+  }
+
+  .panel-title{
+    font-size:7px;
+  }
+
+  .ctrl{
+    min-height:50px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div id="app">
+
+  <div class="brand">MODU.TODAY</div>
+
+  <div class="game-shell">
+
+    <!-- 왼쪽 -->
+    <aside class="panel">
+
+      <div class="panel-title">HOLD</div>
+      <canvas id="holdCanvas" class="mini-board" width="160" height="160"></canvas>
+
+      <div class="stat">
+        <span>SCORE</span>
+        <b id="scoreText">0</b>
+      </div>
+
+      <div class="stat">
+        <span>BEST</span>
+        <b id="bestText">0</b>
+      </div>
+
+      <div class="stat">
+        <span>LEVEL</span>
+        <b id="levelText">1</b>
+
+        <div class="level-bar">
+          <div class="level-fill" id="levelFill"></div>
+        </div>
+      </div>
+
+    </aside>
+
+    <!-- 중앙 -->
+    <main>
+
+      <div class="board-wrap">
+
+        <canvas id="board" width="400" height="800"></canvas>
+
+        <div id="gameMessage" class="message"></div>
+
+        <div id="startOverlay" class="overlay">
+
+          <div class="overlay-inner">
+
+            <div class="logo-block">🧩</div>
+
+            <h1>MODU<br>BLOCKS</h1>
+
+            <p>
+              단순하지만 끝이 없는 기록 경쟁.<br>
+              블록을 쌓고 라인을 지우며 최고기록에 도전하세요.
+            </p>
+
+            <button class="main-btn" id="startBtn">
+              게임 시작
+            </button>
+
+            <div class="guide">
+              ← → 이동 · ↑ 회전 · ↓ 빠르게<br>
+              SPACE 하드드롭 · C HOLD · P 일시정지
+            </div>
+
+          </div>
+
+        </div>
+
+        <div id="gameOverOverlay" class="overlay hidden">
+
+          <div class="overlay-inner">
+
+            <div class="logo-block">🏆</div>
+
+            <div style="font-size:12px;color:#8993aa">
+              FINAL SCORE
+            </div>
+
+            <div
+              id="finalScore"
+              style="font-size:48px;font-weight:1000;margin-top:4px"
+            >
+              0
+            </div>
+
+            <div
+              id="resultText"
+              style="margin-top:8px;color:#ffd43b;font-weight:900"
+            ></div>
+
+            <button class="main-btn" id="retryBtn">
+              다시 도전
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- 모바일 / 마우스 -->
+      <div class="controls">
+
+        <button class="ctrl" id="leftBtn">◀</button>
+
+        <button class="ctrl" id="rotateBtn">↻</button>
+
+        <button class="ctrl" id="rightBtn">▶</button>
+
+        <button class="ctrl" id="downBtn">▼</button>
+
+        <button class="ctrl wide" id="holdBtn">
+          HOLD
+        </button>
+
+        <button class="ctrl wide" id="dropBtn">
+          HARD DROP
+        </button>
+
+      </div>
+
+    </main>
+
+    <!-- 오른쪽 -->
+    <aside class="panel">
+
+      <div class="panel-title">NEXT</div>
+
+      <div class="next-item">
+        <canvas id="next1" width="160" height="90"></canvas>
+      </div>
+
+      <div class="next-item">
+        <canvas id="next2" width="160" height="90"></canvas>
+      </div>
+
+      <div class="next-item">
+        <canvas id="next3" width="160" height="90"></canvas>
+      </div>
+
+      <div class="stat">
+        <span>LINES</span>
+        <b id="linesText">0</b>
+      </div>
+
+      <div class="stat">
+        <span>COMBO</span>
+        <b id="comboText">-</b>
+      </div>
+
+    </aside>
+
+  </div>
+
+  <div class="footer">
+    © MODU.TODAY · MODU BLOCKS
+  </div>
+
+</div>
+
+<script>
+(() => {
+
+const COLS = 10;
+const ROWS = 20;
+
+const canvas = document.getElementById("board");
+const ctx = canvas.getContext("2d");
+
+const CELL = canvas.width / COLS;
+
+const scoreText = document.getElementById("scoreText");
+const bestText = document.getElementById("bestText");
+const levelText = document.getElementById("levelText");
+const linesText = document.getElementById("linesText");
+const comboText = document.getElementById("comboText");
+const levelFill = document.getElementById("levelFill");
+
+const startOverlay = document.getElementById("startOverlay");
+const gameOverOverlay = document.getElementById("gameOverOverlay");
+
+const finalScore = document.getElementById("finalScore");
+const resultText = document.getElementById("resultText");
+const messageEl = document.getElementById("gameMessage");
+
+const holdCanvas = document.getElementById("holdCanvas");
+
+const nextCanvases = [
+  document.getElementById("next1"),
+  document.getElementById("next2"),
+  document.getElementById("next3")
+];
+
+const COLORS = {
+  I:"#45d9ff",
+  O:"#ffd43b",
+  T:"#b197fc",
+  S:"#69db7c",
+  Z:"#ff6b6b",
+  J:"#5c7cfa",
+  L:"#ffa94d"
+};
+
+const SHAPES = {
+
+  I:[
+    [0,0,0,0],
+    [1,1,1,1],
+    [0,0,0,0],
+    [0,0,0,0]
+  ],
+
+  O:[
+    [1,1],
+    [1,1]
+  ],
+
+  T:[
+    [0,1,0],
+    [1,1,1],
+    [0,0,0]
+  ],
+
+  S:[
+    [0,1,1],
+    [1,1,0],
+    [0,0,0]
+  ],
+
+  Z:[
+    [1,1,0],
+    [0,1,1],
+    [0,0,0]
+  ],
+
+  J:[
+    [1,0,0],
+    [1,1,1],
+    [0,0,0]
+  ],
+
+  L:[
+    [0,0,1],
+    [1,1,1],
+    [0,0,0]
+  ]
+
+};
+
+let board;
+let piece;
+let queue = [];
+
+let holdPiece = null;
+let holdUsed = false;
+
+let running = false;
+let paused = false;
+
+let score = 0;
+let lines = 0;
+let level = 1;
+let combo = -1;
+
+let best =
+  Number(localStorage.getItem("moduBlocksBest") || 0);
+
+let lastTime = 0;
+let dropCounter = 0;
+
+let clearingRows = [];
+let clearAnimation = 0;
+
+bestText.textContent = best;
+
+function createBoard(){
+
+  return Array.from(
+    {length:ROWS},
+    () => Array(COLS).fill(null)
+  );
+
+}
+
+function cloneMatrix(matrix){
+
+  return matrix.map(row => [...row]);
+
+}
+
+function shuffledBag(){
+
+  const pieces =
+    ["I","O","T","S","Z","J","L"];
+
+  for(let i = pieces.length - 1; i > 0; i--){
+
+    const j =
+      Math.floor(Math.random() * (i + 1));
+
+    [pieces[i], pieces[j]] =
+      [pieces[j], pieces[i]];
+
+  }
+
+  return pieces;
+
+}
+
+function fillQueue(){
+
+  while(queue.length < 7){
+
+    queue.push(...shuffledBag());
+
+  }
+
+}
+
+function createPiece(type){
+
+  const matrix =
+    cloneMatrix(SHAPES[type]);
+
+  return {
+
+    type,
+    matrix,
+
+    x:
+      Math.floor(
+        COLS / 2 -
+        matrix[0].length / 2
+      ),
+
+    y:-1
+
+  };
+
+}
+
+function spawnPiece(){
+
+  fillQueue();
+
+  piece =
+    createPiece(queue.shift());
+
+  holdUsed = false;
+
+  if(collides(
+    piece.matrix,
+    piece.x,
+    piece.y
+  )){
+
+    gameOver();
+
+  }
+
+  updateNext();
+
+}
+
+function collides(matrix,x,y){
+
+  for(let row = 0; row < matrix.length; row++){
+
+    for(let col = 0; col < matrix[row].length; col++){
+
+      if(!matrix[row][col]) continue;
+
+      const bx = x + col;
+      const by = y + row;
+
+      if(
+        bx < 0 ||
+        bx >= COLS ||
+        by >= ROWS
+      ){
+
+        return true;
+
+      }
+
+      if(
+        by >= 0 &&
+        board[by][bx]
+      ){
+
+        return true;
+
+      }
+
+    }
+
+  }
+
+  return false;
+
+}
+
+function merge(){
+
+  piece.matrix.forEach((row,y)=>{
+
+    row.forEach((value,x)=>{
+
+      if(
+        value &&
+        piece.y + y >= 0
+      ){
+
+        board[piece.y+y][piece.x+x] =
+          piece.type;
+
+      }
+
+    });
+
+  });
+
+}
+
+function rotateMatrix(matrix){
+
+  return matrix[0].map(
+    (_,i)=>
+      matrix.map(row => row[i]).reverse()
+  );
+
+}
+
+function rotate(){
+
+  if(!running || paused) return;
+
+  const rotated =
+    rotateMatrix(piece.matrix);
+
+  const kicks =
+    [0,-1,1,-2,2];
+
+  for(const offset of kicks){
+
+    if(
+      !collides(
+        rotated,
+        piece.x + offset,
+        piece.y
+      )
+    ){
+
+      piece.matrix = rotated;
+      piece.x += offset;
+
+      return;
+
+    }
+
+  }
+
+}
+
+function move(dir){
+
+  if(!running || paused) return;
+
+  if(
+    !collides(
+      piece.matrix,
+      piece.x + dir,
+      piece.y
+    )
+  ){
+
+    piece.x += dir;
+
+  }
+
+}
+
+function softDrop(){
+
+  if(!running || paused) return;
+
+  if(
+    !collides(
+      piece.matrix,
+      piece.x,
+      piece.y + 1
+    )
+  ){
+
+    piece.y++;
+    score += 1;
+
+  }
+  else{
+
+    lockPiece();
+
+  }
+
+}
+
+function hardDrop(){
+
+  if(!running || paused) return;
+
+  let distance = 0;
+
+  while(
+    !collides(
+      piece.matrix,
+      piece.x,
+      piece.y + 1
+    )
+  ){
+
+    piece.y++;
+    distance++;
+
+  }
+
+  score += distance * 2;
+
+  lockPiece();
+
+}
+
+function lockPiece(){
+
+  merge();
+
+  const fullRows = [];
+
+  for(let y = 0; y < ROWS; y++){
+
+    if(
+      board[y].every(cell => cell)
+    ){
+
+      fullRows.push(y);
+
+    }
+
+  }
+
+  if(fullRows.length){
+
+    clearingRows = fullRows;
+    clearAnimation = 180;
+
+  }
+  else{
+
+    combo = -1;
+    spawnPiece();
+
+  }
+
+  updateHUD();
+
+}
+
+function actuallyClearRows(){
+
+  const count =
+    clearingRows.length;
+
+  clearingRows
+    .sort((a,b)=>b-a)
+    .forEach(row=>{
+
+      board.splice(row,1);
+      board.unshift(
+        Array(COLS).fill(null)
+      );
+
+    });
+
+  lines += count;
+
+  combo++;
+
+  const lineScores =
+    [0,100,300,500,800];
+
+  let earned =
+    lineScores[count] * level;
+
+  if(combo > 0){
+
+    earned +=
+      combo * 50 * level;
+
+  }
+
+  score += earned;
+
+  if(count === 4){
+
+    showMessage(
+      "TETRIS! +" + earned
+    );
+
+  }
+  else if(combo >= 2){
+
+    showMessage(
+      combo + " COMBO!"
+    );
+
+  }
+
+  level =
+    Math.floor(lines / 10) + 1;
+
+  clearingRows = [];
+
+  spawnPiece();
+
+  updateHUD();
+
+}
+
+function hold(){
+
+  if(
+    !running ||
+    paused ||
+    holdUsed
+  ){
+
+    return;
+
+  }
+
+  const currentType =
+    piece.type;
+
+  if(holdPiece){
+
+    const temp =
+      holdPiece;
+
+    holdPiece =
+      currentType;
+
+    piece =
+      createPiece(temp);
+
+  }
+  else{
+
+    holdPiece =
+      currentType;
+
+    fillQueue();
+
+    piece =
+      createPiece(queue.shift());
+
+  }
+
+  holdUsed = true;
+
+  drawHold();
+  updateNext();
+
+}
+
+function getGhostY(){
+
+  let y = piece.y;
+
+  while(
+    !collides(
+      piece.matrix,
+      piece.x,
+      y + 1
+    )
+  ){
+
+    y++;
+
+  }
+
+  return y;
+
+}
+
+function getDropInterval(){
+
+  /*
+  일부러 초반은 느리게.
+  레벨 1 = 900ms
+  */
+
+  return Math.max(
+    115,
+    900 - (level - 1) * 65
+  );
+
+}
+
+function startGame(){
+
+  board = createBoard();
+
+  queue = [];
+
+  holdPiece = null;
+
+  holdUsed = false;
+
+  score = 0;
+  lines = 0;
+  level = 1;
+  combo = -1;
+
+  clearingRows = [];
+  clearAnimation = 0;
+
+  fillQueue();
+  spawnPiece();
+
+  drawHold();
+
+  running = true;
+  paused = false;
+
+  startOverlay.classList.add("hidden");
+  gameOverOverlay.classList.add("hidden");
+
+  lastTime =
+    performance.now();
+
+  dropCounter = 0;
+
+  updateHUD();
+
+  requestAnimationFrame(loop);
+
+}
+
+function gameOver(){
+
+  running = false;
+
+  if(score > best){
+
+    best = score;
+
+    localStorage.setItem(
+      "moduBlocksBest",
+      best
+    );
+
+  }
+
+  finalScore.textContent =
+    score.toLocaleString();
+
+  if(score < 2000){
+
+    resultText.textContent =
+      "조금만 더 하면 감이 옵니다.";
+
+  }
+  else if(score < 6000){
+
+    resultText.textContent =
+      "블록 감각이 꽤 좋습니다.";
+
+  }
+  else if(score < 15000){
+
+    resultText.textContent =
+      "상당한 실력입니다.";
+
+  }
+  else if(score < 30000){
+
+    resultText.textContent =
+      "MODU BLOCKS 고수";
+
+  }
+  else{
+
+    resultText.textContent =
+      "👑 전설의 블록 마스터";
+
+  }
+
+  bestText.textContent = best;
+
+  gameOverOverlay
+    .classList
+    .remove("hidden");
+
+}
+
+function togglePause(){
+
+  if(!running) return;
+
+  paused = !paused;
+
+  if(paused){
+
+    showMessage("PAUSE");
+
+  }
+  else{
+
+    lastTime =
+      performance.now();
+
+  }
+
+}
+
+function updateHUD(){
+
+  scoreText.textContent =
+    score.toLocaleString();
+
+  bestText.textContent =
+    Math.max(best,score).toLocaleString();
+
+  linesText.textContent =
+    lines;
+
+  levelText.textContent =
+    level;
+
+  comboText.textContent =
+    combo > 0 ?
+    "x" + (combo + 1) :
+    "-";
+
+  const progress =
+    (lines % 10) * 10;
+
+  levelFill.style.width =
+    progress + "%";
+
+}
+
+function showMessage(text){
+
+  messageEl.textContent = text;
+
+  messageEl.classList.remove("flash");
+
+  void messageEl.offsetWidth;
+
+  messageEl.classList.add("flash");
+
+}
+
+function drawBlock(
+  context,
+  x,
+  y,
+  size,
+  color,
+  alpha = 1
+){
+
+  context.save();
+
+  context.globalAlpha = alpha;
+
+  const px =
+    x * size;
+
+  const py =
+    y * size;
+
+  const gap =
+    Math.max(2,size * .055);
+
+  const radius =
+    Math.max(4,size * .12);
+
+  const gradient =
+    context.createLinearGradient(
+      px,
+      py,
+      px + size,
+      py + size
+    );
+
+  gradient.addColorStop(
+    0,
+    lighten(color,28)
+  );
+
+  gradient.addColorStop(
+    .45,
+    color
+  );
+
+  gradient.addColorStop(
+    1,
+    darken(color,28)
+  );
+
+  context.fillStyle =
+    gradient;
+
+  roundRect(
+    context,
+    px + gap,
+    py + gap,
+    size - gap*2,
+    size - gap*2,
+    radius
+  );
+
+  context.fill();
+
+  context.strokeStyle =
+    "rgba(255,255,255,.28)";
+
+  context.lineWidth =
+    Math.max(1,size*.035);
+
+  roundRect(
+    context,
+    px + gap + 1,
+    py + gap + 1,
+    size - gap*2 - 2,
+    size - gap*2 - 2,
+    radius
+  );
+
+  context.stroke();
+
+  context.fillStyle =
+    "rgba(255,255,255,.13)";
+
+  roundRect(
+    context,
+    px + gap*2,
+    py + gap*2,
+    size-gap*4,
+    size*.18,
+    radius/2
+  );
+
+  context.fill();
+
+  context.restore();
+
+}
+
+function drawBoard(){
+
+  ctx.clearRect(
+    0,0,
+    canvas.width,
+    canvas.height
+  );
+
+  const bg =
+    ctx.createLinearGradient(
+      0,0,0,canvas.height
+    );
+
+  bg.addColorStop(
+    0,
+    "#0c1120"
+  );
+
+  bg.addColorStop(
+    1,
+    "#070a12"
+  );
+
+  ctx.fillStyle = bg;
+
+  ctx.fillRect(
+    0,0,
+    canvas.width,
+    canvas.height
+  );
+
+  ctx.strokeStyle =
+    "rgba(255,255,255,.035)";
+
+  ctx.lineWidth = 1;
+
+  for(let x=0;x<=COLS;x++){
+
+    ctx.beginPath();
+
+    ctx.moveTo(
+      x*CELL,
+      0
+    );
+
+    ctx.lineTo(
+      x*CELL,
+      canvas.height
+    );
+
+    ctx.stroke();
+
+  }
+
+  for(let y=0;y<=ROWS;y++){
+
+    ctx.beginPath();
+
+    ctx.moveTo(
+      0,
+      y*CELL
+    );
+
+    ctx.lineTo(
+      canvas.width,
+      y*CELL
+    );
+
+    ctx.stroke();
+
+  }
+
+  board.forEach((row,y)=>{
+
+    row.forEach((type,x)=>{
+
+      if(type){
+
+        let alpha = 1;
+
+        if(
+          clearingRows.includes(y) &&
+          clearAnimation > 0
+        ){
+
+          alpha =
+            Math.sin(
+              clearAnimation / 20
+            ) > 0 ?
+            .2 :
+            1;
+
+        }
+
+        drawBlock(
+          ctx,
+          x,
+          y,
+          CELL,
+          COLORS[type],
+          alpha
+        );
+
+      }
+
+    });
+
+  });
+
+  if(piece){
+
+    const ghostY =
+      getGhostY();
+
+    piece.matrix.forEach((row,y)=>{
+
+      row.forEach((value,x)=>{
+
+        if(
+          value &&
+          ghostY + y >= 0
+        ){
+
+          drawBlock(
+            ctx,
+            piece.x + x,
+            ghostY + y,
+            CELL,
+            COLORS[piece.type],
+            .16
+          );
+
+        }
+
+      });
+
+    });
+
+    piece.matrix.forEach((row,y)=>{
+
+      row.forEach((value,x)=>{
+
+        if(
+          value &&
+          piece.y + y >= 0
+        ){
+
+          drawBlock(
+            ctx,
+            piece.x + x,
+            piece.y + y,
+            CELL,
+            COLORS[piece.type]
+          );
+
+        }
+
+      });
+
+    });
+
+  }
+
+  if(paused){
+
+    ctx.fillStyle =
+      "rgba(5,7,14,.7)";
+
+    ctx.fillRect(
+      0,0,
+      canvas.width,
+      canvas.height
+    );
+
+    ctx.textAlign =
+      "center";
+
+    ctx.fillStyle =
+      "#fff";
+
+    ctx.font =
+      "900 40px Arial";
+
+    ctx.fillText(
+      "PAUSE",
+      canvas.width/2,
+      canvas.height/2
+    );
+
+  }
+
+}
+
+function drawMini(
+  canvasEl,
+  type
+){
+
+  const c =
+    canvasEl.getContext("2d");
+
+  c.clearRect(
+    0,0,
+    canvasEl.width,
+    canvasEl.height
+  );
+
+  c.fillStyle =
+    "#090d18";
+
+  c.fillRect(
+    0,0,
+    canvasEl.width,
+    canvasEl.height
+  );
+
+  if(!type) return;
+
+  const matrix =
+    SHAPES[type];
+
+  const cell =
+    Math.min(
+      canvasEl.width /
+      (matrix[0].length + 2),
+
+      canvasEl.height /
+      (matrix.length + 2)
+    );
+
+  const offsetX =
+    (
+      canvasEl.width -
+      matrix[0].length * cell
+    ) / 2;
+
+  const offsetY =
+    (
+      canvasEl.height -
+      matrix.length * cell
+    ) / 2;
+
+  c.save();
+
+  c.translate(
+    offsetX,
+    offsetY
+  );
+
+  matrix.forEach((row,y)=>{
+
+    row.forEach((value,x)=>{
+
+      if(value){
+
+        drawBlock(
+          c,
+          x,
+          y,
+          cell,
+          COLORS[type]
+        );
+
+      }
+
+    });
+
+  });
+
+  c.restore();
+
+}
+
+function drawHold(){
+
+  drawMini(
+    holdCanvas,
+    holdPiece
+  );
+
+}
+
+function updateNext(){
+
+  fillQueue();
+
+  for(let i=0;i<3;i++){
+
+    drawMini(
+      nextCanvases[i],
+      queue[i]
+    );
+
+  }
+
+}
+
+function roundRect(
+  context,
+  x,
+  y,
+  w,
+  h,
+  r
+){
+
+  context.beginPath();
+
+  context.roundRect(
+    x,y,w,h,r
+  );
+
+}
+
+function hexToRgb(hex){
+
+  hex =
+    hex.replace("#","");
+
+  return {
+
+    r:
+      parseInt(
+        hex.substring(0,2),
+        16
+      ),
+
+    g:
+      parseInt(
+        hex.substring(2,4),
+        16
+      ),
+
+    b:
+      parseInt(
+        hex.substring(4,6),
+        16
+      )
+
+  };
+
+}
+
+function lighten(hex,amount){
+
+  const rgb =
+    hexToRgb(hex);
+
+  const r =
+    Math.min(
+      255,
+      rgb.r + amount
+    );
+
+  const g =
+    Math.min(
+      255,
+      rgb.g + amount
+    );
+
+  const b =
+    Math.min(
+      255,
+      rgb.b + amount
+    );
+
+  return `rgb(${r},${g},${b})`;
+
+}
+
+function darken(hex,amount){
+
+  const rgb =
+    hexToRgb(hex);
+
+  const r =
+    Math.max(
+      0,
+      rgb.r - amount
+    );
+
+  const g =
+    Math.max(
+      0,
+      rgb.g - amount
+    );
+
+  const b =
+    Math.max(
+      0,
+      rgb.b - amount
+    );
+
+  return `rgb(${r},${g},${b})`;
+
+}
+
+function loop(time){
+
+  if(!running) return;
+
+  const delta =
+    time - lastTime;
+
+  lastTime = time;
+
+  if(!paused){
+
+    if(clearAnimation > 0){
+
+      clearAnimation -= delta;
+
+      if(clearAnimation <= 0){
+
+        actuallyClearRows();
+
+      }
+
+    }
+    else{
+
+      dropCounter += delta;
+
+      if(
+        dropCounter >
+        getDropInterval()
+      ){
+
+        if(
+          !collides(
+            piece.matrix,
+            piece.x,
+            piece.y + 1
+          )
+        ){
+
+          piece.y++;
+
+        }
+        else{
+
+          lockPiece();
+
+        }
+
+        dropCounter = 0;
+
+      }
+
+    }
+
+  }
+
+  drawBoard();
+
+  requestAnimationFrame(loop);
+
+}
+
+document.addEventListener(
+  "keydown",
+  e => {
+
+    if(
+      [
+        "ArrowLeft",
+        "ArrowRight",
+        "ArrowDown",
+        "ArrowUp",
+        " "
+      ].includes(e.key)
+    ){
+
+      e.preventDefault();
+
+    }
+
+    if(!running) return;
+
+    switch(e.key){
+
+      case "ArrowLeft":
+        move(-1);
+        break;
+
+      case "ArrowRight":
+        move(1);
+        break;
+
+      case "ArrowDown":
+        softDrop();
+        break;
+
+      case "ArrowUp":
+      case "x":
+      case "X":
+        rotate();
+        break;
+
+      case " ":
+        hardDrop();
+        break;
+
+      case "c":
+      case "C":
+        hold();
+        break;
+
+      case "p":
+      case "P":
+        togglePause();
+        break;
+
+    }
+
+  }
+);
+
+function bindButton(
+  id,
+  action
+){
+
+  const btn =
+    document.getElementById(id);
+
+  btn.addEventListener(
+    "pointerdown",
+    e => {
+
+      e.preventDefault();
+
+      action();
+
+    }
+  );
+
+}
+
+bindButton(
+  "leftBtn",
+  () => move(-1)
+);
+
+bindButton(
+  "rightBtn",
+  () => move(1)
+);
+
+bindButton(
+  "rotateBtn",
+  rotate
+);
+
+bindButton(
+  "downBtn",
+  softDrop
+);
+
+bindButton(
+  "dropBtn",
+  hardDrop
+);
+
+bindButton(
+  "holdBtn",
+  hold
+);
+
+document
+  .getElementById("startBtn")
+  .addEventListener(
+    "click",
+    startGame
+  );
+
+document
+  .getElementById("retryBtn")
+  .addEventListener(
+    "click",
+    startGame
+  );
+
+board = createBoard();
+
+drawBoard();
+drawHold();
+
+nextCanvases.forEach(
+  c => drawMini(c,null)
+);
+
+})();
+</script>
+
+</body>
+</html>
