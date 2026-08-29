@@ -463,6 +463,50 @@ button{
   .game-info h2{font-size:17px}
 }
 
+
+.record-holder{
+  margin-top:4px;
+  font-size:11px;
+  color:#91a7ff;
+  font-weight:800;
+  word-break:break-all;
+}
+.record-entry{
+  display:none;
+  margin-top:14px;
+}
+.record-entry.show{
+  display:block;
+}
+.record-entry label{
+  display:block;
+  font-size:12px;
+  color:#aab3ca;
+  margin-bottom:7px;
+}
+.record-entry input{
+  width:100%;
+  height:44px;
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:12px;
+  outline:none;
+  padding:0 12px;
+  color:#fff;
+  background:#0b1020;
+  font:inherit;
+  text-align:center;
+}
+.record-entry input:focus{
+  border-color:#7387ff;
+  box-shadow:0 0 0 3px rgba(115,135,255,.13);
+}
+.record-save-msg{
+  margin-top:8px;
+  min-height:18px;
+  font-size:11px;
+  color:#69db7c;
+}
+
 </style>
 </head>
 
@@ -488,6 +532,7 @@ button{
       <div class="stat">
         <span>BEST</span>
         <b id="bestText">0</b>
+        <div class="record-holder" id="bestNameText">NO RECORD</div>
       </div>
 
       <div class="stat">
@@ -557,6 +602,21 @@ button{
               id="resultText"
               style="margin-top:8px;color:#ffd43b;font-weight:900"
             ></div>
+
+            <div class="record-entry" id="recordEntry">
+              <label for="recordNameInput">🏆 새로운 최고기록! 기록할 아이디를 입력하세요.</label>
+              <input
+                id="recordNameInput"
+                type="text"
+                maxlength="12"
+                autocomplete="off"
+                placeholder="아이디 (최대 12자)"
+              />
+              <button class="main-btn" id="saveRecordBtn" style="margin-top:10px">
+                최고기록 저장
+              </button>
+              <div class="record-save-msg" id="recordSaveMsg"></div>
+            </div>
 
             <button class="main-btn" id="retryBtn">
               다시 도전
@@ -696,6 +756,12 @@ const finalScore = document.getElementById("finalScore");
 const resultText = document.getElementById("resultText");
 const messageEl = document.getElementById("gameMessage");
 
+const bestNameText = document.getElementById("bestNameText");
+const recordEntry = document.getElementById("recordEntry");
+const recordNameInput = document.getElementById("recordNameInput");
+const saveRecordBtn = document.getElementById("saveRecordBtn");
+const recordSaveMsg = document.getElementById("recordSaveMsg");
+
 const holdCanvas = document.getElementById("holdCanvas");
 
 const nextCanvases = [
@@ -778,6 +844,11 @@ let combo = -1;
 let best =
   Number(localStorage.getItem("moduBlocksBest") || 0);
 
+let bestName =
+  localStorage.getItem("moduBlocksBestName") || "";
+
+let pendingNewRecord = false;
+
 let lastTime = 0;
 let dropCounter = 0;
 
@@ -785,6 +856,7 @@ let clearingRows = [];
 let clearAnimation = 0;
 
 bestText.textContent = best;
+bestNameText.textContent = bestName ? bestName : "NO RECORD";
 
 function createBoard(){
 
@@ -1140,48 +1212,40 @@ function actuallyClearRows(){
 
 function hold(){
 
-  if(
-    !running ||
-    paused ||
-    holdUsed
-  ){
-
+  if(!running || paused || holdUsed || !piece){
     return;
-
   }
 
-  const currentType =
-    piece.type;
+  const currentType = piece.type;
 
   if(holdPiece){
 
-    const temp =
-      holdPiece;
+    const swapType = holdPiece;
+    holdPiece = currentType;
+    piece = createPiece(swapType);
 
-    holdPiece =
-      currentType;
+  } else {
 
-    piece =
-      createPiece(temp);
-
-  }
-  else{
-
-    holdPiece =
-      currentType;
+    holdPiece = currentType;
 
     fillQueue();
-
-    piece =
-      createPiece(queue.shift());
+    piece = createPiece(queue.shift());
 
   }
 
   holdUsed = true;
+  dropCounter = 0;
 
   drawHold();
   updateNext();
 
+  // HOLD로 꺼낸 블록이 시작 위치에서 바로 충돌하면 게임오버
+  if(collides(piece.matrix, piece.x, piece.y)){
+    gameOver();
+    return;
+  }
+
+  drawBoard();
 }
 
 function getGhostY(){
@@ -1247,6 +1311,13 @@ function startGame(){
   startOverlay.classList.add("hidden");
   gameOverOverlay.classList.add("hidden");
 
+  pendingNewRecord = false;
+  recordEntry.classList.remove("show");
+  recordNameInput.value = "";
+  recordSaveMsg.textContent = "";
+  saveRecordBtn.disabled = false;
+  saveRecordBtn.textContent = "최고기록 저장";
+
   lastTime =
     performance.now();
 
@@ -1262,16 +1333,8 @@ function gameOver(){
 
   running = false;
 
-  if(score > best){
-
-    best = score;
-
-    localStorage.setItem(
-      "moduBlocksBest",
-      best
-    );
-
-  }
+  const previousBest = best;
+  const isNewRecord = score > previousBest;
 
   finalScore.textContent =
     score.toLocaleString();
@@ -1307,7 +1370,33 @@ function gameOver(){
 
   }
 
-  bestText.textContent = best;
+  if(isNewRecord){
+
+    // 점수는 즉시 최고기록으로 반영하되,
+    // 아이디는 사용자가 저장 버튼을 눌렀을 때 확정 저장
+    best = score;
+    localStorage.setItem("moduBlocksBest", String(best));
+
+    pendingNewRecord = true;
+    recordEntry.classList.add("show");
+    recordSaveMsg.textContent = "";
+
+    resultText.textContent =
+      "🏆 NEW BEST! 최고기록을 갱신했습니다.";
+
+    setTimeout(() => {
+      recordNameInput.focus();
+    }, 80);
+
+  } else {
+
+    pendingNewRecord = false;
+    recordEntry.classList.remove("show");
+
+  }
+
+  bestText.textContent = best.toLocaleString();
+  bestNameText.textContent = bestName ? bestName : "NO RECORD";
 
   gameOverOverlay
     .classList
@@ -1342,6 +1431,9 @@ function updateHUD(){
 
   bestText.textContent =
     Math.max(best,score).toLocaleString();
+
+  bestNameText.textContent =
+    bestName ? bestName : "NO RECORD";
 
   linesText.textContent =
     lines;
@@ -1994,19 +2086,15 @@ function bindButton(
   action
 ){
 
-  const btn =
-    document.getElementById(id);
+  const btn = document.getElementById(id);
 
-  btn.addEventListener(
-    "pointerdown",
-    e => {
+  if(!btn) return;
 
-      e.preventDefault();
-
-      action();
-
-    }
-  );
+  // 마우스/터치/펜 모두 안정적으로 동작
+  btn.addEventListener("click", e => {
+    e.preventDefault();
+    action();
+  });
 
 }
 
@@ -2039,6 +2127,42 @@ bindButton(
   "holdBtn",
   hold
 );
+
+saveRecordBtn.addEventListener("click", () => {
+
+  if(!pendingNewRecord){
+    return;
+  }
+
+  const name = recordNameInput.value.trim();
+
+  if(!name){
+    recordSaveMsg.textContent = "아이디를 입력해주세요.";
+    recordNameInput.focus();
+    return;
+  }
+
+  bestName = name.slice(0, 12);
+
+  localStorage.setItem("moduBlocksBestName", bestName);
+  localStorage.setItem("moduBlocksBest", String(best));
+
+  bestNameText.textContent = bestName;
+
+  pendingNewRecord = false;
+  recordSaveMsg.textContent =
+    `${bestName} · ${best.toLocaleString()}점 기록 저장 완료`;
+
+  saveRecordBtn.disabled = true;
+  saveRecordBtn.textContent = "저장 완료";
+
+});
+
+recordNameInput.addEventListener("keydown", e => {
+  if(e.key === "Enter"){
+    saveRecordBtn.click();
+  }
+});
 
 document
   .getElementById("startBtn")
