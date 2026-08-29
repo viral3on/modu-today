@@ -71,7 +71,7 @@ def fetch_news():
 
 news_content = fetch_news()
 
-# f-string 대신 일반 문자열을 쓰고 필요한 부분만 .format()으로 주입
+# CSS 내부의 중괄호는 {{ }}로 이중 처리하여 format 충돌 방지
 html_template = """<!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -87,12 +87,12 @@ html_template = """<!DOCTYPE html>
   <script src="https://cdn.tailwindcss.com"></script>
 
   <style>
-    body {
+    body {{
       -webkit-user-select: none;
       -moz-user-select: none;
       -ms-user-select: none;
       user-select: none;
-    }
+    }}
   </style>
 </head>
 <body class="bg-[#0B0E14] text-gray-100 font-sans antialiased pb-20" oncontextmenu="return false;">
