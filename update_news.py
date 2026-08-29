@@ -27,8 +27,8 @@ FEEDS = {
         "https://news.google.com/rss/search?q=%EB%AF%B8%EA%B5%AD+%EA%B8%88%EC%A6%AC+%EC%97%B0%EC%A4%80+%EB%A7%88%EA%B0%80+when:1d&hl=ko&gl=KR&ceid=KR:ko"
     ],
     "야간선물 / 파생 / 투자시황": [
-        "https://news.google.com/rss/search?q=%EC%95%BC%EA%B0%84%EC%84%A0%EC%AC%BC+%EC%84%A0%EB%AC%BC+%EC%98%B5%EC%85%98+when:1d&hl=ko&gl=KR&ceid=KR:ko",
-        "https://news.google.com/rss/search?q=%EC%A3%BC%EC%8B%9D+%EC%84%A0%EB%AC%BC+%EC%98%B5%EC%85%98+when:1d&hl=ko&gl=KR&ceid=KR:ko"
+        "https://news.google.com/rss/search?q=%EC%95%BC%EA%B0%84%EC%84%A0%EC%AC%BC+%EC%84%A0%EC%98%BC+%EC%98%B5%EC%85%98+when:1d&hl=ko&gl=KR&ceid=KR:ko",
+        "https://news.google.com/rss/search?q=%EC%A3%BC%EC%8B%9D+%EC%84%A0%EC%98%BC+%EC%98%B5%EC%85%98+when:1d&hl=ko&gl=KR&ceid=KR:ko"
     ]
 }
 
@@ -61,17 +61,18 @@ def fetch_news():
 
         list_html = ""
         for it in unique_items[:6]: 
+            # 각 기사 카드 네모박스에 형광 노랑 테두리 및 호버 효과 적용
             list_html += f"""
             <a href="{it['link']}" target="_blank" rel="noopener noreferrer nofollow" 
-               class="block p-4 rounded-xl bg-[#141A28] border border-gray-800/80 hover:border-emerald-500/50 hover:bg-[#192234] transition duration-200 group">
+               class="block p-4 rounded-xl bg-[#141A28] border border-yellow-400/40 hover:border-yellow-400 hover:bg-[#1C2538] transition duration-200 group shadow-sm">
               <div class="flex justify-between items-start gap-2">
-                <span class="text-sm font-semibold text-gray-200 group-hover:text-emerald-400 leading-snug line-clamp-2">
+                <span class="text-sm font-semibold text-gray-100 group-hover:text-yellow-300 leading-snug line-clamp-2">
                   {it['title']}
                 </span>
-                <span class="text-[11px] font-mono text-gray-500 flex-shrink-0">↗</span>
+                <span class="text-[11px] font-mono text-yellow-400 flex-shrink-0">↗</span>
               </div>
               <div class="mt-2 text-[11px] font-medium text-gray-400">
-                {it['source']} • <span>오늘의 브리핑</span>
+                {it['source']} • <span class="text-yellow-400/80">오늘의 브리핑</span>
               </div>
             </a>
             """
@@ -79,7 +80,7 @@ def fetch_news():
         sections_html += f"""
         <div class="space-y-3">
           <h2 class="text-base font-bold text-white flex items-center gap-2 border-b border-gray-800 pb-2">
-            <span class="w-2 h-2 rounded-full bg-emerald-400"></span> {category}
+            <span class="w-2 h-2 rounded-full bg-yellow-400"></span> {category}
           </h2>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
             {list_html}
@@ -127,7 +128,6 @@ html_template = """<!DOCTYPE html>
     .animate-marquee {{
       display: flex;
       width: max-content;
-      /* 속도를 기존의 절반 수준인 120초로 대폭 늦춤 */
       animation: marquee 120s linear infinite;
     }}
     .animate-marquee:hover {{
@@ -137,7 +137,7 @@ html_template = """<!DOCTYPE html>
 </head>
 <body class="bg-[#0B0E14] text-gray-100 font-sans antialiased pb-20" oncontextmenu="return false;">
 
-  <!-- 상단 고정 영역 래퍼 (네비게이션 + 형광 뉴스 띠가 함께 최상단에 고정됨) -->
+  <!-- 상단 고정 영역 래퍼 (네비게이션 + 형광 뉴스 띠) -->
   <div class="sticky top-0 z-50 shadow-2xl">
     <!-- 상단 네비게이션 헤더 -->
     <header class="border-b border-gray-800 bg-[#111622] px-4 py-3">
@@ -178,7 +178,7 @@ html_template = """<!DOCTYPE html>
       </div>
     </header>
 
-    <!-- 쨍하고 밝은 형광 컬러 & 천천히 흐르는 속보 전광판 띠 -->
+    <!-- 형광 노랑 네온 전광판 띠 -->
     <div class="bg-[#042014] border-y-2 border-yellow-400 py-2.5 overflow-hidden whitespace-nowrap shadow-[0_0_20px_rgba(250,204,21,0.4)]">
       <div class="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-[#042014] to-transparent z-10 pointer-events-none"></div>
       <div class="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-[#042014] to-transparent z-10 pointer-events-none"></div>
@@ -216,4 +216,4 @@ html_template = """<!DOCTYPE html>
 with open("index.html", "w", encoding="utf-8") as f:
     f.write(html_template)
 
-print(f"Successfully generated index.html with slow bright sticky marquee at {today_str}")
+print(f"Successfully generated index.html with yellow border news cards at {today_str}")
