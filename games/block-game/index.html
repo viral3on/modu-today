@@ -603,8 +603,8 @@ button{
               style="margin-top:8px;color:#ffd43b;font-weight:900"
             ></div>
 
-            <div class="record-entry show" id="recordEntry">
-              <label for="recordNameInput" id="recordLabel">기록할 아이디를 입력하세요.</label>
+            <div class="record-entry" id="recordEntry">
+              <label for="recordNameInput" id="recordLabel">🏆 새로운 최고기록! 아이디를 입력하세요.</label>
               <input
                 id="recordNameInput"
                 type="text"
@@ -1329,7 +1329,7 @@ function startGame(){
   recordNameInput.value = "";
   recordSaveMsg.textContent = "";
   saveRecordBtn.disabled = false;
-  saveRecordBtn.textContent = "기록 저장";
+  saveRecordBtn.textContent = "최고기록 저장";
 
   lastTime =
     performance.now();
@@ -1367,37 +1367,42 @@ function gameOver(){
     resultText.textContent = "👑 전설의 블록 마스터";
   }
 
-  // 게임오버 때 아이디 입력창은 항상 보여준다.
-  recordEntry.classList.add("show");
+  // 기본적으로 기록 입력창은 숨긴다.
+  pendingNewRecord = false;
+  recordEntry.classList.remove("show");
   recordNameInput.value = "";
   recordSaveMsg.textContent = "";
   saveRecordBtn.disabled = false;
-  saveRecordBtn.textContent = "기록 저장";
+  saveRecordBtn.textContent = "최고기록 저장";
 
+  // 최고기록 갱신시에만 아이디 입력창 표시
   if(isNewRecord){
 
     best = score;
     localStorage.setItem("moduBlocksBest", String(best));
 
     pendingNewRecord = true;
-    recordLabel.textContent = "🏆 새로운 최고기록! 아이디를 입력해 기록하세요.";
-    resultText.textContent = "🏆 NEW BEST! 최고기록을 갱신했습니다.";
 
-  } else {
+    recordLabel.textContent =
+      "🏆 새로운 최고기록! 아이디를 입력하세요.";
 
-    pendingNewRecord = false;
-    recordLabel.textContent = "이번 점수에 사용할 아이디를 입력하세요.";
+    resultText.textContent =
+      "🏆 NEW BEST! 최고기록을 갱신했습니다.";
 
+    recordEntry.classList.add("show");
   }
 
   bestText.textContent = best.toLocaleString();
-  bestNameText.textContent = bestName ? bestName : "NO RECORD";
+  bestNameText.textContent =
+    bestName ? bestName : "NO RECORD";
 
   gameOverOverlay.classList.remove("hidden");
 
-  setTimeout(() => {
-    recordNameInput.focus();
-  }, 80);
+  if(isNewRecord){
+    setTimeout(() => {
+      recordNameInput.focus();
+    }, 80);
+  }
 }
 
 function togglePause(){
@@ -2134,6 +2139,10 @@ bindButton(
 
 saveRecordBtn.addEventListener("click", () => {
 
+  if(!pendingNewRecord){
+    return;
+  }
+
   const name = recordNameInput.value.trim();
 
   if(!name){
@@ -2142,27 +2151,25 @@ saveRecordBtn.addEventListener("click", () => {
     return;
   }
 
-  const cleanName = name.slice(0, 12);
+  bestName = name.slice(0, 12);
 
-  // 최근 게임 기록
-  localStorage.setItem("moduBlocksLastName", cleanName);
-  localStorage.setItem("moduBlocksLastScore", String(score));
+  localStorage.setItem(
+    "moduBlocksBestName",
+    bestName
+  );
 
-  if(pendingNewRecord){
-    bestName = cleanName;
-    localStorage.setItem("moduBlocksBestName", bestName);
-    localStorage.setItem("moduBlocksBest", String(best));
+  localStorage.setItem(
+    "moduBlocksBest",
+    String(best)
+  );
 
-    bestNameText.textContent = bestName;
+  bestNameText.textContent = bestName;
+  bestText.textContent = best.toLocaleString();
 
-    recordSaveMsg.textContent =
-      `${bestName} · ${best.toLocaleString()}점 최고기록 저장 완료`;
+  pendingNewRecord = false;
 
-    pendingNewRecord = false;
-  } else {
-    recordSaveMsg.textContent =
-      `${cleanName} · ${score.toLocaleString()}점 기록 저장 완료`;
-  }
+  recordSaveMsg.textContent =
+    `${bestName} · ${best.toLocaleString()}점 최고기록 저장 완료`;
 
   saveRecordBtn.disabled = true;
   saveRecordBtn.textContent = "저장 완료";
