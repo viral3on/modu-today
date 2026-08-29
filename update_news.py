@@ -11,7 +11,7 @@ FEEDS = {
         "https://news.google.com/rss/search?q=%EB%B0%98%EB%8F%84%EC%B2%B4+%ED%95%98%EC%9D%B4%EB%8B%89%EC%8A%A4+%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90+when:1d&hl=ko&gl=KR&ceid=KR:ko"
     ],
     "미국 증시 / 글로벌 매크로": [
-        "https://news.google.com/rss/search?q=%EB%82%98%EC%8A%A4%EB%8B%A5+SP500+%EB%89%B4%EC%9A%95%EC%A6%9D%EC%8B%9C+when:1d&hl=ko&gl=KR&ceid=KR:ko",
+        "https://news.google.com/rss/search?q=%EB%82%98%EC%8A%A4%EB%8B%A5+SP500+%EB%89%B4%EC%9A%95%EC%A6%9C%EC%8B%9C+when:1d&hl=ko&gl=KR&ceid=KR:ko",
         "https://news.google.com/rss/search?q=%ED%99%98%EC%9C%A8+%EA%B8%88%EB%A6%AC+%EC%97%B0%EC%A4%80+when:1d&hl=ko&gl=KR&ceid=KR:ko"
     ]
 }
@@ -71,13 +71,12 @@ def fetch_news():
 
 news_content = fetch_news()
 
-# CSS 내부의 중괄호는 {{ }}로 이중 처리하여 format 충돌 방지
 html_template = """<!DOCTYPE html>
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>국내 및 미국 증시 주요 뉴스 브리핑 | 매일 자동 갱신</title>
+  <title>MODU.TODAY | 실시간 금융 뉴스 대시보드</title>
   <meta name="description" content="코스피, 나스닥, 반도체, 환율 등 국내외 금융 시장의 핵심 뉴스를 매일 실시간 자동 브리핑합니다.">
   <meta name="robots" content="index, follow, noarchive">
   
@@ -104,12 +103,14 @@ html_template = """<!DOCTYPE html>
           <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
           <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
         </span>
-        <span class="text-base font-black tracking-tight text-white">DAILY MARKET NEWS</span>
-        <span class="text-[10px] bg-blue-500/20 text-blue-400 border border-blue-500/30 px-2 py-0.5 rounded font-mono font-bold">자동 갱신</span>
+        <a href="/" class="text-base font-black tracking-tight text-white">MODU.TODAY</a>
       </div>
-      <div class="text-xs font-mono text-gray-400">
-        업데이트: <span class="text-gray-200 font-bold">{today_str}</span>
-      </div>
+      <nav class="flex flex-wrap gap-2 text-xs font-medium">
+        <a href="lotto.html" class="px-3 py-1.5 rounded-lg bg-[#141A28] border border-gray-700 text-gray-300 hover:text-white transition">🍀 로또 조합기</a>
+        <a href="loan.html" class="px-3 py-1.5 rounded-lg bg-[#141A28] border border-gray-700 text-gray-300 hover:text-white transition">📊 대출 계산기</a>
+        <a href="deposit.html" class="px-3 py-1.5 rounded-lg bg-[#141A28] border border-gray-700 text-gray-300 hover:text-white transition">🏦 예적금</a>
+        <a href="salary.html" class="px-3 py-1.5 rounded-lg bg-[#141A28] border border-gray-700 text-gray-300 hover:text-white transition">💼 연봉</a>
+      </nav>
     </div>
   </header>
 
@@ -118,10 +119,10 @@ html_template = """<!DOCTYPE html>
     <div class="bg-[#141A28] border border-gray-800 rounded-2xl p-5 md:p-6 shadow-xl flex flex-wrap justify-between items-center gap-4">
       <div>
         <h1 class="text-xl md:text-2xl font-black text-white tracking-tight">오늘의 국내 & 글로벌 금융 핵심 뉴스</h1>
-        <p class="text-xs text-gray-400 mt-1">국내외 주요 언론사의 핵심 이슈를 자동으로 선별하여 링크를 제공합니다.</p>
+        <p class="text-xs text-gray-400 mt-1">국내외 주요 언론사의 핵심 경제 이슈를 실시간으로 자동 수집하여 제공합니다.</p>
       </div>
       <div class="px-3 py-1.5 rounded-lg bg-gray-800/80 text-xs font-mono text-gray-300 border border-gray-700">
-        발행 기준: {date_badge}
+        업데이트: {today_str}
       </div>
     </div>
 
@@ -135,10 +136,10 @@ html_template = """<!DOCTYPE html>
 
 </body>
 </html>
-""".format(today_str=today_str, date_badge=date_badge, news_content=news_content)
+""".format(today_str=today_str, news_content=news_content)
 
-for filename in ["news.html", "index.html"]:
-    with open(filename, "w", encoding="utf-8") as f:
-        f.write(html_template)
+# 오직 index.html만 실시간 뉴스로 자동 갱신
+with open("index.html", "w", encoding="utf-8") as f:
+    f.write(html_template)
 
-print(f"Successfully generated news.html and index.html at {today_str}")
+print(f"Successfully generated index.html at {today_str}")
