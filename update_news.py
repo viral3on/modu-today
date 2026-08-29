@@ -5,31 +5,27 @@ kst = timezone(timedelta(hours=9))
 today_str = datetime.now(kst).strftime("%Y년 %m월 %d일 %H:%M KST")
 date_badge = datetime.now(kst).strftime("%Y.%m.%d")
 
-# 뉴스 카테고리와 RSS 피드를 대폭 확대 (총 6개 카테고리)
+# 증시 및 금융 중심으로 기사가 풍성하게 수집되는 안정적인 검색어 구성 (총 5개 카테고리)
 FEEDS = {
-    "국내 증시 / 금융 이슈": [
-        "https://news.google.com/rss/search?q=%ED%95%9C%EA%B5%AD%EC%A6%9D%EC%8B%9C+%EC%BD%94%EC%8A%A4%ED%94%BC+when:1d&hl=ko&gl=KR&ceid=KR:ko",
-        "https://news.google.com/rss/search?q=%EC%BD%94%EC%8A%A4%EB%85%B5+%EC%A6%9D%EC%8B%9C+%ED%85%8c%EB%A7%88%EC%A3%BC+when:1d&hl=ko&gl=KR&ceid=KR:ko"
+    "국내 증시 / 코스피 코스닥": [
+        "https://news.google.com/rss/search?q=%EC%BD%94%EC%8A%A4%ED%94%BC+%EC%BD%94%EC%8A%A4%EB%8B%A5+%EC%A6%9D%EC%8B%9C+when:1d&hl=ko&gl=KR&ceid=KR:ko",
+        "https://news.google.com/rss/search?q=%EA%B5%AD%EB%82%B0+%EC%A3%BC%EC%8B%9D+%ED%85%8c%EB%A7%88%EC%A3%BC+%EC%A0%84%EB%A7%9D+when:1d&hl=ko&gl=KR&ceid=KR:ko"
     ],
-    "반도체 / AI / 테크": [
+    "반도체 / AI / 대형주": [
         "https://news.google.com/rss/search?q=%EB%B0%98%EB%8F%84%EC%B2%B4+%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90+%ED%95%98%EC%9D%B4%EB%8B%89%EC%8A%A4+when:1d&hl=ko&gl=KR&ceid=KR:ko",
-        "https://news.google.com/rss/search?q=%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5+AI+%ED%85%8c%ED%81%AC+%EC%82%B0%EC%97%85+when:1d&hl=ko&gl=KR&ceid=KR:ko"
+        "https://news.google.com/rss/search?q=%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5+AI+%EA%B4%80%EB%A0%A8%EC%A3%BC+when:1d&hl=ko&gl=KR&ceid=KR:ko"
     ],
     "미국 증시 / 글로벌 매크로": [
         "https://news.google.com/rss/search?q=%EB%82%98%EC%8A%A4%EB%8B%A5+SP500+%EB%89%B4%EC%9A%95%EC%A6%9D%EC%8B%9C+when:1d&hl=ko&gl=KR&ceid=KR:ko",
         "https://news.google.com/rss/search?q=%EC%9B%90%EB%8B%AC%EB%9F%AC+%ED%99%98%EC%9C%A8+%EA%B8%88%EB%A6%AC+%EC%97%B0%EC%A4%80+when:1d&hl=ko&gl=KR&ceid=KR:ko"
     ],
-    "야간선물 / 파생 / 투자": [
-        "https://news.google.com/rss/search?q=%EC%95%BC%EA%B0%84%EC%84%A0%EB%AC%BC+%ED%8C%8C%EC%83%9D%EC%83%81%ED%92%88+%EC%A6%9D%EC%8B%9C+when:1d&hl=ko&gl=KR&ceid=KR:ko",
-        "https://news.google.com/rss/search?q=%EA%B5%AD%EB%82%AD+%EC%86%8c%EC%8B%9D+%EC%A3%BC%EC%8B%9D+%ED%83%9C%EB%A7%88%EC%A3%BC+when:1d&hl=ko&gl=KR&ceid=KR:ko"
+    "야간선물 / 파생 / 투자시황": [
+        "https://news.google.com/rss/search?q=%EC%84%A0%EB%AC%BC+%EC%98%B5%EC%85%98+%ED%8C%8C%EC%83%9D%EC%83%81%ED%92%88+%EC%A6%9D%EC%8B%9C+when:1d&hl=ko&gl=KR&ceid=KR:ko",
+        "https://news.google.com/rss/search?q=%EA%B8%80%EB%A1%9C%EB%B2%8C+%EC%A6%9D%EC%8B%9C+%EB%A7%88%EA%B0%마감+when:1d&hl=ko&gl=KR&ceid=KR:ko"
     ],
     "부동산 / 거시 경제": [
         "https://news.google.com/rss/search?q=%EB%B6%80%EB%8F%99%EC%82%B0+%EC%A3%BC%ED%83%9D+%EC%B2%AD%EC%95%BD+when:1d&hl=ko&gl=KR&ceid=KR:ko",
         "https://news.google.com/rss/search?q=%EA%B5%AD%EB%82%B0+%EA%B2%BD%EC%97%B0+%EB%AC%BC%EA%B0%80+%EC%88%98%EC%B6%9C+when:1d&hl=ko&gl=KR&ceid=KR:ko"
-    ],
-    "창업 / 세무 / 노동 이슈": [
-        "https://news.google.com/rss/search?q=%EC%A3%BC%ED%9C%B4%EC%88%98%EB%8B%B9+%EC%9E%A5%EA%B5%90%EC%8B%9C%EA%B0%84+%EB%85%B8%EB%85%99+when:1d&hl=ko&gl=KR&ceid=KR:ko",
-        "https://news.google.com/rss/search?q=%EB%85%B8%EB%85%99%EB%B2%95+%EC%9E%84%EA%B8%88+%EC%84%세금+when:1d&hl=ko&gl=KR&ceid=KR:ko"
     ]
 }
 
@@ -39,7 +35,7 @@ def fetch_news():
         items = []
         for url in urls:
             feed = feedparser.parse(url)
-            for entry in feed.entries[:6]:
+            for entry in feed.entries[:8]:
                 title = entry.title.replace('"', '&quot;')
                 link = entry.link
                 source = "주요 언론"
@@ -58,7 +54,7 @@ def fetch_news():
                 unique_items.append(it)
 
         list_html = ""
-        for it in unique_items[:6]: # 카테고리당 6개씩, 총 6개 카테고리 = 총 36개 뉴스 출력
+        for it in unique_items[:6]: # 카테고리당 6개씩 꽉 채워서 출력
             list_html += f"""
             <a href="{it['link']}" target="_blank" rel="noopener noreferrer nofollow" 
                class="block p-4 rounded-xl bg-[#141A28] border border-gray-800/80 hover:border-blue-500/50 hover:bg-[#192234] transition duration-200 group">
@@ -123,7 +119,7 @@ html_template = """<!DOCTYPE html>
         <a href="/" class="text-base font-black tracking-tight text-white">MODU.TODAY</a>
       </div>
       
-      <!-- 야간선물 링크 추가 및 야근수당 링크 분리 반영 -->
+      <!-- 상단 네비게이션: 야간선물 링크를 yasun.html로 정확히 매핑 -->
       <nav class="flex flex-wrap gap-1 text-[11px] font-medium">
         <a href="lotto.html" class="px-2 py-1 rounded bg-blue-600/20 text-blue-400 border border-blue-500/30 hover:bg-blue-600 hover:text-white transition">🍀로또</a>
         <a href="loan.html" class="px-2 py-1 rounded bg-[#141A28] border border-gray-700 text-gray-300 hover:text-white transition">대출</a>
@@ -147,8 +143,7 @@ html_template = """<!DOCTYPE html>
         <a href="dividend.html" class="px-2 py-1 rounded bg-[#141A28] border border-gray-700 text-gray-300 hover:text-white transition">배당금</a>
         <a href="customs.html" class="px-2 py-1 rounded bg-[#141A28] border border-gray-700 text-gray-300 hover:text-white transition">관세</a>
         <a href="registration-tax.html" class="px-2 py-1 rounded bg-[#141A28] border border-gray-700 text-gray-300 hover:text-white transition">취득세</a>
-        <a href="yasun.html" class="px-2 py-1 rounded bg-[#141A28] border border-gray-700 text-gray-300 hover:text-white transition">야근수당</a>
-        <a href="night-futures.html" class="px-2 py-1 rounded bg-amber-600/20 text-amber-400 border border-amber-500/30 hover:bg-amber-600 hover:text-white transition">🌙야간선물</a>
+        <a href="yasun.html" class="px-2 py-1 rounded bg-amber-600/20 text-amber-400 border border-amber-500/30 hover:bg-amber-600 hover:text-white transition">🌙야간선물</a>
       </nav>
     </div>
   </header>
@@ -180,4 +175,4 @@ html_template = """<!DOCTYPE html>
 with open("index.html", "w", encoding="utf-8") as f:
     f.write(html_template)
 
-print(f"Successfully generated index.html with 36 news items at {today_str}")
+print(f"Successfully generated index.html at {today_str}")
