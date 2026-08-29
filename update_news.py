@@ -1,34 +1,30 @@
 import feedparser
 from datetime import datetime, timezone, timedelta
 
-# 한국 표준시(KST) 기준 날짜
 kst = timezone(timedelta(hours=9))
 today_str = datetime.now(kst).strftime("%Y년 %m월 %d일 %H:%M KST")
 date_badge = datetime.now(kst).strftime("%Y.%m.%d")
 
-# 1. 뉴스 RSS 피드 목록 (국내 증시 및 해외 증시)
 FEEDS = {
     "국내 증시 / 금융 이슈": [
-        "[https://news.google.com/rss/search?q=%ED%95%9C%EA%B5%AD%EC%A6%9D%EC%8B%9C+%EC%BD%94%EC%8A%A4%ED%94%BC+when:1d&hl=ko&gl=KR&ceid=KR:ko](https://news.google.com/rss/search?q=%ED%95%9C%EA%B5%AD%EC%A6%9D%EC%8B%9C+%EC%BD%94%EC%8A%A4%ED%94%BC+when:1d&hl=ko&gl=KR&ceid=KR:ko)",
-        "[https://news.google.com/rss/search?q=%EB%B0%98%EB%8F%84%EC%B2%B4+%ED%95%98%EC%9D%B4%EB%8B%89%EC%8A%A4+%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90+when:1d&hl=ko&gl=KR&ceid=KR:ko](https://news.google.com/rss/search?q=%EB%B0%98%EB%8F%84%EC%B2%B4+%ED%95%98%EC%9D%B4%EB%8B%89%EC%8A%A4+%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90+when:1d&hl=ko&gl=KR&ceid=KR:ko)"
+        "https://news.google.com/rss/search?q=%ED%95%9C%EA%B5%AD%EC%A6%9D%EC%8B%9C+%EC%BD%94%EC%8A%A4%ED%94%BC+when:1d&hl=ko&gl=KR&ceid=KR:ko",
+        "https://news.google.com/rss/search?q=%EB%B0%98%EB%8F%84%EC%B2%B4+%ED%95%98%EC%9D%B4%EB%8B%89%EC%8A%A4+%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90+when:1d&hl=ko&gl=KR&ceid=KR:ko"
     ],
     "미국 증시 / 글로벌 매크로": [
-        "[https://news.google.com/rss/search?q=%EB%82%98%EC%8A%A4%EB%8B%A5+SP500+%EB%89%B4%EC%9A%95%EC%A6%9D%EC%8B%9C+when:1d&hl=ko&gl=KR&ceid=KR:ko](https://news.google.com/rss/search?q=%EB%82%98%EC%8A%A4%EB%8B%A5+SP500+%EB%89%B4%EC%9A%95%EC%A6%9D%EC%8B%9C+when:1d&hl=ko&gl=KR&ceid=KR:ko)",
-        "[https://news.google.com/rss/search?q=%ED%99%98%EC%9C%A8+%EA%B8%88%EB%A6%AC+%EC%97%B0%EC%A4%80+when:1d&hl=ko&gl=KR&ceid=KR:ko](https://news.google.com/rss/search?q=%ED%99%98%EC%9C%A8+%EA%B8%88%EB%A6%AC+%EC%97%B0%EC%A4%80+when:1d&hl=ko&gl=KR&ceid=KR:ko)"
+        "https://news.google.com/rss/search?q=%EB%82%98%EC%8A%A4%EB%8B%A5+SP500+%EB%89%B4%EC%9A%95%EC%A6%9D%EC%8B%9C+when:1d&hl=ko&gl=KR&ceid=KR:ko",
+        "https://news.google.com/rss/search?q=%ED%99%98%EC%9C%A8+%EA%B8%88%EB%A6%AC+%EC%97%B0%EC%A4%80+when:1d&hl=ko&gl=KR&ceid=KR:ko"
     ]
 }
 
 def fetch_news():
     sections_html = ""
-    
     for category, urls in FEEDS.items():
         items = []
         for url in urls:
             feed = feedparser.parse(url)
-            for entry in feed.entries[:5]: # 피드당 상위 5개 추출
+            for entry in feed.entries[:5]:
                 title = entry.title.replace('"', '&quot;')
                 link = entry.link
-                # 신문사 이름 분리 (Google News 형식: "기사제목 - 언론사")
                 source = "주요 언론"
                 if " - " in title:
                     parts = title.rsplit(" - ", 1)
@@ -36,7 +32,6 @@ def fetch_news():
                     source = parts[1]
                 items.append({"title": title, "link": link, "source": source})
         
-        # 중복 기사 제거
         unique_items = []
         seen_titles = set()
         for it in items:
@@ -45,9 +40,8 @@ def fetch_news():
                 seen_titles.add(clean_title)
                 unique_items.append(it)
 
-        # HTML 카드 리스트 빌드
         list_html = ""
-        for it in unique_items[:6]: # 카테고리당 최종 6개 선별
+        for it in unique_items[:6]:
             list_html += f"""
             <a href="{it['link']}" target="_blank" rel="noopener noreferrer nofollow" 
                class="block p-4 rounded-xl bg-[#141A28] border border-gray-800/80 hover:border-blue-500/50 hover:bg-[#192234] transition duration-200 group">
@@ -77,8 +71,8 @@ def fetch_news():
 
 news_content = fetch_news()
 
-# 전체 HTML 조립 (불펌 방지 + 다크테마 + 애드센스)
-html_template = f"""<!DOCTYPE html>
+# f-string 대신 일반 문자열을 쓰고 필요한 부분만 .format()으로 주입
+html_template = """<!DOCTYPE html>
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
@@ -87,25 +81,22 @@ html_template = f"""<!DOCTYPE html>
   <meta name="description" content="코스피, 나스닥, 반도체, 환율 등 국내외 금융 시장의 핵심 뉴스를 매일 실시간 자동 브리핑합니다.">
   <meta name="robots" content="index, follow, noarchive">
   
-  <!-- 구글 애드센스 -->
   <meta name="google-adsense-account" content="ca-pub-6122968996738347">
-  <script async src="[https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6122968996738347](https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6122968996738347)" crossorigin="anonymous"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6122968996738347" crossorigin="anonymous"></script>
 
-  <script src="[https://cdn.tailwindcss.com](https://cdn.tailwindcss.com)"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- 타 사이트 불펌 및 봇 크롤링 방지 스타일 -->
   <style>
-    body {{
+    body {
       -webkit-user-select: none;
       -moz-user-select: none;
       -ms-user-select: none;
       user-select: none;
-    }}
+    }
   </style>
 </head>
 <body class="bg-[#0B0E14] text-gray-100 font-sans antialiased pb-20" oncontextmenu="return false;">
 
-  <!-- 상단 헤더 -->
   <header class="border-b border-gray-800/80 bg-[#111622]/95 backdrop-blur sticky top-0 z-40 px-4 py-3">
     <div class="max-w-5xl mx-auto flex flex-wrap items-center justify-between gap-3">
       <div class="flex items-center gap-2.5">
@@ -122,7 +113,32 @@ html_template = f"""<!DOCTYPE html>
     </div>
   </header>
 
-  <!-- 메인 뉴스 컨테이너 -->
   <main class="max-w-5xl mx-auto p-4 md:p-6 space-y-8 mt-2">
     
     <div class="bg-[#141A28] border border-gray-800 rounded-2xl p-5 md:p-6 shadow-xl flex flex-wrap justify-between items-center gap-4">
+      <div>
+        <h1 class="text-xl md:text-2xl font-black text-white tracking-tight">오늘의 국내 & 글로벌 금융 핵심 뉴스</h1>
+        <p class="text-xs text-gray-400 mt-1">국내외 주요 언론사의 핵심 이슈를 자동으로 선별하여 링크를 제공합니다.</p>
+      </div>
+      <div class="px-3 py-1.5 rounded-lg bg-gray-800/80 text-xs font-mono text-gray-300 border border-gray-700">
+        발행 기준: {date_badge}
+      </div>
+    </div>
+
+    {news_content}
+
+    <article class="bg-[#141A28]/40 border border-gray-800/60 rounded-xl p-4 text-xs text-gray-500 leading-relaxed">
+      ※ 본 페이지의 기사 링크 및 제목은 언론사 RSS를 통해 자동 수집된 정보이며, 기사 본문의 저작권은 각 언론사에 있습니다. 본 사이트는 투자 참고용 링크만을 제공하며 특정 종목에 대한 투자 권유를 하지 않습니다.
+    </article>
+
+  </main>
+
+</body>
+</html>
+""".format(today_str=today_str, date_badge=date_badge, news_content=news_content)
+
+for filename in ["news.html", "index.html"]:
+    with open(filename, "w", encoding="utf-8") as f:
+        f.write(html_template)
+
+print(f"Successfully generated news.html and index.html at {today_str}")
