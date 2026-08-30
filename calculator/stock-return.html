@@ -257,7 +257,39 @@
     }
   }
 
-  ids.forEach(id => document.getElementById(id).addEventListener("input", update));
+  // 금액/수량 입력칸은 입력 즉시 천 단위 쉼표 표시
+  const commaIds = ["buyPrice","sellPrice","qty","extraCost"];
+
+  function formatInputWithComma(el){
+    let raw = el.value.replace(/,/g, "").replace(/[^0-9.\-]/g, "");
+    if(raw === "" || raw === "-"){
+      el.value = raw;
+      return;
+    }
+
+    const parts = raw.split(".");
+    const integerPart = parts[0];
+    const decimalPart = parts.length > 1 ? parts.slice(1).join("") : null;
+
+    const num = Number(integerPart || "0");
+    if(!Number.isFinite(num)) return;
+
+    let formatted = num.toLocaleString("ko-KR");
+    if(raw.startsWith("-") && num === 0) formatted = "-0";
+    if(decimalPart !== null) formatted += "." + decimalPart;
+
+    el.value = formatted;
+  }
+
+  ids.forEach(id => {
+    const el = document.getElementById(id);
+    el.addEventListener("input", () => {
+      if(commaIds.includes(id)) formatInputWithComma(el);
+      update();
+    });
+  });
+
+  commaIds.forEach(id => formatInputWithComma(document.getElementById(id)));
   update();
 })();
 </script>
