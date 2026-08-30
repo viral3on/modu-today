@@ -156,6 +156,7 @@ html_template = """<!DOCTYPE html>
           <a href="/youtube/" class="px-2.5 py-1.5 rounded-lg bg-gray-800 text-gray-200 border border-gray-700 hover:border-red-400 hover:text-white transition">📺 YouTube 순위</a>
           <a href="/calculator/" class="px-2.5 py-1.5 rounded-lg bg-gray-800 text-gray-200 border border-gray-700 hover:border-blue-400 hover:text-white transition">🧮 계산기</a>
           <a href="/games/" class="px-2.5 py-1.5 rounded-lg bg-gray-800 text-gray-200 border border-gray-700 hover:border-violet-400 hover:text-white transition">🎮 게임</a>
+          <a href="/lotto/" class="px-2.5 py-1.5 rounded-lg bg-gray-800 text-gray-200 border border-gray-700 hover:border-emerald-400 hover:text-white transition">🍀 로또</a>
           <a href="/yasun.html" class="px-2.5 py-1.5 rounded-lg bg-amber-600/20 text-amber-400 border border-amber-500/30 hover:bg-amber-600 hover:text-white transition">🌙 야간선물</a>
         </nav>
       </div>
@@ -191,7 +192,7 @@ html_template = """<!DOCTYPE html>
       <div class="flex items-end justify-between gap-3 border-b border-gray-800 pb-2">
         <div>
           <h2 class="text-base font-black text-white">MODU.TODAY 인기 서비스</h2>
-          <p class="text-[11px] text-gray-500 mt-1">뉴스를 확인한 뒤 계산기·YouTube 순위·게임도 이용해 보세요.</p>
+          <p class="text-[11px] text-gray-500 mt-1">뉴스를 확인한 뒤 계산기·YouTube 순위·로또·게임도 이용해 보세요.</p>
         </div>
       </div>
       <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
@@ -206,6 +207,9 @@ html_template = """<!DOCTYPE html>
         </a>
         <a href="/youtube/" class="bg-[#141A28] border border-gray-800 rounded-xl p-4 hover:border-red-400 hover:bg-[#1C2538] transition">
           <div class="text-xl mb-2">📺</div><div class="text-sm font-bold text-white">YouTube 조회수 순위</div><div class="text-[11px] text-gray-500 mt-1">일간·주간·월간 조회수 증가량</div>
+        </a>
+        <a href="/lotto/" class="bg-[#141A28] border border-gray-800 rounded-xl p-4 hover:border-emerald-400 hover:bg-[#1C2538] transition">
+          <div class="text-xl mb-2">🍀</div><div class="text-sm font-bold text-white">로또 번호 생성기</div><div class="text-[11px] text-gray-500 mt-1">자동 번호 생성·최신 당첨번호·최근 통계</div>
         </a>
         <a href="/games/block-game/" class="bg-[#141A28] border border-gray-800 rounded-xl p-4 hover:border-violet-400 hover:bg-[#1C2538] transition">
           <div class="text-xl mb-2">🎮</div><div class="text-sm font-bold text-white">MODU BLOCKS</div><div class="text-[11px] text-gray-500 mt-1">설치 없이 즐기는 블록게임</div>
