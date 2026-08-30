@@ -651,6 +651,10 @@ button{
           PAUSE
         </button>
 
+        <button class="ctrl" id="soundBtn">
+          SOUND ON
+        </button>
+
       </div>
 
     </main>
@@ -700,6 +704,8 @@ button{
       PC에서는 ← → 방향키로 블록을 좌우로 이동하고, ↑ 키로 회전할 수 있습니다.
       ↓ 키는 빠른 낙하, SPACE 키는 하드드롭, C 키는 HOLD, P 키는 일시정지입니다.
       모바일에서는 게임 아래의 조작 버튼으로 동일하게 플레이할 수 있습니다.
+      한 번에 2줄을 지우는 것은 DOUBLE, 3줄은 TRIPLE, 4줄은 TETRIS로 판정됩니다.
+      COMBO는 한 번에 여러 줄을 지우는 뜻이 아니라, 서로 연속된 블록이 각각 한 줄 이상을 지웠을 때 이어집니다.
     </p>
 
     <h2>MODU BLOCKS 특징</h2>
@@ -725,7 +731,7 @@ button{
     </p>
 
     <div class="related-games">
-      <a href="/games/block-game/index.html">MODU.TODAY 홈으로</a>
+      <a href="/">MODU.TODAY 홈으로</a>
     </div>
   </section>
 
@@ -842,6 +848,153 @@ let running = false;
 let paused = false;
 
 let score = 0;
+
+/* =========================================================
+   SOUND / BGM
+   외부 음원 파일 없이 Web Audio API로 생성
+========================================================= */
+let audioCtx = null;
+let masterGain = null;
+let soundEnabled = true;
+let musicTimer = null;
+let musicStep = 0;
+
+const BGM_NOTES = [
+  261.63,329.63,392.00,329.63,
+  293.66,349.23,440.00,349.23,
+  329.63,392.00,493.88,392.00,
+  293.66,349.23,440.00,349.23
+];
+
+function ensureAudio(){
+  if(!soundEnabled) return;
+
+  if(!audioCtx){
+    const AC = window.AudioContext || window.webkitAudioContext;
+    if(!AC) return;
+
+    audioCtx = new AC();
+    masterGain = audioCtx.createGain();
+    masterGain.gain.value = 0.32;
+    masterGain.connect(audioCtx.destination);
+  }
+
+  if(audioCtx.state === "suspended"){
+    audioCtx.resume();
+  }
+}
+
+function playTone(frequency, duration=0.08, volume=0.10, type="square", delay=0){
+  if(!soundEnabled) return;
+  ensureAudio();
+  if(!audioCtx || !masterGain) return;
+
+  const start = audioCtx.currentTime + delay;
+  const osc = audioCtx.createOscillator();
+  const gain = audioCtx.createGain();
+
+  osc.type = type;
+  osc.frequency.setValueAtTime(frequency, start);
+
+  gain.gain.setValueAtTime(0.0001, start);
+  gain.gain.exponentialRampToValueAtTime(Math.max(0.001, volume), start + 0.008);
+  gain.gain.exponentialRampToValueAtTime(0.0001, start + duration);
+
+  osc.connect(gain);
+  gain.connect(masterGain);
+
+  osc.start(start);
+  osc.stop(start + duration + 0.03);
+}
+
+function playLockSound(){
+  playTone(115,0.055,0.10,"square");
+  playTone(82,0.075,0.07,"triangle",0.025);
+}
+
+function playRotateSound(){
+  playTone(360,0.035,0.035,"square");
+}
+
+function playHardDropSound(){
+  playTone(180,0.045,0.09,"square");
+  playTone(105,0.075,0.11,"triangle",0.035);
+}
+
+function playHoldSound(){
+  playTone(260,0.045,0.055,"triangle");
+  playTone(390,0.060,0.055,"triangle",0.05);
+}
+
+function playLineClearSound(count){
+  const base = 470;
+
+  for(let i=0;i<count+1;i++){
+    playTone(base + i*125,0.09,0.09,"square",i*0.055);
+  }
+
+  if(count===4){
+    playTone(1046.5,0.18,0.08,"triangle",0.24);
+  }
+}
+
+function playGameOverSound(){
+  playTone(330,0.12,0.08,"triangle");
+  playTone(247,0.14,0.08,"triangle",0.12);
+  playTone(165,0.24,0.09,"triangle",0.26);
+}
+
+function startBGM(){
+  if(!soundEnabled || musicTimer) return;
+
+  ensureAudio();
+  if(!audioCtx) return;
+
+  musicStep = 0;
+
+  const tick = () => {
+    if(!soundEnabled || !running || paused) return;
+
+    const note = BGM_NOTES[musicStep % BGM_NOTES.length];
+
+    playTone(note,0.10,0.025,"square");
+
+    if(musicStep % 4 === 0){
+      playTone(note/2,0.16,0.018,"triangle");
+    }
+
+    musicStep++;
+  };
+
+  tick();
+  musicTimer = setInterval(tick,230);
+}
+
+function stopBGM(){
+  if(musicTimer){
+    clearInterval(musicTimer);
+    musicTimer = null;
+  }
+}
+
+function setSoundEnabled(enabled){
+  soundEnabled = enabled;
+
+  const btn = document.getElementById("soundBtn");
+  if(btn){
+    btn.textContent = soundEnabled ? "SOUND ON" : "SOUND OFF";
+  }
+
+  if(soundEnabled){
+    ensureAudio();
+    if(running && !paused){
+      startBGM();
+    }
+  }else{
+    stopBGM();
+  }
+}
+
 let lines = 0;
 let level = 1;
 let combo = -1;
@@ -1043,6 +1196,7 @@ function rotate(){
 
       piece.matrix = rotated;
       piece.x += offset;
+      playRotateSound();
 
       return;
 
@@ -1115,6 +1269,7 @@ function hardDrop(){
 
   score += distance * 2;
 
+  playHardDropSound();
   lockPiece();
 
 }
@@ -1122,6 +1277,7 @@ function hardDrop(){
 function lockPiece(){
 
   merge();
+  playLockSound();
 
   const fullRows = [];
 
@@ -1156,22 +1312,32 @@ function lockPiece(){
 
 function actuallyClearRows(){
 
-  const count =
-    clearingRows.length;
+  const rowsToClear =
+    [...clearingRows].sort((a,b)=>b-a);
 
-  clearingRows
-    .sort((a,b)=>b-a)
-    .forEach(row=>{
+  const count = rowsToClear.length;
 
-      board.splice(row,1);
-      board.unshift(
-        Array(COLS).fill(null)
-      );
+  // 모든 대상 행을 먼저 삭제한 뒤 빈 행을 위에 추가한다.
+  // 기존에는 한 행 삭제 직후 unshift해서 다음 행 인덱스가 밀리는 문제가 있었다.
+  rowsToClear.forEach(row => {
+    board.splice(row,1);
+  });
 
-    });
+  for(let i=0;i<count;i++){
+    board.unshift(
+      Array(COLS).fill(null)
+    );
+  }
 
   lines += count;
 
+  /*
+    콤보 기준:
+    한 번에 2줄 삭제 = DOUBLE
+    한 번에 3줄 삭제 = TRIPLE
+    한 번에 4줄 삭제 = TETRIS
+    COMBO는 서로 연속된 블록이 각각 라인을 삭제할 때만 증가한다.
+  */
   combo++;
 
   const lineScores =
@@ -1181,28 +1347,29 @@ function actuallyClearRows(){
     lineScores[count] * level;
 
   if(combo > 0){
-
     earned +=
       combo * 50 * level;
-
   }
 
   score += earned;
 
-  if(count === 4){
+  let clearName = "";
 
-    showMessage(
-      "TETRIS! +" + earned
-    );
+  if(count === 1) clearName = "SINGLE";
+  else if(count === 2) clearName = "DOUBLE";
+  else if(count === 3) clearName = "TRIPLE";
+  else if(count === 4) clearName = "TETRIS!";
 
+  let message =
+    clearName + " +" + earned;
+
+  if(combo >= 1){
+    message +=
+      " · " + (combo + 1) + " COMBO!";
   }
-  else if(combo >= 2){
 
-    showMessage(
-      combo + " COMBO!"
-    );
-
-  }
+  showMessage(message);
+  playLineClearSound(count);
 
   level =
     Math.floor(lines / 10) + 1;
@@ -1251,6 +1418,7 @@ function hold(){
   updateNext();
   drawBoard();
 
+  playHoldSound();
   showMessage("HOLD");
 
   if(collides(piece.matrix, piece.x, piece.y)){
@@ -1318,6 +1486,10 @@ function startGame(){
   running = true;
   paused = false;
 
+  ensureAudio();
+  stopBGM();
+  startBGM();
+
   const pauseBtn = document.getElementById("pauseBtn");
   if(pauseBtn) pauseBtn.textContent = "PAUSE";
 
@@ -1345,6 +1517,9 @@ function startGame(){
 function gameOver(){
 
   running = false;
+
+  stopBGM();
+  playGameOverSound();
 
   const previousBest = best;
   const isNewRecord = score > previousBest;
@@ -1416,12 +1591,14 @@ function togglePause(){
   if(paused){
 
     if(pauseBtn) pauseBtn.textContent = "RESUME";
+    stopBGM();
     showMessage("PAUSE");
 
   } else {
 
     if(pauseBtn) pauseBtn.textContent = "PAUSE";
     lastTime = performance.now();
+    startBGM();
 
   }
 
@@ -2135,6 +2312,11 @@ bindButton(
 bindButton(
   "pauseBtn",
   togglePause
+);
+
+bindButton(
+  "soundBtn",
+  () => setSoundEnabled(!soundEnabled)
 );
 
 saveRecordBtn.addEventListener("click", () => {
