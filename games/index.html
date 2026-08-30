@@ -1,0 +1,505 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>무료 웹게임 모음 - 블록게임·지뢰찾기 | MODU.TODAY</title>
+  <meta name="description" content="MODU.TODAY 무료 웹게임. 설치와 회원가입 없이 블록게임, 지뢰찾기 등 다양한 게임을 PC와 모바일에서 바로 즐겨보세요.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://modu.today/games/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="무료 웹게임 모음 | MODU.TODAY GAMES">
+  <meta property="og:description" content="설치 없이 바로 즐기는 무료 웹게임 모음. 블록게임과 지뢰찾기를 플레이해보세요.">
+  <meta property="og:url" content="https://modu.today/games/">
+  <meta property="og:site_name" content="MODU.TODAY">
+
+  <style>
+    :root{
+      --bg:#f5f7fb;
+      --card:#fff;
+      --text:#15171c;
+      --muted:#69727e;
+      --line:#e1e6ec;
+      --accent:#2563eb;
+      --accent-hover:#1d4ed8;
+      --dark:#111827;
+      --shadow:0 12px 32px rgba(15,23,42,.08);
+    }
+
+    *{box-sizing:border-box}
+
+    html,body{
+      margin:0;
+      padding:0;
+      background:var(--bg);
+      color:var(--text);
+      font-family:Arial,"Noto Sans KR","Malgun Gothic",sans-serif;
+    }
+
+    a{
+      color:inherit;
+      text-decoration:none;
+    }
+
+    .page{
+      width:min(1120px,100%);
+      margin:0 auto;
+      padding:18px 16px 48px;
+    }
+
+    .topbar{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:16px;
+      padding-bottom:18px;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:11px;
+      font-weight:900;
+      letter-spacing:.01em;
+    }
+
+    .brand-mark{
+      width:38px;
+      height:38px;
+      border-radius:11px;
+      display:grid;
+      place-items:center;
+      background:var(--dark);
+      color:#fff;
+      font-size:19px;
+    }
+
+    .site-home{
+      padding:10px 14px;
+      border:1px solid var(--line);
+      background:#fff;
+      border-radius:10px;
+      font-size:14px;
+      font-weight:800;
+    }
+
+    .hero{
+      position:relative;
+      overflow:hidden;
+      border-radius:24px;
+      padding:58px 34px;
+      text-align:center;
+      background:linear-gradient(135deg,#111827,#1f2937);
+      color:#fff;
+      box-shadow:var(--shadow);
+    }
+
+    .hero:before,
+    .hero:after{
+      content:"";
+      position:absolute;
+      border-radius:50%;
+      background:rgba(255,255,255,.05);
+    }
+
+    .hero:before{
+      width:260px;
+      height:260px;
+      top:-130px;
+      right:-70px;
+    }
+
+    .hero:after{
+      width:180px;
+      height:180px;
+      left:-80px;
+      bottom:-100px;
+    }
+
+    .hero-inner{
+      position:relative;
+      z-index:1;
+    }
+
+    .eyebrow{
+      display:inline-block;
+      margin-bottom:12px;
+      padding:7px 11px;
+      border:1px solid rgba(255,255,255,.18);
+      border-radius:999px;
+      color:#dbeafe;
+      font-size:12px;
+      font-weight:800;
+      letter-spacing:.08em;
+    }
+
+    h1{
+      margin:0;
+      font-size:clamp(34px,6vw,58px);
+      line-height:1.05;
+      letter-spacing:-.045em;
+    }
+
+    .hero p{
+      max-width:680px;
+      margin:18px auto 0;
+      color:#d1d5db;
+      font-size:16px;
+      line-height:1.75;
+    }
+
+    .section-head{
+      display:flex;
+      align-items:flex-end;
+      justify-content:space-between;
+      gap:16px;
+      margin:36px 2px 16px;
+    }
+
+    .section-head h2{
+      margin:0;
+      font-size:26px;
+      letter-spacing:-.03em;
+    }
+
+    .section-head p{
+      margin:5px 0 0;
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    .count{
+      color:var(--muted);
+      font-size:13px;
+      font-weight:700;
+    }
+
+    .games-grid{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:18px;
+    }
+
+    .game-card{
+      display:flex;
+      flex-direction:column;
+      min-width:0;
+      overflow:hidden;
+      border:1px solid var(--line);
+      border-radius:20px;
+      background:var(--card);
+      box-shadow:0 8px 24px rgba(15,23,42,.055);
+      transition:transform .18s ease, box-shadow .18s ease;
+    }
+
+    .game-card:hover{
+      transform:translateY(-3px);
+      box-shadow:0 14px 34px rgba(15,23,42,.10);
+    }
+
+    .thumb{
+      min-height:220px;
+      display:grid;
+      place-items:center;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .thumb-block{
+      background:
+        linear-gradient(rgba(255,255,255,.06) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(255,255,255,.06) 1px,transparent 1px),
+        #111827;
+      background-size:28px 28px;
+    }
+
+    .blocks{
+      display:grid;
+      grid-template-columns:repeat(4,34px);
+      grid-template-rows:repeat(4,34px);
+      gap:4px;
+      transform:rotate(-5deg);
+    }
+
+    .block{
+      border-radius:5px;
+      box-shadow:inset 0 0 0 2px rgba(255,255,255,.18);
+    }
+
+    .b1{background:#22d3ee}
+    .b2{background:#a78bfa}
+    .b3{background:#facc15}
+    .b4{background:#4ade80}
+    .b5{background:#fb7185}
+
+    .empty{visibility:hidden}
+
+    .thumb-mine{
+      background:linear-gradient(135deg,#eef2ff,#f8fafc);
+    }
+
+    .mine-art{
+      display:grid;
+      grid-template-columns:repeat(5,38px);
+      gap:4px;
+      padding:10px;
+      border-radius:12px;
+      background:#cbd5e1;
+    }
+
+    .mine-cell{
+      width:38px;
+      height:38px;
+      display:grid;
+      place-items:center;
+      border-radius:6px;
+      background:#fff;
+      font-weight:900;
+      font-size:20px;
+    }
+
+    .closed{
+      background:linear-gradient(#f8fafc,#e2e8f0);
+      box-shadow:inset 1px 1px #fff,inset -1px -1px rgba(100,116,139,.25);
+    }
+
+    .card-body{
+      display:flex;
+      flex-direction:column;
+      flex:1;
+      padding:20px;
+    }
+
+    .tag{
+      align-self:flex-start;
+      margin-bottom:9px;
+      padding:5px 9px;
+      border-radius:999px;
+      background:#eff6ff;
+      color:#1d4ed8;
+      font-size:11px;
+      font-weight:900;
+    }
+
+    .card-body h3{
+      margin:0;
+      font-size:23px;
+      letter-spacing:-.025em;
+    }
+
+    .card-body p{
+      flex:1;
+      margin:10px 0 18px;
+      color:var(--muted);
+      line-height:1.65;
+      font-size:14px;
+    }
+
+    .play{
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      min-height:46px;
+      padding:0 16px;
+      border-radius:11px;
+      background:var(--accent);
+      color:white;
+      font-weight:900;
+    }
+
+    .play:hover{
+      background:var(--accent-hover);
+    }
+
+    .about{
+      margin-top:34px;
+      padding:26px;
+      border:1px solid var(--line);
+      border-radius:20px;
+      background:#fff;
+    }
+
+    .about h2{
+      margin:0 0 10px;
+      font-size:22px;
+    }
+
+    .about p{
+      margin:0;
+      color:#4b5563;
+      line-height:1.8;
+      font-size:14px;
+    }
+
+    .about p+p{
+      margin-top:10px;
+    }
+
+    footer{
+      padding:30px 4px 0;
+      text-align:center;
+      color:#8a929e;
+      font-size:12px;
+    }
+
+    @media(max-width:700px){
+      .page{
+        padding:12px 10px 36px;
+      }
+
+      .topbar{
+        padding-bottom:12px;
+      }
+
+      .brand span:last-child{
+        font-size:14px;
+      }
+
+      .hero{
+        padding:42px 20px;
+        border-radius:18px;
+      }
+
+      .games-grid{
+        grid-template-columns:1fr;
+      }
+
+      .thumb{
+        min-height:190px;
+      }
+
+      .section-head{
+        align-items:flex-start;
+        flex-direction:column;
+        gap:4px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="page">
+
+    <header class="topbar">
+      <a class="brand" href="/games/">
+        <span class="brand-mark">M</span>
+        <span>MODU.TODAY GAMES</span>
+      </a>
+
+      <a class="site-home" href="/">MODU.TODAY 홈</a>
+    </header>
+
+    <section class="hero">
+      <div class="hero-inner">
+        <span class="eyebrow">FREE WEB GAMES</span>
+        <h1>MODU.TODAY<br>GAMES</h1>
+        <p>
+          다운로드도, 설치도 필요 없습니다.<br>
+          PC와 모바일에서 간단하게 즐길 수 있는 무료 웹게임을 만나보세요.
+        </p>
+      </div>
+    </section>
+
+    <div class="section-head">
+      <div>
+        <h2>전체 게임</h2>
+        <p>원하는 게임을 선택하면 바로 플레이할 수 있습니다.</p>
+      </div>
+      <span class="count">현재 2개 게임</span>
+    </div>
+
+    <section class="games-grid" aria-label="게임 목록">
+
+      <article class="game-card">
+        <div class="thumb thumb-block" aria-hidden="true">
+          <div class="blocks">
+            <span class="block empty"></span>
+            <span class="block b1"></span>
+            <span class="block empty"></span>
+            <span class="block empty"></span>
+
+            <span class="block empty"></span>
+            <span class="block b1"></span>
+            <span class="block b2"></span>
+            <span class="block b2"></span>
+
+            <span class="block b3"></span>
+            <span class="block b1"></span>
+            <span class="block b4"></span>
+            <span class="block b2"></span>
+
+            <span class="block b3"></span>
+            <span class="block b3"></span>
+            <span class="block b4"></span>
+            <span class="block b5"></span>
+          </div>
+        </div>
+
+        <div class="card-body">
+          <span class="tag">BLOCK PUZZLE</span>
+          <h3>🧱 MODU BLOCKS</h3>
+          <p>
+            떨어지는 블록을 회전하고 배치해 가로줄을 완성하세요.
+            HOLD, HARD DROP, 콤보와 최고기록 기능을 지원하는 블록 퍼즐 게임입니다.
+          </p>
+          <a class="play" href="/games/block-game/">게임 시작</a>
+        </div>
+      </article>
+
+      <article class="game-card">
+        <div class="thumb thumb-mine" aria-hidden="true">
+          <div class="mine-art">
+            <span class="mine-cell">1</span>
+            <span class="mine-cell">1</span>
+            <span class="mine-cell closed"></span>
+            <span class="mine-cell closed">🚩</span>
+            <span class="mine-cell closed"></span>
+
+            <span class="mine-cell">1</span>
+            <span class="mine-cell">2</span>
+            <span class="mine-cell closed"></span>
+            <span class="mine-cell closed"></span>
+            <span class="mine-cell closed"></span>
+
+            <span class="mine-cell"></span>
+            <span class="mine-cell">1</span>
+            <span class="mine-cell">2</span>
+            <span class="mine-cell closed"></span>
+            <span class="mine-cell closed"></span>
+          </div>
+        </div>
+
+        <div class="card-body">
+          <span class="tag">PUZZLE</span>
+          <h3>💣 지뢰찾기</h3>
+          <p>
+            숫자를 단서로 숨어 있는 지뢰를 찾아내세요.
+            초급·중급·고급 난이도와 깃발 표시, 타이머 및 난이도별 최고기록을 지원합니다.
+          </p>
+          <a class="play" href="/games/minesweeper/">게임 시작</a>
+        </div>
+      </article>
+
+    </section>
+
+    <section class="about">
+      <h2>MODU.TODAY 무료 게임</h2>
+      <p>
+        MODU.TODAY GAMES는 별도의 프로그램 설치나 회원가입 없이 웹 브라우저에서
+        바로 즐길 수 있는 무료 게임을 제공합니다. PC뿐 아니라 스마트폰과 태블릿에서도
+        간편하게 플레이할 수 있습니다.
+      </p>
+      <p>
+        현재 블록 퍼즐 게임과 지뢰찾기를 제공하고 있으며,
+        앞으로 퍼즐·두뇌·아케이드 등 다양한 종류의 게임을 계속 추가할 예정입니다.
+      </p>
+    </section>
+
+    <footer>
+      © MODU.TODAY · Free Web Games
+    </footer>
+
+  </main>
+</body>
+</html>
