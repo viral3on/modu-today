@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>퍼센트 계산기 | 증가율·감소율·할인율·비율 계산 - MODU.TODAY</title>
+  <meta name="description" content="A의 B%, 전체 중 비율, 증가율·감소율, 할인율, 목표값 역산까지 한 번에 계산하는 무료 퍼센트 계산기입니다.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://modu.today/calculator/percent.html">
+  <meta name="google-adsense-account" content="ca-pub-6122968996738347">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6122968996738347" crossorigin="anonymous"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root{--bg1:#07111f;--bg2:#111827;--card:rgba(255,255,255,.08);--line:rgba(255,255,255,.12);--text:#f8fafc;--muted:#a7b0c0}
+    *{box-sizing:border-box}
+    body{margin:0;min-height:100%;color:var(--text);font-family:Arial,"Noto Sans KR","Malgun Gothic",sans-serif;background:radial-gradient(circle at 10% 10%,rgba(124,58,237,.35),transparent 32%),radial-gradient(circle at 90% 20%,rgba(6,182,212,.28),transparent 35%),radial-gradient(circle at 50% 95%,rgba(236,72,153,.20),transparent 38%),linear-gradient(145deg,var(--bg1),var(--bg2))}
+    .glass{background:rgba(10,18,34,.72);border:1px solid var(--line);backdrop-filter:blur(16px);box-shadow:0 24px 70px rgba(0,0,0,.34)}
+    .calc-card{background:linear-gradient(180deg,rgba(255,255,255,.09),rgba(255,255,255,.045));border:1px solid rgba(255,255,255,.11);transition:.2s ease}
+    .calc-card:hover{transform:translateY(-2px);border-color:rgba(125,211,252,.5);box-shadow:0 16px 36px rgba(0,0,0,.22)}
+    input{width:100%;color:#fff;background:rgba(2,6,23,.72);border:1px solid rgba(255,255,255,.15);border-radius:14px;padding:13px 14px;outline:none;font-size:16px}
+    input:focus{border-color:#67e8f9;box-shadow:0 0 0 3px rgba(103,232,249,.12)}
+    .result{min-height:62px;border-radius:14px;padding:13px 14px;background:linear-gradient(135deg,rgba(59,130,246,.18),rgba(168,85,247,.16));border:1px solid rgba(147,197,253,.20);display:flex;flex-direction:column;justify-content:center}
+    .result strong{font-size:22px;line-height:1.2;word-break:break-all}
+    .result span{margin-top:4px;color:#a5b4fc;font-size:12px}
+    .pill{display:inline-flex;align-items:center;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.06);border-radius:999px;padding:6px 10px;font-size:11px;color:#cbd5e1}
+    .home-btn{display:inline-flex;align-items:center;justify-content:center;min-height:40px;padding:0 14px;border-radius:12px;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.07);color:#fff;text-decoration:none;font-weight:800;font-size:13px}
+    .home-btn:hover{background:rgba(255,255,255,.13)}
+  </style>
+</head>
+<body>
+  <div class="max-w-6xl mx-auto px-4 py-5 md:py-8">
+    <div class="flex items-center justify-between gap-3 mb-6">
+      <a href="/" class="font-black tracking-widest text-white text-sm md:text-base">MODU.TODAY</a>
+      <a href="/calculator/" class="home-btn">계산기 홈</a>
+    </div>
+
+    <section class="glass rounded-3xl p-6 md:p-9 overflow-hidden relative">
+      <div class="absolute -right-14 -top-14 w-44 h-44 rounded-full bg-cyan-400/10 blur-2xl"></div>
+      <div class="absolute -left-16 -bottom-16 w-52 h-52 rounded-full bg-fuchsia-500/10 blur-3xl"></div>
+      <div class="relative text-center max-w-3xl mx-auto">
+        <div class="pill mb-4">%</div>
+        <h1 class="text-3xl md:text-5xl font-black tracking-tight">퍼센트 계산기</h1>
+        <p class="mt-4 text-sm md:text-base text-slate-300 leading-relaxed">비율, 증가율, 감소율, 할인율, 목표값 역산까지 자주 쓰는 퍼센트 계산을 한 페이지에서 빠르게 계산하세요.</p>
+      </div>
+
+      <div class="relative grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
+        <section class="calc-card rounded-2xl p-5">
+          <h2 class="font-extrabold text-lg">① A의 B%는?</h2>
+          <p class="text-xs text-slate-400 mt-1">예: 200,000원의 15%</p>
+          <div class="grid grid-cols-2 gap-3 mt-4"><input id="p1a" inputmode="decimal" placeholder="A 값"><input id="p1b" inputmode="decimal" placeholder="퍼센트 %"></div>
+          <div class="result mt-4"><strong id="p1r">0</strong><span>A × B ÷ 100</span></div>
+        </section>
+
+        <section class="calc-card rounded-2xl p-5">
+          <h2 class="font-extrabold text-lg">② A는 B의 몇 %?</h2>
+          <p class="text-xs text-slate-400 mt-1">예: 30은 200의 몇 %?</p>
+          <div class="grid grid-cols-2 gap-3 mt-4"><input id="p2a" inputmode="decimal" placeholder="부분값 A"><input id="p2b" inputmode="decimal" placeholder="전체값 B"></div>
+          <div class="result mt-4"><strong id="p2r">0%</strong><span>A ÷ B × 100</span></div>
+        </section>
+
+        <section class="calc-card rounded-2xl p-5">
+          <h2 class="font-extrabold text-lg">③ 증가율 / 감소율</h2>
+          <p class="text-xs text-slate-400 mt-1">예: 80 → 100은 몇 % 상승?</p>
+          <div class="grid grid-cols-2 gap-3 mt-4"><input id="p3a" inputmode="decimal" placeholder="기존 값"><input id="p3b" inputmode="decimal" placeholder="변경 값"></div>
+          <div class="result mt-4"><strong id="p3r">0%</strong><span id="p3s">변화율</span></div>
+        </section>
+
+        <section class="calc-card rounded-2xl p-5">
+          <h2 class="font-extrabold text-lg">④ N% 증가 / 감소 후 금액</h2>
+          <p class="text-xs text-slate-400 mt-1">예: 50,000원이 12% 증가하면?</p>
+          <div class="grid grid-cols-2 gap-3 mt-4"><input id="p4a" inputmode="decimal" placeholder="기준 값"><input id="p4b" inputmode="decimal" placeholder="변화율 %"></div>
+          <div class="grid grid-cols-2 gap-3 mt-4"><div class="result"><strong id="p4up">0</strong><span>증가 후</span></div><div class="result"><strong id="p4down">0</strong><span>감소 후</span></div></div>
+        </section>
+
+        <section class="calc-card rounded-2xl p-5">
+          <h2 class="font-extrabold text-lg">⑤ 할인율 계산</h2>
+          <p class="text-xs text-slate-400 mt-1">정가와 판매가로 할인율 계산</p>
+          <div class="grid grid-cols-2 gap-3 mt-4"><input id="p5a" inputmode="decimal" placeholder="정가"><input id="p5b" inputmode="decimal" placeholder="판매가"></div>
+          <div class="result mt-4"><strong id="p5r">0%</strong><span id="p5s">할인 금액 0</span></div>
+        </section>
+
+        <section class="calc-card rounded-2xl p-5">
+          <h2 class="font-extrabold text-lg">⑥ 할인 적용 금액</h2>
+          <p class="text-xs text-slate-400 mt-1">정가와 할인율을 입력</p>
+          <div class="grid grid-cols-2 gap-3 mt-4"><input id="p6a" inputmode="decimal" placeholder="정가"><input id="p6b" inputmode="decimal" placeholder="할인율 %"></div>
+          <div class="result mt-4"><strong id="p6r">0</strong><span id="p6s">절약 금액 0</span></div>
+        </section>
+
+        <section class="calc-card rounded-2xl p-5 md:col-span-2">
+          <h2 class="font-extrabold text-lg">⑦ 목표값 역산</h2>
+          <p class="text-xs text-slate-400 mt-1">어떤 값의 N%가 목표값이라면 원래 값은 얼마인지 계산합니다.</p>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 mt-4"><input id="p7target" inputmode="decimal" placeholder="목표값"><input id="p7pct" inputmode="decimal" placeholder="퍼센트 %"><div class="result"><strong id="p7r">0</strong><span>원래 값</span></div></div>
+        </section>
+      </div>
+    </section>
+
+    <section class="glass rounded-2xl p-5 md:p-6 mt-5 text-sm text-slate-300 leading-relaxed">
+      <h2 class="font-extrabold text-white text-base mb-2">퍼센트 계산 활용 예시</h2>
+      <p>쇼핑 할인율, 주식 수익률, 연봉 인상률, 가격 인상·인하율, 시험 점수 비율, 매출 증감률 등 일상에서 자주 사용하는 계산을 빠르게 확인할 수 있습니다.</p>
+    </section>
+
+    <footer class="text-center text-xs text-slate-500 py-8">© MODU.TODAY · Jae-Hyun Kim.</footer>
+  </div>
+
+<script>
+(() => {
+  const ids=["p1a","p1b","p2a","p2b","p3a","p3b","p4a","p4b","p5a","p5b","p6a","p6b","p7target","p7pct"];
+  const n=id=>{const raw=document.getElementById(id).value.replace(/,/g,"").trim();if(raw==="")return null;const val=Number(raw);return Number.isFinite(val)?val:null};
+  const fmt=value=>{if(!Number.isFinite(value))return"0";const abs=Math.abs(value);const maxDigits=abs<1?4:2;return value.toLocaleString("ko-KR",{maximumFractionDigits:maxDigits})};
+  const pct=value=>Number.isFinite(value)?fmt(value)+"%":"0%";
+  function update(){let a,b,r;
+    a=n("p1a");b=n("p1b");r=(a!==null&&b!==null)?a*b/100:0;document.getElementById("p1r").textContent=fmt(r);
+    a=n("p2a");b=n("p2b");r=(a!==null&&b!==null&&b!==0)?a/b*100:0;document.getElementById("p2r").textContent=pct(r);
+    a=n("p3a");b=n("p3b");r=(a!==null&&b!==null&&a!==0)?(b-a)/Math.abs(a)*100:0;document.getElementById("p3r").textContent=pct(r);document.getElementById("p3s").textContent=r>0?"상승":r<0?"하락":"변화 없음";
+    a=n("p4a");b=n("p4b");document.getElementById("p4up").textContent=fmt((a!==null&&b!==null)?a*(1+b/100):0);document.getElementById("p4down").textContent=fmt((a!==null&&b!==null)?a*(1-b/100):0);
+    a=n("p5a");b=n("p5b");r=(a!==null&&b!==null&&a!==0)?(a-b)/a*100:0;document.getElementById("p5r").textContent=pct(r);document.getElementById("p5s").textContent="할인 금액 "+fmt((a!==null&&b!==null)?a-b:0);
+    a=n("p6a");b=n("p6b");const discounted=(a!==null&&b!==null)?a*(1-b/100):0;const saved=(a!==null&&b!==null)?a*b/100:0;document.getElementById("p6r").textContent=fmt(discounted);document.getElementById("p6s").textContent="절약 금액 "+fmt(saved);
+    a=n("p7target");b=n("p7pct");r=(a!==null&&b!==null&&b!==0)?a/(b/100):0;document.getElementById("p7r").textContent=fmt(r);
+  }
+  ids.forEach(id=>document.getElementById(id).addEventListener("input",update));update();
+})();
+</script>
+</body>
+</html>
