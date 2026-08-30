@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>로또 번호 생성기 · 최신 당첨번호 · 통계 | MODU.TODAY</title>
+<meta name="description" content="로또 6/45 자동 번호 생성, 최신 회차 당첨번호, 최근 회차 통계, 당첨 확률과 등수별 기준을 한곳에서 확인하세요.">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<link rel="canonical" href="https://modu.today/lotto/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MODU.TODAY">
+<meta property="og:title" content="로또 번호 생성기 · 최신 당첨번호 | MODU.TODAY">
+<meta property="og:description" content="로또 자동 번호 생성과 최신 당첨번호, 최근 회차 통계를 한눈에 확인하세요.">
+<meta property="og:url" content="https://modu.today/lotto/">
+<style>
+:root{
+  --bg:#08111c;--panel:#0f1b2b;--panel2:#132238;--line:#263a54;
+  --text:#f5f8fc;--muted:#91a4bd;--accent:#16d98d;--accent2:#34a8ff;
+  --gold:#ffd65a;--danger:#ff6b77;
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:linear-gradient(180deg,#07101a,#0b1421 48%,#08111c);color:var(--text);font-family:Pretendard,"Noto Sans KR","Malgun Gothic",Arial,sans-serif}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1080px,calc(100% - 28px));margin:auto;padding:24px 0 50px}
+.topbar{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:18px}
+.brand{font-weight:950;letter-spacing:1.8px}
+.home{border:1px solid var(--line);background:var(--panel);padding:10px 14px;border-radius:12px;font-weight:800}
+.hero{background:radial-gradient(circle at 100% 0%,rgba(22,217,141,.15),transparent 42%),var(--panel);border:1px solid var(--line);border-radius:24px;padding:28px;margin-bottom:18px}
+.eyebrow{font-size:12px;color:var(--accent);font-weight:900;margin-bottom:10px}
+h1{font-size:clamp(30px,5vw,48px);line-height:1.08;margin:0;letter-spacing:-1.5px}
+.hero p{color:var(--muted);line-height:1.7;margin:14px 0 0}
+.grid{display:grid;grid-template-columns:1.15fr .85fr;gap:18px}
+.card{background:rgba(15,27,43,.94);border:1px solid var(--line);border-radius:20px;padding:20px}
+.card h2{margin:0 0 6px;font-size:20px}
+.sub{color:var(--muted);font-size:13px;line-height:1.6}
+.generator-output,.balls{display:flex;flex-wrap:wrap;align-items:center;gap:9px;margin:20px 0}
+.ball{width:48px;height:48px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-weight:950;font-size:18px;color:#09121d;box-shadow:inset 0 -4px 0 rgba(0,0,0,.11)}
+.ball.s1{background:#ffd65a}.ball.s2{background:#6bc4ff}.ball.s3{background:#ff7d7d}.ball.s4{background:#adb6c3}.ball.s5{background:#7bdd99}
+.plus{font-size:22px;color:var(--muted);font-weight:900;margin:0 2px}
+.btnrow{display:flex;flex-wrap:wrap;gap:10px}
+button{border:0;cursor:pointer;font:inherit}
+.primary{background:linear-gradient(135deg,#16d98d,#2bb8ff);color:#061019;font-weight:950;padding:13px 18px;border-radius:13px}
+.secondary{background:#17283f;color:var(--text);border:1px solid var(--line);font-weight:800;padding:12px 15px;border-radius:13px}
+.sets{display:grid;gap:10px;margin-top:16px}
+.setrow{display:flex;align-items:center;gap:7px;background:#0a1422;border:1px solid #1e3149;padding:10px 12px;border-radius:14px}
+.mini{width:31px;height:31px;font-size:12px}
+.latest-meta{display:flex;justify-content:space-between;gap:10px;color:var(--muted);font-size:13px;margin-top:12px}
+.money{font-size:25px;font-weight:950;color:var(--gold);margin-top:8px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:15px}
+.stat{background:#0a1422;border:1px solid #1e3149;border-radius:14px;padding:13px}
+.stat b{display:block;font-size:18px;margin-top:4px}
+.full{grid-column:1/-1}
+.tablewrap{overflow-x:auto;margin-top:14px}
+table{width:100%;border-collapse:collapse;min-width:700px}
+th,td{text-align:left;padding:12px 9px;border-bottom:1px solid #223650;font-size:13px}
+th{color:#a9bad0;font-weight:800}
+.drawballs{display:flex;gap:5px;align-items:center}
+.drawballs .ball{width:29px;height:29px;font-size:11px}
+.frequency{display:grid;grid-template-columns:repeat(9,1fr);gap:7px;margin-top:16px}
+.freq{background:#0a1422;border:1px solid #20344d;border-radius:10px;padding:8px 3px;text-align:center;font-size:11px;color:var(--muted)}
+.freq b{display:block;color:var(--text);font-size:15px;margin-bottom:2px}
+.info-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:14px}
+.info{background:#0a1422;border:1px solid #20344d;border-radius:14px;padding:15px}
+.info strong{display:block;margin-bottom:6px}
+.notice{margin-top:18px;border:1px solid #3b3a29;background:#1a1910;border-radius:14px;padding:14px;color:#c9c5a2;font-size:12px;line-height:1.65}
+footer{text-align:center;color:#6f8199;font-size:12px;padding:28px 0 0}
+.badge{display:inline-flex;align-items:center;gap:6px;background:#0a2b22;border:1px solid #175840;color:#74edbd;border-radius:999px;padding:6px 10px;font-size:11px;font-weight:900}
+@media(max-width:800px){.grid{grid-template-columns:1fr}.info-grid{grid-template-columns:1fr}.frequency{grid-template-columns:repeat(5,1fr)}.hero{padding:22px}.ball{width:43px;height:43px}.latest-meta{flex-direction:column}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="topbar">
+    <a class="brand" href="/">MODU.TODAY</a>
+    <a class="home" href="/">⌂ 메인 홈</a>
+  </div>
+
+  <section class="hero">
+    <div class="eyebrow">LOTTO 6/45</div>
+    <h1>로또 번호 생성기</h1>
+    <p>1~45 중 중복 없이 6개 번호를 자동 생성하고, 최신 당첨번호와 최근 회차 흐름을 함께 확인합니다.</p>
+  </section>
+
+  <div class="grid">
+    <section class="card">
+      <h2>🎲 자동 번호 생성</h2>
+      <div class="sub">모든 조합의 1등 당첨 확률은 동일합니다. 아래 번호는 무작위로 생성됩니다.</div>
+      <div id="mainNumbers" class="generator-output"></div>
+      <div class="btnrow">
+        <button class="primary" onclick="generateMain()">새 번호 생성</button>
+        <button class="secondary" onclick="generateFive()">5게임 한꺼번에</button>
+        <button class="secondary" onclick="copyMain()">번호 복사</button>
+      </div>
+      <div id="fiveSets" class="sets"></div>
+    </section>
+
+    <section class="card">
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:10px">
+        <h2>🏆 최신 당첨번호</h2>
+        <span class="badge">자동 업데이트</span>
+      </div>
+      <div id="latestTitle" class="sub">불러오는 중...</div>
+      <div id="latestBalls" class="balls"></div>
+      <div class="latest-meta">
+        <span id="latestDate"></span>
+        <span id="updatedAt"></span>
+      </div>
+      <div class="sub" style="margin-top:16px">1등 1게임당 당첨금</div>
+      <div id="firstPrize" class="money">-</div>
+      <div class="stats">
+        <div class="stat"><span class="sub">1등 당첨</span><b id="firstWinners">-</b></div>
+        <div class="stat"><span class="sub">2등 당첨</span><b id="secondWinners">-</b></div>
+        <div class="stat"><span class="sub">3등 당첨</span><b id="thirdWinners">-</b></div>
+      </div>
+    </section>
+
+    <section class="card full">
+      <h2>📅 최근 당첨번호</h2>
+      <div class="sub">최근 회차의 당첨번호를 자동으로 저장하여 보여줍니다.</div>
+      <div class="tablewrap">
+        <table>
+          <thead><tr><th>회차</th><th>추첨일</th><th>당첨번호 + 보너스</th><th>홀짝</th><th>합계</th></tr></thead>
+          <tbody id="drawTable"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="card full">
+      <h2>📊 최근 20회 번호 출현 빈도</h2>
+      <div class="sub">최근 20회 당첨번호 6개만 집계합니다. 과거 출현 횟수는 미래 당첨 확률을 높이지 않습니다.</div>
+      <div id="frequency" class="frequency"></div>
+    </section>
+
+    <section class="card full">
+      <h2>ℹ️ 로또 6/45 알아두기</h2>
+      <div class="info-grid">
+        <div class="info"><strong>1등 확률</strong><span class="sub">6개 번호 모두 일치<br><b style="color:var(--text)">1 / 8,145,060</b></span></div>
+        <div class="info"><strong>추첨 시간</strong><span class="sub">매주 토요일 20:35경<br>방송 사정에 따라 변동 가능</span></div>
+        <div class="info"><strong>1게임 가격</strong><span class="sub">1게임 1,000원<br>1~45 중 6개 번호 선택</span></div>
+        <div class="info"><strong>2등</strong><span class="sub">5개 번호 + 보너스 번호 일치</span></div>
+        <div class="info"><strong>3등</strong><span class="sub">5개 번호 일치</span></div>
+        <div class="info"><strong>4·5등</strong><span class="sub">4개 일치 5만원 · 3개 일치 5천원</span></div>
+      </div>
+      <div class="notice">
+        ※ 번호 생성 및 통계는 오락·참고용입니다. 무작위 추첨에서 특정 번호, 빈도, 홀짝 조합이 다음 회차 당첨을 보장하지 않습니다.
+        당첨번호와 당첨금은 최종적으로 동행복권 공식 발표를 확인하세요. 만 19세 미만은 복권을 구매할 수 없습니다.
+      </div>
+    </section>
+  </div>
+
+  <footer>© MODU.TODAY · Jae-Hyun Kim.</footer>
+</div>
+
+<script>
+let lottoData = null;
+
+function ballClass(n){
+  if(n<=10) return "s1"; if(n<=20) return "s2"; if(n<=30) return "s3"; if(n<=40) return "s4"; return "s5";
+}
+function ball(n, mini=false){
+  return `<span class="ball ${ballClass(n)} ${mini?'mini':''}">${n}</span>`;
+}
+function randomSet(){
+  const nums = Array.from({length:45},(_,i)=>i+1);
+  for(let i=nums.length-1;i>0;i--){
+    const j=Math.floor(Math.random()*(i+1));
+    [nums[i],nums[j]]=[nums[j],nums[i]];
+  }
+  return nums.slice(0,6).sort((a,b)=>a-b);
+}
+function generateMain(){
+  const s=randomSet();
+  document.getElementById("mainNumbers").innerHTML=s.map(n=>ball(n)).join("");
+  document.getElementById("mainNumbers").dataset.numbers=s.join(", ");
+}
+function generateFive(){
+  const box=document.getElementById("fiveSets");
+  box.innerHTML="";
+  for(let i=0;i<5;i++){
+    const s=randomSet();
+    box.innerHTML += `<div class="setrow"><b style="width:24px">${i+1}</b>${s.map(n=>ball(n,true)).join("")}</div>`;
+  }
+}
+async function copyMain(){
+  const text=document.getElementById("mainNumbers").dataset.numbers || "";
+  if(!text) return;
+  try{ await navigator.clipboard.writeText(text); alert("번호를 복사했습니다."); }
+  catch(e){ alert(text); }
+}
+function fmtMoney(v){ return Number(v||0).toLocaleString("ko-KR")+"원"; }
+function drawBalls(d){
+  return `<div class="drawballs">${d.numbers.map(n=>ball(n,true)).join("")}<span class="plus">+</span>${ball(d.bonus,true)}</div>`;
+}
+function render(data){
+  lottoData=data;
+  const l=data.latest || data.draws?.[0];
+  if(l){
+    document.getElementById("latestTitle").textContent=`제${l.draw}회`;
+    document.getElementById("latestDate").textContent=`추첨일 ${l.date}`;
+    document.getElementById("latestBalls").innerHTML=l.numbers.map(n=>ball(n)).join("")+`<span class="plus">+</span>${ball(l.bonus)}`;
+    document.getElementById("firstPrize").textContent=l.first_prize?fmtMoney(l.first_prize):"공식 결과 확인";
+    document.getElementById("firstWinners").textContent=l.first_winners?`${l.first_winners.toLocaleString()}명`:"-";
+    document.getElementById("secondWinners").textContent=l.second_winners?`${l.second_winners.toLocaleString()}명`:"-";
+    document.getElementById("thirdWinners").textContent=l.third_winners?`${l.third_winners.toLocaleString()}명`:"-";
+  }
+  document.getElementById("updatedAt").textContent=data.updated_at?`데이터 갱신 ${data.updated_at.slice(0,10)}`:"";
+  const draws=(data.draws||[]).slice(0,12);
+  document.getElementById("drawTable").innerHTML=draws.map(d=>{
+    const odd=d.numbers.filter(n=>n%2).length;
+    const sum=d.numbers.reduce((a,b)=>a+b,0);
+    return `<tr><td><b>${d.draw}회</b></td><td>${d.date}</td><td>${drawBalls(d)}</td><td>${odd}:${6-odd}</td><td>${sum}</td></tr>`;
+  }).join("");
+
+  const freq=Array(46).fill(0);
+  (data.draws||[]).slice(0,20).forEach(d=>d.numbers.forEach(n=>freq[n]++));
+  const sorted=Array.from({length:45},(_,i)=>i+1).sort((a,b)=>freq[b]-freq[a] || a-b);
+  document.getElementById("frequency").innerHTML=sorted.map(n=>`<div class="freq"><b>${n}</b>${freq[n]}회</div>`).join("");
+}
+async function loadData(){
+  try{
+    const r=await fetch("/lotto/data/results.json?v="+Date.now(),{cache:"no-store"});
+    if(!r.ok) throw new Error("HTTP "+r.status);
+    render(await r.json());
+  }catch(e){
+    document.getElementById("latestTitle").textContent="당첨 데이터를 불러오지 못했습니다.";
+    console.error(e);
+  }
+}
+generateMain();
+loadData();
+</script>
+
+<!-- Vercel Web Analytics -->
+<script>
+  window.va = window.va || function () {
+    (window.vaq = window.vaq || []).push(arguments);
+  };
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>
