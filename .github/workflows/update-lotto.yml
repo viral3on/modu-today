@@ -1,0 +1,40 @@
+name: Update Lotto Results
+
+on:
+  schedule:
+    # 토요일 21:50 KST / 일요일 09:30 KST
+    - cron: "50 12 * * 6"
+    - cron: "30 0 * * 0"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-lotto:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.x"
+
+      - name: Update lotto results
+        run: python lotto/update_lotto.py
+
+      - name: Commit lotto data
+        run: |
+          if git diff --quiet -- lotto/data/results.json; then
+            echo "No lotto data changes."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add lotto/data/results.json
+          git commit -m "Update lotto results"
+          git push
