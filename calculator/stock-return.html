@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>주식 수익률 계산기 | 매수가·매도가·수수료·세금 계산 - MODU.TODAY</title>
+  <meta name="description" content="주식 매수가, 매도가, 수량, 매수·매도 수수료와 세금을 반영해 실제 수익금과 수익률을 계산하는 무료 주식 수익률 계산기입니다.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://modu.today/calculator/stock-return.html">
+  <meta name="google-adsense-account" content="ca-pub-6122968996738347">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6122968996738347" crossorigin="anonymous"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      min-height:100%;
+      font-family:Arial,"Noto Sans KR","Malgun Gothic",sans-serif;
+      color:#f8fafc;
+      background:
+        radial-gradient(circle at 12% 10%,rgba(34,197,94,.20),transparent 28%),
+        radial-gradient(circle at 88% 10%,rgba(59,130,246,.22),transparent 30%),
+        radial-gradient(circle at 50% 100%,rgba(168,85,247,.18),transparent 34%),
+        linear-gradient(145deg,#06111c,#0f172a 48%,#111827);
+    }
+    .glass{
+      background:rgba(9,16,30,.78);
+      border:1px solid rgba(255,255,255,.10);
+      backdrop-filter:blur(16px);
+      box-shadow:0 25px 70px rgba(0,0,0,.35);
+    }
+    .input-box{
+      width:100%;
+      background:rgba(2,6,23,.72);
+      border:1px solid rgba(255,255,255,.13);
+      border-radius:14px;
+      color:#fff;
+      padding:13px 14px;
+      font-size:16px;
+      outline:none;
+    }
+    .input-box:focus{
+      border-color:#60a5fa;
+      box-shadow:0 0 0 3px rgba(96,165,250,.12);
+    }
+    .result-card{
+      background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.035));
+      border:1px solid rgba(255,255,255,.10);
+    }
+    .home-btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-height:40px;
+      padding:0 14px;
+      border-radius:12px;
+      border:1px solid rgba(255,255,255,.14);
+      background:rgba(255,255,255,.07);
+      color:#fff;
+      text-decoration:none;
+      font-weight:800;
+      font-size:13px;
+    }
+    .home-btn:hover{background:rgba(255,255,255,.13)}
+    .positive{color:#4ade80}
+    .negative{color:#fb7185}
+    .neutral{color:#e2e8f0}
+  </style>
+</head>
+<body>
+  <div class="max-w-6xl mx-auto px-4 py-5 md:py-8">
+    <div class="flex items-center justify-between gap-3 mb-6">
+      <a href="/" class="font-black tracking-widest text-white text-sm md:text-base">MODU.TODAY</a>
+      <a href="/calculator/" class="home-btn">계산기 홈</a>
+    </div>
+
+    <section class="glass rounded-3xl p-6 md:p-9">
+      <div class="text-center max-w-3xl mx-auto">
+        <div class="inline-flex px-3 py-1 rounded-full border border-emerald-400/20 bg-emerald-400/10 text-emerald-300 text-xs font-extrabold mb-4">
+          STOCK RETURN
+        </div>
+        <h1 class="text-3xl md:text-5xl font-black tracking-tight">주식 수익률 계산기</h1>
+        <p class="mt-4 text-sm md:text-base text-slate-300 leading-relaxed">
+          매수가·매도가·수량과 수수료·세금을 입력하면 실제 손익과 수익률을 계산합니다.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-5 mt-8">
+        <section class="result-card rounded-2xl p-5 md:p-6">
+          <h2 class="font-extrabold text-lg mb-4">매매 정보 입력</h2>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-sm font-bold text-slate-300 mb-1">매수가 (원)</label>
+              <input id="buyPrice" class="input-box" inputmode="decimal" placeholder="예: 50,000">
+            </div>
+            <div>
+              <label class="block text-sm font-bold text-slate-300 mb-1">매도가 (원)</label>
+              <input id="sellPrice" class="input-box" inputmode="decimal" placeholder="예: 58,000">
+            </div>
+            <div>
+              <label class="block text-sm font-bold text-slate-300 mb-1">수량 (주)</label>
+              <input id="qty" class="input-box" inputmode="decimal" placeholder="예: 100">
+            </div>
+            <div>
+              <label class="block text-sm font-bold text-slate-300 mb-1">기타 비용 (원, 선택)</label>
+              <input id="extraCost" class="input-box" inputmode="decimal" placeholder="예: 0">
+            </div>
+          </div>
+
+          <div class="mt-6 border-t border-white/10 pt-5">
+            <h3 class="font-extrabold text-base mb-3">수수료·세금</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <div>
+                <label class="block text-xs font-bold text-slate-400 mb-1">매수 수수료 (%)</label>
+                <input id="buyFee" class="input-box" inputmode="decimal" value="0">
+              </div>
+              <div>
+                <label class="block text-xs font-bold text-slate-400 mb-1">매도 수수료 (%)</label>
+                <input id="sellFee" class="input-box" inputmode="decimal" value="0">
+              </div>
+              <div>
+                <label class="block text-xs font-bold text-slate-400 mb-1">매도 세금 (%)</label>
+                <input id="sellTax" class="input-box" inputmode="decimal" value="0">
+              </div>
+            </div>
+            <p class="text-[11px] text-slate-500 mt-3 leading-relaxed">
+              증권사·시장·계좌에 따라 수수료와 세율이 다를 수 있으므로 실제 적용값을 입력하세요.
+            </p>
+          </div>
+        </section>
+
+        <section class="result-card rounded-2xl p-5 md:p-6">
+          <h2 class="font-extrabold text-lg mb-4">계산 결과</h2>
+
+          <div class="grid grid-cols-2 gap-3">
+            <div class="rounded-xl bg-white/5 border border-white/10 p-4">
+              <div class="text-xs text-slate-400">총 매수금액</div>
+              <div id="buyTotal" class="text-xl font-black mt-1">0원</div>
+            </div>
+            <div class="rounded-xl bg-white/5 border border-white/10 p-4">
+              <div class="text-xs text-slate-400">총 매도금액</div>
+              <div id="sellTotal" class="text-xl font-black mt-1">0원</div>
+            </div>
+            <div class="rounded-xl bg-white/5 border border-white/10 p-4">
+              <div class="text-xs text-slate-400">총 비용</div>
+              <div id="totalCost" class="text-xl font-black mt-1">0원</div>
+            </div>
+            <div class="rounded-xl bg-white/5 border border-white/10 p-4">
+              <div class="text-xs text-slate-400">손익분기 매도가</div>
+              <div id="breakEven" class="text-xl font-black mt-1">0원</div>
+            </div>
+          </div>
+
+          <div class="rounded-2xl mt-4 p-5 border border-blue-400/20 bg-gradient-to-br from-blue-500/10 to-violet-500/10">
+            <div class="text-xs text-slate-400">최종 손익</div>
+            <div id="profit" class="text-3xl md:text-4xl font-black mt-1 neutral">0원</div>
+            <div class="flex flex-wrap gap-2 mt-4">
+              <span class="px-3 py-1 rounded-full bg-white/7 border border-white/10 text-sm">
+                수익률 <strong id="returnRate">0%</strong>
+              </span>
+              <span class="px-3 py-1 rounded-full bg-white/7 border border-white/10 text-sm">
+                주당 손익 <strong id="profitPerShare">0원</strong>
+              </span>
+            </div>
+          </div>
+
+          <div class="mt-4 text-sm text-slate-400 leading-relaxed">
+            <p id="summaryText">값을 입력하면 계산 결과가 표시됩니다.</p>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <section class="glass rounded-2xl p-5 md:p-6 mt-5 text-sm text-slate-300 leading-relaxed">
+      <h2 class="font-extrabold text-white text-base mb-2">주식 수익률 계산 방법</h2>
+      <p>
+        기본 수익률은 투자원금 대비 실제 손익의 비율입니다. 이 계산기는 매수·매도 수수료, 매도 시 세금, 기타 비용까지 반영해 보다 현실적인 손익을 계산할 수 있도록 구성했습니다.
+      </p>
+    </section>
+
+    <footer class="text-center text-xs text-slate-500 py-8">
+      © MODU.TODAY · Jae-Hyun Kim.
+    </footer>
+  </div>
+
+<script>
+(() => {
+  const ids = ["buyPrice","sellPrice","qty","extraCost","buyFee","sellFee","sellTax"];
+
+  const getNum = id => {
+    const el = document.getElementById(id);
+    const raw = el.value.replace(/,/g,"").trim();
+    if(raw === "") return 0;
+    const val = Number(raw);
+    return Number.isFinite(val) ? val : 0;
+  };
+
+  const money = v => {
+    if(!Number.isFinite(v)) return "0원";
+    return Math.round(v).toLocaleString("ko-KR") + "원";
+  };
+
+  const percent = v => {
+    if(!Number.isFinite(v)) return "0%";
+    return v.toLocaleString("ko-KR",{maximumFractionDigits:2}) + "%";
+  };
+
+  function update(){
+    const buyPrice = getNum("buyPrice");
+    const sellPrice = getNum("sellPrice");
+    const qty = getNum("qty");
+    const extraCost = getNum("extraCost");
+    const buyFeeRate = getNum("buyFee") / 100;
+    const sellFeeRate = getNum("sellFee") / 100;
+    const sellTaxRate = getNum("sellTax") / 100;
+
+    const grossBuy = buyPrice * qty;
+    const grossSell = sellPrice * qty;
+
+    const buyFee = grossBuy * buyFeeRate;
+    const sellFee = grossSell * sellFeeRate;
+    const sellTax = grossSell * sellTaxRate;
+
+    const invested = grossBuy + buyFee + extraCost;
+    const received = grossSell - sellFee - sellTax;
+    const profit = received - invested;
+    const rate = invested > 0 ? profit / invested * 100 : 0;
+    const perShare = qty > 0 ? profit / qty : 0;
+
+    const denominator = qty * (1 - sellFeeRate - sellTaxRate);
+    const breakEven = denominator > 0
+      ? (grossBuy + buyFee + extraCost) / denominator
+      : 0;
+
+    document.getElementById("buyTotal").textContent = money(grossBuy);
+    document.getElementById("sellTotal").textContent = money(grossSell);
+    document.getElementById("totalCost").textContent = money(buyFee + sellFee + sellTax + extraCost);
+    document.getElementById("breakEven").textContent = money(breakEven);
+    document.getElementById("profit").textContent = money(profit);
+    document.getElementById("returnRate").textContent = percent(rate);
+    document.getElementById("profitPerShare").textContent = money(perShare);
+
+    const profitEl = document.getElementById("profit");
+    profitEl.classList.remove("positive","negative","neutral");
+    profitEl.classList.add(profit > 0 ? "positive" : profit < 0 ? "negative" : "neutral");
+
+    const summary = document.getElementById("summaryText");
+    if(buyPrice <= 0 || sellPrice <= 0 || qty <= 0){
+      summary.textContent = "매수가, 매도가, 수량을 입력하면 실제 수익금과 수익률이 계산됩니다.";
+    }else if(profit > 0){
+      summary.textContent = `현재 조건에서는 ${money(profit)}의 이익이며, 실제 수익률은 ${percent(rate)}입니다.`;
+    }else if(profit < 0){
+      summary.textContent = `현재 조건에서는 ${money(Math.abs(profit))}의 손실이며, 실제 수익률은 ${percent(rate)}입니다.`;
+    }else{
+      summary.textContent = "현재 조건에서는 손익이 0에 가깝습니다.";
+    }
+  }
+
+  ids.forEach(id => document.getElementById(id).addEventListener("input", update));
+  update();
+})();
+</script>
+</body>
+</html>
