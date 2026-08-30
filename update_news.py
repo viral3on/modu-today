@@ -151,8 +151,12 @@ html_template = """<!DOCTYPE html>
           <a href="/" class="text-base font-black tracking-tight text-white">MODU.TODAY</a>
         </div>
         
-        <nav class="flex flex-wrap gap-1 text-[11px] font-medium">
-          <a href="yasun.html" class="px-2 py-1 rounded bg-amber-600/20 text-amber-400 border border-amber-500/30 hover:bg-amber-600 hover:text-white transition">🌙야간선물</a>
+        <nav class="flex flex-wrap gap-1.5 text-[11px] font-bold">
+          <a href="/" class="px-2.5 py-1.5 rounded-lg bg-yellow-400 text-gray-950 hover:bg-yellow-300 transition">📰 뉴스</a>
+          <a href="/youtube/" class="px-2.5 py-1.5 rounded-lg bg-gray-800 text-gray-200 border border-gray-700 hover:border-red-400 hover:text-white transition">📺 YouTube 순위</a>
+          <a href="/calculator/" class="px-2.5 py-1.5 rounded-lg bg-gray-800 text-gray-200 border border-gray-700 hover:border-blue-400 hover:text-white transition">🧮 계산기</a>
+          <a href="/games/" class="px-2.5 py-1.5 rounded-lg bg-gray-800 text-gray-200 border border-gray-700 hover:border-violet-400 hover:text-white transition">🎮 게임</a>
+          <a href="/yasun.html" class="px-2.5 py-1.5 rounded-lg bg-amber-600/20 text-amber-400 border border-amber-500/30 hover:bg-amber-600 hover:text-white transition">🌙 야간선물</a>
         </nav>
       </div>
     </header>
@@ -182,6 +186,36 @@ html_template = """<!DOCTYPE html>
 
     {news_content}
 
+    <!-- MODU.TODAY 인기 서비스 -->
+    <section class="space-y-3">
+      <div class="flex items-end justify-between gap-3 border-b border-gray-800 pb-2">
+        <div>
+          <h2 class="text-base font-black text-white">MODU.TODAY 인기 서비스</h2>
+          <p class="text-[11px] text-gray-500 mt-1">뉴스를 확인한 뒤 계산기·YouTube 순위·게임도 이용해 보세요.</p>
+        </div>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
+        <a href="/calculator/average-price.html" class="bg-[#141A28] border border-gray-800 rounded-xl p-4 hover:border-blue-400 hover:bg-[#1C2538] transition">
+          <div class="text-xl mb-2">📊</div><div class="text-sm font-bold text-white">주식 평단가 계산기</div><div class="text-[11px] text-gray-500 mt-1">추가매수 후 평단가 계산</div>
+        </a>
+        <a href="/calculator/stock-return.html" class="bg-[#141A28] border border-gray-800 rounded-xl p-4 hover:border-emerald-400 hover:bg-[#1C2538] transition">
+          <div class="text-xl mb-2">📈</div><div class="text-sm font-bold text-white">주식 수익률 계산기</div><div class="text-[11px] text-gray-500 mt-1">매수가·매도가 기준 수익 계산</div>
+        </a>
+        <a href="/calculator/" class="bg-[#141A28] border border-gray-800 rounded-xl p-4 hover:border-cyan-400 hover:bg-[#1C2538] transition">
+          <div class="text-xl mb-2">🧮</div><div class="text-sm font-bold text-white">모든 계산기</div><div class="text-[11px] text-gray-500 mt-1">급여·대출·세금·생활 계산기</div>
+        </a>
+        <a href="/youtube/" class="bg-[#141A28] border border-gray-800 rounded-xl p-4 hover:border-red-400 hover:bg-[#1C2538] transition">
+          <div class="text-xl mb-2">📺</div><div class="text-sm font-bold text-white">YouTube 조회수 순위</div><div class="text-[11px] text-gray-500 mt-1">일간·주간·월간 조회수 증가량</div>
+        </a>
+        <a href="/games/block-game/" class="bg-[#141A28] border border-gray-800 rounded-xl p-4 hover:border-violet-400 hover:bg-[#1C2538] transition">
+          <div class="text-xl mb-2">🎮</div><div class="text-sm font-bold text-white">MODU BLOCKS</div><div class="text-[11px] text-gray-500 mt-1">설치 없이 즐기는 블록게임</div>
+        </a>
+        <a href="/games/minesweeper/" class="bg-[#141A28] border border-gray-800 rounded-xl p-4 hover:border-orange-400 hover:bg-[#1C2538] transition">
+          <div class="text-xl mb-2">💣</div><div class="text-sm font-bold text-white">지뢰찾기</div><div class="text-[11px] text-gray-500 mt-1">브라우저에서 바로 플레이</div>
+        </a>
+      </div>
+    </section>
+
     <article class="bg-[#141A28]/40 border border-gray-800/60 rounded-xl p-4 text-xs text-gray-500 leading-relaxed">
       ※ 본 페이지의 기사 링크 및 제목은 언론사 RSS를 통해 자동 수집된 정보이며, 기사 본문의 저작권은 각 언론사에 있습니다. 본 사이트는 투자 참고용 링크만을 제공하며 특정 종목에 대한 투자 권유를 하지 않습니다.
     </article>
@@ -191,6 +225,14 @@ html_template = """<!DOCTYPE html>
   <footer class="max-w-5xl mx-auto px-4 md:px-6 pb-8 text-center text-xs text-gray-500">
     © MODU.TODAY · Jae-Hyun Kim.
   </footer>
+
+  <!-- Vercel Web Analytics: update_news.py가 index.html을 다시 생성해도 유지 -->
+  <script>
+    window.va = window.va || function () {{
+      (window.vaq = window.vaq || []).push(arguments);
+    }};
+  </script>
+  <script defer src="/_vercel/insights/script.js"></script>
 
 </body>
 </html>
