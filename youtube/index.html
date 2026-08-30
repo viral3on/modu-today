@@ -52,4 +52,12 @@ function render(){
 document.querySelectorAll(".tab").forEach(b=>b.addEventListener("click",()=>{document.querySelectorAll(".tab").forEach(x=>x.classList.remove("on"));b.classList.add("on");period=b.dataset.period;render()}));
 fetch("./data/ranking.json",{cache:"no-store"}).then(r=>{if(!r.ok)throw Error();return r.json()}).then(d=>{DATA=d;document.getElementById("status").textContent=`추적 영상 ${fmt(d.trackedVideos)}개 · 대한민국 후보군`;document.getElementById("updated").textContent=`업데이트 ${d.updatedAtKST||""}`;render()}).catch(()=>{document.getElementById("status").textContent="첫 데이터 수집 전입니다.";document.getElementById("list").innerHTML='<div class="empty">GitHub Actions를 처음 실행하면 데이터가 생성됩니다.</div>'});
 </script>
+  <!-- Vercel Web Analytics -->
+  <script>
+    window.va = window.va || function () {
+      (window.vaq = window.vaq || []).push(arguments);
+    };
+  </script>
+  <script defer src="/_vercel/insights/script.js"></script>
+
 </body></html>
