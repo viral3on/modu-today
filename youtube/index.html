@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>유튜브 조회수 랭킹 | 일간·주간·월간 - MODU.TODAY</title>
+<meta name="description" content="대한민국 유튜브 영상의 조회수 증가량을 일간·주간·월간으로 비교하는 MODU.TODAY 유튜브 랭킹 대시보드입니다.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://modu.today/youtube/">
+<style>
+*{box-sizing:border-box}body{margin:0;background:#080b12;color:#f8fafc;font-family:Arial,"Noto Sans KR","Malgun Gothic",sans-serif}
+a{color:inherit;text-decoration:none}.wrap{max-width:1180px;margin:auto;padding:22px 16px 50px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:15px}.brand{font-weight:900;letter-spacing:2px}
+.home{padding:10px 14px;border:1px solid #293241;border-radius:12px;background:#111827}
+.hero{margin-top:24px;padding:28px;border:1px solid #222b3a;border-radius:26px;background:radial-gradient(circle at 90% 10%,#2a1016 0,transparent 30%),linear-gradient(145deg,#111827,#0b101a)}
+.hero h1{font-size:clamp(28px,5vw,48px);margin:4px 0}.hero p{color:#aab4c4;line-height:1.7;margin-bottom:0}.live{color:#fb7185;font-weight:800;font-size:12px}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:22px 0}.tab{border:1px solid #2b3545;background:#101621;color:#cbd5e1;padding:11px 17px;border-radius:999px;cursor:pointer;font-weight:800}
+.tab.on{background:#ef4444;color:#fff;border-color:#ef4444}.meta{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;color:#94a3b8;font-size:13px;margin-bottom:12px}
+.table{border:1px solid #222b3a;border-radius:20px;overflow:hidden;background:#0d131e}.row{display:grid;grid-template-columns:60px 120px minmax(0,1fr) 160px 150px;align-items:center;gap:14px;padding:14px;border-bottom:1px solid #1e2633}
+.row:last-child{border-bottom:0}.head{font-size:12px;color:#7f8a9c;background:#0a0f17}.rank{font-size:22px;font-weight:900;text-align:center}.thumb{width:120px;aspect-ratio:16/9;object-fit:cover;border-radius:10px;background:#1f2937}
+.title{font-weight:800;line-height:1.4}.channel,.published{font-size:12px;color:#8d99aa;margin-top:5px}.gain{text-align:right;font-size:19px;font-weight:900;color:#4ade80}.views{text-align:right;font-size:14px;color:#cbd5e1}
+.empty{padding:60px 20px;text-align:center;color:#94a3b8;line-height:1.8}.note{margin-top:18px;padding:16px 18px;border-radius:16px;background:#101621;border:1px solid #222b3a;color:#9ca9bb;font-size:13px;line-height:1.7}
+footer{text-align:center;color:#596579;font-size:12px;padding-top:35px}
+@media(max-width:760px){.row{grid-template-columns:42px 96px minmax(0,1fr);gap:10px}.thumb{width:96px}.gain,.views{grid-column:3;text-align:left}.head{display:none}.gain{font-size:17px}.hero{padding:22px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+ <div class="top"><a class="brand" href="/">MODU.TODAY</a><a class="home" href="/">홈</a></div>
+ <section class="hero"><div class="live">● DAILY DATA TRACKING</div><h1>YouTube 조회수 랭킹</h1><p>공개 영상의 누적 조회수를 매일 기록하여 실제 조회수 증가량 기준으로 일간·주간·월간 순위를 계산합니다.</p></section>
+ <div class="tabs"><button class="tab on" data-period="daily">🔥 일간</button><button class="tab" data-period="weekly">📅 주간</button><button class="tab" data-period="monthly">🗓️ 월간</button></div>
+ <div class="meta"><span id="status">데이터 불러오는 중…</span><span id="updated"></span></div>
+ <div class="table">
+  <div class="row head"><div>순위</div><div>영상</div><div>제목 / 채널</div><div style="text-align:right">조회수 증가</div><div style="text-align:right">누적 조회수</div></div>
+  <div id="list"></div>
+ </div>
+ <div class="note">※ 이 순위는 YouTube의 공식 전체 순위가 아니라 MODU.TODAY가 수집한 공개 후보 영상의 조회수 스냅샷을 비교한 자체 랭킹입니다. 일간은 이전 스냅샷, 주간·월간은 각각 약 7일·30일 전 저장 데이터와 비교합니다.</div>
+ <footer>© MODU.TODAY · Jae-Hyun Kim.</footer>
+</div>
+<script>
+let DATA=null, period="daily";
+const fmt=n=>Number(n||0).toLocaleString("ko-KR");
+const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c]));
+function render(){
+ const list=document.getElementById("list"), rows=(DATA?.rankings?.[period]||[]);
+ if(!rows.length){list.innerHTML='<div class="empty">아직 비교할 과거 데이터가 충분하지 않습니다.<br>자동 수집이 진행되면 순위가 표시됩니다.</div>';return}
+ list.innerHTML=rows.map((v,i)=>`<a class="row" href="https://www.youtube.com/watch?v=${encodeURIComponent(v.videoId)}" target="_blank" rel="noopener">
+ <div class="rank">${i+1}</div><img class="thumb" src="${esc(v.thumbnail)}" alt="" loading="lazy">
+ <div><div class="title">${esc(v.title)}</div><div class="channel">${esc(v.channelTitle)}</div><div class="published">${esc(v.publishedAtText||"")}</div></div>
+ <div class="gain">+${fmt(v.gain)}</div><div class="views">${fmt(v.viewCount)}회</div></a>`).join("");
+}
+document.querySelectorAll(".tab").forEach(b=>b.addEventListener("click",()=>{document.querySelectorAll(".tab").forEach(x=>x.classList.remove("on"));b.classList.add("on");period=b.dataset.period;render()}));
+fetch("./data/ranking.json",{cache:"no-store"}).then(r=>{if(!r.ok)throw Error();return r.json()}).then(d=>{DATA=d;document.getElementById("status").textContent=`추적 영상 ${fmt(d.trackedVideos)}개 · 대한민국 후보군`;document.getElementById("updated").textContent=`업데이트 ${d.updatedAtKST||""}`;render()}).catch(()=>{document.getElementById("status").textContent="첫 데이터 수집 전입니다.";document.getElementById("list").innerHTML='<div class="empty">GitHub Actions를 처음 실행하면 데이터가 생성됩니다.</div>'});
+</script>
+</body></html>
