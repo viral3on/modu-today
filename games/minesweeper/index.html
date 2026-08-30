@@ -60,5 +60,13 @@ function bestKey(mode){return`moduMinesweeperBest_${mode}`}function saveBest(){c
 newGameBtn.addEventListener("click",initBoard);difficultyEl.addEventListener("change",initBoard);flagModeBtn.addEventListener("click",()=>{flagMode=!flagMode;flagModeBtn.textContent=flagMode?"🚩 깃발 모드 ON":"🚩 깃발 모드 OFF"});soundBtn.addEventListener("click",()=>{soundEnabled=!soundEnabled;if(soundEnabled)ensureAudio();soundBtn.textContent=soundEnabled?"🔊 소리 ON":"🔇 소리 OFF"});renderBest();initBoard();
 })();
 </script>
+  <!-- Vercel Web Analytics -->
+  <script>
+    window.va = window.va || function () {
+      (window.vaq = window.vaq || []).push(arguments);
+    };
+  </script>
+  <script defer src="/_vercel/insights/script.js"></script>
+
 </body>
 </html>
