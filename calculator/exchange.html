@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>실시간 환율 및 환전 우대율 계산기 | USD·JPY·EUR·CNY</title>
+  <meta name="description" content="달러, 엔화, 유로 등 주요 통화의 원화 환전 금액과 은행 환율 우대율(쿠폰)에 따른 실수령액을 즉시 계산합니다.">
+  
+  <!-- 구글 애드센스 메타 태그 & 스크립트 -->
+  <meta name="google-adsense-account" content="ca-pub-6122968996738347">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6122968996738347" crossorigin="anonymous"></script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased py-10 px-4">
+
+  <div class="max-w-2xl mx-auto mb-3 flex justify-end">
+    <a href="/calculator/" class="inline-flex items-center px-3 py-2 rounded-lg bg-white border border-gray-200 text-xs md:text-sm font-bold text-gray-600 hover:text-blue-600 hover:border-blue-300 transition shadow-sm">
+      계산기 홈
+    </a>
+  </div>
+
+
+  <div class="max-w-2xl mx-auto bg-white rounded-2xl shadow-lg border border-gray-100 p-6 md:p-8">
+    
+    <!-- 상단 네비게이션 -->
+    <nav class="flex flex-wrap gap-2 justify-between items-center mb-6 border-b pb-3 text-xs md:text-sm">
+      <div class="flex gap-3">
+        <a href="/calculator/loan.html" class="text-gray-500 hover:text-blue-600">대출</a>
+        <a href="/calculator/deposit.html" class="text-gray-500 hover:text-blue-600">예적금</a>
+        <a href="/calculator/compound.html" class="text-gray-500 hover:text-blue-600">복리</a>
+        <a href="/vat.html" class="text-gray-500 hover:text-blue-600">부가세</a>
+      </div>
+      <span class="text-blue-600 font-bold">환율 계산기</span>
+    </nav>
+
+    <header class="text-center mb-6">
+      <h1 class="text-2xl md:text-3xl font-bold text-gray-900 mb-2">환율 및 환전 수수료 계산기</h1>
+      <p class="text-sm text-gray-500">통화별 환율과 은행 우대율을 적용한 환전 금액을 산출합니다.</p>
+    </header>
+
+    <div class="space-y-4">
+      
+      <!-- 통화 선택 -->
+      <div>
+        <label class="block text-sm font-semibold text-gray-700 mb-1">통화 선택</label>
+        <select id="currencyType" onchange="setDefaultRate()" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:outline-none text-base bg-white">
+          <option value="USD" data-rate="1350" data-spread="23.6">미국 달러 (USD)</option>
+          <option value="JPY" data-rate="900" data-spread="15.7">일본 엔 (JPY 100엔)</option>
+          <option value="EUR" data-rate="1470" data-spread="28.9">유럽 유로 (EUR)</option>
+          <option value="CNY" data-rate="185" data-spread="9.2">중국 위안 (CNY)</option>
+        </select>
+      </div>
+
+      <!-- 외화 금액 입력 -->
+      <div>
+        <label id="fxAmountLabel" class="block text-sm font-semibold text-gray-700 mb-1">환전할 외화 금액 ($)</label>
+        <input type="text" id="fxAmount" placeholder="1,000" oninput="formatCurrency(this)"
+               class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:outline-none text-base">
+      </div>
+
+      <!-- 매매기준율 및 우대율 -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+          <label class="block text-sm font-semibold text-gray-700 mb-1">매매 기준율 (원)</label>
+          <input type="number" step="0.1" id="baseRate" value="1350" 
+                 class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:outline-none text-base">
+        </div>
+        <div>
+          <label class="block text-sm font-semibold text-gray-700 mb-1">환율 우대율 (%)</label>
+          <select id="spreadDiscount" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:outline-none text-base bg-white">
+            <option value="0.9">90% 우대 (모바일 환전 기본)</option>
+            <option value="0.8">80% 우대</option>
+            <option value="0.5">50% 우대 (일반 은행 창구)</option>
+            <option value="0.0">0% 우대 (공항 환전소 등)</option>
+          </select>
+        </div>
+      </div>
+
+      <button onclick="calculateExchange()" 
+              class="w-full mt-2 bg-blue-600 hover:bg-blue-700 text-white font-bold py-3.5 rounded-lg transition duration-200 shadow-md">
+        환전 필요 원화 계산하기
+      </button>
+    </div>
+
+    <!-- 결과 영역 -->
+    <div id="resultBox" class="hidden mt-8 pt-6 border-t border-gray-200">
+      <h2 class="text-lg font-bold text-gray-900 mb-4">💵 예상 환전 결제액</h2>
+      
+      <div class="bg-blue-50 p-5 rounded-xl mb-6 text-center">
+        <span class="text-xs text-blue-600 font-semibold">최종 결제 원화 금액 (우대율 적용)</span>
+        <p id="totalKrw" class="text-2xl md:text-3xl font-black text-blue-900 mt-1">0원</p>
+      </div>
+
+      <div class="bg-gray-50 p-4 rounded-xl text-sm space-y-2.5 text-gray-600">
+        <div class="flex justify-between">
+          <span>적용 최종 환율:</span>
+          <span id="displayAppliedRate" class="font-semibold text-gray-800">0원</span>
+        </div>
+        <div class="flex justify-between text-blue-600">
+          <span>환율 우대로 아낀 금액:</span>
+          <span id="displaySavedFee" class="font-semibold">0원</span>
+        </div>
+        <div class="flex justify-between pt-2 border-t border-gray-200 font-medium">
+          <span>기준가 환산액 (수수료 제외):</span>
+          <span id="displayPureKrw" class="text-gray-900">0원</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- SEO 설명 콘텐츠 -->
+    <article class="mt-8 pt-6 border-t border-gray-100 text-sm text-gray-600 leading-relaxed space-y-3">
+      <h3 class="font-bold text-gray-900">환율 우대율(스프레드 할인)이란?</h3>
+      <p>
+        은행이 외화를 살 때/팔 때 붙이는 수수료(스프레드)를 깎아주는 비율입니다. 90% 우대란 은행 수수료 마진의 90%를 할인해 주어 매매기준율에 매우 근접한 가격으로 환전할 수 있음을 의미합니다.
+      </p>
+    </article>
+
+  </div>
+
+  <script>
+    function formatCurrency(target) {
+      let val = target.value.replace(/[^0-9]/g, '');
+      target.value = val ? Number(val).toLocaleString() : '';
+    }
+
+    function setDefaultRate() {
+      const select = document.getElementById('currencyType');
+      const option = select.options[select.selectedIndex];
+      document.getElementById('baseRate').value = option.getAttribute('data-rate');
+      
+      const curr = select.value;
+      const symbols = { 'USD': '($)', 'JPY': '(¥)', 'EUR': '(€)', 'CNY': '(元)' };
+      document.getElementById('fxAmountLabel').innerText = `환전할 외화 금액 ${symbols[curr] || ''}`;
+    }
+
+    function calculateExchange() {
+      const select = document.getElementById('currencyType');
+      const option = select.options[select.selectedIndex];
+      const curr = select.value;
+      
+      const rawAmt = document.getElementById('fxAmount').value.replace(/,/g, '');
+      const fxAmt = parseFloat(rawAmt);
+      const baseRate = parseFloat(document.getElementById('baseRate').value);
+      const discount = parseFloat(document.getElementById('spreadDiscount').value);
+
+      if (!fxAmt || !baseRate || fxAmt <= 0 || baseRate <= 0) {
+        alert('환전할 외화 금액과 기준 환율을 올바르게 입력해 주세요.');
+        return;
+      }
+
+      // 통상 스프레드(수수료): 기준가의 약 1.75%
+      const spread = baseRate * 0.0175;
+      const actualSpread = spread * (1 - discount);
+      const appliedRate = baseRate + actualSpread;
+
+      // JPY는 100엔 단위 계산
+      const unitMultiplier = (curr === 'JPY') ? (fxAmt / 100) : fxAmt;
+
+      const totalKrw = Math.round(unitMultiplier * appliedRate);
+      const pureKrw = Math.round(unitMultiplier * baseRate);
+      const normalKrw = Math.round(unitMultiplier * (baseRate + spread));
+      const savedFee = Math.max(0, normalKrw - totalKrw);
+
+      document.getElementById('totalKrw').innerText = totalKrw.toLocaleString() + ' 원';
+      document.getElementById('displayAppliedRate').innerText = appliedRate.toFixed(2) + ' 원';
+      document.getElementById('displaySavedFee').innerText = '+ ' + savedFee.toLocaleString() + ' 원 절약';
+      document.getElementById('displayPureKrw').innerText = pureKrw.toLocaleString() + ' 원';
+
+      document.getElementById('resultBox').classList.remove('hidden');
+    }
+  </script>
+
+  <!-- MODU.TODAY Copyright -->
+  <footer class="mt-8 pb-4 text-center text-xs text-gray-400">
+    © MODU.TODAY · Jae-Hyun Kim.
+  </footer>
+
+</body>
+</html>

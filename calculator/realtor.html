@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>부동산 중개보수 복비 계산기 | 주택 매매·전세·월세 상한요율</title>
+  <meta name="description" content="주택 매매, 전세, 월세 계약 시 발생하는 부동산 중개수수료(복비)와 부가세 포함 최대 상한액을 즉시 계산합니다.">
+  
+  <!-- 구글 애드센스 메타 태그 & 스크립트 -->
+  <meta name="google-adsense-account" content="ca-pub-6122968996738347">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6122968996738347" crossorigin="anonymous"></script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased py-10 px-4">
+
+  <div class="max-w-2xl mx-auto mb-3 flex justify-end">
+    <a href="/calculator/" class="inline-flex items-center px-3 py-2 rounded-lg bg-white border border-gray-200 text-xs md:text-sm font-bold text-gray-600 hover:text-blue-600 hover:border-blue-300 transition shadow-sm">
+      계산기 홈
+    </a>
+  </div>
+
+
+  <div class="max-w-2xl mx-auto bg-white rounded-2xl shadow-lg border border-gray-100 p-6 md:p-8">
+    
+    <!-- 상단 네비게이션 -->
+    <div class="flex flex-wrap gap-2 justify-between items-center mb-6 border-b pb-3 text-xs md:text-sm">
+      <div class="flex gap-3">
+        <a href="/calculator/loan.html" class="text-gray-500 hover:text-blue-600">대출 계산기</a>
+        <a href="/calculator/deposit.html" class="text-gray-500 hover:text-blue-600">예적금 계산기</a>
+        <a href="/calculator/salary.html" class="text-gray-500 hover:text-blue-600">연봉 계산기</a>
+      </div>
+      <span class="text-blue-600 font-bold">복비 계산기</span>
+    </div>
+
+    <header class="text-center mb-6">
+      <h1 class="text-2xl md:text-3xl font-bold text-gray-900 mb-2">부동산 중개보수 계산기</h1>
+      <p class="text-sm text-gray-500">주택 거래 유형에 따른 법정 중개수수료 상한액을 계산합니다.</p>
+    </header>
+
+    <div class="space-y-4">
+      
+      <!-- 거래 종류 -->
+      <div>
+        <label class="block text-sm font-semibold text-gray-700 mb-1">거래 구분</label>
+        <div class="grid grid-cols-3 gap-2">
+          <label class="cursor-pointer">
+            <input type="radio" name="tradeType" value="buy" class="peer sr-only" checked onchange="toggleRentInput()">
+            <div class="text-center py-2.5 px-3 text-sm font-medium border border-gray-300 rounded-lg peer-checked:bg-blue-600 peer-checked:text-white peer-checked:border-blue-600 transition">
+              매매 / 교환
+            </div>
+          </label>
+          <label class="cursor-pointer">
+            <input type="radio" name="tradeType" value="jeonse" class="peer sr-only" onchange="toggleRentInput()">
+            <div class="text-center py-2.5 px-3 text-sm font-medium border border-gray-300 rounded-lg peer-checked:bg-blue-600 peer-checked:text-white peer-checked:border-blue-600 transition">
+              전세
+            </div>
+          </label>
+          <label class="cursor-pointer">
+            <input type="radio" name="tradeType" value="monthly" class="peer sr-only" onchange="toggleRentInput()">
+            <div class="text-center py-2.5 px-3 text-sm font-medium border border-gray-300 rounded-lg peer-checked:bg-blue-600 peer-checked:text-white peer-checked:border-blue-600 transition">
+              월세
+            </div>
+          </label>
+        </div>
+      </div>
+
+      <!-- 보증금 / 매매가 -->
+      <div>
+        <label id="depositLabel" class="block text-sm font-semibold text-gray-700 mb-1">거래 금액 (원)</label>
+        <input type="text" id="tradeAmount" placeholder="300,000,000" oninput="formatCurrency(this)"
+               class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:outline-none text-base">
+      </div>
+
+      <!-- 월세 입력 (월세 선택 시에만 표시) -->
+      <div id="monthlyRentBox" class="hidden">
+        <label class="block text-sm font-semibold text-gray-700 mb-1">월 임대료 (원)</label>
+        <input type="text" id="monthlyRent" placeholder="500,000" oninput="formatCurrency(this)"
+               class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:outline-none text-base">
+      </div>
+
+      <!-- 부가세 여부 -->
+      <div>
+        <label class="block text-sm font-semibold text-gray-700 mb-1">부가세(VAT) 포함 여부</label>
+        <select id="vatType" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:outline-none text-base bg-white">
+          <option value="1.0">부가세 별도 (기본)</option>
+          <option value="1.1">일반과세자 부가세 포함 (+10%)</option>
+          <option value="1.04">간이과세자 부가세 포함 (+4%)</option>
+        </select>
+      </div>
+
+      <button onclick="calculateFee()" 
+              class="w-full mt-2 bg-blue-600 hover:bg-blue-700 text-white font-bold py-3.5 rounded-lg transition duration-200 shadow-md">
+        복비 계산하기
+      </button>
+    </div>
+
+    <!-- 결과 영역 -->
+    <div id="resultBox" class="hidden mt-8 pt-6 border-t border-gray-200">
+      <h2 class="text-lg font-bold text-gray-900 mb-4">🏠 중개보수 계산 결과</h2>
+      
+      <div class="bg-blue-50 p-5 rounded-xl mb-6 text-center">
+        <span class="text-xs text-blue-600 font-semibold">최대 중개보수 (상한액)</span>
+        <p id="totalFee" class="text-2xl md:text-3xl font-black text-blue-900 mt-1">0원</p>
+      </div>
+
+      <div class="bg-gray-50 p-4 rounded-xl text-sm space-y-2.5">
+        <div class="flex justify-between">
+          <span class="text-gray-600">환산 거래금액:</span>
+          <span id="displayCalculatedAmt" class="font-semibold text-gray-800">0원</span>
+        </div>
+        <div class="flex justify-between">
+          <span class="text-gray-600">적용 요율:</span>
+          <span id="displayRate" class="font-semibold text-blue-600">0%</span>
+        </div>
+        <div class="flex justify-between">
+          <span class="text-gray-600">한도액 적용 여부:</span>
+          <span id="displayLimit" class="font-semibold text-gray-800">해당 없음</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- SEO 설명 콘텐츠 -->
+    <article class="mt-8 pt-6 border-t border-gray-100 text-sm text-gray-600 leading-relaxed space-y-3">
+      <h3 class="font-bold text-gray-900">주택 중개보수 상한 요율 기준 (공인중개사법)</h3>
+      <ul class="list-disc pl-4 space-y-1">
+        <li><strong>매매:</strong> 5천만 미만(0.6%, 한도 25만), 2억 미만(0.5%, 한도 80만), 9억 미만(0.4%), 12억 미만(0.5%), 15억 미만(0.6%), 15억 이상(0.7%)</li>
+        <li><strong>임대차:</strong> 5천만 미만(0.5%, 한도 20만), 1억 미만(0.4%, 한도 30만), 9억 미만(0.3%), 12억 미만(0.4%), 15억 미만(0.5%), 15억 이상(0.6%)</li>
+        <li><strong>월세 환산 공식:</strong> 보증금 + (월세 × 100) ※ 단, 환산금액이 5천만 원 미만일 경우 월세 × 70 적용</li>
+      </ul>
+    </article>
+
+  </div>
+
+  <script>
+    function formatCurrency(target) {
+      let val = target.value.replace(/[^0-9]/g, '');
+      target.value = val ? Number(val).toLocaleString() : '';
+    }
+
+    function toggleRentInput() {
+      const type = document.querySelector('input[name="tradeType"]:checked').value;
+      const rentBox = document.getElementById('monthlyRentBox');
+      const depositLabel = document.getElementById('depositLabel');
+
+      if (type === 'monthly') {
+        rentBox.classList.remove('hidden');
+        depositLabel.innerText = '보증금 (원)';
+      } else {
+        rentBox.classList.add('hidden');
+        depositLabel.innerText = (type === 'buy') ? '매매가 (원)' : '전세보증금 (원)';
+      }
+    }
+
+    function calculateFee() {
+      const rawAmt = document.getElementById('tradeAmount').value.replace(/,/g, '');
+      const tradeAmt = parseFloat(rawAmt);
+      const type = document.querySelector('input[name="tradeType"]:checked').value;
+      const vat = parseFloat(document.getElementById('vatType').value);
+
+      if (!tradeAmt || tradeAmt <= 0) {
+        alert('거래 금액을 입력해 주세요.');
+        return;
+      }
+
+      let finalAmt = tradeAmt;
+
+      // 월세 환산 계산
+      if (type === 'monthly') {
+        const rawRent = document.getElementById('monthlyRent').value.replace(/,/g, '');
+        const rent = parseFloat(rawRent) || 0;
+        let tempAmt = tradeAmt + (rent * 100);
+        if (tempAmt < 50000000) {
+          tempAmt = tradeAmt + (rent * 70);
+        }
+        finalAmt = tempAmt;
+      }
+
+      let rate = 0;
+      let limit = 0;
+
+      if (type === 'buy') {
+        if (finalAmt < 50000000) { rate = 0.006; limit = 250000; }
+        else if (finalAmt < 200000000) { rate = 0.005; limit = 800000; }
+        else if (finalAmt < 900000000) { rate = 0.004; limit = 0; }
+        else if (finalAmt < 1200000000) { rate = 0.005; limit = 0; }
+        else if (finalAmt < 1500000000) { rate = 0.006; limit = 0; }
+        else { rate = 0.007; limit = 0; }
+      } else {
+        // 전세 및 월세
+        if (finalAmt < 50000000) { rate = 0.005; limit = 200000; }
+        else if (finalAmt < 100000000) { rate = 0.004; limit = 300000; }
+        else if (finalAmt < 900000000) { rate = 0.003; limit = 0; }
+        else if (finalAmt < 1200000000) { rate = 0.004; limit = 0; }
+        else if (finalAmt < 1500000000) { rate = 0.005; limit = 0; }
+        else { rate = 0.006; limit = 0; }
+      }
+
+      let fee = Math.floor(finalAmt * rate);
+      let limitApplied = false;
+
+      if (limit > 0 && fee > limit) {
+        fee = limit;
+        limitApplied = true;
+      }
+
+      const finalFeeWithVat = Math.floor(fee * vat);
+
+      document.getElementById('totalFee').innerText = finalFeeWithVat.toLocaleString() + ' 원';
+      document.getElementById('displayCalculatedAmt').innerText = Math.round(finalAmt).toLocaleString() + ' 원';
+      document.getElementById('displayRate').innerText = (rate * 100).toFixed(2) + ' %';
+      document.getElementById('displayLimit').innerText = limitApplied ? `한도액(${limit.toLocaleString()}원) 적용` : '해당 없음';
+
+      document.getElementById('resultBox').classList.remove('hidden');
+    }
+  </script>
+
+  <!-- MODU.TODAY Copyright -->
+  <footer class="mt-8 pb-4 text-center text-xs text-gray-400">
+    © MODU.TODAY · Jae-Hyun Kim.
+  </footer>
+
+</body>
+</html>
