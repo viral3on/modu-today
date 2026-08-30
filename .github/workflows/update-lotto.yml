@@ -28,13 +28,16 @@ jobs:
 
       - name: Commit lotto data
         run: |
-          if git diff --quiet -- lotto/data/results.json; then
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          # 먼저 add 해야 새로 생성된(untracked) results.json도 변경사항으로 감지됩니다.
+          git add lotto/data/results.json
+
+          if git diff --cached --quiet; then
             echo "No lotto data changes."
             exit 0
           fi
 
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add lotto/data/results.json
           git commit -m "Update lotto results"
           git push
