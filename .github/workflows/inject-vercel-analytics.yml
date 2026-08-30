@@ -1,0 +1,43 @@
+name: Inject Vercel Analytics
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "**/*.html"
+      - "inject_vercel_analytics.py"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  inject-analytics:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.x"
+
+      - name: Inject analytics
+        run: python inject_vercel_analytics.py
+
+      - name: Commit changed HTML files
+        run: |
+          if git diff --quiet -- '*.html'; then
+            echo "No HTML changes needed."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- '*.html'
+          git commit -m "Add Vercel Analytics to HTML pages"
+          git push
