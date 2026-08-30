@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>무료 웹게임 모음 - 블록게임·지뢰찾기 | MODU.TODAY</title>
-  <meta name="description" content="MODU.TODAY 무료 웹게임. 설치와 회원가입 없이 블록게임, 지뢰찾기 등 다양한 게임을 PC와 모바일에서 바로 즐겨보세요.">
+  <title>무료 웹게임 모음 - 블록게임·지뢰찾기·2048 | MODU.TODAY</title>
+  <meta name="description" content="MODU.TODAY 무료 웹게임. 설치와 회원가입 없이 블록게임, 지뢰찾기, 2048 등 다양한 게임을 PC와 모바일에서 바로 즐겨보세요.">
   <meta name="robots" content="index,follow">
   <link rel="canonical" href="https://modu.today/games/">
 
   <meta property="og:type" content="website">
   <meta property="og:title" content="무료 웹게임 모음 | MODU.TODAY GAMES">
-  <meta property="og:description" content="설치 없이 바로 즐기는 무료 웹게임 모음. 블록게임과 지뢰찾기를 플레이해보세요.">
+  <meta property="og:description" content="설치 없이 바로 즐기는 무료 웹게임 모음. 블록게임, 지뢰찾기와 2048을 플레이해보세요.">
   <meta property="og:url" content="https://modu.today/games/">
   <meta property="og:site_name" content="MODU.TODAY">
 
@@ -264,6 +264,43 @@
       box-shadow:inset 1px 1px #fff,inset -1px -1px rgba(100,116,139,.25);
     }
 
+    .thumb-2048{
+      background:linear-gradient(135deg,#0f1b2b,#17283f);
+    }
+
+    .game2048-art{
+      display:grid;
+      grid-template-columns:repeat(4,54px);
+      gap:6px;
+      padding:10px;
+      border-radius:14px;
+      background:#09131f;
+    }
+
+    .tile2048{
+      width:54px;
+      height:54px;
+      display:grid;
+      place-items:center;
+      border-radius:8px;
+      background:#142338;
+      color:#fff;
+      font-size:17px;
+      font-weight:900;
+    }
+
+    .t2{background:#e8e1d4;color:#25313c}
+    .t4{background:#e9d7ad;color:#25313c}
+    .t8{background:#f3a45f}
+    .t16{background:#f48655}
+    .t32{background:#f16759}
+    .t64{background:#e84c3d}
+    .t128{background:#edcc61;color:#25313c}
+    .t256{background:#e9c64d;color:#25313c}
+    .t512{background:#dfb832;color:#25313c}
+    .t1024{background:#d9aa21}
+    .t2048{background:#16d98d;color:#061019}
+
     .card-body{
       display:flex;
       flex-direction:column;
@@ -406,7 +443,7 @@
         <h2>전체 게임</h2>
         <p>원하는 게임을 선택하면 바로 플레이할 수 있습니다.</p>
       </div>
-      <span class="count">현재 2개 게임</span>
+      <span class="count">현재 3개 게임</span>
     </div>
 
     <section class="games-grid" aria-label="게임 목록">
@@ -481,6 +518,35 @@
         </div>
       </article>
 
+      <article class="game-card">
+        <div class="thumb thumb-2048" aria-hidden="true">
+          <div class="game2048-art">
+            <span class="tile2048 t2">2</span>
+            <span class="tile2048 t4">4</span>
+            <span class="tile2048 t8">8</span>
+            <span class="tile2048 t16">16</span>
+            <span class="tile2048 t32">32</span>
+            <span class="tile2048 t64">64</span>
+            <span class="tile2048 t128">128</span>
+            <span class="tile2048 t256">256</span>
+            <span class="tile2048"></span>
+            <span class="tile2048 t512">512</span>
+            <span class="tile2048 t1024">1024</span>
+            <span class="tile2048 t2048">2048</span>
+          </div>
+        </div>
+
+        <div class="card-body">
+          <span class="tag">NUMBER PUZZLE</span>
+          <h3>🔢 MODU 2048</h3>
+          <p>
+            같은 숫자 타일을 합쳐 2048을 만들어 보세요.
+            PC 방향키와 모바일 스와이프를 지원하며 최고점수를 브라우저에 저장합니다.
+          </p>
+          <a class="play" href="/games/2048/">게임 시작</a>
+        </div>
+      </article>
+
     </section>
 
     <section class="about">
@@ -491,7 +557,7 @@
         간편하게 플레이할 수 있습니다.
       </p>
       <p>
-        현재 블록 퍼즐 게임과 지뢰찾기를 제공하고 있으며,
+        현재 블록 퍼즐 게임과 지뢰찾기, 2048을 제공하고 있으며,
         앞으로 퍼즐·두뇌·아케이드 등 다양한 종류의 게임을 계속 추가할 예정입니다.
       </p>
     </section>
