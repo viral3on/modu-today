@@ -152,28 +152,6 @@ html_template = """<!DOCTYPE html>
         </div>
         
         <nav class="flex flex-wrap gap-1 text-[11px] font-medium">
-          <a href="lotto.html" class="px-2 py-1 rounded bg-blue-600/20 text-blue-400 border border-blue-500/30 hover:bg-blue-600 hover:text-white transition">🍀로또</a>
-          <a href="loan.html" class="px-2 py-1 rounded bg-[#141A28] border border-gray-700 text-gray-300 hover:text-white transition">대출</a>
-          <a href="deposit.html" class="px-2 py-1 rounded bg-[#141A28] border border-gray-700 text-gray-300 hover:text-white transition">예적금</a>
-          <a href="salary.html" class="px-2 py-1 rounded bg-[#141A28] border border-gray-700 text-gray-300 hover:text-white transition">연봉</a>
-          <a href="realtor.html" class="px-2 py-1 rounded bg-[#141A28] border border-gray-700 text-gray-300 hover:text-white transition">복비</a>
-          <a href="parttime.html" class="px-2 py-1 rounded bg-[#141A28] border border-gray-700 text-gray-300 hover:text-white transition">주휴수당</a>
-          <a href="severance.html" class="px-2 py-1 rounded bg-[#141A28] border border-gray-700 text-gray-300 hover:text-white transition">퇴직금</a>
-          <a href="counter.html" class="px-2 py-1 rounded bg-[#141A28] border border-gray-700 text-gray-300 hover:text-white transition">카운터</a>
-          <a href="compound.html" class="px-2 py-1 rounded bg-[#141A28] border border-gray-700 text-gray-300 hover:text-white transition">복리</a>
-          <a href="annual-leave.html" class="px-2 py-1 rounded bg-[#141A28] border border-gray-700 text-gray-300 hover:text-white transition">연차</a>
-          <a href="unemployment.html" class="px-2 py-1 rounded bg-[#141A28] border border-gray-700 text-gray-300 hover:text-white transition">실업급여</a>
-          <a href="average-price.html" class="px-2 py-1 rounded bg-[#141A28] border border-gray-700 text-gray-300 hover:text-white transition">평단가</a>
-          <a href="rent-tax.html" class="px-2 py-1 rounded bg-[#141A28] border border-gray-700 text-gray-300 hover:text-white transition">임대세</a>
-          <a href="dday.html" class="px-2 py-1 rounded bg-[#141A28] border border-gray-700 text-gray-300 hover:text-white transition">D-day</a>
-          <a href="exchange.html" class="px-2 py-1 rounded bg-[#141A28] border border-gray-700 text-gray-300 hover:text-white transition">환율</a>
-          <a href="car-tax.html" class="px-2 py-1 rounded bg-[#141A28] border border-gray-700 text-gray-300 hover:text-white transition">자동차세</a>
-          <a href="bmi.html" class="px-2 py-1 rounded bg-[#141A28] border border-gray-700 text-gray-300 hover:text-white transition">BMI</a>
-          <a href="electricity.html" class="px-2 py-1 rounded bg-[#141A28] border border-gray-700 text-gray-300 hover:text-white transition">전기요금</a>
-          <a href="area.html" class="px-2 py-1 rounded bg-[#141A28] border border-gray-700 text-gray-300 hover:text-white transition">평형</a>
-          <a href="dividend.html" class="px-2 py-1 rounded bg-[#141A28] border border-gray-700 text-gray-300 hover:text-white transition">배당금</a>
-          <a href="customs.html" class="px-2 py-1 rounded bg-[#141A28] border border-gray-700 text-gray-300 hover:text-white transition">관세</a>
-          <a href="registration-tax.html" class="px-2 py-1 rounded bg-[#141A28] border border-gray-700 text-gray-300 hover:text-white transition">취득세</a>
           <a href="yasun.html" class="px-2 py-1 rounded bg-amber-600/20 text-amber-400 border border-amber-500/30 hover:bg-amber-600 hover:text-white transition">🌙야간선물</a>
         </nav>
       </div>
@@ -209,6 +187,10 @@ html_template = """<!DOCTYPE html>
     </article>
 
   </main>
+
+  <footer class="max-w-5xl mx-auto px-4 md:px-6 pb-8 text-center text-xs text-gray-500">
+    © MODU.TODAY · Jae-Hyun Kim.
+  </footer>
 
 </body>
 </html>
