@@ -16,3 +16,4 @@ Disallow: /
 User-agent: *
 Disallow: /api/
 Allow: /
+Sitemap: https://modu.today/sitemap.xml
