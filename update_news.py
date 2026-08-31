@@ -101,149 +101,388 @@ for it in ticker_items[:25]:
     </a>
     """
 
-html_template = """<!DOCTYPE html>
+
+html_template = """<!doctype html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MODU.TODAY | 실시간 금융 및 정책 정보 대시보드</title>
-  <meta name="description" content="코스피, 환율, 원자재, 공모주, 정부 지원금 등 매일 실시간 자동 브리핑합니다.">
-  <meta name="robots" content="index, follow, noarchive">
-  
-  <meta name="google-adsense-account" content="ca-pub-6122968996738347">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6122968996738347" crossorigin="anonymous"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MODU.TODAY</title>
+<meta name="description" content="뉴스, YouTube 순위, 계산기, 게임, 로또, 아파트 실거래가를 한곳에서 확인하세요.">
+<style>
+:root{{
+  --bg:#f6f8fc;
+  --card:#ffffff;
+  --text:#101828;
+  --muted:#667085;
+  --line:#e8edf5;
+  --brand1:#6d5dfc;
+  --brand2:#8b5cf6;
+  --brand3:#5b8def;
+  --shadow:0 18px 45px rgba(35,45,80,.10);
+}}
+*{{box-sizing:border-box}}
+html{{scroll-behavior:smooth}}
+body{{
+  margin:0;
+  font-family:Pretendard,"Noto Sans KR","Apple SD Gothic Neo",Arial,sans-serif;
+  color:var(--text);
+  background:
+    radial-gradient(circle at 12% 0%, rgba(113,97,255,.08), transparent 28rem),
+    linear-gradient(180deg,#fbfcff 0,#f6f8fc 430px);
+}}
+a{{color:inherit;text-decoration:none}}
+button{{font:inherit}}
+.wrap{{width:min(1180px,calc(100% - 36px));margin:auto}}
 
-  <script src="https://cdn.tailwindcss.com"></script>
+/* top */
+.topbar{{
+  position:sticky;top:0;z-index:30;
+  background:rgba(255,255,255,.82);
+  backdrop-filter:blur(18px);
+  border-bottom:1px solid rgba(229,233,242,.9);
+}}
+.nav{{height:68px;display:flex;align-items:center;gap:24px}}
+.logo{{
+  font-size:20px;font-weight:900;letter-spacing:-.8px;
+  display:flex;align-items:center;gap:9px;white-space:nowrap
+}}
+.logo-mark{{
+  width:30px;height:30px;border-radius:10px;
+  background:linear-gradient(145deg,var(--brand1),var(--brand3));
+  box-shadow:0 8px 20px rgba(100,92,246,.28);
+}}
+.menu{{display:flex;align-items:center;gap:5px;margin-left:auto}}
+.menu a{{
+  padding:10px 12px;border-radius:11px;color:#475467;
+  font-size:14px;font-weight:700;transition:.18s ease
+}}
+.menu a:hover{{background:#f2f4f8;color:#111827}}
 
-  <style>
-    body {{
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
-      user-select: none;
-    }}
-    @keyframes marquee {{
-      0% {{ transform: translateX(0%); }}
-      100% {{ transform: translateX(-50%); }}
-    }}
-    .animate-marquee {{
-      display: flex;
-      width: max-content;
-      animation: marquee 120s linear infinite;
-    }}
-    .animate-marquee:hover {{
-      animation-play-state: paused;
-    }}
-  </style>
+/* hero */
+.hero{{padding:34px 0 24px}}
+.hero-box{{
+  overflow:hidden;position:relative;
+  min-height:385px;border-radius:32px;
+  padding:54px 58px;
+  color:white;
+  background:
+    radial-gradient(circle at 82% 14%,rgba(255,255,255,.24),transparent 15rem),
+    radial-gradient(circle at 66% 95%,rgba(255,255,255,.13),transparent 17rem),
+    linear-gradient(125deg,#5547e9 0%,#7758f8 45%,#4f86ef 100%);
+  box-shadow:0 24px 65px rgba(79,70,229,.24);
+}}
+.hero-box:before,.hero-box:after{{
+  content:"";position:absolute;border-radius:50%;border:1px solid rgba(255,255,255,.18)
+}}
+.hero-box:before{{width:280px;height:280px;right:-70px;top:-95px}}
+.hero-box:after{{width:185px;height:185px;right:115px;bottom:-118px}}
+.eyebrow{{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:8px 12px;border-radius:999px;
+  background:rgba(255,255,255,.14);
+  border:1px solid rgba(255,255,255,.18);
+  font-size:13px;font-weight:800
+}}
+.hero h1{{
+  max-width:710px;margin:22px 0 13px;
+  font-size:clamp(34px,5vw,60px);line-height:1.06;
+  letter-spacing:-2.8px
+}}
+.hero p{{
+  margin:0;color:rgba(255,255,255,.86);
+  font-size:17px;line-height:1.7
+}}
+.quick{{
+  position:relative;z-index:2;
+  display:grid;grid-template-columns:repeat(6,1fr);
+  gap:10px;margin-top:35px
+}}
+.quick a{{
+  min-height:112px;padding:14px 10px;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;
+  text-align:center;
+  background:rgba(255,255,255,.13);
+  border:1px solid rgba(255,255,255,.18);
+  border-radius:18px;font-weight:800;font-size:13px;
+  backdrop-filter:blur(8px);transition:.18s ease
+}}
+.quick strong{{font-size:13px;line-height:1.25}}
+.quick small{{font-size:10.5px;line-height:1.35;color:rgba(255,255,255,.72);font-weight:600}}
+.quick a:hover{{transform:translateY(-3px);background:rgba(255,255,255,.22)}}
+.quick .ico{{font-size:24px}}
+
+/* sections */
+.section{{padding:24px 0}}
+.section-head{{
+  display:flex;justify-content:space-between;align-items:end;gap:20px;
+  margin-bottom:16px
+}}
+.section-head h2{{margin:0;font-size:24px;letter-spacing:-.7px}}
+.section-head p{{margin:5px 0 0;color:var(--muted);font-size:14px}}
+.more{{font-size:13px;font-weight:800;color:#6b63e8}}
+.grid-3{{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}}
+.grid-2{{display:grid;grid-template-columns:1.15fr .85fr;gap:16px}}
+.card{{
+  background:var(--card);border:1px solid var(--line);
+  border-radius:22px;box-shadow:0 6px 20px rgba(31,41,55,.035)
+}}
+.news-card{{padding:22px;min-height:204px}}
+.tag{{
+  display:inline-flex;padding:6px 9px;border-radius:999px;
+  background:#f0efff;color:#6757e8;font-size:11px;font-weight:900
+}}
+.news-card h3{{
+  margin:14px 0 8px;font-size:20px;line-height:1.42;letter-spacing:-.5px
+}}
+.news-card p{{margin:0;color:var(--muted);font-size:14px;line-height:1.6}}
+.news-meta{{margin-top:18px;color:#98a2b3;font-size:12px}}
+
+.rank-card{{padding:22px}}
+.rank-item{{
+  display:grid;grid-template-columns:36px 1fr auto;
+  gap:12px;align-items:center;padding:13px 0;border-bottom:1px solid #eef1f6
+}}
+.rank-item:last-child{{border-bottom:0}}
+.rank-num{{
+  width:32px;height:32px;border-radius:10px;background:#f4f3ff;
+  color:#6c5ce7;display:grid;place-items:center;font-weight:900
+}}
+.rank-title{{font-size:14px;font-weight:800}}
+.rank-sub{{font-size:12px;color:var(--muted);margin-top:4px}}
+.up{{font-size:12px;font-weight:900;color:#e5484d}}
+
+.lotto{{
+  padding:24px;
+  background:linear-gradient(145deg,#151925,#242a3b);
+  color:#fff;border:0
+}}
+.lotto-top{{display:flex;justify-content:space-between;align-items:center;gap:14px}}
+.lotto h3{{margin:0;font-size:22px}}
+.lotto small{{color:#aeb6c7}}
+.balls{{display:flex;gap:9px;flex-wrap:wrap;margin:24px 0 18px}}
+.ball{{
+  width:46px;height:46px;border-radius:50%;
+  display:grid;place-items:center;font-size:15px;font-weight:900;
+  background:#fff;color:#111827;box-shadow:inset 0 -4px 9px rgba(0,0,0,.12)
+}}
+.ball.bonus{{background:#9ca3af;color:#fff}}
+.lotto-bottom{{display:flex;justify-content:space-between;gap:12px;color:#d7dceb;font-size:13px}}
+
+.toolbox{{padding:22px}}
+.tools{{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:13px}}
+.tool{{
+  border:1px solid #edf0f5;border-radius:16px;padding:15px;
+  transition:.18s ease
+}}
+.tool:hover{{border-color:#cfcafc;transform:translateY(-2px)}}
+.tool strong{{font-size:14px}}
+.tool div{{margin-top:5px;color:var(--muted);font-size:12px}}
+
+.bottom-grid{{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}}
+.service-card{{padding:23px;min-height:165px;position:relative;overflow:hidden}}
+.service-icon{{
+  width:46px;height:46px;border-radius:14px;
+  display:grid;place-items:center;background:#f4f3ff;font-size:23px
+}}
+.service-card h3{{margin:18px 0 6px;font-size:18px}}
+.service-card p{{margin:0;color:var(--muted);font-size:13px;line-height:1.55}}
+
+footer{{padding:34px 0 48px;color:#98a2b3;font-size:12px}}
+.footer-box{{
+  border-top:1px solid var(--line);padding-top:25px;
+  display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap
+}}
+
+@media(max-width:900px){{
+  .menu{{display:none}}
+  .hero-box{{padding:40px 28px;min-height:auto}}
+  .quick{{grid-template-columns:repeat(3,1fr)}}
+  .grid-3,.bottom-grid{{grid-template-columns:1fr}}
+  .grid-2{{grid-template-columns:1fr}}
+}}
+@media(max-width:520px){{
+  .wrap{{width:min(100% - 24px,1180px)}}
+  .nav{{height:60px}}
+  .hero{{padding-top:16px}}
+  .hero-box{{border-radius:24px;padding:32px 20px}}
+  .hero h1{{font-size:36px;letter-spacing:-1.8px}}
+  .hero p{{font-size:14px}}
+  .quick{{grid-template-columns:repeat(2,1fr);margin-top:26px}}
+  .quick a{{min-height:76px}}
+  .section{{padding:18px 0}}
+}}
+
+.news-live{{display:grid;gap:12px}}
+.news-live a{{display:block}}
+.news-live article,.news-live>div{{
+  background:#fff;border:1px solid #e8edf5;border-radius:18px;
+  padding:18px 20px;box-shadow:0 5px 18px rgba(31,41,55,.035)
+}}
+.news-live h2,.news-live h3,.news-live h4{{margin:0 0 8px;line-height:1.45}}
+.news-live p{{margin:0;color:#667085;line-height:1.6}}
+
+</style>
 </head>
-<body class="bg-[#0B0E14] text-gray-100 font-sans antialiased pb-20" oncontextmenu="return false;">
+<body>
 
-  <!-- 상단 고정 영역 래퍼 -->
-  <div class="sticky top-0 z-50 shadow-2xl">
-    <!-- 상단 네비게이션 헤더 -->
-    <header class="border-b border-gray-800 bg-[#111622] px-4 py-2.5">
-      <div class="max-w-6xl mx-auto flex flex-wrap items-center justify-between gap-3">
-        <div class="flex items-center gap-2.5">
-          <span class="flex h-2.5 w-2.5 relative">
-            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-            <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
-          </span>
-          <a href="/" class="text-base font-black tracking-tight text-white">MODU.TODAY</a>
-        </div>
-        
-        <nav class="flex flex-wrap gap-1.5 text-[11px] font-bold">
-          <a href="/" class="px-2.5 py-1.5 rounded-lg bg-yellow-400 text-gray-950 hover:bg-yellow-300 transition">📰 뉴스</a>
-          <a href="/youtube/" class="px-2.5 py-1.5 rounded-lg bg-gray-800 text-gray-200 border border-gray-700 hover:border-red-400 hover:text-white transition">📺 YouTube 순위</a>
-          <a href="/calculator/" class="px-2.5 py-1.5 rounded-lg bg-gray-800 text-gray-200 border border-gray-700 hover:border-blue-400 hover:text-white transition">🧮 계산기</a>
-          <a href="/games/" class="px-2.5 py-1.5 rounded-lg bg-gray-800 text-gray-200 border border-gray-700 hover:border-violet-400 hover:text-white transition">🎮 게임</a>
-          <a href="/lotto/" class="px-2.5 py-1.5 rounded-lg bg-gray-800 text-gray-200 border border-gray-700 hover:border-emerald-400 hover:text-white transition">🍀 로또</a>
-          <a href="/yasun.html" class="px-2.5 py-1.5 rounded-lg bg-amber-600/20 text-amber-400 border border-amber-500/30 hover:bg-amber-600 hover:text-white transition">🌙 야간선물</a>
-        </nav>
-      </div>
-    </header>
-
-    <!-- 형광 노랑 네온 전광판 띠 -->
-    <div class="bg-[#042014] border-y-2 border-yellow-400 py-2.5 overflow-hidden whitespace-nowrap shadow-[0_0_20px_rgba(250,204,21,0.4)]">
-      <div class="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-[#042014] to-transparent z-10 pointer-events-none"></div>
-      <div class="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-[#042014] to-transparent z-10 pointer-events-none"></div>
-      <div class="animate-marquee">
-        {ticker_html}
-        {ticker_html}
-      </div>
-    </div>
+<header class="topbar">
+  <div class="wrap nav">
+    <a href="/" class="logo"><span class="logo-mark"></span>MODU.TODAY</a>
+    <nav class="menu">
+      <a href="/">뉴스</a>
+      <a href="/youtube/">YouTube 순위</a>
+      <a href="/calculator/">계산기</a>
+      <a href="/games/">게임</a>
+      <a href="/lotto/">로또</a>
+      <a href="/apt/">아파트 실거래가</a>
+    </nav>
   </div>
+</header>
 
-  <main class="max-w-5xl mx-auto p-4 md:p-6 space-y-8 mt-6">
-    
-    <div class="bg-[#141A28] border border-gray-800 rounded-2xl p-5 md:p-6 shadow-xl flex flex-wrap justify-between items-center gap-4">
-      <div>
-        <h1 class="text-xl md:text-2xl font-black text-white tracking-tight">오늘의 금융, 원자재 및 정책 핵심 브리핑</h1>
-        <p class="text-xs text-gray-400 mt-1">증시, 환율/원자재, 공모주 일정 및 정부 지원금 소식을 매일 실시간으로 자동 수집합니다.</p>
-      </div>
-      <div class="px-3 py-2 rounded-lg bg-gray-800/80 text-xs font-mono text-gray-300 border border-gray-700 text-right leading-relaxed">
-        <div>업데이트: {today_str}</div>
-        <div class="text-[10px] text-gray-400 mt-1">자동 업데이트: 매일 06:00 · 09:00 · 12:00 · 15:00 · 18:00 · 21:00 (KST)</div>
-      </div>
-    </div>
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-box">
+        <span class="eyebrow">● 오늘 필요한 정보를 한곳에</span>
+        <h1>오늘 뭐 볼까?<br>MODU.TODAY에서 한 번에.</h1>
+        <p>하루 6번 갱신되는 증시·정책 뉴스부터 YouTube 순위, 생활 계산기, 무료 게임,<br>
+        로또 당첨정보와 전국 아파트 실거래가까지 자주 찾는 정보를 한곳에 모았습니다.</p>
 
-    {news_content}
-
-    <!-- MODU.TODAY 인기 서비스 -->
-    <section class="space-y-3">
-      <div class="flex items-end justify-between gap-3 border-b border-gray-800 pb-2">
-        <div>
-          <h2 class="text-base font-black text-white">MODU.TODAY 인기 서비스</h2>
-          <p class="text-[11px] text-gray-500 mt-1">뉴스를 확인한 뒤 계산기·YouTube 순위·로또·게임도 이용해 보세요.</p>
+        <div class="quick">
+          <a href="/"><span class="ico">📰</span><strong>증시·정책 뉴스</strong><small>하루 6번 실시간 업데이트</small></a>
+          <a href="/youtube/"><span class="ico">📺</span><strong>YouTube 순위</strong><small>일·주·월 조회수 상승 추적</small></a>
+          <a href="/calculator/"><span class="ico">🧮</span><strong>생활 계산기</strong><small>복잡한 계산을 쉽고 빠르게</small></a>
+          <a href="/games/"><span class="ico">🎮</span><strong>무료 웹게임</strong><small>설치 없이 바로 플레이</small></a>
+          <a href="/lotto/"><span class="ico">🍀</span><strong>로또 당첨정보</strong><small>당첨번호 · 당첨자수 · 당첨지역 · 행운 로또 번호 무료 생성</small></a>
+          <a href="/apt/"><span class="ico">🏠</span><strong>아파트 실거래가</strong><small>전국 실제 거래가격 검색</small></a>
         </div>
       </div>
-      <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
-        <a href="/calculator/average-price.html" class="bg-[#141A28] border border-gray-800 rounded-xl p-4 hover:border-blue-400 hover:bg-[#1C2538] transition">
-          <div class="text-xl mb-2">📊</div><div class="text-sm font-bold text-white">주식 평단가 계산기</div><div class="text-[11px] text-gray-500 mt-1">추가매수 후 평단가 계산</div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <h2>실시간 증시·정책 뉴스 정보 대시보드</h2>
+          <p>하루 6번 업데이트 · 국내 증시와 주요 경제·정책 이슈를 한 화면에서 빠르게 확인하세요.</p>
+        </div>
+        <a class="more" href="/">실시간 뉴스 대시보드 →</a>
+      </div>
+
+      <div class="news-live">
+{news_content}
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap grid-2">
+      <div>
+        <div class="section-head">
+          <div>
+            <h2>YouTube 인기 순위</h2>
+            <p>매일 누적한 조회수 변화를 기준으로 일간·주간·월간 상승 흐름을 확인하세요.</p>
+          </div>
+          <a class="more" href="/youtube/">순위 보기 →</a>
+        </div>
+
+        <div class="card rank-card">
+          <div class="rank-item">
+            <div class="rank-num">1</div>
+            <div><div class="rank-title">오늘의 YouTube 급상승 콘텐츠</div><div class="rank-sub">채널명 · 조회수 변화량 표시</div></div>
+            <div class="up">▲ 1</div>
+          </div>
+          <div class="rank-item">
+            <div class="rank-num">2</div>
+            <div><div class="rank-title">두 번째 인기 영상 타이틀</div><div class="rank-sub">실제 수집 데이터 연동 영역</div></div>
+            <div class="up">▲ 3</div>
+          </div>
+          <div class="rank-item">
+            <div class="rank-num">3</div>
+            <div><div class="rank-title">세 번째 인기 영상 타이틀</div><div class="rank-sub">일간 · 주간 · 월간 순위 제공</div></div>
+            <div class="up">NEW</div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="section-head">
+          <div>
+            <h2>로또 당첨정보</h2>
+            <p>최신 당첨번호부터 등수별 당첨자수, 당첨금, 1등 당첨지역·판매점, 자동·수동 여부와 행운 로또 번호 무료 생성까지 한 번에 확인하세요.</p>
+          </div>
+          <a class="more" href="/lotto/">상세보기 →</a>
+        </div>
+
+        <div class="card lotto">
+          <div class="lotto-top">
+            <div><h3>1239회 당첨번호</h3><small>2026.08.29 추첨</small></div>
+            <strong>1등 13명</strong>
+          </div>
+          <div class="balls">
+            <span class="ball">11</span><span class="ball">13</span><span class="ball">22</span>
+            <span class="ball">32</span><span class="ball">33</span><span class="ball">36</span>
+            <span class="ball bonus">8</span>
+          </div>
+          <div class="lotto-bottom"><span>1등 당첨금</span><strong>약 22.1억원</strong></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <h2>생활에 바로 쓰는 계산기</h2>
+          <p>연봉·대출·주식·세금·퍼센트 등 자주 필요한 계산을 회원가입 없이 즉시 이용하세요.</p>
+        </div>
+        <a class="more" href="/calculator/">계산기 전체보기 →</a>
+      </div>
+
+      <div class="bottom-grid">
+        <div class="card toolbox">
+          <div class="service-icon">🧮</div>
+          <h3>인기 계산기</h3>
+          <div class="tools">
+            <a class="tool" href="/calculator/salary/"><strong>연봉 계산기</strong><div>실수령액 확인</div></a>
+            <a class="tool" href="/calculator/stock-return/"><strong>주식 수익률</strong><div>평단·수익 계산</div></a>
+            <a class="tool" href="/calculator/loan/"><strong>대출 계산기</strong><div>원리금 계산</div></a>
+            <a class="tool" href="/calculator/percent/"><strong>퍼센트 계산기</strong><div>증감률 계산</div></a>
+          </div>
+        </div>
+
+        <a class="card service-card" href="/apt/">
+          <div class="service-icon">🏠</div>
+          <h3>아파트 실거래가</h3>
+          <p>국토교통부 공개 데이터를 바탕으로 전국 아파트의 최근 실제 거래가격과 거래내역을 지역·아파트별로 빠르게 검색하세요.</p>
         </a>
-        <a href="/calculator/stock-return.html" class="bg-[#141A28] border border-gray-800 rounded-xl p-4 hover:border-emerald-400 hover:bg-[#1C2538] transition">
-          <div class="text-xl mb-2">📈</div><div class="text-sm font-bold text-white">주식 수익률 계산기</div><div class="text-[11px] text-gray-500 mt-1">매수가·매도가 기준 수익 계산</div>
-        </a>
-        <a href="/calculator/" class="bg-[#141A28] border border-gray-800 rounded-xl p-4 hover:border-cyan-400 hover:bg-[#1C2538] transition">
-          <div class="text-xl mb-2">🧮</div><div class="text-sm font-bold text-white">모든 계산기</div><div class="text-[11px] text-gray-500 mt-1">급여·대출·세금·생활 계산기</div>
-        </a>
-        <a href="/youtube/" class="bg-[#141A28] border border-gray-800 rounded-xl p-4 hover:border-red-400 hover:bg-[#1C2538] transition">
-          <div class="text-xl mb-2">📺</div><div class="text-sm font-bold text-white">YouTube 조회수 순위</div><div class="text-[11px] text-gray-500 mt-1">일간·주간·월간 조회수 증가량</div>
-        </a>
-        <a href="/lotto/" class="bg-[#141A28] border border-gray-800 rounded-xl p-4 hover:border-emerald-400 hover:bg-[#1C2538] transition">
-          <div class="text-xl mb-2">🍀</div><div class="text-sm font-bold text-white">로또 번호 생성기</div><div class="text-[11px] text-gray-500 mt-1">자동 번호 생성·최신 당첨번호·최근 통계</div>
-        </a>
-        <a href="/games/block-game/" class="bg-[#141A28] border border-gray-800 rounded-xl p-4 hover:border-violet-400 hover:bg-[#1C2538] transition">
-          <div class="text-xl mb-2">🎮</div><div class="text-sm font-bold text-white">MODU BLOCKS</div><div class="text-[11px] text-gray-500 mt-1">설치 없이 즐기는 블록게임</div>
-        </a>
-        <a href="/games/minesweeper/" class="bg-[#141A28] border border-gray-800 rounded-xl p-4 hover:border-orange-400 hover:bg-[#1C2538] transition">
-          <div class="text-xl mb-2">💣</div><div class="text-sm font-bold text-white">지뢰찾기</div><div class="text-[11px] text-gray-500 mt-1">브라우저에서 바로 플레이</div>
+
+        <a class="card service-card" href="/games/">
+          <div class="service-icon">🎮</div>
+          <h3>무료 웹게임</h3>
+          <p>2048·지뢰찾기·블록게임 등 가볍게 즐길 수 있는 게임을 설치와 회원가입 없이 바로 플레이하세요.</p>
         </a>
       </div>
-    </section>
+    </div>
+  </section>
+</main>
 
-    <article class="bg-[#141A28]/40 border border-gray-800/60 rounded-xl p-4 text-xs text-gray-500 leading-relaxed">
-      ※ 본 페이지의 기사 링크 및 제목은 언론사 RSS를 통해 자동 수집된 정보이며, 기사 본문의 저작권은 각 언론사에 있습니다. 본 사이트는 투자 참고용 링크만을 제공하며 특정 종목에 대한 투자 권유를 하지 않습니다.
-    </article>
-
-  </main>
-
-  <footer class="max-w-5xl mx-auto px-4 md:px-6 pb-8 text-center text-xs text-gray-500">
-    © MODU.TODAY · Jae-Hyun Kim.
-  </footer>
-
-  <!-- Vercel Web Analytics: update_news.py가 index.html을 다시 생성해도 유지 -->
-  <script>
-    window.va = window.va || function () {{
-      (window.vaq = window.vaq || []).push(arguments);
-    }};
-  </script>
-  <script defer src="/_vercel/insights/script.js"></script>
+<footer>
+  <div class="wrap footer-box">
+    <span>© MODU.TODAY · Jae-Hyun Kim.</span>
+    <span>뉴스 · YouTube · 계산기 · 게임 · 로또 · 실거래가</span>
+  </div>
+</footer>
 
 </body>
 </html>
-""".format(today_str=today_str, news_content=news_content, ticker_html=ticker_html)
+""".format(news_content=news_content)
 
 with open("index.html", "w", encoding="utf-8") as f:
     f.write(html_template)
 
-print(f"Successfully generated index.html with thick borders and fixed queries at {today_str}")
+print("Successfully generated MODU.TODAY gradient homepage")
