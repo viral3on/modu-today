@@ -20,7 +20,6 @@ jobs:
       - name: Update nationwide apartment trades
         env:
           MOLIT_API_KEY: ${{ secrets.MOLIT_API_KEY }}
-          MOLIT_APT_ENDPOINT: ${{ secrets.MOLIT_APT_ENDPOINT }}
         run: python apt/update_apt.py
       - name: Commit data
         run: |
