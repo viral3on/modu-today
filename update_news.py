@@ -253,7 +253,7 @@ button{{font:inherit}}
 .up{{font-size:12px;font-weight:900;color:#e5484d}}
 
 .lotto{{
-  padding:24px;
+  padding:28px;
   background:linear-gradient(145deg,#151925,#242a3b);
   color:#fff;border:0
 }}
@@ -267,7 +267,7 @@ button{{font:inherit}}
   background:#fff;color:#111827;box-shadow:inset 0 -4px 9px rgba(0,0,0,.12)
 }}
 .ball.bonus{{background:#9ca3af;color:#fff}}
-.lotto-bottom{{display:flex;justify-content:space-between;gap:12px;color:#d7dceb;font-size:13px}}
+.lotto-bottom{{display:flex;justify-content:space-between;gap:12px;color:#d7dceb;font-size:13px;align-items:center}}
 
 .toolbox{{padding:22px}}
 .tools{{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:13px}}
@@ -339,7 +339,7 @@ footer{{padding:34px 0 48px;color:#98a2b3;font-size:12px}}
 .fixed-ticker .track{{overflow:hidden;white-space:nowrap;flex:1}}
 .fixed-ticker .marquee{{
   display:inline-block;padding-left:100%;
-  animation:moduTicker 140s linear infinite;
+  animation:moduTicker 180s linear infinite;
   font-size:12px;font-weight:700
 }}
 .fixed-ticker .marquee:hover{{animation-play-state:paused}}
@@ -351,16 +351,15 @@ body{{padding-bottom:34px}}
 
 
 .yt-home-card{{padding:18px}}
-.yt-home-grid{{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}}
+.yt-home-grid{{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}}
 .yt-loading{{grid-column:1/-1;padding:40px 10px;text-align:center;color:#98a2b3;font-size:13px}}
 .yt-mini{{display:block;min-width:0}}
 .yt-thumb{{position:relative;aspect-ratio:16/9;border-radius:14px;overflow:hidden;background:#eef1f6;margin-bottom:10px}}
 .yt-thumb img{{width:100%;height:100%;object-fit:cover;display:block}}
 .yt-badge{{position:absolute;left:8px;top:8px;width:30px;height:30px;border-radius:10px;background:rgba(17,24,39,.88);color:#fff;display:grid;place-items:center;font-weight:900;font-size:13px}}
-.yt-mini strong{{display:block;font-size:13px;line-height:1.42;letter-spacing:-.25px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}}
-.yt-mini span{{display:block;margin-top:5px;font-size:11px;color:#667085;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}}
+.yt-mini strong{{display:block;font-size:15px;line-height:1.42;letter-spacing:-.25px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}}
+.yt-mini span{{display:block;margin-top:6px;font-size:12px;color:#667085;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}}
 .yt-all{{display:block;text-align:right;margin-top:14px;font-size:12px;font-weight:800;color:#6b63e8}}
-#ytRankBridge{{position:fixed;width:1px;height:1px;left:-9999px;top:-9999px;opacity:0;pointer-events:none;border:0}}
 
 .calc-thumb-grid{{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}}
 .calc-thumb{{overflow:hidden;transition:.18s ease}}
@@ -462,46 +461,44 @@ body{{padding-bottom:34px}}
   </section>
 
   <section class="section">
-    <div class="wrap grid-2">
-      <div>
-        <div class="section-head">
-          <div>
-            <h2>YouTube 인기 순위</h2>
-            <p>매일 누적한 조회수 변화를 기준으로 일간·주간·월간 상승 흐름을 확인하세요.</p>
-          </div>
-          <a class="more" href="/youtube/">순위 보기 →</a>
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <h2>YouTube 인기 순위</h2>
+          <p>매일 누적한 조회수 변화를 기준으로 일간·주간·월간 상승 흐름을 확인하세요.</p>
         </div>
-
-        <div class="card yt-home-card">
-          <div id="ytHomeRank" class="yt-home-grid">
-            <div class="yt-loading">YouTube 최신 순위를 불러오는 중...</div>
-          </div>
-          <a href="/youtube/" class="yt-all">일간 · 주간 · 월간 전체 순위 보기 →</a>
-        </div>
-        <iframe id="ytRankBridge" src="/youtube/" title="YouTube 순위 데이터" tabindex="-1" aria-hidden="true"></iframe>
+        <a class="more" href="/youtube/">전체 순위 보기 →</a>
       </div>
 
-      <div>
-        <div class="section-head">
-          <div>
-            <h2>로또 당첨정보</h2>
-            <p>최신 당첨번호부터 등수별 당첨자수, 당첨금, 1등 당첨지역·판매점, 자동·수동 여부와 행운 로또 번호 무료 생성까지 한 번에 확인하세요.</p>
-          </div>
-          <a class="more" href="/lotto/">상세보기 →</a>
+      <div class="card yt-home-card">
+        <div id="ytHomeRank" class="yt-home-grid">
+          <div class="yt-loading">YouTube 최신 순위를 불러오는 중...</div>
         </div>
+      </div>
+    </div>
+  </section>
 
-        <div class="card lotto">
-          <div class="lotto-top">
-            <div><h3>1239회 당첨번호</h3><small>2026.08.29 추첨</small></div>
-            <strong>1등 13명</strong>
-          </div>
-          <div class="balls">
-            <span class="ball">11</span><span class="ball">13</span><span class="ball">22</span>
-            <span class="ball">32</span><span class="ball">33</span><span class="ball">36</span>
-            <span class="ball bonus">8</span>
-          </div>
-          <div class="lotto-bottom"><span>1등 당첨금</span><strong>약 22.1억원</strong></div>
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <h2>로또 당첨정보</h2>
+          <p>최신 당첨번호부터 등수별 당첨자수, 당첨금, 1등 당첨지역·판매점, 자동·수동 여부와 행운 로또 번호 무료 생성까지 한 번에 확인하세요.</p>
         </div>
+        <a class="more" href="/lotto/">상세보기 →</a>
+      </div>
+
+      <div class="card lotto">
+        <div class="lotto-top">
+          <div><h3>1239회 당첨번호</h3><small>2026.08.29 추첨</small></div>
+          <strong>1등 13명</strong>
+        </div>
+        <div class="balls">
+          <span class="ball">11</span><span class="ball">13</span><span class="ball">22</span>
+          <span class="ball">32</span><span class="ball">33</span><span class="ball">36</span>
+          <span class="ball bonus">8</span>
+        </div>
+        <div class="lotto-bottom"><span>1등 당첨금</span><strong>약 22.1억원</strong></div>
       </div>
     </div>
   </section>
@@ -590,6 +587,58 @@ body{{padding-bottom:34px}}
   <div class="track"><div class="marquee">{ticker_html}</div></div>
 </div>
 
+
+
+<script>
+(function(){{
+  const target=document.getElementById("ytHomeRank");
+  if(!target) return;
+
+  const nf=new Intl.NumberFormat("ko-KR");
+  const esc=(v)=>String(v??"")
+    .replaceAll("&","&amp;")
+    .replaceAll("<","&lt;")
+    .replaceAll(">","&gt;")
+    .replaceAll('"',"&quot;")
+    .replaceAll("'","&#039;");
+
+  async function loadYoutubeHome(){{
+    try{{
+      const res=await fetch("/youtube/data/ranking.json?v="+Date.now(),{{cache:"no-store"}});
+      if(!res.ok) throw new Error("HTTP "+res.status);
+      const data=await res.json();
+
+      let rows=(data.rankings&&data.rankings.daily)||[];
+      let period="일간";
+      if(!rows.length){{
+        rows=(data.rankings&&data.rankings.weekly)||[];
+        period="주간";
+      }}
+      if(!rows.length){{
+        rows=(data.rankings&&data.rankings.monthly)||[];
+        period="월간";
+      }}
+      rows=rows.slice(0,3);
+      if(!rows.length) throw new Error("ranking empty");
+
+      target.innerHTML=rows.map((v,i)=>`
+        <a class="yt-mini" href="https://www.youtube.com/watch?v=${{encodeURIComponent(v.videoId||"")}}" target="_blank" rel="noopener">
+          <div class="yt-thumb">
+            <img src="${{esc(v.thumbnail||("https://i.ytimg.com/vi/"+(v.videoId||"")+"/hqdefault.jpg"))}}" alt="${{esc(v.title||"YouTube 영상")}}" loading="lazy">
+            <span class="yt-badge">${{i+1}}</span>
+          </div>
+          <strong>${{esc(v.title||"제목 없음")}}</strong>
+          <span>${{esc(v.channelTitle||"")}} · ${{period}} +${{nf.format(Number(v.gain||0))}}회</span>
+        </a>`).join("");
+    }}catch(e){{
+      console.error("YouTube home ranking:",e);
+      target.innerHTML='<div class="yt-loading">YouTube 순위 데이터를 불러오지 못했습니다. <a href="/youtube/" style="color:#6b63e8;font-weight:800">전체 순위 보기 →</a></div>';
+    }}
+  }}
+
+  loadYoutubeHome();
+}})();
+</script>
 
 </body>
 </html>
