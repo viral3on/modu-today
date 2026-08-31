@@ -1,6 +1,7 @@
 from pathlib import Path
 from datetime import datetime, timezone, timedelta
 from urllib.request import Request, urlopen
+from urllib.parse import urlencode
 import json
 from collections import Counter
 
@@ -92,27 +93,39 @@ STORE_API = "https://www.dhlottery.co.kr/wnprchsplcsrch/selectLtWnShp.do"
 def fetch_winning_stores(draw, rank=1):
     """동행복권 회차별 당첨 판매점 조회. 실패해도 본 당첨결과 갱신은 계속 진행."""
     try:
-        params = {"srchWnShpRnk": str(rank), "srchLtEpsd": str(draw)}
+        query = urlencode({
+            "srchWnShpRnk": str(rank),
+            "srchLtEpsd": str(draw),
+        })
+        url = f"{STORE_API}?{query}"
         headers = {
-            "User-Agent": "Mozilla/5.0",
-            "Accept": "application/json, text/plain, */*",
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/120 Safari/537.36",
+            "Accept": "application/json, text/javascript, */*; q=0.01",
             "X-Requested-With": "XMLHttpRequest",
             "Referer": "https://www.dhlottery.co.kr/wnprchsplcsrch/home",
         }
-        resp = requests.get(STORE_API, params=params, headers=headers, timeout=20)
-        resp.raise_for_status()
-        payload = resp.json()
-        rows = ((payload.get("data") or {}).get("list") or [])
-        return [{
-            "name": str(x.get("shpNm") or "").strip(),
-            "region": str(x.get("region") or x.get("tm1ShpLctnAddr") or "").strip(),
-            "address": str(x.get("shpAddr") or "").strip(),
-            "type": str(x.get("atmtPsvYnTxt") or "").strip(),
-        } for x in rows]
-    except Exception as e:
-        print(f"[WARN] winning stores fetch failed: draw={draw}, rank={rank}, error={e}")
-        return []
 
+        req = Request(url, headers=headers)
+        with urlopen(req, timeout=20) as resp:
+            raw = resp.read().decode("utf-8")
+        payload = json.loads(raw)
+
+        rows = ((payload.get("data") or {}).get("list") or [])
+        stores = []
+        for x in rows:
+            stores.append({
+                "name": str(x.get("shpNm") or "").strip(),
+                "region": str(x.get("region") or x.get("tm1ShpLctnAddr") or "").strip(),
+                "address": str(x.get("shpAddr") or "").strip(),
+                "type": str(x.get("atmtPsvYnTxt") or "").strip(),
+            })
+
+        print(f"Winning stores: draw={draw}, rank={rank}, rows={len(stores)}")
+        return stores
+
+    except Exception as e:
+        print(f"[WARN] winning stores fetch failed: draw={draw}, rank={rank}, error={type(e).__name__}: {e}")
+        return []
 
 def store_region_summary(stores):
     c = Counter(s["region"] for s in stores if s.get("region"))
