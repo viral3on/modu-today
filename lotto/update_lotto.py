@@ -4,6 +4,7 @@ from urllib.request import Request, urlopen
 from urllib.parse import urlencode
 import json
 from collections import Counter
+from concurrent.futures import ThreadPoolExecutor, as_completed
 
 ROOT = Path(__file__).resolve().parent
 OUT = ROOT / "data" / "results.json"
@@ -106,7 +107,7 @@ def fetch_winning_stores(draw, rank=1):
         }
 
         req = Request(url, headers=headers)
-        with urlopen(req, timeout=20) as resp:
+        with urlopen(req, timeout=6) as resp:
             raw = resp.read().decode("utf-8")
         payload = json.loads(raw)
 
@@ -410,32 +411,73 @@ window.va = window.va || function () {{
 
 
 # 최근 100회 회차별 페이지 자동 생성 + 1등 당첨 판매점 데이터
-# 기존 저장 데이터가 있으면 재사용하여 매 실행마다 100회 API를 다시 호출하지 않음.
+# 안전 구조:
+# 1) 최신 회차 1건을 먼저 조회한다.
+# 2) 최신 회차 조회가 성공한 경우에만 미수집 과거 회차를 병렬 조회한다.
+# 3) 최신 회차 조회가 실패하면 판매점 수집을 즉시 건너뛰고 기존 로또 페이지 생성은 계속한다.
+# 4) 이미 stores.json에 저장된 회차는 다시 조회하지 않는다.
+
 store_cache_path = ROOT / "data" / "stores.json"
 try:
     store_cache = json.loads(store_cache_path.read_text(encoding="utf-8")) if store_cache_path.exists() else {}
 except Exception:
     store_cache = {}
 
+target_rows = normalized[:100]
+latest_key = str(target_rows[0]["draw"])
+probe_ok = False
+
+if isinstance(store_cache.get(latest_key), list) and store_cache.get(latest_key):
+    probe_ok = True
+    print(f"Winning-store probe: latest draw {latest_key} already cached")
+else:
+    print(f"Winning-store probe: testing latest draw {latest_key} first...")
+    probe = fetch_winning_stores(target_rows[0]["draw"], 1)
+    if probe:
+        store_cache[latest_key] = probe
+        probe_ok = True
+        print(f"Winning-store probe OK: draw={latest_key}, rows={len(probe)}")
+    else:
+        print("Winning-store probe FAILED: skipping remaining store requests so lotto update can finish quickly.")
+
+if probe_ok:
+    missing = [
+        r for r in target_rows
+        if not (isinstance(store_cache.get(str(r["draw"])), list) and store_cache.get(str(r["draw"])))
+    ]
+
+    if missing:
+        print(f"Fetching winning stores in parallel: missing={len(missing)}, workers=8")
+        with ThreadPoolExecutor(max_workers=8) as executor:
+            future_map = {
+                executor.submit(fetch_winning_stores, r["draw"], 1): r["draw"]
+                for r in missing
+            }
+            for future in as_completed(future_map):
+                draw = future_map[future]
+                try:
+                    stores = future.result()
+                except Exception as e:
+                    print(f"[WARN] parallel store fetch failed: draw={draw}, error={type(e).__name__}: {e}")
+                    stores = []
+                if stores:
+                    store_cache[str(draw)] = stores
+
+store_cache_path.write_text(
+    json.dumps(store_cache, ensure_ascii=False, indent=2),
+    encoding="utf-8",
+)
+
 generated = 0
-for r in normalized[:100]:
+for r in target_rows:
     key = str(r["draw"])
-    cached = store_cache.get(key)
-    if not isinstance(cached, list) or not cached:
-        cached = fetch_winning_stores(r["draw"], 1)
-        if cached:
-            store_cache[key] = cached
-    r["first_stores"] = cached or []
+    r["first_stores"] = store_cache.get(key) or []
 
     draw_dir = ROOT / key
     draw_dir.mkdir(parents=True, exist_ok=True)
     (draw_dir / "index.html").write_text(make_draw_page(r), encoding="utf-8")
     generated += 1
 
-store_cache_path.write_text(
-    json.dumps(store_cache, ensure_ascii=False, indent=2),
-    encoding="utf-8",
-)
 print(f"Generated draw pages: {generated}, store-cache draws={len(store_cache)}")
 
 # 최근 100회 전체보기 페이지 자동 생성
