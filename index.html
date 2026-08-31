@@ -218,6 +218,33 @@ footer{padding:34px 0 48px;color:#98a2b3;font-size:12px}
 .news-live h2,.news-live h3,.news-live h4{margin:0 0 8px;line-height:1.45}
 .news-live p{margin:0;color:#667085;line-height:1.6}
 
+
+.fixed-ticker{
+  position:fixed;left:0;right:0;bottom:0;z-index:80;
+  height:34px;background:#111827;color:#fff;
+  border-top:1px solid rgba(255,255,255,.08);
+  overflow:hidden;display:flex;align-items:center;
+  box-shadow:0 -4px 14px rgba(15,23,42,.10)
+}
+.fixed-ticker .label{
+  flex:0 0 auto;height:100%;display:flex;align-items:center;
+  padding:0 14px;font-size:11px;font-weight:900;
+  background:linear-gradient(135deg,#6d5dfc,#5b8def);
+  letter-spacing:-.2px
+}
+.fixed-ticker .track{overflow:hidden;white-space:nowrap;flex:1}
+.fixed-ticker .marquee{
+  display:inline-block;padding-left:100%;
+  animation:moduTicker 42s linear infinite;
+  font-size:12px;font-weight:700
+}
+.fixed-ticker .marquee:hover{animation-play-state:paused}
+@keyframes moduTicker{
+  from{transform:translateX(0)}
+  to{transform:translateX(-100%)}
+}
+body{padding-bottom:34px}
+
 </style>
 </head>
 <body>
@@ -264,7 +291,7 @@ footer{padding:34px 0 48px;color:#98a2b3;font-size:12px}
           <h2>실시간 증시·정책 뉴스 정보 대시보드</h2>
           <p>하루 6번 업데이트 · 국내 증시와 주요 경제·정책 이슈를 한 화면에서 빠르게 확인하세요.</p>
         </div>
-        <a class="more" href="/">실시간 뉴스 대시보드 →</a>
+        <span class="more">최종 갱신 2026년 08월 31일 22:19 KST</span>
       </div>
 
       <div class="news-live">
@@ -340,16 +367,16 @@ footer{padding:34px 0 48px;color:#98a2b3;font-size:12px}
               </div>
             </a>
             
-            <a href="https://news.google.com/rss/articles/CBMiaEFVX3lxTE5aaVphOVZZb2VLWHBWMFdlaXVXUm1GV01jdDNTSUZadlkzZlVTV3pNM1h1elQ5QjM3TWJGd0dTQURkTkYwOVdxT1dUTkt3UWdxX0RjaGhSVGh0QkNwNnF5Tk00RTdLWVot0gFsQVVfeXFMTzRtYmF0OU1UUWdyZ0pyeXBDNmxUdGcxQXB5YS1kVklocHRBQkdMZ1FCOXc2RHRlR1FWNnN5b1QxNVJxWUtlTUdKYlhDMlk4WjBaVkJ4Q2JHWFozVzIzcmhGSnc2ZWk4ZHlxTFRE?oc=5" target="_blank" rel="noopener noreferrer nofollow" 
+            <a href="https://news.google.com/rss/articles/CBMiYkFVX3lxTE5uWTVKWE1oTXRlbEhCVEI2cnhiQlFETXZpTHpKTmxqN0hqNWRwZ0ptdkt4SWNRMEpnNC1OcnlkWFFvUFpoS0RwNGJtTUdaZlN5RHRvQmUyc3JFc0xma2ZuVG1R?oc=5" target="_blank" rel="noopener noreferrer nofollow" 
                class="block p-4 rounded-xl bg-[#141A28] border-2 border-yellow-400 hover:bg-[#1C2538] transition duration-200 group shadow-md">
               <div class="flex justify-between items-start gap-2">
                 <span class="text-sm font-semibold text-gray-100 group-hover:text-yellow-300 leading-snug line-clamp-2">
-                  [마감 시황] 코스피, 상승 마감…대형주가 버텨준 증시
+                  코스피, 강보합 6800선 마감…코스닥은 약보합
                 </span>
                 <span class="text-[11px] font-mono text-yellow-400 flex-shrink-0">↗</span>
               </div>
               <div class="mt-2 text-[11px] font-medium text-gray-400">
-                필드뉴스 • <span class="text-yellow-400/90 font-bold">오늘의 브리핑</span>
+                아시아경제 • <span class="text-yellow-400/90 font-bold">오늘의 브리핑</span>
               </div>
             </a>
             
@@ -385,6 +412,19 @@ footer{padding:34px 0 48px;color:#98a2b3;font-size:12px}
               </div>
               <div class="mt-2 text-[11px] font-medium text-gray-400">
                 연합인포맥스 • <span class="text-yellow-400/90 font-bold">오늘의 브리핑</span>
+              </div>
+            </a>
+            
+            <a href="https://news.google.com/rss/articles/CBMiWkFVX3lxTE5Zd0RlbGVaNi14cHdKTGpxa2NYT3plVlh4M1N3V2NOb0IzQUtQZURJaktvbkdnLXhFZTZaX3FlNkR3VTI5Ml85SGtMN1JJXzh0T1doZ2NuX2xRZw?oc=5" target="_blank" rel="noopener noreferrer nofollow" 
+               class="block p-4 rounded-xl bg-[#141A28] border-2 border-yellow-400 hover:bg-[#1C2538] transition duration-200 group shadow-md">
+              <div class="flex justify-between items-start gap-2">
+                <span class="text-sm font-semibold text-gray-100 group-hover:text-yellow-300 leading-snug line-clamp-2">
+                  [속보] 원·달러 환율, 13개월 만에 장중 1360원대로 하락
+                </span>
+                <span class="text-[11px] font-mono text-yellow-400 flex-shrink-0">↗</span>
+              </div>
+              <div class="mt-2 text-[11px] font-medium text-gray-400">
+                한국경제 • <span class="text-yellow-400/90 font-bold">오늘의 브리핑</span>
               </div>
             </a>
             
@@ -424,19 +464,6 @@ footer{padding:34px 0 48px;color:#98a2b3;font-size:12px}
               </div>
               <div class="mt-2 text-[11px] font-medium text-gray-400">
                 KB Think • <span class="text-yellow-400/90 font-bold">오늘의 브리핑</span>
-              </div>
-            </a>
-            
-            <a href="https://news.google.com/rss/articles/CBMiWkFVX3lxTE5Zd0RlbGVaNi14cHdKTGpxa2NYT3plVlh4M1N3V2NOb0IzQUtQZURJaktvbkdnLXhFZTZaX3FlNkR3VTI5Ml85SGtMN1JJXzh0T1doZ2NuX2xRZw?oc=5" target="_blank" rel="noopener noreferrer nofollow" 
-               class="block p-4 rounded-xl bg-[#141A28] border-2 border-yellow-400 hover:bg-[#1C2538] transition duration-200 group shadow-md">
-              <div class="flex justify-between items-start gap-2">
-                <span class="text-sm font-semibold text-gray-100 group-hover:text-yellow-300 leading-snug line-clamp-2">
-                  [속보] 원·달러 환율, 13개월 만에 장중 1360원대로 하락
-                </span>
-                <span class="text-[11px] font-mono text-yellow-400 flex-shrink-0">↗</span>
-              </div>
-              <div class="mt-2 text-[11px] font-medium text-gray-400">
-                한국경제 • <span class="text-yellow-400/90 font-bold">오늘의 브리핑</span>
               </div>
             </a>
             
@@ -636,19 +663,6 @@ footer{padding:34px 0 48px;color:#98a2b3;font-size:12px}
               </div>
             </a>
             
-            <a href="https://news.google.com/rss/articles/CBMidkFVX3lxTE40QWVsdUFOQllGdVJDS0xKbGE4Rl9uSnEwVmlvZ25DRDJydUdJSTF3QWVoRFRtQWl1Q1NJM1o2ZnlLTFg0eXU4VVc0c2ltbGpOcFFrcVJEeEhIeDdDZm1vWFlNR0FEU3lOT3hlNDZqTzZiMVRxMmc?oc=5" target="_blank" rel="noopener noreferrer nofollow" 
-               class="block p-4 rounded-xl bg-[#141A28] border-2 border-yellow-400 hover:bg-[#1C2538] transition duration-200 group shadow-md">
-              <div class="flex justify-between items-start gap-2">
-                <span class="text-sm font-semibold text-gray-100 group-hover:text-yellow-300 leading-snug line-clamp-2">
-                  [뉴욕증시24일] 기술주 하락세에 나스닥·S&P500↓
-                </span>
-                <span class="text-[11px] font-mono text-yellow-400 flex-shrink-0">↗</span>
-              </div>
-              <div class="mt-2 text-[11px] font-medium text-gray-400">
-                미주조선일보 • <span class="text-yellow-400/90 font-bold">오늘의 브리핑</span>
-              </div>
-            </a>
-            
             <a href="https://news.google.com/rss/articles/CBMibEFVX3lxTE9Gc1lBaUdSMzZidmdfUzhOZ1FLV3YxZHFsNGswN25lR08wZmNaWlNIb29UM0hXaGlCLXlpbExUV2JZTTNtc3I4X0c0Q0hXYVVCNE40ZGRpUFFuTlZQeHdfaFJxeDZtT0dWdFhXdA?oc=5" target="_blank" rel="noopener noreferrer nofollow" 
                class="block p-4 rounded-xl bg-[#141A28] border-2 border-yellow-400 hover:bg-[#1C2538] transition duration-200 group shadow-md">
               <div class="flex justify-between items-start gap-2">
@@ -659,6 +673,19 @@ footer{padding:34px 0 48px;color:#98a2b3;font-size:12px}
               </div>
               <div class="mt-2 text-[11px] font-medium text-gray-400">
                 센머니 • <span class="text-yellow-400/90 font-bold">오늘의 브리핑</span>
+              </div>
+            </a>
+            
+            <a href="https://news.google.com/rss/articles/CBMidkFVX3lxTE40QWVsdUFOQllGdVJDS0xKbGE4Rl9uSnEwVmlvZ25DRDJydUdJSTF3QWVoRFRtQWl1Q1NJM1o2ZnlLTFg0eXU4VVc0c2ltbGpOcFFrcVJEeEhIeDdDZm1vWFlNR0FEU3lOT3hlNDZqTzZiMVRxMmc?oc=5" target="_blank" rel="noopener noreferrer nofollow" 
+               class="block p-4 rounded-xl bg-[#141A28] border-2 border-yellow-400 hover:bg-[#1C2538] transition duration-200 group shadow-md">
+              <div class="flex justify-between items-start gap-2">
+                <span class="text-sm font-semibold text-gray-100 group-hover:text-yellow-300 leading-snug line-clamp-2">
+                  [뉴욕증시24일] 기술주 하락세에 나스닥·S&P500↓
+                </span>
+                <span class="text-[11px] font-mono text-yellow-400 flex-shrink-0">↗</span>
+              </div>
+              <div class="mt-2 text-[11px] font-medium text-gray-400">
+                미주조선일보 • <span class="text-yellow-400/90 font-bold">오늘의 브리핑</span>
               </div>
             </a>
             
@@ -882,6 +909,112 @@ footer{padding:34px 0 48px;color:#98a2b3;font-size:12px}
     <span>뉴스 · YouTube · 계산기 · 게임 · 로또 · 실거래가</span>
   </div>
 </footer>
+
+<div class="fixed-ticker" aria-label="실시간 뉴스 속보">
+  <div class="label">실시간 뉴스</div>
+  <div class="track"><div class="marquee">
+    <a href="https://news.google.com/rss/articles/CBMiYEFVX3lxTFBZZDI3ZzQzb0JjNWVkbXJrUG9HOHhoVktPbVhwRmpPMURIT1BDTHFRNjJuSFRqeGU3RUZnSGhZQ2tPVHhjSnJlV05mU29FNWpEUmZfSEcyY1Q2SnNManRDdtIBYEFVX3lxTFBZZDI3ZzQzb0JjNWVkbXJrUG9HOHhoVktPbVhwRmpPMURIT1BDTHFRNjJuSFRqeGU3RUZnSGhZQ2tPVHhjSnJlV05mU29FNWpEUmZfSEcyY1Q2SnNManRDdg?oc=5" target="_blank" rel="noopener noreferrer nofollow" class="inline-flex items-center gap-2 mx-6 text-xs text-yellow-200 hover:text-white transition font-semibold">
+      <span class="text-yellow-400 font-extrabold animate-pulse">⚡ BREAKING</span> 코스피, 장중 1%대 하락해 6,600대…코스닥은 3% 급락 중 <span class="text-[10px] text-emerald-300 font-mono">(연합뉴스)</span>
+    </a>
+    
+    <a href="https://news.google.com/rss/articles/CBMiXkFVX3lxTFA1c1VIb3Nmdm9RbFlnUWlJRmRuUU9NQXBQYmhiaHNaMzgzajZZX0tzZ29SLTJhZmNmT1hPdkpObmttZm9Ockpmd2dPLUJZby1TeGNxYkktQjRrY1NhRnc?oc=5" target="_blank" rel="noopener noreferrer nofollow" class="inline-flex items-center gap-2 mx-6 text-xs text-yellow-200 hover:text-white transition font-semibold">
+      <span class="text-yellow-400 font-extrabold animate-pulse">⚡ BREAKING</span> 케빈 워시 '매파적 발언'에...코스피·코스닥 급락 <span class="text-[10px] text-emerald-300 font-mono">(YTN)</span>
+    </a>
+    
+    <a href="https://news.google.com/rss/articles/CBMiS0FVX3lxTE9OTlNlUVJ1N3Nvejl6cy1jenF5bW1SdDlYM0dOWXJGeklkVF9ZMmZacHVLN2JOWjk0aEdqR1pQdnlDSDl6U2o4Rk1aSQ?oc=5" target="_blank" rel="noopener noreferrer nofollow" class="inline-flex items-center gap-2 mx-6 text-xs text-yellow-200 hover:text-white transition font-semibold">
+      <span class="text-yellow-400 font-extrabold animate-pulse">⚡ BREAKING</span> [오늘의증시] 8월 31일 코스피 코스닥 <span class="text-[10px] text-emerald-300 font-mono">(뉴스1)</span>
+    </a>
+    
+    <a href="https://news.google.com/rss/articles/CBMic0FVX3lxTFA1TkRLa0JtQ0xnOVFfYmt6a3JJdjQ1b1lhcFB1S0ZMdy1xNmJ1MzRuS19qU3pkMmtVMnZVZm5vQVoxcGlRbHlOTzJzM2ZzSGw1NWkzN0phRmFFOXB5RTdLdGcwSmJCX2xDTVBXYWdxcWQ3b3fSAXdBVV95cUxOMy1qbnJiNmE2cHRXZktLOHNGSFhzZTg1S3I4Z1o2UkRDVGFrNmVxRWFHNExodVdwamhpRGY4RElreXlkcElveWNlU2hyTjFNWC1ZempDOXlCTUxJYUdDOU5rNkF6OFFJWnNUWXRLa0VFX3RNREpCNA?oc=5" target="_blank" rel="noopener noreferrer nofollow" class="inline-flex items-center gap-2 mx-6 text-xs text-yellow-200 hover:text-white transition font-semibold">
+      <span class="text-yellow-400 font-extrabold animate-pulse">⚡ BREAKING</span> 코스피, 장중 3.5% 급락 딛고 상승 전환…6820선 마감 <span class="text-[10px] text-emerald-300 font-mono">(스트레이트뉴스)</span>
+    </a>
+    
+    <a href="https://news.google.com/rss/articles/CBMiZEFVX3lxTE5VUDBzZ3ZaZTJTeFA4QzRrMExsbV9kOG9QT08xbWhqblF4TEtmV0NCT3JFQ3hQMGlPSldid3c5S1FuREdjR0xLMGlYSURVMWplNUpNUWZxc1UxaDFZc3UweUNIb1nSAWhBVV95cUxOdXZfNUJ5bHF3ajJZUWlzdnBwOVFPYzVYQUNieExvZzRTWG9KUmh4UjNEZldYRDJ1TGdoRC1qdUMyUy0ybE1KczF2ZEZBUzYybEVjVlBDZnVVUGpKZkRYT1BBLXBUX1Zpcg?oc=5" target="_blank" rel="noopener noreferrer nofollow" class="inline-flex items-center gap-2 mx-6 text-xs text-yellow-200 hover:text-white transition font-semibold">
+      <span class="text-yellow-400 font-extrabold animate-pulse">⚡ BREAKING</span> [오늘의증시] 코스피, 장중 악재뚫고 6820선 회복…반도체·2차전지 ‘구원투수’ <span class="text-[10px] text-emerald-300 font-mono">(경인방송 뉴스)</span>
+    </a>
+    
+    <a href="https://news.google.com/rss/articles/CBMiYkFVX3lxTE5uWTVKWE1oTXRlbEhCVEI2cnhiQlFETXZpTHpKTmxqN0hqNWRwZ0ptdkt4SWNRMEpnNC1OcnlkWFFvUFpoS0RwNGJtTUdaZlN5RHRvQmUyc3JFc0xma2ZuVG1R?oc=5" target="_blank" rel="noopener noreferrer nofollow" class="inline-flex items-center gap-2 mx-6 text-xs text-yellow-200 hover:text-white transition font-semibold">
+      <span class="text-yellow-400 font-extrabold animate-pulse">⚡ BREAKING</span> 코스피, 강보합 6800선 마감…코스닥은 약보합 <span class="text-[10px] text-emerald-300 font-mono">(아시아경제)</span>
+    </a>
+    
+    <a href="https://news.google.com/rss/articles/CBMiaEFVX3lxTE5aaVphOVZZb2VLWHBWMFdlaXVXUm1GV01jdDNTSUZadlkzZlVTV3pNM1h1elQ5QjM3TWJGd0dTQURkTkYwOVdxT1dUTkt3UWdxX0RjaGhSVGh0QkNwNnF5Tk00RTdLWVot0gFsQVVfeXFMTzRtYmF0OU1UUWdyZ0pyeXBDNmxUdGcxQXB5YS1kVklocHRBQkdMZ1FCOXc2RHRlR1FWNnN5b1QxNVJxWUtlTUdKYlhDMlk4WjBaVkJ4Q2JHWFozVzIzcmhGSnc2ZWk4ZHlxTFRE?oc=5" target="_blank" rel="noopener noreferrer nofollow" class="inline-flex items-center gap-2 mx-6 text-xs text-yellow-200 hover:text-white transition font-semibold">
+      <span class="text-yellow-400 font-extrabold animate-pulse">⚡ BREAKING</span> [마감 시황] 코스피, 상승 마감…대형주가 버텨준 증시 <span class="text-[10px] text-emerald-300 font-mono">(필드뉴스)</span>
+    </a>
+    
+    <a href="https://news.google.com/rss/articles/CBMickFVX3lxTFBMb3o3RllxVmhIY016UUdMRE1jUl9EZnY4dWdZQnhPMThhdS0zRzJZMWlxNk4telV6VFhJbFFoWWRDUzJRYm0xeUg0ZU1BU2Y3ZUo2bGV5LVc2TGxfY01sUFdOcEFRVVNWVWtLWElodjdyUdIBckFVX3lxTFBMb3o3RllxVmhIY016UUdMRE1jUl9EZnY4dWdZQnhPMThhdS0zRzJZMWlxNk4telV6VFhJbFFoWWRDUzJRYm0xeUg0ZU1BU2Y3ZUo2bGV5LVc2TGxfY01sUFdOcEFRVVNWVWtLWElodjdyUQ?oc=5" target="_blank" rel="noopener noreferrer nofollow" class="inline-flex items-center gap-2 mx-6 text-xs text-yellow-200 hover:text-white transition font-semibold">
+      <span class="text-yellow-400 font-extrabold animate-pulse">⚡ BREAKING</span> 9월 증시 ‘돈·규제·FOMC’ 몰려온다…코스피·코스닥 세 번의 시험대 <span class="text-[10px] text-emerald-300 font-mono">(메가경제)</span>
+    </a>
+    
+    <a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE9WSWpwUURyaGVyODBBaDZSci1FU051VmlTMW9OQ2NRT0htVUYybVJpdzZmcDhNS0lyVEphSGl0dWkzU2pfWGhUTHNGa0FjcVVnMmtKeFFoNnJUN3lNNmxuZ2ZHYWpiUlBuVTExQmNWTHLSAXRBVV95cUxQNm9sOUEyRnAwdnZyTmJBNUVpVnR1clJwRzE5V3hNOTRrRlBKeEtEcktLUEZRZTdxZTlBd1VabllRQnZKdlNfd2IzX1VGbnBjR2VpMHdBR2FpRk9ORlJGOWN0WWcwU2JOUmRId01raTdwb0VmVQ?oc=5" target="_blank" rel="noopener noreferrer nofollow" class="inline-flex items-center gap-2 mx-6 text-xs text-yellow-200 hover:text-white transition font-semibold">
+      <span class="text-yellow-400 font-extrabold animate-pulse">⚡ BREAKING</span> 외국인·기관 ‘팔자’에 코스피 1.9%↓…코스닥은 3%대 급락 <span class="text-[10px] text-emerald-300 font-mono">(산경투데이)</span>
+    </a>
+    
+    <a href="https://news.google.com/rss/articles/CBMiXkFVX3lxTE9ZTzFoeUFwdldkdUhnaVdQVUk1ckFZQWY3SWJvblhVWUJubDZObjR6Vy1nNm1LUk53bWg1Ukt4V2F5ME9rQWV0M0I4ZDZ0Y3FVY3VidlpQcVlDOE54U3c?oc=5" target="_blank" rel="noopener noreferrer nofollow" class="inline-flex items-center gap-2 mx-6 text-xs text-yellow-200 hover:text-white transition font-semibold">
+      <span class="text-yellow-400 font-extrabold animate-pulse">⚡ BREAKING</span> [증시 레이더] 코스피 3.55% 급락 딛고 반전⋯6,820선 회복 <span class="text-[10px] text-emerald-300 font-mono">(포커스온경제)</span>
+    </a>
+    
+    <a href="https://news.google.com/rss/articles/CBMiYEFVX3lxTE9veVl5Y0xBbXI5Rmg5ejMyQ0pjNmVOSlVTM2RGTmN5bzRsaHAtY19hNGtyeW5PZEs3dFMzSVhNOWFFS3JVUnFwY1RRdXhrUVZOb2FnVE05Uk83dEQ2cTFHQQ?oc=5" target="_blank" rel="noopener noreferrer nofollow" class="inline-flex items-center gap-2 mx-6 text-xs text-yellow-200 hover:text-white transition font-semibold">
+      <span class="text-yellow-400 font-extrabold animate-pulse">⚡ BREAKING</span> [환율 전망] 워시가 깔아준 저가 매수 명분 <span class="text-[10px] text-emerald-300 font-mono">(KB Think)</span>
+    </a>
+    
+    <a href="https://news.google.com/rss/articles/CBMidEFVX3lxTE1NaHdkNExYQVRCWG5lcm93SmdUajJYUEtvZTNzdV9PLTlTREllUXdlQVVkUWtWaFo3YU9DaU5tZWQxalZNMlcxMVVQZEVzNjdXNWRMVk53TS1PeDRZUkhwVzVQV1VUS0pEbURaR1RYVGQzVzRm?oc=5" target="_blank" rel="noopener noreferrer nofollow" class="inline-flex items-center gap-2 mx-6 text-xs text-yellow-200 hover:text-white transition font-semibold">
+      <span class="text-yellow-400 font-extrabold animate-pulse">⚡ BREAKING</span> [달러-원 POLL] 작년 저점 뚫나…9월 저점 1,351원·고점 1,409원 | <span class="text-[10px] text-emerald-300 font-mono">(연합인포맥스)</span>
+    </a>
+    
+    <a href="https://news.google.com/rss/articles/CBMiWkFVX3lxTE5Zd0RlbGVaNi14cHdKTGpxa2NYT3plVlh4M1N3V2NOb0IzQUtQZURJaktvbkdnLXhFZTZaX3FlNkR3VTI5Ml85SGtMN1JJXzh0T1doZ2NuX2xRZw?oc=5" target="_blank" rel="noopener noreferrer nofollow" class="inline-flex items-center gap-2 mx-6 text-xs text-yellow-200 hover:text-white transition font-semibold">
+      <span class="text-yellow-400 font-extrabold animate-pulse">⚡ BREAKING</span> [속보] 원·달러 환율, 13개월 만에 장중 1360원대로 하락 <span class="text-[10px] text-emerald-300 font-mono">(한국경제)</span>
+    </a>
+    
+    <a href="https://news.google.com/rss/articles/CBMiakFVX3lxTE1CTGFfbUcwSFEweE5oV3ZnLVU3UEFJQ0dBUmd0YTNoeWdLM25LWlM1UEl0NWdmb2VpMFAyU3VHNzgzMXUyMVdOWV95VmpDOEFEOVVyc2xOMGZjdVB4bDZQaThwTGtMRWpLRFE?oc=5" target="_blank" rel="noopener noreferrer nofollow" class="inline-flex items-center gap-2 mx-6 text-xs text-yellow-200 hover:text-white transition font-semibold">
+      <span class="text-yellow-400 font-extrabold animate-pulse">⚡ BREAKING</span> [마켓+] '1550→1360원' 급전직하···원화 '나홀로 강세' 어디까지? <span class="text-[10px] text-emerald-300 font-mono">(서울파이낸스)</span>
+    </a>
+    
+    <a href="https://news.google.com/rss/articles/CBMiZ0FVX3lxTE02V2tNWURyOW03eTRNUUhmemxUTXFjZHY4UjhfTXB2d1ZLLUszcDA3NXFLUVpLbjVoMU5sTDFMZDZMSGpwQ0lhZ0pPcE4zdjBtWERjX2RyX2t1VWRzV2dEVWwxQmpMU0U?oc=5" target="_blank" rel="noopener noreferrer nofollow" class="inline-flex items-center gap-2 mx-6 text-xs text-yellow-200 hover:text-white transition font-semibold">
+      <span class="text-yellow-400 font-extrabold animate-pulse">⚡ BREAKING</span> [주간환율전망] 잭슨홀이 올리고 고용지표가 누른다…1370원대 공방 <span class="text-[10px] text-emerald-300 font-mono">(자본시장뉴스)</span>
+    </a>
+    
+    <a href="https://news.google.com/rss/articles/CBMiYkFVX3lxTFBfdHhiZ29ndG1Zb1gwamwyOHVyNFRXZVlMMmJyYW9lT2J2WExFMkhBbWQ2eU12Z0NvQndxSmFrWnRDWmJDemhkd0ZETEgzY1F5d1dnOGlNLXFvMnRFbUpTcVZR?oc=5" target="_blank" rel="noopener noreferrer nofollow" class="inline-flex items-center gap-2 mx-6 text-xs text-yellow-200 hover:text-white transition font-semibold">
+      <span class="text-yellow-400 font-extrabold animate-pulse">⚡ BREAKING</span> 대형 수급 이벤트 일단락, 달러/원 단기 반등 가능 <span class="text-[10px] text-emerald-300 font-mono">(KB Think)</span>
+    </a>
+    
+    <a href="https://news.google.com/rss/articles/CBMiREFVX3lxTE1vQWQ4cGVQcjJkeWxtbnRnYXByUVhHVlZhQTlSa0JPdkE3eW9wTXNLc0x1aTBRYUxkTHFoRWo1akhJdUFY?oc=5" target="_blank" rel="noopener noreferrer nofollow" class="inline-flex items-center gap-2 mx-6 text-xs text-yellow-200 hover:text-white transition font-semibold">
+      <span class="text-yellow-400 font-extrabold animate-pulse">⚡ BREAKING</span> 원-엔화 환율, 1원 이상 하락하면서 860원 초반 유지…달러-엔화 환율은 미국 조기 금리인상 전망에 160엔 초반대로 내려서 <span class="text-[10px] text-emerald-300 font-mono">(산업일보)</span>
+    </a>
+    
+    <a href="https://news.google.com/rss/articles/CBMiXEFVX3lxTFBkeXR3N2xFWTNxNGJwMF9ralNqSnVYNFRKWndRZ09KU3JwNEQ0ejdVRmI0T3lGYm5SQ3hZYzlHM0tJbTc4OFEwRVQ4amVfY19tclp4LWpCaUp5eXhr?oc=5" target="_blank" rel="noopener noreferrer nofollow" class="inline-flex items-center gap-2 mx-6 text-xs text-yellow-200 hover:text-white transition font-semibold">
+      <span class="text-yellow-400 font-extrabold animate-pulse">⚡ BREAKING</span> [모닝 리포트] 美 국채금리·달러 동반 상승…환율 1380원 중반 전망 <span class="text-[10px] text-emerald-300 font-mono">(뉴스핌)</span>
+    </a>
+    
+    <a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE8yUHc4U0FsaWx0ZnpSM1k1cnA5OURPeGJGUmYzTTNnWWplR3dDN0w4TXZmdk02U3lYbURqUVl2VEFEYlU1VW1JazY0TkJ6RGVMYUxZbVpEZVl5cm9hQVhzRGs4SXZzTF9ONGJDWm9EM2c2N2M?oc=5" target="_blank" rel="noopener noreferrer nofollow" class="inline-flex items-center gap-2 mx-6 text-xs text-yellow-200 hover:text-white transition font-semibold">
+      <span class="text-yellow-400 font-extrabold animate-pulse">⚡ BREAKING</span> iM증권 &quot;9월 원/달러 환율 1350원대 진입할 것, 연말 전망치는 1300원&quot; <span class="text-[10px] text-emerald-300 font-mono">(비즈니스포스트)</span>
+    </a>
+    
+    <a href="https://news.google.com/rss/articles/CBMiXkFVX3lxTFA1UE1QcExCakFEZmNXOURZYUVBZUhWWDZScUFaU0Zva3huczJDMzdUQk11MGx2bkdjMnZzSGRvbWxTNEU3Ml9PQ0t4MjNid1NqNGNGUk5aNUZJeG5fcHc?oc=5" target="_blank" rel="noopener noreferrer nofollow" class="inline-flex items-center gap-2 mx-6 text-xs text-yellow-200 hover:text-white transition font-semibold">
+      <span class="text-yellow-400 font-extrabold animate-pulse">⚡ BREAKING</span> “달러 약세에 원화 강세 탄력…4분기 환율 1300원 전망” <span class="text-[10px] text-emerald-300 font-mono">(뉴스투데이)</span>
+    </a>
+    
+    <a href="https://news.google.com/rss/articles/CBMiVkFVX3lxTE5hYlBIMFZ4M2Y0NWt0Y0p0b1VtcEVSNHpmZG9hRm5saFZSRzM0RXg0ZG1OcFBuZjZKWERBYTlzQmxZYXBIYzVEYzFVYVlxREx3U3FVWkFB?oc=5" target="_blank" rel="noopener noreferrer nofollow" class="inline-flex items-center gap-2 mx-6 text-xs text-yellow-200 hover:text-white transition font-semibold">
+      <span class="text-yellow-400 font-extrabold animate-pulse">⚡ BREAKING</span> 9월엔 용돈 벌자…공모주 청약 총정리, 시작은 언제? <span class="text-[10px] text-emerald-300 font-mono">(위키트리)</span>
+    </a>
+    
+    <a href="https://news.google.com/rss/articles/CBMia0FVX3lxTE5pTnNlcXVJNUE3T1RBNjA2Um9GNVpqSk56clRIQjMyWmFRVXZjOVNPdzYxaDR5NE44THprNTVZN3RrYzhIUk11STl1Vzd0TEpkZEpoM1hoS1lBa0dOX2JHczhOc0pUb1NPR3lv?oc=5" target="_blank" rel="noopener noreferrer nofollow" class="inline-flex items-center gap-2 mx-6 text-xs text-yellow-200 hover:text-white transition font-semibold">
+      <span class="text-yellow-400 font-extrabold animate-pulse">⚡ BREAKING</span> [증권 Pick] 이번주 IPO 일정 모아보기 <span class="text-[10px] text-emerald-300 font-mono">(라이센스뉴스)</span>
+    </a>
+    
+    <a href="https://news.google.com/rss/articles/CBMiXEFVX3lxTE5HOHV3N2hnREtYblh0NVg1aFBhZzZ2aTQyVHQxTXNKQ1RlaHcxZ1BCcmRlSzRzSVR6UEM5OGFuUFdreVQwVlBZR0VHejdrazlzbERoZGg4clV2V25Y?oc=5" target="_blank" rel="noopener noreferrer nofollow" class="inline-flex items-center gap-2 mx-6 text-xs text-yellow-200 hover:text-white transition font-semibold">
+      <span class="text-yellow-400 font-extrabold animate-pulse">⚡ BREAKING</span> [주간IPO] '반지형 혈압계' 개발사 스카이랩스, 4일 코스닥 상장 <span class="text-[10px] text-emerald-300 font-mono">(뉴스핌)</span>
+    </a>
+    
+    <a href="https://news.google.com/rss/articles/CBMiR0FVX3lxTE9IMWpjZ2h0X0l5aFByalZGY2U2RnNNb3Nyd1Q4TVhyTExWM21ocHRWVlVZU2l0SVNlQllvZmMyN0hTRHRabi1r?oc=5" target="_blank" rel="noopener noreferrer nofollow" class="inline-flex items-center gap-2 mx-6 text-xs text-yellow-200 hover:text-white transition font-semibold">
+      <span class="text-yellow-400 font-extrabold animate-pulse">⚡ BREAKING</span> '최저 경쟁률' 스카이랩스, 코스닥 입성⋯네오사피엔스 수요예측 [주간 IPO] <span class="text-[10px] text-emerald-300 font-mono">(아이뉴스24)</span>
+    </a>
+    
+    <a href="https://news.google.com/rss/articles/CBMiUkFVX3lxTE8taUQwcXVLdlpTcGNKYkZ2UUN2bHJERVZPSHRYb0d5OXBEdjhkLVZXNno2MGwwYU5lalRlMjFfTG5ycGxNcFRkdEgybG1LN1NiWlE?oc=5" target="_blank" rel="noopener noreferrer nofollow" class="inline-flex items-center gap-2 mx-6 text-xs text-yellow-200 hover:text-white transition font-semibold">
+      <span class="text-yellow-400 font-extrabold animate-pulse">⚡ BREAKING</span> 위축된 IPO 투심 속…‘공모가 하단 밑’ 스카이랩스, 코스닥 상장 [이번주 증시 캘린더] <span class="text-[10px] text-emerald-300 font-mono">(서울경제)</span>
+    </a>
+    </div></div>
+</div>
+
 
 </body>
 </html>
