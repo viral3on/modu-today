@@ -65,7 +65,15 @@ th{color:#a9bad0;font-weight:800}
 .notice{margin-top:18px;border:1px solid #3b3a29;background:#1a1910;border-radius:14px;padding:14px;color:#c9c5a2;font-size:12px;line-height:1.65}
 footer{text-align:center;color:#6f8199;font-size:12px;padding:28px 0 0}
 .badge{display:inline-flex;align-items:center;gap:6px;background:#0a2b22;border:1px solid #175840;color:#74edbd;border-radius:999px;padding:6px 10px;font-size:11px;font-weight:900}
-@media(max-width:800px){.grid{grid-template-columns:1fr}.info-grid{grid-template-columns:1fr}.frequency{grid-template-columns:repeat(5,1fr)}.hero{padding:22px}.ball{width:43px;height:43px}.latest-meta{flex-direction:column}}
+.round-links{display:grid;grid-template-columns:repeat(5,1fr);gap:9px;margin-top:14px}
+.round-link{display:flex;align-items:center;justify-content:center;min-height:44px;border:1px solid #2d4665;background:#0b1726;border-radius:12px;font-weight:900;font-size:13px;transition:.18s}
+.round-link:hover{border-color:var(--accent);background:#10283a;transform:translateY(-1px)}
+.history-cta{margin-top:14px;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:16px;border:1px solid #285b4b;background:linear-gradient(135deg,#0c241e,#10263a);border-radius:15px}
+.history-cta strong{display:block;margin-bottom:5px}
+.history-cta p{margin:0;color:var(--muted);font-size:12px;line-height:1.65}
+.history-btn{flex:0 0 auto;padding:11px 15px;border-radius:11px;background:var(--accent);color:#04140e;font-weight:950;font-size:13px}
+
+@media(max-width:800px){.grid{grid-template-columns:1fr}.info-grid{grid-template-columns:1fr}.frequency{grid-template-columns:repeat(5,1fr)}.hero{padding:22px}.ball{width:43px;height:43px}.latest-meta{flex-direction:column}.round-links{grid-template-columns:repeat(2,1fr)}.history-cta{align-items:flex-start;flex-direction:column}.history-btn{width:100%;text-align:center}}
 </style>
 </head>
 <body>
@@ -122,6 +130,23 @@ footer{text-align:center;color:#6f8199;font-size:12px;padding:28px 0 0}
           <thead><tr><th>회차</th><th>추첨일</th><th>당첨번호 + 보너스</th><th>홀짝</th><th>합계</th></tr></thead>
           <tbody id="drawTable"></tbody>
         </table>
+      </div>
+    </section>
+
+    <section class="card full">
+      <h2>🔎 지난 회차, 숫자만 보지 말고 자세히 확인해 보세요</h2>
+      <div class="sub">
+        각 회차를 누르면 <b style="color:var(--text)">당첨번호·보너스번호·1~5등 당첨자 수·1인당 당첨금·홀짝 비율·당첨번호 합계</b>를 한 페이지에서 확인할 수 있습니다.
+        “그 회차 1등은 몇 명이었지?”, “당첨금은 얼마였지?”, “번호 조합은 어땠지?”가 궁금할 때 바로 비교해 보세요.
+      </div>
+      <div id="roundLinks" class="round-links"></div>
+
+      <div class="history-cta">
+        <div>
+          <strong>📚 최근 100회 당첨결과 한눈에 보기</strong>
+          <p>최근 10회보다 더 오래된 회차까지 찾아보고 싶다면 전체 기록에서 원하는 회차를 선택하세요. 회차별 상세 결과로 바로 이동할 수 있습니다.</p>
+        </div>
+        <a class="history-btn" href="/lotto/history/">최근 100회 전체보기 →</a>
       </div>
     </section>
 
@@ -208,8 +233,13 @@ function render(data){
   document.getElementById("drawTable").innerHTML=draws.map(d=>{
     const odd=d.numbers.filter(n=>n%2).length;
     const sum=d.numbers.reduce((a,b)=>a+b,0);
-    return `<tr><td><b>${d.draw}회</b></td><td>${d.date}</td><td>${drawBalls(d)}</td><td>${odd}:${6-odd}</td><td>${sum}</td></tr>`;
+    return `<tr><td><a href="/lotto/${d.draw}/" style="color:var(--accent);font-weight:900">${d.draw}회 ↗</a></td><td>${d.date}</td><td>${drawBalls(d)}</td><td>${odd}:${6-odd}</td><td>${sum}</td></tr>`;
   }).join("");
+
+  const recent10=(data.draws||[]).slice(0,10);
+  document.getElementById("roundLinks").innerHTML=recent10.map(d=>
+    `<a class="round-link" href="/lotto/${d.draw}/">${d.draw}회 자세히 보기</a>`
+  ).join("");
 
   const freq=Array(46).fill(0);
   (data.draws||[]).slice(0,20).forEach(d=>d.numbers.forEach(n=>freq[n]++));
