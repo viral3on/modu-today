@@ -20,7 +20,7 @@ jobs:
       - name: Update nationwide apartment trades
         env:
           MOLIT_API_KEY: ${{ secrets.MOLIT_API_KEY }}
-        run: python apt/update_apt.py
+        run: python -u apt/update_apt.py
       - name: Commit data
         run: |
           git config user.name "github-actions[bot]"
