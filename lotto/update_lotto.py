@@ -2,6 +2,7 @@ from pathlib import Path
 from datetime import datetime, timezone, timedelta
 from urllib.request import Request, urlopen
 import json
+from collections import Counter
 
 ROOT = Path(__file__).resolve().parent
 OUT = ROOT / "data" / "results.json"
@@ -85,6 +86,43 @@ OUT.parent.mkdir(parents=True, exist_ok=True)
 OUT.write_text(json.dumps(out, ensure_ascii=False, indent=2), encoding="utf-8")
 print(f"Updated lotto results: latest={latest['draw']}회, rows={len(draws)}")
 
+
+STORE_API = "https://www.dhlottery.co.kr/wnprchsplcsrch/selectLtWnShp.do"
+
+def fetch_winning_stores(draw, rank=1):
+    """동행복권 회차별 당첨 판매점 조회. 실패해도 본 당첨결과 갱신은 계속 진행."""
+    try:
+        params = {"srchWnShpRnk": str(rank), "srchLtEpsd": str(draw)}
+        headers = {
+            "User-Agent": "Mozilla/5.0",
+            "Accept": "application/json, text/plain, */*",
+            "X-Requested-With": "XMLHttpRequest",
+            "Referer": "https://www.dhlottery.co.kr/wnprchsplcsrch/home",
+        }
+        resp = requests.get(STORE_API, params=params, headers=headers, timeout=20)
+        resp.raise_for_status()
+        payload = resp.json()
+        rows = ((payload.get("data") or {}).get("list") or [])
+        return [{
+            "name": str(x.get("shpNm") or "").strip(),
+            "region": str(x.get("region") or x.get("tm1ShpLctnAddr") or "").strip(),
+            "address": str(x.get("shpAddr") or "").strip(),
+            "type": str(x.get("atmtPsvYnTxt") or "").strip(),
+        } for x in rows]
+    except Exception as e:
+        print(f"[WARN] winning stores fetch failed: draw={draw}, rank={rank}, error={e}")
+        return []
+
+
+def store_region_summary(stores):
+    c = Counter(s["region"] for s in stores if s.get("region"))
+    return sorted(c.items(), key=lambda x: (-x[1], x[0]))
+
+
+def store_type_summary(stores):
+    c = Counter(s["type"] for s in stores if s.get("type"))
+    return sorted(c.items(), key=lambda x: (-x[1], x[0]))
+
 def ball_color(n):
     if n <= 10:
         return "#f2b720"
@@ -110,6 +148,41 @@ def make_draw_page(r):
         for n in nums
     )
     bonus_ball = f'<span class="ball" style="background:{ball_color(bonus)}">{bonus}</span>'
+
+    stores = r.get("first_stores") or []
+    region_summary = store_region_summary(stores)
+    type_summary = store_type_summary(stores)
+    region_chips = "".join(
+        f'<span>{region} {count}곳</span>' for region, count in region_summary
+    ) or '<span>판매점 지역 정보 확인 중</span>'
+    type_text = " · ".join(f"{name} {count}곳" for name, count in type_summary)
+
+    if stores:
+        store_rows = "".join(
+            f'<tr><td>{i}</td><td>{s["name"]}</td><td>{s["type"] or "-"}</td><td>{s["address"] or s["region"]}</td></tr>'
+            for i, s in enumerate(stores, 1)
+        )
+        store_section = f"""
+  <section class="box">
+    <h2>📍 {draw}회 1등 당첨지역</h2>
+    <div class="sub">1등 당첨 판매점이 어느 지역에서 나왔는지 확인해 보세요.</div>
+    <div class="stats" style="margin-top:14px">{region_chips}</div>
+    <div class="sub" style="margin-top:12px">{type_text}</div>
+    <div style="overflow-x:auto;margin-top:12px">
+      <table>
+        <tr><th>번호</th><th>판매점</th><th>구분</th><th>소재지</th></tr>
+        {store_rows}
+      </table>
+    </div>
+  </section>
+"""
+    else:
+        store_section = f"""
+  <section class="box">
+    <h2>📍 {draw}회 1등 당첨지역</h2>
+    <div class="sub">판매점 정보를 불러오지 못했거나 공개 데이터가 없습니다. 당첨번호와 당첨금 정보는 정상적으로 표시됩니다.</div>
+  </section>
+"""
 
     desc = (
         f"로또 {draw}회 당첨번호 {', '.join(map(str, nums))}, 보너스 {bonus}. "
@@ -177,6 +250,8 @@ footer{{text-align:center;color:#778197;margin-top:30px;font-size:12px}}
     </table>
   </section>
 
+  {store_section}
+
   <section class="box">
     <h2>📊 번호 통계</h2>
     <div class="stats">
@@ -205,6 +280,18 @@ window.va = window.va || function () {{
 
 
 def make_history_page(rows):
+    all_stores = []
+    for r in rows:
+        all_stores.extend(r.get("first_stores") or [])
+
+    reg = store_region_summary(all_stores)
+    typ = store_type_summary(all_stores)
+    reg_html = "".join(
+        f'<div class="statbox"><b>{region}</b><span>{count}곳</span></div>'
+        for region, count in reg
+    ) or '<div class="statbox"><b>지역 통계</b><span>데이터 확인 중</span></div>'
+    type_html = " · ".join(f"{name} {count}곳" for name, count in typ)
+
     cards = []
     for r in rows:
         nums = " · ".join(str(n) for n in r["numbers"])
@@ -245,6 +332,13 @@ a{{color:inherit;text-decoration:none}}
 h1{{font-size:30px;margin:8px 0 10px}}
 .hero p{{color:#9aa4b6;line-height:1.75;margin:0;max-width:780px}}
 .guide{{background:#141a28;border:1px solid #283044;border-radius:16px;padding:16px;color:#aeb8c8;font-size:13px;line-height:1.7;margin-bottom:16px}}
+.region-box{{background:#141a28;border:1px solid #283044;border-radius:16px;padding:18px;margin-bottom:16px}}
+.region-box h2{{margin:0 0 7px;font-size:19px}}
+.region-stats{{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;margin-top:13px}}
+.statbox{{background:#0c1420;border:1px solid #26364b;border-radius:11px;padding:11px;text-align:center}}
+.statbox b{{display:block;font-size:13px}}
+.statbox span{{display:block;color:#61e4b0;font-size:12px;margin-top:4px}}
+
 .list{{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}}
 .round-card{{display:block;background:#141a28;border:1px solid #283044;border-radius:16px;padding:17px;transition:.18s}}
 .round-card:hover{{border-color:#22c98b;transform:translateY(-1px)}}
@@ -256,7 +350,7 @@ h1{{font-size:30px;margin:8px 0 10px}}
 .meta{{font-size:12px;color:#93a0b3}}
 .more{{margin-top:12px;color:#57e2ad;font-size:12px;font-weight:900}}
 footer{{text-align:center;color:#707c8f;font-size:12px;margin-top:30px}}
-@media(max-width:650px){{.list{{grid-template-columns:1fr}}h1{{font-size:25px}}}}
+@media(max-width:650px){{.list{{grid-template-columns:1fr}}h1{{font-size:25px}}.region-stats{{grid-template-columns:repeat(3,1fr)}}}}
 </style>
 </head>
 <body>
@@ -277,6 +371,13 @@ footer{{text-align:center;color:#707c8f;font-size:12px;margin-top:30px}}
     “지난 회차 1등은 몇 명이었나?”, “1등 당첨금은 얼마였나?”, “보너스 번호는 무엇이었나?”, “홀수·짝수 조합과 번호 합계는 어땠나?”를 회차별 상세 페이지에서 확인할 수 있습니다.
   </div>
 
+  <section class="region-box">
+    <h2>📍 최근 100회 1등 당첨지역 통계</h2>
+    <div class="meta">회차별 1등 당첨 판매점 소재지를 누적한 통계입니다. 당첨 확률을 의미하지 않습니다.</div>
+    <div class="region-stats">{reg_html}</div>
+    <div class="meta" style="margin-top:12px">{type_html}</div>
+  </section>
+
   <main class="list">
     {''.join(cards)}
   </main>
@@ -295,15 +396,34 @@ window.va = window.va || function () {{
 """
 
 
-# 최근 100회 회차별 페이지 자동 생성
+# 최근 100회 회차별 페이지 자동 생성 + 1등 당첨 판매점 데이터
+# 기존 저장 데이터가 있으면 재사용하여 매 실행마다 100회 API를 다시 호출하지 않음.
+store_cache_path = ROOT / "data" / "stores.json"
+try:
+    store_cache = json.loads(store_cache_path.read_text(encoding="utf-8")) if store_cache_path.exists() else {}
+except Exception:
+    store_cache = {}
+
 generated = 0
 for r in normalized[:100]:
-    draw_dir = ROOT / str(r["draw"])
+    key = str(r["draw"])
+    cached = store_cache.get(key)
+    if not isinstance(cached, list) or not cached:
+        cached = fetch_winning_stores(r["draw"], 1)
+        if cached:
+            store_cache[key] = cached
+    r["first_stores"] = cached or []
+
+    draw_dir = ROOT / key
     draw_dir.mkdir(parents=True, exist_ok=True)
     (draw_dir / "index.html").write_text(make_draw_page(r), encoding="utf-8")
     generated += 1
 
-print(f"Generated draw pages: {generated}")
+store_cache_path.write_text(
+    json.dumps(store_cache, ensure_ascii=False, indent=2),
+    encoding="utf-8",
+)
+print(f"Generated draw pages: {generated}, store-cache draws={len(store_cache)}")
 
 # 최근 100회 전체보기 페이지 자동 생성
 history_dir = ROOT / "history"
