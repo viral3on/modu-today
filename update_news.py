@@ -323,31 +323,31 @@ footer{{padding:34px 0 48px;color:#98a2b3;font-size:12px}}
 .news-live p{{margin:0;color:#667085;line-height:1.6}}
 
 
-.fixed-ticker{
+.fixed-ticker{{
   position:fixed;left:0;right:0;bottom:0;z-index:80;
   height:34px;background:#111827;color:#fff;
   border-top:1px solid rgba(255,255,255,.08);
   overflow:hidden;display:flex;align-items:center;
   box-shadow:0 -4px 14px rgba(15,23,42,.10)
-}
-.fixed-ticker .label{
+}}
+.fixed-ticker .label{{
   flex:0 0 auto;height:100%;display:flex;align-items:center;
   padding:0 14px;font-size:11px;font-weight:900;
   background:linear-gradient(135deg,#6d5dfc,#5b8def);
   letter-spacing:-.2px
-}
-.fixed-ticker .track{overflow:hidden;white-space:nowrap;flex:1}
-.fixed-ticker .marquee{
+}}
+.fixed-ticker .track{{overflow:hidden;white-space:nowrap;flex:1}}
+.fixed-ticker .marquee{{
   display:inline-block;padding-left:100%;
   animation:moduTicker 42s linear infinite;
   font-size:12px;font-weight:700
-}
-.fixed-ticker .marquee:hover{animation-play-state:paused}
-@keyframes moduTicker{
-  from{transform:translateX(0)}
-  to{transform:translateX(-100%)}
-}
-body{padding-bottom:34px}
+}}
+.fixed-ticker .marquee:hover{{animation-play-state:paused}}
+@keyframes moduTicker{{
+  from{{transform:translateX(0)}}
+  to{{transform:translateX(-100%)}}
+}}
+body{{padding-bottom:34px}}
 
 </style>
 </head>
