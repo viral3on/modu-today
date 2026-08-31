@@ -13,31 +13,30 @@ permissions:
 jobs:
   update-lotto:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v5
-
       - name: Set up Python
         uses: actions/setup-python@v6
         with:
           python-version: "3.x"
-
-      - name: Update lotto results
+      - name: Update lotto results and draw pages
         run: python lotto/update_lotto.py
-
-      - name: Commit lotto data
+      - name: Update sitemap
+        run: |
+          if [ -f generate_sitemap.py ]; then
+            python generate_sitemap.py
+          fi
+      - name: Commit lotto data and draw pages
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
-          # 먼저 add 해야 새로 생성된(untracked) results.json도 변경사항으로 감지됩니다.
           git add lotto/data/results.json
-
+          git add lotto/[0-9]*/index.html
+          if [ -f sitemap.xml ]; then git add sitemap.xml; fi
           if git diff --cached --quiet; then
-            echo "No lotto data changes."
+            echo "No lotto data or page changes."
             exit 0
           fi
-
-          git commit -m "Update lotto results"
+          git commit -m "Update lotto results and draw pages"
           git push
