@@ -180,8 +180,9 @@ html_template = """<!DOCTYPE html>
         <h1 class="text-xl md:text-2xl font-black text-white tracking-tight">오늘의 금융, 원자재 및 정책 핵심 브리핑</h1>
         <p class="text-xs text-gray-400 mt-1">증시, 환율/원자재, 공모주 일정 및 정부 지원금 소식을 매일 실시간으로 자동 수집합니다.</p>
       </div>
-      <div class="px-3 py-1.5 rounded-lg bg-gray-800/80 text-xs font-mono text-gray-300 border border-gray-700">
-        업데이트: {today_str}
+      <div class="px-3 py-2 rounded-lg bg-gray-800/80 text-xs font-mono text-gray-300 border border-gray-700 text-right leading-relaxed">
+        <div>업데이트: {today_str}</div>
+        <div class="text-[10px] text-gray-400 mt-1">자동 업데이트: 매일 06:00 · 09:00 · 12:00 · 15:00 · 18:00 · 21:00 (KST)</div>
       </div>
     </div>
 
