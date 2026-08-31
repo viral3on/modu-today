@@ -322,6 +322,33 @@ footer{{padding:34px 0 48px;color:#98a2b3;font-size:12px}}
 .news-live h2,.news-live h3,.news-live h4{{margin:0 0 8px;line-height:1.45}}
 .news-live p{{margin:0;color:#667085;line-height:1.6}}
 
+
+.fixed-ticker{
+  position:fixed;left:0;right:0;bottom:0;z-index:80;
+  height:34px;background:#111827;color:#fff;
+  border-top:1px solid rgba(255,255,255,.08);
+  overflow:hidden;display:flex;align-items:center;
+  box-shadow:0 -4px 14px rgba(15,23,42,.10)
+}
+.fixed-ticker .label{
+  flex:0 0 auto;height:100%;display:flex;align-items:center;
+  padding:0 14px;font-size:11px;font-weight:900;
+  background:linear-gradient(135deg,#6d5dfc,#5b8def);
+  letter-spacing:-.2px
+}
+.fixed-ticker .track{overflow:hidden;white-space:nowrap;flex:1}
+.fixed-ticker .marquee{
+  display:inline-block;padding-left:100%;
+  animation:moduTicker 42s linear infinite;
+  font-size:12px;font-weight:700
+}
+.fixed-ticker .marquee:hover{animation-play-state:paused}
+@keyframes moduTicker{
+  from{transform:translateX(0)}
+  to{transform:translateX(-100%)}
+}
+body{padding-bottom:34px}
+
 </style>
 </head>
 <body>
@@ -368,7 +395,7 @@ footer{{padding:34px 0 48px;color:#98a2b3;font-size:12px}}
           <h2>실시간 증시·정책 뉴스 정보 대시보드</h2>
           <p>하루 6번 업데이트 · 국내 증시와 주요 경제·정책 이슈를 한 화면에서 빠르게 확인하세요.</p>
         </div>
-        <a class="more" href="/">실시간 뉴스 대시보드 →</a>
+        <span class="more">최종 갱신 {today_str}</span>
       </div>
 
       <div class="news-live">
@@ -478,9 +505,15 @@ footer{{padding:34px 0 48px;color:#98a2b3;font-size:12px}}
   </div>
 </footer>
 
+<div class="fixed-ticker" aria-label="실시간 뉴스 속보">
+  <div class="label">실시간 뉴스</div>
+  <div class="track"><div class="marquee">{ticker_html}</div></div>
+</div>
+
+
 </body>
 </html>
-""".format(news_content=news_content)
+""".format(news_content=news_content, today_str=today_str, ticker_html=ticker_html)
 
 with open("index.html", "w", encoding="utf-8") as f:
     f.write(html_template)
