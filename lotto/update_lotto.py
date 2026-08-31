@@ -202,6 +202,99 @@ window.va = window.va || function () {{
 """
 
 
+
+
+def make_history_page(rows):
+    cards = []
+    for r in rows:
+        nums = " · ".join(str(n) for n in r["numbers"])
+        odd = sum(1 for n in r["numbers"] if n % 2)
+        total = sum(r["numbers"])
+        cards.append(
+            f"""
+            <a class="round-card" href="/lotto/{r['draw']}/">
+              <div class="round-top">
+                <strong>{r['draw']}회</strong>
+                <span>{r['date']}</span>
+              </div>
+              <div class="nums">{nums} <em>+ {r['bonus']}</em></div>
+              <div class="meta">홀짝 {odd}:{6-odd} · 합계 {total}</div>
+              <div class="more">당첨금·당첨자·상세 통계 보기 →</div>
+            </a>
+            """
+        )
+
+    return f"""<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>로또 최근 100회 당첨번호 · 회차별 결과 | MODU.TODAY</title>
+<meta name="description" content="로또 최근 100회 당첨번호를 회차별로 확인하세요. 원하는 회차를 선택하면 당첨번호, 보너스번호, 1~5등 당첨자와 당첨금, 홀짝 비율과 번호 합계를 자세히 볼 수 있습니다.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://modu.today/lotto/history/">
+<style>
+*{{box-sizing:border-box}}
+body{{margin:0;background:#0b0e14;color:#eef2f7;font-family:Arial,"Noto Sans KR",sans-serif}}
+a{{color:inherit;text-decoration:none}}
+.wrap{{max-width:980px;margin:auto;padding:22px 16px 60px}}
+.top{{display:flex;justify-content:space-between;align-items:center;margin-bottom:22px}}
+.top a:last-child{{border:1px solid #304158;background:#141a28;padding:9px 12px;border-radius:10px;font-size:13px}}
+.hero{{background:linear-gradient(135deg,#14283a,#10231e);border:1px solid #28534a;border-radius:20px;padding:24px;margin-bottom:16px}}
+.eyebrow{{font-size:12px;color:#59e5ac;font-weight:900}}
+h1{{font-size:30px;margin:8px 0 10px}}
+.hero p{{color:#9aa4b6;line-height:1.75;margin:0;max-width:780px}}
+.guide{{background:#141a28;border:1px solid #283044;border-radius:16px;padding:16px;color:#aeb8c8;font-size:13px;line-height:1.7;margin-bottom:16px}}
+.list{{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}}
+.round-card{{display:block;background:#141a28;border:1px solid #283044;border-radius:16px;padding:17px;transition:.18s}}
+.round-card:hover{{border-color:#22c98b;transform:translateY(-1px)}}
+.round-top{{display:flex;justify-content:space-between;align-items:center;gap:10px}}
+.round-top strong{{font-size:20px;color:#fff}}
+.round-top span{{font-size:12px;color:#8793a5}}
+.nums{{font-weight:900;margin:14px 0 8px;letter-spacing:.2px}}
+.nums em{{font-style:normal;color:#f5c84b}}
+.meta{{font-size:12px;color:#93a0b3}}
+.more{{margin-top:12px;color:#57e2ad;font-size:12px;font-weight:900}}
+footer{{text-align:center;color:#707c8f;font-size:12px;margin-top:30px}}
+@media(max-width:650px){{.list{{grid-template-columns:1fr}}h1{{font-size:25px}}}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top">
+    <a href="/"><b>MODU.TODAY</b></a>
+    <a href="/lotto/">🍀 로또 홈</a>
+  </div>
+
+  <section class="hero">
+    <div class="eyebrow">LOTTO 6/45 · ARCHIVE</div>
+    <h1>최근 100회 로또 당첨결과</h1>
+    <p>원하는 회차를 눌러 그때의 당첨번호만 확인하는 데서 끝나지 않고, 1~5등 당첨자 수와 1인당 당첨금, 홀짝 비율, 번호 합계까지 자세히 비교해 보세요.</p>
+  </section>
+
+  <div class="guide">
+    💡 <b>이런 정보가 궁금할 때 유용합니다.</b><br>
+    “지난 회차 1등은 몇 명이었나?”, “1등 당첨금은 얼마였나?”, “보너스 번호는 무엇이었나?”, “홀수·짝수 조합과 번호 합계는 어땠나?”를 회차별 상세 페이지에서 확인할 수 있습니다.
+  </div>
+
+  <main class="list">
+    {''.join(cards)}
+  </main>
+
+  <footer>© MODU.TODAY · Jae-Hyun Kim.</footer>
+</div>
+
+<script>
+window.va = window.va || function () {{
+  (window.vaq = window.vaq || []).push(arguments);
+}};
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>
+"""
+
+
 # 최근 100회 회차별 페이지 자동 생성
 generated = 0
 for r in normalized[:100]:
@@ -211,4 +304,13 @@ for r in normalized[:100]:
     generated += 1
 
 print(f"Generated draw pages: {generated}")
+
+# 최근 100회 전체보기 페이지 자동 생성
+history_dir = ROOT / "history"
+history_dir.mkdir(parents=True, exist_ok=True)
+(history_dir / "index.html").write_text(
+    make_history_page(normalized[:100]),
+    encoding="utf-8",
+)
+print(f"Generated history page: {history_dir / 'index.html'}")
 
