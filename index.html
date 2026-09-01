@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>MODU.TODAY</title>
-<meta name="description" content="뉴스, YouTube 순위, 계산기, 게임, 로또, 아파트 실거래가를 한곳에서 확인하세요.">
+<meta name="description" content="증시 스캐너, 뉴스, YouTube 순위, 계산기, 게임, 로또, 아파트 실거래가를 한곳에서 확인하세요.">
 <style>
 :root{
   --bg:#f6f8fc;
@@ -91,7 +91,7 @@ button{font:inherit}
 }
 .quick{
   position:relative;z-index:2;
-  display:grid;grid-template-columns:repeat(6,1fr);
+  display:grid;grid-template-columns:repeat(7,1fr);
   gap:10px;margin-top:35px
 }
 .quick a{
@@ -300,6 +300,17 @@ body{padding-bottom:34px}
   .feature-copy{padding:24px}
 }
 
+.stock-home-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:13px}
+.stock-signal-card{padding:20px;position:relative;overflow:hidden;transition:.18s ease}
+.stock-signal-card:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.stock-signal-card span{display:block;color:#667085;font-size:12px;font-weight:700}
+.stock-signal-card strong{display:block;margin-top:10px;font-size:28px;letter-spacing:-1px}
+.stock-signal-card small{display:block;margin-top:6px;color:#98a2b3;font-size:11px}
+.stock-signal-card .arrow{position:absolute;right:16px;top:17px;color:#6b63e8;font-weight:900}
+.stock-home-meta{margin-top:11px;color:#98a2b3;font-size:11px;text-align:right}
+@media(max-width:900px){.stock-home-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.stock-home-grid{grid-template-columns:1fr 1fr}.stock-signal-card{padding:16px}.stock-signal-card strong{font-size:23px}}
+
 </style>
 </head>
 <body>
@@ -309,6 +320,7 @@ body{padding-bottom:34px}
     <a href="/" class="logo"><span class="logo-mark"></span>MODU.TODAY</a>
     <nav class="menu">
       <a href="/">뉴스</a>
+      <a href="/stock/">증시 스캐너</a>
       <a href="/youtube/">YouTube 순위</a>
       <a href="/calculator/">계산기</a>
       <a href="/games/">게임</a>
@@ -324,11 +336,12 @@ body{padding-bottom:34px}
       <div class="hero-box">
         <span class="eyebrow">● 오늘 필요한 정보를 한곳에</span>
         <h1>오늘 뭐 볼까?<br>MODU.TODAY에서 한 번에.</h1>
-        <p>하루 6번 갱신되는 증시·정책 뉴스부터 YouTube 순위, 생활 계산기, 무료 게임,<br>
-        로또 당첨정보와 전국 아파트 실거래가까지 자주 찾는 정보를 한곳에 모았습니다.</p>
+        <p>증시·정책 뉴스와 KRX 공식 데이터 기반 증시 스캐너부터 YouTube 순위, 생활 계산기,<br>
+        무료 게임, 로또 당첨정보와 전국 아파트 실거래가까지 자주 찾는 정보를 한곳에 모았습니다.</p>
 
         <div class="quick">
           <a href="/"><span class="ico">📰</span><strong>증시·정책 뉴스</strong><small>하루 6번 실시간 업데이트</small></a>
+          <a href="/stock/"><span class="ico">📡</span><strong>증시 스캐너</strong><small>거래량·거래대금·신고가 조건검색</small></a>
           <a href="/youtube/"><span class="ico">📺</span><strong>YouTube 순위</strong><small>일·주·월 조회수 상승 추적</small></a>
           <a href="/calculator/"><span class="ico">🧮</span><strong>생활 계산기</strong><small>복잡한 계산을 쉽고 빠르게</small></a>
           <a href="/games/"><span class="ico">🎮</span><strong>무료 웹게임</strong><small>설치 없이 바로 플레이</small></a>
@@ -346,7 +359,7 @@ body{padding-bottom:34px}
           <h2>실시간 증시·정책 뉴스 정보 대시보드</h2>
           <p>하루 6번 업데이트 · 국내 증시와 주요 경제·정책 이슈를 한 화면에서 빠르게 확인하세요.</p>
         </div>
-        <span class="more">최종 갱신 2026년 09월 01일 18:14 KST</span>
+        <span class="more">최종 갱신 2026년 09월 01일 20:32 KST</span>
       </div>
 
       <div class="news-live">
@@ -367,6 +380,19 @@ body{padding-bottom:34px}
               </div>
               <div class="mt-2 text-[11px] font-medium text-gray-400">
                 뉴스1 • <span class="text-yellow-400/90 font-bold">오늘의 브리핑</span>
+              </div>
+            </a>
+            
+            <a href="https://news.google.com/rss/articles/CBMidkFVX3lxTE9LQTBpVkpTaTRuOTRYZ2p2RVAxNEU0QjlJbTlDb3o1U2IyNGZKRG9HZkpKU0piNDljdlFlbDItYXp6Q1I5bnQwdm9kRkFrdHhwX3JZYzRpSFowSk1TMmlkNTVZOWVMaTByeGFFcEIyOUVmZ2thWlE?oc=5" target="_blank" rel="noopener noreferrer nofollow" 
+               class="block p-4 rounded-xl bg-[#141A28] border-2 border-yellow-400 hover:bg-[#1C2538] transition duration-200 group shadow-md">
+              <div class="flex justify-between items-start gap-2">
+                <span class="text-sm font-semibold text-gray-100 group-hover:text-yellow-300 leading-snug line-clamp-2">
+                  [0901마감체크] 코스피, 상승 전환하며 강보합… 코스닥은 1%대 하락
+                </span>
+                <span class="text-[11px] font-mono text-yellow-400 flex-shrink-0">↗</span>
+              </div>
+              <div class="mt-2 text-[11px] font-medium text-gray-400">
+                인포스탁데일리 • <span class="text-yellow-400/90 font-bold">오늘의 브리핑</span>
               </div>
             </a>
             
@@ -422,19 +448,6 @@ body{padding-bottom:34px}
               </div>
             </a>
             
-            <a href="https://news.google.com/rss/articles/CBMiWkFVX3lxTFBUcm90M3VWY2xDT0dXOW5HWVVyaWxkWWZXYjRWdllDclNIX2RsWXNJV19STjlaVk84d09DaEVqVWN1TnZycXNkUzJuOWFyeUZVVzZlaVVnbkpNUdIBVEFVX3lxTE1HWkxTOHo1Nk5ZXzhfaGwxSXFXNHNLR3ZzLUZnYzlpdWJ6Mnp1VTBQZFJOZnBWeURPbmFScUpLUlVIanhjQ3Nna1ZiajlYUXdLdXdDTA?oc=5" target="_blank" rel="noopener noreferrer nofollow" 
-               class="block p-4 rounded-xl bg-[#141A28] border-2 border-yellow-400 hover:bg-[#1C2538] transition duration-200 group shadow-md">
-              <div class="flex justify-between items-start gap-2">
-                <span class="text-sm font-semibold text-gray-100 group-hover:text-yellow-300 leading-snug line-clamp-2">
-                  '삼전닉스'가 끌어올린 코스피…코스닥은 820선까지 밀렸다
-                </span>
-                <span class="text-[11px] font-mono text-yellow-400 flex-shrink-0">↗</span>
-              </div>
-              <div class="mt-2 text-[11px] font-medium text-gray-400">
-                news.tf.co.kr • <span class="text-yellow-400/90 font-bold">오늘의 브리핑</span>
-              </div>
-            </a>
-            
           </div>
         </div>
         
@@ -457,7 +470,20 @@ body{padding-bottom:34px}
               </div>
             </a>
             
-            <a href="https://news.google.com/rss/articles/CBMiRkFVX3lxTE1zclNCNzF5LWxiRjZ3R3lXVnMyQmJMeE9sZURmb1VVaEt4OFBCaUlOdEpzYXlQdHp5Slk1LWJ5cHhNd1lYUVE?oc=5" target="_blank" rel="noopener noreferrer nofollow" 
+            <a href="https://news.google.com/rss/articles/CBMidEFVX3lxTE1yVXVuRGRLU2lfT2g0VDVhMWVJcV9SNzkzOGVIM1NVMzdhd3lXQWxKdjdhbVg2c0FWX2x2SzJOXzRUbV9HekczYUVrR3FNY3huRkJRa1VvbmYwdk9IZlNqcm1nX1RkbTBjSDJuZVNEVXNBUE1a0gF0QVVfeXFMTXJVdW5EZEtTaV9PaDRUNWExZUlxX1I3OTM4ZUgzU1UzN2F3eVdBbEp2N2FtWDZzQVZfbHZLMk5fNFRtX0d6RzNhRWtHcU1jeG5GQlFrVW9uZjB2T0hmU2pybWdfVGRtMGNIMm5lU0RVc0FQTVo?oc=5" target="_blank" rel="noopener noreferrer nofollow" 
+               class="block p-4 rounded-xl bg-[#141A28] border-2 border-yellow-400 hover:bg-[#1C2538] transition duration-200 group shadow-md">
+              <div class="flex justify-between items-start gap-2">
+                <span class="text-sm font-semibold text-gray-100 group-hover:text-yellow-300 leading-snug line-clamp-2">
+                  우리銀 &quot;달러-원 내년 초까지 하락세…하단 1,340원으로 하향&quot;
+                </span>
+                <span class="text-[11px] font-mono text-yellow-400 flex-shrink-0">↗</span>
+              </div>
+              <div class="mt-2 text-[11px] font-medium text-gray-400">
+                연합인포맥스 • <span class="text-yellow-400/90 font-bold">오늘의 브리핑</span>
+              </div>
+            </a>
+            
+            <a href="https://news.google.com/rss/articles/CBMiS0FVX3lxTE5zZFZhY0lpWlFad1JwSmV6TUpwLVVobWY1d1NINlBtSUNXWW1KYzJuUkhFOGZPWENBaWRxVzRFYllqQlQ3dHA5cnJaTQ?oc=5" target="_blank" rel="noopener noreferrer nofollow" 
                class="block p-4 rounded-xl bg-[#141A28] border-2 border-yellow-400 hover:bg-[#1C2538] transition duration-200 group shadow-md">
               <div class="flex justify-between items-start gap-2">
                 <span class="text-sm font-semibold text-gray-100 group-hover:text-yellow-300 leading-snug line-clamp-2">
@@ -483,32 +509,6 @@ body{padding-bottom:34px}
               </div>
             </a>
             
-            <a href="https://news.google.com/rss/articles/CBMihgFBVV95cUxONHY4aFJJXzFQWERlT0tmQ3NnZkJlVlZoMUc4QzM3eEUyTGxqU1RCamVCNTRES0I3X1k3cFlvN0F4Y2dnSklkblNiLU5aaXVCR2d4dmRzTVVzOHhCQm1PbExEVG9xN2xVMFlJVXUxMFV5LUJTX2g2Q21nRjFoUGkwVWFHUVVpUdIBmgFBVV95cUxNVWRKai1GdTBBOGxRMWJROWZ2ZkdCQnpFRUFXSEhYRlhXMEF4R2JzWnQ5bTl0OG8tUW1EVExoelYwZ0k2N0FQLUhtc1QydlVIdFp5eFJFelE4RmUycmctVjJWRDZ0M3pVeTY3NVFKaU0xOFcyekhBX3VubkVKNTExczhjNXFwVGJEWHZYNUtaZ215S2ZPczhmeUV3?oc=5" target="_blank" rel="noopener noreferrer nofollow" 
-               class="block p-4 rounded-xl bg-[#141A28] border-2 border-yellow-400 hover:bg-[#1C2538] transition duration-200 group shadow-md">
-              <div class="flex justify-between items-start gap-2">
-                <span class="text-sm font-semibold text-gray-100 group-hover:text-yellow-300 leading-snug line-clamp-2">
-                  [경제 포커스] 환율 3대 변수 ‘韓 기업’ ‘美 금리’ ‘국가부채’ - 조선비즈
-                </span>
-                <span class="text-[11px] font-mono text-yellow-400 flex-shrink-0">↗</span>
-              </div>
-              <div class="mt-2 text-[11px] font-medium text-gray-400">
-                Chosunbiz • <span class="text-yellow-400/90 font-bold">오늘의 브리핑</span>
-              </div>
-            </a>
-            
-            <a href="https://news.google.com/rss/articles/CBMidEFVX3lxTE5xNHB3Wl9BX0UweWdZaXlyTjVlRElwSkYxNW5vVnZLSnRFTWpZV1dqaDZEN1BCOTdJQ2hoNDByZ0xna2N0YURrbGhSSWh3XzF5T3VMWnpGNmhnSDlpRk80eDJJTVlpWjRMNkFMbEZXdWZ4M0Q4?oc=5" target="_blank" rel="noopener noreferrer nofollow" 
-               class="block p-4 rounded-xl bg-[#141A28] border-2 border-yellow-400 hover:bg-[#1C2538] transition duration-200 group shadow-md">
-              <div class="flex justify-between items-start gap-2">
-                <span class="text-sm font-semibold text-gray-100 group-hover:text-yellow-300 leading-snug line-clamp-2">
-                  달러-원 1,360원대도 과도한 하락 아니다…&quot;강한 쏠림 땐 단기 하단 1,345원&quot; |
-                </span>
-                <span class="text-[11px] font-mono text-yellow-400 flex-shrink-0">↗</span>
-              </div>
-              <div class="mt-2 text-[11px] font-medium text-gray-400">
-                연합인포맥스 • <span class="text-yellow-400/90 font-bold">오늘의 브리핑</span>
-              </div>
-            </a>
-            
             <a href="https://news.google.com/rss/articles/CBMibEFVX3lxTE1PTjd2RTJxaGU5YzVPdDRUWFN2TXAwQ1RZMGg2THdMbTkwTHA0UXJWQm5INzNEd1JzZjFjR0FaZUJyZi1US09hYTVaMGlPQ2t0R1VXYzNqY1NpYkpGdVY0WVR5MUtuRjVqNUQ2Tg?oc=5" target="_blank" rel="noopener noreferrer nofollow" 
                class="block p-4 rounded-xl bg-[#141A28] border-2 border-yellow-400 hover:bg-[#1C2538] transition duration-200 group shadow-md">
               <div class="flex justify-between items-start gap-2">
@@ -522,6 +522,19 @@ body{padding-bottom:34px}
               </div>
             </a>
             
+            <a href="https://news.google.com/rss/articles/CBMihwFBVV95cUxPaHFyUHd3Y280RmlqNmVJdjJKSmhYejBWSFRMUDllenpkWlJQMmlod25qLXhJZmtsTmNuMmd1YlJKdVJhQTQ3a1RKYnR1aHlrdTd6UGc4YTZZNmlkeFplTHg5MUJZMjRjNXdXLXdTTGdVY04zTU41cHR0UWpJNllWamk5b2JicEU?oc=5" target="_blank" rel="noopener noreferrer nofollow" 
+               class="block p-4 rounded-xl bg-[#141A28] border-2 border-yellow-400 hover:bg-[#1C2538] transition duration-200 group shadow-md">
+              <div class="flex justify-between items-start gap-2">
+                <span class="text-sm font-semibold text-gray-100 group-hover:text-yellow-300 leading-snug line-clamp-2">
+                  2026, 2027, 2028~2030년 및 향후 USD CAD 전망
+                </span>
+                <span class="text-[11px] font-mono text-yellow-400 flex-shrink-0">↗</span>
+              </div>
+              <div class="mt-2 text-[11px] font-medium text-gray-400">
+                litefinance.org • <span class="text-yellow-400/90 font-bold">오늘의 브리핑</span>
+              </div>
+            </a>
+            
           </div>
         </div>
         
@@ -530,19 +543,6 @@ body{padding-bottom:34px}
             <span class="w-2 h-2 rounded-full bg-yellow-400"></span> 공모주 청약 및 IPO 일정
           </h2>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
-            
-            <a href="https://news.google.com/rss/articles/CBMiVkFVX3lxTE5hYlBIMFZ4M2Y0NWt0Y0p0b1VtcEVSNHpmZG9hRm5saFZSRzM0RXg0ZG1OcFBuZjZKWERBYTlzQmxZYXBIYzVEYzFVYVlxREx3U3FVWkFB?oc=5" target="_blank" rel="noopener noreferrer nofollow" 
-               class="block p-4 rounded-xl bg-[#141A28] border-2 border-yellow-400 hover:bg-[#1C2538] transition duration-200 group shadow-md">
-              <div class="flex justify-between items-start gap-2">
-                <span class="text-sm font-semibold text-gray-100 group-hover:text-yellow-300 leading-snug line-clamp-2">
-                  9월엔 용돈 벌자…공모주 청약 총정리, 시작은 언제?
-                </span>
-                <span class="text-[11px] font-mono text-yellow-400 flex-shrink-0">↗</span>
-              </div>
-              <div class="mt-2 text-[11px] font-medium text-gray-400">
-                위키트리 • <span class="text-yellow-400/90 font-bold">오늘의 브리핑</span>
-              </div>
-            </a>
             
             <a href="https://news.google.com/rss/articles/CBMiYkFVX3lxTE5OVHB2NnJZbTVrelE2OUppeTRRcGN3ZzZGdUpGRS1oWHNYV2RxV2J6R0xBdXdPTGk4MXNsZW1SUldSX2FCaElJcTB0dF93SjQxcDZ0SWgtR0lTWWp3bG5Uc2dR?oc=5" target="_blank" rel="noopener noreferrer nofollow" 
                class="block p-4 rounded-xl bg-[#141A28] border-2 border-yellow-400 hover:bg-[#1C2538] transition duration-200 group shadow-md">
@@ -579,11 +579,11 @@ body{padding-bottom:34px}
                 <span class="text-[11px] font-mono text-yellow-400 flex-shrink-0">↗</span>
               </div>
               <div class="mt-2 text-[11px] font-medium text-gray-400">
-                magazine.hankyung.com • <span class="text-yellow-400/90 font-bold">오늘의 브리핑</span>
+                한경매거진&북 • <span class="text-yellow-400/90 font-bold">오늘의 브리핑</span>
               </div>
             </a>
             
-            <a href="https://news.google.com/rss/articles/CBMiU0FVX3lxTE8yWFg1dHhkdVktMG5IWXAzN2t1bW54NVZYQWpSVkZ5MlJoLURpQmpZVXlxTlN3UHNoaWNvajF3WWdBa080NWZ1cmNUWlByRGM1N2Nv?oc=5" target="_blank" rel="noopener noreferrer nofollow" 
+            <a href="https://news.google.com/rss/articles/CBMiV0FVX3lxTE9SaGdSLThOXzFOVWtxOG8ya2oxTHJDeHk0YVZsYkVmeVFpT1IycEk4Q3JOcktURE9Nby1oSVNzVTFKd2FSNm9zcmVidHBDb0tZN1otU3BtNA?oc=5" target="_blank" rel="noopener noreferrer nofollow" 
                class="block p-4 rounded-xl bg-[#141A28] border-2 border-yellow-400 hover:bg-[#1C2538] transition duration-200 group shadow-md">
               <div class="flex justify-between items-start gap-2">
                 <span class="text-sm font-semibold text-gray-100 group-hover:text-yellow-300 leading-snug line-clamp-2">
@@ -592,7 +592,20 @@ body{padding-bottom:34px}
                 <span class="text-[11px] font-mono text-yellow-400 flex-shrink-0">↗</span>
               </div>
               <div class="mt-2 text-[11px] font-medium text-gray-400">
-                네이트 • <span class="text-yellow-400/90 font-bold">오늘의 브리핑</span>
+                헤럴드경제 • <span class="text-yellow-400/90 font-bold">오늘의 브리핑</span>
+              </div>
+            </a>
+            
+            <a href="https://news.google.com/rss/articles/CBMidkFVX3lxTFBrQXFZOXVYaVByaXo5OUFUOEhmM1NPdkZPV3R0THdWeVlxZ2pYc1JTVjRfUEF0V0VtYmhqYzRQMzFvenRUX0hvLURwYVlUOFpwYlNKTzgwV3AzT1FNOV82cVllY1U4R1Fxb05vV0U2ZXBVSk1QMUHSAXZBVV95cUxQa0FxWTl1WGlQcml6OTlBVDhIZjNTT3ZGT1d0dEx3VnlZcWdqWHNSU1Y0X1BBdFdFbWJoamM0UDMxb3p0VF9Iby1EcGFZVDhacGJTSk84MFdwM09RTTlfNnFZZWNVOEdRcW9Ob1dFNmVwVUpNUDFB?oc=5" target="_blank" rel="noopener noreferrer nofollow" 
+               class="block p-4 rounded-xl bg-[#141A28] border-2 border-yellow-400 hover:bg-[#1C2538] transition duration-200 group shadow-md">
+              <div class="flex justify-between items-start gap-2">
+                <span class="text-sm font-semibold text-gray-100 group-hover:text-yellow-300 leading-snug line-clamp-2">
+                  中 CXMT에 이어 YMTC도 상장···삼전닉스 주가 폭락 재현될까
+                </span>
+                <span class="text-[11px] font-mono text-yellow-400 flex-shrink-0">↗</span>
+              </div>
+              <div class="mt-2 text-[11px] font-medium text-gray-400">
+                시사저널e • <span class="text-yellow-400/90 font-bold">오늘의 브리핑</span>
               </div>
             </a>
             
@@ -618,6 +631,19 @@ body{padding-bottom:34px}
               </div>
             </a>
             
+            <a href="https://news.google.com/rss/articles/CBMiakFVX3lxTE5GOFZaeFhRUWxRUVFKVWFCZFRJWGF0Ylk0UmlsYkFTTlZhUzJLQ0tZTi1ad0VrS1VGc21IdmdULUtITVpzRWlJTWRhcnNtbUxFdWFfSVkySDFBc3FLLWtMTGcxUXVhRl94aGfSAW5BVV95cUxNbDlqYWRTRFR0WV8wRmc0aVNRUWVkUHNIdGM4U1FuQUVGdDBuajJRVFJiUkFVRjF5aHp1UzlTY2JJTm11WjZXeS1YVktJZlRBaHJSRGlGYkRWYW9oLUpVR1I4dFNEdnJQbWFDVENCdw?oc=5" target="_blank" rel="noopener noreferrer nofollow" 
+               class="block p-4 rounded-xl bg-[#141A28] border-2 border-yellow-400 hover:bg-[#1C2538] transition duration-200 group shadow-md">
+              <div class="flex justify-between items-start gap-2">
+                <span class="text-sm font-semibold text-gray-100 group-hover:text-yellow-300 leading-snug line-clamp-2">
+                  9월부터 달라지는 정책…개인정보 보호 강화, 육아·청년·소상공인 지원도 확대
+                </span>
+                <span class="text-[11px] font-mono text-yellow-400 flex-shrink-0">↗</span>
+              </div>
+              <div class="mt-2 text-[11px] font-medium text-gray-400">
+                제주뉴스 • <span class="text-yellow-400/90 font-bold">오늘의 브리핑</span>
+              </div>
+            </a>
+            
             <a href="https://news.google.com/rss/articles/CBMiZEFVX3lxTE9Ib2FMLXRjOTVyOGluRExjbWYtU0JJUVhBcTdLc3JZZjV1bGVvbXk3bng4TU44SW5ncktERzRCeVZzWW9iaTl0cUhXbk1Od3Z3NGsyNUU0OGM1clY5ejBUUlNDZlM?oc=5" target="_blank" rel="noopener noreferrer nofollow" 
                class="block p-4 rounded-xl bg-[#141A28] border-2 border-yellow-400 hover:bg-[#1C2538] transition duration-200 group shadow-md">
               <div class="flex justify-between items-start gap-2">
@@ -627,7 +653,7 @@ body{padding-bottom:34px}
                 <span class="text-[11px] font-mono text-yellow-400 flex-shrink-0">↗</span>
               </div>
               <div class="mt-2 text-[11px] font-medium text-gray-400">
-                한국세정신문 • <span class="text-yellow-400/90 font-bold">오늘의 브리핑</span>
+                taxtimes.co.kr • <span class="text-yellow-400/90 font-bold">오늘의 브리핑</span>
               </div>
             </a>
             
@@ -644,16 +670,16 @@ body{padding-bottom:34px}
               </div>
             </a>
             
-            <a href="https://news.google.com/rss/articles/CBMiZEFVX3lxTE5TU0VETUtIcUZJUWNaVnpNMVJYdHVLNF9TNHdkMkRBWjdGbFRUeEI3Zmx4dnJvODBKNWc5X2tDYl80NVlLa3hVcS1ISk16VUVxZWkyRVVfcnJlbm03X1k0UTc1bnM?oc=5" target="_blank" rel="noopener noreferrer nofollow" 
+            <a href="https://news.google.com/rss/articles/CBMiUkFVX3lxTFB5a21DNGxhdWdrSnBXWFNaY0hIOFBGNUt4SU44bE5mUEZjQm9iQ1lqZ2t5V0ZReTVvLU1SRGltMDBOeHJLbFdabVk1TWxmWk1mLXc?oc=5" target="_blank" rel="noopener noreferrer nofollow" 
                class="block p-4 rounded-xl bg-[#141A28] border-2 border-yellow-400 hover:bg-[#1C2538] transition duration-200 group shadow-md">
               <div class="flex justify-between items-start gap-2">
                 <span class="text-sm font-semibold text-gray-100 group-hover:text-yellow-300 leading-snug line-clamp-2">
-                  ‘연봉 8천만원’ 청년도 받는다…청년미래적금, 소득요건 전면 폐지 [MZ 재테크]
+                  0~12세에 최대 月30만원…지방서 첫 출산때 1500만원 지급
                 </span>
                 <span class="text-[11px] font-mono text-yellow-400 flex-shrink-0">↗</span>
               </div>
               <div class="mt-2 text-[11px] font-medium text-gray-400">
-                디지털데일리 • <span class="text-yellow-400/90 font-bold">오늘의 브리핑</span>
+                매일경제 마켓 • <span class="text-yellow-400/90 font-bold">오늘의 브리핑</span>
               </div>
             </a>
             
@@ -667,19 +693,6 @@ body{padding-bottom:34px}
               </div>
               <div class="mt-2 text-[11px] font-medium text-gray-400">
                 아주경제 • <span class="text-yellow-400/90 font-bold">오늘의 브리핑</span>
-              </div>
-            </a>
-            
-            <a href="https://news.google.com/rss/articles/CBMiZEFVX3lxTFB1dDFhZl9LTGxUNTJZci11VHBPcHZxbnVsVUk2OUw5LWRiVjlXamhCLTRwOEpHV0pTZDFoMjJCT1pPb2hVNUQ0Qkt6ZnU0dm9UTmFJdmxNRGQwYTQtNklMVGZtT0U?oc=5" target="_blank" rel="noopener noreferrer nofollow" 
-               class="block p-4 rounded-xl bg-[#141A28] border-2 border-yellow-400 hover:bg-[#1C2538] transition duration-200 group shadow-md">
-              <div class="flex justify-between items-start gap-2">
-                <span class="text-sm font-semibold text-gray-100 group-hover:text-yellow-300 leading-snug line-clamp-2">
-                  정부, 내년 821조 슈퍼예산 편성…반도체 세수로 162조 '미래대응기금'
-                </span>
-                <span class="text-[11px] font-mono text-yellow-400 flex-shrink-0">↗</span>
-              </div>
-              <div class="mt-2 text-[11px] font-medium text-gray-400">
-                MTN 머니투데이방송 • <span class="text-yellow-400/90 font-bold">오늘의 브리핑</span>
               </div>
             </a>
             
@@ -744,19 +757,6 @@ body{padding-bottom:34px}
               </div>
             </a>
             
-            <a href="https://news.google.com/rss/articles/CBMidkFVX3lxTE40QWVsdUFOQllGdVJDS0xKbGE4Rl9uSnEwVmlvZ25DRDJydUdJSTF3QWVoRFRtQWl1Q1NJM1o2ZnlLTFg0eXU4VVc0c2ltbGpOcFFrcVJEeEhIeDdDZm1vWFlNR0FEU3lOT3hlNDZqTzZiMVRxMmc?oc=5" target="_blank" rel="noopener noreferrer nofollow" 
-               class="block p-4 rounded-xl bg-[#141A28] border-2 border-yellow-400 hover:bg-[#1C2538] transition duration-200 group shadow-md">
-              <div class="flex justify-between items-start gap-2">
-                <span class="text-sm font-semibold text-gray-100 group-hover:text-yellow-300 leading-snug line-clamp-2">
-                  [뉴욕증시24일] 기술주 하락세에 나스닥·S&P500↓
-                </span>
-                <span class="text-[11px] font-mono text-yellow-400 flex-shrink-0">↗</span>
-              </div>
-              <div class="mt-2 text-[11px] font-medium text-gray-400">
-                미주조선일보 • <span class="text-yellow-400/90 font-bold">오늘의 브리핑</span>
-              </div>
-            </a>
-            
             <a href="https://news.google.com/rss/articles/CBMiZEFVX3lxTE9oLV9ReG92QjlWeUxZbVdrbF92TGxiN3JsQllzZEI0a0NNOVN2OFIwUUZaWGFLU3hjZGhSUlR0OHM5eVNLVU9URGZnSm9oODRhZDkwNGQxTmlyWkg5SWd3cmQyR0jSAWhBVV95cUxNTTBIVVFKdVFOX3N3akh1Wl9sTkZVaV84RDhDYVNWdXhfaThDSkc4ZFY2RzFVWTJxNlZTZDFOcGQ3Y2xVclpkVjZ5WGRwa3dTcVN4VXBQaG1QdE14d2lwWGZpLXRmUGMwYg?oc=5" target="_blank" rel="noopener noreferrer nofollow" 
                class="block p-4 rounded-xl bg-[#141A28] border-2 border-yellow-400 hover:bg-[#1C2538] transition duration-200 group shadow-md">
               <div class="flex justify-between items-start gap-2">
@@ -767,6 +767,19 @@ body{padding-bottom:34px}
               </div>
               <div class="mt-2 text-[11px] font-medium text-gray-400">
                 매일일보 • <span class="text-yellow-400/90 font-bold">오늘의 브리핑</span>
+              </div>
+            </a>
+            
+            <a href="https://news.google.com/rss/articles/CBMidkFVX3lxTE40QWVsdUFOQllGdVJDS0xKbGE4Rl9uSnEwVmlvZ25DRDJydUdJSTF3QWVoRFRtQWl1Q1NJM1o2ZnlLTFg0eXU4VVc0c2ltbGpOcFFrcVJEeEhIeDdDZm1vWFlNR0FEU3lOT3hlNDZqTzZiMVRxMmc?oc=5" target="_blank" rel="noopener noreferrer nofollow" 
+               class="block p-4 rounded-xl bg-[#141A28] border-2 border-yellow-400 hover:bg-[#1C2538] transition duration-200 group shadow-md">
+              <div class="flex justify-between items-start gap-2">
+                <span class="text-sm font-semibold text-gray-100 group-hover:text-yellow-300 leading-snug line-clamp-2">
+                  [뉴욕증시24일] 기술주 하락세에 나스닥·S&P500↓
+                </span>
+                <span class="text-[11px] font-mono text-yellow-400 flex-shrink-0">↗</span>
+              </div>
+              <div class="mt-2 text-[11px] font-medium text-gray-400">
+                미주조선일보 • <span class="text-yellow-400/90 font-bold">오늘의 브리핑</span>
               </div>
             </a>
             
@@ -844,16 +857,16 @@ body{padding-bottom:34px}
               </div>
             </a>
             
-            <a href="https://news.google.com/rss/articles/CBMicEFVX3lxTFBlRXlMM2N2THpEeVRQWGdkX3dNa0hpcjdWMEhkcTBiaXVNVVl3d1pCMkJBOWNMQ2RDN2ExX0pLdEEzSUtLTlJFbUhmNUlwNWg3XzlJakZQRHJRd0lza2FkeHBhU21ZQWZZd1BpVC05UUo?oc=5" target="_blank" rel="noopener noreferrer nofollow" 
+            <a href="https://news.google.com/rss/articles/CBMiYEFVX3lxTFBQVDJJb0VMbzBUR2JSRzFtREZrelhOM21SdFNoS09yZmJ1b1U4SW1scmNUWWEwQmZ2VWJhRFA3YzVDamwwTjBtQVFIVTdFdVpDNjRBNUhFOXpmNklnSXQweg?oc=5" target="_blank" rel="noopener noreferrer nofollow" 
                class="block p-4 rounded-xl bg-[#141A28] border-2 border-yellow-400 hover:bg-[#1C2538] transition duration-200 group shadow-md">
               <div class="flex justify-between items-start gap-2">
                 <span class="text-sm font-semibold text-gray-100 group-hover:text-yellow-300 leading-snug line-clamp-2">
-                  [코스피·코스닥지수] 중동 긴장·금리 상승에 뉴욕증시 하락…코스피, 장 후반 반등 가능성
+                  코스피 역대 최대 상승에 양시장 매수 사이드카 발동…또 뒤통수 칠 '가짜 반등'인지 가려내야 한다 #반도체관련주 #삼성전자 #하이닉스 #코스피지수전망 Shannon Elizabeth (W0ioojUy7w)
                 </span>
                 <span class="text-[11px] font-mono text-yellow-400 flex-shrink-0">↗</span>
               </div>
               <div class="mt-2 text-[11px] font-medium text-gray-400">
-                한국강사신문 • <span class="text-yellow-400/90 font-bold">오늘의 브리핑</span>
+                Mshale • <span class="text-yellow-400/90 font-bold">오늘의 브리핑</span>
               </div>
             </a>
             
@@ -862,6 +875,25 @@ body{padding-bottom:34px}
         
       </div>
       </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <h2>KRX 증시 조건검색 스캐너</h2>
+          <p>KRX 공식 일별 데이터로 거래량·거래대금 급증, 신고가, 연속 상승 등 특이 움직임을 자동으로 찾습니다.</p>
+        </div>
+        <a class="more" href="/stock/">전체 스캐너 보기 →</a>
+      </div>
+      <div id="stockHomeSignals" class="stock-home-grid">
+        <a class="card stock-signal-card" href="/stock/"><span>오늘 상승 종목</span><strong id="homeStockUp">-</strong><small>KOSPI + KOSDAQ</small><b class="arrow">↗</b></a>
+        <a class="card stock-signal-card" href="/stock/"><span>거래량 평균 3배 이상</span><strong id="homeStockVolume">-</strong><small>20일 평균 대비</small><b class="arrow">↗</b></a>
+        <a class="card stock-signal-card" href="/stock/"><span>20일 신고가</span><strong id="homeStockHigh">-</strong><small>종가 기준</small><b class="arrow">↗</b></a>
+        <a class="card stock-signal-card" href="/stock/"><span>5일 연속 상승</span><strong id="homeStockStreak">-</strong><small>연속 상승 종목</small><b class="arrow">↗</b></a>
+      </div>
+      <div id="stockHomeMeta" class="stock-home-meta">증시 스캐너 데이터 확인 중...</div>
     </div>
   </section>
 
@@ -983,7 +1015,7 @@ body{padding-bottom:34px}
 <footer>
   <div class="wrap footer-box">
     <span>© MODU.TODAY · Jae-Hyun Kim.</span>
-    <span>뉴스 · YouTube · 계산기 · 게임 · 로또 · 실거래가</span>
+    <span>뉴스 · 증시 스캐너 · YouTube · 계산기 · 게임 · 로또 · 실거래가</span>
   </div>
 </footer>
 
@@ -992,6 +1024,10 @@ body{padding-bottom:34px}
   <div class="track"><div class="marquee">
     <a href="https://news.google.com/rss/articles/CBMiS0FVX3lxTFB4NjNoNHplSEhRcWpQbnhPZXlsaXpSbFhWWXU4TGpjVkVsY0RhSWcxZ3dVZm9aYnFFN3N5MnZTNWdqU2Nyb3JGMUI1SQ?oc=5" target="_blank" rel="noopener noreferrer nofollow" class="inline-flex items-center gap-2 mx-6 text-xs text-yellow-200 hover:text-white transition font-semibold">
       <span class="text-yellow-400 font-extrabold animate-pulse">⚡ BREAKING</span> [오늘의 증시] 9월 1일 코스피 코스닥 <span class="text-[10px] text-emerald-300 font-mono">(뉴스1)</span>
+    </a>
+    
+    <a href="https://news.google.com/rss/articles/CBMidkFVX3lxTE9LQTBpVkpTaTRuOTRYZ2p2RVAxNEU0QjlJbTlDb3o1U2IyNGZKRG9HZkpKU0piNDljdlFlbDItYXp6Q1I5bnQwdm9kRkFrdHhwX3JZYzRpSFowSk1TMmlkNTVZOWVMaTByeGFFcEIyOUVmZ2thWlE?oc=5" target="_blank" rel="noopener noreferrer nofollow" class="inline-flex items-center gap-2 mx-6 text-xs text-yellow-200 hover:text-white transition font-semibold">
+      <span class="text-yellow-400 font-extrabold animate-pulse">⚡ BREAKING</span> [0901마감체크] 코스피, 상승 전환하며 강보합… 코스닥은 1%대 하락 <span class="text-[10px] text-emerald-300 font-mono">(인포스탁데일리)</span>
     </a>
     
     <a href="https://news.google.com/rss/articles/CBMiW0FVX3lxTE0wMEphcU1XWVhXcWsxRHBEZVZ2VlR5cHdPQXQ2SkxmZFlzUUFhMWxLQWhpbWhtN3hUVDFnYjhUeFR4RWg5UDNWNVV1MHhrQlNOWmJESTgwWFVBNVnSAWBBVV95cUxNdWpxSkhSN245ZXJVZnZzZEE0RmdZTkpuM215b0FYYU83WnZQUGdmZXI3eVhWU2JTT3N0MGVwTGlfclhaUklYdDlLRTdTNjd3Q1JDS3Z6QjZ3a2JLMkEtRk8?oc=5" target="_blank" rel="noopener noreferrer nofollow" class="inline-flex items-center gap-2 mx-6 text-xs text-yellow-200 hover:text-white transition font-semibold">
@@ -1018,23 +1054,23 @@ body{padding-bottom:34px}
       <span class="text-yellow-400 font-extrabold animate-pulse">⚡ BREAKING</span> 코스피, 장중 6700대서 등락 지속…코스닥은 1.8%대 하락 <span class="text-[10px] text-emerald-300 font-mono">(강원도민일보)</span>
     </a>
     
-    <a href="https://news.google.com/rss/articles/CBMiZEFVX3lxTE5icjY2aXFKWDIyWHVvbzhFRWNsYmhGUEdBdTE5ZFBicTVGbHdXbDVsdkNvU3Y1RjZUZzBaZ1NKY0ZuZFlySFJEYktCSTR6dWQ5b3M4N0xxV1VkQ3g0YVRneFFLOGE?oc=5" target="_blank" rel="noopener noreferrer nofollow" class="inline-flex items-center gap-2 mx-6 text-xs text-yellow-200 hover:text-white transition font-semibold">
-      <span class="text-yellow-400 font-extrabold animate-pulse">⚡ BREAKING</span> 코스피, 외인 이탈에 6700대로 하락… 코스닥도 약세 <span class="text-[10px] text-emerald-300 font-mono">(MTN 머니투데이방송)</span>
+    <a href="https://news.google.com/rss/articles/CBMic0FVX3lxTFB0eWgxUHZ3dG5XVmQyWWdQNFU3M2F0V2xmYkVzVDhtTVZvblFCTjB1aURoNHAxWW54TmZiaVA4by0zR01DYkJYOXBnV3ZYaFBYUXdMN1dEcURPM1U1SEx4ODIyWTBPR18waWpNX3VDOTNOaTg?oc=5" target="_blank" rel="noopener noreferrer nofollow" class="inline-flex items-center gap-2 mx-6 text-xs text-yellow-200 hover:text-white transition font-semibold">
+      <span class="text-yellow-400 font-extrabold animate-pulse">⚡ BREAKING</span> 美이란 충돌·유가 상승 여파에 코스피·코스닥도 동반 약세 <span class="text-[10px] text-emerald-300 font-mono">(마켓인)</span>
     </a>
     
     <a href="https://news.google.com/rss/articles/CBMibEFVX3lxTFBXRGFBTzJQdWxxek5hczFxZkx5cDJUaWZCM09pNFY1Ync5YjdFR0JNX1o1Z1FTN3NCZWJMNnpyaUY4cDBSTUdvYTc3aWFvXy0xelZVR3hLdzNFeWpyYjVMeDI5NXNWaGFoRnNCeg?oc=5" target="_blank" rel="noopener noreferrer nofollow" class="inline-flex items-center gap-2 mx-6 text-xs text-yellow-200 hover:text-white transition font-semibold">
       <span class="text-yellow-400 font-extrabold animate-pulse">⚡ BREAKING</span> 코스피, 중동발 악재에도 0.23%↑···6830선 회복 마감 <span class="text-[10px] text-emerald-300 font-mono">(스마트비즈)</span>
     </a>
     
-    <a href="https://news.google.com/rss/articles/CBMiVkFVX3lxTE9iSmNOT0N2YWdqVVlNMTI0Nlg0ejZUcXZNSzYzUFdDX0RiS2VJUk5CaU9RYjl3dW1PRHpFOGk0R0l0c0VKM19jTjdfbXlZaVFIVHRoWkZ3?oc=5" target="_blank" rel="noopener noreferrer nofollow" class="inline-flex items-center gap-2 mx-6 text-xs text-yellow-200 hover:text-white transition font-semibold">
-      <span class="text-yellow-400 font-extrabold animate-pulse">⚡ BREAKING</span> 코스피 6835.80 마감…막판 뒤집기 성공한 진짜 이유 <span class="text-[10px] text-emerald-300 font-mono">(위키트리)</span>
-    </a>
-    
     <a href="https://news.google.com/rss/articles/CBMiYEFVX3lxTE9oRjhydEFxMTNySW1FYVgxcWNFZkcxZ1drdVNsZ1Fua0ItalQ0V1FZb0tOby10THlLejcySHBKLTFYM2s5ZUV6aEJZTFlfY2FRckFONVpYVmdWdkJaN0Vjbg?oc=5" target="_blank" rel="noopener noreferrer nofollow" class="inline-flex items-center gap-2 mx-6 text-xs text-yellow-200 hover:text-white transition font-semibold">
       <span class="text-yellow-400 font-extrabold animate-pulse">⚡ BREAKING</span> [환율 전망] 월말 네고는 퇴근, 대외 악재는 출근 <span class="text-[10px] text-emerald-300 font-mono">(kbthink.com)</span>
     </a>
     
-    <a href="https://news.google.com/rss/articles/CBMiRkFVX3lxTE1zclNCNzF5LWxiRjZ3R3lXVnMyQmJMeE9sZURmb1VVaEt4OFBCaUlOdEpzYXlQdHp5Slk1LWJ5cHhNd1lYUVE?oc=5" target="_blank" rel="noopener noreferrer nofollow" class="inline-flex items-center gap-2 mx-6 text-xs text-yellow-200 hover:text-white transition font-semibold">
+    <a href="https://news.google.com/rss/articles/CBMidEFVX3lxTE1yVXVuRGRLU2lfT2g0VDVhMWVJcV9SNzkzOGVIM1NVMzdhd3lXQWxKdjdhbVg2c0FWX2x2SzJOXzRUbV9HekczYUVrR3FNY3huRkJRa1VvbmYwdk9IZlNqcm1nX1RkbTBjSDJuZVNEVXNBUE1a0gF0QVVfeXFMTXJVdW5EZEtTaV9PaDRUNWExZUlxX1I3OTM4ZUgzU1UzN2F3eVdBbEp2N2FtWDZzQVZfbHZLMk5fNFRtX0d6RzNhRWtHcU1jeG5GQlFrVW9uZjB2T0hmU2pybWdfVGRtMGNIMm5lU0RVc0FQTVo?oc=5" target="_blank" rel="noopener noreferrer nofollow" class="inline-flex items-center gap-2 mx-6 text-xs text-yellow-200 hover:text-white transition font-semibold">
+      <span class="text-yellow-400 font-extrabold animate-pulse">⚡ BREAKING</span> 우리銀 &quot;달러-원 내년 초까지 하락세…하단 1,340원으로 하향&quot; <span class="text-[10px] text-emerald-300 font-mono">(연합인포맥스)</span>
+    </a>
+    
+    <a href="https://news.google.com/rss/articles/CBMiS0FVX3lxTE5zZFZhY0lpWlFad1JwSmV6TUpwLVVobWY1d1NINlBtSUNXWW1KYzJuUkhFOGZPWENBaWRxVzRFYllqQlQ3dHA5cnJaTQ?oc=5" target="_blank" rel="noopener noreferrer nofollow" class="inline-flex items-center gap-2 mx-6 text-xs text-yellow-200 hover:text-white transition font-semibold">
       <span class="text-yellow-400 font-extrabold animate-pulse">⚡ BREAKING</span> 중동 리스크 재점화에 저가매수세까지⋯&quot;1370원 중심 상승&quot;[환율전망] <span class="text-[10px] text-emerald-300 font-mono">(v.daum.net)</span>
     </a>
     
@@ -1042,20 +1078,16 @@ body{padding-bottom:34px}
       <span class="text-yellow-400 font-extrabold animate-pulse">⚡ BREAKING</span> [모닝 리포트] 중동 불안에 원·달러 환율 상승 전망...1370원 안팎 <span class="text-[10px] text-emerald-300 font-mono">(뉴스핌)</span>
     </a>
     
-    <a href="https://news.google.com/rss/articles/CBMihgFBVV95cUxONHY4aFJJXzFQWERlT0tmQ3NnZkJlVlZoMUc4QzM3eEUyTGxqU1RCamVCNTRES0I3X1k3cFlvN0F4Y2dnSklkblNiLU5aaXVCR2d4dmRzTVVzOHhCQm1PbExEVG9xN2xVMFlJVXUxMFV5LUJTX2g2Q21nRjFoUGkwVWFHUVVpUdIBmgFBVV95cUxNVWRKai1GdTBBOGxRMWJROWZ2ZkdCQnpFRUFXSEhYRlhXMEF4R2JzWnQ5bTl0OG8tUW1EVExoelYwZ0k2N0FQLUhtc1QydlVIdFp5eFJFelE4RmUycmctVjJWRDZ0M3pVeTY3NVFKaU0xOFcyekhBX3VubkVKNTExczhjNXFwVGJEWHZYNUtaZ215S2ZPczhmeUV3?oc=5" target="_blank" rel="noopener noreferrer nofollow" class="inline-flex items-center gap-2 mx-6 text-xs text-yellow-200 hover:text-white transition font-semibold">
-      <span class="text-yellow-400 font-extrabold animate-pulse">⚡ BREAKING</span> [경제 포커스] 환율 3대 변수 ‘韓 기업’ ‘美 금리’ ‘국가부채’ - 조선비즈 <span class="text-[10px] text-emerald-300 font-mono">(Chosunbiz)</span>
-    </a>
-    
-    <a href="https://news.google.com/rss/articles/CBMidEFVX3lxTE5xNHB3Wl9BX0UweWdZaXlyTjVlRElwSkYxNW5vVnZLSnRFTWpZV1dqaDZEN1BCOTdJQ2hoNDByZ0xna2N0YURrbGhSSWh3XzF5T3VMWnpGNmhnSDlpRk80eDJJTVlpWjRMNkFMbEZXdWZ4M0Q4?oc=5" target="_blank" rel="noopener noreferrer nofollow" class="inline-flex items-center gap-2 mx-6 text-xs text-yellow-200 hover:text-white transition font-semibold">
-      <span class="text-yellow-400 font-extrabold animate-pulse">⚡ BREAKING</span> 달러-원 1,360원대도 과도한 하락 아니다…&quot;강한 쏠림 땐 단기 하단 1,345원&quot; | <span class="text-[10px] text-emerald-300 font-mono">(연합인포맥스)</span>
-    </a>
-    
     <a href="https://news.google.com/rss/articles/CBMibEFVX3lxTE1PTjd2RTJxaGU5YzVPdDRUWFN2TXAwQ1RZMGg2THdMbTkwTHA0UXJWQm5INzNEd1JzZjFjR0FaZUJyZi1US09hYTVaMGlPQ2t0R1VXYzNqY1NpYkpGdVY0WVR5MUtuRjVqNUQ2Tg?oc=5" target="_blank" rel="noopener noreferrer nofollow" class="inline-flex items-center gap-2 mx-6 text-xs text-yellow-200 hover:text-white transition font-semibold">
       <span class="text-yellow-400 font-extrabold animate-pulse">⚡ BREAKING</span> [9월 1주차] 환율(FX) 전망 <span class="text-[10px] text-emerald-300 font-mono">(kbthink.com)</span>
     </a>
     
     <a href="https://news.google.com/rss/articles/CBMihwFBVV95cUxPaHFyUHd3Y280RmlqNmVJdjJKSmhYejBWSFRMUDllenpkWlJQMmlod25qLXhJZmtsTmNuMmd1YlJKdVJhQTQ3a1RKYnR1aHlrdTd6UGc4YTZZNmlkeFplTHg5MUJZMjRjNXdXLXdTTGdVY04zTU41cHR0UWpJNllWamk5b2JicEU?oc=5" target="_blank" rel="noopener noreferrer nofollow" class="inline-flex items-center gap-2 mx-6 text-xs text-yellow-200 hover:text-white transition font-semibold">
-      <span class="text-yellow-400 font-extrabold animate-pulse">⚡ BREAKING</span> 2026, 2027, 2028~2030년 및 향후 USD CAD 전망 <span class="text-[10px] text-emerald-300 font-mono">(LiteFinance)</span>
+      <span class="text-yellow-400 font-extrabold animate-pulse">⚡ BREAKING</span> 2026, 2027, 2028~2030년 및 향후 USD CAD 전망 <span class="text-[10px] text-emerald-300 font-mono">(litefinance.org)</span>
+    </a>
+    
+    <a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE04YnpGWEtMb3hnWWREWUgzTXF3dU1DMDk2N05JVEZhakE3bzJFS0xpZFNDMG5qc3E4MHktYnVWb25HTXRwcTlHUndIMHllSWtyelEwMUtjaWxqWlhzam40aFBYMmZXLXIxM3JjQ2pRT1pvaDg?oc=5" target="_blank" rel="noopener noreferrer nofollow" class="inline-flex items-center gap-2 mx-6 text-xs text-yellow-200 hover:text-white transition font-semibold">
+      <span class="text-yellow-400 font-extrabold animate-pulse">⚡ BREAKING</span> [포커스] 달러 약한데 환율은 1370원…원화 누르는 ‘고유가·고금리’ <span class="text-[10px] text-emerald-300 font-mono">(오늘경제)</span>
     </a>
     
     <a href="https://news.google.com/rss/articles/CBMimAFBVV95cUxQUjk0djBNaVJqNVpVZ2pMbjVPWEhuR2NTb19uS0RIbDFTdlN6U0pwMWZxVzFYVXFFY24xN2p1S1ZFdWlLU2tvQTNQdmEyQUtka1BDQ3RoNkF1TEYtbUhNeG5ybnl4UE5ldWRZRHdwajFFc3V5QkdKVTRLTDB3eUk0MFpXUC1pMWZuZ1ItbngzNXRJdUxXUnRPSg?oc=5" target="_blank" rel="noopener noreferrer nofollow" class="inline-flex items-center gap-2 mx-6 text-xs text-yellow-200 hover:text-white transition font-semibold">
@@ -1063,19 +1095,15 @@ body{padding-bottom:34px}
     </a>
     
     <a href="https://news.google.com/rss/articles/CBMigAFBVV95cUxNOGpZazA5bVZfQ0hVc2I0LTBZMHlJdEdGcEtpcXdEZUlhZG40T3pibHZNanpMU0ctbmJEcy1yQUFSSm1PUDNkUHFyU3ZnN2JJVEtCdWwwUFB5UjJfM1ZxSDNkOXVBZDZQN2JTX1o1QU1TdDBNaGZBWlNMZkwwNHNrXw?oc=5" target="_blank" rel="noopener noreferrer nofollow" class="inline-flex items-center gap-2 mx-6 text-xs text-yellow-200 hover:text-white transition font-semibold">
-      <span class="text-yellow-400 font-extrabold animate-pulse">⚡ BREAKING</span> 대덕전자, 환율보다 중요한 AI향 매출 본격 확대 알파경제 alphabiz <span class="text-[10px] text-emerald-300 font-mono">(Investing.com 한국어)</span>
+      <span class="text-yellow-400 font-extrabold animate-pulse">⚡ BREAKING</span> 대덕전자, 환율보다 중요한 AI향 매출 본격 확대 알파경제 alphabiz <span class="text-[10px] text-emerald-300 font-mono">(Investing.com)</span>
     </a>
     
-    <a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE04YnpGWEtMb3hnWWREWUgzTXF3dU1DMDk2N05JVEZhakE3bzJFS0xpZFNDMG5qc3E4MHktYnVWb25HTXRwcTlHUndIMHllSWtyelEwMUtjaWxqWlhzam40aFBYMmZXLXIxM3JjQ2pRT1pvaDg?oc=5" target="_blank" rel="noopener noreferrer nofollow" class="inline-flex items-center gap-2 mx-6 text-xs text-yellow-200 hover:text-white transition font-semibold">
-      <span class="text-yellow-400 font-extrabold animate-pulse">⚡ BREAKING</span> [포커스] 달러 약한데 환율은 1370원…원화 누르는 ‘고유가·고금리’ <span class="text-[10px] text-emerald-300 font-mono">(오늘경제)</span>
+    <a href="https://news.google.com/rss/articles/CBMidEFVX3lxTE5xNHB3Wl9BX0UweWdZaXlyTjVlRElwSkYxNW5vVnZLSnRFTWpZV1dqaDZEN1BCOTdJQ2hoNDByZ0xna2N0YURrbGhSSWh3XzF5T3VMWnpGNmhnSDlpRk80eDJJTVlpWjRMNkFMbEZXdWZ4M0Q4?oc=5" target="_blank" rel="noopener noreferrer nofollow" class="inline-flex items-center gap-2 mx-6 text-xs text-yellow-200 hover:text-white transition font-semibold">
+      <span class="text-yellow-400 font-extrabold animate-pulse">⚡ BREAKING</span> 달러-원 1,360원대도 과도한 하락 아니다…&quot;강한 쏠림 땐 단기 하단 1,345원&quot; | <span class="text-[10px] text-emerald-300 font-mono">(연합인포맥스)</span>
     </a>
     
     <a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE1oUTFTLU1PTU1NMEp5b09Ec0lMVnNuNTEwSHJVWVFlSEJ1V0lsNkMxbzFtLWpOS0FqQnhIX3hwdUpwT19LUE5rd2xQeXBCMHpHZ1BkMlJtYUxUMVVwSkdyRUFON3hwdU40MDlWWUs3YllnTjTSAXNBVV95cUxNaFExUy1NT01NTTBKeW9PRHNJTFZzbjUxMEhyVVlRZUhCdVdJbDZDMW8xbS1qTktBakJ4SF94cHVKcE9fS1BOa3dsUHlwQjB6R2dQZDJSbWFMVDFVcEpHckVBTjd4cHVONDA5VllLN2JZZ040?oc=5" target="_blank" rel="noopener noreferrer nofollow" class="inline-flex items-center gap-2 mx-6 text-xs text-yellow-200 hover:text-white transition font-semibold">
-      <span class="text-yellow-400 font-extrabold animate-pulse">⚡ BREAKING</span> 유가 & 美 장기금리 '급등' 속...국제 금값 '하락' & 은값 '뚝' <span class="text-[10px] text-emerald-300 font-mono">(초이스경제)</span>
-    </a>
-    
-    <a href="https://news.google.com/rss/articles/CBMiVkFVX3lxTE5hYlBIMFZ4M2Y0NWt0Y0p0b1VtcEVSNHpmZG9hRm5saFZSRzM0RXg0ZG1OcFBuZjZKWERBYTlzQmxZYXBIYzVEYzFVYVlxREx3U3FVWkFB?oc=5" target="_blank" rel="noopener noreferrer nofollow" class="inline-flex items-center gap-2 mx-6 text-xs text-yellow-200 hover:text-white transition font-semibold">
-      <span class="text-yellow-400 font-extrabold animate-pulse">⚡ BREAKING</span> 9월엔 용돈 벌자…공모주 청약 총정리, 시작은 언제? <span class="text-[10px] text-emerald-300 font-mono">(위키트리)</span>
+      <span class="text-yellow-400 font-extrabold animate-pulse">⚡ BREAKING</span> 유가 & 美 장기금리 '급등' 속...국제 금값 '하락' & 은값 '뚝' <span class="text-[10px] text-emerald-300 font-mono">(choicenews.co.kr)</span>
     </a>
     
     <a href="https://news.google.com/rss/articles/CBMiYkFVX3lxTE5OVHB2NnJZbTVrelE2OUppeTRRcGN3ZzZGdUpGRS1oWHNYV2RxV2J6R0xBdXdPTGk4MXNsZW1SUldSX2FCaElJcTB0dF93SjQxcDZ0SWgtR0lTWWp3bG5Uc2dR?oc=5" target="_blank" rel="noopener noreferrer nofollow" class="inline-flex items-center gap-2 mx-6 text-xs text-yellow-200 hover:text-white transition font-semibold">
@@ -1087,12 +1115,35 @@ body{padding-bottom:34px}
     </a>
     
     <a href="https://news.google.com/rss/articles/CBMibEFVX3lxTE1YQjI3djNkZ2wwWmZrWWdqSFJoaUVKNW5HdjJ1XzlyalNHLWpRNUlJZGtKUlZSa3FCQm0wUkRYTmRWSDZfd0R1UWpxNXp6ejh0T2VFTENtbFV6MUtEbW5maGxWY2h6YzJCamIwRw?oc=5" target="_blank" rel="noopener noreferrer nofollow" class="inline-flex items-center gap-2 mx-6 text-xs text-yellow-200 hover:text-white transition font-semibold">
-      <span class="text-yellow-400 font-extrabold animate-pulse">⚡ BREAKING</span> 9월 공모주 ‘슈퍼 먼스’ 온다...새내기주 반등할까 <span class="text-[10px] text-emerald-300 font-mono">(magazine.hankyung.com)</span>
+      <span class="text-yellow-400 font-extrabold animate-pulse">⚡ BREAKING</span> 9월 공모주 ‘슈퍼 먼스’ 온다...새내기주 반등할까 <span class="text-[10px] text-emerald-300 font-mono">(한경매거진&북)</span>
+    </a>
+    
+    <a href="https://news.google.com/rss/articles/CBMiV0FVX3lxTE9SaGdSLThOXzFOVWtxOG8ya2oxTHJDeHk0YVZsYkVmeVFpT1IycEk4Q3JOcktURE9Nby1oSVNzVTFKd2FSNm9zcmVidHBDb0tZN1otU3BtNA?oc=5" target="_blank" rel="noopener noreferrer nofollow" class="inline-flex items-center gap-2 mx-6 text-xs text-yellow-200 hover:text-white transition font-semibold">
+      <span class="text-yellow-400 font-extrabold animate-pulse">⚡ BREAKING</span> 올 신규 상장 27곳에 그쳐…얼어붙은 IPO시장 <span class="text-[10px] text-emerald-300 font-mono">(헤럴드경제)</span>
     </a>
     </div></div>
 </div>
 
 
+
+<script>
+(function(){
+  const nf=new Intl.NumberFormat("ko-KR");
+  fetch("/stock/data/scanner.json?v="+Date.now(),{cache:"no-store"})
+    .then(r=>{if(!r.ok) throw new Error("HTTP "+r.status);return r.json();})
+    .then(d=>{
+      const s=d.summary||{};
+      const set=(id,v)=>{const el=document.getElementById(id);if(el)el.textContent=nf.format(Number(v||0))+"종목";};
+      set("homeStockUp",(d.market||{}).up);
+      set("homeStockVolume",s.volume_surge);
+      set("homeStockHigh",s.new_high_20d);
+      set("homeStockStreak",s.up_streak_5d);
+      const meta=document.getElementById("stockHomeMeta");
+      if(meta) meta.textContent="기준 거래일 "+(d.trade_date||"-")+" · 데이터 갱신 완료 "+(d.updated_at_text||d.updated_at||"-");
+    })
+    .catch(e=>{const meta=document.getElementById("stockHomeMeta");if(meta)meta.textContent="증시 스캐너 준비 중 · 전체 페이지에서 확인하세요.";console.error("Stock home:",e);});
+})();
+</script>
 
 <script>
 (function(){
@@ -1144,14 +1195,6 @@ body{padding-bottom:34px}
   loadYoutubeHome();
 })();
 </script>
-
-  <!-- Vercel Web Analytics -->
-  <script>
-    window.va = window.va || function () {
-      (window.vaq = window.vaq || []).push(arguments);
-    };
-  </script>
-  <script defer src="/_vercel/insights/script.js"></script>
 
 </body>
 </html>
