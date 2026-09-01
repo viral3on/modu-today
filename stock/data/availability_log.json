@@ -1,1 +1,1 @@
-{"checks":[],"first_available":{}}
+{"checks":[{"target_date":"2026-08-31","target_date_raw":"20260831","checked_at":"2026-09-01T22:01+09:00","checked_at_text":"2026.09.01 22:01 KST","available":true,"rows":2766}],"first_available":{"20260831":"2026.09.01 22:01 KST"},"last_check":{"target_date":"2026-08-31","target_date_raw":"20260831","checked_at":"2026-09-01T22:01+09:00","checked_at_text":"2026.09.01 22:01 KST","available":true,"rows":2766}}
