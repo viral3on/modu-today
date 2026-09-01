@@ -2,8 +2,13 @@ name: Update stock scanner
 
 on:
   schedule:
-    # 평일 18:30 KST = 09:30 UTC. KRX 종가 2차 전송(18:10) 이후 실행
+    # KRX OPEN API 실제 당일 반영시각을 측정하기 위한 임시 모니터링
+    # 평일 18:30 KST = 09:30 UTC
     - cron: "30 9 * * 1-5"
+    # 평일 21:30 KST = 12:30 UTC
+    - cron: "30 12 * * 1-5"
+    # 장 종료일 다음날 00:30 KST = 전날 15:30 UTC
+    - cron: "30 15 * * 1-5"
   workflow_dispatch:
 
 permissions:
@@ -39,6 +44,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add stock/data/scanner.json stock/data/snapshot.json
+          if [ -f stock/data/availability_log.json ]; then git add stock/data/availability_log.json; fi
           if [ -f sitemap.xml ]; then git add sitemap.xml; fi
           if git diff --cached --quiet; then
             echo "No stock scanner changes."
