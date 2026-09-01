@@ -111,6 +111,7 @@ def parse_items(root, code):
 
 def fetch_one(code, ym):
     last = None
+    retry_waits = (5, 15)
     for attempt in range(3):
         try:
             root, total = request_xml(code, ym, 1)
@@ -124,7 +125,9 @@ def fetch_one(code, ym):
         except Exception as e:
             last = e
             if attempt < 2:
-                time.sleep(1.2 * (attempt + 1))
+                wait = retry_waits[attempt]
+                print(f"RETRY {REGION_BY_CODE[code]['name']} {ym}: attempt={attempt + 1}/3 error={type(e).__name__}: {e} -> wait {wait}s", flush=True)
+                time.sleep(wait)
     raise last
 
 # Fast endpoint diagnostic: HTTPS first, then HTTP fallback.
@@ -146,8 +149,8 @@ for label, candidate in [("HTTPS", HTTPS_ENDPOINT), ("HTTP", HTTP_ENDPOINT)]:
         print(f"API TEST {label} FAIL: {type(e).__name__}: {e}", flush=True)
 
 if not selected_endpoint:
-    print("FATAL: both HTTPS and HTTP API tests failed. Nationwide collection was not started; existing JSON files were preserved.", flush=True)
-    raise SystemExit(1)
+    print("SKIP: both HTTPS and HTTP API tests failed. Nationwide collection was not started; existing JSON files were preserved. Temporary MOLIT API outage; next scheduled run will retry.", flush=True)
+    raise SystemExit(0)
 
 ENDPOINT = selected_endpoint
 print(f"API ENDPOINT SELECTED: {'HTTPS' if ENDPOINT.startswith('https://') else 'HTTP'}", flush=True)
@@ -176,11 +179,14 @@ with ThreadPoolExecutor(max_workers=4) as ex:
 
 # 전부 실패했다면 빈 파일을 저장하지 않고 Action 자체를 실패 처리
 if success_calls == 0:
-    raise SystemExit("FATAL: all API calls failed. Existing JSON files were preserved.")
+    print("SKIP: all API calls failed. Existing JSON files were preserved. Next scheduled run will retry.", flush=True)
+    raise SystemExit(0)
 
-# 성공률이 비정상적으로 낮아도 기존 데이터 보호 + Action 실패
-if success_calls < max(10, len(jobs) // 4):
-    raise SystemExit(f"FATAL: only {success_calls}/{len(jobs)} API calls succeeded. Existing JSON files were preserved.")
+# 성공률이 비정상적으로 낮으면 불완전한 데이터로 덮어쓰지 않고 기존 데이터 유지
+minimum_success = max(10, len(jobs) // 4)
+if success_calls < minimum_success:
+    print(f"SKIP: only {success_calls}/{len(jobs)} API calls succeeded (minimum={minimum_success}). Existing JSON files were preserved. Next scheduled run will retry.", flush=True)
+    raise SystemExit(0)
 
 trade_file = DATA / "trades.json"
 try:
