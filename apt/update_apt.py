@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import os, json, time, urllib.parse, urllib.request, urllib.error
 import xml.etree.ElementTree as ET
-from datetime import datetime
+from datetime import datetime, timezone, timedelta
 from pathlib import Path
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
@@ -204,7 +204,9 @@ for x in rows:
         clean.append(x)
 
 clean.sort(key=lambda x: (x.get("date", ""), x.get("price_manwon", 0)), reverse=True)
-stamp = datetime.now().astimezone().isoformat(timespec="minutes")
+# GitHub Actions 서버는 UTC로 실행될 수 있으므로 갱신 완료시각을 명시적으로 한국시간(KST, UTC+9)으로 기록
+KST = timezone(timedelta(hours=9))
+stamp = datetime.now(KST).isoformat(timespec="minutes")
 
 trade_file.write_text(json.dumps({
     "updated_at": stamp,
