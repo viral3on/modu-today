@@ -1,0 +1,50 @@
+name: Update stock scanner
+
+on:
+  schedule:
+    # 평일 16:40 KST = 07:40 UTC (장 마감 후)
+    - cron: "40 7 * * 1-5"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install packages
+        run: |
+          python -m pip install --upgrade pip
+          pip install pykrx pandas
+
+      - name: Build stock scanner data
+        run: python -u stock/update_stock.py
+
+      - name: Update sitemap
+        run: |
+          if [ -f generate_sitemap.py ]; then
+            python generate_sitemap.py
+          fi
+
+      - name: Commit data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add stock/data/scanner.json
+          if [ -f sitemap.xml ]; then git add sitemap.xml; fi
+          if git diff --cached --quiet; then
+            echo "No stock scanner changes."
+            exit 0
+          fi
+          git commit -m "Update stock scanner data"
+          git push
