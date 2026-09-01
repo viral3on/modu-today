@@ -108,7 +108,7 @@ html_template = """<!doctype html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>MODU.TODAY</title>
-<meta name="description" content="뉴스, YouTube 순위, 계산기, 게임, 로또, 아파트 실거래가를 한곳에서 확인하세요.">
+<meta name="description" content="증시 스캐너, 뉴스, YouTube 순위, 계산기, 게임, 로또, 아파트 실거래가를 한곳에서 확인하세요.">
 <style>
 :root{{
   --bg:#f6f8fc;
@@ -195,7 +195,7 @@ button{{font:inherit}}
 }}
 .quick{{
   position:relative;z-index:2;
-  display:grid;grid-template-columns:repeat(6,1fr);
+  display:grid;grid-template-columns:repeat(7,1fr);
   gap:10px;margin-top:35px
 }}
 .quick a{{
@@ -404,6 +404,17 @@ body{{padding-bottom:34px}}
   .feature-copy{{padding:24px}}
 }}
 
+.stock-home-grid{{display:grid;grid-template-columns:repeat(4,1fr);gap:13px}}
+.stock-signal-card{{padding:20px;position:relative;overflow:hidden;transition:.18s ease}}
+.stock-signal-card:hover{{transform:translateY(-3px);box-shadow:var(--shadow)}}
+.stock-signal-card span{{display:block;color:#667085;font-size:12px;font-weight:700}}
+.stock-signal-card strong{{display:block;margin-top:10px;font-size:28px;letter-spacing:-1px}}
+.stock-signal-card small{{display:block;margin-top:6px;color:#98a2b3;font-size:11px}}
+.stock-signal-card .arrow{{position:absolute;right:16px;top:17px;color:#6b63e8;font-weight:900}}
+.stock-home-meta{{margin-top:11px;color:#98a2b3;font-size:11px;text-align:right}}
+@media(max-width:900px){{.stock-home-grid{{grid-template-columns:repeat(2,1fr)}}}}
+@media(max-width:520px){{.stock-home-grid{{grid-template-columns:1fr 1fr}}.stock-signal-card{{padding:16px}}.stock-signal-card strong{{font-size:23px}}}}
+
 </style>
 </head>
 <body>
@@ -413,6 +424,7 @@ body{{padding-bottom:34px}}
     <a href="/" class="logo"><span class="logo-mark"></span>MODU.TODAY</a>
     <nav class="menu">
       <a href="/">뉴스</a>
+      <a href="/stock/">증시 스캐너</a>
       <a href="/youtube/">YouTube 순위</a>
       <a href="/calculator/">계산기</a>
       <a href="/games/">게임</a>
@@ -428,11 +440,12 @@ body{{padding-bottom:34px}}
       <div class="hero-box">
         <span class="eyebrow">● 오늘 필요한 정보를 한곳에</span>
         <h1>오늘 뭐 볼까?<br>MODU.TODAY에서 한 번에.</h1>
-        <p>하루 6번 갱신되는 증시·정책 뉴스부터 YouTube 순위, 생활 계산기, 무료 게임,<br>
-        로또 당첨정보와 전국 아파트 실거래가까지 자주 찾는 정보를 한곳에 모았습니다.</p>
+        <p>증시·정책 뉴스와 KRX 공식 데이터 기반 증시 스캐너부터 YouTube 순위, 생활 계산기,<br>
+        무료 게임, 로또 당첨정보와 전국 아파트 실거래가까지 자주 찾는 정보를 한곳에 모았습니다.</p>
 
         <div class="quick">
           <a href="/"><span class="ico">📰</span><strong>증시·정책 뉴스</strong><small>하루 6번 실시간 업데이트</small></a>
+          <a href="/stock/"><span class="ico">📡</span><strong>증시 스캐너</strong><small>거래량·거래대금·신고가 조건검색</small></a>
           <a href="/youtube/"><span class="ico">📺</span><strong>YouTube 순위</strong><small>일·주·월 조회수 상승 추적</small></a>
           <a href="/calculator/"><span class="ico">🧮</span><strong>생활 계산기</strong><small>복잡한 계산을 쉽고 빠르게</small></a>
           <a href="/games/"><span class="ico">🎮</span><strong>무료 웹게임</strong><small>설치 없이 바로 플레이</small></a>
@@ -457,6 +470,25 @@ body{{padding-bottom:34px}}
 {news_content}
       </div>
       </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <h2>KRX 증시 조건검색 스캐너</h2>
+          <p>KRX 공식 일별 데이터로 거래량·거래대금 급증, 신고가, 연속 상승 등 특이 움직임을 자동으로 찾습니다.</p>
+        </div>
+        <a class="more" href="/stock/">전체 스캐너 보기 →</a>
+      </div>
+      <div id="stockHomeSignals" class="stock-home-grid">
+        <a class="card stock-signal-card" href="/stock/"><span>오늘 상승 종목</span><strong id="homeStockUp">-</strong><small>KOSPI + KOSDAQ</small><b class="arrow">↗</b></a>
+        <a class="card stock-signal-card" href="/stock/"><span>거래량 평균 3배 이상</span><strong id="homeStockVolume">-</strong><small>20일 평균 대비</small><b class="arrow">↗</b></a>
+        <a class="card stock-signal-card" href="/stock/"><span>20일 신고가</span><strong id="homeStockHigh">-</strong><small>종가 기준</small><b class="arrow">↗</b></a>
+        <a class="card stock-signal-card" href="/stock/"><span>5일 연속 상승</span><strong id="homeStockStreak">-</strong><small>연속 상승 종목</small><b class="arrow">↗</b></a>
+      </div>
+      <div id="stockHomeMeta" class="stock-home-meta">증시 스캐너 데이터 확인 중...</div>
     </div>
   </section>
 
@@ -578,7 +610,7 @@ body{{padding-bottom:34px}}
 <footer>
   <div class="wrap footer-box">
     <span>© MODU.TODAY · Jae-Hyun Kim.</span>
-    <span>뉴스 · YouTube · 계산기 · 게임 · 로또 · 실거래가</span>
+    <span>뉴스 · 증시 스캐너 · YouTube · 계산기 · 게임 · 로또 · 실거래가</span>
   </div>
 </footer>
 
@@ -588,6 +620,25 @@ body{{padding-bottom:34px}}
 </div>
 
 
+
+<script>
+(function(){{
+  const nf=new Intl.NumberFormat("ko-KR");
+  fetch("/stock/data/scanner.json?v="+Date.now(),{{cache:"no-store"}})
+    .then(r=>{{if(!r.ok) throw new Error("HTTP "+r.status);return r.json();}})
+    .then(d=>{{
+      const s=d.summary||{{}};
+      const set=(id,v)=>{{const el=document.getElementById(id);if(el)el.textContent=nf.format(Number(v||0))+"종목";}};
+      set("homeStockUp",(d.market||{{}}).up);
+      set("homeStockVolume",s.volume_surge);
+      set("homeStockHigh",s.new_high_20d);
+      set("homeStockStreak",s.up_streak_5d);
+      const meta=document.getElementById("stockHomeMeta");
+      if(meta) meta.textContent="기준 거래일 "+(d.trade_date||"-")+" · 데이터 갱신 완료 "+(d.updated_at_text||d.updated_at||"-");
+    }})
+    .catch(e=>{{const meta=document.getElementById("stockHomeMeta");if(meta)meta.textContent="증시 스캐너 준비 중 · 전체 페이지에서 확인하세요.";console.error("Stock home:",e);}});
+}})();
+</script>
 
 <script>
 (function(){{
