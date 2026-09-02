@@ -36,4 +36,13 @@ jobs:
           if [ -f stock/data/availability_log.json ]; then git add stock/data/availability_log.json; fi
           git diff --cached --quiet && exit 0
           git commit -m "Refresh KRX stock scanner"
-          git push
+          if ! git push; then
+            echo "Remote changed during refresh; rebasing and retrying."
+            git pull --rebase origin main
+            python seo_static.py
+            python generate_sitemap.py
+            git add stock/data/scanner.json stock/data/snapshot.json stock/index.html sitemap.xml
+            if [ -f stock/data/availability_log.json ]; then git add stock/data/availability_log.json; fi
+            if ! git diff --cached --quiet; then git commit --amend --no-edit; fi
+            git push
+          fi
