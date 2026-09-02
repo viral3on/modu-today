@@ -2,13 +2,16 @@ name: Update stock scanner
 
 on:
   schedule:
-    # KRX OPEN API 실제 당일 반영시각을 측정하기 위한 임시 모니터링
+    # KRX OPEN API 실제 당일 반영시각을 측정하기 위한 모니터링
     # 평일 18:30 KST = 09:30 UTC
     - cron: "30 9 * * 1-5"
     # 평일 21:30 KST = 12:30 UTC
     - cron: "30 12 * * 1-5"
     # 장 종료일 다음날 00:30 KST = 전날 15:30 UTC
     - cron: "30 15 * * 1-5"
+    # 다음날 아침 07:30 KST 재확인 = 전날 22:30 UTC
+    # KRX 데이터 반영이 늦어진 경우 전 거래일 데이터를 다시 갱신
+    - cron: "30 22 * * 0-4"
   workflow_dispatch:
 
 permissions:
