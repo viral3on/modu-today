@@ -2,6 +2,12 @@ name: Update SEO Static HTML
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - "seo_static.py"
+      - ".github/workflows/update-seo-static.yml"
   workflow_run:
     workflows:
       - "Update stock scanner"
@@ -15,15 +21,20 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: modu-derived-html-${{ github.ref }}
+  cancel-in-progress: false
+
 jobs:
   render:
     if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
-          ref: ${{ github.event_name == 'workflow_dispatch' && github.ref_name || 'main' }}
-      - uses: actions/setup-python@v5
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-python@v6
         with:
           python-version: '3.12'
       - name: Render static SEO content
@@ -37,4 +48,13 @@ jobs:
           git add stock/index.html youtube/index.html lotto/index.html apt/index.html sitemap.xml
           git diff --cached --quiet && exit 0
           git commit -m "Update static SEO snapshots"
-          git push
+
+          if ! git push; then
+            echo "Remote changed while SEO snapshot was being rendered; rebasing and rerendering."
+            git pull --rebase origin main
+            python seo_static.py
+            python generate_sitemap.py
+            git add stock/index.html youtube/index.html lotto/index.html apt/index.html sitemap.xml
+            git commit --amend --no-edit
+            git push
+          fi
