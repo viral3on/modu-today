@@ -66,6 +66,8 @@
     .negative{color:#fb7185}
     .neutral{color:#e2e8f0}
   </style>
+  <link rel="stylesheet" href="/calculator/theme.css">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "주식 수익률 계산기", "url": "https://modu.today/calculator/stock-return.html", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "KRW"}, "description": "매수가·매도가·수량과 비용을 반영해 주식 투자 손익과 수익률을 계산합니다."}</script>
 </head>
 <body>
   <div class="max-w-6xl mx-auto px-4 py-5 md:py-8">
@@ -179,7 +181,8 @@
       </p>
     </section>
 
-    <footer class="text-center text-xs text-slate-500 py-8">
+    <section class="modu-seo"><div class="modu-seo-in"><h2>이 계산기는 어떻게 사용하나요?</h2><p>매수가·매도가·수량과 비용을 반영해 주식 투자 손익과 수익률을 계산합니다. 계산 결과는 입력한 값과 페이지에 표시된 계산 기준을 바탕으로 한 참고용 예상치입니다. 실제 적용 금액은 제도 변경, 개인 조건, 금융기관·기관별 기준에 따라 달라질 수 있으므로 중요한 의사결정 전에는 최신 공식 기준을 함께 확인하세요.</p></div></section>
+<footer class="text-center text-xs text-slate-500 py-8">
       © MODU.TODAY · Jae-Hyun Kim.
     </footer>
   </div>
@@ -301,5 +304,6 @@
   </script>
   <script defer src="/_vercel/insights/script.js"></script>
 
+  <script defer src="/calculator/theme.js"></script>
 </body>
 </html>
