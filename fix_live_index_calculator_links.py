@@ -11,4 +11,4 @@ repl = {
 for old, new in repl.items():
     s = s.replace(old, new)
 p.write_text(s, encoding='utf-8')
-print('fixed live homepage calculator links')
+print('fixed live homepage calculator links - trigger')
