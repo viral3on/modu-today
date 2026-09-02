@@ -17,6 +17,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: modu-derived-html-${{ github.ref }}
+  cancel-in-progress: false
+
 jobs:
   update-sitemap:
     runs-on: ubuntu-latest
@@ -24,6 +28,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v6
@@ -45,4 +51,12 @@ jobs:
 
           git add sitemap.xml
           git commit -m "Update sitemap"
-          git push
+
+          if ! git push; then
+            echo "Remote changed while sitemap was being generated; rebasing and regenerating."
+            git pull --rebase origin main
+            python generate_sitemap.py
+            git add sitemap.xml
+            git commit --amend --no-edit
+            git push
+          fi
