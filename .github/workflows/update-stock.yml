@@ -2,16 +2,12 @@ name: Update stock scanner
 
 on:
   schedule:
-    # KRX OPEN API 실제 당일 반영시각을 측정하기 위한 모니터링
-    # 평일 18:30 KST = 09:30 UTC
-    - cron: "30 9 * * 1-5"
-    # 평일 21:30 KST = 12:30 UTC
-    - cron: "30 12 * * 1-5"
-    # 장 종료일 다음날 00:30 KST = 전날 15:30 UTC
-    - cron: "30 15 * * 1-5"
-    # 다음날 아침 07:30 KST 재확인 = 전날 22:30 UTC
-    # KRX 데이터 반영이 늦어진 경우 전 거래일 데이터를 다시 갱신
-    - cron: "30 22 * * 0-4"
+    # 평일 장 종료 후 여러 차례 확인
+    - cron: "30 9 * * 1-5"   # 18:30 KST
+    - cron: "30 12 * * 1-5"  # 21:30 KST
+    - cron: "30 15 * * 1-5"  # 00:30 KST
+    # 다음날 아침 재확인. KRX 공개 데이터가 늦게 반영되는 경우 보완
+    - cron: "30 22 * * 0-4"  # 07:30 KST
   workflow_dispatch:
 
 permissions:
@@ -26,6 +22,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
       - name: Set up Python
         uses: actions/setup-python@v6
         with:
@@ -54,4 +52,11 @@ jobs:
             exit 0
           fi
           git commit -m "Update KRX stock scanner data"
-          git push
+          if ! git push; then
+            echo "Remote changed while stock data was being built; rebasing and retrying."
+            git pull --rebase origin main
+            if [ -f generate_sitemap.py ]; then python generate_sitemap.py; fi
+            if [ -f sitemap.xml ]; then git add sitemap.xml; fi
+            if ! git diff --cached --quiet; then git commit --amend --no-edit; fi
+            git push
+          fi
