@@ -73,9 +73,9 @@ def apt():
     rows=(rows or [])[:20]
     items=[]
     for r in rows[:12]:
-        name=r.get('apt_name') or r.get('apartment') or r.get('name') or r.get('아파트') or '아파트'
+        name=r.get('apt') or r.get('apt_name') or r.get('apartment') or r.get('name') or r.get('아파트') or '아파트'
         region=r.get('region_name') or r.get('region') or r.get('sgg_nm') or r.get('시군구') or ''
-        price=r.get('deal_amount') or r.get('price') or r.get('거래금액') or 0
+        price=r.get('price_manwon') or r.get('deal_amount') or r.get('price') or r.get('거래금액') or 0
         date=r.get('deal_date') or r.get('date') or r.get('거래일') or ''
         items.append(f'<div class="seo-static-item"><strong>{esc(name)}</strong><span>{esc(region)} · {esc(date)} · 거래금액 {nf(price)}</span></div>')
     block=style()+f'''<section class="seo-static"><div class="seo-static-card"><h2>최근 아파트 실거래 요약</h2><p>국토교통부 공개 아파트 매매 실거래 데이터를 지역·단지별로 찾기 쉽게 정리합니다. 아래 내용은 수집된 최신 데이터 중 일부를 정적 HTML로 제공합니다.</p><div class="seo-static-grid">{"".join(items)}</div><div class="seo-static-note">실거래 자료는 신고·정정·해제 등에 따라 추후 변경될 수 있으므로 중요한 의사결정 전에는 국토교통부 실거래가 공개시스템의 최신 자료를 함께 확인하세요.</div></div></section>'''
