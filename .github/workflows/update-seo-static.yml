@@ -7,6 +7,7 @@ on:
       - main
     paths:
       - "seo_static.py"
+      - "cleanup_empty_seo.py"
       - ".github/workflows/update-seo-static.yml"
   workflow_run:
     workflows:
@@ -37,6 +38,8 @@ jobs:
       - uses: actions/setup-python@v6
         with:
           python-version: '3.12'
+      - name: Remove stale SEO snapshots with missing source data
+        run: python cleanup_empty_seo.py
       - name: Render static SEO content
         run: python seo_static.py
       - name: Regenerate sitemap
@@ -52,6 +55,7 @@ jobs:
           if ! git push; then
             echo "Remote changed while SEO snapshot was being rendered; rebasing and rerendering."
             git pull --rebase origin main
+            python cleanup_empty_seo.py
             python seo_static.py
             python generate_sitemap.py
             git add stock/index.html youtube/index.html lotto/index.html apt/index.html sitemap.xml
