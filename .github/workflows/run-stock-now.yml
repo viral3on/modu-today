@@ -1,0 +1,48 @@
+name: Run stock scanner now
+
+on:
+  push:
+    paths:
+      - '.github/workflows/run-stock-now.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      KRX_API_KEY: ${{ secrets.KRX_API_KEY }}
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.11'
+      - name: Build KRX stock scanner data now
+        run: python -u stock/update_stock.py
+      - name: Update sitemap
+        run: |
+          if [ -f generate_sitemap.py ]; then python generate_sitemap.py; fi
+      - name: Commit data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add stock/data/scanner.json stock/data/snapshot.json
+          if [ -f stock/data/availability_log.json ]; then git add stock/data/availability_log.json; fi
+          if [ -f sitemap.xml ]; then git add sitemap.xml; fi
+          if git diff --cached --quiet; then
+            echo "No stock scanner changes."
+            exit 0
+          fi
+          git commit -m "Refresh KRX stock scanner now"
+          if ! git push; then
+            git pull --rebase origin main
+            if [ -f generate_sitemap.py ]; then python generate_sitemap.py; fi
+            if [ -f sitemap.xml ]; then git add sitemap.xml; fi
+            if ! git diff --cached --quiet; then git commit --amend --no-edit; fi
+            git push
+          fi
