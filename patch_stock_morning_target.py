@@ -30,3 +30,4 @@ if old not in s:
 s = s.replace(old, new, 1)
 p.write_text(s, encoding='utf-8')
 print('patched stock/update_stock.py morning target logic')
+# trigger: 2026-09-04
