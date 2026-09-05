@@ -1,5 +1,6 @@
 (()=>{
   const css=`
+  #dataStatus{display:none!important}
   .score-guide{margin:0 0 24px;border:1px solid #2b4160;background:linear-gradient(145deg,#101c2e,#0d1726);border-radius:18px;padding:18px;color:#b9c7d9}
   .score-guide h2{margin:0 0 8px;color:#fff;font-size:18px}.score-guide p{margin:0;color:#93a7c1;font-size:13px;line-height:1.7}
   .score-guide details{margin-top:12px;border-top:1px solid #263a55;padding-top:12px}.score-guide summary{cursor:pointer;color:#cdd8e8;font-weight:900;font-size:13px}
