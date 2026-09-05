@@ -46,3 +46,5 @@ jobs:
             if ! git diff --cached --quiet; then git commit --amend --no-edit; fi
             git push
           fi
+
+# manual refresh trigger: 2026-09-05 KST
