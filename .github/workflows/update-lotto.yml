@@ -6,6 +6,12 @@ on:
     - cron: "50 12 * * 6"
     - cron: "30 0 * * 0"
   workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - "lotto/update_home_lotto.py"
+      - ".github/workflows/update-lotto.yml"
 
 permissions:
   contents: write
@@ -26,6 +32,9 @@ jobs:
       - name: Update lotto results and draw pages
         run: python lotto/update_lotto.py
 
+      - name: Sync homepage lotto card
+        run: python lotto/update_home_lotto.py
+
       - name: Update sitemap
         run: |
           if [ -f generate_sitemap.py ]; then
@@ -34,21 +43,21 @@ jobs:
             echo "generate_sitemap.py not found; skipping sitemap generation."
           fi
 
-      - name: Commit lotto data and draw pages
+      - name: Commit lotto data, homepage and draw pages
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          git add lotto/
+          git add lotto/ index.html
 
           if [ -f sitemap.xml ]; then
             git add sitemap.xml
           fi
 
           if git diff --cached --quiet; then
-            echo "No lotto data or page changes."
+            echo "No lotto data, homepage or page changes."
             exit 0
           fi
 
-          git commit -m "Update lotto results and draw pages"
+          git commit -m "Update lotto results, homepage and draw pages"
           git push
