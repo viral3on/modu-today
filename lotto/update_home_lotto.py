@@ -6,7 +6,7 @@ ROOT = Path(__file__).resolve().parents[1]
 INDEX = ROOT / "index.html"
 DATA = ROOT / "lotto" / "data" / "results.json"
 
-
+# Keep this script as the single source of truth for the homepage lotto card.
 def fmt_date(value: str) -> str:
     return str(value or "").replace("-", ".")
 
