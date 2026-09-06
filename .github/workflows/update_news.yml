@@ -35,6 +35,12 @@ jobs:
         run: |
           python update_news.py
 
+      - name: 최신 로또 결과를 홈 카드에 다시 반영
+        run: |
+          if [ -f lotto/update_home_lotto.py ] && [ -f lotto/data/results.json ]; then
+            python lotto/update_home_lotto.py
+          fi
+
       - name: 변경사항 자동 커밋 및 푸시
         run: |
           git config --global user.name "MarketBot"
