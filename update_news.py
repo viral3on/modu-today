@@ -5,6 +5,21 @@ kst = timezone(timedelta(hours=9))
 today_str = datetime.now(kst).strftime("%Y년 %m월 %d일 %H:%M KST")
 date_badge = datetime.now(kst).strftime("%Y.%m.%d")
 
+# AdSense/검색 품질 보호: 도박·성인·스팸성 제목은 홈 뉴스에 노출하지 않음.
+BLOCKED_NEWS_TERMS = (
+    "토토", "토토사이트", "스포츠토토", "카지노", "바카라", "슬롯",
+    "도박", "베팅", "먹튀", "성인사이트", "성인 사이트", "포르노",
+    "porn", "casino", "betting", "gambling"
+)
+BLOCKED_NEWS_SOURCES = ("Histoire pour tous",)
+
+def is_blocked_news(title, source=""):
+    hay=(str(title)+" "+str(source)).lower().replace(" ", "")
+    if any(term.lower().replace(" ", "") in hay for term in BLOCKED_NEWS_TERMS):
+        return True
+    return any(src.lower() in str(source).lower() for src in BLOCKED_NEWS_SOURCES)
+
+
 # 모든 카테고리 쿼리 재점검 (기사가 안정적으로 꽉 차도록 구성)
 FEEDS = {
     "국내 증시 / 코스피 코스닥": [
@@ -49,6 +64,9 @@ def fetch_news():
                     parts = title.rsplit(" - ", 1)
                     title = parts[0]
                     source = parts[1]
+                if is_blocked_news(title, source):
+                    print(f"FILTERED NEWS: {title} - {source}")
+                    continue
                 items.append({"title": title, "link": link, "source": source})
         
         unique_items = []
