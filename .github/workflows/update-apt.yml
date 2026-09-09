@@ -3,6 +3,8 @@ on:
   workflow_dispatch:
   schedule:
     - cron: "20 22 * * *" # 07:20 KST
+    - cron: "20 0 * * *"  # 09:20 KST
+    - cron: "20 2 * * *"  # 11:20 KST
 permissions:
   contents: write
 concurrency:
