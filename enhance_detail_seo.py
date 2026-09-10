@@ -53,10 +53,12 @@ for path,data in html_data.items():
         print('SKIP missing',path); continue
     text=path.read_text(encoding='utf-8')
     # remove prior generated block safely
-    text=re.sub(r'<style>\.detail-seo\{.*?<section class="detail-seo" data-static-seo="1">.*?</section>','',text,flags=re.S)
-    pos=text.lower().rfind('<footer')
+    text=re.sub(r'<style>\.detail-seo\{.*?<section class="detail-seo" data-static-seo="1">.*?</section>\n?','',text,flags=re.S)
+    pos=text.find('<!-- CRAWL_LINKS_START -->')
+    if pos<0: pos=text.lower().rfind('<footer')
     if pos<0: pos=text.lower().rfind('</body>')
     if pos<0: print('SKIP no insertion point',path); continue
     text=text[:pos]+block(*data)+'\n'+text[pos:]
-    path.write_text(text,encoding='utf-8')
+    if path.read_text(encoding='utf-8') != text:
+        path.write_text(text,encoding='utf-8')
     print('ENHANCED',path)
