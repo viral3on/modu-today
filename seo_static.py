@@ -20,7 +20,7 @@ def nf(v):
 
 def replace_block(path, block):
     text=path.read_text(encoding='utf-8')
-    text=re.sub(re.escape(START)+r'.*?'+re.escape(END), '', text, flags=re.S)
+    text=re.sub(r'\n?'+re.escape(START)+r'.*?'+re.escape(END)+r'\n?', '', text, flags=re.S)
     insert=f'\n{START}\n{block}\n{END}\n'
     lower=text.lower()
     pos=lower.rfind('</main>')
@@ -28,7 +28,8 @@ def replace_block(path, block):
     if pos<0: pos=lower.rfind('</body>')
     if pos<0: pos=len(text)
     text=text[:pos]+insert+text[pos:]
-    path.write_text(text,encoding='utf-8')
+    if path.read_text(encoding='utf-8') != text:
+        path.write_text(text,encoding='utf-8')
     print('UPDATED',path.relative_to(ROOT))
 
 def style():
