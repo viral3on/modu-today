@@ -1,27 +1,57 @@
 {
-  "updatedAtKST": "2026.09.11 06:24",
+  "updatedAtKST": "2026.09.12 06:24",
   "trackedVideos": 500,
   "rankings": {
     "daily": [
-      {
-        "videoId": "FyS5dAywkEo",
-        "title": "LISA - SaWaDiKa (Official Music Video)",
-        "channelTitle": "LISAOfficialVEVO",
-        "publishedAt": "2026-09-04T00:00:05Z",
-        "thumbnail": "https://i.ytimg.com/vi/FyS5dAywkEo/mqdefault.jpg",
-        "viewCount": 152389900,
-        "gain": 4252177,
-        "publishedAtText": "2026.09.04"
-      },
       {
         "videoId": "F-NcvXY8_vU",
         "title": "&TEAM 'Mark on Me' Official MV",
         "channelTitle": "HYBE LABELS",
         "publishedAt": "2026-09-08T08:59:59Z",
         "thumbnail": "https://i.ytimg.com/vi/F-NcvXY8_vU/mqdefault.jpg",
-        "viewCount": 7934590,
-        "gain": 2822436,
+        "viewCount": 11733185,
+        "gain": 3798595,
         "publishedAtText": "2026.09.08"
+      },
+      {
+        "videoId": "FyS5dAywkEo",
+        "title": "LISA - SaWaDiKa (Official Music Video)",
+        "channelTitle": "LISAOfficialVEVO",
+        "publishedAt": "2026-09-04T00:00:05Z",
+        "thumbnail": "https://i.ytimg.com/vi/FyS5dAywkEo/mqdefault.jpg",
+        "viewCount": 155907217,
+        "gain": 3517317,
+        "publishedAtText": "2026.09.04"
+      },
+      {
+        "videoId": "RdUV9Ms5GM4",
+        "title": "IU 'Dear my crazy soulmate' MV",
+        "channelTitle": "이지금 [IU Official]",
+        "publishedAt": "2026-09-10T09:00:38Z",
+        "thumbnail": "https://i.ytimg.com/vi/RdUV9Ms5GM4/mqdefault.jpg",
+        "viewCount": 5644463,
+        "gain": 3322310,
+        "publishedAtText": "2026.09.10"
+      },
+      {
+        "videoId": "Y1Lah0BM0KQ",
+        "title": "LE SSERAFIM (르세라핌) 'Made My Night' OFFICIAL MV with OVERWATCH",
+        "channelTitle": "HYBE LABELS",
+        "publishedAt": "2026-09-10T14:58:07Z",
+        "thumbnail": "https://i.ytimg.com/vi/Y1Lah0BM0KQ/mqdefault.jpg",
+        "viewCount": 3671681,
+        "gain": 2747056,
+        "publishedAtText": "2026.09.10"
+      },
+      {
+        "videoId": "UuoYKHIYq4Q",
+        "title": "ALL(H)OURS (올아워즈) ‘DANG DANG’ Official M/V",
+        "channelTitle": "올아워즈 ALL(H)OURS ",
+        "publishedAt": "2026-09-10T09:00:12Z",
+        "thumbnail": "https://i.ytimg.com/vi/UuoYKHIYq4Q/mqdefault.jpg",
+        "viewCount": 3547988,
+        "gain": 2276021,
+        "publishedAtText": "2026.09.10"
       },
       {
         "videoId": "7mDDM0eBWR0",
@@ -29,8 +59,8 @@
         "channelTitle": "i-dle (아이들)",
         "publishedAt": "2026-09-07T09:00:01Z",
         "thumbnail": "https://i.ytimg.com/vi/7mDDM0eBWR0/mqdefault.jpg",
-        "viewCount": 6086613,
-        "gain": 2627603,
+        "viewCount": 8340478,
+        "gain": 2253865,
         "publishedAtText": "2026.09.07"
       },
       {
@@ -39,18 +69,18 @@
         "channelTitle": "JISOO",
         "publishedAt": "2026-09-04T04:00:06Z",
         "thumbnail": "https://i.ytimg.com/vi/sf02ugzPFE4/mqdefault.jpg",
-        "viewCount": 34436414,
-        "gain": 2058009,
+        "viewCount": 36100606,
+        "gain": 1664192,
         "publishedAtText": "2026.09.04"
       },
       {
-        "videoId": "avtRda5IgeY",
-        "title": "Nintendo Direct 2026.9.9",
-        "channelTitle": "Nintendo 公式チャンネル",
-        "publishedAt": "2026-09-09T15:25:38Z",
-        "thumbnail": "https://i.ytimg.com/vi/avtRda5IgeY/mqdefault.jpg",
-        "viewCount": 8710640,
-        "gain": 1797015,
+        "videoId": "rCHln-ke9bw",
+        "title": "아저씨가 잠시 빌려갈게",
+        "channelTitle": "랄로",
+        "publishedAt": "2026-09-10T09:39:55Z",
+        "thumbnail": "https://i.ytimg.com/vi/rCHln-ke9bw/mqdefault.jpg",
+        "viewCount": 1035192,
+        "gain": 411736,
         "publishedAtText": "2026.09.10"
       },
       {
@@ -59,69 +89,29 @@
         "channelTitle": "효연의 레벨업 Hyo's Level Up",
         "publishedAt": "2026-09-09T09:00:37Z",
         "thumbnail": "https://i.ytimg.com/vi/yLGXM5O8v5Q/mqdefault.jpg",
-        "viewCount": 1908386,
-        "gain": 875488,
+        "viewCount": 2303521,
+        "gain": 395135,
         "publishedAtText": "2026.09.09"
       },
       {
-        "videoId": "pOmJ65UnPEY",
-        "title": "PLAVE 'Flame (feat. milet)' M/V",
-        "channelTitle": "PLAVE 플레이브",
-        "publishedAt": "2026-09-03T09:00:05Z",
-        "thumbnail": "https://i.ytimg.com/vi/pOmJ65UnPEY/mqdefault.jpg",
-        "viewCount": 3859892,
-        "gain": 499569,
-        "publishedAtText": "2026.09.03"
+        "videoId": "5mESl85XgyI",
+        "title": "11월 11일 (November 11th)",
+        "channelTitle": "Stray Kids - Topic",
+        "publishedAt": "2026-09-10T04:00:15Z",
+        "thumbnail": "https://i.ytimg.com/vi/5mESl85XgyI/mqdefault.jpg",
+        "viewCount": 828730,
+        "gain": 361392,
+        "publishedAtText": "2026.09.10"
       },
       {
-        "videoId": "oAwzFFEYm38",
-        "title": "Girls' Generation-HRS 소녀시대-효리수 'Skibidi' Performance Video",
-        "channelTitle": "SMTOWN",
-        "publishedAt": "2026-08-31T09:00:11Z",
-        "thumbnail": "https://i.ytimg.com/vi/oAwzFFEYm38/mqdefault.jpg",
-        "viewCount": 10811226,
-        "gain": 419454,
-        "publishedAtText": "2026.08.31"
-      },
-      {
-        "videoId": "iNMvUYjaieA",
-        "title": "EVAN (에반) 'Death of Me' Official MV",
-        "channelTitle": "HYBE LABELS",
-        "publishedAt": "2026-09-07T08:59:06Z",
-        "thumbnail": "https://i.ytimg.com/vi/iNMvUYjaieA/mqdefault.jpg",
-        "viewCount": 11443107,
-        "gain": 403955,
-        "publishedAtText": "2026.09.07"
-      },
-      {
-        "videoId": "jLCo8597v_g",
-        "title": "CLICK",
-        "channelTitle": "JISOO - Topic",
-        "publishedAt": "2026-09-04T04:03:29Z",
-        "thumbnail": "https://i.ytimg.com/vi/jLCo8597v_g/mqdefault.jpg",
-        "viewCount": 2801950,
-        "gain": 357398,
-        "publishedAtText": "2026.09.04"
-      },
-      {
-        "videoId": "QqqrJle7dRA",
-        "title": "MONSTA X 몬스타엑스 'MAGIC' MV",
-        "channelTitle": "STARSHIP",
-        "publishedAt": "2026-09-04T04:00:02Z",
-        "thumbnail": "https://i.ytimg.com/vi/QqqrJle7dRA/mqdefault.jpg",
-        "viewCount": 5133282,
-        "gain": 285189,
-        "publishedAtText": "2026.09.04"
-      },
-      {
-        "videoId": "T4Lm2B-LJRU",
-        "title": "중국인에게 인정받다",
-        "channelTitle": "괴물쥐 유튜브",
-        "publishedAt": "2026-09-09T13:00:30Z",
-        "thumbnail": "https://i.ytimg.com/vi/T4Lm2B-LJRU/mqdefault.jpg",
-        "viewCount": 563715,
-        "gain": 285088,
-        "publishedAtText": "2026.09.09"
+        "videoId": "363PvjelvEw",
+        "title": "[속보] \"요르단 美기지 이란공습에 F-15·A-10 전투기 9대 손상\", 이란남부 연쇄폭발 \"후티, 바브엘만데브해협 진격\"- [MBC뉴스속보] MBC뉴스 2026년 09월 11일",
+        "channelTitle": "MBCNEWS",
+        "publishedAt": "2026-09-11T04:47:00Z",
+        "thumbnail": "https://i.ytimg.com/vi/363PvjelvEw/mqdefault.jpg",
+        "viewCount": 594232,
+        "gain": 332417,
+        "publishedAtText": "2026.09.11"
       },
       {
         "videoId": "nxdxwZztGj0",
@@ -129,19 +119,39 @@
         "channelTitle": "SOYEON - Topic",
         "publishedAt": "2026-09-07T09:04:51Z",
         "thumbnail": "https://i.ytimg.com/vi/nxdxwZztGj0/mqdefault.jpg",
-        "viewCount": 590392,
-        "gain": 268177,
+        "viewCount": 916448,
+        "gain": 326056,
         "publishedAtText": "2026.09.07"
       },
       {
-        "videoId": "91x0RnO_4ro",
-        "title": "17년만에 음악중심에 헬기띄운 효리수 #Skibidi",
-        "channelTitle": "소녀시대연구소",
-        "publishedAt": "2026-09-05T08:01:24Z",
-        "thumbnail": "https://i.ytimg.com/vi/91x0RnO_4ro/mqdefault.jpg",
-        "viewCount": 2845612,
-        "gain": 257289,
-        "publishedAtText": "2026.09.05"
+        "videoId": "zHpGSnhqXFk",
+        "title": "감스트 넥슨 장사 잘하네 1000만원 현질 fc온라인",
+        "channelTitle": "감스트GAMST",
+        "publishedAt": "2026-09-10T11:35:27Z",
+        "thumbnail": "https://i.ytimg.com/vi/zHpGSnhqXFk/mqdefault.jpg",
+        "viewCount": 863967,
+        "gain": 323924,
+        "publishedAtText": "2026.09.10"
+      },
+      {
+        "videoId": "oAwzFFEYm38",
+        "title": "Girls' Generation-HRS 소녀시대-효리수 'Skibidi' Performance Video",
+        "channelTitle": "SMTOWN",
+        "publishedAt": "2026-08-31T09:00:11Z",
+        "thumbnail": "https://i.ytimg.com/vi/oAwzFFEYm38/mqdefault.jpg",
+        "viewCount": 11116530,
+        "gain": 305304,
+        "publishedAtText": "2026.08.31"
+      },
+      {
+        "videoId": "avtRda5IgeY",
+        "title": "Nintendo Direct 2026.9.9",
+        "channelTitle": "Nintendo 公式チャンネル",
+        "publishedAt": "2026-09-09T15:25:38Z",
+        "thumbnail": "https://i.ytimg.com/vi/avtRda5IgeY/mqdefault.jpg",
+        "viewCount": 8987123,
+        "gain": 276483,
+        "publishedAtText": "2026.09.10"
       },
       {
         "videoId": "qxxOgqxosds",
@@ -149,9 +159,39 @@
         "channelTitle": "Girls' Generation-HRS - Topic",
         "publishedAt": "2026-08-31T09:03:28Z",
         "thumbnail": "https://i.ytimg.com/vi/qxxOgqxosds/mqdefault.jpg",
-        "viewCount": 1934750,
-        "gain": 249113,
+        "viewCount": 2210869,
+        "gain": 276119,
         "publishedAtText": "2026.08.31"
+      },
+      {
+        "videoId": "jLCo8597v_g",
+        "title": "CLICK",
+        "channelTitle": "JISOO - Topic",
+        "publishedAt": "2026-09-04T04:03:29Z",
+        "thumbnail": "https://i.ytimg.com/vi/jLCo8597v_g/mqdefault.jpg",
+        "viewCount": 3072174,
+        "gain": 270224,
+        "publishedAtText": "2026.09.04"
+      },
+      {
+        "videoId": "iNMvUYjaieA",
+        "title": "EVAN (에반) 'Death of Me' Official MV",
+        "channelTitle": "HYBE LABELS",
+        "publishedAt": "2026-09-07T08:59:06Z",
+        "thumbnail": "https://i.ytimg.com/vi/iNMvUYjaieA/mqdefault.jpg",
+        "viewCount": 11710597,
+        "gain": 267490,
+        "publishedAtText": "2026.09.07"
+      },
+      {
+        "videoId": "YTeFLKMnwjg",
+        "title": "[Special Clip] 윈터 (WINTER) - 여름의 속도 (Speed of Summer) | 딩고뮤직 | dingo Music",
+        "channelTitle": "딩고 뮤직 / dingo music",
+        "publishedAt": "2026-08-27T09:00:28Z",
+        "thumbnail": "https://i.ytimg.com/vi/YTeFLKMnwjg/mqdefault.jpg",
+        "viewCount": 6951337,
+        "gain": 226898,
+        "publishedAtText": "2026.08.27"
       },
       {
         "videoId": "svHUxtHIljw",
@@ -159,19 +199,29 @@
         "channelTitle": "D.O. - Topic",
         "publishedAt": "2026-09-08T09:02:15Z",
         "thumbnail": "https://i.ytimg.com/vi/svHUxtHIljw/mqdefault.jpg",
-        "viewCount": 603940,
-        "gain": 226441,
+        "viewCount": 830154,
+        "gain": 226214,
         "publishedAtText": "2026.09.08"
       },
       {
-        "videoId": "hfftbNrp_lw",
-        "title": "Moonride",
-        "channelTitle": "Hearts2Hearts - Topic",
-        "publishedAt": "2026-09-09T09:00:20Z",
-        "thumbnail": "https://i.ytimg.com/vi/hfftbNrp_lw/mqdefault.jpg",
-        "viewCount": 325926,
-        "gain": 210642,
-        "publishedAtText": "2026.09.09"
+        "videoId": "mw0gC7ML-UA",
+        "title": "My Friend",
+        "channelTitle": "Mark Lee - Topic",
+        "publishedAt": "2026-09-10T04:03:08Z",
+        "thumbnail": "https://i.ytimg.com/vi/mw0gC7ML-UA/mqdefault.jpg",
+        "viewCount": 345669,
+        "gain": 188744,
+        "publishedAtText": "2026.09.10"
+      },
+      {
+        "videoId": "EIc13cn7tWo",
+        "title": "Nostalgia",
+        "channelTitle": "BIG Naughty - Topic",
+        "publishedAt": "2026-08-31T09:02:12Z",
+        "thumbnail": "https://i.ytimg.com/vi/EIc13cn7tWo/mqdefault.jpg",
+        "viewCount": 2574218,
+        "gain": 186896,
+        "publishedAtText": "2026.08.31"
       },
       {
         "videoId": "SJVmeJaS44s",
@@ -179,8 +229,8 @@
         "channelTitle": "Harry Potter",
         "publishedAt": "2026-09-02T15:00:03Z",
         "thumbnail": "https://i.ytimg.com/vi/SJVmeJaS44s/mqdefault.jpg",
-        "viewCount": 7658721,
-        "gain": 208338,
+        "viewCount": 7841571,
+        "gain": 182850,
         "publishedAtText": "2026.09.03"
       },
       {
@@ -189,19 +239,19 @@
         "channelTitle": "UNIS",
         "publishedAt": "2026-09-08T09:00:13Z",
         "thumbnail": "https://i.ytimg.com/vi/luTz3QoowrU/mqdefault.jpg",
-        "viewCount": 688610,
-        "gain": 196104,
+        "viewCount": 869826,
+        "gain": 181216,
         "publishedAtText": "2026.09.08"
       },
       {
-        "videoId": "SQ7tpUm0zkc",
-        "title": "사기의 아픔을 딛고 드디어 진짜 음바페 영입",
-        "channelTitle": "튜브김민교",
-        "publishedAt": "2026-09-09T09:21:38Z",
-        "thumbnail": "https://i.ytimg.com/vi/SQ7tpUm0zkc/mqdefault.jpg",
-        "viewCount": 591550,
-        "gain": 195115,
-        "publishedAtText": "2026.09.09"
+        "videoId": "2t0BRegeS_U",
+        "title": "배그 세계 1위 vs 배린이 4명",
+        "channelTitle": "말왕TV",
+        "publishedAt": "2026-09-10T09:00:07Z",
+        "thumbnail": "https://i.ytimg.com/vi/2t0BRegeS_U/mqdefault.jpg",
+        "viewCount": 482177,
+        "gain": 178390,
+        "publishedAtText": "2026.09.10"
       },
       {
         "videoId": "W-D8GSXg1W8",
@@ -209,9 +259,19 @@
         "channelTitle": "HYBE LABELS",
         "publishedAt": "2026-08-31T13:00:01Z",
         "thumbnail": "https://i.ytimg.com/vi/W-D8GSXg1W8/mqdefault.jpg",
-        "viewCount": 3447191,
-        "gain": 192421,
+        "viewCount": 3622959,
+        "gain": 175768,
         "publishedAtText": "2026.08.31"
+      },
+      {
+        "videoId": "hfftbNrp_lw",
+        "title": "Moonride",
+        "channelTitle": "Hearts2Hearts - Topic",
+        "publishedAt": "2026-09-09T09:00:20Z",
+        "thumbnail": "https://i.ytimg.com/vi/hfftbNrp_lw/mqdefault.jpg",
+        "viewCount": 481883,
+        "gain": 155957,
+        "publishedAtText": "2026.09.09"
       },
       {
         "videoId": "zBIkoHdVFnA",
@@ -219,19 +279,29 @@
         "channelTitle": "결말뭐지",
         "publishedAt": "2026-09-05T09:30:25Z",
         "thumbnail": "https://i.ytimg.com/vi/zBIkoHdVFnA/mqdefault.jpg",
-        "viewCount": 2472982,
-        "gain": 192341,
+        "viewCount": 2627443,
+        "gain": 154461,
         "publishedAtText": "2026.09.05"
       },
       {
-        "videoId": "EIc13cn7tWo",
-        "title": "Nostalgia",
-        "channelTitle": "BIG Naughty - Topic",
-        "publishedAt": "2026-08-31T09:02:12Z",
-        "thumbnail": "https://i.ytimg.com/vi/EIc13cn7tWo/mqdefault.jpg",
-        "viewCount": 2387322,
-        "gain": 181281,
-        "publishedAtText": "2026.08.31"
+        "videoId": "91x0RnO_4ro",
+        "title": "17년만에 음악중심에 헬기띄운 효리수 #Skibidi",
+        "channelTitle": "소녀시대연구소",
+        "publishedAt": "2026-09-05T08:01:24Z",
+        "thumbnail": "https://i.ytimg.com/vi/91x0RnO_4ro/mqdefault.jpg",
+        "viewCount": 2999314,
+        "gain": 153702,
+        "publishedAtText": "2026.09.05"
+      },
+      {
+        "videoId": "FNbT75NoaAI",
+        "title": "JACK - J97 | HOA TRONG ĐÁ | Official Music Video - Album TAM THÁI TỬ - Track No.1",
+        "channelTitle": "J97",
+        "publishedAt": "2026-08-29T13:30:06Z",
+        "thumbnail": "https://i.ytimg.com/vi/FNbT75NoaAI/mqdefault.jpg",
+        "viewCount": 4765189,
+        "gain": 149280,
+        "publishedAtText": "2026.08.29"
       },
       {
         "videoId": "PEpWLTge234",
@@ -239,9 +309,29 @@
         "channelTitle": "Lim Young Woong - Topic",
         "publishedAt": "2026-09-08T09:02:52Z",
         "thumbnail": "https://i.ytimg.com/vi/PEpWLTge234/mqdefault.jpg",
-        "viewCount": 454205,
-        "gain": 167057,
+        "viewCount": 602656,
+        "gain": 148451,
         "publishedAtText": "2026.09.08"
+      },
+      {
+        "videoId": "W6ejRYlE4U0",
+        "title": "스포츠 레전드들의 허벅지씨름 대결 그 결과는?",
+        "channelTitle": "케슛슛",
+        "publishedAt": "2026-09-10T11:00:23Z",
+        "thumbnail": "https://i.ytimg.com/vi/W6ejRYlE4U0/mqdefault.jpg",
+        "viewCount": 217880,
+        "gain": 145184,
+        "publishedAtText": "2026.09.10"
+      },
+      {
+        "videoId": "YvcSMp2cexE",
+        "title": "미션 임파서블",
+        "channelTitle": "PAKA",
+        "publishedAt": "2026-09-10T08:30:07Z",
+        "thumbnail": "https://i.ytimg.com/vi/YvcSMp2cexE/mqdefault.jpg",
+        "viewCount": 470521,
+        "gain": 144838,
+        "publishedAtText": "2026.09.10"
       },
       {
         "videoId": "W1kDOqqWNiw",
@@ -249,59 +339,29 @@
         "channelTitle": "Netflix Korea 넷플릭스 코리아",
         "publishedAt": "2026-08-26T23:00:01Z",
         "thumbnail": "https://i.ytimg.com/vi/W1kDOqqWNiw/mqdefault.jpg",
-        "viewCount": 1667969,
-        "gain": 166353,
+        "viewCount": 1786377,
+        "gain": 118408,
         "publishedAtText": "2026.08.27"
       },
       {
-        "videoId": "N4l5RUJAEpQ",
-        "title": "조금 놀렸더니 해리 케인 12강 강화 선언하는 이상호 ㅋㅋㅋ",
-        "channelTitle": "게임대장봉준",
-        "publishedAt": "2026-09-09T09:15:32Z",
-        "thumbnail": "https://i.ytimg.com/vi/N4l5RUJAEpQ/mqdefault.jpg",
-        "viewCount": 420050,
-        "gain": 157509,
-        "publishedAtText": "2026.09.09"
+        "videoId": "ppc1YU099XM",
+        "title": "\"키보드 1황 방배우\" 선생님 초대석",
+        "channelTitle": "저라뎃 JUSTLIKETHAT",
+        "publishedAt": "2026-09-10T10:30:06Z",
+        "thumbnail": "https://i.ytimg.com/vi/ppc1YU099XM/mqdefault.jpg",
+        "viewCount": 305213,
+        "gain": 106844,
+        "publishedAtText": "2026.09.10"
       },
       {
-        "videoId": "FNbT75NoaAI",
-        "title": "JACK - J97 | HOA TRONG ĐÁ | Official Music Video - Album TAM THÁI TỬ - Track No.1",
-        "channelTitle": "J97",
-        "publishedAt": "2026-08-29T13:30:06Z",
-        "thumbnail": "https://i.ytimg.com/vi/FNbT75NoaAI/mqdefault.jpg",
-        "viewCount": 4615909,
-        "gain": 152631,
-        "publishedAtText": "2026.08.29"
-      },
-      {
-        "videoId": "2L-hKOytmio",
-        "title": "모두가 예상한 떡벽 : 고스트타입 하트골드【포켓몬 모든타입 깨기】#2",
-        "channelTitle": "근가놈",
-        "publishedAt": "2026-09-09T09:00:34Z",
-        "thumbnail": "https://i.ytimg.com/vi/2L-hKOytmio/mqdefault.jpg",
-        "viewCount": 509158,
-        "gain": 145033,
-        "publishedAtText": "2026.09.09"
-      },
-      {
-        "videoId": "-iOUOy4gZBQ",
-        "title": "썸남이 가ㅅ 만지고 연락이 없어...💬.jpg",
-        "channelTitle": "똘킹",
-        "publishedAt": "2026-09-07T08:00:26Z",
-        "thumbnail": "https://i.ytimg.com/vi/-iOUOy4gZBQ/mqdefault.jpg",
-        "viewCount": 1725605,
-        "gain": 130409,
-        "publishedAtText": "2026.09.07"
-      },
-      {
-        "videoId": "3QhhTxi6NuQ",
-        "title": "[오늘 이 뉴스] 하늘로 '촤악' 지하로 '콸콸'.. 태풍 '뒤끝' 마비된 日도시 (2026.09.09/MBC뉴스)",
-        "channelTitle": "MBCNEWS",
-        "publishedAt": "2026-09-09T05:25:09Z",
-        "thumbnail": "https://i.ytimg.com/vi/3QhhTxi6NuQ/mqdefault.jpg",
-        "viewCount": 1318585,
-        "gain": 99641,
-        "publishedAtText": "2026.09.09"
+        "videoId": "fksdxa-ylzE",
+        "title": "나를 충전해줘 | 공식 티저 예고편 | 넷플릭스",
+        "channelTitle": "Netflix Korea 넷플릭스 코리아",
+        "publishedAt": "2026-09-10T00:00:00Z",
+        "thumbnail": "https://i.ytimg.com/vi/fksdxa-ylzE/mqdefault.jpg",
+        "viewCount": 481647,
+        "gain": 100162,
+        "publishedAtText": "2026.09.10"
       },
       {
         "videoId": "6ytdGqMxxrI",
@@ -309,39 +369,9 @@
         "channelTitle": "Tablo - Topic",
         "publishedAt": "2026-09-04T09:02:57Z",
         "thumbnail": "https://i.ytimg.com/vi/6ytdGqMxxrI/mqdefault.jpg",
-        "viewCount": 1033394,
-        "gain": 97018,
+        "viewCount": 1121910,
+        "gain": 88516,
         "publishedAtText": "2026.09.04"
-      },
-      {
-        "videoId": "_Q2tZE_x3GI",
-        "title": "스포츠 능력자들 순간17",
-        "channelTitle": "엠아이피랭킹",
-        "publishedAt": "2026-09-09T11:55:03Z",
-        "thumbnail": "https://i.ytimg.com/vi/_Q2tZE_x3GI/mqdefault.jpg",
-        "viewCount": 121511,
-        "gain": 94436,
-        "publishedAtText": "2026.09.09"
-      },
-      {
-        "videoId": "fppM7WFOPII",
-        "title": "이선민, 모자 챙 때려도 되냐? #이선민 #유머 #웃긴영상 #예능  #각종유머",
-        "channelTitle": "퍼펭모음",
-        "publishedAt": "2026-08-29T07:00:11Z",
-        "thumbnail": "https://i.ytimg.com/vi/fppM7WFOPII/mqdefault.jpg",
-        "viewCount": 3713808,
-        "gain": 93961,
-        "publishedAtText": "2026.08.29"
-      },
-      {
-        "videoId": "XVsrYln5-eo",
-        "title": "상대가 만만하게 보자 개빡쳐버린 덱스 #덱스 #예능레전드 #예능",
-        "channelTitle": "이슈모음집",
-        "publishedAt": "2026-09-03T05:14:26Z",
-        "thumbnail": "https://i.ytimg.com/vi/XVsrYln5-eo/mqdefault.jpg",
-        "viewCount": 3049969,
-        "gain": 93675,
-        "publishedAtText": "2026.09.03"
       },
       {
         "videoId": "SCl9CL9vqa4",
@@ -349,49 +379,19 @@
         "channelTitle": "JENNIE - Topic",
         "publishedAt": "2026-08-28T04:00:32Z",
         "thumbnail": "https://i.ytimg.com/vi/SCl9CL9vqa4/mqdefault.jpg",
-        "viewCount": 1533971,
-        "gain": 88691,
+        "viewCount": 1619686,
+        "gain": 85715,
         "publishedAtText": "2026.08.28"
       },
       {
-        "videoId": "52-poTWyZmI",
-        "title": "브레이크 없이 폭주하는 *노빠꾸 토크쇼* 2부",
-        "channelTitle": "잠뜰 TV",
-        "publishedAt": "2026-09-09T07:00:33Z",
-        "thumbnail": "https://i.ytimg.com/vi/52-poTWyZmI/mqdefault.jpg",
-        "viewCount": 277040,
-        "gain": 84234,
-        "publishedAtText": "2026.09.09"
-      },
-      {
-        "videoId": "OOvyHpNmGD8",
-        "title": "소연 (SOYEON) - 퇴사할게여 (Narr. 기안84)｜야외녹음실｜Beyond the Studio｜LIVE",
-        "channelTitle": "1theK Live - 원더케이 라이브",
-        "publishedAt": "2026-09-08T10:00:03Z",
-        "thumbnail": "https://i.ytimg.com/vi/OOvyHpNmGD8/mqdefault.jpg",
-        "viewCount": 279359,
-        "gain": 74492,
-        "publishedAtText": "2026.09.08"
-      },
-      {
-        "videoId": "0EwRAjF7aRg",
-        "title": "나를 잊지 말아요",
-        "channelTitle": "Shin Ye Young - Topic",
-        "publishedAt": "2026-09-06T09:02:39Z",
-        "thumbnail": "https://i.ytimg.com/vi/0EwRAjF7aRg/mqdefault.jpg",
-        "viewCount": 277321,
-        "gain": 73932,
-        "publishedAtText": "2026.09.06"
-      },
-      {
-        "videoId": "rVnM_3Ljx_c",
-        "title": "Noise",
-        "channelTitle": "EVAN - Topic",
-        "publishedAt": "2026-09-07T09:00:27Z",
-        "thumbnail": "https://i.ytimg.com/vi/rVnM_3Ljx_c/mqdefault.jpg",
-        "viewCount": 531591,
-        "gain": 72889,
-        "publishedAtText": "2026.09.07"
+        "videoId": "MXCT5ry0mKs",
+        "title": "[Live Clip] 첫사랑의 서툰 감정을 담아 | 🎵 하림 - 봄 내음보다 너를",
+        "channelTitle": "김나영KIMNAYOUNG",
+        "publishedAt": "2026-09-10T09:00:28Z",
+        "thumbnail": "https://i.ytimg.com/vi/MXCT5ry0mKs/mqdefault.jpg",
+        "viewCount": 106139,
+        "gain": 84048,
+        "publishedAtText": "2026.09.10"
       },
       {
         "videoId": "oHFQ6aKTAMw",
@@ -399,369 +399,49 @@
         "channelTitle": "P1Harmony",
         "publishedAt": "2026-08-14T09:00:07Z",
         "thumbnail": "https://i.ytimg.com/vi/oHFQ6aKTAMw/mqdefault.jpg",
-        "viewCount": 2209382,
-        "gain": 68202,
+        "viewCount": 2292187,
+        "gain": 82805,
         "publishedAtText": "2026.08.14"
       },
       {
-        "videoId": "3FrWiuocJ24",
-        "title": "김어준의 겸손은힘들다 뉴스공장 2026년 9월 9일 수요일 [박현광, 임문영X박태웅, 홍사훈X김용민X황운하X정필승, 이세미X한가선X김대호X김승현, 영화공장(97 혜자, 표류기)]",
-        "channelTitle": "김어준의 겸손은힘들다 뉴스공장",
-        "publishedAt": "2026-09-09T01:07:31Z",
-        "thumbnail": "https://i.ytimg.com/vi/3FrWiuocJ24/mqdefault.jpg",
-        "viewCount": 1428442,
-        "gain": 67128,
-        "publishedAtText": "2026.09.09"
+        "videoId": "fppM7WFOPII",
+        "title": "이선민, 모자 챙 때려도 되냐? #이선민 #유머 #웃긴영상 #예능  #각종유머",
+        "channelTitle": "퍼펭모음",
+        "publishedAt": "2026-08-29T07:00:11Z",
+        "thumbnail": "https://i.ytimg.com/vi/fppM7WFOPII/mqdefault.jpg",
+        "viewCount": 3794439,
+        "gain": 80631,
+        "publishedAtText": "2026.08.29"
       },
       {
-        "videoId": "jZGqSrzmvnE",
-        "title": "(CC/SUB) 케이팝 뒤흔든 '브라질 리듬'..인기몰이 이유 / SBS 8뉴스",
-        "channelTitle": "SBS 뉴스",
-        "publishedAt": "2026-09-05T11:31:09Z",
-        "thumbnail": "https://i.ytimg.com/vi/jZGqSrzmvnE/mqdefault.jpg",
-        "viewCount": 2042928,
-        "gain": 60487,
-        "publishedAtText": "2026.09.05"
-      },
-      {
-        "videoId": "6iPsMGipDsM",
-        "title": "[디거] 파이널 예고편",
-        "channelTitle": "Warner Bros. Korea",
-        "publishedAt": "2026-09-09T13:00:35Z",
-        "thumbnail": "https://i.ytimg.com/vi/6iPsMGipDsM/mqdefault.jpg",
-        "viewCount": 86143,
-        "gain": 60247,
-        "publishedAtText": "2026.09.09"
-      },
-      {
-        "videoId": "N4oMApp1_5I",
-        "title": "이선민 이용주 정색하게 만드는 두 글자 #이선민 #이용주 #예능",
-        "channelTitle": "예능다락방",
-        "publishedAt": "2026-09-09T13:30:11Z",
-        "thumbnail": "https://i.ytimg.com/vi/N4oMApp1_5I/mqdefault.jpg",
-        "viewCount": 74196,
-        "gain": 59747,
-        "publishedAtText": "2026.09.09"
-      },
-      {
-        "videoId": "buPhYiIXMTM",
-        "title": "Mrs. GREEN APPLE - 푸름과여름 [青と夏] 🎵\"저 가수입니다🎤\" by강남 (with. ENHYPEN 제이)",
-        "channelTitle": "동네친구 강나미 [Kangnami]",
-        "publishedAt": "2026-09-03T10:00:24Z",
-        "thumbnail": "https://i.ytimg.com/vi/buPhYiIXMTM/mqdefault.jpg",
-        "viewCount": 1249180,
-        "gain": 59131,
-        "publishedAtText": "2026.09.03"
-      },
-      {
-        "videoId": "a9JXlsvjYLA",
-        "title": "Mark on Me",
-        "channelTitle": "&TEAM - Topic",
-        "publishedAt": "2026-09-08T09:00:09Z",
-        "thumbnail": "https://i.ytimg.com/vi/a9JXlsvjYLA/mqdefault.jpg",
-        "viewCount": 255445,
-        "gain": 55948,
-        "publishedAtText": "2026.09.08"
-      },
-      {
-        "videoId": "5vW-tT5VioI",
-        "title": "DADDY",
-        "channelTitle": "Jay Park - Topic",
-        "publishedAt": "2026-09-07T09:00:04Z",
-        "thumbnail": "https://i.ytimg.com/vi/5vW-tT5VioI/mqdefault.jpg",
-        "viewCount": 272359,
-        "gain": 55379,
-        "publishedAtText": "2026.09.07"
-      },
-      {
-        "videoId": "B-6S7kY6mXU",
-        "title": "불륜보다 더 나쁜짓 | 남편의 사생활 #스케치코미디 #숏드라마 #숏무비 #예능 #재미#김도이#박현준",
-        "channelTitle": "와글와글",
-        "publishedAt": "2026-08-31T22:00:01Z",
-        "thumbnail": "https://i.ytimg.com/vi/B-6S7kY6mXU/mqdefault.jpg",
-        "viewCount": 2230412,
-        "gain": 52978,
-        "publishedAtText": "2026.09.01"
-      },
-      {
-        "videoId": "1qQ2hS-W0lk",
-        "title": "금휘 언니.....,,??? #새옴 #shorts #쇼츠",
-        "channelTitle": "새옴",
-        "publishedAt": "2026-09-04T09:05:17Z",
-        "thumbnail": "https://i.ytimg.com/vi/1qQ2hS-W0lk/mqdefault.jpg",
-        "viewCount": 1790501,
-        "gain": 51854,
-        "publishedAtText": "2026.09.04"
-      },
-      {
-        "videoId": "cC66L4givYg",
-        "title": "임현정 '사랑은 봄비처럼 이별은 겨울비처럼...' (Live at Sky Art Hall)",
-        "channelTitle": "임현정 LIM Hyunjung , Official",
-        "publishedAt": "2026-08-28T08:00:02Z",
-        "thumbnail": "https://i.ytimg.com/vi/cC66L4givYg/mqdefault.jpg",
-        "viewCount": 960342,
-        "gain": 51780,
-        "publishedAtText": "2026.08.28"
-      },
-      {
-        "videoId": "qEBvH9_3v7M",
-        "title": "감스트 패키지에서 26토츠 음바페 11카(현금5000만원) 뽑았습니다!! 서버최초 fc온라인",
-        "channelTitle": "감스트GAMST",
-        "publishedAt": "2026-09-01T11:36:33Z",
-        "thumbnail": "https://i.ytimg.com/vi/qEBvH9_3v7M/mqdefault.jpg",
-        "viewCount": 1821868,
-        "gain": 49784,
-        "publishedAtText": "2026.09.01"
-      },
-      {
-        "videoId": "eAt9h-eBHCk",
-        "title": "빠꾸없는 개그맨 4명이 모이면 생기는 일 #이선민 #예능",
-        "channelTitle": "예능다락방",
-        "publishedAt": "2026-08-30T09:30:15Z",
-        "thumbnail": "https://i.ytimg.com/vi/eAt9h-eBHCk/mqdefault.jpg",
-        "viewCount": 4625358,
-        "gain": 44824,
-        "publishedAtText": "2026.08.30"
-      },
-      {
-        "videoId": "EiBODDDXxeI",
-        "title": "감스트 음바페11카 영입! 속력 172 ㄷㄷ + 2000만원 현질! fc온라인",
-        "channelTitle": "감스트GAMST",
-        "publishedAt": "2026-09-04T11:57:23Z",
-        "thumbnail": "https://i.ytimg.com/vi/EiBODDDXxeI/mqdefault.jpg",
-        "viewCount": 1272722,
-        "gain": 42888,
-        "publishedAtText": "2026.09.04"
-      },
-      {
-        "videoId": "5HiiJOASI8U",
-        "title": "신들린 그녀의 오디션 #스케치코미디 #재미 #웃긴영상 #예능 #코믹숏무비",
-        "channelTitle": "와글와글",
-        "publishedAt": "2026-09-02T10:00:28Z",
-        "thumbnail": "https://i.ytimg.com/vi/5HiiJOASI8U/mqdefault.jpg",
-        "viewCount": 3093955,
-        "gain": 42788,
-        "publishedAtText": "2026.09.02"
-      },
-      {
-        "videoId": "YTeFLKMnwjg",
-        "title": "[Special Clip] 윈터 (WINTER) - 여름의 속도 (Speed of Summer) | 딩고뮤직 | dingo Music",
-        "channelTitle": "딩고 뮤직 / dingo music",
-        "publishedAt": "2026-08-27T09:00:28Z",
-        "thumbnail": "https://i.ytimg.com/vi/YTeFLKMnwjg/mqdefault.jpg",
-        "viewCount": 6724439,
-        "gain": 40380,
-        "publishedAtText": "2026.08.27"
-      },
-      {
-        "videoId": "pTOYbkpSnkA",
-        "title": "[풀영상] 뉴스광장 : “중간선거 직후 이란전 종결…유가 급락할 것” - 2026년 9월 10일(목) / KBS",
-        "channelTitle": "KBS News",
-        "publishedAt": "2026-09-09T23:30:47Z",
-        "thumbnail": "https://i.ytimg.com/vi/pTOYbkpSnkA/mqdefault.jpg",
-        "viewCount": 41329,
-        "gain": 37071,
+        "videoId": "_37xskus8L4",
+        "title": "한국에서 만난 할머니를 잊지 못한다는 외국인 가족",
+        "channelTitle": "오늘한컷",
+        "publishedAt": "2026-09-10T10:00:10Z",
+        "thumbnail": "https://i.ytimg.com/vi/_37xskus8L4/mqdefault.jpg",
+        "viewCount": 125957,
+        "gain": 76732,
         "publishedAtText": "2026.09.10"
       },
       {
-        "videoId": "l_bI7Ct8Rwg",
-        "title": "이종범 야구 vs 이동국 축구 국내 최고 인기 스포츠는?",
-        "channelTitle": "Full count",
-        "publishedAt": "2026-09-09T12:00:32Z",
-        "thumbnail": "https://i.ytimg.com/vi/l_bI7Ct8Rwg/mqdefault.jpg",
-        "viewCount": 45979,
-        "gain": 35691,
-        "publishedAtText": "2026.09.09"
-      },
-      {
-        "videoId": "CkwXLx63zn4",
-        "title": "덱스가 들려주는 UDT 한라산 극한훈련 #덱스 #예능레전드 #예능",
-        "channelTitle": "아우성",
-        "publishedAt": "2026-08-29T12:36:37Z",
-        "thumbnail": "https://i.ytimg.com/vi/CkwXLx63zn4/mqdefault.jpg",
-        "viewCount": 1696737,
-        "gain": 35585,
-        "publishedAtText": "2026.08.29"
-      },
-      {
-        "videoId": "LNk-BX38FzQ",
-        "title": "HEAVEN",
-        "channelTitle": "JENNIE - Topic",
-        "publishedAt": "2026-08-28T04:00:15Z",
-        "thumbnail": "https://i.ytimg.com/vi/LNk-BX38FzQ/mqdefault.jpg",
-        "viewCount": 1085070,
-        "gain": 34872,
-        "publishedAtText": "2026.08.28"
-      },
-      {
-        "videoId": "kJmCdVz5XoQ",
-        "title": "김어준의 겸손은힘들다 뉴스공장 2026년 9월 3일 목요일 [이광수X한문도X남기업, 홍사훈X주진우X양부남X황운하, 윤건영X최종건, 목요음악회(오페라 맛 좀 봐라), 동네사람들]",
+        "videoId": "5hPbRglPzdY",
+        "title": "김어준의 겸손은힘들다 뉴스공장 2026년 9월 10일 목요일 [박홍근, 홍사훈X최민희X이성윤X봉지욱, 추미애, 동네사람들]",
         "channelTitle": "김어준의 겸손은힘들다 뉴스공장",
-        "publishedAt": "2026-09-03T01:35:05Z",
-        "thumbnail": "https://i.ytimg.com/vi/kJmCdVz5XoQ/mqdefault.jpg",
-        "viewCount": 1582601,
-        "gain": 34676,
-        "publishedAtText": "2026.09.03"
-      },
-      {
-        "videoId": "8_hW-GGWGJw",
-        "title": "Do you want to walk with me?",
-        "channelTitle": "Oh yeonha - Topic",
-        "publishedAt": "2026-09-08T03:02:06Z",
-        "thumbnail": "https://i.ytimg.com/vi/8_hW-GGWGJw/mqdefault.jpg",
-        "viewCount": 290836,
-        "gain": 34545,
-        "publishedAtText": "2026.09.08"
-      },
-      {
-        "videoId": "22vIaXN3eo8",
-        "title": "010-DEAR-YOUTH",
-        "channelTitle": "KIMMUSEUM - Topic",
-        "publishedAt": "2026-08-25T09:00:00Z",
-        "thumbnail": "https://i.ytimg.com/vi/22vIaXN3eo8/mqdefault.jpg",
-        "viewCount": 848653,
-        "gain": 29670,
-        "publishedAtText": "2026.08.25"
-      },
-      {
-        "videoId": "2aKQ7J6exPc",
-        "title": "RPG게임 초기 세팅이 중요한 이유 #게임 #rpg #쇼츠",
-        "channelTitle": "감도안옴",
-        "publishedAt": "2026-08-29T10:54:59Z",
-        "thumbnail": "https://i.ytimg.com/vi/2aKQ7J6exPc/mqdefault.jpg",
-        "viewCount": 3714411,
-        "gain": 28997,
-        "publishedAtText": "2026.08.29"
-      },
-      {
-        "videoId": "JvZpnXgRWI0",
-        "title": "[오늘 이 뉴스] '소멸 직전' 도쿄 일대 물폭탄..\"긴급 알람 안 멈춰\" 날벼락 (2026.09.07/MBC뉴스)",
-        "channelTitle": "MBCNEWS",
-        "publishedAt": "2026-09-07T06:23:57Z",
-        "thumbnail": "https://i.ytimg.com/vi/JvZpnXgRWI0/mqdefault.jpg",
-        "viewCount": 1349506,
-        "gain": 28529,
-        "publishedAtText": "2026.09.07"
-      },
-      {
-        "videoId": "ASa36z2KKCg",
-        "title": "ALIVE (Feat. SUNGCHAN of RIIZE)",
-        "channelTitle": "hrtz.wav - Topic",
-        "publishedAt": "2026-09-09T09:04:46Z",
-        "thumbnail": "https://i.ytimg.com/vi/ASa36z2KKCg/mqdefault.jpg",
-        "viewCount": 40104,
-        "gain": 28512,
-        "publishedAtText": "2026.09.09"
-      },
-      {
-        "videoId": "e1VwU42KEec",
-        "title": "[오늘 이 뉴스] '구광모 파양' 패소한 양모.. \"모자관계 어렵다\" 입술 꽉 (2026.09.03/MBC뉴스)",
-        "channelTitle": "MBCNEWS",
-        "publishedAt": "2026-09-03T08:41:38Z",
-        "thumbnail": "https://i.ytimg.com/vi/e1VwU42KEec/mqdefault.jpg",
-        "viewCount": 2454110,
-        "gain": 28342,
-        "publishedAtText": "2026.09.03"
-      },
-      {
-        "videoId": "vbak4PUWoCg",
-        "title": "굶지마 체험기",
-        "channelTitle": "PAKA",
-        "publishedAt": "2026-09-04T08:30:05Z",
-        "thumbnail": "https://i.ytimg.com/vi/vbak4PUWoCg/mqdefault.jpg",
-        "viewCount": 938427,
-        "gain": 27600,
-        "publishedAtText": "2026.09.04"
-      },
-      {
-        "videoId": "cLoocnmkw6A",
-        "title": "원딜 무쓸모로 만드는 \"데미지0\" 무한조롱 트린다미어",
-        "channelTitle": "무지개맛 Rainbow Flavor",
-        "publishedAt": "2026-09-06T02:15:28Z",
-        "thumbnail": "https://i.ytimg.com/vi/cLoocnmkw6A/mqdefault.jpg",
-        "viewCount": 1072854,
-        "gain": 26531,
-        "publishedAtText": "2026.09.06"
-      },
-      {
-        "videoId": "xbm5_b1iqXQ",
-        "title": "Love Again (Prod. Yoon Jong Shin)",
-        "channelTitle": "LEE CHANGSUB - Topic",
-        "publishedAt": "2026-08-25T09:04:32Z",
-        "thumbnail": "https://i.ytimg.com/vi/xbm5_b1iqXQ/mqdefault.jpg",
-        "viewCount": 986899,
-        "gain": 26194,
-        "publishedAtText": "2026.08.25"
-      },
-      {
-        "videoId": "IusMotiS_E4",
-        "title": "게임 중 팀원이 다 나갔을 때",
-        "channelTitle": "짤짤맨",
-        "publishedAt": "2026-09-02T03:00:04Z",
-        "thumbnail": "https://i.ytimg.com/vi/IusMotiS_E4/mqdefault.jpg",
-        "viewCount": 1706317,
-        "gain": 24394,
-        "publishedAtText": "2026.09.02"
-      },
-      {
-        "videoId": "cyOLSzPtmu8",
-        "title": "김어준의 겸손은힘들다 뉴스공장 2026년 9월 2일 수요일 [박범계X진성준X황명선, 홍사훈X봉지욱X김준형X박주민, 이세미X한가선X김대호X김승현, 영화공장(아가미)] + 텐밀희",
-        "channelTitle": "김어준의 겸손은힘들다 뉴스공장",
-        "publishedAt": "2026-09-02T01:03:47Z",
-        "thumbnail": "https://i.ytimg.com/vi/cyOLSzPtmu8/mqdefault.jpg",
-        "viewCount": 1667227,
-        "gain": 23862,
-        "publishedAtText": "2026.09.02"
-      },
-      {
-        "videoId": "nb8Pz1QjCuU",
-        "title": "변두리로 좌천됐지만 재도약을 꿈꾸는 스포츠코치",
-        "channelTitle": "싱싱초밥",
-        "publishedAt": "2026-09-09T16:27:25Z",
-        "thumbnail": "https://i.ytimg.com/vi/nb8Pz1QjCuU/mqdefault.jpg",
-        "viewCount": 23115,
-        "gain": 22464,
+        "publishedAt": "2026-09-10T01:02:49Z",
+        "thumbnail": "https://i.ytimg.com/vi/5hPbRglPzdY/mqdefault.jpg",
+        "viewCount": 1374795,
+        "gain": 70855,
         "publishedAtText": "2026.09.10"
       },
       {
-        "videoId": "b0ovZEJb7uM",
-        "title": "아내에게 인생을 가르쳐줬습니다",
-        "channelTitle": "말왕TV",
-        "publishedAt": "2026-09-03T09:02:36Z",
-        "thumbnail": "https://i.ytimg.com/vi/b0ovZEJb7uM/mqdefault.jpg",
-        "viewCount": 1067783,
-        "gain": 22367,
-        "publishedAtText": "2026.09.03"
-      },
-      {
-        "videoId": "8Pbt-Aum5Q4",
-        "title": "식인섬에서 살아남기",
-        "channelTitle": "랄로",
-        "publishedAt": "2026-09-01T13:10:02Z",
-        "thumbnail": "https://i.ytimg.com/vi/8Pbt-Aum5Q4/mqdefault.jpg",
-        "viewCount": 1549590,
-        "gain": 22000,
-        "publishedAtText": "2026.09.01"
-      },
-      {
-        "videoId": "tXpzqkI-RFM",
-        "title": "한국 여행중 찍은 사진에 난리 난 일본 여배우",
-        "channelTitle": "국뽕한꼬집",
-        "publishedAt": "2026-08-29T01:00:21Z",
-        "thumbnail": "https://i.ytimg.com/vi/tXpzqkI-RFM/mqdefault.jpg",
-        "viewCount": 1659100,
-        "gain": 21077,
-        "publishedAtText": "2026.08.29"
-      },
-      {
-        "videoId": "-qQvf7517Hw",
-        "title": "Hearts2Hearts 하츠투하츠 '15-LOVE' Dance Practice",
-        "channelTitle": "Hearts2Hearts",
-        "publishedAt": "2026-08-30T11:00:19Z",
-        "thumbnail": "https://i.ytimg.com/vi/-qQvf7517Hw/mqdefault.jpg",
-        "viewCount": 847088,
-        "gain": 20651,
-        "publishedAtText": "2026.08.30"
+        "videoId": "-iOUOy4gZBQ",
+        "title": "썸남이 가ㅅ 만지고 연락이 없어...💬.jpg",
+        "channelTitle": "똘킹",
+        "publishedAt": "2026-09-07T08:00:26Z",
+        "thumbnail": "https://i.ytimg.com/vi/-iOUOy4gZBQ/mqdefault.jpg",
+        "viewCount": 1793017,
+        "gain": 67412,
+        "publishedAtText": "2026.09.07"
       },
       {
         "videoId": "8wCpxMv3MXs",
@@ -769,381 +449,69 @@
         "channelTitle": "ProjectMoon Official",
         "publishedAt": "2026-09-04T09:30:07Z",
         "thumbnail": "https://i.ytimg.com/vi/8wCpxMv3MXs/mqdefault.jpg",
-        "viewCount": 884813,
-        "gain": 20004,
+        "viewCount": 941648,
+        "gain": 56835,
         "publishedAtText": "2026.09.04"
       },
       {
-        "videoId": "MnPSMFM1bpc",
-        "title": "소름돋는 설화의 1년전 이선민 신점 #이선민 #설화 #예능",
-        "channelTitle": "예능다락방",
-        "publishedAt": "2026-08-30T13:30:23Z",
-        "thumbnail": "https://i.ytimg.com/vi/MnPSMFM1bpc/mqdefault.jpg",
-        "viewCount": 1005381,
-        "gain": 18689,
-        "publishedAtText": "2026.08.30"
+        "videoId": "QqqrJle7dRA",
+        "title": "MONSTA X 몬스타엑스 'MAGIC' MV",
+        "channelTitle": "STARSHIP",
+        "publishedAt": "2026-09-04T04:00:02Z",
+        "thumbnail": "https://i.ytimg.com/vi/QqqrJle7dRA/mqdefault.jpg",
+        "viewCount": 5188911,
+        "gain": 55629,
+        "publishedAtText": "2026.09.04"
       },
       {
-        "videoId": "zP9hCCoJVbI",
-        "title": "김현욱의 앙심 #신병4 3회 #쇼츠",
-        "channelTitle": "ENA DRAMA",
-        "publishedAt": "2026-09-02T10:00:15Z",
-        "thumbnail": "https://i.ytimg.com/vi/zP9hCCoJVbI/mqdefault.jpg",
-        "viewCount": 1779976,
-        "gain": 18489,
-        "publishedAtText": "2026.09.02"
-      },
-      {
-        "videoId": "aMOrloU5Bho",
-        "title": "[타짜: 벨제붑의 노래] 메인 예고편",
-        "channelTitle": "CJ ENM Movie",
-        "publishedAt": "2026-08-26T23:00:36Z",
-        "thumbnail": "https://i.ytimg.com/vi/aMOrloU5Bho/mqdefault.jpg",
-        "viewCount": 1805300,
-        "gain": 17669,
-        "publishedAtText": "2026.08.27"
-      },
-      {
-        "videoId": "q8DtWo3pFNM",
-        "title": "EYE CONTACT",
-        "channelTitle": "DONGHAE - Topic",
-        "publishedAt": "2026-09-03T09:02:37Z",
-        "thumbnail": "https://i.ytimg.com/vi/q8DtWo3pFNM/mqdefault.jpg",
-        "viewCount": 75337,
-        "gain": 17483,
-        "publishedAtText": "2026.09.03"
-      },
-      {
-        "videoId": "4MAeQqJlJ4c",
-        "title": "≪돼지저금통 뿌수기≫ 와..리뷰 8200개가 싹다 극찬인 이유가 있네요 ㄱㅐ쩝니다",
-        "channelTitle": "혜안",
-        "publishedAt": "2026-08-30T10:19:03Z",
-        "thumbnail": "https://i.ytimg.com/vi/4MAeQqJlJ4c/mqdefault.jpg",
-        "viewCount": 1406301,
-        "gain": 17307,
-        "publishedAtText": "2026.08.30"
-      },
-      {
-        "videoId": "Gx89rtKxNNY",
-        "title": "마인크래프트에서 모든 아이템 자동화 하기",
-        "channelTitle": "우융",
-        "publishedAt": "2026-08-29T03:31:33Z",
-        "thumbnail": "https://i.ytimg.com/vi/Gx89rtKxNNY/mqdefault.jpg",
-        "viewCount": 1382640,
-        "gain": 16714,
-        "publishedAtText": "2026.08.29"
-      },
-      {
-        "videoId": "FQecMClvDAA",
-        "title": "한살 위 형수한테 폭주하는 이선민 #이선민 #예능",
-        "channelTitle": "예능다락방",
-        "publishedAt": "2026-08-29T13:30:33Z",
-        "thumbnail": "https://i.ytimg.com/vi/FQecMClvDAA/mqdefault.jpg",
-        "viewCount": 3161685,
-        "gain": 16038,
-        "publishedAtText": "2026.08.29"
-      },
-      {
-        "videoId": "ao7wnB5iPqE",
-        "title": "[자막뉴스] \"한 마디만 하면..밀어줄게\"?.. 中 쯔위 포섭설 대만 '발칵' (2026.09.01/MBC뉴스)",
-        "channelTitle": "MBCNEWS",
-        "publishedAt": "2026-09-01T02:12:15Z",
-        "thumbnail": "https://i.ytimg.com/vi/ao7wnB5iPqE/mqdefault.jpg",
-        "viewCount": 2029506,
-        "gain": 15912,
-        "publishedAtText": "2026.09.01"
-      },
-      {
-        "videoId": "cd1TL-8Z7Bw",
-        "title": "SLEEP (Official Audio)",
-        "channelTitle": "The Kid LAROI - Topic",
-        "publishedAt": "2026-08-28T04:05:42Z",
-        "thumbnail": "https://i.ytimg.com/vi/cd1TL-8Z7Bw/mqdefault.jpg",
-        "viewCount": 943063,
-        "gain": 15715,
-        "publishedAtText": "2026.08.28"
-      },
-      {
-        "videoId": "3zAlE5VqbLc",
-        "title": "[속보] 검찰, '여고생 살해' 장윤기에 사형 구형 [뉴스플레이리스트] / 채널A",
-        "channelTitle": "채널A News",
-        "publishedAt": "2026-08-31T08:47:50Z",
-        "thumbnail": "https://i.ytimg.com/vi/3zAlE5VqbLc/mqdefault.jpg",
-        "viewCount": 1239798,
-        "gain": 15473,
-        "publishedAtText": "2026.08.31"
-      },
-      {
-        "videoId": "vIfr1EfJjY4",
-        "title": "🪽혜안져스 노움강도단, 이제 하늘을 납니다!ㅋㅋㅋㅋㅋㅋㅋ🪽",
-        "channelTitle": "혜안",
-        "publishedAt": "2026-08-28T10:04:20Z",
-        "thumbnail": "https://i.ytimg.com/vi/vIfr1EfJjY4/mqdefault.jpg",
-        "viewCount": 986746,
-        "gain": 14754,
-        "publishedAtText": "2026.08.28"
-      },
-      {
-        "videoId": "M1JHeFf10Ns",
-        "title": "이상호 피파 인생 최초 슈퍼 챔피언스 찍었습니다..",
-        "channelTitle": "이상호",
-        "publishedAt": "2026-09-03T13:50:28Z",
-        "thumbnail": "https://i.ytimg.com/vi/M1JHeFf10Ns/mqdefault.jpg",
-        "viewCount": 1084456,
-        "gain": 13947,
-        "publishedAtText": "2026.09.03"
-      },
-      {
-        "videoId": "BaPvsZMxZ3I",
-        "title": "\"기름 한방울 안나면서..\" 전세계가 한국을 1순위로 찾는 이유ㅣ국경없는 클래스 EP.34 (박현도 교수 2부)",
-        "channelTitle": "어썸코리아 Awesome Korea",
-        "publishedAt": "2026-08-28T12:44:41Z",
-        "thumbnail": "https://i.ytimg.com/vi/BaPvsZMxZ3I/mqdefault.jpg",
-        "viewCount": 2022384,
-        "gain": 13728,
-        "publishedAtText": "2026.08.28"
-      },
-      {
-        "videoId": "AfqpB-nU0bY",
-        "title": "UDT 지옥주에서 덱스가 겪은 담력 훈련 #덱스 #예능레전드 #예능",
-        "channelTitle": "아우성",
-        "publishedAt": "2026-08-29T22:00:18Z",
-        "thumbnail": "https://i.ytimg.com/vi/AfqpB-nU0bY/mqdefault.jpg",
-        "viewCount": 822393,
-        "gain": 13355,
-        "publishedAtText": "2026.08.30"
-      },
-      {
-        "videoId": "4cqP7q7Oj0I",
-        "title": "그리드 게임의 특징을 이용한 기술",
-        "channelTitle": "로시단",
-        "publishedAt": "2026-09-02T12:41:11Z",
-        "thumbnail": "https://i.ytimg.com/vi/4cqP7q7Oj0I/mqdefault.jpg",
-        "viewCount": 958660,
-        "gain": 13217,
-        "publishedAtText": "2026.09.02"
-      },
-      {
-        "videoId": "Gk8F8waA0tM",
-        "title": "송하예 '행복한 나를 (2026ver.)' Official MV",
-        "channelTitle": "하예일기장",
-        "publishedAt": "2026-08-27T09:00:08Z",
-        "thumbnail": "https://i.ytimg.com/vi/Gk8F8waA0tM/mqdefault.jpg",
-        "viewCount": 1893542,
-        "gain": 12678,
-        "publishedAtText": "2026.08.27"
-      },
-      {
-        "videoId": "w5ffC6mdh78",
-        "title": "한국 축구에 모레노가 꼭 필요한 이유",
-        "channelTitle": "축구친구",
-        "publishedAt": "2026-09-01T08:00:04Z",
-        "thumbnail": "https://i.ytimg.com/vi/w5ffC6mdh78/mqdefault.jpg",
-        "viewCount": 1253125,
-        "gain": 12553,
-        "publishedAtText": "2026.09.01"
-      },
-      {
-        "videoId": "HaCtG1F_hfE",
-        "title": "Crimson Desert Enhanced: Charting the Unknown | Official DLC Reveal Trailer",
-        "channelTitle": "Crimson Desert",
-        "publishedAt": "2026-09-03T13:59:19Z",
-        "thumbnail": "https://i.ytimg.com/vi/HaCtG1F_hfE/mqdefault.jpg",
-        "viewCount": 836999,
-        "gain": 12390,
-        "publishedAtText": "2026.09.03"
-      },
-      {
-        "videoId": "tQ4atWo-rpE",
-        "title": "T1 vs DK | 2026 Wooribank LCK Playoffs Lower Bracket Round 3",
-        "channelTitle": "LCK Global",
-        "publishedAt": "2026-09-06T12:34:20Z",
-        "thumbnail": "https://i.ytimg.com/vi/tQ4atWo-rpE/mqdefault.jpg",
-        "viewCount": 2213954,
-        "gain": 11800,
-        "publishedAtText": "2026.09.06"
-      },
-      {
-        "videoId": "SICyEGQpiuo",
-        "title": "The Algebra of Youth (청춘의 상관관계)",
-        "channelTitle": "Baek A - Topic",
-        "publishedAt": "2026-09-08T09:03:54Z",
-        "thumbnail": "https://i.ytimg.com/vi/SICyEGQpiuo/mqdefault.jpg",
-        "viewCount": 23921,
-        "gain": 11469,
+        "videoId": "8_hW-GGWGJw",
+        "title": "Do you want to walk with me?",
+        "channelTitle": "Oh yeonha - Topic",
+        "publishedAt": "2026-09-08T03:02:06Z",
+        "thumbnail": "https://i.ytimg.com/vi/8_hW-GGWGJw/mqdefault.jpg",
+        "viewCount": 345798,
+        "gain": 54962,
         "publishedAtText": "2026.09.08"
       },
       {
-        "videoId": "2xhFd3Rnpys",
-        "title": "260909 지렁이게임 1부 (팅겼습니다잉)",
-        "channelTitle": "멘파",
-        "publishedAt": "2026-09-09T17:22:52Z",
-        "thumbnail": "https://i.ytimg.com/vi/2xhFd3Rnpys/mqdefault.jpg",
-        "viewCount": 338673,
-        "gain": 10717,
-        "publishedAtText": "2026.09.10"
-      },
-      {
-        "videoId": "rubsayxg9p4",
-        "title": "레전드 억까 게임 쉽게 깨는 법!? ㅋㅋㅋㅋ",
-        "channelTitle": "플레이우람",
-        "publishedAt": "2026-08-30T04:48:00Z",
-        "thumbnail": "https://i.ytimg.com/vi/rubsayxg9p4/mqdefault.jpg",
-        "viewCount": 1095968,
-        "gain": 10291,
-        "publishedAtText": "2026.08.30"
-      },
-      {
-        "videoId": "vUdaaWkH7gs",
-        "title": "엄마뻘 #이효리 #예능",
-        "channelTitle": "파도냥이",
-        "publishedAt": "2026-09-09T17:00:15Z",
-        "thumbnail": "https://i.ytimg.com/vi/vUdaaWkH7gs/mqdefault.jpg",
-        "viewCount": 11347,
-        "gain": 9722,
-        "publishedAtText": "2026.09.10"
-      }
-    ],
-    "weekly": [
-      {
-        "videoId": "SJVmeJaS44s",
-        "title": "Harry Potter and the Philosopher's Stone | Official Teaser Trailer | HBO Max",
-        "channelTitle": "Harry Potter",
-        "publishedAt": "2026-09-02T15:00:03Z",
-        "thumbnail": "https://i.ytimg.com/vi/SJVmeJaS44s/mqdefault.jpg",
-        "viewCount": 7658721,
-        "gain": 4679111,
-        "publishedAtText": "2026.09.03"
-      },
-      {
-        "videoId": "oAwzFFEYm38",
-        "title": "Girls' Generation-HRS 소녀시대-효리수 'Skibidi' Performance Video",
-        "channelTitle": "SMTOWN",
-        "publishedAt": "2026-08-31T09:00:11Z",
-        "thumbnail": "https://i.ytimg.com/vi/oAwzFFEYm38/mqdefault.jpg",
-        "viewCount": 10811226,
-        "gain": 3916670,
-        "publishedAtText": "2026.08.31"
-      },
-      {
-        "videoId": "pOmJ65UnPEY",
-        "title": "PLAVE 'Flame (feat. milet)' M/V",
-        "channelTitle": "PLAVE 플레이브",
-        "publishedAt": "2026-09-03T09:00:05Z",
-        "thumbnail": "https://i.ytimg.com/vi/pOmJ65UnPEY/mqdefault.jpg",
-        "viewCount": 3859892,
-        "gain": 3667033,
-        "publishedAtText": "2026.09.03"
-      },
-      {
-        "videoId": "XVsrYln5-eo",
-        "title": "상대가 만만하게 보자 개빡쳐버린 덱스 #덱스 #예능레전드 #예능",
-        "channelTitle": "이슈모음집",
-        "publishedAt": "2026-09-03T05:14:26Z",
-        "thumbnail": "https://i.ytimg.com/vi/XVsrYln5-eo/mqdefault.jpg",
-        "viewCount": 3049969,
-        "gain": 2007844,
-        "publishedAtText": "2026.09.03"
-      },
-      {
-        "videoId": "5HiiJOASI8U",
-        "title": "신들린 그녀의 오디션 #스케치코미디 #재미 #웃긴영상 #예능 #코믹숏무비",
-        "channelTitle": "와글와글",
-        "publishedAt": "2026-09-02T10:00:28Z",
-        "thumbnail": "https://i.ytimg.com/vi/5HiiJOASI8U/mqdefault.jpg",
-        "viewCount": 3093955,
-        "gain": 1766243,
-        "publishedAtText": "2026.09.02"
-      },
-      {
-        "videoId": "W-D8GSXg1W8",
-        "title": "ENHYPEN (엔하이픈) 'Bloody Paradise' Official Performance MV",
-        "channelTitle": "HYBE LABELS",
-        "publishedAt": "2026-08-31T13:00:01Z",
-        "thumbnail": "https://i.ytimg.com/vi/W-D8GSXg1W8/mqdefault.jpg",
-        "viewCount": 3447191,
-        "gain": 1619691,
-        "publishedAtText": "2026.08.31"
-      },
-      {
-        "videoId": "eAt9h-eBHCk",
-        "title": "빠꾸없는 개그맨 4명이 모이면 생기는 일 #이선민 #예능",
-        "channelTitle": "예능다락방",
-        "publishedAt": "2026-08-30T09:30:15Z",
-        "thumbnail": "https://i.ytimg.com/vi/eAt9h-eBHCk/mqdefault.jpg",
-        "viewCount": 4625358,
-        "gain": 1602675,
-        "publishedAtText": "2026.08.30"
-      },
-      {
-        "videoId": "qxxOgqxosds",
-        "title": "Skibidi",
-        "channelTitle": "Girls' Generation-HRS - Topic",
-        "publishedAt": "2026-08-31T09:03:28Z",
-        "thumbnail": "https://i.ytimg.com/vi/qxxOgqxosds/mqdefault.jpg",
-        "viewCount": 1934750,
-        "gain": 1510329,
-        "publishedAtText": "2026.08.31"
-      },
-      {
-        "videoId": "EIc13cn7tWo",
-        "title": "Nostalgia",
-        "channelTitle": "BIG Naughty - Topic",
-        "publishedAt": "2026-08-31T09:02:12Z",
-        "thumbnail": "https://i.ytimg.com/vi/EIc13cn7tWo/mqdefault.jpg",
-        "viewCount": 2387322,
-        "gain": 1502275,
-        "publishedAtText": "2026.08.31"
-      },
-      {
-        "videoId": "0VY2Cz80lNs",
-        "title": "메이드 인 코리아 시즌2 | 캐릭터 예고편 | 디즈니+",
-        "channelTitle": "Disney Plus Korea 디즈니 플러스 코리아",
-        "publishedAt": "2026-09-01T00:00:35Z",
-        "thumbnail": "https://i.ytimg.com/vi/0VY2Cz80lNs/mqdefault.jpg",
-        "viewCount": 3301191,
-        "gain": 1451828,
-        "publishedAtText": "2026.09.01"
-      },
-      {
-        "videoId": "YTeFLKMnwjg",
-        "title": "[Special Clip] 윈터 (WINTER) - 여름의 속도 (Speed of Summer) | 딩고뮤직 | dingo Music",
-        "channelTitle": "딩고 뮤직 / dingo music",
-        "publishedAt": "2026-08-27T09:00:28Z",
-        "thumbnail": "https://i.ytimg.com/vi/YTeFLKMnwjg/mqdefault.jpg",
-        "viewCount": 6724439,
-        "gain": 1417835,
-        "publishedAtText": "2026.08.27"
-      },
-      {
-        "videoId": "FNbT75NoaAI",
-        "title": "JACK - J97 | HOA TRONG ĐÁ | Official Music Video - Album TAM THÁI TỬ - Track No.1",
-        "channelTitle": "J97",
-        "publishedAt": "2026-08-29T13:30:06Z",
-        "thumbnail": "https://i.ytimg.com/vi/FNbT75NoaAI/mqdefault.jpg",
-        "viewCount": 4615909,
-        "gain": 1353674,
-        "publishedAtText": "2026.08.29"
-      },
-      {
-        "videoId": "e1VwU42KEec",
-        "title": "[오늘 이 뉴스] '구광모 파양' 패소한 양모.. \"모자관계 어렵다\" 입술 꽉 (2026.09.03/MBC뉴스)",
+        "videoId": "3QhhTxi6NuQ",
+        "title": "[오늘 이 뉴스] 하늘로 '촤악' 지하로 '콸콸'.. 태풍 '뒤끝' 마비된 日도시 (2026.09.09/MBC뉴스)",
         "channelTitle": "MBCNEWS",
-        "publishedAt": "2026-09-03T08:41:38Z",
-        "thumbnail": "https://i.ytimg.com/vi/e1VwU42KEec/mqdefault.jpg",
-        "viewCount": 2454110,
-        "gain": 1325207,
-        "publishedAtText": "2026.09.03"
+        "publishedAt": "2026-09-09T05:25:09Z",
+        "thumbnail": "https://i.ytimg.com/vi/3QhhTxi6NuQ/mqdefault.jpg",
+        "viewCount": 1371469,
+        "gain": 52884,
+        "publishedAtText": "2026.09.09"
       },
       {
-        "videoId": "fppM7WFOPII",
-        "title": "이선민, 모자 챙 때려도 되냐? #이선민 #유머 #웃긴영상 #예능  #각종유머",
-        "channelTitle": "퍼펭모음",
-        "publishedAt": "2026-08-29T07:00:11Z",
-        "thumbnail": "https://i.ytimg.com/vi/fppM7WFOPII/mqdefault.jpg",
-        "viewCount": 3713808,
-        "gain": 986081,
-        "publishedAtText": "2026.08.29"
+        "videoId": "I8eavDmQd8g",
+        "title": "호르무즈 파병 안하면 한국에서 벌어질 일 / 11월 중간선거 앞두고 승부수 꺼낸 트럼프 - 양일국 박사의 세계는 우리는 [이것이 뉴스다]",
+        "channelTitle": "펜앤마이크TV",
+        "publishedAt": "2026-09-10T11:15:44Z",
+        "thumbnail": "https://i.ytimg.com/vi/I8eavDmQd8g/mqdefault.jpg",
+        "viewCount": 98254,
+        "gain": 50095,
+        "publishedAtText": "2026.09.10"
+      },
+      {
+        "videoId": "ZyI5bmN2p1I",
+        "title": "꿈꾸던 어른이 되었나요 - The Adult You Dreamed Of",
+        "channelTitle": "welldonehit - Topic",
+        "publishedAt": "2026-09-09T23:12:10Z",
+        "thumbnail": "https://i.ytimg.com/vi/ZyI5bmN2p1I/mqdefault.jpg",
+        "viewCount": 115038,
+        "gain": 48720,
+        "publishedAtText": "2026.09.10"
+      },
+      {
+        "videoId": "jZGqSrzmvnE",
+        "title": "(CC/SUB) 케이팝 뒤흔든 '브라질 리듬'..인기몰이 이유 / SBS 8뉴스",
+        "channelTitle": "SBS 뉴스",
+        "publishedAt": "2026-09-05T11:31:09Z",
+        "thumbnail": "https://i.ytimg.com/vi/jZGqSrzmvnE/mqdefault.jpg",
+        "viewCount": 2089625,
+        "gain": 46697,
+        "publishedAtText": "2026.09.05"
       },
       {
         "videoId": "buPhYiIXMTM",
@@ -1151,169 +519,9 @@
         "channelTitle": "동네친구 강나미 [Kangnami]",
         "publishedAt": "2026-09-03T10:00:24Z",
         "thumbnail": "https://i.ytimg.com/vi/buPhYiIXMTM/mqdefault.jpg",
-        "viewCount": 1249180,
-        "gain": 963617,
+        "viewCount": 1294163,
+        "gain": 44983,
         "publishedAtText": "2026.09.03"
-      },
-      {
-        "videoId": "2aKQ7J6exPc",
-        "title": "RPG게임 초기 세팅이 중요한 이유 #게임 #rpg #쇼츠",
-        "channelTitle": "감도안옴",
-        "publishedAt": "2026-08-29T10:54:59Z",
-        "thumbnail": "https://i.ytimg.com/vi/2aKQ7J6exPc/mqdefault.jpg",
-        "viewCount": 3714411,
-        "gain": 830363,
-        "publishedAtText": "2026.08.29"
-      },
-      {
-        "videoId": "M1JHeFf10Ns",
-        "title": "이상호 피파 인생 최초 슈퍼 챔피언스 찍었습니다..",
-        "channelTitle": "이상호",
-        "publishedAt": "2026-09-03T13:50:28Z",
-        "thumbnail": "https://i.ytimg.com/vi/M1JHeFf10Ns/mqdefault.jpg",
-        "viewCount": 1084456,
-        "gain": 694738,
-        "publishedAtText": "2026.09.03"
-      },
-      {
-        "videoId": "zP9hCCoJVbI",
-        "title": "김현욱의 앙심 #신병4 3회 #쇼츠",
-        "channelTitle": "ENA DRAMA",
-        "publishedAt": "2026-09-02T10:00:15Z",
-        "thumbnail": "https://i.ytimg.com/vi/zP9hCCoJVbI/mqdefault.jpg",
-        "viewCount": 1779976,
-        "gain": 683962,
-        "publishedAtText": "2026.09.02"
-      },
-      {
-        "videoId": "SCl9CL9vqa4",
-        "title": "FALLEN ANGEL",
-        "channelTitle": "JENNIE - Topic",
-        "publishedAt": "2026-08-28T04:00:32Z",
-        "thumbnail": "https://i.ytimg.com/vi/SCl9CL9vqa4/mqdefault.jpg",
-        "viewCount": 1533971,
-        "gain": 663837,
-        "publishedAtText": "2026.08.28"
-      },
-      {
-        "videoId": "b0ovZEJb7uM",
-        "title": "아내에게 인생을 가르쳐줬습니다",
-        "channelTitle": "말왕TV",
-        "publishedAt": "2026-09-03T09:02:36Z",
-        "thumbnail": "https://i.ytimg.com/vi/b0ovZEJb7uM/mqdefault.jpg",
-        "viewCount": 1067783,
-        "gain": 658260,
-        "publishedAtText": "2026.09.03"
-      },
-      {
-        "videoId": "IusMotiS_E4",
-        "title": "게임 중 팀원이 다 나갔을 때",
-        "channelTitle": "짤짤맨",
-        "publishedAt": "2026-09-02T03:00:04Z",
-        "thumbnail": "https://i.ytimg.com/vi/IusMotiS_E4/mqdefault.jpg",
-        "viewCount": 1706317,
-        "gain": 630818,
-        "publishedAtText": "2026.09.02"
-      },
-      {
-        "videoId": "oHFQ6aKTAMw",
-        "title": "P1Harmony (피원하모니) INTAK (인탁) -‘Hip Song’ (비) LIVE CLIP @2026 FAN MEETING [P1uspace H : Horror Haven]",
-        "channelTitle": "P1Harmony",
-        "publishedAt": "2026-08-14T09:00:07Z",
-        "thumbnail": "https://i.ytimg.com/vi/oHFQ6aKTAMw/mqdefault.jpg",
-        "viewCount": 2209382,
-        "gain": 582218,
-        "publishedAtText": "2026.08.14"
-      },
-      {
-        "videoId": "W1kDOqqWNiw",
-        "title": "가능한 사랑 | 공식 예고편 | 넷플릭스",
-        "channelTitle": "Netflix Korea 넷플릭스 코리아",
-        "publishedAt": "2026-08-26T23:00:01Z",
-        "thumbnail": "https://i.ytimg.com/vi/W1kDOqqWNiw/mqdefault.jpg",
-        "viewCount": 1667969,
-        "gain": 579837,
-        "publishedAtText": "2026.08.27"
-      },
-      {
-        "videoId": "B-6S7kY6mXU",
-        "title": "불륜보다 더 나쁜짓 | 남편의 사생활 #스케치코미디 #숏드라마 #숏무비 #예능 #재미#김도이#박현준",
-        "channelTitle": "와글와글",
-        "publishedAt": "2026-08-31T22:00:01Z",
-        "thumbnail": "https://i.ytimg.com/vi/B-6S7kY6mXU/mqdefault.jpg",
-        "viewCount": 2230412,
-        "gain": 475996,
-        "publishedAtText": "2026.09.01"
-      },
-      {
-        "videoId": "4cqP7q7Oj0I",
-        "title": "그리드 게임의 특징을 이용한 기술",
-        "channelTitle": "로시단",
-        "publishedAt": "2026-09-02T12:41:11Z",
-        "thumbnail": "https://i.ytimg.com/vi/4cqP7q7Oj0I/mqdefault.jpg",
-        "viewCount": 958660,
-        "gain": 468089,
-        "publishedAtText": "2026.09.02"
-      },
-      {
-        "videoId": "FQecMClvDAA",
-        "title": "한살 위 형수한테 폭주하는 이선민 #이선민 #예능",
-        "channelTitle": "예능다락방",
-        "publishedAt": "2026-08-29T13:30:33Z",
-        "thumbnail": "https://i.ytimg.com/vi/FQecMClvDAA/mqdefault.jpg",
-        "viewCount": 3161685,
-        "gain": 465950,
-        "publishedAtText": "2026.08.29"
-      },
-      {
-        "videoId": "qEBvH9_3v7M",
-        "title": "감스트 패키지에서 26토츠 음바페 11카(현금5000만원) 뽑았습니다!! 서버최초 fc온라인",
-        "channelTitle": "감스트GAMST",
-        "publishedAt": "2026-09-01T11:36:33Z",
-        "thumbnail": "https://i.ytimg.com/vi/qEBvH9_3v7M/mqdefault.jpg",
-        "viewCount": 1821868,
-        "gain": 416118,
-        "publishedAtText": "2026.09.01"
-      },
-      {
-        "videoId": "CkwXLx63zn4",
-        "title": "덱스가 들려주는 UDT 한라산 극한훈련 #덱스 #예능레전드 #예능",
-        "channelTitle": "아우성",
-        "publishedAt": "2026-08-29T12:36:37Z",
-        "thumbnail": "https://i.ytimg.com/vi/CkwXLx63zn4/mqdefault.jpg",
-        "viewCount": 1696737,
-        "gain": 403798,
-        "publishedAtText": "2026.08.29"
-      },
-      {
-        "videoId": "8Pbt-Aum5Q4",
-        "title": "식인섬에서 살아남기",
-        "channelTitle": "랄로",
-        "publishedAt": "2026-09-01T13:10:02Z",
-        "thumbnail": "https://i.ytimg.com/vi/8Pbt-Aum5Q4/mqdefault.jpg",
-        "viewCount": 1549590,
-        "gain": 390606,
-        "publishedAtText": "2026.09.01"
-      },
-      {
-        "videoId": "MnPSMFM1bpc",
-        "title": "소름돋는 설화의 1년전 이선민 신점 #이선민 #설화 #예능",
-        "channelTitle": "예능다락방",
-        "publishedAt": "2026-08-30T13:30:23Z",
-        "thumbnail": "https://i.ytimg.com/vi/MnPSMFM1bpc/mqdefault.jpg",
-        "viewCount": 1005381,
-        "gain": 353864,
-        "publishedAtText": "2026.08.30"
-      },
-      {
-        "videoId": "mF0pOIE_U9E",
-        "title": "[#SDF] \"왕좌의 게임\" 나인 시안 영상",
-        "channelTitle": "The CHOOM (더 춤)",
-        "publishedAt": "2026-09-02T03:52:01Z",
-        "thumbnail": "https://i.ytimg.com/vi/mF0pOIE_U9E/mqdefault.jpg",
-        "viewCount": 931527,
-        "gain": 323730,
-        "publishedAtText": "2026.09.02"
       },
       {
         "videoId": "cC66L4givYg",
@@ -1321,38 +529,118 @@
         "channelTitle": "임현정 LIM Hyunjung , Official",
         "publishedAt": "2026-08-28T08:00:02Z",
         "thumbnail": "https://i.ytimg.com/vi/cC66L4givYg/mqdefault.jpg",
-        "viewCount": 960342,
-        "gain": 321193,
+        "viewCount": 1005309,
+        "gain": 44967,
         "publishedAtText": "2026.08.28"
       },
       {
-        "videoId": "rubsayxg9p4",
-        "title": "레전드 억까 게임 쉽게 깨는 법!? ㅋㅋㅋㅋ",
-        "channelTitle": "플레이우람",
-        "publishedAt": "2026-08-30T04:48:00Z",
-        "thumbnail": "https://i.ytimg.com/vi/rubsayxg9p4/mqdefault.jpg",
-        "viewCount": 1095968,
-        "gain": 307900,
-        "publishedAtText": "2026.08.30"
+        "videoId": "1qQ2hS-W0lk",
+        "title": "금휘 언니.....,,??? #새옴 #shorts #쇼츠",
+        "channelTitle": "새옴",
+        "publishedAt": "2026-09-04T09:05:17Z",
+        "thumbnail": "https://i.ytimg.com/vi/1qQ2hS-W0lk/mqdefault.jpg",
+        "viewCount": 1834997,
+        "gain": 44496,
+        "publishedAtText": "2026.09.04"
       },
       {
-        "videoId": "4MAeQqJlJ4c",
-        "title": "≪돼지저금통 뿌수기≫ 와..리뷰 8200개가 싹다 극찬인 이유가 있네요 ㄱㅐ쩝니다",
-        "channelTitle": "혜안",
-        "publishedAt": "2026-08-30T10:19:03Z",
-        "thumbnail": "https://i.ytimg.com/vi/4MAeQqJlJ4c/mqdefault.jpg",
-        "viewCount": 1406301,
-        "gain": 307103,
-        "publishedAtText": "2026.08.30"
+        "videoId": "qEBvH9_3v7M",
+        "title": "감스트 패키지에서 26토츠 음바페 11카(현금5000만원) 뽑았습니다!! 서버최초 fc온라인",
+        "channelTitle": "감스트GAMST",
+        "publishedAt": "2026-09-01T11:36:33Z",
+        "thumbnail": "https://i.ytimg.com/vi/qEBvH9_3v7M/mqdefault.jpg",
+        "viewCount": 1865090,
+        "gain": 43222,
+        "publishedAtText": "2026.09.01"
       },
       {
-        "videoId": "tXpzqkI-RFM",
-        "title": "한국 여행중 찍은 사진에 난리 난 일본 여배우",
-        "channelTitle": "국뽕한꼬집",
-        "publishedAt": "2026-08-29T01:00:21Z",
-        "thumbnail": "https://i.ytimg.com/vi/tXpzqkI-RFM/mqdefault.jpg",
-        "viewCount": 1659100,
-        "gain": 280873,
+        "videoId": "kJmCdVz5XoQ",
+        "title": "김어준의 겸손은힘들다 뉴스공장 2026년 9월 3일 목요일 [이광수X한문도X남기업, 홍사훈X주진우X양부남X황운하, 윤건영X최종건, 목요음악회(오페라 맛 좀 봐라), 동네사람들]",
+        "channelTitle": "김어준의 겸손은힘들다 뉴스공장",
+        "publishedAt": "2026-09-03T01:35:05Z",
+        "thumbnail": "https://i.ytimg.com/vi/kJmCdVz5XoQ/mqdefault.jpg",
+        "viewCount": 1625136,
+        "gain": 42535,
+        "publishedAtText": "2026.09.03"
+      },
+      {
+        "videoId": "cyOLSzPtmu8",
+        "title": "김어준의 겸손은힘들다 뉴스공장 2026년 9월 2일 수요일 [박범계X진성준X황명선, 홍사훈X봉지욱X김준형X박주민, 이세미X한가선X김대호X김승현, 영화공장(아가미)] + 텐밀희",
+        "channelTitle": "김어준의 겸손은힘들다 뉴스공장",
+        "publishedAt": "2026-09-02T01:03:47Z",
+        "thumbnail": "https://i.ytimg.com/vi/cyOLSzPtmu8/mqdefault.jpg",
+        "viewCount": 1708457,
+        "gain": 41230,
+        "publishedAtText": "2026.09.02"
+      },
+      {
+        "videoId": "B-6S7kY6mXU",
+        "title": "불륜보다 더 나쁜짓 | 남편의 사생활 #스케치코미디 #숏드라마 #숏무비 #예능 #재미#김도이#박현준",
+        "channelTitle": "와글와글",
+        "publishedAt": "2026-08-31T22:00:01Z",
+        "thumbnail": "https://i.ytimg.com/vi/B-6S7kY6mXU/mqdefault.jpg",
+        "viewCount": 2267966,
+        "gain": 37554,
+        "publishedAtText": "2026.09.01"
+      },
+      {
+        "videoId": "5HiiJOASI8U",
+        "title": "신들린 그녀의 오디션 #스케치코미디 #재미 #웃긴영상 #예능 #코믹숏무비",
+        "channelTitle": "와글와글",
+        "publishedAt": "2026-09-02T10:00:28Z",
+        "thumbnail": "https://i.ytimg.com/vi/5HiiJOASI8U/mqdefault.jpg",
+        "viewCount": 3128564,
+        "gain": 34609,
+        "publishedAtText": "2026.09.02"
+      },
+      {
+        "videoId": "LNk-BX38FzQ",
+        "title": "HEAVEN",
+        "channelTitle": "JENNIE - Topic",
+        "publishedAt": "2026-08-28T04:00:15Z",
+        "thumbnail": "https://i.ytimg.com/vi/LNk-BX38FzQ/mqdefault.jpg",
+        "viewCount": 1118708,
+        "gain": 33638,
+        "publishedAtText": "2026.08.28"
+      },
+      {
+        "videoId": "yoxlQ3z-nUw",
+        "title": "먹을 것도 없는데 왜 한국을 찾는 걸까?｜전세계 개체수 중 90% 이상이 한국에 살고 있다는 고라니부터 독수리까지｜멸종 위기종 천국 된 한국｜하나뿐인 지구｜#골라듄다큐",
+        "channelTitle": "EBSDocumentary (EBS 다큐)",
+        "publishedAt": "2026-09-10T09:30:18Z",
+        "thumbnail": "https://i.ytimg.com/vi/yoxlQ3z-nUw/mqdefault.jpg",
+        "viewCount": 61343,
+        "gain": 32192,
+        "publishedAtText": "2026.09.10"
+      },
+      {
+        "videoId": "2aKQ7J6exPc",
+        "title": "RPG게임 초기 세팅이 중요한 이유 #게임 #rpg #쇼츠",
+        "channelTitle": "감도안옴",
+        "publishedAt": "2026-08-29T10:54:59Z",
+        "thumbnail": "https://i.ytimg.com/vi/2aKQ7J6exPc/mqdefault.jpg",
+        "viewCount": 3745029,
+        "gain": 30618,
+        "publishedAtText": "2026.08.29"
+      },
+      {
+        "videoId": "-ZbTRoxcIDA",
+        "title": "한국 비전투 파병, 절대 있을 수 없다?!",
+        "channelTitle": "정치썰로그",
+        "publishedAt": "2026-09-10T13:00:02Z",
+        "thumbnail": "https://i.ytimg.com/vi/-ZbTRoxcIDA/mqdefault.jpg",
+        "viewCount": 43147,
+        "gain": 28957,
+        "publishedAtText": "2026.09.10"
+      },
+      {
+        "videoId": "CkwXLx63zn4",
+        "title": "덱스가 들려주는 UDT 한라산 극한훈련 #덱스 #예능레전드 #예능",
+        "channelTitle": "아우성",
+        "publishedAt": "2026-08-29T12:36:37Z",
+        "thumbnail": "https://i.ytimg.com/vi/CkwXLx63zn4/mqdefault.jpg",
+        "viewCount": 1725260,
+        "gain": 28523,
         "publishedAtText": "2026.08.29"
       },
       {
@@ -1361,79 +649,29 @@
         "channelTitle": "KIMMUSEUM - Topic",
         "publishedAt": "2026-08-25T09:00:00Z",
         "thumbnail": "https://i.ytimg.com/vi/22vIaXN3eo8/mqdefault.jpg",
-        "viewCount": 848653,
-        "gain": 276293,
+        "viewCount": 876936,
+        "gain": 28283,
         "publishedAtText": "2026.08.25"
       },
       {
-        "videoId": "w5ffC6mdh78",
-        "title": "한국 축구에 모레노가 꼭 필요한 이유",
-        "channelTitle": "축구친구",
-        "publishedAt": "2026-09-01T08:00:04Z",
-        "thumbnail": "https://i.ytimg.com/vi/w5ffC6mdh78/mqdefault.jpg",
-        "viewCount": 1253125,
-        "gain": 269426,
-        "publishedAtText": "2026.09.01"
+        "videoId": "EiBODDDXxeI",
+        "title": "감스트 음바페11카 영입! 속력 172 ㄷㄷ + 2000만원 현질! fc온라인",
+        "channelTitle": "감스트GAMST",
+        "publishedAt": "2026-09-04T11:57:23Z",
+        "thumbnail": "https://i.ytimg.com/vi/EiBODDDXxeI/mqdefault.jpg",
+        "viewCount": 1300991,
+        "gain": 28269,
+        "publishedAtText": "2026.09.04"
       },
       {
-        "videoId": "LNk-BX38FzQ",
-        "title": "HEAVEN",
-        "channelTitle": "JENNIE - Topic",
-        "publishedAt": "2026-08-28T04:00:15Z",
-        "thumbnail": "https://i.ytimg.com/vi/LNk-BX38FzQ/mqdefault.jpg",
-        "viewCount": 1085070,
-        "gain": 266644,
-        "publishedAtText": "2026.08.28"
-      },
-      {
-        "videoId": "ao7wnB5iPqE",
-        "title": "[자막뉴스] \"한 마디만 하면..밀어줄게\"?.. 中 쯔위 포섭설 대만 '발칵' (2026.09.01/MBC뉴스)",
-        "channelTitle": "MBCNEWS",
-        "publishedAt": "2026-09-01T02:12:15Z",
-        "thumbnail": "https://i.ytimg.com/vi/ao7wnB5iPqE/mqdefault.jpg",
-        "viewCount": 2029506,
-        "gain": 250798,
-        "publishedAtText": "2026.09.01"
-      },
-      {
-        "videoId": "Gx89rtKxNNY",
-        "title": "마인크래프트에서 모든 아이템 자동화 하기",
-        "channelTitle": "우융",
-        "publishedAt": "2026-08-29T03:31:33Z",
-        "thumbnail": "https://i.ytimg.com/vi/Gx89rtKxNNY/mqdefault.jpg",
-        "viewCount": 1382640,
-        "gain": 243633,
-        "publishedAtText": "2026.08.29"
-      },
-      {
-        "videoId": "6f-9Hxx30aA",
-        "title": "오빠 VPN이 뭐야? #스케치코미디 #숏드라마#예능",
-        "channelTitle": "와글와글",
-        "publishedAt": "2026-08-29T06:00:23Z",
-        "thumbnail": "https://i.ytimg.com/vi/6f-9Hxx30aA/mqdefault.jpg",
-        "viewCount": 1404677,
-        "gain": 242326,
-        "publishedAtText": "2026.08.29"
-      },
-      {
-        "videoId": "BaPvsZMxZ3I",
-        "title": "\"기름 한방울 안나면서..\" 전세계가 한국을 1순위로 찾는 이유ㅣ국경없는 클래스 EP.34 (박현도 교수 2부)",
-        "channelTitle": "어썸코리아 Awesome Korea",
-        "publishedAt": "2026-08-28T12:44:41Z",
-        "thumbnail": "https://i.ytimg.com/vi/BaPvsZMxZ3I/mqdefault.jpg",
-        "viewCount": 2022384,
-        "gain": 228973,
-        "publishedAtText": "2026.08.28"
-      },
-      {
-        "videoId": "kJmCdVz5XoQ",
-        "title": "김어준의 겸손은힘들다 뉴스공장 2026년 9월 3일 목요일 [이광수X한문도X남기업, 홍사훈X주진우X양부남X황운하, 윤건영X최종건, 목요음악회(오페라 맛 좀 봐라), 동네사람들]",
+        "videoId": "3FrWiuocJ24",
+        "title": "김어준의 겸손은힘들다 뉴스공장 2026년 9월 9일 수요일 [박현광, 임문영X박태웅, 홍사훈X김용민X황운하X정필승, 이세미X한가선X김대호X김승현, 영화공장(97 혜자, 표류기)]",
         "channelTitle": "김어준의 겸손은힘들다 뉴스공장",
-        "publishedAt": "2026-09-03T01:35:05Z",
-        "thumbnail": "https://i.ytimg.com/vi/kJmCdVz5XoQ/mqdefault.jpg",
-        "viewCount": 1582601,
-        "gain": 221014,
-        "publishedAtText": "2026.09.03"
+        "publishedAt": "2026-09-09T01:07:31Z",
+        "thumbnail": "https://i.ytimg.com/vi/3FrWiuocJ24/mqdefault.jpg",
+        "viewCount": 1456244,
+        "gain": 27802,
+        "publishedAtText": "2026.09.09"
       },
       {
         "videoId": "xbm5_b1iqXQ",
@@ -1441,9 +679,69 @@
         "channelTitle": "LEE CHANGSUB - Topic",
         "publishedAt": "2026-08-25T09:04:32Z",
         "thumbnail": "https://i.ytimg.com/vi/xbm5_b1iqXQ/mqdefault.jpg",
-        "viewCount": 986899,
-        "gain": 211957,
+        "viewCount": 1014568,
+        "gain": 27669,
         "publishedAtText": "2026.08.25"
+      },
+      {
+        "videoId": "5PYR768Jq5M",
+        "title": "사퇴 대신 '돌파' 회견‥\"인사권자가 결단한 것\" - [LIVE] MBC 뉴스데스크 2026년 09월 10일",
+        "channelTitle": "MBCNEWS",
+        "publishedAt": "2026-09-10T11:52:03Z",
+        "thumbnail": "https://i.ytimg.com/vi/5PYR768Jq5M/mqdefault.jpg",
+        "viewCount": 241169,
+        "gain": 26651,
+        "publishedAtText": "2026.09.10"
+      },
+      {
+        "videoId": "rubsayxg9p4",
+        "title": "레전드 억까 게임 쉽게 깨는 법!? ㅋㅋㅋㅋ",
+        "channelTitle": "플레이우람",
+        "publishedAt": "2026-08-30T04:48:00Z",
+        "thumbnail": "https://i.ytimg.com/vi/rubsayxg9p4/mqdefault.jpg",
+        "viewCount": 1121878,
+        "gain": 25910,
+        "publishedAtText": "2026.08.30"
+      },
+      {
+        "videoId": "qQWtPD9zOPo",
+        "title": "스피드 vs 스포츠 바이크, 테이프 롤러로 측정한 승자는? #shorts #ishowspeed",
+        "channelTitle": "스피드멍멍",
+        "publishedAt": "2026-09-10T12:30:26Z",
+        "thumbnail": "https://i.ytimg.com/vi/qQWtPD9zOPo/mqdefault.jpg",
+        "viewCount": 33961,
+        "gain": 24284,
+        "publishedAtText": "2026.09.10"
+      },
+      {
+        "videoId": "XVsrYln5-eo",
+        "title": "상대가 만만하게 보자 개빡쳐버린 덱스 #덱스 #예능레전드 #예능",
+        "channelTitle": "이슈모음집",
+        "publishedAt": "2026-09-03T05:14:26Z",
+        "thumbnail": "https://i.ytimg.com/vi/XVsrYln5-eo/mqdefault.jpg",
+        "viewCount": 3074008,
+        "gain": 24039,
+        "publishedAtText": "2026.09.03"
+      },
+      {
+        "videoId": "cLoocnmkw6A",
+        "title": "원딜 무쓸모로 만드는 \"데미지0\" 무한조롱 트린다미어",
+        "channelTitle": "무지개맛 Rainbow Flavor",
+        "publishedAt": "2026-09-06T02:15:28Z",
+        "thumbnail": "https://i.ytimg.com/vi/cLoocnmkw6A/mqdefault.jpg",
+        "viewCount": 1095844,
+        "gain": 22990,
+        "publishedAtText": "2026.09.06"
+      },
+      {
+        "videoId": "vbak4PUWoCg",
+        "title": "굶지마 체험기",
+        "channelTitle": "PAKA",
+        "publishedAt": "2026-09-04T08:30:05Z",
+        "thumbnail": "https://i.ytimg.com/vi/vbak4PUWoCg/mqdefault.jpg",
+        "viewCount": 960780,
+        "gain": 22353,
+        "publishedAtText": "2026.09.04"
       },
       {
         "videoId": "-qQvf7517Hw",
@@ -1451,149 +749,99 @@
         "channelTitle": "Hearts2Hearts",
         "publishedAt": "2026-08-30T11:00:19Z",
         "thumbnail": "https://i.ytimg.com/vi/-qQvf7517Hw/mqdefault.jpg",
-        "viewCount": 847088,
-        "gain": 203906,
+        "viewCount": 869380,
+        "gain": 22292,
         "publishedAtText": "2026.08.30"
       },
       {
-        "videoId": "Gk8F8waA0tM",
-        "title": "송하예 '행복한 나를 (2026ver.)' Official MV",
-        "channelTitle": "하예일기장",
-        "publishedAt": "2026-08-27T09:00:08Z",
-        "thumbnail": "https://i.ytimg.com/vi/Gk8F8waA0tM/mqdefault.jpg",
-        "viewCount": 1893542,
-        "gain": 181351,
-        "publishedAtText": "2026.08.27"
-      },
-      {
-        "videoId": "3zAlE5VqbLc",
-        "title": "[속보] 검찰, '여고생 살해' 장윤기에 사형 구형 [뉴스플레이리스트] / 채널A",
-        "channelTitle": "채널A News",
-        "publishedAt": "2026-08-31T08:47:50Z",
-        "thumbnail": "https://i.ytimg.com/vi/3zAlE5VqbLc/mqdefault.jpg",
-        "viewCount": 1239798,
-        "gain": 174655,
-        "publishedAtText": "2026.08.31"
-      },
-      {
-        "videoId": "cd1TL-8Z7Bw",
-        "title": "SLEEP (Official Audio)",
-        "channelTitle": "The Kid LAROI - Topic",
-        "publishedAt": "2026-08-28T04:05:42Z",
-        "thumbnail": "https://i.ytimg.com/vi/cd1TL-8Z7Bw/mqdefault.jpg",
-        "viewCount": 943063,
-        "gain": 167656,
-        "publishedAtText": "2026.08.28"
-      },
-      {
-        "videoId": "AfqpB-nU0bY",
-        "title": "UDT 지옥주에서 덱스가 겪은 담력 훈련 #덱스 #예능레전드 #예능",
-        "channelTitle": "아우성",
-        "publishedAt": "2026-08-29T22:00:18Z",
-        "thumbnail": "https://i.ytimg.com/vi/AfqpB-nU0bY/mqdefault.jpg",
-        "viewCount": 822393,
-        "gain": 166729,
-        "publishedAtText": "2026.08.30"
-      },
-      {
-        "videoId": "hXYjK4in0MM",
-        "title": "TNX - ‘Die Another Day’ MV",
-        "channelTitle": "TNX",
-        "publishedAt": "2026-08-27T09:00:03Z",
-        "thumbnail": "https://i.ytimg.com/vi/hXYjK4in0MM/mqdefault.jpg",
-        "viewCount": 3767102,
-        "gain": 145166,
-        "publishedAtText": "2026.08.27"
-      },
-      {
-        "videoId": "NvXyClFYFa4",
-        "title": "50년 인생 첫 한국 여행에서 제대로 'K-아침밥' 참맛 알아버린 일본 장인 장모님",
-        "channelTitle": "엽기적인 코노짱",
-        "publishedAt": "2026-08-30T01:00:24Z",
-        "thumbnail": "https://i.ytimg.com/vi/NvXyClFYFa4/mqdefault.jpg",
-        "viewCount": 1027806,
-        "gain": 141152,
-        "publishedAtText": "2026.08.30"
-      },
-      {
-        "videoId": "cyOLSzPtmu8",
-        "title": "김어준의 겸손은힘들다 뉴스공장 2026년 9월 2일 수요일 [박범계X진성준X황명선, 홍사훈X봉지욱X김준형X박주민, 이세미X한가선X김대호X김승현, 영화공장(아가미)] + 텐밀희",
-        "channelTitle": "김어준의 겸손은힘들다 뉴스공장",
-        "publishedAt": "2026-09-02T01:03:47Z",
-        "thumbnail": "https://i.ytimg.com/vi/cyOLSzPtmu8/mqdefault.jpg",
-        "viewCount": 1667227,
-        "gain": 139770,
-        "publishedAtText": "2026.09.02"
-      },
-      {
-        "videoId": "nQnD3i4mzNg",
-        "title": "시어머니 때려서 입원시키고 결국 나락간 탑 여배우! #이슈 #연예인 #쇼츠",
-        "channelTitle": "이해불가 | 연예계 이슈",
-        "publishedAt": "2026-09-01T05:55:56Z",
-        "thumbnail": "https://i.ytimg.com/vi/nQnD3i4mzNg/mqdefault.jpg",
-        "viewCount": 1255762,
-        "gain": 137577,
-        "publishedAtText": "2026.09.01"
-      },
-      {
-        "videoId": "lDOGmJZjcnw",
-        "title": "노말타입 체육관 관장이 되었습니다 ㅋㅋ【체육관 타이쿤】",
-        "channelTitle": "근가놈",
-        "publishedAt": "2026-08-30T14:04:15Z",
-        "thumbnail": "https://i.ytimg.com/vi/lDOGmJZjcnw/mqdefault.jpg",
-        "viewCount": 993703,
-        "gain": 136633,
-        "publishedAtText": "2026.08.30"
-      },
-      {
-        "videoId": "vIfr1EfJjY4",
-        "title": "🪽혜안져스 노움강도단, 이제 하늘을 납니다!ㅋㅋㅋㅋㅋㅋㅋ🪽",
-        "channelTitle": "혜안",
-        "publishedAt": "2026-08-28T10:04:20Z",
-        "thumbnail": "https://i.ytimg.com/vi/vIfr1EfJjY4/mqdefault.jpg",
-        "viewCount": 986746,
-        "gain": 129841,
-        "publishedAtText": "2026.08.28"
-      },
-      {
-        "videoId": "unDiCmyG4u4",
-        "title": "솔직한 덱스 #덱스 #예능레전드 #예능",
-        "channelTitle": "아우성",
-        "publishedAt": "2026-08-30T08:37:16Z",
-        "thumbnail": "https://i.ytimg.com/vi/unDiCmyG4u4/mqdefault.jpg",
-        "viewCount": 1238097,
-        "gain": 122901,
-        "publishedAtText": "2026.08.30"
-      },
-      {
-        "videoId": "dqn_vwPQ3dQ",
-        "title": "[뉴스 '꾹'] '우산 쓰네?' 빈틈 노려 벌떡..경찰에 '로우킥' 날리더니 (2026.09.01/MBC뉴스)",
-        "channelTitle": "MBCNEWS",
-        "publishedAt": "2026-09-01T08:36:04Z",
-        "thumbnail": "https://i.ytimg.com/vi/dqn_vwPQ3dQ/mqdefault.jpg",
-        "viewCount": 1734400,
-        "gain": 118571,
-        "publishedAtText": "2026.09.01"
-      },
-      {
-        "videoId": "KFYYAw9F1FE",
-        "title": "뚫고 싶은 남자와 막고 싶은 남자의 혈투..",
-        "channelTitle": "이상호",
-        "publishedAt": "2026-09-01T09:46:22Z",
-        "thumbnail": "https://i.ytimg.com/vi/KFYYAw9F1FE/mqdefault.jpg",
-        "viewCount": 984320,
-        "gain": 107236,
-        "publishedAtText": "2026.09.01"
-      },
-      {
-        "videoId": "kL_1k1vgvMY",
-        "title": "777",
-        "channelTitle": "승상싱",
-        "publishedAt": "2026-08-29T07:09:57Z",
-        "thumbnail": "https://i.ytimg.com/vi/kL_1k1vgvMY/mqdefault.jpg",
-        "viewCount": 908372,
-        "gain": 107027,
+        "videoId": "tXpzqkI-RFM",
+        "title": "한국 여행중 찍은 사진에 난리 난 일본 여배우",
+        "channelTitle": "국뽕한꼬집",
+        "publishedAt": "2026-08-29T01:00:21Z",
+        "thumbnail": "https://i.ytimg.com/vi/tXpzqkI-RFM/mqdefault.jpg",
+        "viewCount": 1681350,
+        "gain": 22250,
         "publishedAtText": "2026.08.29"
+      },
+      {
+        "videoId": "WKFLMrQEhOo",
+        "title": "외국인들 안 비빔밥 먹방 #어서와한국은처음이지 #외국인",
+        "channelTitle": "어서와 한국은 처음이지",
+        "publishedAt": "2026-09-10T12:10:26Z",
+        "thumbnail": "https://i.ytimg.com/vi/WKFLMrQEhOo/mqdefault.jpg",
+        "viewCount": 28386,
+        "gain": 22208,
+        "publishedAtText": "2026.09.10"
+      },
+      {
+        "videoId": "8Pbt-Aum5Q4",
+        "title": "식인섬에서 살아남기",
+        "channelTitle": "랄로",
+        "publishedAt": "2026-09-01T13:10:02Z",
+        "thumbnail": "https://i.ytimg.com/vi/8Pbt-Aum5Q4/mqdefault.jpg",
+        "viewCount": 1571699,
+        "gain": 22109,
+        "publishedAtText": "2026.09.01"
+      },
+      {
+        "videoId": "b0ovZEJb7uM",
+        "title": "아내에게 인생을 가르쳐줬습니다",
+        "channelTitle": "말왕TV",
+        "publishedAt": "2026-09-03T09:02:36Z",
+        "thumbnail": "https://i.ytimg.com/vi/b0ovZEJb7uM/mqdefault.jpg",
+        "viewCount": 1089190,
+        "gain": 21407,
+        "publishedAtText": "2026.09.03"
+      },
+      {
+        "videoId": "ao7wnB5iPqE",
+        "title": "[자막뉴스] \"한 마디만 하면..밀어줄게\"?.. 中 쯔위 포섭설 대만 '발칵' (2026.09.01/MBC뉴스)",
+        "channelTitle": "MBCNEWS",
+        "publishedAt": "2026-09-01T02:12:15Z",
+        "thumbnail": "https://i.ytimg.com/vi/ao7wnB5iPqE/mqdefault.jpg",
+        "viewCount": 2049853,
+        "gain": 20347,
+        "publishedAtText": "2026.09.01"
+      },
+      {
+        "videoId": "BaPvsZMxZ3I",
+        "title": "\"기름 한방울 안나면서..\" 전세계가 한국을 1순위로 찾는 이유ㅣ국경없는 클래스 EP.34 (박현도 교수 2부)",
+        "channelTitle": "어썸코리아 Awesome Korea",
+        "publishedAt": "2026-08-28T12:44:41Z",
+        "thumbnail": "https://i.ytimg.com/vi/BaPvsZMxZ3I/mqdefault.jpg",
+        "viewCount": 2042401,
+        "gain": 20017,
+        "publishedAtText": "2026.08.28"
+      },
+      {
+        "videoId": "cnbo5XvyTfs",
+        "title": "Viral 👍 #쇼츠 #웃긴영상 #유머 #웃음 #한국 #funny #comedy #viral #shorts",
+        "channelTitle": "Shorts viral ",
+        "publishedAt": "2026-09-10T16:00:27Z",
+        "thumbnail": "https://i.ytimg.com/vi/cnbo5XvyTfs/mqdefault.jpg",
+        "viewCount": 20183,
+        "gain": 18187,
+        "publishedAtText": "2026.09.11"
+      },
+      {
+        "videoId": "Gx89rtKxNNY",
+        "title": "마인크래프트에서 모든 아이템 자동화 하기",
+        "channelTitle": "우융",
+        "publishedAt": "2026-08-29T03:31:33Z",
+        "thumbnail": "https://i.ytimg.com/vi/Gx89rtKxNNY/mqdefault.jpg",
+        "viewCount": 1400606,
+        "gain": 17966,
+        "publishedAtText": "2026.08.29"
+      },
+      {
+        "videoId": "MnPSMFM1bpc",
+        "title": "소름돋는 설화의 1년전 이선민 신점 #이선민 #설화 #예능",
+        "channelTitle": "예능다락방",
+        "publishedAt": "2026-08-30T13:30:23Z",
+        "thumbnail": "https://i.ytimg.com/vi/MnPSMFM1bpc/mqdefault.jpg",
+        "viewCount": 1023055,
+        "gain": 17674,
+        "publishedAtText": "2026.08.30"
       },
       {
         "videoId": "aMOrloU5Bho",
@@ -1601,18 +849,28 @@
         "channelTitle": "CJ ENM Movie",
         "publishedAt": "2026-08-26T23:00:36Z",
         "thumbnail": "https://i.ytimg.com/vi/aMOrloU5Bho/mqdefault.jpg",
-        "viewCount": 1805300,
-        "gain": 104883,
+        "viewCount": 1822900,
+        "gain": 17600,
         "publishedAtText": "2026.08.27"
       },
       {
-        "videoId": "6ThZY2diLfA",
-        "title": "더 강력해진 서버 골결 1위 해리케인 영입..이상호의 케인은 감동이 있다!",
-        "channelTitle": "이상호",
-        "publishedAt": "2026-08-30T03:45:56Z",
-        "thumbnail": "https://i.ytimg.com/vi/6ThZY2diLfA/mqdefault.jpg",
-        "viewCount": 1144187,
-        "gain": 95975,
+        "videoId": "4MAeQqJlJ4c",
+        "title": "≪돼지저금통 뿌수기≫ 와..리뷰 8200개가 싹다 극찬인 이유가 있네요 ㄱㅐ쩝니다",
+        "channelTitle": "혜안",
+        "publishedAt": "2026-08-30T10:19:03Z",
+        "thumbnail": "https://i.ytimg.com/vi/4MAeQqJlJ4c/mqdefault.jpg",
+        "viewCount": 1423720,
+        "gain": 17419,
+        "publishedAtText": "2026.08.30"
+      },
+      {
+        "videoId": "eAt9h-eBHCk",
+        "title": "빠꾸없는 개그맨 4명이 모이면 생기는 일 #이선민 #예능",
+        "channelTitle": "예능다락방",
+        "publishedAt": "2026-08-30T09:30:15Z",
+        "thumbnail": "https://i.ytimg.com/vi/eAt9h-eBHCk/mqdefault.jpg",
+        "viewCount": 4642266,
+        "gain": 16908,
         "publishedAtText": "2026.08.30"
       },
       {
@@ -1621,19 +879,841 @@
         "channelTitle": "MBCNEWS",
         "publishedAt": "2026-08-28T02:18:45Z",
         "thumbnail": "https://i.ytimg.com/vi/PUGGoZYZFHk/mqdefault.jpg",
-        "viewCount": 1583403,
-        "gain": 81260,
+        "viewCount": 1599957,
+        "gain": 16554,
         "publishedAtText": "2026.08.28"
       },
       {
-        "videoId": "XswJ2bJVRKE",
-        "title": "레전드 의문사 발생",
-        "channelTitle": "괴물쥐 유튜브",
-        "publishedAt": "2026-08-30T13:01:21Z",
-        "thumbnail": "https://i.ytimg.com/vi/XswJ2bJVRKE/mqdefault.jpg",
-        "viewCount": 861481,
-        "gain": 69846,
+        "videoId": "3zAlE5VqbLc",
+        "title": "[속보] 검찰, '여고생 살해' 장윤기에 사형 구형 [뉴스플레이리스트] / 채널A",
+        "channelTitle": "채널A News",
+        "publishedAt": "2026-08-31T08:47:50Z",
+        "thumbnail": "https://i.ytimg.com/vi/3zAlE5VqbLc/mqdefault.jpg",
+        "viewCount": 1255350,
+        "gain": 15552,
+        "publishedAtText": "2026.08.31"
+      },
+      {
+        "videoId": "cd1TL-8Z7Bw",
+        "title": "SLEEP (Official Audio)",
+        "channelTitle": "The Kid LAROI - Topic",
+        "publishedAt": "2026-08-28T04:05:42Z",
+        "thumbnail": "https://i.ytimg.com/vi/cd1TL-8Z7Bw/mqdefault.jpg",
+        "viewCount": 958522,
+        "gain": 15459,
+        "publishedAtText": "2026.08.28"
+      },
+      {
+        "videoId": "e1VwU42KEec",
+        "title": "[오늘 이 뉴스] '구광모 파양' 패소한 양모.. \"모자관계 어렵다\" 입술 꽉 (2026.09.03/MBC뉴스)",
+        "channelTitle": "MBCNEWS",
+        "publishedAt": "2026-09-03T08:41:38Z",
+        "thumbnail": "https://i.ytimg.com/vi/e1VwU42KEec/mqdefault.jpg",
+        "viewCount": 2469414,
+        "gain": 15304,
+        "publishedAtText": "2026.09.03"
+      },
+      {
+        "videoId": "FQecMClvDAA",
+        "title": "한살 위 형수한테 폭주하는 이선민 #이선민 #예능",
+        "channelTitle": "예능다락방",
+        "publishedAt": "2026-08-29T13:30:33Z",
+        "thumbnail": "https://i.ytimg.com/vi/FQecMClvDAA/mqdefault.jpg",
+        "viewCount": 3176794,
+        "gain": 15109,
+        "publishedAtText": "2026.08.29"
+      },
+      {
+        "videoId": "vIfr1EfJjY4",
+        "title": "🪽혜안져스 노움강도단, 이제 하늘을 납니다!ㅋㅋㅋㅋㅋㅋㅋ🪽",
+        "channelTitle": "혜안",
+        "publishedAt": "2026-08-28T10:04:20Z",
+        "thumbnail": "https://i.ytimg.com/vi/vIfr1EfJjY4/mqdefault.jpg",
+        "viewCount": 1001224,
+        "gain": 14478,
+        "publishedAtText": "2026.08.28"
+      },
+      {
+        "videoId": "_YfU7eGK3qQ",
+        "title": "#박지현#출처:mbc구해줘홈즈#예능#주우재#고영배#김숙#엔돌핀",
+        "channelTitle": "해피엔딩1212",
+        "publishedAt": "2026-09-10T15:13:58Z",
+        "thumbnail": "https://i.ytimg.com/vi/_YfU7eGK3qQ/mqdefault.jpg",
+        "viewCount": 16746,
+        "gain": 14467,
+        "publishedAtText": "2026.09.11"
+      },
+      {
+        "videoId": "4cqP7q7Oj0I",
+        "title": "그리드 게임의 특징을 이용한 기술",
+        "channelTitle": "로시단",
+        "publishedAt": "2026-09-02T12:41:11Z",
+        "thumbnail": "https://i.ytimg.com/vi/4cqP7q7Oj0I/mqdefault.jpg",
+        "viewCount": 972294,
+        "gain": 13634,
+        "publishedAtText": "2026.09.02"
+      },
+      {
+        "videoId": "Gk8F8waA0tM",
+        "title": "송하예 '행복한 나를 (2026ver.)' Official MV",
+        "channelTitle": "하예일기장",
+        "publishedAt": "2026-08-27T09:00:08Z",
+        "thumbnail": "https://i.ytimg.com/vi/Gk8F8waA0tM/mqdefault.jpg",
+        "viewCount": 1906925,
+        "gain": 13383,
+        "publishedAtText": "2026.08.27"
+      },
+      {
+        "videoId": "pOmJ65UnPEY",
+        "title": "PLAVE 'Flame (feat. milet)' M/V",
+        "channelTitle": "PLAVE 플레이브",
+        "publishedAt": "2026-09-03T09:00:05Z",
+        "thumbnail": "https://i.ytimg.com/vi/pOmJ65UnPEY/mqdefault.jpg",
+        "viewCount": 3872155,
+        "gain": 12263,
+        "publishedAtText": "2026.09.03"
+      },
+      {
+        "videoId": "AfqpB-nU0bY",
+        "title": "UDT 지옥주에서 덱스가 겪은 담력 훈련 #덱스 #예능레전드 #예능",
+        "channelTitle": "아우성",
+        "publishedAt": "2026-08-29T22:00:18Z",
+        "thumbnail": "https://i.ytimg.com/vi/AfqpB-nU0bY/mqdefault.jpg",
+        "viewCount": 834472,
+        "gain": 12079,
         "publishedAtText": "2026.08.30"
+      },
+      {
+        "videoId": "jePs0Op2vMs",
+        "title": "은근히 많다는 이런 음식 취향 #예능 #유재석 #양세찬 #유머",
+        "channelTitle": "옥탑방말랑이",
+        "publishedAt": "2026-09-10T12:53:22Z",
+        "thumbnail": "https://i.ytimg.com/vi/jePs0Op2vMs/mqdefault.jpg",
+        "viewCount": 33203,
+        "gain": 11950,
+        "publishedAtText": "2026.09.10"
+      },
+      {
+        "videoId": "HaCtG1F_hfE",
+        "title": "Crimson Desert Enhanced: Charting the Unknown | Official DLC Reveal Trailer",
+        "channelTitle": "Crimson Desert",
+        "publishedAt": "2026-09-03T13:59:19Z",
+        "thumbnail": "https://i.ytimg.com/vi/HaCtG1F_hfE/mqdefault.jpg",
+        "viewCount": 848714,
+        "gain": 11715,
+        "publishedAtText": "2026.09.03"
+      }
+    ],
+    "weekly": [
+      {
+        "videoId": "FyS5dAywkEo",
+        "title": "LISA - SaWaDiKa (Official Music Video)",
+        "channelTitle": "LISAOfficialVEVO",
+        "publishedAt": "2026-09-04T00:00:05Z",
+        "thumbnail": "https://i.ytimg.com/vi/FyS5dAywkEo/mqdefault.jpg",
+        "viewCount": 155907217,
+        "gain": 89446814,
+        "publishedAtText": "2026.09.04"
+      },
+      {
+        "videoId": "sf02ugzPFE4",
+        "title": "JISOO - CLICK (Official MV)",
+        "channelTitle": "JISOO",
+        "publishedAt": "2026-09-04T04:00:06Z",
+        "thumbnail": "https://i.ytimg.com/vi/sf02ugzPFE4/mqdefault.jpg",
+        "viewCount": 36100606,
+        "gain": 25327046,
+        "publishedAtText": "2026.09.04"
+      },
+      {
+        "videoId": "SJVmeJaS44s",
+        "title": "Harry Potter and the Philosopher's Stone | Official Teaser Trailer | HBO Max",
+        "channelTitle": "Harry Potter",
+        "publishedAt": "2026-09-02T15:00:03Z",
+        "thumbnail": "https://i.ytimg.com/vi/SJVmeJaS44s/mqdefault.jpg",
+        "viewCount": 7841571,
+        "gain": 3772902,
+        "publishedAtText": "2026.09.03"
+      },
+      {
+        "videoId": "oAwzFFEYm38",
+        "title": "Girls' Generation-HRS 소녀시대-효리수 'Skibidi' Performance Video",
+        "channelTitle": "SMTOWN",
+        "publishedAt": "2026-08-31T09:00:11Z",
+        "thumbnail": "https://i.ytimg.com/vi/oAwzFFEYm38/mqdefault.jpg",
+        "viewCount": 11116530,
+        "gain": 3506713,
+        "publishedAtText": "2026.08.31"
+      },
+      {
+        "videoId": "pOmJ65UnPEY",
+        "title": "PLAVE 'Flame (feat. milet)' M/V",
+        "channelTitle": "PLAVE 플레이브",
+        "publishedAt": "2026-09-03T09:00:05Z",
+        "thumbnail": "https://i.ytimg.com/vi/pOmJ65UnPEY/mqdefault.jpg",
+        "viewCount": 3872155,
+        "gain": 3221510,
+        "publishedAtText": "2026.09.03"
+      },
+      {
+        "videoId": "qxxOgqxosds",
+        "title": "Skibidi",
+        "channelTitle": "Girls' Generation-HRS - Topic",
+        "publishedAt": "2026-08-31T09:03:28Z",
+        "thumbnail": "https://i.ytimg.com/vi/qxxOgqxosds/mqdefault.jpg",
+        "viewCount": 2210869,
+        "gain": 1606525,
+        "publishedAtText": "2026.08.31"
+      },
+      {
+        "videoId": "W-D8GSXg1W8",
+        "title": "ENHYPEN (엔하이픈) 'Bloody Paradise' Official Performance MV",
+        "channelTitle": "HYBE LABELS",
+        "publishedAt": "2026-08-31T13:00:01Z",
+        "thumbnail": "https://i.ytimg.com/vi/W-D8GSXg1W8/mqdefault.jpg",
+        "viewCount": 3622959,
+        "gain": 1566105,
+        "publishedAtText": "2026.08.31"
+      },
+      {
+        "videoId": "EIc13cn7tWo",
+        "title": "Nostalgia",
+        "channelTitle": "BIG Naughty - Topic",
+        "publishedAt": "2026-08-31T09:02:12Z",
+        "thumbnail": "https://i.ytimg.com/vi/EIc13cn7tWo/mqdefault.jpg",
+        "viewCount": 2574218,
+        "gain": 1442816,
+        "publishedAtText": "2026.08.31"
+      },
+      {
+        "videoId": "YTeFLKMnwjg",
+        "title": "[Special Clip] 윈터 (WINTER) - 여름의 속도 (Speed of Summer) | 딩고뮤직 | dingo Music",
+        "channelTitle": "딩고 뮤직 / dingo music",
+        "publishedAt": "2026-08-27T09:00:28Z",
+        "thumbnail": "https://i.ytimg.com/vi/YTeFLKMnwjg/mqdefault.jpg",
+        "viewCount": 6951337,
+        "gain": 1269489,
+        "publishedAtText": "2026.08.27"
+      },
+      {
+        "videoId": "5HiiJOASI8U",
+        "title": "신들린 그녀의 오디션 #스케치코미디 #재미 #웃긴영상 #예능 #코믹숏무비",
+        "channelTitle": "와글와글",
+        "publishedAt": "2026-09-02T10:00:28Z",
+        "thumbnail": "https://i.ytimg.com/vi/5HiiJOASI8U/mqdefault.jpg",
+        "viewCount": 3128564,
+        "gain": 1262691,
+        "publishedAtText": "2026.09.02"
+      },
+      {
+        "videoId": "FNbT75NoaAI",
+        "title": "JACK - J97 | HOA TRONG ĐÁ | Official Music Video - Album TAM THÁI TỬ - Track No.1",
+        "channelTitle": "J97",
+        "publishedAt": "2026-08-29T13:30:06Z",
+        "thumbnail": "https://i.ytimg.com/vi/FNbT75NoaAI/mqdefault.jpg",
+        "viewCount": 4765189,
+        "gain": 1248934,
+        "publishedAtText": "2026.08.29"
+      },
+      {
+        "videoId": "eAt9h-eBHCk",
+        "title": "빠꾸없는 개그맨 4명이 모이면 생기는 일 #이선민 #예능",
+        "channelTitle": "예능다락방",
+        "publishedAt": "2026-08-30T09:30:15Z",
+        "thumbnail": "https://i.ytimg.com/vi/eAt9h-eBHCk/mqdefault.jpg",
+        "viewCount": 4642266,
+        "gain": 1223714,
+        "publishedAtText": "2026.08.30"
+      },
+      {
+        "videoId": "1qQ2hS-W0lk",
+        "title": "금휘 언니.....,,??? #새옴 #shorts #쇼츠",
+        "channelTitle": "새옴",
+        "publishedAt": "2026-09-04T09:05:17Z",
+        "thumbnail": "https://i.ytimg.com/vi/1qQ2hS-W0lk/mqdefault.jpg",
+        "viewCount": 1834997,
+        "gain": 1081734,
+        "publishedAtText": "2026.09.04"
+      },
+      {
+        "videoId": "6ytdGqMxxrI",
+        "title": "anime",
+        "channelTitle": "Tablo - Topic",
+        "publishedAt": "2026-09-04T09:02:57Z",
+        "thumbnail": "https://i.ytimg.com/vi/6ytdGqMxxrI/mqdefault.jpg",
+        "viewCount": 1121910,
+        "gain": 1032765,
+        "publishedAtText": "2026.09.04"
+      },
+      {
+        "videoId": "0VY2Cz80lNs",
+        "title": "메이드 인 코리아 시즌2 | 캐릭터 예고편 | 디즈니+",
+        "channelTitle": "Disney Plus Korea 디즈니 플러스 코리아",
+        "publishedAt": "2026-09-01T00:00:35Z",
+        "thumbnail": "https://i.ytimg.com/vi/0VY2Cz80lNs/mqdefault.jpg",
+        "viewCount": 3304704,
+        "gain": 957141,
+        "publishedAtText": "2026.09.01"
+      },
+      {
+        "videoId": "XVsrYln5-eo",
+        "title": "상대가 만만하게 보자 개빡쳐버린 덱스 #덱스 #예능레전드 #예능",
+        "channelTitle": "이슈모음집",
+        "publishedAt": "2026-09-03T05:14:26Z",
+        "thumbnail": "https://i.ytimg.com/vi/XVsrYln5-eo/mqdefault.jpg",
+        "viewCount": 3074008,
+        "gain": 832904,
+        "publishedAtText": "2026.09.03"
+      },
+      {
+        "videoId": "fppM7WFOPII",
+        "title": "이선민, 모자 챙 때려도 되냐? #이선민 #유머 #웃긴영상 #예능  #각종유머",
+        "channelTitle": "퍼펭모음",
+        "publishedAt": "2026-08-29T07:00:11Z",
+        "thumbnail": "https://i.ytimg.com/vi/fppM7WFOPII/mqdefault.jpg",
+        "viewCount": 3794439,
+        "gain": 755397,
+        "publishedAtText": "2026.08.29"
+      },
+      {
+        "videoId": "EiBODDDXxeI",
+        "title": "감스트 음바페11카 영입! 속력 172 ㄷㄷ + 2000만원 현질! fc온라인",
+        "channelTitle": "감스트GAMST",
+        "publishedAt": "2026-09-04T11:57:23Z",
+        "thumbnail": "https://i.ytimg.com/vi/EiBODDDXxeI/mqdefault.jpg",
+        "viewCount": 1300991,
+        "gain": 731878,
+        "publishedAtText": "2026.09.04"
+      },
+      {
+        "videoId": "W1kDOqqWNiw",
+        "title": "가능한 사랑 | 공식 예고편 | 넷플릭스",
+        "channelTitle": "Netflix Korea 넷플릭스 코리아",
+        "publishedAt": "2026-08-26T23:00:01Z",
+        "thumbnail": "https://i.ytimg.com/vi/W1kDOqqWNiw/mqdefault.jpg",
+        "viewCount": 1786377,
+        "gain": 676881,
+        "publishedAtText": "2026.08.27"
+      },
+      {
+        "videoId": "SCl9CL9vqa4",
+        "title": "FALLEN ANGEL",
+        "channelTitle": "JENNIE - Topic",
+        "publishedAt": "2026-08-28T04:00:32Z",
+        "thumbnail": "https://i.ytimg.com/vi/SCl9CL9vqa4/mqdefault.jpg",
+        "viewCount": 1619686,
+        "gain": 642314,
+        "publishedAtText": "2026.08.28"
+      },
+      {
+        "videoId": "vbak4PUWoCg",
+        "title": "굶지마 체험기",
+        "channelTitle": "PAKA",
+        "publishedAt": "2026-09-04T08:30:05Z",
+        "thumbnail": "https://i.ytimg.com/vi/vbak4PUWoCg/mqdefault.jpg",
+        "viewCount": 960780,
+        "gain": 615527,
+        "publishedAtText": "2026.09.04"
+      },
+      {
+        "videoId": "buPhYiIXMTM",
+        "title": "Mrs. GREEN APPLE - 푸름과여름 [青と夏] 🎵\"저 가수입니다🎤\" by강남 (with. ENHYPEN 제이)",
+        "channelTitle": "동네친구 강나미 [Kangnami]",
+        "publishedAt": "2026-09-03T10:00:24Z",
+        "thumbnail": "https://i.ytimg.com/vi/buPhYiIXMTM/mqdefault.jpg",
+        "viewCount": 1294163,
+        "gain": 603864,
+        "publishedAtText": "2026.09.03"
+      },
+      {
+        "videoId": "oHFQ6aKTAMw",
+        "title": "P1Harmony (피원하모니) INTAK (인탁) -‘Hip Song’ (비) LIVE CLIP @2026 FAN MEETING [P1uspace H : Horror Haven]",
+        "channelTitle": "P1Harmony",
+        "publishedAt": "2026-08-14T09:00:07Z",
+        "thumbnail": "https://i.ytimg.com/vi/oHFQ6aKTAMw/mqdefault.jpg",
+        "viewCount": 2292187,
+        "gain": 549414,
+        "publishedAtText": "2026.08.14"
+      },
+      {
+        "videoId": "e1VwU42KEec",
+        "title": "[오늘 이 뉴스] '구광모 파양' 패소한 양모.. \"모자관계 어렵다\" 입술 꽉 (2026.09.03/MBC뉴스)",
+        "channelTitle": "MBCNEWS",
+        "publishedAt": "2026-09-03T08:41:38Z",
+        "thumbnail": "https://i.ytimg.com/vi/e1VwU42KEec/mqdefault.jpg",
+        "viewCount": 2469414,
+        "gain": 538763,
+        "publishedAtText": "2026.09.03"
+      },
+      {
+        "videoId": "2aKQ7J6exPc",
+        "title": "RPG게임 초기 세팅이 중요한 이유 #게임 #rpg #쇼츠",
+        "channelTitle": "감도안옴",
+        "publishedAt": "2026-08-29T10:54:59Z",
+        "thumbnail": "https://i.ytimg.com/vi/2aKQ7J6exPc/mqdefault.jpg",
+        "viewCount": 3745029,
+        "gain": 501771,
+        "publishedAtText": "2026.08.29"
+      },
+      {
+        "videoId": "zP9hCCoJVbI",
+        "title": "김현욱의 앙심 #신병4 3회 #쇼츠",
+        "channelTitle": "ENA DRAMA",
+        "publishedAt": "2026-09-02T10:00:15Z",
+        "thumbnail": "https://i.ytimg.com/vi/zP9hCCoJVbI/mqdefault.jpg",
+        "viewCount": 1789305,
+        "gain": 487876,
+        "publishedAtText": "2026.09.02"
+      },
+      {
+        "videoId": "IusMotiS_E4",
+        "title": "게임 중 팀원이 다 나갔을 때",
+        "channelTitle": "짤짤맨",
+        "publishedAt": "2026-09-02T03:00:04Z",
+        "thumbnail": "https://i.ytimg.com/vi/IusMotiS_E4/mqdefault.jpg",
+        "viewCount": 1716211,
+        "gain": 378429,
+        "publishedAtText": "2026.09.02"
+      },
+      {
+        "videoId": "qEBvH9_3v7M",
+        "title": "감스트 패키지에서 26토츠 음바페 11카(현금5000만원) 뽑았습니다!! 서버최초 fc온라인",
+        "channelTitle": "감스트GAMST",
+        "publishedAt": "2026-09-01T11:36:33Z",
+        "thumbnail": "https://i.ytimg.com/vi/qEBvH9_3v7M/mqdefault.jpg",
+        "viewCount": 1865090,
+        "gain": 366000,
+        "publishedAtText": "2026.09.01"
+      },
+      {
+        "videoId": "b0ovZEJb7uM",
+        "title": "아내에게 인생을 가르쳐줬습니다",
+        "channelTitle": "말왕TV",
+        "publishedAt": "2026-09-03T09:02:36Z",
+        "thumbnail": "https://i.ytimg.com/vi/b0ovZEJb7uM/mqdefault.jpg",
+        "viewCount": 1089190,
+        "gain": 363479,
+        "publishedAtText": "2026.09.03"
+      },
+      {
+        "videoId": "B-6S7kY6mXU",
+        "title": "불륜보다 더 나쁜짓 | 남편의 사생활 #스케치코미디 #숏드라마 #숏무비 #예능 #재미#김도이#박현준",
+        "channelTitle": "와글와글",
+        "publishedAt": "2026-08-31T22:00:01Z",
+        "thumbnail": "https://i.ytimg.com/vi/B-6S7kY6mXU/mqdefault.jpg",
+        "viewCount": 2267966,
+        "gain": 359438,
+        "publishedAtText": "2026.09.01"
+      },
+      {
+        "videoId": "8wCpxMv3MXs",
+        "title": "[Limbus Company - Teaser] Season 8 - PUNCTUM",
+        "channelTitle": "ProjectMoon Official",
+        "publishedAt": "2026-09-04T09:30:07Z",
+        "thumbnail": "https://i.ytimg.com/vi/8wCpxMv3MXs/mqdefault.jpg",
+        "viewCount": 941648,
+        "gain": 356905,
+        "publishedAtText": "2026.09.04"
+      },
+      {
+        "videoId": "MnPSMFM1bpc",
+        "title": "소름돋는 설화의 1년전 이선민 신점 #이선민 #설화 #예능",
+        "channelTitle": "예능다락방",
+        "publishedAt": "2026-08-30T13:30:23Z",
+        "thumbnail": "https://i.ytimg.com/vi/MnPSMFM1bpc/mqdefault.jpg",
+        "viewCount": 1023055,
+        "gain": 321285,
+        "publishedAtText": "2026.08.30"
+      },
+      {
+        "videoId": "CkwXLx63zn4",
+        "title": "덱스가 들려주는 UDT 한라산 극한훈련 #덱스 #예능레전드 #예능",
+        "channelTitle": "아우성",
+        "publishedAt": "2026-08-29T12:36:37Z",
+        "thumbnail": "https://i.ytimg.com/vi/CkwXLx63zn4/mqdefault.jpg",
+        "viewCount": 1725260,
+        "gain": 319791,
+        "publishedAtText": "2026.08.29"
+      },
+      {
+        "videoId": "cC66L4givYg",
+        "title": "임현정 '사랑은 봄비처럼 이별은 겨울비처럼...' (Live at Sky Art Hall)",
+        "channelTitle": "임현정 LIM Hyunjung , Official",
+        "publishedAt": "2026-08-28T08:00:02Z",
+        "thumbnail": "https://i.ytimg.com/vi/cC66L4givYg/mqdefault.jpg",
+        "viewCount": 1005309,
+        "gain": 315446,
+        "publishedAtText": "2026.08.28"
+      },
+      {
+        "videoId": "4cqP7q7Oj0I",
+        "title": "그리드 게임의 특징을 이용한 기술",
+        "channelTitle": "로시단",
+        "publishedAt": "2026-09-02T12:41:11Z",
+        "thumbnail": "https://i.ytimg.com/vi/4cqP7q7Oj0I/mqdefault.jpg",
+        "viewCount": 972294,
+        "gain": 307861,
+        "publishedAtText": "2026.09.02"
+      },
+      {
+        "videoId": "FQecMClvDAA",
+        "title": "한살 위 형수한테 폭주하는 이선민 #이선민 #예능",
+        "channelTitle": "예능다락방",
+        "publishedAt": "2026-08-29T13:30:33Z",
+        "thumbnail": "https://i.ytimg.com/vi/FQecMClvDAA/mqdefault.jpg",
+        "viewCount": 3176794,
+        "gain": 299879,
+        "publishedAtText": "2026.08.29"
+      },
+      {
+        "videoId": "8Pbt-Aum5Q4",
+        "title": "식인섬에서 살아남기",
+        "channelTitle": "랄로",
+        "publishedAt": "2026-09-01T13:10:02Z",
+        "thumbnail": "https://i.ytimg.com/vi/8Pbt-Aum5Q4/mqdefault.jpg",
+        "viewCount": 1571699,
+        "gain": 299632,
+        "publishedAtText": "2026.09.01"
+      },
+      {
+        "videoId": "4MAeQqJlJ4c",
+        "title": "≪돼지저금통 뿌수기≫ 와..리뷰 8200개가 싹다 극찬인 이유가 있네요 ㄱㅐ쩝니다",
+        "channelTitle": "혜안",
+        "publishedAt": "2026-08-30T10:19:03Z",
+        "thumbnail": "https://i.ytimg.com/vi/4MAeQqJlJ4c/mqdefault.jpg",
+        "viewCount": 1423720,
+        "gain": 261888,
+        "publishedAtText": "2026.08.30"
+      },
+      {
+        "videoId": "rubsayxg9p4",
+        "title": "레전드 억까 게임 쉽게 깨는 법!? ㅋㅋㅋㅋ",
+        "channelTitle": "플레이우람",
+        "publishedAt": "2026-08-30T04:48:00Z",
+        "thumbnail": "https://i.ytimg.com/vi/rubsayxg9p4/mqdefault.jpg",
+        "viewCount": 1121878,
+        "gain": 257037,
+        "publishedAtText": "2026.08.30"
+      },
+      {
+        "videoId": "LNk-BX38FzQ",
+        "title": "HEAVEN",
+        "channelTitle": "JENNIE - Topic",
+        "publishedAt": "2026-08-28T04:00:15Z",
+        "thumbnail": "https://i.ytimg.com/vi/LNk-BX38FzQ/mqdefault.jpg",
+        "viewCount": 1118708,
+        "gain": 252510,
+        "publishedAtText": "2026.08.28"
+      },
+      {
+        "videoId": "22vIaXN3eo8",
+        "title": "010-DEAR-YOUTH",
+        "channelTitle": "KIMMUSEUM - Topic",
+        "publishedAt": "2026-08-25T09:00:00Z",
+        "thumbnail": "https://i.ytimg.com/vi/22vIaXN3eo8/mqdefault.jpg",
+        "viewCount": 876936,
+        "gain": 248822,
+        "publishedAtText": "2026.08.25"
+      },
+      {
+        "videoId": "mF0pOIE_U9E",
+        "title": "[#SDF] \"왕좌의 게임\" 나인 시안 영상",
+        "channelTitle": "The CHOOM (더 춤)",
+        "publishedAt": "2026-09-02T03:52:01Z",
+        "thumbnail": "https://i.ytimg.com/vi/mF0pOIE_U9E/mqdefault.jpg",
+        "viewCount": 937602,
+        "gain": 228615,
+        "publishedAtText": "2026.09.02"
+      },
+      {
+        "videoId": "tXpzqkI-RFM",
+        "title": "한국 여행중 찍은 사진에 난리 난 일본 여배우",
+        "channelTitle": "국뽕한꼬집",
+        "publishedAt": "2026-08-29T01:00:21Z",
+        "thumbnail": "https://i.ytimg.com/vi/tXpzqkI-RFM/mqdefault.jpg",
+        "viewCount": 1681350,
+        "gain": 217675,
+        "publishedAtText": "2026.08.29"
+      },
+      {
+        "videoId": "Gx89rtKxNNY",
+        "title": "마인크래프트에서 모든 아이템 자동화 하기",
+        "channelTitle": "우융",
+        "publishedAt": "2026-08-29T03:31:33Z",
+        "thumbnail": "https://i.ytimg.com/vi/Gx89rtKxNNY/mqdefault.jpg",
+        "viewCount": 1400606,
+        "gain": 214591,
+        "publishedAtText": "2026.08.29"
+      },
+      {
+        "videoId": "M1JHeFf10Ns",
+        "title": "이상호 피파 인생 최초 슈퍼 챔피언스 찍었습니다..",
+        "channelTitle": "이상호",
+        "publishedAt": "2026-09-03T13:50:28Z",
+        "thumbnail": "https://i.ytimg.com/vi/M1JHeFf10Ns/mqdefault.jpg",
+        "viewCount": 1096036,
+        "gain": 213206,
+        "publishedAtText": "2026.09.03"
+      },
+      {
+        "videoId": "HaCtG1F_hfE",
+        "title": "Crimson Desert Enhanced: Charting the Unknown | Official DLC Reveal Trailer",
+        "channelTitle": "Crimson Desert",
+        "publishedAt": "2026-09-03T13:59:19Z",
+        "thumbnail": "https://i.ytimg.com/vi/HaCtG1F_hfE/mqdefault.jpg",
+        "viewCount": 848714,
+        "gain": 203139,
+        "publishedAtText": "2026.09.03"
+      },
+      {
+        "videoId": "ao7wnB5iPqE",
+        "title": "[자막뉴스] \"한 마디만 하면..밀어줄게\"?.. 中 쯔위 포섭설 대만 '발칵' (2026.09.01/MBC뉴스)",
+        "channelTitle": "MBCNEWS",
+        "publishedAt": "2026-09-01T02:12:15Z",
+        "thumbnail": "https://i.ytimg.com/vi/ao7wnB5iPqE/mqdefault.jpg",
+        "viewCount": 2049853,
+        "gain": 201629,
+        "publishedAtText": "2026.09.01"
+      },
+      {
+        "videoId": "kJmCdVz5XoQ",
+        "title": "김어준의 겸손은힘들다 뉴스공장 2026년 9월 3일 목요일 [이광수X한문도X남기업, 홍사훈X주진우X양부남X황운하, 윤건영X최종건, 목요음악회(오페라 맛 좀 봐라), 동네사람들]",
+        "channelTitle": "김어준의 겸손은힘들다 뉴스공장",
+        "publishedAt": "2026-09-03T01:35:05Z",
+        "thumbnail": "https://i.ytimg.com/vi/kJmCdVz5XoQ/mqdefault.jpg",
+        "viewCount": 1625136,
+        "gain": 197273,
+        "publishedAtText": "2026.09.03"
+      },
+      {
+        "videoId": "w5ffC6mdh78",
+        "title": "한국 축구에 모레노가 꼭 필요한 이유",
+        "channelTitle": "축구친구",
+        "publishedAt": "2026-09-01T08:00:04Z",
+        "thumbnail": "https://i.ytimg.com/vi/w5ffC6mdh78/mqdefault.jpg",
+        "viewCount": 1261776,
+        "gain": 196622,
+        "publishedAtText": "2026.09.01"
+      },
+      {
+        "videoId": "xbm5_b1iqXQ",
+        "title": "Love Again (Prod. Yoon Jong Shin)",
+        "channelTitle": "LEE CHANGSUB - Topic",
+        "publishedAt": "2026-08-25T09:04:32Z",
+        "thumbnail": "https://i.ytimg.com/vi/xbm5_b1iqXQ/mqdefault.jpg",
+        "viewCount": 1014568,
+        "gain": 194129,
+        "publishedAtText": "2026.08.25"
+      },
+      {
+        "videoId": "BaPvsZMxZ3I",
+        "title": "\"기름 한방울 안나면서..\" 전세계가 한국을 1순위로 찾는 이유ㅣ국경없는 클래스 EP.34 (박현도 교수 2부)",
+        "channelTitle": "어썸코리아 Awesome Korea",
+        "publishedAt": "2026-08-28T12:44:41Z",
+        "thumbnail": "https://i.ytimg.com/vi/BaPvsZMxZ3I/mqdefault.jpg",
+        "viewCount": 2042401,
+        "gain": 185294,
+        "publishedAtText": "2026.08.28"
+      },
+      {
+        "videoId": "-qQvf7517Hw",
+        "title": "Hearts2Hearts 하츠투하츠 '15-LOVE' Dance Practice",
+        "channelTitle": "Hearts2Hearts",
+        "publishedAt": "2026-08-30T11:00:19Z",
+        "thumbnail": "https://i.ytimg.com/vi/-qQvf7517Hw/mqdefault.jpg",
+        "viewCount": 869380,
+        "gain": 179382,
+        "publishedAtText": "2026.08.30"
+      },
+      {
+        "videoId": "6f-9Hxx30aA",
+        "title": "오빠 VPN이 뭐야? #스케치코미디 #숏드라마#예능",
+        "channelTitle": "와글와글",
+        "publishedAt": "2026-08-29T06:00:23Z",
+        "thumbnail": "https://i.ytimg.com/vi/6f-9Hxx30aA/mqdefault.jpg",
+        "viewCount": 1408146,
+        "gain": 163480,
+        "publishedAtText": "2026.08.29"
+      },
+      {
+        "videoId": "cyOLSzPtmu8",
+        "title": "김어준의 겸손은힘들다 뉴스공장 2026년 9월 2일 수요일 [박범계X진성준X황명선, 홍사훈X봉지욱X김준형X박주민, 이세미X한가선X김대호X김승현, 영화공장(아가미)] + 텐밀희",
+        "channelTitle": "김어준의 겸손은힘들다 뉴스공장",
+        "publishedAt": "2026-09-02T01:03:47Z",
+        "thumbnail": "https://i.ytimg.com/vi/cyOLSzPtmu8/mqdefault.jpg",
+        "viewCount": 1708457,
+        "gain": 162818,
+        "publishedAtText": "2026.09.02"
+      },
+      {
+        "videoId": "3zAlE5VqbLc",
+        "title": "[속보] 검찰, '여고생 살해' 장윤기에 사형 구형 [뉴스플레이리스트] / 채널A",
+        "channelTitle": "채널A News",
+        "publishedAt": "2026-08-31T08:47:50Z",
+        "thumbnail": "https://i.ytimg.com/vi/3zAlE5VqbLc/mqdefault.jpg",
+        "viewCount": 1255350,
+        "gain": 158471,
+        "publishedAtText": "2026.08.31"
+      },
+      {
+        "videoId": "Gk8F8waA0tM",
+        "title": "송하예 '행복한 나를 (2026ver.)' Official MV",
+        "channelTitle": "하예일기장",
+        "publishedAt": "2026-08-27T09:00:08Z",
+        "thumbnail": "https://i.ytimg.com/vi/Gk8F8waA0tM/mqdefault.jpg",
+        "viewCount": 1906925,
+        "gain": 148696,
+        "publishedAtText": "2026.08.27"
+      },
+      {
+        "videoId": "AfqpB-nU0bY",
+        "title": "UDT 지옥주에서 덱스가 겪은 담력 훈련 #덱스 #예능레전드 #예능",
+        "channelTitle": "아우성",
+        "publishedAt": "2026-08-29T22:00:18Z",
+        "thumbnail": "https://i.ytimg.com/vi/AfqpB-nU0bY/mqdefault.jpg",
+        "viewCount": 834472,
+        "gain": 135468,
+        "publishedAtText": "2026.08.30"
+      },
+      {
+        "videoId": "cd1TL-8Z7Bw",
+        "title": "SLEEP (Official Audio)",
+        "channelTitle": "The Kid LAROI - Topic",
+        "publishedAt": "2026-08-28T04:05:42Z",
+        "thumbnail": "https://i.ytimg.com/vi/cd1TL-8Z7Bw/mqdefault.jpg",
+        "viewCount": 958522,
+        "gain": 128443,
+        "publishedAtText": "2026.08.28"
+      },
+      {
+        "videoId": "vIfr1EfJjY4",
+        "title": "🪽혜안져스 노움강도단, 이제 하늘을 납니다!ㅋㅋㅋㅋㅋㅋㅋ🪽",
+        "channelTitle": "혜안",
+        "publishedAt": "2026-08-28T10:04:20Z",
+        "thumbnail": "https://i.ytimg.com/vi/vIfr1EfJjY4/mqdefault.jpg",
+        "viewCount": 1001224,
+        "gain": 121315,
+        "publishedAtText": "2026.08.28"
+      },
+      {
+        "videoId": "lDOGmJZjcnw",
+        "title": "노말타입 체육관 관장이 되었습니다 ㅋㅋ【체육관 타이쿤】",
+        "channelTitle": "근가놈",
+        "publishedAt": "2026-08-30T14:04:15Z",
+        "thumbnail": "https://i.ytimg.com/vi/lDOGmJZjcnw/mqdefault.jpg",
+        "viewCount": 999737,
+        "gain": 112684,
+        "publishedAtText": "2026.08.30"
+      },
+      {
+        "videoId": "NvXyClFYFa4",
+        "title": "50년 인생 첫 한국 여행에서 제대로 'K-아침밥' 참맛 알아버린 일본 장인 장모님",
+        "channelTitle": "엽기적인 코노짱",
+        "publishedAt": "2026-08-30T01:00:24Z",
+        "thumbnail": "https://i.ytimg.com/vi/NvXyClFYFa4/mqdefault.jpg",
+        "viewCount": 1034742,
+        "gain": 111163,
+        "publishedAtText": "2026.08.30"
+      },
+      {
+        "videoId": "nQnD3i4mzNg",
+        "title": "시어머니 때려서 입원시키고 결국 나락간 탑 여배우! #이슈 #연예인 #쇼츠",
+        "channelTitle": "이해불가 | 연예계 이슈",
+        "publishedAt": "2026-09-01T05:55:56Z",
+        "thumbnail": "https://i.ytimg.com/vi/nQnD3i4mzNg/mqdefault.jpg",
+        "viewCount": 1256867,
+        "gain": 107436,
+        "publishedAtText": "2026.09.01"
+      },
+      {
+        "videoId": "aMOrloU5Bho",
+        "title": "[타짜: 벨제붑의 노래] 메인 예고편",
+        "channelTitle": "CJ ENM Movie",
+        "publishedAt": "2026-08-26T23:00:36Z",
+        "thumbnail": "https://i.ytimg.com/vi/aMOrloU5Bho/mqdefault.jpg",
+        "viewCount": 1822900,
+        "gain": 105423,
+        "publishedAtText": "2026.08.27"
+      },
+      {
+        "videoId": "kL_1k1vgvMY",
+        "title": "777",
+        "channelTitle": "승상싱",
+        "publishedAt": "2026-08-29T07:09:57Z",
+        "thumbnail": "https://i.ytimg.com/vi/kL_1k1vgvMY/mqdefault.jpg",
+        "viewCount": 916637,
+        "gain": 98727,
+        "publishedAtText": "2026.08.29"
+      },
+      {
+        "videoId": "KFYYAw9F1FE",
+        "title": "뚫고 싶은 남자와 막고 싶은 남자의 혈투..",
+        "channelTitle": "이상호",
+        "publishedAt": "2026-09-01T09:46:22Z",
+        "thumbnail": "https://i.ytimg.com/vi/KFYYAw9F1FE/mqdefault.jpg",
+        "viewCount": 995408,
+        "gain": 90879,
+        "publishedAtText": "2026.09.01"
+      },
+      {
+        "videoId": "6ThZY2diLfA",
+        "title": "더 강력해진 서버 골결 1위 해리케인 영입..이상호의 케인은 감동이 있다!",
+        "channelTitle": "이상호",
+        "publishedAt": "2026-08-30T03:45:56Z",
+        "thumbnail": "https://i.ytimg.com/vi/6ThZY2diLfA/mqdefault.jpg",
+        "viewCount": 1152445,
+        "gain": 90084,
+        "publishedAtText": "2026.08.30"
+      },
+      {
+        "videoId": "unDiCmyG4u4",
+        "title": "솔직한 덱스 #덱스 #예능레전드 #예능",
+        "channelTitle": "아우성",
+        "publishedAt": "2026-08-30T08:37:16Z",
+        "thumbnail": "https://i.ytimg.com/vi/unDiCmyG4u4/mqdefault.jpg",
+        "viewCount": 1242879,
+        "gain": 82880,
+        "publishedAtText": "2026.08.30"
+      },
+      {
+        "videoId": "dqn_vwPQ3dQ",
+        "title": "[뉴스 '꾹'] '우산 쓰네?' 빈틈 노려 벌떡..경찰에 '로우킥' 날리더니 (2026.09.01/MBC뉴스)",
+        "channelTitle": "MBCNEWS",
+        "publishedAt": "2026-09-01T08:36:04Z",
+        "thumbnail": "https://i.ytimg.com/vi/dqn_vwPQ3dQ/mqdefault.jpg",
+        "viewCount": 1740967,
+        "gain": 67961,
+        "publishedAtText": "2026.09.01"
+      },
+      {
+        "videoId": "hXYjK4in0MM",
+        "title": "TNX - ‘Die Another Day’ MV",
+        "channelTitle": "TNX",
+        "publishedAt": "2026-08-27T09:00:03Z",
+        "thumbnail": "https://i.ytimg.com/vi/hXYjK4in0MM/mqdefault.jpg",
+        "viewCount": 3773128,
+        "gain": 61118,
+        "publishedAtText": "2026.08.27"
+      },
+      {
+        "videoId": "PUGGoZYZFHk",
+        "title": "\"뛰어\" \"빨리 피해\"‥필사의 탈출, 하지만‥ #Shorts (MBC뉴스)",
+        "channelTitle": "MBCNEWS",
+        "publishedAt": "2026-08-28T02:18:45Z",
+        "thumbnail": "https://i.ytimg.com/vi/PUGGoZYZFHk/mqdefault.jpg",
+        "viewCount": 1599957,
+        "gain": 60684,
+        "publishedAtText": "2026.08.28"
+      },
+      {
+        "videoId": "5Irh7yU7mgA",
+        "title": "KT vs DK | 2026 Wooribank LCK Playoffs Lower Bracket Round 2",
+        "channelTitle": "LCK Global",
+        "publishedAt": "2026-09-04T12:37:35Z",
+        "thumbnail": "https://i.ytimg.com/vi/5Irh7yU7mgA/mqdefault.jpg",
+        "viewCount": 1194157,
+        "gain": 53401,
+        "publishedAtText": "2026.09.04"
       },
       {
         "videoId": "CDhtpYWNEuk",
@@ -1641,29 +1721,19 @@
         "channelTitle": "Disney Plus Korea 디즈니 플러스 코리아",
         "publishedAt": "2026-08-26T00:00:13Z",
         "thumbnail": "https://i.ytimg.com/vi/CDhtpYWNEuk/mqdefault.jpg",
-        "viewCount": 1825268,
-        "gain": 60274,
+        "viewCount": 1830221,
+        "gain": 53101,
         "publishedAtText": "2026.08.26"
       },
       {
-        "videoId": "Ksr2GmcQSIw",
-        "title": "'무서워서 못 가겠다' 초비상, 방콕서 무슨 일 있었길래.. [뉴스.zip/MBC뉴스]",
-        "channelTitle": "MBCNEWS",
-        "publishedAt": "2026-08-30T05:00:13Z",
-        "thumbnail": "https://i.ytimg.com/vi/Ksr2GmcQSIw/mqdefault.jpg",
-        "viewCount": 1306416,
-        "gain": 60236,
+        "videoId": "XswJ2bJVRKE",
+        "title": "레전드 의문사 발생",
+        "channelTitle": "괴물쥐 유튜브",
+        "publishedAt": "2026-08-30T13:01:21Z",
+        "thumbnail": "https://i.ytimg.com/vi/XswJ2bJVRKE/mqdefault.jpg",
+        "viewCount": 865085,
+        "gain": 42109,
         "publishedAtText": "2026.08.30"
-      },
-      {
-        "videoId": "bB2PyjK7QZE",
-        "title": "클로드로 쇼핑 쇼츠 자동화! 제품 링크 하나로 AI 쇼츠 완성 (+프롬프트 공개) | 클로드 & 탑뷰 MCP",
-        "channelTitle": "홍아린 AI",
-        "publishedAt": "2026-08-25T10:00:27Z",
-        "thumbnail": "https://i.ytimg.com/vi/bB2PyjK7QZE/mqdefault.jpg",
-        "viewCount": 263439,
-        "gain": 50172,
-        "publishedAtText": "2026.08.25"
       },
       {
         "videoId": "ntSIs6l-m1I",
@@ -1671,59 +1741,19 @@
         "channelTitle": "MBCNEWS",
         "publishedAt": "2026-08-29T02:30:27Z",
         "thumbnail": "https://i.ytimg.com/vi/ntSIs6l-m1I/mqdefault.jpg",
-        "viewCount": 815196,
-        "gain": 50151,
+        "viewCount": 816870,
+        "gain": 34427,
         "publishedAtText": "2026.08.29"
       },
       {
-        "videoId": "8R1S-_E_bIY",
-        "title": "손흥민이 직접 뽑은 역대 스포츠 GOAT",
-        "channelTitle": "공감입니다 2.0",
-        "publishedAt": "2026-08-29T20:06:24Z",
-        "thumbnail": "https://i.ytimg.com/vi/8R1S-_E_bIY/mqdefault.jpg",
-        "viewCount": 805118,
-        "gain": 35124,
+        "videoId": "Ksr2GmcQSIw",
+        "title": "'무서워서 못 가겠다' 초비상, 방콕서 무슨 일 있었길래.. [뉴스.zip/MBC뉴스]",
+        "channelTitle": "MBCNEWS",
+        "publishedAt": "2026-08-30T05:00:13Z",
+        "thumbnail": "https://i.ytimg.com/vi/Ksr2GmcQSIw/mqdefault.jpg",
+        "viewCount": 1307386,
+        "gain": 18038,
         "publishedAtText": "2026.08.30"
-      },
-      {
-        "videoId": "-N6744h_JWs",
-        "title": "BFX vs DK | 2026 Wooribank LCK Playoffs Lower Bracket Round 1",
-        "channelTitle": "LCK Global",
-        "publishedAt": "2026-09-03T13:25:56Z",
-        "thumbnail": "https://i.ytimg.com/vi/-N6744h_JWs/mqdefault.jpg",
-        "viewCount": 1240308,
-        "gain": 31715,
-        "publishedAtText": "2026.09.03"
-      },
-      {
-        "videoId": "pD6iOfn1N0A",
-        "title": "[속보] 이란 \"미군 여러 명 사망\"..대규모 보복 시작 중동 기지 때리고..호르무즈 유조선까지 피격 - [MBC 뉴스속보] MBC뉴스 2026년 09월 02일",
-        "channelTitle": "MBCNEWS",
-        "publishedAt": "2026-09-02T17:39:53Z",
-        "thumbnail": "https://i.ytimg.com/vi/pD6iOfn1N0A/mqdefault.jpg",
-        "viewCount": 800641,
-        "gain": 26926,
-        "publishedAtText": "2026.09.03"
-      },
-      {
-        "videoId": "mC3wwsi2-S8",
-        "title": "[자막뉴스] \"잘라서 섞어\" 은밀한 지시.. '애들은 몰라' 급식용은 '80%' (대구MBC 뉴스)",
-        "channelTitle": "MBCNEWS",
-        "publishedAt": "2026-08-30T07:08:26Z",
-        "thumbnail": "https://i.ytimg.com/vi/mC3wwsi2-S8/mqdefault.jpg",
-        "viewCount": 2052585,
-        "gain": 23150,
-        "publishedAtText": "2026.08.30"
-      },
-      {
-        "videoId": "NSgEwr-a_VQ",
-        "title": "\"로제가 요즘 전화가 안 돼\".. '한국 갑니다' 웃더니 [뉴스.zip/MBC뉴스]",
-        "channelTitle": "MBCNEWS",
-        "publishedAt": "2026-08-29T04:00:37Z",
-        "thumbnail": "https://i.ytimg.com/vi/NSgEwr-a_VQ/mqdefault.jpg",
-        "viewCount": 1101553,
-        "gain": 19253,
-        "publishedAtText": "2026.08.29"
       },
       {
         "videoId": "NO80CyNf0zI",
@@ -1731,8 +1761,18 @@
         "channelTitle": "쿠팡플레이 스포츠",
         "publishedAt": "2026-08-28T22:49:36Z",
         "thumbnail": "https://i.ytimg.com/vi/NO80CyNf0zI/mqdefault.jpg",
-        "viewCount": 831474,
-        "gain": 18987,
+        "viewCount": 832525,
+        "gain": 13346,
+        "publishedAtText": "2026.08.29"
+      },
+      {
+        "videoId": "NSgEwr-a_VQ",
+        "title": "\"로제가 요즘 전화가 안 돼\".. '한국 갑니다' 웃더니 [뉴스.zip/MBC뉴스]",
+        "channelTitle": "MBCNEWS",
+        "publishedAt": "2026-08-29T04:00:37Z",
+        "thumbnail": "https://i.ytimg.com/vi/NSgEwr-a_VQ/mqdefault.jpg",
+        "viewCount": 1102148,
+        "gain": 11009,
         "publishedAtText": "2026.08.29"
       },
       {
@@ -1741,9 +1781,19 @@
         "channelTitle": "LCK Global",
         "publishedAt": "2026-08-29T13:17:47Z",
         "thumbnail": "https://i.ytimg.com/vi/LSCnrGz5-HU/mqdefault.jpg",
-        "viewCount": 2077821,
-        "gain": 12298,
+        "viewCount": 2078712,
+        "gain": 10072,
         "publishedAtText": "2026.08.29"
+      },
+      {
+        "videoId": "mC3wwsi2-S8",
+        "title": "[자막뉴스] \"잘라서 섞어\" 은밀한 지시.. '애들은 몰라' 급식용은 '80%' (대구MBC 뉴스)",
+        "channelTitle": "MBCNEWS",
+        "publishedAt": "2026-08-30T07:08:26Z",
+        "thumbnail": "https://i.ytimg.com/vi/mC3wwsi2-S8/mqdefault.jpg",
+        "viewCount": 2052735,
+        "gain": 9968,
+        "publishedAtText": "2026.08.30"
       },
       {
         "videoId": "ik_kv-PIm84",
@@ -1751,8 +1801,8 @@
         "channelTitle": "MBCNEWS",
         "publishedAt": "2026-08-28T08:51:19Z",
         "thumbnail": "https://i.ytimg.com/vi/ik_kv-PIm84/mqdefault.jpg",
-        "viewCount": 832922,
-        "gain": 6175,
+        "viewCount": 833838,
+        "gain": 5635,
         "publishedAtText": "2026.08.28"
       },
       {
@@ -1761,19 +1811,9 @@
         "channelTitle": "MBCNEWS",
         "publishedAt": "2026-08-28T06:50:36Z",
         "thumbnail": "https://i.ytimg.com/vi/4t4OsNgqSgU/mqdefault.jpg",
-        "viewCount": 1048442,
-        "gain": 4859,
+        "viewCount": 1049019,
+        "gain": 4351,
         "publishedAtText": "2026.08.28"
-      },
-      {
-        "videoId": "Yad7zdqjhps",
-        "title": "예능인 김원훈 #유재석 #김원훈",
-        "channelTitle": "SBS Entertainment",
-        "publishedAt": "2026-09-02T02:00:01Z",
-        "thumbnail": "https://i.ytimg.com/vi/Yad7zdqjhps/mqdefault.jpg",
-        "viewCount": 26536,
-        "gain": 4092,
-        "publishedAtText": "2026.09.02"
       },
       {
         "videoId": "RyQIUH4OWZQ",
@@ -1781,8 +1821,8 @@
         "channelTitle": "MBCNEWS",
         "publishedAt": "2026-08-31T07:09:10Z",
         "thumbnail": "https://i.ytimg.com/vi/RyQIUH4OWZQ/mqdefault.jpg",
-        "viewCount": 1192919,
-        "gain": 3130,
+        "viewCount": 1194470,
+        "gain": 3880,
         "publishedAtText": "2026.08.31"
       },
       {
@@ -1791,9 +1831,19 @@
         "channelTitle": "MBCNEWS",
         "publishedAt": "2026-08-29T01:14:55Z",
         "thumbnail": "https://i.ytimg.com/vi/5nQaPtqheLU/mqdefault.jpg",
-        "viewCount": 968819,
-        "gain": 2247,
+        "viewCount": 969859,
+        "gain": 2817,
         "publishedAtText": "2026.08.29"
+      },
+      {
+        "videoId": "-N6744h_JWs",
+        "title": "BFX vs DK | 2026 Wooribank LCK Playoffs Lower Bracket Round 1",
+        "channelTitle": "LCK Global",
+        "publishedAt": "2026-09-03T13:25:56Z",
+        "thumbnail": "https://i.ytimg.com/vi/-N6744h_JWs/mqdefault.jpg",
+        "viewCount": 1240911,
+        "gain": 2582,
+        "publishedAtText": "2026.09.03"
       }
     ],
     "monthly": []
