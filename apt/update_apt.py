@@ -4,6 +4,7 @@ import xml.etree.ElementTree as ET
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
 from concurrent.futures import ThreadPoolExecutor, as_completed
+from snapshot_storage import trade_sort_key, write_snapshot
 
 BASE = Path(__file__).resolve().parent
 DATA = BASE / "data"
@@ -209,16 +210,15 @@ for x in rows:
         seen.add(k)
         clean.append(x)
 
-clean.sort(key=lambda x: (x.get("date", ""), x.get("price_manwon", 0)), reverse=True)
+clean.sort(key=trade_sort_key, reverse=True)
 # GitHub Actions 서버는 UTC로 실행될 수 있으므로 갱신 완료시각을 명시적으로 한국시간(KST, UTC+9)으로 기록
 KST = timezone(timedelta(hours=9))
 stamp = datetime.now(KST).isoformat(timespec="minutes")
 
-trade_file.write_text(json.dumps({
+write_snapshot(trade_file, {
     "updated_at": stamp,
     "months": MONTHS,
-    "trades": clean
-}, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+}, "trades", clean)
 
 # 자동완성 단지목록 누적
 apt_file = DATA / "apartments.json"
@@ -247,11 +247,10 @@ for x in clean:
     }
 
 apts = sorted(aptmap.values(), key=lambda x: (
-    x.get("sido", ""), x.get("sigungu", ""), x.get("dong", ""), x.get("apt", "")
+    x.get("sido", ""), x.get("sigungu", ""), x.get("dong", ""), x.get("apt", ""), x.get("region_code", "")
 ))
-apt_file.write_text(json.dumps({
+write_snapshot(apt_file, {
     "updated_at": stamp,
-    "apartments": apts
-}, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+}, "apartments", apts)
 
 print(f"SAVED trades={len(clean)}, apartments={len(apts)}, success_calls={success_calls}, failed_calls={len(errors)}")
