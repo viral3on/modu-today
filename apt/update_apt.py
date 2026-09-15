@@ -149,8 +149,8 @@ for label, candidate in [("HTTPS", HTTPS_ENDPOINT), ("HTTP", HTTP_ENDPOINT)]:
         print(f"API TEST {label} FAIL: {type(e).__name__}: {e}", flush=True)
 
 if not selected_endpoint:
-    print("SKIP: both HTTPS and HTTP API tests failed. Nationwide collection was not started; existing JSON files were preserved. Temporary MOLIT API outage; next scheduled run will retry.", flush=True)
-    raise SystemExit(0)
+    print("FAIL: both HTTPS and HTTP API tests failed. Nationwide collection was not started; existing JSON files were preserved. Temporary MOLIT API outage; next scheduled run will retry.", flush=True)
+    raise SystemExit(1)
 
 ENDPOINT = selected_endpoint
 print(f"API ENDPOINT SELECTED: {'HTTPS' if ENDPOINT.startswith('https://') else 'HTTP'}", flush=True)
@@ -179,14 +179,14 @@ with ThreadPoolExecutor(max_workers=4) as ex:
 
 # 전부 실패했다면 빈 파일을 저장하지 않고 Action 자체를 실패 처리
 if success_calls == 0:
-    print("SKIP: all API calls failed. Existing JSON files were preserved. Next scheduled run will retry.", flush=True)
-    raise SystemExit(0)
+    print("FAIL: all API calls failed. Existing JSON files were preserved. Next scheduled run will retry.", flush=True)
+    raise SystemExit(1)
 
 # 성공률이 비정상적으로 낮으면 불완전한 데이터로 덮어쓰지 않고 기존 데이터 유지
 minimum_success = max(10, len(jobs) // 4)
 if success_calls < minimum_success:
-    print(f"SKIP: only {success_calls}/{len(jobs)} API calls succeeded (minimum={minimum_success}). Existing JSON files were preserved. Next scheduled run will retry.", flush=True)
-    raise SystemExit(0)
+    print(f"FAIL: only {success_calls}/{len(jobs)} API calls succeeded (minimum={minimum_success}). Existing JSON files were preserved. Next scheduled run will retry.", flush=True)
+    raise SystemExit(1)
 
 trade_file = DATA / "trades.json"
 try:
