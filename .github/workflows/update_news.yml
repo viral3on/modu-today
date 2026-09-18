@@ -36,6 +36,8 @@ jobs:
         run: python improve_home_quality.py
       - name: 검증 가능한 시장 데이터로 직접 계산한 설명 제공
         run: python add_market_brief.py
+      - name: 증시 스캐너 바로 아래로 설명서 배치
+        run: python move_reading_guide.py
       - name: 변경사항 자동 커밋 및 푸시
         run: |
           git config --global user.name "MarketBot"
