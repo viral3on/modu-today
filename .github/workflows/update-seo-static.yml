@@ -14,6 +14,7 @@ on:
       - "generate_sitemap.py"
       - "validate_crawl.py"
       - "tests/test_crawl.py"
+      - "tests/test_home_quality.py"
       - "seo_static.py"
       - "enhance_detail_seo.py"
       - "cleanup_empty_seo.py"
