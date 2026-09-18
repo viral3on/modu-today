@@ -127,7 +127,7 @@ def update(check: bool = False) -> tuple[int, int]:
     if old_history != new_history:
         staged[HISTORY] = new_history
     if check and staged:
-        raise ValueError("Lottery store-region labeling is stale: " + ", ".join(str(p.relative_to(ROOT)) for p in staged[:5]))
+        raise ValueError("Lottery store-region labeling is stale: " + ", ".join(str(p.relative_to(ROOT)) for p in list(staged)[:5]))
     if not check:
         for page, content in staged.items():
             page.write_text(content, encoding="utf-8")
