@@ -120,3 +120,4 @@ jobs:
             git add stock/index.html youtube/index.html lotto/index.html lotto/history/index.html lotto/[0-9]*/index.html apt/index.html calculator/*.html games/index.html games/*/index.html sitemap.xml docs/url-inventory.md
             git commit --amend --no-edit
             git push
+          fi
