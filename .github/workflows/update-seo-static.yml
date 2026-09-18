@@ -20,6 +20,7 @@ on:
       - "lotto_history_insights.py"
       - "lotto_draw_context.py"
       - "site_footer.py"
+      - "improve_home_quality.py"
       - ".github/workflows/update-seo-static.yml"
   workflow_run:
     workflows:
@@ -93,6 +94,19 @@ jobs:
         run: python lotto_draw_context.py
       - name: Generate static crawl links
         run: python crawl_structure.py
+      - name: Test homepage metadata and stable regeneration
+        run: |
+          python - <<'PY'
+          from improve_home_quality import improve, OLD_TITLE, OLD_DESCRIPTION, NEW_TITLE, NEW_DESCRIPTION
+          original='<html><head>'+OLD_TITLE+OLD_DESCRIPTION+'<style></style></head><body><main><section class="section">원래 콘텐츠</section></main></body></html>'
+          result=improve(original)
+          assert NEW_TITLE in result and NEW_DESCRIPTION in result and OLD_TITLE not in result
+          assert '<section class="section">원래 콘텐츠</section>' in result
+          assert improve(result)==result
+          print('Homepage metadata and idempotence tests passed')
+          PY
+      - name: Restore descriptive homepage title after regeneration
+        run: python improve_home_quality.py
       - name: Test shared footer insertion and idempotence
         run: python site_footer.py --test
       - name: Add site information links to all published pages
@@ -111,7 +125,7 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -u
           git diff --cached --quiet && exit 0
-          git commit -m "Update SEO snapshots and consistent footer navigation"
+          git commit -m "Update SEO snapshots and descriptive homepage metadata"
 
           if ! git push; then
             echo "Remote changed while SEO snapshot was being rendered; rebasing and rerendering."
@@ -122,6 +136,7 @@ jobs:
             python lotto_history_insights.py
             python lotto_draw_context.py
             python crawl_structure.py
+            python improve_home_quality.py
             python site_footer.py
             python site_footer.py --check
             python generate_sitemap.py
