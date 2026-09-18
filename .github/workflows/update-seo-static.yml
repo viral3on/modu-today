@@ -18,6 +18,7 @@ on:
       - "enhance_detail_seo.py"
       - "cleanup_empty_seo.py"
       - "lotto_history_insights.py"
+      - "lotto_draw_context.py"
       - ".github/workflows/update-seo-static.yml"
   workflow_run:
     workflows:
@@ -69,6 +70,26 @@ jobs:
           PY
       - name: Add verified historical lotto comparison
         run: python lotto_history_insights.py
+      - name: Test factual per-draw context and idempotence
+        run: |
+          python - <<'PY'
+          from lotto_draw_context import valid_rows, render, apply, START, ANCHOR
+          rows=valid_rows({'draws':[
+            {'draw':3,'numbers':[1,2,3,4,5,6]},
+            {'draw':2,'numbers':[1,2,3,7,8,9]},
+            {'draw':1,'numbers':[10,11,12,13,14,15]}]})
+          section=render(3,rows)
+          assert '3개(1, 2, 3)' in section and '1번 2회' in section
+          assert '당첨 확률을 예측하지 않습니다' in section and '다음 4회' not in section
+          source='<html><body>'+ANCHOR+' sample</body></html>'
+          once=apply(source,section)
+          assert once==apply(once,section) and once.count(START)==1
+          assert ANCHOR in once and render(22,rows)==''
+          assert len(valid_rows({'draws':[{'draw':1,'numbers':[1,1,2,3,4,5]},{'draw':2,'numbers':[1,2,3,4,5,6]}]}))==1
+          print('Per-draw lotto context tests passed')
+          PY
+      - name: Add per-draw comparison and adjacent navigation
+        run: python lotto_draw_context.py
       - name: Generate static crawl links
         run: python crawl_structure.py
       - name: Regenerate sitemap
@@ -81,9 +102,9 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add stock/index.html youtube/index.html lotto/index.html lotto/history/index.html apt/index.html calculator/*.html games/index.html games/*/index.html sitemap.xml docs/url-inventory.md
+          git add stock/index.html youtube/index.html lotto/index.html lotto/history/index.html lotto/[0-9]*/index.html apt/index.html calculator/*.html games/index.html games/*/index.html sitemap.xml docs/url-inventory.md
           git diff --cached --quiet && exit 0
-          git commit -m "Update static SEO snapshots"
+          git commit -m "Update static SEO snapshots and factual Lotto draw context"
 
           if ! git push; then
             echo "Remote changed while SEO snapshot was being rendered; rebasing and rerendering."
@@ -92,10 +113,10 @@ jobs:
             python seo_static.py
             python enhance_detail_seo.py
             python lotto_history_insights.py
+            python lotto_draw_context.py
             python crawl_structure.py
             python generate_sitemap.py
             python validate_crawl.py
-            git add stock/index.html youtube/index.html lotto/index.html lotto/history/index.html apt/index.html calculator/*.html games/index.html games/*/index.html sitemap.xml docs/url-inventory.md
+            git add stock/index.html youtube/index.html lotto/index.html lotto/history/index.html lotto/[0-9]*/index.html apt/index.html calculator/*.html games/index.html games/*/index.html sitemap.xml docs/url-inventory.md
             git commit --amend --no-edit
             git push
-          fi
