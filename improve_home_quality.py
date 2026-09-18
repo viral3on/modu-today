@@ -1,15 +1,18 @@
-"""Restore readable news cards, clear homepage metadata and sourced-data guidance.
+"""Restore readable news cards, accurate homepage metadata and a sourced-data guide.
 
-Run after update_news.py, or on the SEO rebuild; never edit generated news by hand.
+Run after update_news.py or on the SEO rebuild. The temporary KRX suspension
+step subsequently removes the KRX-only guide; do not recreate old metadata.
 """
 from pathlib import Path
 
 HOME = Path(__file__).resolve().parent / "index.html"
 CANONICAL = '<link rel="canonical" href="https://modu.today/">'
 OLD_TITLE = '<title>MODU.TODAY</title>'
-NEW_TITLE = '<title>MODU.TODAY | 국내 증시 스캐너·로또 기록·생활 계산기</title>'
+LEGACY_TITLE = '<title>MODU.TODAY | 국내 증시 스캐너·로또 기록·생활 계산기</title>'
+NEW_TITLE = '<title>MODU.TODAY | 로또 기록·생활 계산기·웹게임</title>'
 OLD_DESCRIPTION = '<meta name="description" content="증시 스캐너, 뉴스, YouTube 순위, 계산기, 게임, 로또, 아파트 실거래가를 한곳에서 확인하세요.">'
-NEW_DESCRIPTION = '<meta name="description" content="KRX 일별 증시 데이터 스캐너와 지표 계산법, 로또 최근 100회 결과 및 과거 통계, 생활 계산기와 아파트 실거래가를 확인하세요. 뉴스는 외부 언론사의 원문 링크를 모아 제공합니다.">'
+LEGACY_DESCRIPTION = '<meta name="description" content="KRX 일별 증시 데이터 스캐너와 지표 계산법, 로또 최근 100회 결과 및 과거 통계, 생활 계산기와 아파트 실거래가를 확인하세요. 뉴스는 외부 언론사의 원문 링크를 모아 제공합니다.">'
+NEW_DESCRIPTION = '<meta name="description" content="로또 회차별 당첨 기록과 과거 통계, 생활 계산기, 웹게임, 아파트 실거래가와 외부 뉴스 원문 링크를 제공합니다. KRX 증시 스캐너는 데이터 이용 범위 확인을 위해 일시 중단 중입니다.">'
 STYLE = '''
 /* News feed fallback: update_news.py uses Tailwind class names, but home has no Tailwind CSS. */
 .news-live .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
@@ -42,12 +45,12 @@ GUIDE = '''
 def improve(text: str) -> str:
     if "</style>" not in text or "</head>" not in text or "<main>" not in text or '<section class="section">' not in text:
         raise ValueError("Unexpected homepage markup: nothing changed")
-    if OLD_TITLE not in text and NEW_TITLE not in text:
+    if not any(title in text for title in (OLD_TITLE, LEGACY_TITLE, NEW_TITLE)):
         raise ValueError("Unknown homepage title; refusing to overwrite")
-    if OLD_DESCRIPTION not in text and NEW_DESCRIPTION not in text:
+    if not any(description in text for description in (OLD_DESCRIPTION, LEGACY_DESCRIPTION, NEW_DESCRIPTION)):
         raise ValueError("Unknown homepage description; refusing to overwrite")
-    text = text.replace(OLD_TITLE, NEW_TITLE, 1)
-    text = text.replace(OLD_DESCRIPTION, NEW_DESCRIPTION, 1)
+    text = text.replace(OLD_TITLE, NEW_TITLE, 1).replace(LEGACY_TITLE, NEW_TITLE, 1)
+    text = text.replace(OLD_DESCRIPTION, NEW_DESCRIPTION, 1).replace(LEGACY_DESCRIPTION, NEW_DESCRIPTION, 1)
     if 'rel="canonical"' not in text:
         text = text.replace("</head>", CANONICAL + "\n</head>", 1)
     if "News feed fallback: update_news.py" not in text:
