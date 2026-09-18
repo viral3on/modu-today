@@ -2,64 +2,23 @@ name: Update stock scanner
 
 on:
   schedule:
-    # KRX 주간 종가 2차 전송(18:10 KST) 직후부터 새 거래일 데이터 확인
-    - cron: "20 9 * * 1-5"   # 18:20 KST
-    - cron: "40 9 * * 1-5"   # 18:40 KST
-    - cron: "0 10 * * 1-5"   # 19:00 KST
-    - cron: "0 11 * * 1-5"   # 20:00 KST
-    - cron: "0 13 * * 1-5"   # 22:00 KST
-    # 다음 장 시작 전 안전 재확인. 주말도 포함해 금요일 데이터 누락 방지
-    - cron: "40 22 * * *"     # 07:40 KST
-    - cron: "20 23 * * *"     # 08:20 KST
+    - cron: '20 9 * * 1-5'
+    - cron: '40 9 * * 1-5'
+    - cron: '0 10 * * 1-5'
+    - cron: '0 11 * * 1-5'
+    - cron: '0 13 * * 1-5'
+    - cron: '40 22 * * *'
+    - cron: '20 23 * * *'
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
 
+# Suspended at the site owner's request until the right to publicly display
+# and monetize KRX OPEN API data has been confirmed. No API calls or writes.
 jobs:
   update:
+    if: ${{ false }}
     runs-on: ubuntu-latest
-    timeout-minutes: 20
-    env:
-      KRX_API_KEY: ${{ secrets.KRX_API_KEY }}
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v5
-        with:
-          fetch-depth: 0
-      - name: Set up Python
-        uses: actions/setup-python@v6
-        with:
-          python-version: "3.11"
-      - name: Test KRX API key
-        run: |
-          if [ -z "$KRX_API_KEY" ]; then
-            echo "KRX_API_KEY secret is missing"
-            exit 1
-          fi
-          echo "KRX_API_KEY secret exists"
-      - name: Build KRX stock scanner data
-        run: python -u stock/update_stock.py
-      - name: Update sitemap
-        run: |
-          if [ -f generate_sitemap.py ]; then python generate_sitemap.py; fi
-      - name: Commit data
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add stock/data/scanner.json stock/data/snapshot.json
-          if [ -f stock/data/availability_log.json ]; then git add stock/data/availability_log.json; fi
-          if [ -f sitemap.xml ]; then git add sitemap.xml; fi
-          if git diff --cached --quiet; then
-            echo "No stock scanner changes."
-            exit 0
-          fi
-          git commit -m "Update KRX stock scanner data"
-          if ! git push; then
-            echo "Remote changed while stock data was being built; rebasing and retrying."
-            git pull --rebase origin main
-            if [ -f generate_sitemap.py ]; then python generate_sitemap.py; fi
-            if [ -f sitemap.xml ]; then git add sitemap.xml; fi
-            if ! git diff --cached --quiet; then git commit --amend --no-edit; fi
-            git push
-          fi
+      - run: echo 'KRX public data service is temporarily suspended.'
