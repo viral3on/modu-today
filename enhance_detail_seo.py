@@ -28,7 +28,7 @@ CALC = {
 GAME = {
 "minesweeper":("지뢰찾기 게임 방법과 규칙", "숫자는 주변 8칸에 숨어 있는 지뢰의 개수를 뜻합니다. 지뢰가 아닌 칸을 모두 열면 승리하며, 의심되는 칸에는 깃발을 표시해 추리할 수 있습니다.", "초급부터 시작해 숫자 주변의 확정 가능한 칸을 먼저 찾는 것이 좋습니다. 모바일에서는 화면을 이동하며 보드를 확인하고 제공되는 깃발 조작을 이용할 수 있습니다."),
 "2048":("2048 게임 방법과 규칙", "같은 숫자의 타일을 밀어 합치면서 더 큰 숫자를 만드는 퍼즐 게임입니다. 한 번 움직일 때 모든 타일이 같은 방향으로 이동하므로 빈 공간을 유지하는 것이 중요합니다.", "큰 타일을 한쪽 모서리에 유지하고 불필요한 방향 전환을 줄이면 보드를 오래 유지하는 데 도움이 됩니다."),
-"block-game":("블록 게임 방법과 규칙", "주어진 블록을 보드에 배치해 가로나 세로 줄을 완성하고 공간을 확보하는 퍼즐입니다. 다음 블록을 놓을 자리를 미리 남겨 두는 것이 핵심입니다.", "큰 블록을 놓을 공간을 확보하면서 여러 줄을 동시에 지울 수 있는 배치를 찾으면 더 오래 진행할 수 있습니다."),
+"block-game":("MODU BLOCKS 게임 방법과 규칙", "위에서 내려오는 블록을 좌우로 움직이고 회전해 가로 줄을 빈칸 없이 완성하면 해당 줄이 사라지고 점수를 얻습니다. 세로 줄을 채우는 방식은 아닙니다.", "다음 블록 미리보기와 HOLD 기능으로 공간을 관리할 수 있습니다. 여러 줄을 한 번에 지우거나 연속으로 줄을 지우면 점수가 올라갑니다."),
 }
 
 STYLE='''<style>.detail-seo{max-width:960px;margin:28px auto;padding:0 16px}.detail-seo-box{background:#fff;color:#334155;border:1px solid #e2e8f0;border-radius:18px;padding:24px;box-shadow:0 8px 30px rgba(15,23,42,.05)}.detail-seo h2{font-size:21px;color:#0f172a;margin:0 0 12px}.detail-seo h3{font-size:16px;color:#0f172a;margin:22px 0 8px}.detail-seo p{line-height:1.8;margin:8px 0}.detail-seo-links{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}.detail-seo-links a{padding:8px 11px;border-radius:10px;background:#eff6ff;color:#1d4ed8;text-decoration:none;font-weight:700;font-size:13px}</style>'''
