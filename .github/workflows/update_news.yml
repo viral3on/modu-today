@@ -19,6 +19,8 @@ jobs:
     steps:
       - name: 저장소 체크아웃
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - name: 파이썬 환경 설정
         uses: actions/setup-python@v5
         with:
@@ -34,10 +36,17 @@ jobs:
           fi
       - name: 뉴스 가독성 및 데이터 해석 안내 적용
         run: python improve_home_quality.py
-      - name: 검증 가능한 시장 데이터로 직접 계산한 설명 제공
-        run: python add_market_brief.py
-      - name: 증시 스캐너 바로 아래로 설명서 배치
-        run: python move_reading_guide.py
+      - name: Keep market brief only when KRX publication is authorized
+        run: |
+          if [ ! -f KRX_PUBLIC_PAUSED ]; then
+            python add_market_brief.py
+            python move_reading_guide.py
+          fi
+      - name: Keep KRX public data suspended across homepage regeneration
+        run: |
+          python suspend_krx_public.py --test
+          python suspend_krx_public.py
+          if [ -f KRX_PUBLIC_PAUSED ]; then python suspend_krx_public.py --check; fi
       - name: Restore site information links after homepage rebuild
         run: |
           python site_footer.py --test
@@ -49,4 +58,5 @@ jobs:
           git config --global user.email "bot@example.com"
           git add index.html
           git commit -m "Auto-update market news index.html" || exit 0
+          git pull --rebase origin main
           git push
