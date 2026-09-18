@@ -38,6 +38,11 @@ jobs:
         run: python add_market_brief.py
       - name: 증시 스캐너 바로 아래로 설명서 배치
         run: python move_reading_guide.py
+      - name: Restore site information links after homepage rebuild
+        run: |
+          python site_footer.py --test
+          python site_footer.py
+          python site_footer.py --check
       - name: 변경사항 자동 커밋 및 푸시
         run: |
           git config --global user.name "MarketBot"
