@@ -1,0 +1,87 @@
+name: Pause public KRX data
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'KRX_PUBLIC_PAUSED'
+      - 'suspend_krx_public.py'
+      - '.github/workflows/pause-krx-public.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: krx-public-pause
+  cancel-in-progress: false
+
+jobs:
+  pause:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Test reversible KRX suspension
+        run: python suspend_krx_public.py --test
+      - name: Remove public scanner data and replace scanner pages with clear pause notice
+        run: |
+          python suspend_krx_public.py
+          python suspend_krx_public.py --check
+          python site_footer.py
+          python site_footer.py --check
+          python generate_sitemap.py
+      - name: Commit paused public pages and data removals
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -u
+          git diff --cached --quiet && exit 0
+          git commit -m 'Temporarily remove public KRX scanner data and displays'
+          if ! git push; then
+            git pull --rebase origin main
+            python suspend_krx_public.py
+            python site_footer.py
+            python generate_sitemap.py
+            git add -u
+            git diff --cached --quiet || git commit --amend --no-edit
+            git push
+          fi
+      - name: Verify publicly deployed suspension
+        run: |
+          python - <<'PY'
+          import time
+          from urllib.request import urlopen, Request
+          from urllib.error import HTTPError
+          for attempt in range(15):
+              try:
+                  def body(path):
+                      with urlopen(Request('https://modu.today'+path, headers={'Cache-Control':'no-cache','User-Agent':'MODU-KRX-pause-check/1.0'}),timeout=18) as r:
+                          return r.read().decode('utf-8','replace')
+                  home, stock, guide, sitemap = body('/'), body('/stock/'), body('/stock/guide/'), body('/sitemap.xml')
+                  try:
+                      with urlopen(Request('https://modu.today/stock/data/scanner.json',headers={'Cache-Control':'no-cache'}),timeout=18) as r:
+                          json_public = r.status == 200
+                  except HTTPError as err:
+                      json_public = err.code == 200
+                  ok = ('stockHomeSignals' not in home and '/stock/data/scanner.json' not in home
+                        and '증시 스캐너 일시 중단' in stock and 'noindex' in stock
+                        and '증시 스캐너 일시 중단' in guide and 'noindex' in guide
+                        and 'https://modu.today/stock/' not in sitemap
+                        and 'https://modu.today/stock/guide/' not in sitemap
+                        and not json_public)
+                  if ok:
+                      print('LIVE PASS: homepage has no KRX data, scanner and guide suspended, public JSON removed, sitemap cleaned')
+                      break
+                  print('Waiting for deployed KRX suspension:',attempt+1)
+              except Exception as err:
+                  print('Deployment not yet settled:',type(err).__name__,str(err)[:120])
+              if attempt==14:
+                  raise AssertionError('Could not verify all KRX suspension conditions on deployed site')
+              time.sleep(10)
+          PY
