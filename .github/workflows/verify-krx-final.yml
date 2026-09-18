@@ -1,0 +1,55 @@
+name: Verify KRX suspension on live site
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/verify-krx-final.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Verify deployed pages, about text, public data removal, sitemap and ads.txt
+        run: |
+          python - <<'PY'
+          import time
+          from urllib.request import Request, urlopen
+          from urllib.error import HTTPError
+          BASE='https://modu.today'
+          def fetch(path):
+              req=Request(BASE+path,headers={'User-Agent':'MODU-final-public-check/1.0','Cache-Control':'no-cache'})
+              try:
+                  with urlopen(req,timeout=15) as resp:
+                      return resp.status,resp.read().decode('utf-8','replace')
+              except HTTPError as exc:
+                  return exc.code,''
+          for attempt in range(16):
+              try:
+                  home, stock, guide, about, sitemap, ads, raw = [fetch(p) for p in ('/','/stock/','/stock/guide/','/about/','/sitemap.xml','/ads.txt','/stock/data/scanner.json')]
+                  ok = (home[0]==200 and 'id="stockHomeSignals"' not in home[1] and '/stock/data/scanner.json' not in home[1]
+                        and '국내 증시 스캐너·로또 기록' not in home[1]
+                        and stock[0]==200 and '증시 스캐너 일시 중단' in stock[1] and 'noindex' in stock[1]
+                        and guide[0]==200 and 'noindex' in guide[1]
+                        and about[0]==200 and 'KRX 증시 스캐너 (일시 중단)' in about[1]
+                        and '/stock/' not in sitemap[1] and sitemap[0]==200
+                        and ads[0]==200 and 'pub-6122968996738347' in ads[1]
+                        and raw[0] in (403,404,410))
+                  if ok:
+                      print('LIVE PASS: homepage, paused scanner + guide, updated About, sitemap, ads.txt, public JSON removed')
+                      break
+                  print('Waiting for full deployment:', attempt+1, 'about_new=', 'KRX 증시 스캐너 (일시 중단)' in about[1], 'scanner_status=',stock[0], 'json_status=',raw[0])
+              except Exception as exc:
+                  print('Waiting for deployment:',type(exc).__name__,str(exc)[:120])
+              if attempt==15:
+                  raise AssertionError('KRX suspension is not fully reflected on the live site')
+              time.sleep(12)
+          PY
