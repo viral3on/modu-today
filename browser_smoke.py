@@ -45,6 +45,23 @@ def stock(page):
     page.wait_for_function('() => document.querySelectorAll("#rows .row").length > 0', timeout=23000)
 
 
+def lotto_history(page):
+    page.locator('h1').first.wait_for(state='visible', timeout=18000)
+    select = page.locator('#lotto-draw-select')
+    select.wait_for(state='visible', timeout=10000)
+    options = select.locator('option')
+    if options.count() != 100:
+        raise AssertionError(f'Expected 100 real draw choices; found {options.count()}')
+    if select.locator('option[value="/lotto/1240/"]').count() != 1:
+        raise AssertionError('Known 1240 draw is not in the history selector')
+    select.select_option('/lotto/1240/')
+    page.locator('#lotto-draw-jump button[type="submit"]').click()
+    page.wait_for_url('**/lotto/1240/', timeout=18000)
+    page.locator('h1').first.wait_for(state='visible', timeout=12000)
+    if '1240' not in page.locator('h1').first.inner_text():
+        raise AssertionError('Draw navigation opened an unexpected detail page')
+
+
 def test():
     results = []
     with sync_playwright() as p:
@@ -53,7 +70,7 @@ def test():
             for name, viewport in VIEWPORTS.items():
                 context = browser.new_context(viewport=viewport, device_scale_factor=1, is_mobile=name=='mobile', has_touch=name=='mobile')
                 page = context.new_page()
-                for path, func in (('/', home), ('/calculator/percent.html', percentage), ('/stock/', stock), ('/youtube/', None), ('/apt/', None), ('/lotto/history/', None)):
+                for path, func in (('/', home), ('/calculator/percent.html', percentage), ('/stock/', stock), ('/youtube/', None), ('/apt/', None), ('/lotto/history/', lotto_history)):
                     try:
                         result = check_page(page, name, path, func)
                         results.append((name, path, '확인', result))
@@ -81,7 +98,7 @@ def main():
              '| 화면 | 경로 | 결과 | 상세 |', '|---|---|---|---|']
     for viewport, path, status, detail in results:
         lines.append(f'| {viewport} | `{path}` | {status} | {detail.replace("|", "/")} |')
-    lines += ['', '검사 항목: PC/모바일 첫 화면 뉴스의 CSS, 실제 퍼센트 계산 2건, 증시 동적 종목 행, 기타 주요 서비스의 제목 표시. 화면별 전체 기능을 모두 검증했다는 뜻은 아닙니다.', '']
+    lines += ['', '검사 항목: PC/모바일 뉴스 카드의 CSS, 실제 퍼센트 계산 2건, 증시 동적 종목 행, 로또 100회 선택 후 상세 페이지 이동, 기타 주요 서비스의 제목 표시. 화면별 전체 기능을 모두 검증했다는 뜻은 아닙니다.', '']
     REPORT.parent.mkdir(parents=True, exist_ok=True)
     REPORT.write_text('\n'.join(lines), encoding='utf-8')
     print('\n'.join(lines))
