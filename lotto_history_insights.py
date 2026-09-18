@@ -37,10 +37,16 @@ def render(data, stores=None):
 
     store_note = ''
     if isinstance(stores, dict):
-        covered = sum(1 for draw in draws if isinstance(stores.get(str(draw)), list) and bool(stores[str(draw)]))
-        store_note = (f'<p>위의 당첨지역 통계는 판매점 목록을 확보한 {covered}개 회차의 자료를 합산했습니다. '
-                      f'전체 {n}개 회차 중 판매점 자료가 없는 회차는 지역 통계에서 제외됩니다. '
-                      '지역별 판매점 수는 구매자 수나 앞으로의 당첨 가능성을 뜻하지 않습니다.</p>')
+        available = [stores[str(draw)] for draw in draws
+                     if isinstance(stores.get(str(draw)), list) and stores[str(draw)]]
+        covered, entries = len(available), sum(map(len, available))
+        if covered == n:
+            store_note = (f'<p>위의 당첨지역 통계는 {n}개 회차의 판매점 당첨 기록 {entries}건을 누적했습니다. '
+                          '같은 판매점이 여러 회차에 당첨되면 각각 1건으로 집계하므로 고유 판매점 수와 다릅니다.</p>')
+        else:
+            store_note = (f'<p>위의 당첨지역 통계는 전체 {n}개 회차 중 판매점 목록이 확보된 '
+                          f'{covered}개 회차의 당첨 기록 {entries}건만 누적했습니다. '
+                          '판매점 자료가 없는 회차는 집계에서 제외되며, 고유 판매점 수와 다릅니다.</p>')
 
     options = '\n'.join(f'<option value="/lotto/{draw}/">{draw}회</option>' for draw in draws)
     return f'''{START}
@@ -70,12 +76,28 @@ document.getElementById('lotto-draw-jump').addEventListener('submit', function(e
 {END}'''
 
 
+def clarify_region_summary(html):
+    """A repeated winning shop counts once per draw, not once as a unique shop."""
+    region = re.compile(r'(<section class="region-box">\s*<h2>📍 최근 100회 1등 당첨지역 통계</h2>)(.*?)(</section>)', re.S)
+
+    def label(match):
+        body = match.group(2)
+        body = body.replace(
+            '회차별 1등 당첨 판매점 소재지를 누적한 통계입니다. 당첨 확률을 의미하지 않습니다.',
+            '회차별 1등 당첨 판매점 기록을 누적한 통계입니다. 동일 판매점이 여러 번 당첨되면 각각 집계합니다. 당첨 확률을 의미하지 않습니다.')
+        body = re.sub(r'(\d+)곳', r'\1건', body)
+        body = body.replace('<b>전남광주</b>', '<b>전남·광주(원자료 통합)</b>')
+        return match.group(1) + body + match.group(3)
+
+    return region.sub(label, html, count=1)
+
+
 def apply(html, section):
     if not section: return html
     html = re.sub(re.escape(START) + r'.*?' + re.escape(END) + r'\s*', '', html, flags=re.S)
     target = '<main class="list">'
     if target not in html: raise ValueError('Historical listing markup changed')
-    return html.replace(target, section + '\n' + target, 1)
+    return clarify_region_summary(html.replace(target, section + '\n' + target, 1))
 
 
 def main():
@@ -85,6 +107,6 @@ def main():
     new = apply(old, render(source, stores))
     if new != old:
         PAGE.write_text(new, encoding='utf-8')
-    print('History analysis and draw lookup:', 'updated' if new != old else 'unchanged or insufficient data')
+    print('History analysis, draw lookup, and shop-count labels:', 'updated' if new != old else 'unchanged')
 
 if __name__ == '__main__': main()
