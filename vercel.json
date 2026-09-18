@@ -1,0 +1,4 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "ignoreCommand": "bash -c 'base=${VERCEL_GIT_PREVIOUS_SHA:-HEAD^}; target=${VERCEL_GIT_COMMIT_SHA:-HEAD}; git cat-file -e \"${base}^{commit}\" 2>/dev/null && git cat-file -e \"${target}^{commit}\" 2>/dev/null && git diff --quiet \"$base\" \"$target\" -- . \":(exclude).github/**\" \":(exclude)docs/**\" \":(exclude)tests/**\" \":(exclude)*.md\" \":(exclude)**/*.md\"'"
+}
