@@ -19,6 +19,7 @@ on:
       - "cleanup_empty_seo.py"
       - "lotto_history_insights.py"
       - "lotto_draw_context.py"
+      - "site_footer.py"
       - ".github/workflows/update-seo-static.yml"
   workflow_run:
     workflows:
@@ -92,6 +93,12 @@ jobs:
         run: python lotto_draw_context.py
       - name: Generate static crawl links
         run: python crawl_structure.py
+      - name: Test shared footer insertion and idempotence
+        run: python site_footer.py --test
+      - name: Add site information links to all published pages
+        run: python site_footer.py
+      - name: Verify shared footer links on all published pages
+        run: python site_footer.py --check
       - name: Regenerate sitemap
         run: python generate_sitemap.py
       - name: Validate crawl structure
@@ -102,9 +109,9 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add stock/index.html youtube/index.html lotto/index.html lotto/history/index.html lotto/[0-9]*/index.html apt/index.html calculator/*.html games/index.html games/*/index.html sitemap.xml docs/url-inventory.md
+          git add -u
           git diff --cached --quiet && exit 0
-          git commit -m "Update static SEO snapshots and factual Lotto draw context"
+          git commit -m "Update SEO snapshots and consistent footer navigation"
 
           if ! git push; then
             echo "Remote changed while SEO snapshot was being rendered; rebasing and rerendering."
@@ -115,9 +122,11 @@ jobs:
             python lotto_history_insights.py
             python lotto_draw_context.py
             python crawl_structure.py
+            python site_footer.py
+            python site_footer.py --check
             python generate_sitemap.py
             python validate_crawl.py
-            git add stock/index.html youtube/index.html lotto/index.html lotto/history/index.html lotto/[0-9]*/index.html apt/index.html calculator/*.html games/index.html games/*/index.html sitemap.xml docs/url-inventory.md
+            git add -u
             git commit --amend --no-edit
             git push
           fi
