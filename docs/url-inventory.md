@@ -143,8 +143,8 @@
 | https://modu.today/naver6e73a9fbc73e45bd5d7efab1c336bf9a.html | 보호 | 제외 | 인증 파일 수정 금지 |
 | https://modu.today/privacy/ | ② | 포함 | 서비스/탐색/신뢰 정보 |
 | https://modu.today/skhynix-split-analysis.html | ③ | 제외 | legacy standalone page: review before promoting |
-| https://modu.today/stock/guide/ | ② | 포함 | 서비스/탐색/신뢰 정보 |
-| https://modu.today/stock/ | ② | 포함 | 서비스/탐색/신뢰 정보 |
+| https://modu.today/stock/guide/ | ③ | 제외 | noindex or redirect |
+| https://modu.today/stock/ | ③ | 제외 | noindex or redirect |
 | https://modu.today/terms/ | ② | 포함 | 서비스/탐색/신뢰 정보 |
 | https://modu.today/yasun.html | ③ | 제외 | legacy standalone page: review before promoting |
 | https://modu.today/youtube/ | ② | 포함 | 서비스/탐색/신뢰 정보 |
