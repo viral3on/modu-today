@@ -21,11 +21,12 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Regression checks for new content
+      - name: Regression checks for content and guide placement
         run: |
           python - <<'PY'
           from add_market_brief import brief, apply, START
           from improve_home_quality import improve
+          from move_reading_guide import move, verify, GUIDE, STOCK_HEADING, YOUTUBE_HEADING
           from datetime import date
           d={'trade_date': date.today().isoformat(), 'market': {'up': 120, 'down': 70, 'flat': 10, 'total_stocks': 200}, 'signals': {'watch_top':[{'name':'예제','volume':2000,'avg_volume_20d':1000}]}}
           b=brief(d)
@@ -36,18 +37,37 @@ jobs:
           assert output==improve(output)
           updated=apply(output,b)
           assert updated==apply(updated,b) and updated.count(START)==1
-          print('Homepage fixture checks passed')
+          old='<main><section class="section" id="reading-guide"><div class="wrap"><p>아래 뉴스는 외부 기사</p></div></section><section class="section"><h2>뉴스</h2></section><section class="section">'+STOCK_HEADING+'<div id="stockHomeMeta"></div></section><section class="section">'+YOUTUBE_HEADING+'</section></main>'
+          moved=move(old)
+          verify(moved)
+          assert moved==move(moved)
+          assert moved.count(GUIDE)==1 and '상단 뉴스는 외부 기사' in moved
+          assert old.replace(old[old.index(GUIDE):old.index('</section>')+len('</section>')], '') in moved.replace(moved[moved.index(GUIDE):moved.index('</section>',moved.index(GUIDE))+len('</section>')], '')
+          print('Content and placement fixture tests passed')
           PY
       - name: Apply page repairs without overwriting news or services
         run: |
           python improve_home_quality.py
           python add_market_brief.py
+          python move_reading_guide.py
+      - name: Check final static homepage order
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          from move_reading_guide import verify, move
+          html=Path('index.html').read_text(encoding='utf-8')
+          verify(html)
+          assert move(html)==html
+          print('Static homepage: scanner -> guide -> YouTube verified')
+          PY
       - name: Commit only updated home page
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add index.html
           git diff --cached --quiet && exit 0
-          git commit -m 'Publish readable news and first-party market explanation'
+          git commit -m 'Move market reading guide below homepage stock scanner'
           git pull --rebase origin main
           git push
+      - name: Confirm live homepage placement after deployment
+        run: python move_reading_guide.py --check-live
