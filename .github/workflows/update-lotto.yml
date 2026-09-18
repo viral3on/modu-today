@@ -37,6 +37,12 @@ jobs:
       - name: Sync homepage lotto card
         run: python lotto/update_home_lotto.py
 
+      - name: Restore information links on regenerated HTML
+        run: |
+          python site_footer.py --test
+          python site_footer.py
+          python site_footer.py --check
+
       - name: Update sitemap
         run: |
           if [ -f generate_sitemap.py ]; then
