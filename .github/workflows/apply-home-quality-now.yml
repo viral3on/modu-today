@@ -1,0 +1,53 @@
+name: Apply Home Quality Now
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/apply-home-quality-now.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  home:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Regression checks for new content
+        run: |
+          python - <<'PY'
+          from add_market_brief import brief, apply, START
+          from improve_home_quality import improve
+          from datetime import date
+          d={'trade_date': date.today().isoformat(), 'market': {'up': 120, 'down': 70, 'flat': 10, 'total_stocks': 200}, 'signals': {'watch_top':[{'name':'예제','volume':2000,'avg_volume_20d':1000}]}}
+          b=brief(d)
+          assert '60.0%' in b and '2.00배' in b
+          assert brief(dict(d, trade_date='2001-01-01')) is None
+          html='<html><head><style></style></head><body><main><section class="section">뉴스</section></main></body></html>'
+          output=improve(html)
+          assert output==improve(output)
+          updated=apply(output,b)
+          assert updated==apply(updated,b) and updated.count(START)==1
+          print('Homepage fixture checks passed')
+          PY
+      - name: Apply page repairs without overwriting news or services
+        run: |
+          python improve_home_quality.py
+          python add_market_brief.py
+      - name: Commit only updated home page
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add index.html
+          git diff --cached --quiet && exit 0
+          git commit -m 'Publish readable news and first-party market explanation'
+          git pull --rebase origin main
+          git push
