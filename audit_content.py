@@ -55,7 +55,10 @@ class Page(HTMLParser):
 
 def pages(root=ROOT):
     for path in root.rglob('*.html'):
-        if not any(part in SKIP_DIRS for part in path.relative_to(root).parts):
+        rel = path.relative_to(root)
+        if len(rel.parts) == 1 and rel.name.lower().startswith(('google', 'naver')):
+            continue  # Site-ownership tokens are not visitor-facing content.
+        if not any(part in SKIP_DIRS for part in rel.parts):
             yield path
 
 def resolve_link(href: str, root=ROOT):
@@ -94,7 +97,7 @@ def audit(root=ROOT):
             if meaningful < 2 and 'noindex' not in page.robots:
                 issues.append((rel, '충분한 길이의 설명 문단 2개 미만', str(meaningful)))
         if not page.title: issues.append((rel, 'title 누락', ''))
-        if not page.description and not rel.startswith(('google','naver')):
+        if not page.description:
             issues.append((rel, 'meta description 누락', ''))
         if page.description:
             descriptions.setdefault(page.description, []).append(rel)
@@ -115,14 +118,15 @@ def audit(root=ROOT):
 def main():
     stats, areas, issues = audit()
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
-    lines = ['# 사이트 콘텐츠 정적 점검', '', '저장소 HTML의 구조적 점검입니다. 구글 심사 결과, 실제 브라우저 표시, 검색 색인 상태 또는 정책 위반 판정이 아닙니다.', '',
+    lines = ['# 사이트 콘텐츠 정적 점검', '',
+             '저장소 방문자용 HTML의 구조적 점검입니다. 소유권 인증 파일은 제외합니다. 길이 기준은 내부 점검용 휴리스틱이며 구글의 최저 글자 수 기준이 아닙니다. 구글 심사 결과, 실제 브라우저 표시, 검색 색인 상태 또는 정책 위반 판정이 아닙니다.', '',
              f"- 공개 HTML 후보: {stats['total_html']}개", f"- 로또 회차 기록: {stats['lotto_draw_pages']}개", f"- noindex: {stats['noindex_pages']}개", f"- 구조상 점검 항목: {stats['issues']}건", '',
              '## 영역별 HTML 파일', '', '| 영역 | 파일 수 |', '|---|---:|']
     lines.extend(f'| `{a}` | {n} |' for a, n in sorted(areas.items()))
     lines += ['', '## 점검 항목 (최대 150건 표시)', '', '| 파일 | 항목 | 내용 |', '|---|---|---|']
     lines.extend(f"| `{f.replace('|','')}` | {kind.replace('|','')} | {detail.replace('|','/')} |" for f,kind,detail in issues[:150])
     if len(issues)>150: lines += ['', f'나머지 {len(issues)-150}건은 스크립트를 로컬 실행하여 확인하세요.']
-    lines += ['', '## 수동 확인', '', 'Search Console 실제 렌더링/색인, 애드센스 세부 사유, 모바일 UI, 데이터 갱신 실패, 원본 데이터의 정확성·사용권은 별도로 확인해야 합니다.', '']
+    lines += ['', '## 수동 확인', '', '로또 회차 기록은 데이터가 개별적으로 다르더라도 자동 생성된 반복 페이지이므로 고유 가치와 출처를 표본 검토해야 합니다. Search Console 실제 렌더링/색인, 애드센스 세부 사유, 모바일 UI, 데이터 갱신 실패, 원본 데이터의 정확성·사용권도 별도로 확인해야 합니다.', '']
     OUTPUT.write_text('\n'.join(lines), encoding='utf-8')
     print(f"HTML={stats['total_html']} lotto={stats['lotto_draw_pages']} issues={stats['issues']} report={OUTPUT}")
 
