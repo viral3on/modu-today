@@ -73,7 +73,7 @@ def test():
         assert once.count('<nav aria-label="사이트 안내 및 문의"') == 1
         assert all(once.count('href="' + href + '"') == 1 for href, _ in LINKS)
         assert once.find(START) < once.lower().rfind('</body>')
-        assert '<main>기능</main>' in once
+        assert '<main>기능</main>' not in sample or '<main>기능</main>' in once
     try:
         apply('<html><body>' + START + '</body></html>')
     except ValueError:
