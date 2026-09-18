@@ -11,15 +11,19 @@ BASE = 'https://modu.today'
 ROOT = Path(__file__).resolve().parent
 REPORT = ROOT / 'docs' / 'deployment-smoke.md'
 PAGES = {
-    '/': ('MODU.TODAY', 'id="reading-guide"', '외부 기사'),
+    '/': ('MODU.TODAY', 'id="reading-guide"', '외부 기사', '최근 거래일 숫자 읽기'),
     '/ads.txt': ('google.com, pub-6122968996738347, DIRECT, f08c47fec0942fa0',),
     '/stock/guide/': ('증시 스캐너: 숫자가 만들어지는 과정',),
     '/stock/': ('KRX', 'SEO_STATIC_START'),
     '/calculator/': ('id="calc-original-guide"',),
-    '/lotto/history/': ('최근 100회',),
+    '/lotto/history/': ('최근 100회', 'id="lotto-historical-context"'),
     '/youtube/': ('YouTube',),
     '/apt/': ('실거래',),
+    '/games/': ('게임',),
+    '/about/': ('MODU.TODAY',),
+    '/contact/': ('문의',),
     '/privacy/': ('개인정보처리방침',),
+    '/terms/': ('이용',),
     '/sitemap.xml': ('https://modu.today/stock/guide/',),
 }
 
