@@ -42,7 +42,7 @@ jobs:
           verify(moved)
           assert moved==move(moved)
           assert moved.count(GUIDE)==1 and '상단 뉴스는 외부 기사' in moved
-          assert old.replace(old[old.index(GUIDE):old.index('</section>')+len('</section>')], '') in moved.replace(moved[moved.index(GUIDE):moved.index('</section>',moved.index(GUIDE))+len('</section>')], '')
+          assert moved.index('<h2>뉴스</h2>') < moved.index(STOCK_HEADING) < moved.index(GUIDE) < moved.index(YOUTUBE_HEADING)
           print('Content and placement fixture tests passed')
           PY
       - name: Apply page repairs without overwriting news or services
