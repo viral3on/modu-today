@@ -1,5 +1,5 @@
 """Replace the homepage generic reading guide with source-grounded market breadth."""
-from datetime import date
+from datetime import date, datetime, timedelta, timezone
 from html import escape
 from pathlib import Path
 import json
@@ -9,12 +9,13 @@ ROOT = Path(__file__).resolve().parent
 HOME = ROOT / 'index.html'
 DATA = ROOT / 'stock/data/scanner.json'
 START = '<section class="section" id="reading-guide">'
+KST = timezone(timedelta(hours=9))
 
 
 def brief(data):
     try:
         day = date.fromisoformat(data['trade_date'])
-        age = (date.today() - day).days
+        age = (datetime.now(KST).date() - day).days
         m = data['market']
         up, down, flat, total = [int(m[k]) for k in ('up', 'down', 'flat', 'total_stocks')]
         if not (0 <= age <= 10 and total >= 100 and up + down + flat == total):
