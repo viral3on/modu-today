@@ -1,0 +1,54 @@
+name: Repair Site Navigation
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'repair_nav.py'
+      - '.github/workflows/repair-site-navigation.yml'
+  workflow_run:
+    workflows: ['Update SEO Static HTML']
+    types: [completed]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: modu-repair-navigation
+  cancel-in-progress: false
+
+jobs:
+  repair:
+    if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Check idempotence and do not touch working links
+        run: |
+          python - <<'PY'
+          from repair_nav import repair_html
+          a='<a class="x" href="/vat.html">미제공 도구</a><a href="/calculator/loan.html">정상 도구</a>'
+          b=repair_html(a,'calculator/customs.html')
+          assert '/vat.html' not in b and '/calculator/loan.html' in b
+          c=repair_html('<section class="calc-trust">', 'calculator/index.html')
+          assert c==repair_html(c,'calculator/index.html') and c.count('id="calc-original-guide"')==1
+          print('Navigation repair fixture tests passed')
+          PY
+      - name: Repair broken references and add calculation examples
+        run: python repair_nav.py
+      - name: Commit revised HTML
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add calculator/*.html skhynix-split-analysis.html
+          git diff --cached --quiet && exit 0
+          git commit -m 'Repair dead navigation and explain calculator examples'
+          git pull --rebase origin main
+          git push
