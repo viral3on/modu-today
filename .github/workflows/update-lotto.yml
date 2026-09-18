@@ -37,6 +37,12 @@ jobs:
       - name: Sync homepage lotto card
         run: python lotto/update_home_lotto.py
 
+      - name: Separate online wins from physical store regions
+        run: |
+          python lotto_store_region_accuracy.py --test
+          python lotto_store_region_accuracy.py
+          python lotto_store_region_accuracy.py --check
+
       - name: Restore information links on regenerated HTML
         run: |
           python site_footer.py --test
