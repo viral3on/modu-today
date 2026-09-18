@@ -5,6 +5,7 @@ Run after update_news.py; never edit the generated HTML by hand.
 from pathlib import Path
 
 HOME = Path(__file__).resolve().parent / "index.html"
+CANONICAL = '<link rel="canonical" href="https://modu.today/">'
 STYLE = '''
 /* News feed fallback: update_news.py uses Tailwind class names, but home has no Tailwind CSS. */
 .news-live .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
@@ -34,8 +35,10 @@ GUIDE = '''
 '''
 
 def improve(text: str) -> str:
-    if "</style>" not in text or "<main>" not in text or '<section class="section">' not in text:
+    if "</style>" not in text or "</head>" not in text or "<main>" not in text or '<section class="section">' not in text:
         raise ValueError("Unexpected homepage markup: nothing changed")
+    if 'rel="canonical"' not in text:
+        text = text.replace("</head>", CANONICAL + "\n</head>", 1)
     if "News feed fallback: update_news.py" not in text:
         text = text.replace("</style>", STYLE + "\n</style>", 1)
     if 'id="reading-guide"' not in text:
