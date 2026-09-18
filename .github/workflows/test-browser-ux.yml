@@ -1,0 +1,56 @@
+name: Test Browser UX
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'browser_smoke.py'
+      - '.github/workflows/test-browser-ux.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  browser:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install headless Chromium
+        run: |
+          pip install playwright
+          python -m playwright install chromium --with-deps
+      - name: Run responsive and calculator interactions
+        id: check
+        continue-on-error: true
+        run: python browser_smoke.py
+      - name: Keep browser evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: site-browser-smoke
+          path: |
+            docs/browser-smoke.md
+            /tmp/modu-*.png
+          if-no-files-found: ignore
+      - name: Commit browser result
+        if: always()
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          if [ ! -f docs/browser-smoke.md ]; then exit 0; fi
+          git add docs/browser-smoke.md
+          git diff --cached --quiet && exit 0
+          git commit -m 'Record desktop and mobile browser verification'
+          git pull --rebase origin main
+          git push
+      - name: Fail on broken public UX
+        if: steps.check.outcome == 'failure'
+        run: exit 1
