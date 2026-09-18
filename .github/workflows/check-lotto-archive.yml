@@ -1,0 +1,44 @@
+name: Verify Lotto Archive
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'verify_lotto_pages.py'
+      - '.github/workflows/check-lotto-archive.yml'
+  workflow_run:
+    workflows: ['Update Lotto Results']
+    types: [completed]
+
+permissions:
+  contents: write
+
+jobs:
+  verify:
+    if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Compare retained draw snapshot with generated draw pages
+        id: verify
+        continue-on-error: true
+        run: python verify_lotto_pages.py
+      - name: Commit test report
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add docs/lotto-page-consistency.md
+          git diff --cached --quiet && exit 0
+          git commit -m 'Record lotto page data consistency'
+          git pull --rebase origin main
+          git push
+      - name: Fail if draw pages do not match the source snapshot
+        if: steps.verify.outcome == 'failure'
+        run: exit 1
