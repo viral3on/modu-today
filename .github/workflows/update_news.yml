@@ -41,6 +41,10 @@ jobs:
             python lotto/update_home_lotto.py
           fi
 
+      - name: 뉴스 가독성 및 데이터 해석 안내 적용
+        run: |
+          python improve_home_quality.py
+
       - name: 변경사항 자동 커밋 및 푸시
         run: |
           git config --global user.name "MarketBot"
