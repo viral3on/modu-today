@@ -20,6 +20,7 @@ on:
       - "cleanup_empty_seo.py"
       - "lotto_history_insights.py"
       - "lotto_draw_context.py"
+      - "lotto_store_region_accuracy.py"
       - "site_footer.py"
       - "improve_home_quality.py"
       - ".github/workflows/update-seo-static.yml"
@@ -93,6 +94,11 @@ jobs:
           PY
       - name: Add per-draw comparison and adjacent navigation
         run: python lotto_draw_context.py
+      - name: Test and reconcile online lottery records and physical regions
+        run: |
+          python lotto_store_region_accuracy.py --test
+          python lotto_store_region_accuracy.py
+          python lotto_store_region_accuracy.py --check
       - name: Generate static crawl links
         run: python crawl_structure.py
       - name: Test homepage metadata and stable regeneration
@@ -126,7 +132,7 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -u
           git diff --cached --quiet && exit 0
-          git commit -m "Update SEO snapshots and descriptive homepage metadata"
+          git commit -m "Update SEO snapshots and accurate lottery-region totals"
 
           if ! git push; then
             echo "Remote changed while SEO snapshot was being rendered; rebasing and rerendering."
@@ -136,6 +142,8 @@ jobs:
             python enhance_detail_seo.py
             python lotto_history_insights.py
             python lotto_draw_context.py
+            python lotto_store_region_accuracy.py
+            python lotto_store_region_accuracy.py --check
             python crawl_structure.py
             python improve_home_quality.py
             python site_footer.py
