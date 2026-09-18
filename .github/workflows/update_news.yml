@@ -2,49 +2,40 @@ name: Auto Update Market News
 
 on:
   schedule:
-    # GitHub Actions cron은 UTC 기준입니다.
-    # 아래 실행 시각은 한국시간(KST) 기준: 06:00 / 09:00 / 12:00 / 15:00 / 18:00 / 21:00
-    - cron: '0 21 * * *' # 06:00 KST
-    - cron: '0 0 * * *'  # 09:00 KST
-    - cron: '0 3 * * *'  # 12:00 KST
-    - cron: '0 6 * * *'  # 15:00 KST
-    - cron: '0 9 * * *'  # 18:00 KST
-    - cron: '0 12 * * *' # 21:00 KST
-  workflow_dispatch: # 수동 실행 버튼 활성화
+    # GitHub Actions cron uses UTC. KST: 06:00 / 09:00 / 12:00 / 15:00 / 18:00 / 21:00
+    - cron: '0 21 * * *'
+    - cron: '0 0 * * *'
+    - cron: '0 3 * * *'
+    - cron: '0 6 * * *'
+    - cron: '0 9 * * *'
+    - cron: '0 12 * * *'
+  workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-
     steps:
       - name: 저장소 체크아웃
         uses: actions/checkout@v4
-
       - name: 파이썬 환경 설정
         uses: actions/setup-python@v5
         with:
           python-version: '3.10'
-
       - name: 필수 라이브러리 설치
-        run: |
-          pip install feedparser
-
+        run: pip install feedparser
       - name: 뉴스 수집 및 index.html 자동 생성
-        run: |
-          python update_news.py
-
+        run: python update_news.py
       - name: 최신 로또 결과를 홈 카드에 다시 반영
         run: |
           if [ -f lotto/update_home_lotto.py ] && [ -f lotto/data/results.json ]; then
             python lotto/update_home_lotto.py
           fi
-
       - name: 뉴스 가독성 및 데이터 해석 안내 적용
-        run: |
-          python improve_home_quality.py
-
+        run: python improve_home_quality.py
+      - name: 검증 가능한 시장 데이터로 직접 계산한 설명 제공
+        run: python add_market_brief.py
       - name: 변경사항 자동 커밋 및 푸시
         run: |
           git config --global user.name "MarketBot"
