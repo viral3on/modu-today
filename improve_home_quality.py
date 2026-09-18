@@ -68,4 +68,7 @@ if __name__ == "__main__":
     patched = improve(original)
     if original != patched:
         HOME.write_text(patched, encoding="utf-8")
+    if (HOME.parent / 'KRX_PUBLIC_PAUSED').exists():
+        from suspend_krx_public import apply as suspend
+        suspend()
     print("Homepage readable news + descriptive metadata:", "updated" if original != patched else "already applied")
