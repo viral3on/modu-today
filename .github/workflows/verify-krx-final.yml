@@ -10,6 +10,7 @@ on:
 permissions:
   contents: read
 
+# Final live check after the suspension deployment has settled.
 jobs:
   verify:
     runs-on: ubuntu-latest
