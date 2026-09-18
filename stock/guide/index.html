@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>증시 스캐너 지표 계산법과 해석 | MODU.TODAY</title>
+<meta name="description" content="MODU 증시 스캐너의 거래량·거래대금 급증, 신고가, 연속 상승, 관심도 산식을 실제 숫자 예제로 설명하고 데이터 시차와 해석상 한계를 안내합니다.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://modu.today/stock/guide/">
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f6f8fc;color:#172033;font-family:Arial,"Noto Sans KR","Malgun Gothic",sans-serif;line-height:1.8}a{color:#3154bf}header{background:#101b2c;color:#fff;padding:16px 20px}header nav,main,footer{max-width:920px;margin:auto}header a{color:#fff;margin-right:18px;text-decoration:none}main{padding:28px 18px 45px}article{background:#fff;border:1px solid #e1e7f0;border-radius:20px;padding:clamp(20px,5vw,42px)}h1{font-size:clamp(27px,4vw,36px);line-height:1.35;margin:0 0 10px}h2{font-size:21px;margin:30px 0 10px;border-bottom:1px solid #e5eaf1;padding-bottom:6px}h3{font-size:17px;margin:20px 0 4px}p{margin:9px 0}ul{padding-left:22px}.lead,.muted{color:#526175}.example{padding:17px;background:#edf4ff;border-left:4px solid #4a70df;border-radius:8px;margin:15px 0}.warning{padding:16px;background:#fff8e8;border:1px solid #f2d79a;border-radius:10px}.table-scroll{overflow:auto}table{border-collapse:collapse;width:100%;min-width:550px;font-size:14px}td,th{text-align:left;vertical-align:top;border-bottom:1px solid #e5eaf1;padding:10px}th{background:#f3f6fa}code{background:#f0f3f7;padding:2px 5px;border-radius:4px}footer{padding:0 18px 36px;color:#697789;font-size:13px}
+</style>
+</head>
+<body>
+<header><nav><a href="/">MODU.TODAY</a><a href="/stock/">증시 스캐너</a><a href="/about/">서비스 소개</a></nav></header>
+<main><article>
+<h1>증시 스캐너: 숫자가 만들어지는 과정</h1>
+<p class="lead">데이터가 어디서 오고 어떤 비교를 거쳐 화면의 신호가 되는지, 실제 프로그램에 적용한 기준을 숫자 예시로 설명합니다. 아래의 모든 종목·가격 예시는 계산법 설명을 위한 가상값입니다.</p>
+<h2>1. 수집 범위와 시간부터 확인</h2>
+<p>기본 데이터는 한국거래소(KRX) OPEN API의 유가증권·코스닥 <strong>일별매매정보</strong>입니다. 프로그램은 최근 최대 121거래일을 수집해 종목별 거래량, 거래대금, 종가, 고가 등을 비교합니다. 화면의 거래일과 갱신 시각은 서로 다른 개념입니다. 오늘 페이지를 열었더라도 데이터가 어제 거래분이면 어제 기준으로 읽어야 합니다.</p>
+<p>지수·ETF·ETN·금시장 등의 추가 API는 별도 활용승인 또는 수집 상황에 따라 표시되지 않을 수 있습니다. 빈 영역이 해당 시장에서 거래가 없었다는 뜻은 아닙니다. 데이터가 오래되었거나 누락되었다면 증권사·거래소 원자료로 다시 확인하세요. <a href="https://openapi.krx.co.kr/contents/OPP/INFO/service/OPPINFO004.cmd" rel="noopener noreferrer" target="_blank">KRX OPEN API 서비스 목록 ↗</a></p>
+<h2>2. 거래량·거래대금 급증의 계산법</h2>
+<p>거래량 배수는 <strong>오늘 거래량 ÷ 직전 최대 20거래일의 일평균 거래량</strong>입니다. 거래대금 배수도 동일한 방식으로 거래대금을 비교합니다. 평균을 낼 때는 유효한 양수 거래일만 사용하며, 비교할 데이터가 없다면 급증으로 판정하지 않습니다.</p>
+<div class="example"><strong>가상 예제</strong><br>직전 20거래일 평균 거래량이 40만 주이고 오늘 120만 주라면 120만 ÷ 40만 = <strong>3배</strong>입니다. 평균 거래대금이 100억 원이고 오늘 250억 원이라면 거래대금 배수는 <strong>2.5배</strong>입니다. 두 배수는 각각의 기준이 2배 이상이므로 ‘거래량 급증’과 ‘거래대금 급증’에 모두 해당합니다.</div>
+<p>‘이상거래 포착’은 두 배수 모두 2배 이상이면서 당일 등락률의 절댓값이 2% 이상인 경우입니다. 거래량만 많거나 가격만 오른 종목은 이 조건에 들어가지 않습니다. ‘돈 몰린 종목’은 당일 거래대금 100억 원 이상이면서 거래대금 배수가 1.5배 이상일 때 표시합니다.</p>
+<h2>3. 신고가와 추세의 의미</h2>
+<div class="table-scroll"><table><thead><tr><th>항목</th><th>실제 판정 방식</th><th>읽을 때 주의할 점</th></tr></thead><tbody>
+<tr><td>20일 신고가</td><td>오늘 <strong>종가</strong>가 직전 최대 20거래일의 <strong>일중 최고가</strong> 이상</td><td>장중 고가만 넘고 종가가 밀렸다면 해당하지 않음</td></tr>
+<tr><td>60일 / 120일 신고가</td><td>같은 방식으로 직전 60일 / 120일의 고가와 비교</td><td>비교 이력 최소 40일 / 80일이 필요함</td></tr>
+<tr><td>5일 연속 상승</td><td>최근 6개 종가 사이의 연속 5번 변화가 모두 상승</td><td>같은 가격으로 마감한 날이 끼면 연속 상승으로 세지 않음</td></tr>
+<tr><td>추세 강화</td><td>최근 5거래일 수익률 5% 이상, 20거래일 수익률 10% 이상, 당일 등락률 양수</td><td>과거 흐름의 분류이며 향후 수익률 예측이 아님</td></tr>
+</tbody></table></div>
+<div class="example"><strong>가상 예제</strong><br>직전 20거래일 중 가장 높았던 장중 가격이 56,000원이고 오늘 종가가 57,000원이면 ‘20일 신고가’ 조건을 만족합니다. 오늘 장중 가격만 57,000원에 도달하고 종가가 55,000원이라면 만족하지 않습니다.</div>
+<h2>4. ‘MODU 관심도’는 무엇을 뜻하나요?</h2>
+<p>관심도는 거래량 비율(최대 18점), 거래대금 비율(18점), 절대 거래대금(18점), 당일 가격 변화(10점), 5일·20일 추세(합계 16점), 신고가(12점), 시가총액 구간(8점)을 합산하고 조건에 따른 감점을 적용한 <strong>자체 지표</strong>입니다. 점수는 0~100 범위로 제한됩니다. 이 지표는 시장 전체에서 종목을 정리하기 위한 도구일 뿐, 투자 가치나 상승 확률을 뜻하지 않습니다.</p>
+<p>예를 들어 거래량 배수가 3배이면 거래량 기여점수는 <code>min((3−1)×4.5, 18)=9점</code>입니다. 단기간 급등, 매우 낮은 거래대금, 높은 회전율 등에는 별도의 감점이 있습니다. ‘주목 TOP’에는 관심도 55점 이상, 당일 거래대금 30억 원 이상, 거래 급증·신고가·상승 추세 중 하나 이상의 맥락을 충족한 종목만 들어갑니다. 55점은 매수 기준이 아니라 사이트 내부의 분류 기준입니다.</p>
+<h2>5. 결과를 비교하는 순서</h2>
+<ol><li>화면 상단에서 <strong>실제 거래일</strong>을 먼저 확인합니다.</li><li>거래량 배수와 거래대금 배수가 함께 증가했는지 구분합니다.</li><li>신고가가 ‘오늘 종가’ 기준인지, 추세가 과거 수익률에 기반한 것인지 확인합니다.</li><li>공시, 거래정지 여부, 기업 이벤트, 시장 전체의 변동은 별도로 조사합니다.</li><li>수치가 중요한 의사결정에 쓰일 때는 KRX와 증권사의 원자료를 대조합니다.</li></ol>
+<div class="warning"><strong>정보 이용 시 유의사항</strong><br>이 서비스는 실시간 주문·호가 시스템이 아닙니다. 과거 데이터에서 특이 움직임을 분류할 뿐 미래 가격, 손익 또는 특정 종목의 적합성을 보증하지 않습니다. 수집 오류, API 반영 지연, 종목별 거래 이력 부족으로 일부 결과가 빠질 수 있습니다.</div>
+<p class="muted">산식 설명 기준: 사이트 공개 프로그램의 ‘MODU 관심도 v1.3’ 및 거래일별 조건 분류 로직. <a href="https://github.com/viral3on/modu-today/blob/main/stock/update_stock.py" rel="noopener noreferrer" target="_blank">산출 코드 확인 ↗</a></p>
+</article></main>
+<footer><a href="/stock/">증시 스캐너로 돌아가기</a> · <a href="/privacy/">개인정보처리방침</a> · <a href="/contact/">문의</a></footer>
+</body></html>
