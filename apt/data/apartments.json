@@ -1,5 +1,5 @@
 {
-"updated_at":"2026-09-20T15:41+09:00",
+"updated_at":"2026-09-21T07:28+09:00",
 "apartments":[
 {"region_code":"51150","sido":"강원특별자치도","sigungu":"강릉시","region":"강원특별자치도 강릉시","dong":"견소동","apt":"송정한신"},
 {"region_code":"51150","sido":"강원특별자치도","sigungu":"강릉시","region":"강원특별자치도 강릉시","dong":"견소동","apt":"송정해변신도브래뉴아파트"},
@@ -18783,6 +18783,7 @@
 {"region_code":"50130","sido":"제주특별자치도","sigungu":"서귀포시","region":"제주특별자치도 서귀포시","dong":"동홍동","apt":"서강파인힐(101동)"},
 {"region_code":"50130","sido":"제주특별자치도","sigungu":"서귀포시","region":"제주특별자치도 서귀포시","dong":"동홍동","apt":"세기1(가나동)"},
 {"region_code":"50130","sido":"제주특별자치도","sigungu":"서귀포시","region":"제주특별자치도 서귀포시","dong":"동홍동","apt":"세기2(동홍세기2)"},
+{"region_code":"50130","sido":"제주특별자치도","sigungu":"서귀포시","region":"제주특별자치도 서귀포시","dong":"동홍동","apt":"센트럴팰리스"},
 {"region_code":"50130","sido":"제주특별자치도","sigungu":"서귀포시","region":"제주특별자치도 서귀포시","dong":"동홍동","apt":"제이원타워"},
 {"region_code":"50130","sido":"제주특별자치도","sigungu":"서귀포시","region":"제주특별자치도 서귀포시","dong":"동홍동","apt":"제이원파크"},
 {"region_code":"50130","sido":"제주특별자치도","sigungu":"서귀포시","region":"제주특별자치도 서귀포시","dong":"동홍동","apt":"주공1"},
