@@ -1,5 +1,5 @@
 {
-"updated_at":"2026-09-21T13:42+09:00",
+"updated_at":"2026-09-21T15:45+09:00",
 "apartments":[
 {"region_code":"51150","sido":"강원특별자치도","sigungu":"강릉시","region":"강원특별자치도 강릉시","dong":"견소동","apt":"송정한신"},
 {"region_code":"51150","sido":"강원특별자치도","sigungu":"강릉시","region":"강원특별자치도 강릉시","dong":"견소동","apt":"송정해변신도브래뉴아파트"},
@@ -6980,6 +6980,7 @@
 {"region_code":"48123","sido":"경상남도","sigungu":"창원시 성산구","region":"경상남도 창원시 성산구","dong":"대원동","apt":"대동1차황토방"},
 {"region_code":"48123","sido":"경상남도","sigungu":"창원시 성산구","region":"경상남도 창원시 성산구","dong":"대원동","apt":"대원2차대동"},
 {"region_code":"48123","sido":"경상남도","sigungu":"창원시 성산구","region":"경상남도 창원시 성산구","dong":"대원동","apt":"대원파크빌"},
+{"region_code":"48123","sido":"경상남도","sigungu":"창원시 성산구","region":"경상남도 창원시 성산구","dong":"대원동","apt":"에일린의뜰"},
 {"region_code":"48123","sido":"경상남도","sigungu":"창원시 성산구","region":"경상남도 창원시 성산구","dong":"대원동","apt":"에일린의뜰1단지"},
 {"region_code":"48123","sido":"경상남도","sigungu":"창원시 성산구","region":"경상남도 창원시 성산구","dong":"대원동","apt":"포레나대원"},
 {"region_code":"48123","sido":"경상남도","sigungu":"창원시 성산구","region":"경상남도 창원시 성산구","dong":"대원동","apt":"힐스테이트마크로엔"},
