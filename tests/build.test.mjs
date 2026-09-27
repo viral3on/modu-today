@@ -4,7 +4,21 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import os from 'node:os';
 import {build,ROOT} from '../scripts/build.mjs';
-import {home,article,reading} from '../lib/site.mjs';
+import {home,article,reading,newsPage,validNewsItems} from '../lib/site.mjs';
+
+test('news migration artifacts cannot become news headings or generic article links',()=>{
+  const valid={category:'국내 증시 / 코스피 코스닥',title:'정상 기사 제목',source:'정상 언론사',url:'https://news.google.com/articles/valid'};
+  const malformed={category:'무료 웹게임',title:'기사 보기',source:'제목이 출처로 잘못 옮겨진 항목',url:'https://news.google.com/articles/legacy'};
+  const news={items:[malformed,{...valid,title:'기사 보기'},valid]};
+  assert.deepEqual(validNewsItems(news),[valid]);
+  for(const html of [newsPage(news),home([],news,null)]) {
+    assert.ok(html.includes('정상 기사 제목'));
+    assert.ok(html.includes('정상 언론사 · 외부 기사'));
+    assert.ok(!html.includes('무료 웹게임'));
+    assert.ok(!html.includes('>기사 보기<'));
+    assert.ok(!html.includes('/articles/legacy'));
+  }
+});
 
 const post={id:'sample-article-123',title:'샘플 테스트 글',category:'생활',description:'검색 결과와 메인 화면에서 확인할 글 요약입니다.',image:'',imageAlt:'',body:'# 소제목\n\n테스트로 작성한 본문이며 실제 발행할 글이 아닙니다. 생성 결과를 확인하는 테스트 전용 내용입니다.',tags:['기록'],status:'published',createdAt:'2026-09-01T00:00:00Z',publishedAt:'2026-09-01T00:00:00Z',updatedAt:'2026-09-02T00:00:00Z'};
 test('home order retains prominent apartment and lotto links; news stays last',()=>{
