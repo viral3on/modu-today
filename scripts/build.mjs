@@ -1,6 +1,10 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
+import {rollup} from 'rollup';
+import {nodeResolve} from '@rollup/plugin-node-resolve';
+import commonjs from '@rollup/plugin-commonjs';
+import replace from '@rollup/plugin-replace';
 import {ID, SITE, validatePost, escape as e} from '../lib/content.mjs';
 import {header, page, home, reading, article, toolsPage, newsPage} from '../lib/site.mjs';
 
@@ -34,7 +38,11 @@ export async function build(root=ROOT, output=path.join(root,'public')) {
     }
   };
   for(const dir of ['apt','lotto','calculator','games','youtube','assets','admin']) await copy(dir);
-  await write('assets/content.mjs',await fs.readFile(path.join(root,'lib/content.mjs')));
+  const browserContent=await rollup({input:path.join(root,'lib/content.mjs'),plugins:[nodeResolve({browser:true,modulePaths:[path.join(ROOT,'node_modules')]}),commonjs(),replace({preventAssignment:true,'process.env.NODE_ENV':JSON.stringify('production')})]});
+  try {
+    const {output}=await browserContent.generate({format:'es'});
+    await write('assets/content.mjs',output[0].code);
+  } finally {await browserContent.close();}
   for(const entry of await fs.readdir(root)) {
     if(/^(google|naver).*\.html$/.test(entry)||entry==='ads.txt') await write(entry,await fs.readFile(path.join(root,entry)));
   }

@@ -65,3 +65,13 @@ test('HTML and malicious URLs cannot execute in renderer',()=>{
 test('invalid GitHub credentials do not leak upstream errors or token',async()=>{
   const gh=github({status:401}),res=response();await createHandler(gh.fetcher,{})(request({action:'verify'}),res);assert.equal(res.code,401);assert.ok(!JSON.stringify(res.data).includes('github_pat'));
 });
+
+test('HTML publication retains editable source, format and CSS; invalid formats cannot publish',async()=>{
+  const post={...valid,format:'html',css:'p{color:green}',body:'<p>직접 작성한 HTML 글이며 충분한 본문과 함께 이미지와 표 등을 추가할 수 있는지 확인하는 테스트입니다.</p>'};
+  const gh=github(),res=response();await createHandler(gh.fetcher,{})(request({action:'publish',id:'article-123',post}),res);
+  assert.equal(res.code,200);
+  const stored=JSON.parse(Buffer.from(JSON.parse(gh.calls.find(c=>c.options.method==='PUT').options.body).content,'base64'));
+  assert.equal(stored.format,'html');assert.equal(stored.css,post.css);assert.equal(stored.body,post.body);
+  const invalid=github(),failed=response();await createHandler(invalid.fetcher,{})(request({action:'publish',id:'article-123',post:{...post,format:'script'}}),failed);
+  assert.equal(failed.code,400);assert.ok(!invalid.calls.some(c=>c.options.method==='PUT'));
+});
