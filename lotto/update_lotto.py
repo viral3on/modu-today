@@ -277,7 +277,7 @@ footer{{text-align:center;color:#778197;margin-top:30px;font-size:12px}}
 
   <p class="sub">※ 당첨결과 데이터는 동행복권 정보를 바탕으로 자동 갱신합니다. 번호 통계는 당첨을 예측하거나 보장하지 않습니다.</p>
 
-  <footer>© MODU.TODAY · Jae-Hyun Kim.</footer>
+  <footer>© MODU.TODAY</footer>
 </div>
 
 <script>
@@ -396,7 +396,7 @@ footer{{text-align:center;color:#707c8f;font-size:12px;margin-top:30px}}
     {''.join(cards)}
   </main>
 
-  <footer>© MODU.TODAY · Jae-Hyun Kim.</footer>
+  <footer>© MODU.TODAY</footer>
 </div>
 
 <script>
