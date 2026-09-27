@@ -21,7 +21,7 @@ BODY_END = re.compile(r'</body\s*>\s*</html\s*>\s*\Z', re.I)
 INFO_LINK = re.compile(
     r'<a\b[^>]*\bhref\s*=\s*[\'\"](?P<href>/(?:about|contact|privacy|terms)/)[\'\"][^>]*>.*?</a>',
     re.I | re.S)
-SKIP_DIRS = {'.git', '.github', 'docs', 'tests', 'node_modules', '.venv', 'venv'}
+SKIP_DIRS = {'.git', '.github', 'public', 'admin', 'content', 'docs', 'tests', 'node_modules', '.venv', 'venv'}
 
 
 def published_pages(root=ROOT):

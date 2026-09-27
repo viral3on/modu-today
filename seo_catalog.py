@@ -5,7 +5,7 @@ from urllib.parse import quote
 
 ROOT = Path(__file__).resolve().parent
 BASE_URL = "https://modu.today"
-EXCLUDE_DIRS = {".git", ".github", "node_modules", "__pycache__", ".vercel", "tests"}
+EXCLUDE_DIRS = {".git", ".github", "public", "admin", "content", "node_modules", "__pycache__", ".vercel", "tests"}
 # Standalone legacy pages have no hub connection or maintained editorial source.
 # Keep them accessible; sitemap omission is not a noindex directive.
 DEFERRED = {"yasun.html", "skhynix-split-analysis.html"}

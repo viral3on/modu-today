@@ -11,7 +11,7 @@ SNIPPET = """  <!-- Vercel Web Analytics -->
   <script defer src="/_vercel/insights/script.js"></script>
 """
 
-EXCLUDE_DIRS = {".git", ".github", "node_modules", "__pycache__", ".vercel"}
+EXCLUDE_DIRS = {".git", ".github", "node_modules", "__pycache__", ".vercel", "admin", "content", "public"}
 EXCLUDE_ROOT_PREFIXES = ("google", "naver")
 
 def should_process(path):
