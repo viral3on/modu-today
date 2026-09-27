@@ -40,6 +40,7 @@ test('build preserves existing tool assets, excludes source and drafts, adds pub
     for(const dir of ['apt','lotto','calculator','games','youtube','assets','admin','lib','news','content','about','contact','privacy','terms'])await fs.cp(path.join(ROOT,dir),path.join(temp,dir),{recursive:true});
     for(const file of ['sitemap.xml','robots.txt','ads.txt','yasun.html','skhynix-split-analysis.html'])await fs.copyFile(path.join(ROOT,file),path.join(temp,file));
     await fs.writeFile(path.join(temp,`content/posts/${post.id}.json`),JSON.stringify(post));
+    await fs.writeFile(path.join(temp,'content/posts/html-article-123.json'),JSON.stringify({...post,id:'html-article-123',format:'html',css:'body{color:red}',body:'<h2>HTML 발행 확인</h2><p>이미지와 표를 포함한 글을 서버에서 정리하여 출력하고 검색에서도 본문을 읽을 수 있는지 확인합니다.</p><img src="/assets/og.png" alt="확인용 이미지" onerror="alert(1)"><script>alert(1)</script>'}));
     await fs.writeFile(path.join(temp,'content/posts/private-draft.json'),JSON.stringify({...post,status:'draft',body:'SECRET DRAFT'}));
     await build(temp);
     const read=rel=>fs.readFile(path.join(temp,'public',rel),'utf8');
@@ -51,5 +52,9 @@ test('build preserves existing tool assets, excludes source and drafts, adds pub
     assert.ok(!(await read('admin/index.html')).includes('/_vercel/insights'));
     assert.ok((await read('stock/index.html')).includes('noindex'));
     assert.ok((await read('apt/index.html')).includes('주요 메뉴'));
+    const htmlArticle=await read('reading/html-article-123/index.html');
+    assert.ok(htmlArticle.includes('<h2>HTML 발행 확인</h2>'));assert.ok(htmlArticle.includes('.modu-html-content .modu-html-body{color:red}'));
+    assert.ok(!htmlArticle.includes('onerror'));assert.ok(!htmlArticle.includes('alert(1)'));assert.ok(sitemap.includes('/reading/html-article-123/'));
+    assert.ok((await read('assets/content.mjs')).includes('sanitizeStylesheet'));assert.ok((await read('admin/editor.js')).includes('HTML + CSS'));
   }finally{await fs.rm(temp,{recursive:true,force:true});}
 });
