@@ -1,4 +1,4 @@
-import { ID, validatePost } from '../lib/content.mjs';
+import { ID, validatePost } from '../lib/post-schema.mjs';
 
 const REPO = 'viral3on/modu-today';
 class HttpError extends Error {
