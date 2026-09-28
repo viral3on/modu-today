@@ -1,10 +1,12 @@
 import { ID, validatePost } from '../lib/post-schema.mjs';
+import { MAX_IMAGE_REQUEST_BYTES } from '../lib/image-policy.mjs';
+import { storeImage } from '../lib/image-upload.mjs';
 
 const REPO = 'viral3on/modu-today';
 class HttpError extends Error {
   constructor(status, message) { super(message); this.status = status; }
 }
-export function createHandler(fetcher = fetch, environment = process.env) {
+export function createHandler(fetcher = fetch, environment = process.env, putBlob) {
   return async function handler(req, res) {
     res.setHeader('Cache-Control', 'private, no-store');
     res.setHeader('X-Robots-Tag', 'noindex, nofollow');
@@ -19,9 +21,16 @@ export function createHandler(fetcher = fetch, environment = process.env) {
       if (!String(req.headers['content-type']).startsWith('application/json')) throw new HttpError(415, 'JSON 요청만 지원합니다.');
       const token = /^Bearer ([A-Za-z0-9_]{20,255})$/.exec(req.headers.authorization || '')?.[1];
       if (!token) throw new HttpError(401, '관리자 인증이 필요합니다.');
-      if (Number(req.headers['content-length'] || 0) > 450000) throw new HttpError(413, '글이 너무 큽니다.');
-      const body = typeof req.body === 'string' ? JSON.parse(req.body) : req.body;
-      if (!body || JSON.stringify(body).length > 150000) throw new HttpError(400, '요청 내용을 확인해 주세요.');
+      if (Number(req.headers['content-length'] || 0) > MAX_IMAGE_REQUEST_BYTES) throw new HttpError(413, '요청이 너무 큽니다. 이미지는 파일당 3MB 이하로 선택해 주세요.');
+      const raw = typeof req.body === 'string' ? req.body : JSON.stringify(req.body);
+      if (!raw || Buffer.byteLength(raw) > MAX_IMAGE_REQUEST_BYTES) throw new HttpError(413, '요청이 너무 큽니다.');
+      let body;
+      try { body = JSON.parse(raw); } catch { throw new HttpError(400, '요청 내용을 확인해 주세요.'); }
+      if (!body || typeof body !== 'object' || Array.isArray(body)) throw new HttpError(400, '요청 내용을 확인해 주세요.');
+      if (body.action !== 'uploadImage') {
+        if (Number(req.headers['content-length'] || 0) > 450000) throw new HttpError(413, '글이 너무 큽니다.');
+        if (raw.length > 150000) throw new HttpError(400, '요청 내용을 확인해 주세요.');
+      }
       const gh = async (path, options = {}) => {
         const response = await fetcher(`https://api.github.com${path}`, {
           ...options, signal: AbortSignal.timeout(15000),
@@ -42,6 +51,7 @@ export function createHandler(fetcher = fetch, environment = process.env) {
       const user = await gh('/user');
       if (!Number.isInteger(user.id)) throw new HttpError(403, '관리자 계정을 확인할 수 없습니다.');
       if (body.action === 'verify') return send(200, {ok:true, accountId:user.id});
+      if (body.action === 'uploadImage') return send(200, await storeImage(body, environment, putBlob));
       // Preview deployments never write into production accidentally.
       const branch = environment.VERCEL_ENV === 'preview' ? environment.VERCEL_GIT_COMMIT_REF : 'main';
       if (!branch || environment.VERCEL_ENV === 'preview' && branch === 'main') throw new HttpError(403, '미리보기 배포에서는 운영 글을 변경할 수 없습니다.');

@@ -4,3 +4,5 @@
 .hero-quicklinks{display:flex;gap:20px;margin-top:24px}.hero-quicklinks a{font-size:12px;color:#376149;text-decoration:none;border-bottom:1px solid #bbc9b3;padding-bottom:4px}
 
 .modu-html-content{min-width:0;overflow-wrap:anywhere}.modu-html-content img{max-width:100%;height:auto}.modu-html-content figure{margin:24px 0}.modu-html-content figcaption{font-size:13px;color:var(--muted);margin-top:8px}.modu-html-content table{display:block;max-width:100%;overflow-x:auto;border-collapse:collapse;margin:24px 0}.modu-html-content th,.modu-html-content td{padding:10px 14px;border:1px solid var(--line);text-align:left}.modu-html-content pre{max-width:100%;overflow:auto}
+
+.prose>img{display:block;max-width:100%;height:auto;margin:24px 0;border-radius:6px}

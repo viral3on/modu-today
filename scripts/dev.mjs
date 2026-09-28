@@ -3,14 +3,15 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import {ROOT,build} from './build.mjs';
 import handler from '../api/editor.js';
+import {MAX_IMAGE_REQUEST_BYTES} from '../lib/image-policy.mjs';
 await build();
 const root=path.join(ROOT,'public');
 const types={'.html':'text/html; charset=utf-8','.css':'text/css','.js':'text/javascript','.mjs':'text/javascript','.json':'application/json','.png':'image/png','.svg':'image/svg+xml','.xml':'application/xml','.txt':'text/plain'};
 http.createServer(async(req,res)=>{
   const url=new URL(req.url,'http://localhost:4173');
   if(url.pathname==='/api/editor') {
-    let raw='';for await (const chunk of req){raw+=chunk;if(raw.length>450000){res.writeHead(413);res.end();return;}}
-    req.body=raw;res.status=code=>{res.statusCode=code;return res;};res.json=data=>{res.setHeader('Content-Type','application/json');res.end(JSON.stringify(data));};return handler(req,res);
+    const chunks=[];let size=0;for await (const chunk of req){size+=chunk.length;if(size>MAX_IMAGE_REQUEST_BYTES){res.writeHead(413,{'Content-Type':'application/json'});res.end(JSON.stringify({error:'이미지는 파일당 3MB 이하로 선택해 주세요.'}));return;}chunks.push(chunk);}
+    req.body=Buffer.concat(chunks).toString('utf8');res.status=code=>{res.statusCode=code;return res;};res.json=data=>{res.setHeader('Content-Type','application/json');res.end(JSON.stringify(data));};return handler(req,res);
   }
   if(url.pathname==='/_vercel/insights/script.js'){res.writeHead(200,{'Content-Type':'text/javascript'});res.end('');return;}
   try {

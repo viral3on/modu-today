@@ -30,7 +30,7 @@ export async function build(root=ROOT, output=path.join(root,'public')) {
             .replace(/class="top"(?=><a class="brand")/,'class="top modu-legacy-nav"');
           html=html.replace(/<a\b[^>]*href=["']\/stock\/(?:guide\/)?["'][^>]*>.*?<\/a>/gs,'');
           html=html.replace('</head>','<link rel="stylesheet" href="/assets/nav.css"></head>');
-          html=html.replace(/(<body\b[^>]*>)/,`$1${header(rel.startsWith('apt')?'/apt/':rel.startsWith('lotto')?'/lotto/':'/tools/')}`);
+          html=html.replace(/(<body\b[^>]*>)/,`$1${header(rel.startsWith('apt')?'/apt/':rel.startsWith('lotto')?'/lotto/':rel.startsWith('youtube')?'/youtube/':'/tools/')}`);
           if(!html.includes('id="main-content"')) html=html.replace('<main','<main id="main-content"');
           await write(sub,html);
         } else await write(sub,await fs.readFile(path.join(root,sub)));
