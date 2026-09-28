@@ -1,17 +1,11 @@
 {
-  "updatedAt": "2026-09-28T17:29:17.992902+00:00",
-  "updatedAtLabel": "2026년 09월 29일 02:29 KST",
+  "updatedAt": "2026-09-28T18:57:44.196488+00:00",
+  "updatedAtLabel": "2026년 09월 29일 03:57 KST",
   "items": [
     {
       "title": "[오늘의 증시] 9월 28일 코스피 코스닥",
       "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE0tNXUxM1RQWUUzeDZYZXlVUU9uOGk0ZHFlWHRxajEybVBnVGNFdWZBSDRjeUhjSTBVYkJKY2htSDViOHR5bjg1X0tYQQ?oc=5",
       "source": "뉴스1",
-      "category": "국내 증시 / 코스피 코스닥"
-    },
-    {
-      "title": "[마감시황] 코스피, 7000선 아래로…삼성전자·SK하이닉스 5%대 하락",
-      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5KbG1aUTk5clpKcmNFQkk4QXBBSHFJSHBIRk16ZmpqS2xMY3Z0VUh2VVZOeFVOLVZkenZTTHQ1eUxWcUhmWlIxVVpPLWlTbElxSmRVXzAtVkpoXzdf?oc=5",
-      "source": "뉴스핌",
       "category": "국내 증시 / 코스피 코스닥"
     },
     {
@@ -21,21 +15,27 @@
       "category": "국내 증시 / 코스피 코스닥"
     },
     {
+      "title": "[마감시황] 코스피, 7000선 아래로…삼성전자·SK하이닉스 5%대 하락",
+      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5KbG1aUTk5clpKcmNFQkk4QXBBSHFJSHBIRk16ZmpqS2xMY3Z0VUh2VVZOeFVOLVZkenZTTHQ1eUxWcUhmWlIxVVpPLWlTbElxSmRVXzAtVkpoXzdf?oc=5",
+      "source": "뉴스핌",
+      "category": "국내 증시 / 코스피 코스닥"
+    },
+    {
       "title": "코스피·코스닥, 연휴 뒤 28일장 어디로…삼성전자·SK하이닉스·주성엔지니어링 등 주목",
       "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5Ba055S2JaV21EMmZjNFp6LTl4Z2NyVnlFQ1dadXNUTEl6dTlBaDZ6bHBJR1hOYkZPckQ3d3ZNZVJTankydFctd0ItdUlxNXJfdE5QdVMtUDBwVk1xTFRkUU9BbjA5cmdZ?oc=5",
       "source": "CBC뉴스",
       "category": "국내 증시 / 코스피 코스닥"
     },
     {
-      "title": "美 증시 상승에도 코스피 7000 붕괴…반도체 5% 급락",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9YYnVTd09lVTR0d0pxSVg0Y1RwRlpRM1VLWGJldGtBWmpQdi1pT2lpNG15MXJNQnhGbWRtVXZkT01ldDlGaXZ3TDFQUkxWcm51ZG5McUJpRTRKZ25WNXNpTUhXZU03dDQ3d3Zyeg?oc=5",
-      "source": "mstoday.co.kr",
-      "category": "국내 증시 / 코스피 코스닥"
-    },
-    {
       "title": "증시 이전상장 ‘0건’…멈춰 선 상장 사다리",
       "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE51ZGpwNWlTdmtKWVhYUWJoMjBmOEFiMWZnOEN2eld1SGk3QlJfUWNMME1aNDNUOHhacVczLUJ6cFF2ZTRLYlljbDhhY09aemlvR21KZA?oc=5",
       "source": "이투데이",
+      "category": "국내 증시 / 코스피 코스닥"
+    },
+    {
+      "title": "美 증시 상승에도 코스피 7000 붕괴…반도체 5% 급락",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9YYnVTd09lVTR0d0pxSVg0Y1RwRlpRM1VLWGJldGtBWmpQdi1pT2lpNG15MXJNQnhGbWRtVXZkT01ldDlGaXZ3TDFQUkxWcm51ZG5McUJpRTRKZ25WNXNpTUhXZU03dDQ3d3Zyeg?oc=5",
+      "source": "mstoday.co.kr",
       "category": "국내 증시 / 코스피 코스닥"
     },
     {
@@ -47,7 +47,7 @@
     {
       "title": "원·달러 환율, 7.6원 오른 1365.1원 마감",
       "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE9jUVM3eWxkbnhOVmNsSFJodDZscjVZbmlxTHFHVVFVRUVVM0F0ZTVCZkw0ZzQwZE82ZXgyVXE1dm9WZ3RSaGZLVGxSM1otR1Q1czlNd05nN0xuTDdIVFNpdHh1Rnc0YTFPNTR3bWM3SWVPSnBhQ3dkedIBeEFVX3lxTE9jUVM3eWxkbnhOVmNsSFJodDZscjVZbmlxTHFHVVFVRUVVM0F0ZTVCZkw0ZzQwZE82ZXgyVXE1dm9WZ3RSaGZLVGxSM1otR1Q1czlNd05nN0xuTDdIVFNpdHh1Rnc0YTFPNTR3bWM3SWVPSnBhQ3dkeQ?oc=5",
-      "source": "뉴시스",
+      "source": "newsis.com",
       "category": "환율 및 글로벌 원자재 시세"
     },
     {
@@ -129,15 +129,21 @@
       "category": "미국 증시 / 글로벌 매크로"
     },
     {
+      "title": "뉴욕증시, 하락세로 전환…나스닥 0.96%↓",
+      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE93TUQydjEwZFZOazE1Ynhmbm9aN0pyd0FIcG1GOWhOZTU5b1pyOWRMVWp0cklwTWtMNFNoT2g0LUN2eVNjUXZ5V0RockdGeWhV?oc=5",
+      "source": "블루밍비트",
+      "category": "미국 증시 / 글로벌 매크로"
+    },
+    {
       "title": "뉴욕증시 상승, AI가 고금리 이겼다…이번 주는 ‘호르무즈·유가’ 시험대",
       "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9JUDh0UDZ3d05ES2ZrRi11UkktaktSZFNxYU9hSGpXUmJRajAxcFlLbE9ONlNIYjAxMndGYUpVOW1Fek4ybGhnbm9TbWpjZVN2VnRYNzNqUm5MOEhXTHFkREx3Y0ZNc2VTUFFrUjdRcF9HdW8?oc=5",
       "source": "마켓인",
       "category": "미국 증시 / 글로벌 매크로"
     },
     {
-      "title": "10년물 5.1% 쇼크에도 AI는 버텼다…추석 연휴 뉴욕증시 ‘롤러코스터’",
-      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE51Nm9Sd1V4Ql9ZbVEwWlA1aWxmSGhNend3TVRMVEJpSFNVNTJZVTdvMHZBUzBucFBHLVQ3a091eGpyQ0ZxeEgxUzNxZmpSY2d2UDUzblpMZERjVXlQM19lVA?oc=5",
-      "source": "theconnectmoney.com",
+      "title": "유가와 국채수익률 상승에 눌린 美증시…나스닥 1.2%↓",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9fdzBzcDNBTUU4ME50NF9vMTFWMFpMZTQ2N1p5QlJiXzlFQ0F0bWxfRTFReGUxd3U5WExUVnNkVDRLN1l5VW9NSmpXUjlweHZxS2NldktnWE5oZw?oc=5",
+      "source": "한국경제",
       "category": "미국 증시 / 글로벌 매크로"
     },
     {
@@ -147,15 +153,9 @@
       "category": "미국 증시 / 글로벌 매크로"
     },
     {
-      "title": "연휴 끝 코스피, 7000선 안착 시험대…美 기술주·금리·외인 수급 주목",
-      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFAyOEVHN2xTX2JYWU9iSWtURVVPTEU4ZWV5OHJVZW4yNl9UVkVNaElmV25JbXdILWkxMDhkYnVrS0xBMDU2OUg4THBxb2NCeExERldtbUdRY1J2Vk5aNG9TWE80NmY4XzhN?oc=5",
-      "source": "ebn.co.kr",
-      "category": "미국 증시 / 글로벌 매크로"
-    },
-    {
-      "title": "[뉴욕증시 15일] 中 경제둔화 우려에도 상승 마감",
-      "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxNd2d5SVdTWmRuOGt6cnNlaXh3UWJTaHgxMXZEMWxLUmJpTGZSa3phVktMUTBYQmFHWlBhaVFvM25TRWUwejF5NzRNdHFORDZwd3FKY2J4UTFOY2V5V3hxU09ORGtweHdtcEQ4SldWMUpxeHJ3Nm8tRko5LXhqcmhKeWRXUGNveW9PTjMtN3A3d2JDNE53dDlXeTI2NWc3cmt4UV8ySmpEa1p0SjdsVUFaV1NQVDJiLWtQczNJb0JhWUZVZXQ4T2hRZlAzeEZ1dkpYZVJ5bzBSbEdKemdFUEkyNlgwVDQ?oc=5",
-      "source": "chosundaily.com",
+      "title": "10년물 5.1% 쇼크에도 AI는 버텼다…추석 연휴 뉴욕증시 ‘롤러코스터’",
+      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE51Nm9Sd1V4Ql9ZbVEwWlA1aWxmSGhNend3TVRMVEJpSFNVNTJZVTdvMHZBUzBucFBHLVQ3a091eGpyQ0ZxeEgxUzNxZmpSY2d2UDUzblpMZERjVXlQM19lVA?oc=5",
+      "source": "theconnectmoney.com",
       "category": "미국 증시 / 글로벌 매크로"
     },
     {
@@ -189,8 +189,8 @@
       "category": "야간선물 / 파생 / 투자시황"
     },
     {
-      "title": "Bybit, 24시간 거래 가능한 미국 주식 Perp Options 출시",
-      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxONnowT0NCSTNySWMxOUNybjIwT1pNeXZSeWtDN2RJazRPc1FQVVlQTUwwX3k2elg4Mlg2Q0FPTDQ1RnRrclBXRWtJQWNkSmJaNGExVldaaGpSLU0tbUMyQVZ5UWotRlhzLXJEVlhqZ1dwYnl5ckIxZkpFd0JpMDdOVkE0VTU3WG5RYzRNZFpUZ1VvcEQ3NktIM29n?oc=5",
+      "title": "기술적 신호 악화로 대두 선물 가격 약 2% 하락",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNbUFjbkZpMS1iVXQ2em1GWERORnFjdUN0N3hERmx5eUx0U2taQjNLNWJsTjhmZTJsQVJIeGh5MDVwTXN2STI1akJmaVFGM0dOQVVpUjV6SzNzNFlaczNQdVBuV3JQdzRjQmlQTVFNMld3STdxbVlMZHhibG5BZTBqdjBvbklMY1dRUmg4MTdITnRYdWQ0cjY3TEdaby1yTlk?oc=5",
       "source": "Traders Union",
       "category": "야간선물 / 파생 / 투자시황"
     }
