@@ -4,7 +4,7 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import os from 'node:os';
 import {build,ROOT} from '../scripts/build.mjs';
-import {home,article,reading,newsPage,validNewsItems} from '../lib/site.mjs';
+import {home,article,reading,newsPage,validNewsItems,header} from '../lib/site.mjs';
 
 test('news migration artifacts cannot become news headings or generic article links',()=>{
   const valid={category:'국내 증시 / 코스피 코스닥',title:'정상 기사 제목',source:'정상 언론사',url:'https://news.google.com/articles/valid'};
@@ -33,6 +33,14 @@ test('article metadata and visible dates reflect the same content',()=>{
   assert.ok(html.includes('https://modu.today/reading/sample-article-123/'));
   assert.ok(html.includes('article:modified_time'));assert.ok(html.includes('2026.09.02'));assert.ok(html.includes('BlogPosting'));assert.ok(!html.includes('<h1>A <script>'));
   assert.ok(reading([post]).includes('data-category="생활"'));
+});
+test('home and reading share custom categories and the main navigation links to YouTube',()=>{
+  const posts=[{...post,category:'AI·테크'},{...post,category:'AI·테크'},{...post,category:'새 주제 & <정보>'}];
+  const html=home(posts,{items:[]},null);
+  assert.equal(html.split(`href="/reading/?category=${encodeURIComponent('AI·테크')}"`).length-1,1);
+  assert.ok(html.includes('새 주제 &amp; &lt;정보&gt;'));
+  assert.ok(reading(posts).includes('data-filter="AI·테크"'));
+  assert.ok(header('/youtube/').includes('<a href="/youtube/" aria-current="page">유튜브 순위</a>'));
 });
 test('build preserves existing tool assets, excludes source and drafts, adds published URLs',async()=>{
   const temp=await fs.mkdtemp(path.join(os.tmpdir(),'modu-build-'));
