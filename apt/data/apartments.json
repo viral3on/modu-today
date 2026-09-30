@@ -1,5 +1,5 @@
 {
-"updated_at":"2026-09-30T10:21+09:00",
+"updated_at":"2026-09-30T19:38+09:00",
 "apartments":[
 {"region_code":"51150","sido":"강원특별자치도","sigungu":"강릉시","region":"강원특별자치도 강릉시","dong":"견소동","apt":"송정한신"},
 {"region_code":"51150","sido":"강원특별자치도","sigungu":"강릉시","region":"강원특별자치도 강릉시","dong":"견소동","apt":"송정해변신도브래뉴아파트"},
@@ -4200,6 +4200,7 @@
 {"region_code":"41463","sido":"경기도","sigungu":"용인시 기흥구","region":"경기도 용인시 기흥구","dong":"구갈동","apt":"강남마을주공"},
 {"region_code":"41463","sido":"경기도","sigungu":"용인시 기흥구","region":"경기도 용인시 기흥구","dong":"구갈동","apt":"기흥역 롯데캐슬 레이시티"},
 {"region_code":"41463","sido":"경기도","sigungu":"용인시 기흥구","region":"경기도 용인시 기흥구","dong":"구갈동","apt":"기흥역더샵"},
+{"region_code":"41463","sido":"경기도","sigungu":"용인시 기흥구","region":"경기도 용인시 기흥구","dong":"구갈동","apt":"기흥역더퍼스트푸르지오"},
 {"region_code":"41463","sido":"경기도","sigungu":"용인시 기흥구","region":"경기도 용인시 기흥구","dong":"구갈동","apt":"기흥역센트럴푸르지오"},
 {"region_code":"41463","sido":"경기도","sigungu":"용인시 기흥구","region":"경기도 용인시 기흥구","dong":"구갈동","apt":"기흥역지웰푸르지오"},
 {"region_code":"41463","sido":"경기도","sigungu":"용인시 기흥구","region":"경기도 용인시 기흥구","dong":"구갈동","apt":"기흥역파크푸르지오"},
