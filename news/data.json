@@ -1,7 +1,13 @@
 {
-  "updatedAt": "2026-09-30T11:41:36.834577+00:00",
-  "updatedAtLabel": "2026년 09월 30일 20:41 KST",
+  "updatedAt": "2026-09-30T15:45:07.923360+00:00",
+  "updatedAtLabel": "2026년 10월 01일 00:45 KST",
   "items": [
+    {
+      "title": "코스피 3일 연속↓·코스닥 소폭↑",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9oVDh6aFpVUWdpZDNna0lFeHpscldsazVPYW1OZHNVS19GUWZucTZpRjZjZEo2YzZ5VUF0aEstVloxVVJrRUpJNnRMSzhLSWk5NWY0bFZ0TS1LUUpNclRVbnZkR0tqQ0tDcHhvRQ?oc=5",
+      "source": "KB Think",
+      "category": "국내 증시 / 코스피 코스닥"
+    },
     {
       "title": "[마감시황] 코스피, 외인 2.3조 순매도에 0.48%↓…코스닥은 0.72%↑",
       "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE43OFh4OTZSYTB3TVQ2SUVvRS1WeEhTSENpMlgzTWpNUnVoenEzOFotbEJwS2FfV0hoVW9BNWtJOEo1S2NETklHU1BNUHRwRnppMTVJb2FkQ3M5TmhZ?oc=5",
@@ -17,7 +23,7 @@
     {
       "title": "장기금리 부담에 코스피 0.48%↓... 코스닥은 0.72%↑ [마감시황]",
       "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFB2QU9MX2NtdkttUmJpTm1HRV9Ld2FnVGdPSXJ0TW92QklhUlhJbmoxWk5FWWNvVnNVd0FCOWlmNmJuV3ByZXAwcjd3WXJobUMxU01fVUxuTnNMSThjNGNTNkF2ZWM?oc=5",
-      "source": "m-i.kr",
+      "source": "매일일보",
       "category": "국내 증시 / 코스피 코스닥"
     },
     {
@@ -27,15 +33,9 @@
       "category": "국내 증시 / 코스피 코스닥"
     },
     {
-      "title": "미 기술주·반도체 반등에 코스피·코스닥 상승 출발",
-      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE51ZG8wY2FiTmNQcmFNcnJxa2dYQmhsMmtmWXFTTnMyN1ZTeEt3Tm1jaHB3M2JudFdwXzdBQ0E5d3MzYm1xb01QejVRSTJjNm9iR1k5WmcyLWN3aktIZUs5eg?oc=5",
-      "source": "뉴스토마토",
-      "category": "국내 증시 / 코스피 코스닥"
-    },
-    {
-      "title": "코스피, 사흘 만에 소폭 상승...코스닥도 1% 올라",
-      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE1JbWczTnBubmVsMEhieFFZS3FRR1NiVlZxdUF0VE9vVFZ6Uk9PeGdCSWU0RE5vY1EzYnBEdEprb29LZUNxOTJkcjM5X3plaEJiQUdIdFZBVTd4S3l3dmc?oc=5",
-      "source": "YTN",
+      "title": "코스피, ‘전강후약’ 6800선 마감…코스닥 4거래일 연속 상승",
+      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9fa184ai1MYURTVExfc0RLclpEd044SHo2eHZmWm1kUFdKRzVkbUtlX000NS1kQmphMExTOFVYUHVHRG0wY0Y5MmZlSnFuQVU0UUpSVjJqWDZXYnlnbzNLaw?oc=5",
+      "source": "증권일보",
       "category": "국내 증시 / 코스피 코스닥"
     },
     {
@@ -95,13 +95,13 @@
     {
       "title": "상장 단 하루 앞두고…'스마트링' 오우라, 나스닥 IPO 연기",
       "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1seFV3WUlyeGtzZXJXazk0RGVHdHBlSTg2Wmp4NElxRnQ5NnBjWnRDWFh4UVExNW9zQWNQa3ZCaFNSa0JHR2d1MTRKVXI1a0p6?oc=5",
-      "source": "블루밍비트",
+      "source": "bloomingbit.io",
       "category": "공모주 청약 및 IPO 일정"
     },
     {
-      "title": "‘대어’ 실종에 IPO 공모액 ‘반토막’…청약 경쟁은 더 뜨거웠다",
-      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5rSlhlMEhoOXJJOG1BUFhuMEQ0M1dITGYxVE1vaGJTQnVvaUd5QmpOTndLem1ILS1EVmozcjRDRWJnUGFJUnBNTWlVTUYtTlJONlBWSHlB?oc=5",
-      "source": "헤럴드경제",
+      "title": "3분기 누적 IPO 공모액 반토막…청약 경쟁은 더 치열",
+      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9sVDcwNTBFbzdsUk5US3dzZ0lkYVdncDVHeUY0OVhkcjQtX3Q3RGdIVUloTHloU1N4eVB0eTZSYWtBS1NnYmtFMndjVVNJeWJzRUxqeUhmUUJSNmNDRW5ZSQ?oc=5",
+      "source": "메트로신문",
       "category": "공모주 청약 및 IPO 일정"
     },
     {
@@ -113,7 +113,13 @@
     {
       "title": "전남광주 서민금융 복합지원센터 개소…이억원 \"소상공인 페이스메이커\"",
       "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1leVZaYmF2b2ZQMUViTTIxYXRhTkRIclc5SVNUTFNmeFJjZUtxeGpUNU1zeTJ2YTVqdFpDcHRPYTdSZ3oyLW1jaGluWjV0ZDE0TEg0Vnd5MWZYZ0JYeUFTcg?oc=5",
-      "source": "아시아경제",
+      "source": "asiae.co.kr",
+      "category": "정부 지원금 및 정책 소식"
+    },
+    {
+      "title": "[은행 뉴스브리핑] KB금융 사회적가치 창출기업 성장 지원",
+      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5rQmtmWWs5X2ZvRDhOYWZMcGJ3TFlMZEpEdFNsLVpLN0RVNmtnOEtIdzM2dnFISVVWbjVaN3Bic3hwaVVpRDRYeGxPb1VCMWEyZXFvSHYzSzg3bWg4QWc?oc=5",
+      "source": "아시아타임즈",
       "category": "정부 지원금 및 정책 소식"
     },
     {
@@ -125,7 +131,7 @@
     {
       "title": "손잡은 하나금융·소진공…청년 소상공인 상권 활성화 나선다",
       "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5SSkZjWHdNVzB2UGF5RDVRUUdsTVlyZWItcFJ2YXhTd3ppZjJscGxCRVdvUEREelZDZUNjdXByNjJkQWx2V3BOZ1llcXZQUmFuajVVZTBQOFhsZGdDUVhhNQ?oc=5",
-      "source": "아시아경제",
+      "source": "asiae.co.kr",
       "category": "정부 지원금 및 정책 소식"
     },
     {
@@ -153,15 +159,15 @@
       "category": "미국 증시 / 글로벌 매크로"
     },
     {
-      "title": "[뉴욕 증시] 美 국채금리 급등 속 이틀째 하락 … 3대 지수 약보합 마감",
-      "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE9IUW9URWQxd0lhRmJOVjNWdjd2NkViaGRkUkh6YzJHbVFIWlNldzB0RVl0Tk45WXd3djhza2NGM3Y0a3o0ZHpoR0tIdTBlVXl3TnVaOXZuaU0wb01EUDYzRlJFSUNqck9iREYtTVItdzRkQQ?oc=5",
-      "source": "한양경제",
+      "title": "[뉴욕증시 3일] S&P500· 나스닥지수 사상 최고치 경신",
+      "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNRW14bjBRNTJsVURZUjRYN3JLSjVXeVBEVzNiX0xXdnRvdFd2SkpUTzNVSXV2UFBRbF9ZS0dkWkkyVk9KdzdKaWhGZnY3aDBfYmJydkNaYWs2RGRlTHYxY2JLdFFxLTRoSmRuXzR0ZjB1TG5LSDNFUnpOQnFHQ1VWZUZWUDBsaXpYeXZLTkxKUWRYUjFPbmFpSHVGN25rbjRQY2wxd1RDVUh0cW5abkVxaUVxQnJyTHpvZXZPRzhIZ0ZrS29JNmtIa3hOekhtczVHcUE?oc=5",
+      "source": "미주조선일보",
       "category": "미국 증시 / 글로벌 매크로"
     },
     {
-      "title": "뉴욕증시, 하락세로 마감…나스닥 0.09%↓",
-      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE8zTU1NcGtvdEM2V1ZUVmdwOFlQcm9teF9TSTFPZTlIT1lRUk9LdWotcGJIVzRPRzNTUGxFOXFlZWw5cmc3RmpWbGVYVzVlSzJF?oc=5",
-      "source": "블루밍비트",
+      "title": "[뉴욕 증시] 美 국채금리 급등 속 이틀째 하락 … 3대 지수 약보합 마감",
+      "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE9IUW9URWQxd0lhRmJOVjNWdjd2NkViaGRkUkh6YzJHbVFIWlNldzB0RVl0Tk45WXd3djhza2NGM3Y0a3o0ZHpoR0tIdTBlVXl3TnVaOXZuaU0wb01EUDYzRlJFSUNqck9iREYtTVItdzRkQQ?oc=5",
+      "source": "한양경제",
       "category": "미국 증시 / 글로벌 매크로"
     },
     {
@@ -195,15 +201,15 @@
       "category": "야간선물 / 파생 / 투자시황"
     },
     {
-      "title": "[모닝 경제 브리핑] 美 30년물 금리 2002년 이후 최고…인플레 경계에 증시 하락, 앤트로픽發 AI 투자 기대에 반도체만 강세",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9vRnBGSTZxQVJ4RmJzOEc0Y0JiMlFuVWRlakZFX1owVkkxdXp1aFR3aXMtNld6NXE4dXlfSHAzMkRibHA0aTdaeWotQVlUbC10bDZURFhFZ0hDX19BUXFVdlpRSnhfVXItcjh3SQ?oc=5",
-      "source": "프리진경제",
+      "title": "[굿모닝 증시]고금리 속 반도체 돋보인 美…국내 상승 출발 전망",
+      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQSTBhU3RKYkRtMGxYVEpiWVYxSi0xRTFlbXlKeXFwUTQ5cGcyTTJ5dzdIeldjQ2JvMk1hNE9sdV9vcnNUZGF2RGhjYklIRDFlUk9uTXROZzRFZ2c2bmlQZjB1bkVMb0dJYjh1LVZRUnVwVkhLdWprb051c05xWGprb1l3?oc=5",
+      "source": "asiae.co.kr",
       "category": "야간선물 / 파생 / 투자시황"
     },
     {
-      "title": "[굿모닝 증시]고금리 속 반도체 돋보인 美…국내 상승 출발 전망",
-      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE5wSUtDeHZBSjAxdnQxYmhfeE9ZZlVNRm43blVvT2NmbU8xOVpmbEg2NkdiVGhCd3BHdEsxMGpBMnhvaFZCUU9LdnhhMlprR0xxdWhiUVl3QmtwZ3cxV2lySEhn?oc=5",
-      "source": "아시아경제",
+      "title": "[모닝 경제 브리핑] 美 30년물 금리 2002년 이후 최고…인플레 경계에 증시 하락, 앤트로픽發 AI 투자 기대에 반도체만 강세",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9vRnBGSTZxQVJ4RmJzOEc0Y0JiMlFuVWRlakZFX1owVkkxdXp1aFR3aXMtNld6NXE4dXlfSHAzMkRibHA0aTdaeWotQVlUbC10bDZURFhFZ0hDX19BUXFVdlpRSnhfVXItcjh3SQ?oc=5",
+      "source": "프리진경제",
       "category": "야간선물 / 파생 / 투자시황"
     }
   ]
