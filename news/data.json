@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-10-01T09:54:15.699610+00:00",
-  "updatedAtLabel": "2026년 10월 01일 18:54 KST",
+  "updatedAt": "2026-10-01T12:10:28.578780+00:00",
+  "updatedAtLabel": "2026년 10월 01일 21:10 KST",
   "items": [
     {
       "title": "[오늘의 증시] 10월 1일 코스피 코스닥",
@@ -9,9 +9,15 @@
       "category": "국내 증시 / 코스피 코스닥"
     },
     {
-      "title": "마이크론·수출로 확인한 반도체 수요…증시 상승탄력 촉매될까(종합)",
-      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBRbl9MR0NjaHBVQnVYbzZhR2FHWDhrNU5OaFVxNjlxcmxrUkM5YUZGcFU0eS1EVmJaZzZyR0JFckpkYUc4VXlNQUthejQ4S0F3ZWp6VUhUaDdnV2NCak5ha9IBYEFVX3lxTFBRbl9MR0NjaHBVQnVYbzZhR2FHWDhrNU5OaFVxNjlxcmxrUkM5YUZGcFU0eS1EVmJaZzZyR0JFckpkYUc4VXlNQUthejQ4S0F3ZWp6VUhUaDdnV2NCak5haw?oc=5",
-      "source": "연합뉴스",
+      "title": "반도체주 강세에 코스피 1.95% 상승 마감...코스닥은 4%대 급등",
+      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPQ051WUk3LXRUQm12ZllLLS15ckFLUWZSWDY0LVFUVXVwX3FEdzRwajJFeElHOTR3NjBaTHYzaGVGdXFORFFrS0l3ZTU2ZFdSaG5FaE9xOFBVSFlXcG1aeVU2VnRUZVZ1QzVlNm8wT1l3MVUxdDR6MFdQTFZnTlphcA?oc=5",
+      "source": "조선일보",
+      "category": "국내 증시 / 코스피 코스닥"
+    },
+    {
+      "title": "[오늘의증시] 코스피 7000선 ‘눈앞’…반도체·수출이 끌고 코스닥은 4.5% 급등",
+      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1SNUZHbzhjU1F0TmFqUGw5Y2FkQzVmY0VBc05ZamZGVHRTTHhXQ0wxTlVmU3FUYmJjVDhPbFJLWHU1QW03YndsakZON2FvaVVrVUlSLUpqUFZtWTloN1IzR0x2a1R0WUdY0gFoQVVfeXFMTVI1RkdvOGNTUXROYWpQbDljYWRDNWZjRUFzTllqZkZUdFNMeFdDTDFOVWZTcVRiYmNUOE9sUktYdTVBbTdid2xqRk43YW9pVWtVSVItSmpQVm1ZOWg3UjNHTHZrVHRZR1g?oc=5",
+      "source": "news.ifm.kr",
       "category": "국내 증시 / 코스피 코스닥"
     },
     {
@@ -27,15 +33,9 @@
       "category": "국내 증시 / 코스피 코스닥"
     },
     {
-      "title": "[오늘의증시] 코스피 7000선 ‘눈앞’…반도체·수출이 끌고 코스닥은 4.5% 급등",
-      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5WbnJ1TkR0OFZKSlVERWg1R3MzcDNHNjFGbEQ2aU9JZ29YUWtrdlp0aHdDNmJVS2NuUEJ2bmtvUFVia3B0UGdHNmlxQ25FS0xmTjBtSDFHeDVXSEhiNnNpR1RZM3rSAWhBVV95cUxNUjVGR284Y1NRdE5halBsOWNhZEM1ZmNFQXNOWWpmRlR0U0x4V0NMMU5VZlNxVGJiY1Q4T2xSS1h1NUFtN2J3bGpGTjdhb2lVa1VJUi1KalBWbVk5aDdSM0dMdmtUdFlHWA?oc=5",
-      "source": "경인방송 뉴스",
-      "category": "국내 증시 / 코스피 코스닥"
-    },
-    {
-      "title": "[증시 레이더] 코스피, 4거래일 만에 반등 6971.35⋯코스닥 급등",
-      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9CVWdNb3NqMDNhbHJDM3dfVGhLZS1NdmRoVkxVTDFsQzNLbUNSSnlvQkR3VnJzRVRFcmN1eTl0QzBvSV85RF9kRkxOTWtOUXpDSXh1RWZHVDFaWllob1E?oc=5",
-      "source": "포커스온경제",
+      "title": "마이크론·반도체 수출 호조에 코스피 1.95%↑... 코스닥 4.48% 급등 [마감시황]",
+      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1MeEVWY0RvTmVlYi1BTXI0d1NMZXRWOUNYdWhXSllqMktyUndwWUdTb2hubDdTNVBzdVF3bGFQNUtjamtpcndyUERNZUpTU0JwNUxuYlV5dW96QVF4VDl6YzBZLTc?oc=5",
+      "source": "매일일보",
       "category": "국내 증시 / 코스피 코스닥"
     },
     {
@@ -47,13 +47,13 @@
     {
       "title": "미국 고금리 장기화 우려에…환율 1,350원대 후반으로 상승",
       "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBBS19CSUI3MGpNV3JITGhvZnZKNWdQQVpaUUtwb2tvcDJIa2lOMGZyTHNRWnpnRnpCNldjbGlLcXNzd1A4aEtudng3cjBkQVBxZmtKX3d4VVN6SzU5S3RMdNIBYEFVX3lxTFBBS19CSUI3MGpNV3JITGhvZnZKNWdQQVpaUUtwb2tvcDJIa2lOMGZyTHNRWnpnRnpCNldjbGlLcXNzd1A4aEtudng3cjBkQVBxZmtKX3d4VVN6SzU5S3RMdA?oc=5",
-      "source": "연합뉴스",
+      "source": "yna.co.kr",
       "category": "환율 및 글로벌 원자재 시세"
     },
     {
-      "title": "美 긴축 장기화 전망에 달러·원 환율 반등…1358.4원 마감(종합)",
-      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBjRGxPOGRTMzJPSFpvV3ZMVUJQMmtpRWxTNTJsN0RTWUtrRF9NSU5kUVl4Nzd4QlhYdE50eUZJR3Z0ZmVzTV9MTjNvdDNWcWJyUFZzNGxzS2ZOc3PSAWBBVV95cUxQb2JBSmE3a1dseVBSRnphWVY1UmI1QkkzVmJSS1E4YS1TMnBDNG9pREFMUWg1MC0yV3NqUWhMSXFYeEpEU3U1ZmFGaVM4b3BkMGtwNGJ4MUh6eGk1SDJfb1c?oc=5",
-      "source": "뉴스1",
+      "title": "원·달러 환율 1,358.4원 마감…美 고금리 장기화 우려에 상승",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5KMkVfUDIxNFFJbGxFZEoyOWNxemI5bmFHX0Y4aHA2LXBpOEdXOVJ5WkkwSTNrdW9YbWtocXZ5ZHNkNzE1VE9kSnp4cXpNcmhDSndVbXlDdVdfcUxIY09NQmNMelhTODRKZEk0aFNoRS3SAXRBVV95cUxOMWxoNDIwc0x4eEFpVUxvTmVoZngwazViUXEtakwzZmZYcWVwVE90RmhEVDlpeTdIV1BIN0dvQXlJeWlSeTM4M2YyaXVqRkhqOG1UaUdJaWdtS1F6U1RHNUlGR1ZUaktDc0hmblQtSTRBanpCdQ?oc=5",
+      "source": "산경투데이",
       "category": "환율 및 글로벌 원자재 시세"
     },
     {
@@ -63,27 +63,27 @@
       "category": "환율 및 글로벌 원자재 시세"
     },
     {
-      "title": "안내와 결과를 함께 읽는 워크 포커디펜스 라운드 해설",
-      "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxPWEN0STdiS0o3d1gwRDl5UWEwX2l0bllfSDBxU3FwaE5BWnZJd0paWDVFNjE3WE1jYklfSlA0eFljdmpIZEVENVg1M3pKQnh2R3h4SFk3MEF3SEJOTWdfdjJNM0tvdFNobHE4NkZ0Z2lNVWMzZjI1VFpQdUQzcVlPQVJPUUJhY0tXbktwanN2cndlOE9NSjZ5cDM5cmtESzc0MXl3czBMbjNNUV9HV0lEQm5fczlzcmNuTEd2M3p0UEJXNGJGa0txQzNIQXl1THE0bUtYWTJvWmFidkNub05NRjZnN3lVUQ?oc=5",
-      "source": "Calgary Roughnecks",
+      "title": "美 긴축 장기화 전망에 달러·원 환율 반등…1358.4원 마감(종합)",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBjRGxPOGRTMzJPSFpvV3ZMVUJQMmtpRWxTNTJsN0RTWUtrRF9NSU5kUVl4Nzd4QlhYdE50eUZJR3Z0ZmVzTV9MTjNvdDNWcWJyUFZzNGxzS2ZOc3PSAWBBVV95cUxQb2JBSmE3a1dseVBSRnphWVY1UmI1QkkzVmJSS1E4YS1TMnBDNG9pREFMUWg1MC0yV3NqUWhMSXFYeEpEU3U1ZmFGaVM4b3BkMGtwNGJ4MUh6eGk1SDJfb1c?oc=5",
+      "source": "뉴스1",
       "category": "환율 및 글로벌 원자재 시세"
     },
     {
-      "title": "환율, 1360원대 상방 압력…\"강달러에 상승 전망\"",
-      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE84ZGt6WGVqQ3VSOGZyeFU2eFhUc1dlQTVkWUVNVVpUc1hRMGs2SHh2WUdpWFJmTWRxRFNURGMybl9EQ0VWSUFzZlhhaw?oc=5",
-      "source": "v.daum.net",
+      "title": "美 고금리 장기화 우려에 달러 강세...원·달러 환율, 소폭 상승해 1358.4원 마감",
+      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE0wTElzTEJ2RjROWV9sSDZHMW9tWHdVUkN4WDB5clE5bmxnMVl3S3VYeWVXUURLZjNWLUNkV0ZVWm5BY0pwbjlESHdPSkFnTmFILWU4RjU0Q0Q2TjBCTDlJOUd2czg?oc=5",
+      "source": "베타뉴스",
       "category": "환율 및 글로벌 원자재 시세"
+    },
+    {
+      "title": "10월 IPO시장 '공모주 홍수' 예고 AI·반도체 대어 출격…20여개 기업 청약 러시",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE52b3JBTjFrak5qY3VzUm5KUHU4eTNUNndicjJiZkJGU2xLSEl0bmFBRV9DeGNUTVJBejZWbnJrMnpSVnljd1dmVWh2cVZaeVVBdjE2OEc1WGZ2d09YYkxsellrZFNHRVFXWmJsMXhoSUbSAXRBVV95cUxPQS10bmE1cF9sV3UtQzNsbWtwX1pUWnNuOUM5cUhSS2szZHZMUE5aNXJNQkxtNEdvTU1sZkJaQWladzhIbGVrZF9kcFRKYzBzMGJXS09oWkdzTHlMZUl5clg0YUQ3ZGVIU1dkR0FvdFhMNC0zSg?oc=5",
+      "source": "포인트데일리",
+      "category": "공모주 청약 및 IPO 일정"
     },
     {
       "title": "[공모주 현황] 멜콘 청약 시작…공모가 1만2300원, 15일 상장 예정",
       "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE52ZHdSR0wxOTl2d3hpOEFPcmxjZlF4UkhSSXg5UENiaklKd0VQeTltMjZ5Tmdlem1laVJTY3ZHQUlfRHA2UDJjN0UzMDB3NFFkYVdNVkdvSl9rT1lEWnZFRHRLQ1BYVGFG?oc=5",
       "source": "CBC뉴스",
-      "category": "공모주 청약 및 IPO 일정"
-    },
-    {
-      "title": "남들 몰래 용돈 벌자…10월 공모주 시장 최고의 '꿀 종목'은?",
-      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBGRXNYVEdGVE5rUllKSW44WHhYNzRZMEZrNHRzMnd4SkhmQUpfUW1RcVg3bHQ3anFMSFlBc252UTdUV0ZFa3B0WjhzUVJtUHRwUVc2dFpR?oc=5",
-      "source": "위키트리",
       "category": "공모주 청약 및 IPO 일정"
     },
     {
@@ -99,15 +99,15 @@
       "category": "공모주 청약 및 IPO 일정"
     },
     {
-      "title": "월초부터 용돈 벌어보자…'멜콘' 공모주 청약 오늘 시작",
-      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE90RTJrSGhEb1RuajhWdEZTQzlfcmsyZE5HUnY5REtBUUlXcTZyNTc3RUdYb1U2VGxNeUFzT1BHQm43WFJJX2k2b3lFN0JLb1hkRWoydkdn?oc=5",
-      "source": "위키트리",
-      "category": "공모주 청약 및 IPO 일정"
-    },
-    {
       "title": "\"보통 2배는 먹고 나가죠\" 올해만 시초가 126% 찍은 'IPO 공모주' 10월 일정",
       "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5ENDkzLVFveHZHdEJ5NUw3ZDk1Tno5NEt4WmFfdVlTVFNkTGlxRTFQQWw3dTEwVC1tZ2hmdmc2T044aUFWR3ZJNzZaVjQ5Q3RrQ01vU3JQYjFTYkRRUG1kWTIzQzhiazB2aVB1MA?oc=5",
       "source": "nanamcom.co.kr",
+      "category": "공모주 청약 및 IPO 일정"
+    },
+    {
+      "title": "IPO 회복세 '갸웃'…올해 '공모가 미달' 3건 모두 9월",
+      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5iY3RSemQ2T25XU0NadjVqcEhSNGxQdU8yRDkxM201Vl9JMkhVYmhPdnFGeEtvZ0Z2WWJPcmpCZUUzdHF0QkxRSzg1NEJCRzU4S09XVlRSWDN1WlMyVXRvaWtoMEw?oc=5",
+      "source": "서울경제TV",
       "category": "공모주 청약 및 IPO 일정"
     },
     {
@@ -125,19 +125,13 @@
     {
       "title": "뉴욕증시, 美 8월 물가지표 예상치 하회에도 혼조세",
       "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9oQTAzcFozajR3S2pRMEo5WHp4SEZZU0hLMTR1UmJ5OGpJTkRUZk1rOXBNdzlKdllZMUtYUU9iaENhV3lvUFh6N2pBTjJfS3B0TEVGc1NJTzA4bU3SAWBBVV95cUxORDVCbWNzS19pUkJWeEJGR1hGalpnb1FmUDIzd24zOVhEZVV0eVFlNUtqR1RRSkZNZGZiS1R1cUhGSENzbzJJdXlSU0xrekZPUE5tdnctZ1FZaVJrbnRtRlo?oc=5",
-      "source": "연합뉴스",
+      "source": "yna.co.kr",
       "category": "미국 증시 / 글로벌 매크로"
     },
     {
       "title": "[서울데이터랩] 미 증시 혼조 마감…기술주 강세에 나스닥 상승, 다우·S＆P500은 하락",
       "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5SRU05RjdwWVZCS0hnMURtODFVRDFGZWlNOEdGR2d0WnE4VlFzX2VZWExZd0MyV2QwQ3BJd2QwNFBCY2d4ZlBQWS1vN3JOU08tTFJuVGxrdVF3SWtwb2RRTFl0UWZTNlhHUHlmSU5iOA?oc=5",
       "source": "서울신문",
-      "category": "미국 증시 / 글로벌 매크로"
-    },
-    {
-      "title": "[글로벌증시] 뉴욕증시 혼조 마감…나스닥, 기술주 강세에 상승세",
-      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5TbEdtWUllQlE2VTgxY3d0aHhTb1pTZEtoWkZBX0RyQUlKVm5CS3NWcHhZdDZqRVZsWW84TFF1YWlSN041RUphSFNuckNuSDM0LXRuNkE4SERGNmgwMkVNT0k4VjhsaWp1OUUwUWlmRno4dzYz?oc=5",
-      "source": "연합뉴스 한민족센터",
       "category": "미국 증시 / 글로벌 매크로"
     },
     {
@@ -159,10 +153,10 @@
       "category": "미국 증시 / 글로벌 매크로"
     },
     {
-      "title": "美 국채 금리, 최고치 경신...선물 시장은 꿋꿋한 반등",
-      "url": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE14Vi1EeEt0N2d4Z0JpNmVCV3ptOXFQN0JVZlRLUHBxUk41WTNkTGlmTVZLTVVvdHpsX2xaaHJFZXpZMEpIMzBoSFBB?oc=5",
-      "source": "코인리더스",
-      "category": "야간선물 / 파생 / 투자시황"
+      "title": "[글로벌증시] 뉴욕증시 혼조 마감…나스닥, 기술주 강세에 상승세",
+      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5TbEdtWUllQlE2VTgxY3d0aHhTb1pTZEtoWkZBX0RyQUlKVm5CS3NWcHhZdDZqRVZsWW84TFF1YWlSN041RUphSFNuckNuSDM0LXRuNkE4SERGNmgwMkVNT0k4VjhsaWp1OUUwUWlmRno4dzYz?oc=5",
+      "source": "연합뉴스 한민족센터",
+      "category": "미국 증시 / 글로벌 매크로"
     },
     {
       "title": "국채선물, '소비 호조' 美 국채 약세에 하락…10년물 14틱↓ |",
@@ -171,9 +165,15 @@
       "category": "야간선물 / 파생 / 투자시황"
     },
     {
+      "title": "美 국채 금리, 최고치 경신...선물 시장은 꿋꿋한 반등",
+      "url": "https://news.google.com/rss/articles/CBMiREFVX3lxTE4yczV3TWJYR203N182S0NmRmY0ek14VU1FNTZSeU42TUVjaEYwSUtNSW1MSFpTOHRBWHppdk9oZlVqcHFZ?oc=5",
+      "source": "코인리더스",
+      "category": "야간선물 / 파생 / 투자시황"
+    },
+    {
       "title": "[마켓뷰] 美금리 악재·마이크론 호실적…코스피 반등하나",
       "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9GTDh0bFdhVGItYklfUlJ0QlViNlpFUUdmYzRxLS1BVkdHQ1ZacjVlQnptYXhOT0NGLVRJaklySUh0ejIwVnBqWm9FS1ZsVExFQ1JlYmh0ZW1sLTTSAWBBVV95cUxQVWRlVkxWZEExcjFzZ0cxVTZnRUIyejJxbkhYLU5rWjNpcm53M2dTSVVUNEhfcE44SzRSZlprWUxESllCRlV4a1RfV1lqalZySmI5M3d6ampuVzFYNTR0NV8?oc=5",
-      "source": "연합뉴스",
+      "source": "yna.co.kr",
       "category": "야간선물 / 파생 / 투자시황"
     },
     {
