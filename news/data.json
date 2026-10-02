@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-10-02T09:30:56.638209+00:00",
-  "updatedAtLabel": "2026년 10월 02일 18:30 KST",
+  "updatedAt": "2026-10-02T11:40:26.912365+00:00",
+  "updatedAtLabel": "2026년 10월 02일 20:40 KST",
   "items": [
     {
       "title": "[증시-마감] 코스피, 막판 7,000선 탈환…코스닥, 900선 찍고 반납",
@@ -23,7 +23,7 @@
     {
       "title": "코스피, 장 막판 7000선 회복…코스닥은 0.11%↓",
       "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE0ybEpsR1V2LUkzUEpNSmhDUXBvbVFXbzBZQXhIX3M0SUl4TlNCRE5rM210VHVvUkZJZDgtR0VrNzBEZXRTc3lrWEdva2d6dUxiSGpMcXVoQ18wZlJGd3l4eHhR?oc=5",
-      "source": "이코노미스트",
+      "source": "economist.co.kr",
       "category": "국내 증시 / 코스피 코스닥"
     },
     {
@@ -47,7 +47,7 @@
     {
       "title": "환율 다시 오르나...IBK證 “연말 1400원 전망”",
       "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE00LUd5V1BrV1hNSS14TTRoTlphdDhQczE4aDRTU0JuTWtlSmt1SFFCOTBaQy1TdUR6MkREbTJLYWl3aWIxUFZSTDB3aENMWndlNlhuWQ?oc=5",
-      "source": "mk.co.kr",
+      "source": "매일경제",
       "category": "환율 및 글로벌 원자재 시세"
     },
     {
@@ -63,21 +63,21 @@
       "category": "환율 및 글로벌 원자재 시세"
     },
     {
-      "title": "삼성전자, 3분기 환율 부진에도 영업이익 100조 돌파",
-      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5JQVJzdm1TZmR1N2pmU21FN1BxZTR5T2FqQXBtUHhMUGtLY1NFTmFyYmJxU1FtVmk4NzVIQ0FwdjBTX0F5a3Y2UG1JTFY4ZFBqS19iWDdidEZueEdHQjhQbWs5VXBrYnlDSEJqcmxR?oc=5",
-      "source": "알파경제",
-      "category": "환율 및 글로벌 원자재 시세"
-    },
-    {
       "title": "\"환율 1250원까지 하락\"…반도체가 몰고 온 무역흑자 시대",
       "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNUWJTbHdxMm85WXp2WWstdWxUdG1sa1hlbUNBSnloTDJXWktVUHRIMkE5cGk1R3VHTVkzQk5jbGRVQmpjS0N3RWM3OU9jbzV5cUhpRWJuclNjOWl4SWE3NVhmeldVUkRzRHZEN2I2dEpFWktSMDF6ckZPcDVoVDlsRA?oc=5",
       "source": "edaily.co.kr",
       "category": "환율 및 글로벌 원자재 시세"
     },
     {
+      "title": "삼성전자, 3분기 환율 부진에도 영업이익 100조 돌파",
+      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5JQVJzdm1TZmR1N2pmU21FN1BxZTR5T2FqQXBtUHhMUGtLY1NFTmFyYmJxU1FtVmk4NzVIQ0FwdjBTX0F5a3Y2UG1JTFY4ZFBqS19iWDdidEZueEdHQjhQbWs5VXBrYnlDSEJqcmxR?oc=5",
+      "source": "알파경제",
+      "category": "환율 및 글로벌 원자재 시세"
+    },
+    {
       "title": "[공모주 현황] 진코스텍 1일차 마무리, 균등·비례 얼마?…2일차 일정에도 '이목'",
       "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBCd3hkZDMwd0dyVmQyVDlrZExrUnZ2eUIxMHAyMVU0Y0VSUG40eWFoa0ZqU3hkbUc1VDVaOTdmRHFlUFZJeDZHb0RzWkF5ZXJOZEpkREdtLV82MjZFQ2FTemFJOUcwdkpn?oc=5",
-      "source": "cbci.co.kr",
+      "source": "CBC뉴스",
       "category": "공모주 청약 및 IPO 일정"
     },
     {
@@ -89,7 +89,13 @@
     {
       "title": "[공모주 마감] 멜콘 청약 2일차까지 종료, 균등·비례 경쟁률 살펴보니",
       "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBRbmtfU05NamdVdi00bllxdFNRNm40eWljdlZFeHpOMXhhWEhiZGJmTDlkVWlUdTh5dWFqUkI0RVdfc19QRzhVam9KUzJfUFdiV1FOM28ybWd0X09weUtVelRNU1VxZWc2?oc=5",
-      "source": "cbci.co.kr",
+      "source": "CBC뉴스",
+      "category": "공모주 청약 및 IPO 일정"
+    },
+    {
+      "title": "래블업 공모주 : 정정 뒤 내린 공모가와 NUTANIX가 끌어올린 PER 33.6배",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOMnRLWEhoTWFZMm5ibS14R1lTUXUtMDRNOUpQTjVfYVZWeW9jUmY2MVlDTVh4NG84dlZ1SjI0SjdNdFNXdUo0bGM0M1pwV0c3M1VJT25pdy00aHg3MXJITjl0MVRBYU1sSEJDWmpLeEwtSEh0bnYxNDV4cHhpS09zakRuaU5HdDg0emRJNXdsbw?oc=5",
+      "source": "프리미엄콘텐츠",
       "category": "공모주 청약 및 IPO 일정"
     },
     {
@@ -105,12 +111,6 @@
       "category": "공모주 청약 및 IPO 일정"
     },
     {
-      "title": "4분기 공모주 몰려온다…옥석 가리기 시험대",
-      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE82QkNLQlJSZkZsR25DZmxpN3FaaVlwSjNVYjYwTXZUMlhkVWwxRy1TRjNJRXc3U1FxOGtNUUZLNjNteTQtZUFCM05XLWVOdVBrbVZnZjdUYWxScERuWnc?oc=5",
-      "source": "동행미디어 시대",
-      "category": "공모주 청약 및 IPO 일정"
-    },
-    {
       "title": "청년미래적금 10월 7일부터 2차 신청 시작 | 청년도약계좌 갈아타기 방법",
       "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5fT09zSWxMdVFYeDdnTnlTNS1ZZEV3QTQxVzZTemx6UmhaZzlEdEFlcDFQZk9FT2N5TkhILUZYRXJmWnNQLWx1WEplLWE2YVVfOE9SNzZ2YVNBSHB2elZPZVRZdkxqXy0y?oc=5",
       "source": "KB Think",
@@ -123,21 +123,15 @@
       "category": "정부 지원금 및 정책 소식"
     },
     {
-      "title": "미국 국채 금리 따라 등락 반복한 뉴욕증시",
-      "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE1OOU1UeDNkUTM0MVZOd3ZlYmFRTUxVYl96RzUxOUZMV01rWmx4cW03U1lDa0llMnRZb002V3dPNjE2SXdXS0d1RldmeG5UbG9ldXBibDA1a1lfZFdoLXlZelBsMVJ4MW5pc2V2REpQTFZyMXQxNm5UcHB30gF6QVVfeXFMT2djekIySmtpdmdSSENtRE9ScWZ5bURqdm1UQVR5UjMwX3Y1OWlvRm00NXZmLTJWTWJyQXR6bWlueFE5empCd2RVTXdWUXJvdC16NTZxaHAxLVZmczNPUHo0TFN4dW9ZN1RPVHdhRi1RRlRKOHROV2lIQmc?oc=5",
-      "source": "MBC 뉴스",
+      "title": "국채 금리 치솟자 뉴욕증시 흔들렸다…다우·S&P500·나스닥 강보합",
+      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTFA0c3pzMUJQZ2h4TWRkWXVkQXg2Zk96TDR6Z05hN3pCbFNVbFdwdTIyY25EVE9XYmZoS25WNXozY3RzUUFfelNHaU5pOTlpS0JpWGZfZGl3R1FLdHNMcWxSV2Y5QjlRY21MOGxId2hTX25GeDjSAXdBVV95cUxPVW9iN0c1TS1Ib0E2X2p2WjBSVTN0ZnM3R3UxT08xWTd1VlIya2tIeThISGpkVVVmQTJQX3YwOElod1lZWm5DWmx5azVTZmV1WjRfSGpIbEVubUlVY293OW52ejRBcWNnVFFGb01aTXhlakJUMkhMZw?oc=5",
+      "source": "핀포인트뉴스",
       "category": "미국 증시 / 글로벌 매크로"
     },
     {
       "title": "[뉴욕 증시] 美 국채 금리 다소 안정세...뉴욕 3대 지수 강보합세",
       "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE1fODdDU3dtS0VyZEl6NGExOEJJYWF6aGpWZmFVU0VFU21lR0FiQThmQ0dLWGpWbTRsU1dKcGJYaG5oSFVIejh1dkVPNEhhUi1xZE9hLU5XRlV2WExjeXdGS19fY0VieUxSTU9LUGNpdGlSQQ?oc=5",
       "source": "한양경제",
-      "category": "미국 증시 / 글로벌 매크로"
-    },
-    {
-      "title": "국채 금리 치솟자 뉴욕증시 흔들렸다…다우·S&P500·나스닥 강보합",
-      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTFA0c3pzMUJQZ2h4TWRkWXVkQXg2Zk96TDR6Z05hN3pCbFNVbFdwdTIyY25EVE9XYmZoS25WNXozY3RzUUFfelNHaU5pOTlpS0JpWGZfZGl3R1FLdHNMcWxSV2Y5QjlRY21MOGxId2hTX25GeDjSAXdBVV95cUxPVW9iN0c1TS1Ib0E2X2p2WjBSVTN0ZnM3R3UxT08xWTd1VlIya2tIeThISGpkVVVmQTJQX3YwOElod1lZWm5DWmx5azVTZmV1WjRfSGpIbEVubUlVY293OW52ejRBcWNnVFFGb01aTXhlakJUMkhMZw?oc=5",
-      "source": "핀포인트뉴스",
       "category": "미국 증시 / 글로벌 매크로"
     },
     {
@@ -156,6 +150,12 @@
       "title": "뉴욕증시, 유가 급등·국채금리 고공행진에도 강보합",
       "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE96YTdJSWxZeDJ4MFF3Y180V0lyOFhkeXRxWHVHVVBncGpBOVh2dFFWN09vVmdUdHU0X0VWbklab2RzT3BfaHpOamlZMUVldjh4TnNiWW0zMzRWS01UYjhNajZHR3d3bzJYU3JzMQ?oc=5",
       "source": "스페셜경제",
+      "category": "미국 증시 / 글로벌 매크로"
+    },
+    {
+      "title": "[뉴욕증시 15일] 종전 낙관론 지속에 S&P500·나스닥 지수 사상 최고치 마감",
+      "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxNQkFTVXQ2TEw5a1d0bmdTNUpMdnRPUWNpZV9pZEtNSmlId1FGNTJIaTNFVWJVYldpYXZqMl9wMjlsSTVWdUtlcDdZNmtBbFpVcEJkMFVaOEJlM2tSVHhOajdzM094YkpqTjJLR0RhM1ZvU3ZTdFQwOEJIYUV4YXAxYTdNRlZQYUljMnBWaXJDSkVrT1RpcGNSY1dwTXhTSGI1WVpRY3BNRzA5T0poRnhicXp5OXFJVWJBU2dMcGItcW9JWU83N1gxQlR5d2pQbGtnTjlNWGF2Skk?oc=5",
+      "source": "미주조선일보",
       "category": "미국 증시 / 글로벌 매크로"
     },
     {
@@ -179,7 +179,7 @@
     {
       "title": "[마켓프리뷰] 금리 급등세 진정에 美 증시 안정세…코스피 숨고르기 전망",
       "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1NOXpTNGhySFFhbHJVd1ZleEQwOTJFb1cwNzZtNFpfNXNXV1JSRkh2ODNKNWxtSVpydzB4eE54Q1hIN29pakRvajRBUnNTTm8tT1prQUpCSUnSAVhBVV95cUxNTTl6UzRockhRYWxyVXdWZXhEMDkyRW9XMDc2bTRaXzVzV1dSUkZIdjgzSjVsbUlacncweHhOeENYSDdvaWpEb2o0QVJzU05vLU9aa0FKQklJ?oc=5",
-      "source": "ajunews.com",
+      "source": "아주경제",
       "category": "야간선물 / 파생 / 투자시황"
     },
     {
