@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-10-02T15:33:55.961342+00:00",
-  "updatedAtLabel": "2026년 10월 03일 00:33 KST",
+  "updatedAt": "2026-10-02T17:03:18.423377+00:00",
+  "updatedAtLabel": "2026년 10월 03일 02:03 KST",
   "items": [
     {
       "title": "[증시-마감] 코스피, 막판 7,000선 탈환…코스닥, 900선 찍고 반납",
@@ -27,15 +27,15 @@
       "category": "국내 증시 / 코스피 코스닥"
     },
     {
-      "title": "코스피, 장 막판 7000선 회복…코스닥은 0.11%↓",
-      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE0ybEpsR1V2LUkzUEpNSmhDUXBvbVFXbzBZQXhIX3M0SUl4TlNCRE5rM210VHVvUkZJZDgtR0VrNzBEZXRTc3lrWEdva2d6dUxiSGpMcXVoQ18wZlJGd3l4eHhR?oc=5",
-      "source": "이코노미스트",
-      "category": "국내 증시 / 코스피 코스닥"
-    },
-    {
       "title": "코스피, 막판 7000선 탈환… 코스닥 약보합 마감",
       "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5uYkljdlJQU3VPWWFfazA0a1ctZ1V3LWdOd1NiUlN6dE9TeVJjQkx4X1IzRnJ3WjBCeF94UmRSVWx6WTJEYW9YYlhJNFBzbG1CcTlNcXZmRjRlU1lwazN0WWhleFpZVUhYdWc?oc=5",
       "source": "천지일보",
+      "category": "국내 증시 / 코스피 코스닥"
+    },
+    {
+      "title": "코스피, 장 막판 7000선 회복…코스닥은 0.11%↓",
+      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE0ybEpsR1V2LUkzUEpNSmhDUXBvbVFXbzBZQXhIX3M0SUl4TlNCRE5rM210VHVvUkZJZDgtR0VrNzBEZXRTc3lrWEdva2d6dUxiSGpMcXVoQ18wZlJGd3l4eHhR?oc=5",
+      "source": "이코노미스트",
       "category": "국내 증시 / 코스피 코스닥"
     },
     {
@@ -83,7 +83,7 @@
     {
       "title": "멜콘, 청약 경쟁률 1741.48대 1…증거금 6.7兆",
       "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE91dTR5TUNBM0VWUzZYM1VFV1dDWXV5dDFmeHFRSUlXaC1lWmxtOEpicEQzMldJUjFUaHJqMDJTdWxNWldsSERDTWZ2dXk3ejNUVV9jbDhSdFA2M2FDTnZCVtIBeEFVX3lxTE5BSzMwYkZScFVVQ2hVZVpTRzI4VW5OZjBZa1VnQjc5cVRZY05zUDRkYXlSN19jSm93LU5YRWxaQWVkUUtKZWlBM3ExNUJqM3M4cTZmNkQxZWxCV3Yya3ViUHEzR05jTXNIa0VYdzlWdk9JVkY5VzU0bw?oc=5",
-      "source": "newsis.com",
+      "source": "뉴시스",
       "category": "공모주 청약 및 IPO 일정"
     },
     {
@@ -101,13 +101,13 @@
     {
       "title": "래블업 공모주 : 정정 뒤 내린 공모가와 NUTANIX가 끌어올린 PER 33.6배",
       "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOMnRLWEhoTWFZMm5ibS14R1lTUXUtMDRNOUpQTjVfYVZWeW9jUmY2MVlDTVh4NG84dlZ1SjI0SjdNdFNXdUo0bGM0M1pwV0c3M1VJT25pdy00aHg3MXJITjl0MVRBYU1sSEJDWmpLeEwtSEh0bnYxNDV4cHhpS09zakRuaU5HdDg0emRJNXdsbw?oc=5",
-      "source": "프리미엄콘텐츠",
+      "source": "네이버 프리미엄콘텐츠",
       "category": "공모주 청약 및 IPO 일정"
     },
     {
-      "title": "4분기 공모주 몰려온다…옥석 가리기 시험대",
-      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE82QkNLQlJSZkZsR25DZmxpN3FaaVlwSjNVYjYwTXZUMlhkVWwxRy1TRjNJRXc3U1FxOGtNUUZLNjNteTQtZUFCM05XLWVOdVBrbVZnZjdUYWxScERuWnc?oc=5",
-      "source": "동행미디어 시대",
+      "title": "코스닥 중심 IPO 회복세…회사채 발행은 40% 줄어 [시그널]",
+      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5VeWx1RjNpVE1UZmt2SkJ5MXEwQ053VnJUTUlLaGQ2eUJGM29xV2lHWU10NnpjOFVKM3VGTEFXRGZQbkxXcXR3OXk5ZnRHbVFTMFHSAVNBVV95cUxNOUY5Qzc5TGh1WjFnRFZOdThiYmNIdXZnUnNwWnhOb1hrelczLVRULUE0LWpETlRFTVNJQmw5X0N3ejlkdWxJSFNWMy1kVjBuTE5OMA?oc=5",
+      "source": "서울경제",
       "category": "공모주 청약 및 IPO 일정"
     },
     {
@@ -123,12 +123,6 @@
       "category": "정부 지원금 및 정책 소식"
     },
     {
-      "title": "국채 금리 치솟자 뉴욕증시 흔들렸다…다우·S&P500·나스닥 강보합",
-      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTFA0c3pzMUJQZ2h4TWRkWXVkQXg2Zk96TDR6Z05hN3pCbFNVbFdwdTIyY25EVE9XYmZoS25WNXozY3RzUUFfelNHaU5pOTlpS0JpWGZfZGl3R1FLdHNMcWxSV2Y5QjlRY21MOGxId2hTX25GeDjSAXdBVV95cUxPVW9iN0c1TS1Ib0E2X2p2WjBSVTN0ZnM3R3UxT08xWTd1VlIya2tIeThISGpkVVVmQTJQX3YwOElod1lZWm5DWmx5azVTZmV1WjRfSGpIbEVubUlVY293OW52ejRBcWNnVFFGb01aTXhlakJUMkhMZw?oc=5",
-      "source": "핀포인트뉴스",
-      "category": "미국 증시 / 글로벌 매크로"
-    },
-    {
       "title": "미국 국채 금리 따라 등락 반복한 뉴욕증시",
       "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE1OOU1UeDNkUTM0MVZOd3ZlYmFRTUxVYl96RzUxOUZMV01rWmx4cW03U1lDa0llMnRZb002V3dPNjE2SXdXS0d1RldmeG5UbG9ldXBibDA1a1lfZFdoLXlZelBsMVJ4MW5pc2V2REpQTFZyMXQxNm5UcHB30gF6QVVfeXFMT2djekIySmtpdmdSSENtRE9ScWZ5bURqdm1UQVR5UjMwX3Y1OWlvRm00NXZmLTJWTWJyQXR6bWlueFE5empCd2RVTXdWUXJvdC16NTZxaHAxLVZmczNPUHo0TFN4dW9ZN1RPVHdhRi1RRlRKOHROV2lIQmc?oc=5",
       "source": "MBC 뉴스",
@@ -138,6 +132,12 @@
       "title": "[뉴욕 증시] 美 국채 금리 다소 안정세...뉴욕 3대 지수 강보합세",
       "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE1fODdDU3dtS0VyZEl6NGExOEJJYWF6aGpWZmFVU0VFU21lR0FiQThmQ0dLWGpWbTRsU1dKcGJYaG5oSFVIejh1dkVPNEhhUi1xZE9hLU5XRlV2WExjeXdGS19fY0VieUxSTU9LUGNpdGlSQQ?oc=5",
       "source": "한양경제",
+      "category": "미국 증시 / 글로벌 매크로"
+    },
+    {
+      "title": "국채 금리 치솟자 뉴욕증시 흔들렸다…다우·S&P500·나스닥 강보합",
+      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTFA0c3pzMUJQZ2h4TWRkWXVkQXg2Zk96TDR6Z05hN3pCbFNVbFdwdTIyY25EVE9XYmZoS25WNXozY3RzUUFfelNHaU5pOTlpS0JpWGZfZGl3R1FLdHNMcWxSV2Y5QjlRY21MOGxId2hTX25GeDjSAXdBVV95cUxPVW9iN0c1TS1Ib0E2X2p2WjBSVTN0ZnM3R3UxT08xWTd1VlIya2tIeThISGpkVVVmQTJQX3YwOElod1lZWm5DWmx5azVTZmV1WjRfSGpIbEVubUlVY293OW52ejRBcWNnVFFGb01aTXhlakJUMkhMZw?oc=5",
+      "source": "pinpointnews.co.kr",
       "category": "미국 증시 / 글로벌 매크로"
     },
     {
@@ -161,7 +161,7 @@
     {
       "title": "금일 시황 간단 정리 & KOSPI 200 야간선물",
       "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTFBrdWI5QVFhUFJlQkdwangyZkRQZWZZMWljZUkyQzNteFBpVllXaWp3NlFUYm9XNWp0TTE5RzJMMTA3QmZOSXRwMkdyM3NId3NvOEl3c2R2dEkxaDVCbGMxU2FhbUhLZGhjaEpwSE5oQm85amNYOGJyNFRhX1M?oc=5",
-      "source": "프리미엄콘텐츠",
+      "source": "네이버 프리미엄콘텐츠",
       "category": "야간선물 / 파생 / 투자시황"
     },
     {
@@ -179,7 +179,7 @@
     {
       "title": "모양과 색으로 구분하는 거울 공포 게임 심벌 디자인",
       "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1DRGgyUWV5YkJnOWhZUzR5UmExQTJVTzFBM0c4aXhUbnJlRjktSDdUY2I5Vzg4T3dYR0F4M3RoY3BfYUhYMTBJTTY0OEdudW4yMHctX0hralZURXN4X25Ta0NmbzB4TVZf?oc=5",
-      "source": "calgaryroughnecks.com",
+      "source": "Calgary Roughnecks",
       "category": "야간선물 / 파생 / 투자시황"
     },
     {
