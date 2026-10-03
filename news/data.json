@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-10-03T10:54:01.715716+00:00",
-  "updatedAtLabel": "2026년 10월 03일 19:53 KST",
+  "updatedAt": "2026-10-03T14:12:18.170536+00:00",
+  "updatedAtLabel": "2026년 10월 03일 23:12 KST",
   "items": [
     {
       "title": "마이크론 깜짝 실적에 삼전닉스 반등했지만…‘7천피’의 그림자 [주간 증시해설서]",
@@ -17,7 +17,7 @@
     {
       "title": "코스피 지지부진 '박스피' 갇혔는데...\"27% 뛰었다\" 이 종목 급등[김근희의 증시 랩업] - 머니투데이",
       "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE8yRUxFbUlVS3pnQUpmcm9MUF9DWkxnSG8wWTA4QW1xSS16dWNyMG12Ui05RlRCZG96TEdoelluMjVfVUxYTlJHZzRiTEdfYlQwN25LaE0xZkgwUE5GakN2Qm5pSFd3NDBta1hBclhB0gFuQVVfeXFMTzJFTEVtSVVLemdBSmZyb0xQX0NaTGdIbzBZMDhBbXFJLXp1Y3IwbXZSLTlGVEJkb3pMR2h6WW4yNV9VTFhOUkdnNGJMR19iVDA3bktoTTFmSDBQTkZqQ3ZCbmlIV3c0MG1rWEFyWEE?oc=5",
-      "source": "mt.co.kr",
+      "source": "머니투데이",
       "category": "국내 증시 / 코스피 코스닥"
     },
     {
@@ -41,13 +41,19 @@
     {
       "title": "[다음주 환율전망] 美 국채금리 24년 만에 최고…원·달러, 다음주도 상방 압력 전망",
       "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5DUE5VcVlMUzZyd05rUE9ZaDFubHdkN2tDMno5YlJtX2ZrUkRudzFMLTRsd0FkUkZPN2VwTTZUcVJUTnNQVFdFbjczbU9XMFBab3ZEcE5WR1g0QTF5T182UDhVUUFYUERBa3hmNA?oc=5",
-      "source": "굿모닝경제",
+      "source": "goodkyung.com",
       "category": "환율 및 글로벌 원자재 시세"
     },
     {
       "title": "[외환] 예상 밑돈 美 고용에 弱달러…1,340원대 중반으로 낙폭 확대",
       "url": "https://news.google.com/rss/articles/CBMickFVX3lxTFBXaVh0S0dDZE1QZUxlWmhSajBRYlV6NEdPMEJCeGlrcG9NTUc3M0ZONHVEMFptQ3EwR2VrRE9aNkdIdzEta0tlYWl6R0FUSW5DbHZJeG1pdzdOcUg1bVJxS0NNU1BNdnp5UlFYUi04b0UyZw?oc=5",
       "source": "KB Think",
+      "category": "환율 및 글로벌 원자재 시세"
+    },
+    {
+      "title": "\"10월 연준·한은 금리 동결할 것…달러-원 1,345~1,370원 전망\"",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE0ydUFjaTZEM1VzOXFVY2ZPSDUxdzVUbjJsaGJQRjlHSkFVSHFZTG85QzgtdExlX0tXY015R0xhSXl2Uk1MZTM3b09DUFFEUXgzdy0tOVlHNzFQQVkxNHZmV05Qclozd3JzZFMtbGh3dlI?oc=5",
+      "source": "연합인포맥스",
       "category": "환율 및 글로벌 원자재 시세"
     },
     {
@@ -59,19 +65,13 @@
     {
       "title": "“환율 1250원 간다”...씨티, 경상흑자에 눈높이 낮췄다",
       "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBBYUdRbXpxUmtMdFpUSlphRlVDWGhHbzlrR0trLWpCanpINmNweC1ScVFJZjVDb1dheDFtR2xTTkFwcVY4dkZkdndpY2NRbWRaV2p6aWZEY1BsaFV3OV9ERGc1THVoMldoMFUyUFFvSdIBb0FVX3lxTFBBYUdRbXpxUmtMdFpUSlphRlVDWGhHbzlrR0trLWpCanpINmNweC1ScVFJZjVDb1dheDFtR2xTTkFwcVY4dkZkdndpY2NRbWRaV2p6aWZEY1BsaFV3OV9ERGc1THVoMldoMFUyUFFvSQ?oc=5",
-      "source": "투데이신문",
+      "source": "ntoday.co.kr",
       "category": "환율 및 글로벌 원자재 시세"
     },
     {
       "title": "더블유게임즈, 3분기 환율에 발목…“4분기부터 다시 성장”",
       "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE5lRWk3dEI1cWpreGhxV2YwcFhqMUlBMTlKb0lCSEhuVlVsaUt5S2R2eWVhNjg1UjRSbDUzOUNJX0U4T2ZFUWp1RV9WUjY3WDlpOTlOR0FMTXZGZlNCSzJoZndDYWtGNUlXVktWOEo5VzVONXRlajBv0gF3QVVfeXFMTmVFaTd0QjVxamt4aHFXZjBwWGoxSUExOUpvSUJISG5WVWxpS3lLZHZ5ZWE2ODVSNFJsNTM5Q0lfRThPZkVRanVFX1ZSNjdYOWk5OU5HQUxNdkZmU0JLMmhmd0Nha0Y1SVdWS1Y4SjlXNU41dGVqMG8?oc=5",
       "source": "핀포인트뉴스",
-      "category": "환율 및 글로벌 원자재 시세"
-    },
-    {
-      "title": "[전문가 기고] 미국 국채금리 상승이 우리 경제에 미치는 영향",
-      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBnYWFTVENKZXJ1M2pqa1dReG9YNjI3Um9KRGRzS3MwTmlLMENackdNbzRMRmczRlMzR2UyM0Ewdk9JeEFja0RMa2h3ZldMV1p2MmlZaTdKRnpfRXVhdzNidy04NVUwMkVJQ2c?oc=5",
-      "source": "서울파이낸스",
       "category": "환율 및 글로벌 원자재 시세"
     },
     {
@@ -82,14 +82,8 @@
     },
     {
       "title": "[공모주 캘린더] 'AI 기대주' 엘리스그룹·진코스텍 일반청약 출격…디티에스 등 4개사 수요예측",
-      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE8wNTVwaDBsYXlsd05sZldhVDBxaTllY3FNeXVIdnhmTklyYWVnNjJZOFpCS2FtTlNLaFFrVnFsdmFydkpDVHFpeFMxZmNMVnpmWjZoVFpVcUpJNnlDSm9MQmNQWXdiLWFZ?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5acHUzYlUtNlRJWWhaWXNYMkZSbjhHSUYwR1NBbVRiMi1faXRmbDBQeGROc3AzWjNnaWljS2k1WjlSWnZLUFVub2dnZ0JjVE5zZm1maVdES3czeGtaeElqOTRuOHQ3X1k?oc=5",
       "source": "CBC뉴스",
-      "category": "공모주 청약 및 IPO 일정"
-    },
-    {
-      "title": "[IPO] ASML 공급망 뚫은 멜콘, 청약 1741대 1 흥행... 차세대 EUV 대응 속도",
-      "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE12TXdkel84R1pXM2ZNbVVINnZINGtSUTlPVWVPZS1WenllU1ZhZHhNWHdBOE9FSW5zNUkxdUFRZUJhT2ZBSUs0dGVtY1h4d0lxU2hTUUN6TllvQnlyWVFyMzBjUVFqTC1mdUlvS18wQ2VLd9IBdkFVX3lxTE5rdnhUa3dJTHVKdF9IdWVpczZySW50UWMybnY1QXhMSUhvdzVWQl9kc2pyWGJzMmx5QUY3NnZXLUN3aVlmVjJsdHBmZUFzRXJJTGphVFVBTFhJVUZhUTlPWDdZWU95cnhyNXFaM20yRlRMd2RiWGc?oc=5",
-      "source": "investnews.co.kr",
       "category": "공모주 청약 및 IPO 일정"
     },
     {
@@ -101,7 +95,13 @@
     {
       "title": "IPO 공모액 58% 급감했지만…9월 상장 새내기주 7곳 모두 첫날 급등",
       "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE1fLUdrWUlrZ19OaDFWWENDTGdpRE16TDBSSWlRWGE3djNxNlBSM3Yydm0wTDBWMncwVGJPWHQ5QmV5TW1JSmRpQUk0aTBweVZhOFd30gFTQVVfeXFMTV8tR2tZSWtnX05oMVZYQ0NMZ2lETXpMMFJJaVFYYTd2M3E2UFIzdjJ2bTBMMFYydzBUYk9YdDlCZXlNbUlKZGlBSTRpMHB5VmE4V3c?oc=5",
-      "source": "서울경제",
+      "source": "sedaily.com",
+      "category": "공모주 청약 및 IPO 일정"
+    },
+    {
+      "title": "헷갈리는 약어를 풀어 쓴 포커 랭킹 1위 용어 사전",
+      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE9LbWVTeGR5QzIzVWtOc1pmZkloUzZQME03TkxGUTVUWlNESjZ3OFJEbVZHY0hCanpFZmMwbnRGOTZiTmlzWGpVd2oyREJlZWJfX0JSUmRISjRsSG81TE1QbTlHb2stNmR1SmpaRUU3WEtCX09Qb2lMb0N5QTc?oc=5",
+      "source": "Calgary Roughnecks",
       "category": "공모주 청약 및 IPO 일정"
     },
     {
@@ -111,15 +111,15 @@
       "category": "정부 지원금 및 정책 소식"
     },
     {
-      "title": "美 고용 ‘뚝’…뉴욕증시 웃었다, 나스닥 1.2%↑",
-      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE4xSElIWTB5UGFubElIWi1qSWw3WkhMUVBHUzEtWVF1bG42RXRGNm40S2M2bGFkR3ctWnVjSGhKbFdvaDJIUXJtaTg2aGcwT1lPdWxKOTNiXy0xLWJWM083RWhRdjhkRHlVMnZHMXR30gFuQVVfeXFMTjFISUhZMHlQYW5sSUhaLWpJbDdaSExRUEdTMS1ZUXVsbjZFdEY2bjRLYzZsYWRHdy1adWNIaEpsV29oMkhRcm1pODZoZzBPWU91bEo5M2JfLTEtYlYzTzdFaFF2OGREeVUydkcxdHc?oc=5",
-      "source": "newsian.co.kr",
-      "category": "미국 증시 / 글로벌 매크로"
-    },
-    {
       "title": "뉴욕증시, 고용 둔화에 일제히 상승…나스닥 장중 최고치",
       "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1WMi16SzlYbXVjWUxhV1hoWEYtbEpJdzhmVjVCQmFzOHhoRV8wOWJkMjJSa1A1X3pwdkVaWnNTMEs5TTVFU2dmQ3BtOHBxeUhfamFhUTdYZjNQQkpCVjlBa2c5LVI5ejZ3UDRTdW90M3jSAXRBVV95cUxQanRRNXpxNElPNDUwOVRWQTJWb1VqMGZhWnY5ZUxITGk2RVl0MEJRRU9FY241cXBmdUNRb0FrSGNOb1I3dXFBbS0wd3o0THBJa1ZIUlJBNUdDQW1vcmZQcGpVRWdmWTl2a2hpMEo2N083cTN1Qg?oc=5",
       "source": "산경투데이",
+      "category": "미국 증시 / 글로벌 매크로"
+    },
+    {
+      "title": "美 고용 ‘뚝’…뉴욕증시 웃었다, 나스닥 1.2%↑",
+      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE4xSElIWTB5UGFubElIWi1qSWw3WkhMUVBHUzEtWVF1bG42RXRGNm40S2M2bGFkR3ctWnVjSGhKbFdvaDJIUXJtaTg2aGcwT1lPdWxKOTNiXy0xLWJWM083RWhRdjhkRHlVMnZHMXR30gFuQVVfeXFMTjFISUhZMHlQYW5sSUhaLWpJbDdaSExRUEdTMS1ZUXVsbjZFdEY2bjRLYzZsYWRHdy1adWNIaEpsV29oMkhRcm1pODZoZzBPWU91bEo5M2JfLTEtYlYzTzdFaFF2OGREeVUydkcxdHc?oc=5",
+      "source": "뉴시안",
       "category": "미국 증시 / 글로벌 매크로"
     },
     {
@@ -129,21 +129,21 @@
       "category": "미국 증시 / 글로벌 매크로"
     },
     {
-      "title": "[뉴욕마감]나스닥 1.2% ↑…고용 부진에 금리인상 우려 후퇴",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9GSVV0ZGxFbjJBdzEyV3AtMjRINm9nN0FobEw5NC16LUVicjI4bnV3R0JPN1pWRTNUdEZYUUYyY0hOSkI3bXRuYlJ6cVVMQ2lNb2ZSRlZZTFQ5eXpZaUwtYV9wLW1GM3FBNFo0QdIBbEFVX3lxTE9GSVV0ZGxFbjJBdzEyV3AtMjRINm9nN0FobEw5NC16LUVicjI4bnV3R0JPN1pWRTNUdEZYUUYyY0hOSkI3bXRuYlJ6cVVMQ2lNb2ZSRlZZTFQ5eXpZaUwtYV9wLW1GM3FBNFo0QQ?oc=5",
-      "source": "뉴스1",
-      "category": "미국 증시 / 글로벌 매크로"
-    },
-    {
       "title": "뉴욕증시, 美 고용 둔화에 금리동결 기대…3대 지수 상승",
       "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE12c3VWX25lLVd1d3FGUFVrdEtGektENWdtTGVrSTloUkp1OVN0YVV4QmJNOXVvbWtkalJId0UzREFZMG1lNzAycWM4VFVpTVY2cWhVV0dhSTVndjYzZ1AybXNKRk9rem9jS1ZoRQ?oc=5",
-      "source": "speconomy.com",
+      "source": "스페셜경제",
       "category": "미국 증시 / 글로벌 매크로"
     },
     {
       "title": "고용 둔화 금리 인상 우려 완화…뉴욕증시 상승, 나스닥 1.19%↑",
       "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBUek5QM3l2eEVwalBhaHFYNERSU2FtTTNNMDBTd0swTzlnVHNQVEFXN1lOTWkyeW16TGtfbU13b1YzaWdzSFZ2N3dCY01FSGRPOVpUTUZOX3YxZWtOM2xWZUZDWHpXblZGSXJJZzRScEnSAXRBVV95cUxNaEc0dWhhVnVFZmRzWEJ5Ulk1bm51NHI1Vjc0dThJNjdEeDFmRENjemhscEdzUUZpUXZOZzZrbkFqX2FMQkhRTXl4eE1IcnFrOHZhT3Z5RXRYbE1hRjNGZEdXXzUtTlNRblF5SUNHbG84TFV4Yg?oc=5",
       "source": "thefairnews.co.kr",
+      "category": "미국 증시 / 글로벌 매크로"
+    },
+    {
+      "title": "[서울데이터랩]미국 증시, 기술주 강세에 일제히 상승 마감…나스닥 1%대 오름세",
+      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBfenpjVHJqUm9vRWdmMXVILVYwS1JHYk9Dbng2M1d2NEZDZTQ3SmRrNk1hYUs5MU0tTkppTWI1S3AweFV5NnFhUUE3Z04zYnBSX2d1LXprQnF1cklIWC1WYUttMDRUOFFYMzUwRzNQM3JFclpoTHBSNQ?oc=5",
+      "source": "서울신문",
       "category": "미국 증시 / 글로벌 매크로"
     },
     {
@@ -155,7 +155,7 @@
     {
       "title": "금일 시황 간단 정리 & KOSPI 200 야간선물",
       "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTFBrdWI5QVFhUFJlQkdwangyZkRQZWZZMWljZUkyQzNteFBpVllXaWp3NlFUYm9XNWp0TTE5RzJMMTA3QmZOSXRwMkdyM3NId3NvOEl3c2R2dEkxaDVCbGMxU2FhbUhLZGhjaEpwSE5oQm85amNYOGJyNFRhX1M?oc=5",
-      "source": "네이버 프리미엄콘텐츠",
+      "source": "프리미엄콘텐츠",
       "category": "야간선물 / 파생 / 투자시황"
     },
     {
@@ -167,19 +167,19 @@
     {
       "title": "아이콘 설명이 제공되는지 살펴보는 침맞고 멍이 드는 이유",
       "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9iSlZXUDNSUWNOd0ZMaG12blR3TmtvRlRmWDU5ZEphM2YyVGItMmdmTnh6QXk3N0RVNUJueHZWOHNhbmc2YzhfcUlmdlNIRGdJUExCX3lZTzdIdHhFT0U0WV8yc2RQcjlOcmVieTZ3?oc=5",
-      "source": "calgaryroughnecks.com",
+      "source": "Calgary Roughnecks",
       "category": "야간선물 / 파생 / 투자시황"
     },
     {
       "title": "같은 숫자라도 의미가 다른 마작매트 표시 항목",
       "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFA2c3lxR0s2MURual9uZERRc3UzeEJ2ekxOaWJkb0piTl85M0RGQTdDSmh3enJUZ1Q3ZHBPVG5iLXM5Y0x5aFVidWh6eUh4UFo3TEpZUHJUWU5qb1VtWVpZMWJNZkpta0k?oc=5",
-      "source": "calgaryroughnecks.com",
+      "source": "Calgary Roughnecks",
       "category": "야간선물 / 파생 / 투자시황"
     },
     {
       "title": "게임별 심벌 표기를 비교하는 지진옥외대피장소 한국경마축산고등학교 자료",
       "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5GNmZvZTZ0YldESnJ4b2ZaMXhrZ1kxQV9xOGpwSnpHdnBMS3NyZXFDcXF3a2xPcU1RSDNlT3ZMZXpWcmhpVGVJTG80bkE5MEF2bl9aLUxCaHhIZjB3bXZFdnlBUmN1cDlVblJlR2xWc1Y?oc=5",
-      "source": "calgaryroughnecks.com",
+      "source": "Calgary Roughnecks",
       "category": "야간선물 / 파생 / 투자시황"
     }
   ]
