@@ -1,5 +1,5 @@
 {
-"updated_at":"2026-10-03T20:53+09:00",
+"updated_at":"2026-10-04T09:41+09:00",
 "apartments":[
 {"region_code":"51150","sido":"강원특별자치도","sigungu":"강릉시","region":"강원특별자치도 강릉시","dong":"견소동","apt":"송정한신"},
 {"region_code":"51150","sido":"강원특별자치도","sigungu":"강릉시","region":"강원특별자치도 강릉시","dong":"견소동","apt":"송정해변신도브래뉴아파트"},
@@ -13981,6 +13981,7 @@
 {"region_code":"11350","sido":"서울특별시","sigungu":"노원구","region":"서울특별시 노원구","dong":"상계동","apt":"상계대림e편한세상"},
 {"region_code":"11350","sido":"서울특별시","sigungu":"노원구","region":"서울특별시 노원구","dong":"상계동","apt":"상계불암대림"},
 {"region_code":"11350","sido":"서울특별시","sigungu":"노원구","region":"서울특별시 노원구","dong":"상계동","apt":"상계신동아"},
+{"region_code":"11350","sido":"서울특별시","sigungu":"노원구","region":"서울특별시 노원구","dong":"상계동","apt":"상계우방유쉘"},
 {"region_code":"11350","sido":"서울특별시","sigungu":"노원구","region":"서울특별시 노원구","dong":"상계동","apt":"상계주공1(고층)"},
 {"region_code":"11350","sido":"서울특별시","sigungu":"노원구","region":"서울특별시 노원구","dong":"상계동","apt":"상계주공1(저층)"},
 {"region_code":"11350","sido":"서울특별시","sigungu":"노원구","region":"서울특별시 노원구","dong":"상계동","apt":"상계주공10(고층)"},
@@ -14946,6 +14947,7 @@
 {"region_code":"11650","sido":"서울특별시","sigungu":"서초구","region":"서울특별시 서초구","dong":"방배동","apt":"현대멤피스"},
 {"region_code":"11650","sido":"서울특별시","sigungu":"서초구","region":"서울특별시 서초구","dong":"방배동","apt":"현대아르빌"},
 {"region_code":"11650","sido":"서울특별시","sigungu":"서초구","region":"서울특별시 서초구","dong":"방배동","apt":"황실자이"},
+{"region_code":"11650","sido":"서울특별시","sigungu":"서초구","region":"서울특별시 서초구","dong":"서초동","apt":"DK밸리뷰시티"},
 {"region_code":"11650","sido":"서울특별시","sigungu":"서초구","region":"서울특별시 서초구","dong":"서초동","apt":"N-Suite102동(1511-3)"},
 {"region_code":"11650","sido":"서울특별시","sigungu":"서초구","region":"서울특별시 서초구","dong":"서초동","apt":"urbanplace"},
 {"region_code":"11650","sido":"서울특별시","sigungu":"서초구","region":"서울특별시 서초구","dong":"서초동","apt":"강남태영데시앙루브"},
