@@ -1,13 +1,7 @@
 {
-  "updatedAt": "2026-10-04T09:29:45.961824+00:00",
-  "updatedAtLabel": "2026년 10월 04일 18:29 KST",
+  "updatedAt": "2026-10-04T11:36:18.163827+00:00",
+  "updatedAtLabel": "2026년 10월 04일 20:36 KST",
   "items": [
-    {
-      "title": "부실기업 증시퇴출, 작년보다 두배 급증",
-      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9WT0JDSDhBTGpqQ2MycWx4M3ktYWJSTWhHVmpEU1JzOUY0aHJIWTdlODVFLXdOdHFKampmVTR4Y1YwWVFYMHoyRzRQWFgtMkU?oc=5",
-      "source": "v.daum.net",
-      "category": "국내 증시 / 코스피 코스닥"
-    },
     {
       "title": "[마켓인사이트] 삼전 실적발표 앞둔 韓증시…'7천피' 지켜낼까",
       "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5FLWQxTDB3UzI4TjhHWlRLMlFUMC1qV1U5MldRMHU2WHh0UU43Si1vVEZ2dEd2Q1BkdW1kRnBEZTlyWnBGbmQwUVFRRDFTN1lZZHNWM29teEVibFHSAWBBVV95cUxNbU0wQlp0VWc2T1RURW1wOEpRaFRLSjFlend2NktYemVvNGZ5c05FSlpMSEVKWEVFTjR4ZzJWcW10TF84dkFOYVdOTlYxN2dKZFRqaEV5dkU3TVVxUG1PRlc?oc=5",
@@ -15,9 +9,21 @@
       "category": "국내 증시 / 코스피 코스닥"
     },
     {
+      "title": "부실기업 증시퇴출, 작년보다 두배 급증",
+      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9WT0JDSDhBTGpqQ2MycWx4M3ktYWJSTWhHVmpEU1JzOUY0aHJIWTdlODVFLXdOdHFKampmVTR4Y1YwWVFYMHoyRzRQWFgtMkU?oc=5",
+      "source": "v.daum.net",
+      "category": "국내 증시 / 코스피 코스닥"
+    },
+    {
       "title": "[고침] 경제(국민연금, 코스닥 투자 100조 넘어…다른 공…)",
       "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9UaGtkeVc5eV9IOUdmcHVlbEVEd0ZwOWJYZzZNcVNWVXB4Wm9TbVMyYXA0ZGJLczhFZkZfeHZ1cEd4S09EWFZSbDVQZUcyNlI0Ymc?oc=5",
       "source": "매일경제 마켓",
+      "category": "국내 증시 / 코스피 코스닥"
+    },
+    {
+      "title": "[주간증시전망] 코스피 7000선 안착 시험대…삼성전자 실적·美 금리 주목",
+      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1KTkMwdU1mMDkwY29QYXd5THRWTDVHUmtJc1BTODlNTGpaV1doSzhVVHhQSEhZU05jbExMQ1FFME1rbmVBTkZkRUNUY1AzMFlHUy1McmxPUndUSG84bV85cUc4Szk5X2h0?oc=5",
+      "source": "ebn.co.kr",
       "category": "국내 증시 / 코스피 코스닥"
     },
     {
@@ -33,12 +39,6 @@
       "category": "국내 증시 / 코스피 코스닥"
     },
     {
-      "title": "그 많던 개미 증발에 금리 부담까지…불장에 웃던 증권주 '냉골' - 머니투데이",
-      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5PRTllaGtLY05ESk10Vkg5cktReFhQVGM5R1hhbk9JUmFTR3Z3ZHZXQVY1ekh4NkdqS1k2TG9RdGwyc0xBTk9Yd0FQX2ZISk8yNWZxZW5FR0hRNmFhVGZJRV9KNi1RUDMzLUdmNXdB0gFuQVVfeXFMTk9FOWVoa0tjTkRKTXRWSDlyS1F4WFBUYzlHWGFuT0lSYVNHdndkdldBVjV6SHg2R2pLWTZMb1F0bDJzTEFOT1h3QVBfZkhKTzI1ZnFlbkVHSFE2YWFUZklFX0o2LVFQMzMtR2Y1d0E?oc=5",
-      "source": "mt.co.kr",
-      "category": "국내 증시 / 코스피 코스닥"
-    },
-    {
       "title": "“원·달러 환율 다시 오르나” 1400원 대 넘어설 전망",
       "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5wa09XY05Kd0NySXlOTTR6ek8wN29hN1R6OUN3OGJ6MHFGZEJiMnhHZDcyTXlVX0dCRnNkeU56aUtSam1fckd4Vjg2QW9pSXFlMFJUY0lJcWEzWWhpT0VaOWFQNk8tS2NObE1jTA?oc=5",
       "source": "한경매거진&북",
@@ -47,7 +47,7 @@
     {
       "title": "[외환-주간] 美 고용 둔화에 열린 달러-원 하방…국채금리가 제동 걸까",
       "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE5vX19wa29mLVM1d25QVEdxeDBBVlVDc1p3YjFlYXUxcmR0eVZLeXVWQ0drcVAtWDFzT1AyU3g3Xy1QLW1JemxudXByZmlZM2dpYzRwMEtWbElqQm1BTXFMSUduMDU5RU5kX3N6bFctZ0laZw?oc=5",
-      "source": "kbthink.com",
+      "source": "KB Think",
       "category": "환율 및 글로벌 원자재 시세"
     },
     {
@@ -59,7 +59,7 @@
     {
       "title": "삼성전자 3분기 영역이익 ‘첫 100조’ 돌파할까…성과급·주주환원 쟁점 전망",
       "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFB4VXh4R2k3Mjk4N202UVRHdkk5alVJVTRNZ2VkNTdCUXlhZFZjc2lyckd0NHo4R21LaXh3OExSZXR1aGItRTByZzZVbF9oM1doWk5LUnFFWXdoX1I4VEs4YUI0NVdjb1JqOVE?oc=5",
-      "source": "hani.co.kr",
+      "source": "한겨레",
       "category": "환율 및 글로벌 원자재 시세"
     },
     {
@@ -71,7 +71,7 @@
     {
       "title": "3분기 ETF 수익률 ‘톱3’…달러 곱버스 ‘싹쓸이’",
       "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE85U09xVkI4TmN5M1dHR0NiT2xOWWIwazVkY0E2LXRfQlFFZ3VhOFVzellGS3lUcUNZRXNmTzBhT0N1Q1NYbm9RMGNDVFhwdm1BQk9jMGJKczh1MHJhZEk1SHUxOVUzcFhjYjRrNjREc9IBc0FVX3lxTE8tc1NsRlJaZnhvWXh5NGpSamxVTE1PSEpGa2hlMjVnSDRnWGlsNURfaWMxSzZVU09jZ0ZvQldMNUd3N3VmV19XZ1FCRE5qLWdpVGp2dmpzdDlseEo3b3VISDh6eHVuSWozTkNQaVdBbnFDYkU?oc=5",
-      "source": "sisajournal.com",
+      "source": "시사저널",
       "category": "환율 및 글로벌 원자재 시세"
     },
     {
@@ -81,14 +81,14 @@
       "category": "공모주 청약 및 IPO 일정"
     },
     {
-      "title": "[공모주 마감] 멜콘 청약 2일차까지 종료, 균등·비례 경쟁률 살펴보니",
-      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBRbmtfU05NamdVdi00bllxdFNRNm40eWljdlZFeHpOMXhhWEhiZGJmTDlkVWlUdTh5dWFqUkI0RVdfc19QRzhVam9KUzJfUFdiV1FOM28ybWd0X09weUtVelRNU1VxZWc2?oc=5",
-      "source": "CBC뉴스",
+      "title": "[이번주 IPO]10월 둘째 주 수요예측·청약 일정",
+      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1nZWpPUzhpbXVoQzRGNjA4eW85QU5uTTBHdW5BN0wwemR2SHhhNzAzYnQwalNGdXZxV0VvMWEzWlZFaDNLeG85cy01TTU5ejVJWEFlZEFGQWd3ZFNQR1cyWA?oc=5",
+      "source": "아시아경제",
       "category": "공모주 청약 및 IPO 일정"
     },
     {
-      "title": "[공모주 캘린더] 'AI 기대주' 엘리스그룹·진코스텍 일반청약 출격…디티에스 등 4개사 수요예측",
-      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE8wNTVwaDBsYXlsd05sZldhVDBxaTllY3FNeXVIdnhmTklyYWVnNjJZOFpCS2FtTlNLaFFrVnFsdmFydkpDVHFpeFMxZmNMVnpmWjZoVFpVcUpJNnlDSm9MQmNQWXdiLWFZ?oc=5",
+      "title": "[공모주 마감] 멜콘 청약 2일차까지 종료, 균등·비례 경쟁률 살펴보니",
+      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBRbmtfU05NamdVdi00bllxdFNRNm40eWljdlZFeHpOMXhhWEhiZGJmTDlkVWlUdTh5dWFqUkI0RVdfc19QRzhVam9KUzJfUFdiV1FOM28ybWd0X09weUtVelRNU1VxZWc2?oc=5",
       "source": "CBC뉴스",
       "category": "공모주 청약 및 IPO 일정"
     },
@@ -96,12 +96,6 @@
       "title": "고금리·고유가에도 AI주는 웃었다…S&P500 종목 80%는 하락",
       "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBaRGRmdFYtN0gtMUZLbU1TYTlOMHRUUmJOa3FQQnZCVWNYdWpubVdwYXhpLUJGUlA5QTdzVWh4cmtMT2tfUjdPRWstZlpoRm5kNW1UWWJWSm9aN1F5LWVLSNIBeEFVX3lxTFAzUDlSVUE4ZHJPaE5teU12OTByaXFiUXpGblNUeWZOWGJKb1MtaW5ybm1MeUNRYmFHR190MEZXbnkzVnJVeklSaUVfWVRmZXgxOG1QdW5Kc2NQOVlfRC1pdHJ6MGkxeEl5ZUNZNlV6WDBiUXlHYXhKSQ?oc=5",
       "source": "뉴시스",
-      "category": "미국 증시 / 글로벌 매크로"
-    },
-    {
-      "title": "같은 테마의 다른 게임과 보는 무료슬럿 공통점",
-      "url": "https://news.google.com/rss/articles/CBMi9wJBVV95cUxONGV5TDJpVnJmMVVTb3BKeFN1YW1CTmx2UGxvTEhqZ0NvcXh6VFRYdGhWWEJ5cGxxSDJzZHJic2tkdjNnRzNvalljYklLZmd0b0lIRzlyanNmQWJTNmRkWFIwbEt4YmhHS1lPRHJXQjM3eDlDTEpfUDdLTFUtOHlFV2VUbTI2WWpBUkRDTmNwd0pZcmk3b25WNEx1YkJTSTVVN3dKYk84Z3YzSEc1OFdpb3JuMmJwVlRjNXFlS28tZU9MdWF5LTRDMDR1UzVvWHFobF84X1A5WlBjN0NYc1YtYXVHbFNVNWU2ODh4Q19feXFVaGJONkpqM0x4UlhTaUk5LXZWR0RwMTNhNDA5V1VRQnVITW5iSXhfbmF2YS1BdEVjN1lEV0RRWFhwaHlxNFRqVkxnNnlNdHB4SThabXoyWGFvZjFZYi1hN0V0amw4aFU5SnVQVndyMF9ueG9WLUZoWTdVYUFDUzRieGZLSkxyRUd3ZHVybkU?oc=5",
-      "source": "Calgary Roughnecks",
       "category": "미국 증시 / 글로벌 매크로"
     },
     {
@@ -123,21 +117,27 @@
       "category": "미국 증시 / 글로벌 매크로"
     },
     {
+      "title": "미 증시, 고용 2만9000명 증가에 금요일 반등…주간 성적은 엇갈려",
+      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5fUUxSWjNkanVpYWdJODBJZ0FxSGI4c2xjWmpYQXNTUDFQZXd2VkJjMGZEVl9kZHRORXlnV2JtUGxSV2I1LU05bG91U2p3MURNYTdMczhn?oc=5",
+      "source": "토큰포스트",
+      "category": "미국 증시 / 글로벌 매크로"
+    },
+    {
       "title": "삼성전자 실적 앞둔 코스피…반도체 훈풍에 ‘7000피’ 지킬까",
       "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9qU3R5VF8ybER2bUhHR1dEMTRsdFd4bjlxb0NYUFk3Ull6bmVmc1hmazRuSzRZOGNoSHQyZmpOSlNiNGNjOXpQUUd1ZV9hTVFaU0JkQUIwVWc1QQ?oc=5",
       "source": "경북매일",
       "category": "야간선물 / 파생 / 투자시황"
     },
     {
-      "title": "조건부 기능을 구별하는 2018 아시안게임 농구 설명 읽기",
-      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1xZ2lVZWl5ak92UzFLNGJqa3kzN2djRmNZWVJ2LVVKR1g0ekJyNFV6UUJvNmR5ZFh5TVktcnNycGVSdVk2TkJyUURnNjFKRm4yRmdjOUV3T3pTcjBndzlHQk1KUUtEbFpYYWh5ZnVR?oc=5",
-      "source": "Calgary Roughnecks",
+      "title": "삼성전자 실적 앞둔 코스피, '7천피' 지킬까…美 금리·반도체가 변수",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1iYnBBeHJBR043ODdJRjRMdjNTRHdiSnFEWHpLY1NjaTZhVEFCcEhaV1JDUjhZc2hCSXZfbmpfY1pPSXdsMExuWllFcG5DckZHb1RHbnE2cFRtUTlOM0hmOXlrWWF2WFc2RFFCUw?oc=5",
+      "source": "ER 이코노믹리뷰",
       "category": "야간선물 / 파생 / 투자시황"
     },
     {
-      "title": "복잡한 보너스보다 기본 진행이 궁금한 토트넘 연봉순위",
-      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPSmtaNjFzUDVSU0JGdnhYalJoSVJFYTdYTmNDZ3NSdnRFTkhVa3FXOE9GQngyX3ZpYW00V1FLVU9tRGpqbV9NcWRNQXpscmE1Zkg4eUQ4cTNBRm9idWROUkktYzhKNlRydVhJdENrQ3VQT1Y1QUp2aF83a3FOLV9zNmdaU0JnTC0tc2Y0M0lTU3kxNkZBT3BkUmFB?oc=5",
-      "source": "Calgary Roughnecks",
+      "title": "로빈후드, 하루 3천만 건 AI 에이전트 호출…앱 안으로 자동매매 본격 도입",
+      "url": "https://news.google.com/rss/articles/CBMiogNBVV95cUxNajFYdzIwWVVTM3hFVU1TNzYzdTUtcXpSazdUSnJYQmRJODJsTUROR0RLN2dFRF85MXZuWW9PcVU2bHZGdVpWTERtOXVNbVRkZC1Xek5ydjhBN1diSXJNZWdXV1lxLWdBc1B5NUNrLWM0N2g3OTRMaGhIMFBLWENxYmdZS0xYQWx4U0YtUFh4UmtXdUtvRnZmY0pUdzF3UXI1UWtZSXN4SklCbDJ1YlFfdkdvVjRlUC1SY0NXV1JWYTRGUE0xN01tbmwxU1lBbjg0TDJqNjlxd2Z5RXVORnRlNXl6VERROUszdFpENEdBUlkzeXg0QWhWWkFab3VEQmtzVnpQUmRDVWstMFFnOWExeUNwUlJfZ21aM0xjek1uNzBLZkpnNjFmcDNCekd4TGdSUG1PUkd0c3V4MjBVU0l4T3RlLXVpRWRWQWstaHpkZjBMdDBwNEh4S3hOX0x1em5QaENyZW9sNl9uQVg1YVc2X0VKdzVHMGxGeVY0dzVwdENzR05WbUpSV1EzNl9XUEhwWGpCVXlrQjc5cTFVb2ROQi1R?oc=5",
+      "source": "Yellow.com",
       "category": "야간선물 / 파생 / 투자시황"
     }
   ]
