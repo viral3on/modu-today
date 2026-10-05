@@ -1,5 +1,5 @@
 {
-"updated_at":"2026-10-04T21:39+09:00",
+"updated_at":"2026-10-05T10:04+09:00",
 "apartments":[
 {"region_code":"51150","sido":"강원특별자치도","sigungu":"강릉시","region":"강원특별자치도 강릉시","dong":"견소동","apt":"송정한신"},
 {"region_code":"51150","sido":"강원특별자치도","sigungu":"강릉시","region":"강원특별자치도 강릉시","dong":"견소동","apt":"송정해변신도브래뉴아파트"},
@@ -12235,6 +12235,7 @@
 {"region_code":"26470","sido":"부산광역시","sigungu":"연제구","region":"부산광역시 연제구","dong":"연산동","apt":"진명드림빌"},
 {"region_code":"26470","sido":"부산광역시","sigungu":"연제구","region":"부산광역시 연제구","dong":"연산동","apt":"창신"},
 {"region_code":"26470","sido":"부산광역시","sigungu":"연제구","region":"부산광역시 연제구","dong":"연산동","apt":"청마"},
+{"region_code":"26470","sido":"부산광역시","sigungu":"연제구","region":"부산광역시 연제구","dong":"연산동","apt":"청우하이빌"},
 {"region_code":"26470","sido":"부산광역시","sigungu":"연제구","region":"부산광역시 연제구","dong":"연산동","apt":"케이에이치마이우스"},
 {"region_code":"26470","sido":"부산광역시","sigungu":"연제구","region":"부산광역시 연제구","dong":"연산동","apt":"태영아너스"},
 {"region_code":"26470","sido":"부산광역시","sigungu":"연제구","region":"부산광역시 연제구","dong":"연산동","apt":"한성기린"},
@@ -20418,6 +20419,7 @@
 {"region_code":"44133","sido":"충청남도","sigungu":"천안시 서북구","region":"충청남도 천안시 서북구","dong":"백석동","apt":"백석벽산블루밍2차"},
 {"region_code":"44133","sido":"충청남도","sigungu":"천안시 서북구","region":"충청남도 천안시 서북구","dong":"백석동","apt":"브라운스톤"},
 {"region_code":"44133","sido":"충청남도","sigungu":"천안시 서북구","region":"충청남도 천안시 서북구","dong":"백석동","apt":"천안백석3차IPARK"},
+{"region_code":"44133","sido":"충청남도","sigungu":"천안시 서북구","region":"충청남도 천안시 서북구","dong":"백석동","apt":"천안백석센트레빌파크디션"},
 {"region_code":"44133","sido":"충청남도","sigungu":"천안시 서북구","region":"충청남도 천안시 서북구","dong":"백석동","apt":"천안백석푸르지오"},
 {"region_code":"44133","sido":"충청남도","sigungu":"천안시 서북구","region":"충청남도 천안시 서북구","dong":"백석동","apt":"한화포레나천안노태2단지"},
 {"region_code":"44133","sido":"충청남도","sigungu":"천안시 서북구","region":"충청남도 천안시 서북구","dong":"백석동","apt":"현대"},
@@ -20483,6 +20485,7 @@
 {"region_code":"44133","sido":"충청남도","sigungu":"천안시 서북구","region":"충청남도 천안시 서북구","dong":"성정동","apt":"성정활림2목련"},
 {"region_code":"44133","sido":"충청남도","sigungu":"천안시 서북구","region":"충청남도 천안시 서북구","dong":"성정동","apt":"스위스캐슬"},
 {"region_code":"44133","sido":"충청남도","sigungu":"천안시 서북구","region":"충청남도 천안시 서북구","dong":"성정동","apt":"에프엠21"},
+{"region_code":"44133","sido":"충청남도","sigungu":"천안시 서북구","region":"충청남도 천안시 서북구","dong":"성정동","apt":"주공5-1"},
 {"region_code":"44133","sido":"충청남도","sigungu":"천안시 서북구","region":"충청남도 천안시 서북구","dong":"성정동","apt":"주공5-2"},
 {"region_code":"44133","sido":"충청남도","sigungu":"천안시 서북구","region":"충청남도 천안시 서북구","dong":"성정동","apt":"주공6-1"},
 {"region_code":"44133","sido":"충청남도","sigungu":"천안시 서북구","region":"충청남도 천안시 서북구","dong":"성정동","apt":"주공6-3"},
