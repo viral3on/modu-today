@@ -21,11 +21,11 @@ test('news migration artifacts cannot become news headings or generic article li
 });
 
 const post={id:'sample-article-123',title:'샘플 테스트 글',category:'생활',description:'검색 결과와 메인 화면에서 확인할 글 요약입니다.',image:'',imageAlt:'',body:'# 소제목\n\n테스트로 작성한 본문이며 실제 발행할 글이 아닙니다. 생성 결과를 확인하는 테스트 전용 내용입니다.',tags:['기록'],status:'published',createdAt:'2026-09-01T00:00:00Z',publishedAt:'2026-09-01T00:00:00Z',updatedAt:'2026-09-02T00:00:00Z'};
-test('home order retains prominent apartment and lotto links; news stays last',()=>{
+test('home keeps reading categories in the reading section; news stays last',()=>{
   const html=home([post],{items:[]},{draw:100,numbers:[1,2,3,4,5,6],bonus:7});
-  const ids=['latest-reading','everyday-shortcuts','life-economy','useful-tools','latest-news'];
+  const ids=['latest-reading','everyday-shortcuts','useful-tools','latest-news'];
   const indexes=ids.map(id=>html.indexOf(`id="${id}"`));assert.ok(indexes.every((n,i)=>n>0&&(!i||n>indexes[i-1])));
-  assert.match(html,/class="essential apt-feature" href="\/apt\/"/);assert.match(html,/class="essential lotto-feature" href="\/lotto\/"/);
+  assert.match(html,/class="essential apt-feature" href="\/apt\/"/);assert.match(html,/class="essential lotto-feature" href="\/lotto\/"/);\n  assert.ok(html.includes('/reading/?category=%EC%83%9D%EC%83%9D%ED%99%9C') || html.includes('/reading/?category=%EC%83%9D%ED%99%9C'));\n  assert.ok(!html.includes('id="life-economy"'));
   assert.ok(!html.includes('/stock/'));assert.ok(!html.includes('/admin/'));assert.ok(html.includes(`/reading/${post.id}/`));
 });
 test('article metadata and visible dates reflect the same content',()=>{
