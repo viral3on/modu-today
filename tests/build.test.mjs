@@ -25,7 +25,7 @@ test('home keeps reading categories in the reading section; news stays last',()=
   const html=home([post],{items:[]},{draw:100,numbers:[1,2,3,4,5,6],bonus:7});
   const ids=['latest-reading','everyday-shortcuts','useful-tools','latest-news'];
   const indexes=ids.map(id=>html.indexOf(`id="${id}"`));assert.ok(indexes.every((n,i)=>n>0&&(!i||n>indexes[i-1])));
-  assert.match(html,/class="essential apt-feature" href="\/apt\/"/);assert.match(html,/class="essential lotto-feature" href="\/lotto\/"/);\n  assert.ok(html.includes('/reading/?category=%EC%83%9D%EC%83%9D%ED%99%9C') || html.includes('/reading/?category=%EC%83%9D%ED%99%9C'));\n  assert.ok(!html.includes('id="life-economy"'));
+  assert.match(html,/class="essential apt-feature" href="\/apt\/"/);assert.match(html,/class="essential lotto-feature" href="\/lotto\/"/);\n  assert.ok(html.includes('/reading/?category=%EC%83%9D%ED%99%9C'));\n  assert.ok(!html.includes('id="life-economy"'));
   assert.ok(!html.includes('/stock/'));assert.ok(!html.includes('/admin/'));assert.ok(html.includes(`/reading/${post.id}/`));
 });
 test('article metadata and visible dates reflect the same content',()=>{
