@@ -1,7 +1,13 @@
 {
-  "updatedAt": "2026-10-09T12:22:16.998087+00:00",
-  "updatedAtLabel": "2026년 10월 09일 21:22 KST",
+  "updatedAt": "2026-10-09T15:57:25.010053+00:00",
+  "updatedAtLabel": "2026년 10월 10일 00:57 KST",
   "items": [
+    {
+      "title": "\"하루에 1조 벌었는데…\" 한국 개미들 다시 '미장' 가는 이유 [분석+]",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBIQ0pfLUVHV2JLaUtMRzRkd1diQVlMUV9aMXViVHdiVDB0VDQxa0RyczVPM0M0Z0VFalZwb21ock5RN3FnMHl6NUJLWDhFSFM2SEFMem04YUNpZw?oc=5",
+      "source": "한국경제",
+      "category": "국내 증시 / 코스피 코스닥"
+    },
     {
       "title": "반도체 소부장·2차전지 덕에 코스닥은 선방",
       "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBsTzdKR0lnODFENk1rVVhMYkU0UHdaWF9oSm5yOEJLdTdMWXpFVm1iS25meWdRS2RSY3VBQmFfNzZDejBXeGVmUU93eVFrQ1VjNFE?oc=5",
@@ -21,21 +27,15 @@
       "category": "국내 증시 / 코스피 코스닥"
     },
     {
-      "title": "코스피, 중동 정세 불확실성 여파에 6620선 하락 마감",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBKY19RcEdpOFpkVmlQZjBPM2NsUXVSME0yNmlXc1F3TjZuUmdGa1JjSzR0VHczMDY3X3h2RTNFOTVxRk8tdkpzYWhFbndmVkNYSlpGYThKSHA4YmplamFYZ3JyRkpEVEQteW9ZYg?oc=5",
-      "source": "한국증권신문",
-      "category": "국내 증시 / 코스피 코스닥"
-    },
-    {
-      "title": "올해 증시, 화장품의 질주와 콘텐츠의 추락 - K열풍의 명암",
-      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1WOFkzQTFqVEpXbWZPWjNKQm1GOWljWmhFT0JlWS0wS24xb0VaNy1vbjVSQ1E1bXJPUWJyUEZ3TmhPZ0FJVmlPeUJKSTdPSGZlcGFNY1laNl85Wi1SWVU2aWdWQnlGcTQ?oc=5",
-      "source": "공감신문",
-      "category": "국내 증시 / 코스피 코스닥"
-    },
-    {
       "title": "같은 K열풍인데 주가는 딴판…K뷰티 웃고, K콘텐츠 울고",
       "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5NQktPazJWNG94bTY0UXAtYmRMMjJBYUp2RjB4VzJMYzg2cXNfQ3pCZUl2VmhmOTQzT0ZTMk9UWWxtNjViaFIzaEJ1eVRXS1dxQnc?oc=5",
       "source": "매일경제 마켓",
+      "category": "국내 증시 / 코스피 코스닥"
+    },
+    {
+      "title": "에코프로 그룹주 희비 엇갈려…에코프로비엠만 상승",
+      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5VMW9sc2V2ZzVtdFkzVnFTQTc0VmRkWkRoeEY3TlE1TWhPcmdvZjA2NXdJN2hlT0xCcGJhQXFvaUJ0THRPaUUwTEQzSXUtQTJxbjJ6TFh6NUQzQzB6aEpnVHBlRmdIb1h5?oc=5",
+      "source": "CBC뉴스",
       "category": "국내 증시 / 코스피 코스닥"
     },
     {
@@ -93,9 +93,21 @@
       "category": "공모주 청약 및 IPO 일정"
     },
     {
+      "title": "그누보드 룰렛 게임 소개와 첫 화면 읽는 법",
+      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPdFBPX3hDeXVoc3NLVDNjT21vOTNmMXhsR2RkY1V3alk0WDhJck5Mek9IZ3JNNkktWERDRTV4dFVPS0NWakxJZ2dnY1poYmdhX0RuNFloSHBTRXFILVc4VE9XTGlBNlJYaF9hRUpob3hPUjMtV1VEMDdRQktnS0JqSWpxMA?oc=5",
+      "source": "Calgary Roughnecks",
+      "category": "공모주 청약 및 IPO 일정"
+    },
+    {
       "title": "엘리스그룹 IPO 청약 증거금 10조 돌파… 일반청약 경쟁률 408대 1",
       "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9RLUtWWjNsaHJadVZEQ2h4NXBTU0U0SGZYcGNuTy1WTzFwTFNqb25xemhXdVJOT1BIdFgydHQ0NlBZb3c1SHA2ZGxFam5fd1otYUVLd0hEMURvVU9oWVBvYnR3?oc=5",
       "source": "디지털데일리",
+      "category": "공모주 청약 및 IPO 일정"
+    },
+    {
+      "title": "작동하지 않는 버튼인지 구별하는 마작 플래시게임 상태 표시",
+      "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxPQ21WQmN5N19UVVFhX0hXLWd6WGdfY3BFckhpRkRaRW1lSTRKUEx0MVpsN0JKSkpscDNhUnJLRnQxblJtSlo5bE10c2k2UUIwazZyZlNJaUw1aTNQVlp4YThyR1FXTGlLZ0d5Tnc2NllZRU9TSDZOMVBCQXQ2dENxbHFZUW1OMTZBVmFnY0lZSUNzY0tOVVFsdGZodFVXVDhMRzhZcWxabTJWMzh2Vy1CcnhRQlMyVnBTd1VpSmUxeXo4QTdhcTRPWngzX1lySWVwdDZtWEZpbzZHeWs0cUxkTG1hZw?oc=5",
+      "source": "Calgary Roughnecks",
       "category": "공모주 청약 및 IPO 일정"
     },
     {
@@ -106,19 +118,13 @@
     },
     {
       "title": "\"오픈AI 매출 기대 못 미친다\"…S&P500·나스닥 '하락' [뉴욕증시 브리핑]",
-      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1VVzZGQ1RxemNvQms1V204LV9pRW9scUFZcHZkM0FadW1pbG5kWnNkdWJNUlU0b2FxTXlOU3pmU2FFT0RWbWRpbDExdlRSZndG?oc=5",
-      "source": "블루밍비트",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBYd00xVC1TSUx6YmdZMENUQ0xHelF1bk5KSUpSdFdLeEJXWkxFdjdXZ0R5VEI4Rmp1VjltQXVyOUkxMXhxX2RGWmh2WE41MVNHSkhqbFJWbUF1Zw?oc=5",
+      "source": "한국경제",
       "category": "미국 증시 / 글로벌 매크로"
     },
     {
-      "title": "뉴욕증시, 반도체 약세에 S&P500·나스닥 하락[상보]",
-      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1EeXVGS3dOS2tXWVA4Q1RZUWQwbGlvXzBlX0JkQzVhOGZVMjVhclFnN0ctN1hSNlgxSlA5WGx2R2hCMkZ5TG5hcDIwcUczMk96cUs4ZQ?oc=5",
-      "source": "이투데이",
-      "category": "미국 증시 / 글로벌 매크로"
-    },
-    {
-      "title": "[속보]뉴욕증시 3대 지수 동반 상승…S&P500·나스닥 사상 최고치 경신",
-      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9oakQ4UUZGLVYxYW53M1dTSUZQNHpxU1BYU0NoQTZwbkVDRTQ1UEwtUkVxUGpVRVZ0LXV1dXB1enIwdDYtYXhpZ1JnNF8tWkpnZVJLR1RTeFVBSl8yNGtsbTNIdC0xSlZG?oc=5",
+      "title": "[속보] 뉴욕증시 3대 지수 동반 상승…다우 5만1300선, 나스닥 2만7200선 움직임",
+      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBzN1hiem0xNWVlS2lFWEtFVGg4UHJGMjJSSWdaWmh2Z1dvMGUzeHFaM2d3cmg0cnJQbGxrei0wWU9tZ3dUSURwelo0WEtNVmtOMks4WFhBN1BqUjIxRzJldkh3bkJReHJ0?oc=5",
       "source": "CBC뉴스",
       "category": "미국 증시 / 글로벌 매크로"
     },
@@ -129,9 +135,9 @@
       "category": "미국 증시 / 글로벌 매크로"
     },
     {
-      "title": "[뉴욕 증시] 美 대이란 공격 중단 선언·오픈AI 연매출 기대치 미달...뉴욕 3대 지수 혼조",
-      "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE5xcmpoOXh2QzF0eTFzLUdzSS0zQUNOU1dsSFhaU0NRUEcwNDJRcEZYY1d3X05XWU5XX05aSG5YSnJWRXhxTlIyMWo0bFBhYkhUQlRkUGJEZm1SbEdlblFNOTZob1hCRjAtWHBweXJ6ZllEQQ?oc=5",
-      "source": "한양경제",
+      "title": "뉴욕증시, 반도체 약세에 S&P500·나스닥 하락[상보]",
+      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1EeXVGS3dOS2tXWVA4Q1RZUWQwbGlvXzBlX0JkQzVhOGZVMjVhclFnN0ctN1hSNlgxSlA5WGx2R2hCMkZ5TG5hcDIwcUczMk96cUs4ZQ?oc=5",
+      "source": "이투데이",
       "category": "미국 증시 / 글로벌 매크로"
     },
     {
@@ -141,14 +147,14 @@
       "category": "미국 증시 / 글로벌 매크로"
     },
     {
-      "title": "게임 테마와 기능은 어떻게 연결될까? 로또 후기",
-      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPYWdlZDdRQk5XbDM4OXhGczJ4R1BwU2pYSTBmTHlUejBGNlBIVzZZVVBQTmdqME5OWHhFMGk5UHphc2YtVTdoUGZGZVlFZnNCZDNpeGo2dVhZSG5ISGtQazlzaFBBZWg3Tk9HSFJhX2o0cWpuMEZxTzVfdHdvMHFNM2tPVG5LQmV2cXFtZW0zek5Jc2tMSmpFbGZZWHpwV2pIUFdSZFI3VzFHa1BFNjBReHl5LW95dFBKR1paS0tpYVpIZEhia2hMWWNIM09zX2kx?oc=5",
-      "source": "Calgary Roughnecks",
-      "category": "야간선물 / 파생 / 투자시황"
+      "title": "[뉴욕증시] 오픈AI 매출에 반도체 급락…나스닥 1.25% 하락",
+      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1yaVRtVkJfQkMwT19PaEVjVmxOZDM4ZkhseWd3cG1SMDh3Nmg1MDhFZU96TUVLbFREWDZaX0tQbUhNUHRrWWc2LUNZN0N1d0Y0MnlOcG50Mi1mRGlGajI5QVdjS2FvWVk?oc=5",
+      "source": "자본시장뉴스",
+      "category": "미국 증시 / 글로벌 매크로"
     },
     {
-      "title": "서울경마장 벚꽃축제 로딩 완료를 알리는 화면 신호",
-      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOVmlmQnZoQVotRjRjcGlRTEI2RWpOM3IxLTBUdy00OXFTOXVzZWFDdGc4WGh3SUZiZVA5WExqd1JRWF9TNVFiZHdVaVdlaGNxYTZXTkRxUXJCbWxLWl9CWnVZZ2ZENkcxT0laRjlpVDYwajM1bDdrMDlhenpGYVpnMm91VVo4cWFNbnQ4eFQxVmdZWGYzTERaVWlmWTZDVGtwdVd4QWNB?oc=5",
+      "title": "게임 테마와 기능은 어떻게 연결될까? 로또 후기",
+      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPYWdlZDdRQk5XbDM4OXhGczJ4R1BwU2pYSTBmTHlUejBGNlBIVzZZVVBQTmdqME5OWHhFMGk5UHphc2YtVTdoUGZGZVlFZnNCZDNpeGo2dVhZSG5ISGtQazlzaFBBZWg3Tk9HSFJhX2o0cWpuMEZxTzVfdHdvMHFNM2tPVG5LQmV2cXFtZW0zek5Jc2tMSmpFbGZZWHpwV2pIUFdSZFI3VzFHa1BFNjBReHl5LW95dFBKR1paS0tpYVpIZEhia2hMWWNIM09zX2kx?oc=5",
       "source": "Calgary Roughnecks",
       "category": "야간선물 / 파생 / 투자시황"
     },
@@ -159,21 +165,27 @@
       "category": "야간선물 / 파생 / 투자시황"
     },
     {
+      "title": "서울경마장 벚꽃축제 로딩 완료를 알리는 화면 신호",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOVmlmQnZoQVotRjRjcGlRTEI2RWpOM3IxLTBUdy00OXFTOXVzZWFDdGc4WGh3SUZiZVA5WExqd1JRWF9TNVFiZHdVaVdlaGNxYTZXTkRxUXJCbWxLWl9CWnVZZ2ZENkcxT0laRjlpVDYwajM1bDdrMDlhenpGYVpnMm91VVo4cWFNbnQ4eFQxVmdZWGYzTERaVWlmWTZDVGtwdVd4QWNB?oc=5",
+      "source": "Calgary Roughnecks",
+      "category": "야간선물 / 파생 / 투자시황"
+    },
+    {
       "title": "팔월드 교배 사이트 - 초보자부터 전문가까지 - 장단점 비교 분석",
       "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBNMk1BZDJRMHhoVE5aaDZlQnVVdm92NWo3NjQtNFFlZmJtUGRtOGpCRHc0a3VWZmtNZFRxQkxudGRzXzh2M0FSeDIwNzRGOVFSQVBoaGlhZFVGOUZ6RkEzcjQxYlF3OHVpMjBVbGU1dmFtMEEyZ1dKMA?oc=5",
       "source": "Calgary Roughnecks",
       "category": "야간선물 / 파생 / 투자시황"
     },
     {
-      "title": "국제 무역의 성장이 CME 그룹(CME)에 대한 투자 타당성을 바꾸고 있는가?",
-      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPemQxWmo0bXhXQWpNNDM2VkN6V1hqQWNkVTZFZnpMUzQxSWpMNk9rUlNEbEFPMThxNHRNRFI5Q2JsaHlMNDhRRzdvbjBOZWJzTzVRLXVDRDNkb2FTdnJpdDdfMF9kVmdNM3pERWVFcGoya0tFNUZyTF8wNE84cS12RkplQWEyU3Q2d2lMUnMyaXZDRVRoOGdtQlQ3eWhRTnVDZXfSAacBQVVfeXFMTl9zU2lRNktPQ3ZUV0lmRGhmY3hPbG5xRHIyZFY5dHEtQXBicVpiZ25OZjF1UWJOUjJveGlFUnJSQnJhYWtCeHRZTnVManFPRVZvRDlyODFrTlhES2N3VTByOVVYa1ZwOW41ZklJTnVzNE15WWlUOVVHRzZoVjdhM2hPc0tqdHlCR09OZ08ydmFnSUdmNFVFSmJTX0UwOGZHYzhjTGItNm8?oc=5",
-      "source": "Simply Wall Street",
+      "title": "단어는 익숙한데 뜻은 다른 홀덤딜러 현실 게임 용어",
+      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOSU5zYlg1NTRLb0xXbU5LNndmZC02eUVoNFFNUm1uOVJkcEJTNHJsbzhiUDJUelZXTzJfWjdKSDhLZFQ1ZkRzeGVOT3k3dWVlWFJ3OEtMaUZtdGh4N1VwX0J3cFF0dE9va3hubGJFaUFMcmZTOE1PWnBrWjR3eWM2NzJCLTJKWHFJNUVEcDFveHNZSFVQTU5vV3lVNk8zN2F0Z3dPcmxScG9teGVlVVN5ckxSUVlDTGtWbjQ4djZpNEQ?oc=5",
+      "source": "Calgary Roughnecks",
       "category": "야간선물 / 파생 / 투자시황"
     },
     {
-      "title": "웰스파고, 크라켄 모회사 페이워드와 코인 유동성 공급 협상…나스닥 투자 자문 한 달 만에",
-      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1WN011RzZSR3diNDBjakJQUm43anVFM0dQUGczOFBqRHpCeTZ5NEdfWVFFSWhJQW5WcHJIOUhPTkRaMUZuX3EyakFvS3hJUlJsV2NMRzJn?oc=5",
-      "source": "위키트리",
+      "title": "쿠오모 전 뉴욕주지사 \"토큰화 주식, 시장에 '급진적 변화' 가져올 것\"",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9NUVEwcE03QUdyRFF2VlFCNmxDZU15ZnhDNXp2YVlXdGJYSUhLQmVsdHhKbHNpWVl6RnQ0SjNaZGs3bTlPNU91eEpoWEwtbXBqcUxVWmkyYVBzQQ?oc=5",
+      "source": "한국경제",
       "category": "야간선물 / 파생 / 투자시황"
     }
   ]
