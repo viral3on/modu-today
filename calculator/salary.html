@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>연봉 실수령액 계산기 | 4대보험 및 근로소득세 공제</title>
-  <meta name="description" content="국민연금, 건강보험, 장기요양보험, 고용보험 요율과 소득세 간이세액표를 반영한 월 예상 실수령액을 즉시 계산합니다.">
-  
+  <meta name="description" content="2026년 직장가입자 보험료와 국민연금 상·하한을 반영합니다. 확인한 월 소득세를 입력하면 예상 실수령액을, 미입력 시 세금 공제 전 금액을 계산합니다.">
+
   <!-- 구글 애드센스 메타 태그 & 스크립트 -->
   <meta name="google-adsense-account" content="ca-pub-6122968996738347">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6122968996738347" crossorigin="anonymous"></script>
@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="/calculator/theme.css">
   <link rel="canonical" href="https://modu.today/calculator/salary.html">
   <meta name="robots" content="index,follow,max-image-preview:large">
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "연봉 실수령액 계산기", "url": "https://modu.today/calculator/salary.html", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "KRW"}, "description": "세전 연봉과 비과세액, 부양가족을 기준으로 4대보험과 세금을 반영한 예상 실수령액을 계산합니다."}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "연봉 실수령액 계산기", "url": "https://modu.today/calculator/salary.html", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "KRW"}, "description": "세전 연봉과 비과세액으로 직장가입자 본인 부담 보험료를 계산하고, 직접 입력한 월 소득세를 반영합니다. 소득세 미입력 시 결과는 세금 공제 전 금액입니다."}</script>
 </head>
 <body class="bg-gray-50 text-gray-800 antialiased py-10 px-4">
 
@@ -26,7 +26,7 @@
 
 
   <div class="max-w-2xl mx-auto bg-white rounded-2xl shadow-lg border border-gray-100 p-6 md:p-8">
-    
+
     <!-- 네비게이션 링크 -->
     <div class="flex justify-between items-center mb-6 border-b pb-3 text-sm">
       <a href="/calculator/loan.html" class="text-gray-500 hover:text-blue-600 font-medium">← 대출 계산기</a>
@@ -36,60 +36,58 @@
     <!-- 헤더 -->
     <header class="text-center mb-6">
       <h1 class="text-2xl md:text-3xl font-bold text-gray-900 mb-2">연봉 실수령액 계산기</h1>
-      <p class="text-sm text-gray-500">4대 보험료 및 세금을 공제한 실제 월 입금액을 계산합니다.</p>
+      <p class="text-sm text-gray-500">2026년 보험료 기준으로 계산합니다. 월 소득세를 입력하면 세금까지 반영합니다.</p>
     </header>
 
     <!-- 입력 폼 -->
-    <div class="space-y-4">
+    <form id="salaryForm" class="space-y-4" novalidate>
       <div>
-        <label class="block text-sm font-semibold text-gray-700 mb-1">연봉 (원, 세전)</label>
-        <input type="text" id="annualSalary" placeholder="45,000,000" oninput="formatCurrency(this)"
+        <label for="annualSalary" class="block text-sm font-semibold text-gray-700 mb-1">연봉 (원, 세전)</label>
+        <input type="text" id="annualSalary" placeholder="45,000,000" inputmode="numeric"
                class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:outline-none text-base">
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
-          <label class="block text-sm font-semibold text-gray-700 mb-1">비과세액 (월, 식대 등)</label>
-          <input type="text" id="nonTaxable" value="200,000" oninput="formatCurrency(this)"
+          <label for="nonTaxable" class="block text-sm font-semibold text-gray-700 mb-1">비과세액 (월, 식대 등)</label>
+          <input type="text" id="nonTaxable" value="200,000" inputmode="numeric"
                  class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:outline-none text-base">
         </div>
         <div>
-          <label class="block text-sm font-semibold text-gray-700 mb-1">부양가족 수 (본인 포함)</label>
-          <input type="number" id="familyCount" value="1" min="1" max="10"
-                 class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:outline-none text-base">
+          <label for="period" class="block text-sm font-semibold text-gray-700 mb-1">보험료 적용 기간</label><select id="period" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:outline-none text-base"><option value="2026-01">2026년 1~6월</option><option value="2026-07" selected>2026년 7~12월</option></select>
         </div>
       </div>
 
-      <button onclick="calculateNetSalary()" 
+      <div><label for="incomeTaxInput" class="block text-sm font-semibold text-gray-700 mb-1">월 근로소득세 (원, 선택)</label><input id="incomeTaxInput" type="text" inputmode="numeric" placeholder="급여명세서 또는 홈택스에서 확인한 금액" aria-describedby="taxHelp" class="w-full px-4 py-3 rounded-lg border border-gray-300"><p id="taxHelp" class="text-xs text-gray-500 mt-2">지방소득세를 제외한 금액을 입력하세요. 빈칸이면 세금을 제외한 중간 금액만 표시하며, 0원 입력과 구분합니다. 가족 수·자녀·원천징수 비율은 <a href="https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7862&amp;mi=6426" class="text-blue-700 underline" target="_blank" rel="noopener noreferrer">국세청 간이세액표 안내</a>를 확인하세요.</p></div><p id="salaryError" role="alert" class="text-sm text-red-700"></p><button type="submit"
               class="w-full mt-2 bg-blue-600 hover:bg-blue-700 text-white font-bold py-3.5 rounded-lg transition duration-200 shadow-md">
-        실수령액 계산하기
+        예상 금액 계산하기
       </button>
-    </div>
+    </form>
 
     <!-- 결과 영역 -->
-    <div id="resultBox" class="hidden mt-8 pt-6 border-t border-gray-200">
+    <div id="resultBox" aria-live="polite" class="hidden mt-8 pt-6 border-t border-gray-200">
       <h2 class="text-lg font-bold text-gray-900 mb-4">💳 월 예상 수령액 요약</h2>
-      
+
       <div class="bg-blue-50 p-5 rounded-xl mb-6 text-center">
-        <span class="text-xs text-blue-600 font-semibold">매월 통장에 입금되는 예상 실수령액</span>
+        <span id="resultLabel" class="text-xs text-blue-600 font-semibold">월 예상 금액</span>
         <p id="netPayMonthly" class="text-2xl md:text-3xl font-black text-blue-900 mt-1">0원</p>
       </div>
 
-      <div class="bg-gray-50 p-4 rounded-xl text-sm space-y-2">
+      <p id="resultNote" class="text-sm text-gray-600 mb-4"></p><div class="bg-gray-50 p-4 rounded-xl text-sm space-y-2">
         <div class="flex justify-between font-semibold text-gray-800">
           <span>세전 월 기본급:</span>
           <span id="grossMonthly">0원</span>
         </div>
         <div class="flex justify-between text-red-600 font-semibold pt-2 border-t border-gray-200">
-          <span>총 공제 금액 (보험+세금):</span>
+          <span>반영한 공제 합계:</span>
           <span id="totalDeduction">- 0원</span>
         </div>
         <div class="pl-3 space-y-1 text-xs text-gray-500 border-l-2 border-red-200 ml-1 mt-1">
-          <div class="flex justify-between"><span>국민연금 (4.5%):</span><span id="nps">0원</span></div>
-          <div class="flex justify-between"><span>건강보험 (3.545%):</span><span id="nhic">0원</span></div>
-          <div class="flex justify-between"><span>장기요양 (건보의 12.95%):</span><span id="lti">0원</span></div>
+          <div class="flex justify-between"><span>국민연금 (4.75%):</span><span id="nps">0원</span></div>
+          <div class="flex justify-between"><span>건강보험 (3.595%):</span><span id="nhic">0원</span></div>
+          <div class="flex justify-between"><span>장기요양 (건보의 약 13.14%):</span><span id="lti">0원</span></div>
           <div class="flex justify-between"><span>고용보험 (0.9%):</span><span id="ei">0원</span></div>
-          <div class="flex justify-between"><span>근로소득세 (간이세액):</span><span id="incomeTax">0원</span></div>
+          <div class="flex justify-between"><span>근로소득세 (직접 입력):</span><span id="incomeTax">0원</span></div>
           <div class="flex justify-between"><span>지방소득세 (소득세 10%):</span><span id="localTax">0원</span></div>
         </div>
       </div>
@@ -99,75 +97,28 @@
     <article class="mt-8 pt-6 border-t border-gray-100 text-sm text-gray-600 leading-relaxed space-y-3">
       <h3 class="font-bold text-gray-900">4대 보험 및 공제 요율 기준</h3>
       <ul class="list-disc pl-4 space-y-1">
-        <li><strong>국민연금:</strong> 월 과세소득의 4.5% (상한액 기준 적용)</li>
-        <li><strong>건강보험:</strong> 월 과세소득의 3.545%</li>
-        <li><strong>장기요양보험:</strong> 건강보험료의 12.95%</li>
+        <li><strong>국민연금:</strong> 기준소득월액의 4.75%. 1~6월 기준소득월액 40만~637만원, 7~12월 41만~659만원 적용</li>
+        <li><strong>건강보험:</strong> 보수월액의 3.595%. 근로자 부담 하한 10,080원·상한 4,591,740원 적용</li>
+        <li><strong>장기요양보험:</strong> 건강보험료 × (0.9448% ÷ 7.19%), 약 13.14%</li>
         <li><strong>고용보험:</strong> 월 과세소득의 0.9%</li>
       </ul>
+      <p>적용 대상: 국민연금·건강보험·고용보험에 가입한 일반 직장인. 산재보험은 사업주 부담이므로 차감하지 않습니다. 60세 이상, 가입 제외·감면·휴직·일용근로·보수 외 소득은 반영하지 않습니다.</p>
+      <h3 class="font-bold text-gray-900">급여명세서와 차이가 나는 이유</h3>
+      <p>연봉을 12개월로 나누고 비과세액을 뺀 금액을 보험료 산정 보수로 가정합니다. 실제 회사가 신고한 기준소득월액·보수월액, 상여 지급 시기, 보험료 정산, 노동조합비 등은 다를 수 있습니다. 국민연금 기준소득월액은 천원 미만, 표시 보험료와 지방소득세는 10원 미만을 버린 참고값입니다.</p>
+      <h3 class="font-bold text-gray-900">계산 예시: 연봉 3,600만원</h3>
+      <p>2026년 하반기, 월 비과세 20만원이면 세전 월 급여는 300만원, 계산에 쓰는 보수는 280만원입니다. 국민연금 133,000원·건강보험 100,660원·장기요양 13,220원·고용보험 25,200원을 합한 보험료는 272,080원입니다. 세금 공제 전 금액은 2,727,920원입니다.</p>
+      <p>예시로 월 소득세 50,000원을 직접 입력하면 지방소득세 5,000원을 더 차감해 2,672,920원이 됩니다. 이 50,000원은 입력 방법을 보여주는 가정이며 해당 연봉의 공식 세액이 아닙니다.</p>
+      <h3 class="font-bold text-gray-900">공식 출처와 확인일</h3>
+      <ul class="list-disc pl-4 space-y-1"><li><a class="text-blue-700 underline" href="https://www.nps.or.kr/pnsinfo/ntpsklg/getOHAF0097M0.do">국민연금공단: 보험료율·기준소득월액</a></li><li><a class="text-blue-700 underline" href="https://edi.nhis.or.kr/portal/images/popup/20251204_pop01longdesc.html">국민건강보험공단: 2026년 건강·장기요양 보험료율</a></li><li><a class="text-blue-700 underline" href="https://www.law.go.kr/행정규칙/월별건강보험료액의상한과하한에관한고시">보건복지부: 월별 건강보험료 상·하한 고시</a></li><li><a class="text-blue-700 underline" href="https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7862&amp;mi=6426">국세청: 근로소득 간이세액표·원천징수 안내</a></li></ul>
+      <p>확인·수정: 2026년 10월 11일. 2026년 보험료율·국민연금 상하한을 반영하고, 기존의 임의 소득세 추정식을 제거했습니다. 소득세는 확인한 금액을 입력하는 방식입니다.</p>
     </article>
 
   </div>
 
-  <script>
-    function formatCurrency(target) {
-      let val = target.value.replace(/[^0-9]/g, '');
-      target.value = val ? Number(val).toLocaleString() : '';
-    }
-
-    function calculateNetSalary() {
-      const rawSalary = document.getElementById('annualSalary').value.replace(/,/g, '');
-      const annualSalary = parseFloat(rawSalary);
-      const rawNonTax = document.getElementById('nonTaxable').value.replace(/,/g, '');
-      const nonTaxable = parseFloat(rawNonTax) || 0;
-      const family = parseInt(document.getElementById('familyCount').value) || 1;
-
-      if (!annualSalary || annualSalary <= 0) {
-        alert('연봉을 올바르게 입력해 주세요.');
-        return;
-      }
-
-      const grossMonthly = Math.floor(annualSalary / 12);
-      const taxable = Math.max(0, grossMonthly - nonTaxable);
-
-      // 4대보험 계산
-      const nps = Math.min(Math.floor(taxable * 0.045), 271350); // 국민연금 상한액 반영
-      const nhic = Math.floor(taxable * 0.03545);
-      const lti = Math.floor(nhic * 0.1295);
-      const ei = Math.floor(taxable * 0.009);
-
-      // 간이 근로소득세 근사 계산
-      let approxTax = 0;
-      if (taxable > 1060000) {
-        const taxableAnnual = taxable * 12;
-        if (taxableAnnual <= 14000000) approxTax = taxableAnnual * 0.06 / 12;
-        else if (taxableAnnual <= 50000000) approxTax = (840000 + (taxableAnnual - 14000000) * 0.15) / 12;
-        else if (taxableAnnual <= 88000000) approxTax = (6240000 + (taxableAnnual - 50000000) * 0.24) / 12;
-        else approxTax = (15360000 + (taxableAnnual - 88000000) * 0.35) / 12;
-        
-        // 부양가족 공제 반영
-        approxTax = Math.max(0, Math.floor(approxTax * (1 - (family - 1) * 0.05)));
-      }
-      const localTax = Math.floor(approxTax * 0.1);
-
-      const totalDeduction = nps + nhic + lti + ei + approxTax + localTax;
-      const netPay = grossMonthly - totalDeduction;
-
-      document.getElementById('netPayMonthly').innerText = netPay.toLocaleString() + ' 원';
-      document.getElementById('grossMonthly').innerText = grossMonthly.toLocaleString() + ' 원';
-      document.getElementById('totalDeduction').innerText = '- ' + totalDeduction.toLocaleString() + ' 원';
-      document.getElementById('nps').innerText = nps.toLocaleString() + ' 원';
-      document.getElementById('nhic').innerText = nhic.toLocaleString() + ' 원';
-      document.getElementById('lti').innerText = lti.toLocaleString() + ' 원';
-      document.getElementById('ei').innerText = ei.toLocaleString() + ' 원';
-      document.getElementById('incomeTax').innerText = approxTax.toLocaleString() + ' 원';
-      document.getElementById('localTax').innerText = localTax.toLocaleString() + ' 원';
-
-      document.getElementById('resultBox').classList.remove('hidden');
-    }
-  </script>
+  <script type="module" src="/calculator/salary-ui.mjs"></script>
 
   <!-- MODU.TODAY Copyright -->
-  <section class="modu-seo"><div class="modu-seo-in"><h2>이 계산기는 어떻게 사용하나요?</h2><p>세전 연봉과 비과세액, 부양가족을 기준으로 4대보험과 세금을 반영한 예상 실수령액을 계산합니다. 계산 결과는 입력한 값과 페이지에 표시된 계산 기준을 바탕으로 한 참고용 예상치입니다. 실제 적용 금액은 제도 변경, 개인 조건, 금융기관·기관별 기준에 따라 달라질 수 있으므로 중요한 의사결정 전에는 최신 공식 기준을 함께 확인하세요.</p></div></section>
+  <section class="modu-seo"><div class="modu-seo-in"><h2>이 계산기는 어떻게 사용하나요?</h2><p>세전 연봉과 비과세액으로 직장가입자 본인 부담 보험료를 계산하고, 직접 입력한 월 소득세를 반영합니다. 소득세 미입력 시 결과는 세금 공제 전 금액입니다. 계산 결과는 입력한 값과 페이지에 표시된 계산 기준을 바탕으로 한 참고용 예상치입니다. 실제 적용 금액은 제도 변경, 개인 조건, 금융기관·기관별 기준에 따라 달라질 수 있으므로 중요한 의사결정 전에는 최신 공식 기준을 함께 확인하세요.</p></div></section>
 
 
 
@@ -203,10 +154,10 @@
 
 
 
-<style>.detail-seo{max-width:960px;margin:28px auto;padding:0 16px}.detail-seo-box{background:#fff;color:#334155;border:1px solid #e2e8f0;border-radius:18px;padding:24px;box-shadow:0 8px 30px rgba(15,23,42,.05)}.detail-seo h2{font-size:21px;color:#0f172a;margin:0 0 12px}.detail-seo h3{font-size:16px;color:#0f172a;margin:22px 0 8px}.detail-seo p{line-height:1.8;margin:8px 0}.detail-seo-links{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}.detail-seo-links a{padding:8px 11px;border-radius:10px;background:#eff6ff;color:#1d4ed8;text-decoration:none;font-weight:700;font-size:13px}</style><section class="detail-seo" data-static-seo="1"><div class="detail-seo-box"><h2>연봉 실수령액 계산 기준</h2><p>세전 연봉을 월 급여로 환산한 뒤 비과세액을 제외하고 국민연금·건강보험·장기요양보험·고용보험과 예상 세금을 차감해 월 실수령액을 확인할 수 있습니다.</p><p>연봉만 비교하기보다 월 공제액과 실제 입금액을 함께 확인할 때 유용합니다. 부양가족, 비과세 항목, 보험료 상한과 세법 변경에 따라 실제 급여명세서와 차이가 날 수 있습니다.</p><h3>함께 이용하기 좋은 서비스</h3><div class="detail-seo-links"><a href="/calculator/">계산기 전체보기</a><a href="/stock/">국내 증시 보기</a><a href="/apt/">아파트 실거래가</a><a href="/lotto/">로또 정보</a></div></div></section>
+<style>.detail-seo{max-width:960px;margin:28px auto;padding:0 16px}.detail-seo-box{background:#fff;color:#334155;border:1px solid #e2e8f0;border-radius:18px;padding:24px;box-shadow:0 8px 30px rgba(15,23,42,.05)}.detail-seo h2{font-size:21px;color:#0f172a;margin:0 0 12px}.detail-seo h3{font-size:16px;color:#0f172a;margin:22px 0 8px}.detail-seo p{line-height:1.8;margin:8px 0}.detail-seo-links{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}.detail-seo-links a{padding:8px 11px;border-radius:10px;background:#eff6ff;color:#1d4ed8;text-decoration:none;font-weight:700;font-size:13px}</style><section class="detail-seo" data-static-seo="1"><div class="detail-seo-box"><h2>연봉 실수령액 계산 기준</h2><p>세전 연봉을 월 급여로 환산한 뒤 비과세액을 제외하고 국민연금·건강보험·장기요양보험·고용보험과 직접 입력한 세금을 차감해 월 실수령액을 확인할 수 있습니다.</p><p>연봉만 비교하기보다 월 공제액과 실제 입금액을 함께 확인할 때 유용합니다. 비과세 항목, 보험 신고액, 입력한 소득세와 기타 공제에 따라 실제 급여명세서와 차이가 날 수 있습니다.</p><h3>함께 이용하기 좋은 서비스</h3><div class="detail-seo-links"><a href="/calculator/">계산기 전체보기</a><a href="/stock/">국내 증시 보기</a><a href="/apt/">아파트 실거래가</a><a href="/lotto/">로또 정보</a></div></div></section>
 <!-- CRAWL_LINKS_START --><section class="modu-related" data-static-related="1"><h2>함께 많이 사용하는 계산기</h2><div class="modu-related-grid"><a href="/calculator/annual-leave.html">연차 계산기 및 미사용 연차수당 계산기 →</a><a href="/calculator/parttime.html">주휴수당 및 알바 급여 계산기 →</a><a href="/calculator/severance.html">퇴직금 계산기 →</a><a href="/calculator/unemployment.html">실업급여 계산기 및 수급조건·지급일수 완벽 가이드 →</a></div><p><a href="/calculator/">계산기 전체보기</a></p></section><!-- CRAWL_LINKS_END --><footer class="mt-8 pb-4 text-center text-xs text-gray-400">
     © MODU.TODAY
-  
+
 <!-- MODU_SITE_LINKS_START -->
 <nav aria-label="사이트 안내 및 문의" style="box-sizing:border-box;max-width:980px;margin:8px auto 0;padding:2px 8px;display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:4px 14px;font:400 12px/1.7 Arial,'Noto Sans KR',sans-serif">
   <a href="/about/" style="color:#8190a5;text-decoration:underline;text-underline-offset:2px;white-space:nowrap">소개</a>
