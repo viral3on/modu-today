@@ -1,5 +1,5 @@
 {
-"updated_at":"2026-10-11T22:12+09:00",
+"updated_at":"2026-10-12T07:41+09:00",
 "apartments":[
 {"region_code":"51150","sido":"강원특별자치도","sigungu":"강릉시","region":"강원특별자치도 강릉시","dong":"견소동","apt":"송정한신"},
 {"region_code":"51150","sido":"강원특별자치도","sigungu":"강릉시","region":"강원특별자치도 강릉시","dong":"견소동","apt":"송정해변신도브래뉴아파트"},
@@ -12692,6 +12692,7 @@
 {"region_code":"26350","sido":"부산광역시","sigungu":"해운대구","region":"부산광역시 해운대구","dong":"중동","apt":"해운대래미안"},
 {"region_code":"26350","sido":"부산광역시","sigungu":"해운대구","region":"부산광역시 해운대구","dong":"중동","apt":"해운대메트로하이츠"},
 {"region_code":"26350","sido":"부산광역시","sigungu":"해운대구","region":"부산광역시 해운대구","dong":"중동","apt":"해운대비치베르빌"},
+{"region_code":"26350","sido":"부산광역시","sigungu":"해운대구","region":"부산광역시 해운대구","dong":"중동","apt":"해운대신시가지경동메르빌"},
 {"region_code":"26350","sido":"부산광역시","sigungu":"해운대구","region":"부산광역시 해운대구","dong":"중동","apt":"해운대양우내안애팰리스"},
 {"region_code":"26350","sido":"부산광역시","sigungu":"해운대구","region":"부산광역시 해운대구","dong":"중동","apt":"해운대중동금호어울림"},
 {"region_code":"26350","sido":"부산광역시","sigungu":"해운대구","region":"부산광역시 해운대구","dong":"중동","apt":"해운대중동두산위브"},
