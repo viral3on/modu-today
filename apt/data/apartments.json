@@ -1,5 +1,5 @@
 {
-"updated_at":"2026-10-10T21:48+09:00",
+"updated_at":"2026-10-11T10:03+09:00",
 "apartments":[
 {"region_code":"51150","sido":"강원특별자치도","sigungu":"강릉시","region":"강원특별자치도 강릉시","dong":"견소동","apt":"송정한신"},
 {"region_code":"51150","sido":"강원특별자치도","sigungu":"강릉시","region":"강원특별자치도 강릉시","dong":"견소동","apt":"송정해변신도브래뉴아파트"},
@@ -16221,6 +16221,7 @@
 {"region_code":"11380","sido":"서울특별시","sigungu":"은평구","region":"서울특별시 은평구","dong":"대조동","apt":"만민하늘愛"},
 {"region_code":"11380","sido":"서울특별시","sigungu":"은평구","region":"서울특별시 은평구","dong":"대조동","apt":"메트하임"},
 {"region_code":"11380","sido":"서울특별시","sigungu":"은평구","region":"서울특별시 은평구","dong":"대조동","apt":"모아아파트(104동)"},
+{"region_code":"11380","sido":"서울특별시","sigungu":"은평구","region":"서울특별시 은평구","dong":"대조동","apt":"미래하임(9-46)"},
 {"region_code":"11380","sido":"서울특별시","sigungu":"은평구","region":"서울특별시 은평구","dong":"대조동","apt":"북한산포레스트"},
 {"region_code":"11380","sido":"서울특별시","sigungu":"은평구","region":"서울특별시 은평구","dong":"대조동","apt":"삼성타운"},
 {"region_code":"11380","sido":"서울특별시","sigungu":"은평구","region":"서울특별시 은평구","dong":"대조동","apt":"예가크레시아"},
