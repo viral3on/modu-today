@@ -1,13 +1,7 @@
 {
-  "updatedAt": "2026-10-12T10:27:53.967729+00:00",
-  "updatedAtLabel": "2026년 10월 12일 19:27 KST",
+  "updatedAt": "2026-10-12T14:03:08.915633+00:00",
+  "updatedAtLabel": "2026년 10월 12일 23:03 KST",
   "items": [
-    {
-      "title": "코스피, 삼전 역대급 실적에도 3.7% 급락…코스닥도 4.8%↓(종합)",
-      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE0xRkxVa24zc19JTk94T3BmOUFiNVpzdERkSUdjQVQyel8yNndiTTA1YW5PQW52dlpBNVJuUmFkTHlreW16MjVTNXl0Ny1wbnFMWFJjT09PdXg5em5TZWktWdIBYEFVX3lxTE0xRkxVa24zc19JTk94T3BmOUFiNVpzdERkSUdjQVQyel8yNndiTTA1YW5PQW52dlpBNVJuUmFkTHlreW16MjVTNXl0Ny1wbnFMWFJjT09PdXg5em5TZWktWQ?oc=5",
-      "source": "연합뉴스",
-      "category": "국내 증시 / 코스피 코스닥"
-    },
     {
       "title": "코스피만 왜 이러나…반도체 노이즈·수급 불안에 '나홀로 급락'",
       "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE0wVEVJUWNIeFBoZGZhaXJWdkpSMjVZamJhQzBNbzlEN1hkU0tGWmFYcGNnZ0lPUk5hTndRRWxXRi1OQndzQkNia0tWenpLdzlzSVAxZmhLSGpNeTV3YmdwMkpKbmYzNHlRaTdBN3pUZTk?oc=5",
@@ -18,6 +12,12 @@
       "title": "코스피·코스닥, 3~4% 동반 급락...외인 순매도에 '국장만 빠진다'",
       "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE94Y1BFeEwxZmhXWXc5N3VXNG96TzZvQTNNeHJkRDFBa3FvMnRWSDVxYU5Rc2QwcGhGVVRKbXJzb19yOFNpX2g3RWdTUkhCc2QwZjZBMTlXMDI0clpXeVJsWGhEdUVFTXpRN0hodlhmSWc?oc=5",
       "source": "오피니언뉴스",
+      "category": "국내 증시 / 코스피 코스닥"
+    },
+    {
+      "title": "코스피·코스닥, 삼전닉스 약세에 2~3%대 급락…외국인 '팔자'",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9xSk0xdTlBMXlfYVJZMk4tN1RXd21MVWZfRmpCRWtCSXVHMU1uN0xtTWpoVTN3VmpDMUNTZnlwTC1yT3RJVjhBQm9RclVYX1VsMVhKWG92YjlnN2_SAWBBVV95cUxPNlFremY3aFZKR0JqV3MyNk5uc1M2VVhYTnZubXUtSkFyd2xYYlVRc0o4eElobXhySnhQU1lkTXYyVWdUYVpVVENvYlh2U1dFbU5IVnNfOW1YM3ZpVGVkRDk?oc=5",
+      "source": "연합뉴스",
       "category": "국내 증시 / 코스피 코스닥"
     },
     {
@@ -33,14 +33,14 @@
       "category": "국내 증시 / 코스피 코스닥"
     },
     {
-      "title": "코스피·코스닥, 외국인 매도세에 동반 하락…“AI 인프라 투자 의구심”[개장시황]",
-      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9ZNnk4LTRMYk93WG1kUEZCOFdWaEFBMWZEN0RJU2hJU1VEaWM1SlB6UUhwV0JkU0hfQnFDVzg1TGNXWE9ocUVfNGFyTGw4UzNKY0JMb2FULWFUQXNrMTJ4MFpIcw?oc=5",
-      "source": "에너지경제신문",
+      "title": "[증시 오늘] 코스피 3%대·코스닥 4%대 동반 급락",
+      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5PTmhUYVdPbzROSDZ4OG81Tmc4bkE3azh1S2xMTkFzd2VuTXVsMkl3d0h5cmJkckRObmFTdFcxRHRrYjdod3BiNUFqLWdLd2FMRnlUZVJHMHZ0Q21Od1l6SXIxXzR1dUk?oc=5",
+      "source": "빅터뉴스",
       "category": "국내 증시 / 코스피 코스닥"
     },
     {
       "title": "신현송 \"원/달러 환율 추가 하락 여지…아직 예년보다 높은 수준\" - 머니투데이",
-      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5HanZzWkNZb3owSk5SY3ZIZG9FYkttS1MzQ0pIbE13Q1c1enZtNHlYZTVMckh0ZHBsWnE1NVB3UGE3bTNmUlYxbnlkSWtLQklfV1FHa3dVaEUwWGd0WXJ4NWRuWUVHQW82dUZ30gFwQVVfeXFMT1gwamFhYkJscDBoRWpNa21LWm9uc1pHVlpobUo1RFRtdlY5TUJQdFFNSHdyUEdXNFpreW1pbEo0d25ES0pJVjk0LVZMUmUwNHYyLVRTVHV3b29xM05hbTlUMTYyVDY4ekViZk1OeC1mTQ?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9YMGphYWJCbHAwaEVqTWttS1pvbnNaR1ZaaG1KNURUbXZWOU1CUHRRTUh3clBHVzRaa3ltaWxKNHduREtKSVY5NC1WTFJlMDR2Mi1UU1R1d29vcTNOYW05VDE2MlQ2OHpFYmZNTngtZk3SAXBBVV95cUxPWDBqYWFiQmxwMGhFak1rbUtab25zWkdWWmhtSjVEVG12VjlNQlB0UU1Id3JQR1c0Wmt5bWlsSjR3bkRLSklWOTQtVkxSZTA0djItVFNUdXdvb3EzTmFtOVQxNjJUNjh6RWJmTU54LWZN?oc=5",
       "source": "머니투데이",
       "category": "환율 및 글로벌 원자재 시세"
     },
@@ -69,9 +69,9 @@
       "category": "환율 및 글로벌 원자재 시세"
     },
     {
-      "title": "현대차증권, 현대차 목표가↓…\"파업·환율에 실적 부진 전망\"",
-      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1yelBsazNsQnVleXk0ZVV5cjhfVllGU1JTX29ISlBoTkg4UHVfUElqMGU2WUVmN1ZWdGdIS05RTFVxV3BmNjB2UUE0X3ZwXy1NbWtzci1VRnBHVzM0TXI4UNIBYEFVX3lxTE1yelBsazNsQnVleXk0ZVV5cjhfVllGU1JTX29ISlBoTkg4UHVfUElqMGU2WUVmN1ZWdGdIS05RTFVxV3BmNjB2UUE0X3ZwXy1NbWtzci1VRnBHVzM0TXI4UA?oc=5",
-      "source": "연합뉴스",
+      "title": "[환율 전망] 한때의 원화 뉴노멀, 이제는 올드뉴스",
+      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBhclktRkxTZnh5aXFqN0pnRThUWUdRZ3JpT0V5NGJzRTFqajYydEtuVk11ZFRBeTF0UVlLeW5LWlNyVXBZM183bzgwMVBXVkxKcE8zM2NVdkxHeFBGVEdOaA?oc=5",
+      "source": "KB Think",
       "category": "환율 및 글로벌 원자재 시세"
     },
     {
@@ -81,9 +81,21 @@
       "category": "공모주 청약 및 IPO 일정"
     },
     {
+      "title": "금감원, 미래에셋證 거점점포 검사 1주일 연장…스페이스X 관련 위법행위 확인 - 조선비즈",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOOG5tckdfZEJkZmx6Vy1GanEySmlpZ0pwUWRHcHdQMG5rZ1JJcHpwRlR0RVVKT0xESHF3SmkxZ21GRDlZR0gwbGw0QVZMQmtJdV9qcmE4bk5fUlY4VjBLMFQtbF9saWtsT0FmNFhhR0ZuWnpMb2UzRDdNa3VvYllJLXZBSHJ0eGdNTGdzSWNDZ2ZsQ2tUZ3RxX205T1PSAZwBQVVfeXFMTjhubXJHX2RCZGZselctRmpxMkppaWdKcFFkR3B3UDBua2dSSXB6cEZUdEVVSk9MREhxd0ppMWdtRkQ5WUdIMGxsNEFWTEJrSXVfanJhOG5OX1JWOFYwSzBULWxfbGlrbE9BZjRYYUdGblp6TG9lM0Q3TWt1b2JZSS12QUhydHhnTUxnc0ljQ2dmbENrVGd0cV9tOU9T?oc=5",
+      "source": "Chosunbiz",
+      "category": "공모주 청약 및 IPO 일정"
+    },
+    {
       "title": "엘리스그룹, 오는 20일 코스닥 상장...일반청약 경쟁률 408대 1",
       "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1Hc0R4Zzl4WTM4OEh3YWtzX3BNcVdlaUVIYzhFeDRyUmxMRlR2UldVb2x3bzg2ZGd3a3dpNGhSOWkwNEpnbmtPYlluNkNpa0Q5elM2NmtueEpoTTVFMHAzUk9NYXlfUdIBakFVX3lxTE9XZGUwc3dJdnc2bEt1alU4eVdSSlUwN0k0YnZTSWpiVGsweGExUHZ2R3RIVVFoV2NoUVhXaWZhX2F5U1J2V2dtN3hrNUF5WGxNSXZOamZaUm81ck9tUHF1bXp3OXRiQk1DVXc?oc=5",
       "source": "테크M",
+      "category": "공모주 청약 및 IPO 일정"
+    },
+    {
+      "title": "AI·로봇기업 상장 본격화, 이번 주만 10곳 수요예측",
+      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5yY2pxX2luU1h4bUYtSGExSFB4U09tTFZfX2RhTC1GTUwzOTVRV29BSUJUUGVlZmtSNFJDMjAySVA0ck9FX2RJUGRIdkpjVUVhRGx2TjVrQVY4bE1zU1E?oc=5",
+      "source": "동행미디어 시대",
       "category": "공모주 청약 및 IPO 일정"
     },
     {
@@ -99,27 +111,9 @@
       "category": "공모주 청약 및 IPO 일정"
     },
     {
-      "title": "금감원, 미래에셋證 거점점포 검사 1주일 연장…스페이스X 관련 위법행위 확인 - 조선비즈",
-      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOOG5tckdfZEJkZmx6Vy1GanEySmlpZ0pwUWRHcHdQMG5rZ1JJcHpwRlR0RVVKT0xESHF3SmkxZ21GRDlZR0gwbGw0QVZMQmtJdV9qcmE4bk5fUlY4VjBLMFQtbF9saWtsT0FmNFhhR0ZuWnpMb2UzRDdNa3VvYllJLXZBSHJ0eGdNTGdzSWNDZ2ZsQ2tUZ3RxX205T1PSAZwBQVVfeXFMTjhubXJHX2RCZGZselctRmpxMkppaWdKcFFkR3B3UDBua2dSSXB6cEZUdEVVSk9MREhxd0ppMWdtRkQ5WUdIMGxsNEFWTEJrSXVfanJhOG5OX1JWOFYwSzBULWxfbGlrbE9BZjRYYUdGblp6TG9lM0Q3TWt1b2JZSS12QUhydHhnTUxnc0ljQ2dmbENrVGd0cV9tOU9T?oc=5",
-      "source": "Chosunbiz",
-      "category": "공모주 청약 및 IPO 일정"
-    },
-    {
-      "title": "AI·로봇기업 상장 본격화, 이번 주만 10곳 수요예측",
-      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5yY2pxX2luU1h4bUYtSGExSFB4U09tTFZfX2RhTC1GTUwzOTVRV29BSUJUUGVlZmtSNFJDMjAySVA0ck9FX2RJUGRIdkpjVUVhRGx2TjVrQVY4bE1zU1E?oc=5",
-      "source": "동행미디어 시대",
-      "category": "공모주 청약 및 IPO 일정"
-    },
-    {
       "title": "[통장잔GO] 청년도약계좌 환승 유리할까?…나에게 맞는 선택은",
       "url": "https://news.google.com/rss/articles/CBMimAJBVV95cUxQTU92R0s3ZFdWLVpVWGw3LW90SXl1VTdzSUF6OU1kSXlSREQ1V1ZKWVl6U3hpaU9GWTdlQ3ZkZnFJandZSWFESzNJa2p4YUFyYU9qcE9TOVVIUW56QURfQ1NNZ3o2UktCd0lZQk9WMHFJSy03UEJLNW1fbmdVM2xJN0tOUzBXcmo3MXc2cW13TWlQV2VOUHdDMXFYOUNNNnFzSHhJblE5dTd6cmVyTU51Y21WWlRBQVFpclpES3V5NkNrbkxsaFdpOUYwNjdUb1diWUM0bWdBNmM0WWl5N2QxbTRodzQ3Ml9GS1FMVjQ5akt0dzVFZG12Wi1LREVaRF9RQl9xOXlEVjV6b09OT0hDNEM0VUpGRHZq?oc=5",
       "source": "데일리안",
-      "category": "정부 지원금 및 정책 소식"
-    },
-    {
-      "title": "청년미래적금 2차 신청기간, 조건·신청방법·갈아타기 비교",
-      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBESjBDUDdlN3VNQTczSjZVUWQtTXN0WXdkYjJJQ2lESWk1azdjMGk4M2JSVEhESEp4WTgtWGhEeng0MGtDazU5RnBVOXJ6OVgyTjhhQTVB?oc=5",
-      "source": "위키트리",
       "category": "정부 지원금 및 정책 소식"
     },
     {
@@ -135,10 +129,28 @@
       "category": "정부 지원금 및 정책 소식"
     },
     {
-      "title": "[청년미래적금 신청] 홀짝제 끝났다…12일부터 출생연도 관계없이 '청년미래적금' 신청",
-      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1sYUxwYUVndkFPYVhBOEZ5SVhIUHV3NWNxbUNYNDVMZVZnZzN2SHNJeFcyRFdmbW1aS1QzVjRWNmduRC1MLW9tTkRUa0lHak92UXRnVDdXU2xVaS1fUjNRMUZIekpaWDBQ?oc=5",
-      "source": "CBC뉴스",
+      "title": "청년미래적금 2차 신청 16일까지…출생연도 제한 풀렸다",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9CLVFXVWt5NnloaWR3N2I0VG1VVzVyeUpZcWI5RS1rbjdyelpUaF9vT3pFWG84S202RHl0V2lXRjZub1dyOFNyZ2czZmFzcjJ6bDF6ZXAwY3RmQlRxY3Z3dWpIM2VqZ2xJX08yetIBcEFVX3lxTE9iNDB0Z1ZINjdyeFNZVjM1X2tLY2FmMjNlMjJtMVNJWnBSWDNDZ1VNWEJnS0xCX3lVZmpnekdoUXZmdHUya2UwTG95dXZjb0N2aDFDNmlOX19rLVh5NGtDdEdmNC15cENpTlNHQTZQVHg?oc=5",
+      "source": "남도일보",
       "category": "정부 지원금 및 정책 소식"
+    },
+    {
+      "title": "청년미래적금 2차 신청기간, 조건·신청방법·갈아타기 비교",
+      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBESjBDUDdlN3VNQTczSjZVUWQtTXN0WXdkYjJJQ2lESWk1azdjMGk4M2JSVEhESEp4WTgtWGhEeng0MGtDazU5RnBVOXJ6OVgyTjhhQTVB?oc=5",
+      "source": "위키트리",
+      "category": "정부 지원금 및 정책 소식"
+    },
+    {
+      "title": "[속보] 미국 증시, 다우지수 227포인트 상승…S&P500 강보합·나스닥 약보합 '혼조세'",
+      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9INWhBY2UxSUlyQlEyZm90TWI4aW52NmQ4VjJLT1F6dkUta3lhQUFqNktIdmJRcHJvbnZhVXkwS0hHRjFjaWJ0TFpQaG0xajUwT0ZlR0RWTkdoZ0x4MTlyTlp5YXNfRWdx?oc=5",
+      "source": "CBC뉴스",
+      "category": "미국 증시 / 글로벌 매크로"
+    },
+    {
+      "title": "미국증시, 유가 100달러대에 발목…CPI·은행 실적이 반등 가른다",
+      "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE9VcDR2Nnk4a2lWTFhHT01vbWZReEYtMWZzTmZ2ZDBGZGxNZDI5WGhGeXdSYWRiMDJ3SWtZYWt4Z0tOSEdZV3NBVVpUVTVfNE4taTVsOXREZWRKeGUwNDI5aFNBMU1KMENvQVlJRDIyX1ZNdw?oc=5",
+      "source": "톱스타뉴스",
+      "category": "미국 증시 / 글로벌 매크로"
     },
     {
       "title": "S&P500 선물, 기술주 강세 흐름에 상승",
@@ -148,7 +160,7 @@
     },
     {
       "title": "[굿모닝 마켓] 3대 지수 주간 상승…나스닥·S&P500 사상 최고치",
-      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9NMVRCaFJ6QlhXcEpQanFFNGF5cTZBSnoxV3BacElOOFJhT3ZvWDc3YWp6MkZnaEt3cEwtcWlKYjFJcUpEWDVIOUVFcjZHdkV6S1NKRkkxOGPSAVhBVV95cUxPTTFUQmhSekJYV3BKUGpxRTRheXE2QUp6MVdwWnBJTjhSYU92b1g3N2FqejJGZ2hLd3BMLXFpSmIxSXFKRFg1SDlFRXI2R3ZFektTSkZJMThj?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE00UEhtOW9fQnNLa1J5NktfRVpJTWRIaHpBUXlCcEVUSmozaHZkX1VkTTZaYkk1Yk5BRUtFRVpNdWYtdVdEeDkxS21wdDRCRXpXeDJF0gFYQVVfeXFMT00xVEJoUnpCWFdwSlBqcUU0YXlxNkFKejFXcFpwSU44UmFPdm9YNzdhanoyRmdoS3dwTC1xaUpiMUlxSkRYNUg5RUVyNkd2RXpLU0pGSTE4Yw?oc=5",
       "source": "SBS Biz",
       "category": "미국 증시 / 글로벌 매크로"
     },
@@ -159,21 +171,9 @@
       "category": "미국 증시 / 글로벌 매크로"
     },
     {
-      "title": "S&P500, 강세장 4년 만에 두 배로 올랐다…변수는 고금리·고유가 - 머니투데이",
-      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBReXV0OVZ5Qi1LVEJyS3d1RFQ3emlabk5JUlg0MkNXcDZBeTFWd0VvNkJ1WDhxZHNETUdhNXNLaDFGTkVVeUdxMU5mM0Z3Rm4zVWxPN3JPQlo2UWZpS0piMVkydzRFOWtTLU9vVjFB0gFuQVVfeXFMUFF5dXQ5VnlCLUtUQnJLd3VEVDd6aVpuTklSWDQyQ1dwNkF5MVZ3RW82QnVYOHFkc0RNR2E1c0toMUZORVV5R3ExTmYzRndGbjNVbE83ck9CWjZRZmlLSmIxWTJ3NEU5a1MtT29WMUE?oc=5",
-      "source": "머니투데이",
-      "category": "미국 증시 / 글로벌 매크로"
-    },
-    {
       "title": "실적 30% 급증·기술주 몸값 하락…월가 연말 랠리 기대",
       "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5OeEN1Ylduei1kWUtKZkJraEZ3ZmNKNm83RGJvTVZ1Ym9fVXEwd3hiQWpIOTN4T2ViSG5weEtBNEl3cXFIakZGbzhVWXJSUEVGM2xtSFJJdjdrYmlYVWtnTWhwcnVGNXdhR2NRatIBcEFVX3lxTE1JaDdDVmV0WkttZ3pXdk5oUFpZdkNDWkpQd1JTdE5jaDNxYVBWRERhQWMxNFJYUnl6VkVpVkVpYk9va2RjVGdfOHBKaGFWemJkTVl6X2JVeXNiRUJEVkxLWldVTldoRTgzR1g2SzRPQmo?oc=5",
       "source": "엠에스투데이",
-      "category": "미국 증시 / 글로벌 매크로"
-    },
-    {
-      "title": "코스피, 뉴욕증시 상승에도 6540선 후퇴",
-      "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBURWhVd0JIVl8yQVZpUnJiSzdWaExJVjVBczQyRFVCVjB1dFR4eEN3QUFRZlgyQXNBNzFFZE5lYURrejk4Tjc0cU85X1Y4cFBXUGtxUVpRUnZOTnFBZ05rLXgzYXJLYVV0UHVFV0RPQlF4Y3dGai0w0gF3QVVfeXFMUFRFaFV3QkhWXzJBVmlScmJLN1ZoTElWNUFzNDJEVUJWMHV0VHh4Q3dBQVFmWDJBc0E3MUVkTmVhRGt6OThONzRxTzlfVjhwUFdQa3FRWlFSdk5OcUFnTmsteDNhckthVXRQdUVXRE9CUXhjd0ZqLTA?oc=5",
-      "source": "스트레이트뉴스",
       "category": "미국 증시 / 글로벌 매크로"
     },
     {
@@ -186,6 +186,12 @@
       "title": "[오늘의 증시]코스피, 낙폭 과대에 반등 시도 전망…6800선 회복 주목",
       "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFB4c0kxVTl2NTA0NVhMSVRoc2VyV3Zvd1VjZ3h3V2tSMzREVE9hUUtHQ19pblVURFNiWndwMi15ZDNnWnhQdlFMTHdsSDAzM1U2eGdabzBJTnlMUEg3VnY5Tng2cEZ5Tk01VVg3aW1RYXJlZHpfdWJiT9IBeEFVX3lxTFB4c0kxVTl2NTA0NVhMSVRoc2VyV3Zvd1VjZ3h3V2tSMzREVE9hUUtHQ19pblVURFNiWndwMi15ZDNnWnhQdlFMTHdsSDAzM1U2eGdabzBJTnlMUEg3VnY5Tng2cEZ5Tk01VVg3aW1RYXJlZHpfdWJiTw?oc=5",
       "source": "뉴시스",
+      "category": "야간선물 / 파생 / 투자시황"
+    },
+    {
+      "title": "기본 규칙에서 보너스 규칙으로 넘어가는 다음 뉴맞고 바로가기",
+      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFA0RlphZkVSYmkybENuakRtWE95NHNZcUowa0VPRlI2blRoYlRVTEFmb1I0NVNvYjJfbGtRREtpV08wMzgwd0h2MTlYTEJuSVA5bDFxcGdhVlJqanVPLU9nOF96V0xLVEw0TWc?oc=5",
+      "source": "Calgary Roughnecks",
       "category": "야간선물 / 파생 / 투자시황"
     },
     {
@@ -204,12 +210,6 @@
       "title": "연휴 뒤 돌아온 코스피 ＇하락＇ 출발...4거래일 연속 약세",
       "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE5jcExBUXlpd294V0dQaUcxTzdUSUdrLXVaVzV5XzQtX1JCMVlYSk45cXl2bGtjb3Y5VXdMZ3JtNWp2Wm9MTDhxVVBXY3NxUGNHTHNDWHdxcmo2Y2RSUEpKbmlrbGRPY01VZGhGRUVJN2t6czV6YnpB?oc=5",
       "source": "한국경제TV",
-      "category": "야간선물 / 파생 / 투자시황"
-    },
-    {
-      "title": "안드로이드 압축 앱 영양 해결책",
-      "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNc1dEX3FIVkI5SnFzNjhoSnRhZmFZd01Wa3Zsd3NianBsWjM2OWJXdFBvRWJJcXF0TXVFcW96QlZqR3dHMlgwWlBGZGhrUWFpWnhEWVY4T3QwRE5JWDBVNzZfUExHT1VGUjZ0S3JreEdHLWNMMTN3SjFmZXpYTUFpcmh2Mi05X0dXQU05XzNza0dxRHlkNW43aVFnUTdTYy1RU2J2bk9RbjkwR1hzZjRqamRocG12dTd2MktqQzFXNElJSHhCUjVFUTY0R2FndHNHQnZz?oc=5",
-      "source": "Calgary Roughnecks",
       "category": "야간선물 / 파생 / 투자시황"
     }
   ]
