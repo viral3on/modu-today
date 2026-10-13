@@ -1,11 +1,17 @@
 {
-  "updatedAt": "2026-10-13T13:17:05.708408+00:00",
-  "updatedAtLabel": "2026년 10월 13일 22:17 KST",
+  "updatedAt": "2026-10-13T16:48:25.941874+00:00",
+  "updatedAtLabel": "2026년 10월 14일 01:48 KST",
   "items": [
     {
       "title": "[오늘의 증시] 10월 13일 코스피 코스닥",
       "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE1ZRm9ybUYxSDhxRjR1WksyQ01PcGlVdVFtc3hZV0xrRGtSaTFNb29Jdjc1TTZTNTV0WTlGQ3IxYlN0RjVxV0Q3aW1mZw?oc=5",
       "source": "뉴스1",
+      "category": "국내 증시 / 코스피 코스닥"
+    },
+    {
+      "title": "코스피, 장중 6% 급락해 '6천피' 밑으로…삼전닉스 7∼8%↓",
+      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1mV0pwS2V4bmN3TW9sSnBCR0paUmU5LVdwVXVKalpwZkx3Z3FkaGI4Y3BGRGgtOGpwR1I5U0NXbFowVGpaUURJVnlTWDNFdkhHbzdOY0hJNU1NamZCbXpINtIBYEFVX3lxTE1mV0pwS2V4bmN3TW9sSnBCR0paUmU5LVdwVXVKalpwZkx3Z3FkaGI4Y3BGRGgtOGpwR1I5U0NXbFowVGpaUURJVnlTWDNFdkhHbzdOY0hJNU1NamZCbXpINg?oc=5",
+      "source": "연합뉴스",
       "category": "국내 증시 / 코스피 코스닥"
     },
     {
@@ -15,9 +21,9 @@
       "category": "국내 증시 / 코스피 코스닥"
     },
     {
-      "title": "코스피, 장중 6% 급락해 '6천피' 밑으로…삼전닉스 7∼8%↓",
-      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1mV0pwS2V4bmN3TW9sSnBCR0paUmU5LVdwVXVKalpwZkx3Z3FkaGI4Y3BGRGgtOGpwR1I5U0NXbFowVGpaUURJVnlTWDNFdkhHbzdOY0hJNU1NamZCbXpINtIBYEFVX3lxTE1mV0pwS2V4bmN3TW9sSnBCR0paUmU5LVdwVXVKalpwZkx3Z3FkaGI4Y3BGRGgtOGpwR1I5U0NXbFowVGpaUURJVnlTWDNFdkhHbzdOY0hJNU1NamZCbXpINg?oc=5",
-      "source": "연합뉴스",
+      "title": "“내년엔 코스피 1만2000 간다”…6000선도 무너졌는데 근거는 [오늘 나온 보고서]",
+      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9Vb21TWGZKRnB4NGg2dlBQQTVXSW9GNERZUG5vU0E1aHZydERETGh6M3Q0Z0xCSTQwZzY4TDJRR2s5Y0dvZHd1SnJYeUhQSVdXd1E?oc=5",
+      "source": "매일경제 마켓",
       "category": "국내 증시 / 코스피 코스닥"
     },
     {
@@ -30,12 +36,6 @@
       "title": "코스피·코스닥 5%대 동반 급락…장중 매도 사이드카 발동",
       "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5KcmQ4blpoTUtvU2NfS1FvZDEzaHVua0EyWmxUVUVhMkhETXBuMzk5a0NpcmZGR0pyUEdYNFAzWmxuUlBBeVJXMHV6V2V4aUxQdGxnWVZrbnpDVEc3MmtEWUFSQUFCQTjSAWpBVV95cUxPazVxRkRWb0JJblJ5RnZBZE9Eay16ZnVTTEJocTRmZm1jU2pwdFI5eXJ5aC0xbUhWOGtoRDdsc0x1LTJVZEFLS08tcHFvOWhGREhXeGRsb0RuWEZBdWtMWUdGU3lCTWhYc2RR?oc=5",
       "source": "센트럴경제",
-      "category": "국내 증시 / 코스피 코스닥"
-    },
-    {
-      "title": "“내년엔 코스피 1만2000 간다”…6000선도 무너졌는데 근거는 [오늘 나온 보고서]",
-      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9Vb21TWGZKRnB4NGg2dlBQQTVXSW9GNERZUG5vU0E1aHZydERETGh6M3Q0Z0xCSTQwZzY4TDJRR2s5Y0dvZHd1SnJYeUhQSVdXd1E?oc=5",
-      "source": "매일경제 마켓",
       "category": "국내 증시 / 코스피 코스닥"
     },
     {
@@ -63,15 +63,15 @@
       "category": "환율 및 글로벌 원자재 시세"
     },
     {
-      "title": "환율 2년 만에 최저인데 코스피는 추락…'원화 강세'의 역설",
-      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1iYVBvVkFuRmlCOEM3eDFObFZ6MTZXTHlWM2o1N3drSXdjb3NzUHZUUkdodjJqZVpHYWs3b0h3UHlaV0tRam9RcUtzVVE4YUx1YURGcU1PenBETzhOVktOV3NLNkM4Q3V4eWZxUGJR0gFzQVVfeXFMT2gxeVZlS29KS2R5NlViaDZsaFNsRWFIN0pEOWdWNHZiN1ktNE1tLVdXc1RpTEtVbDd6WFotTE9NOGxja0hFVTNpMGd2eENleC03UnZMTWZNaGd2THJwelpPY2Q4a1FhQXY0eDFkZl9WdWdxWQ?oc=5",
-      "source": "한국일보",
+      "title": "중동불안 재확산에 강달러·위험선호 위축⋯\"전일 대비 소폭 상승\" [환율전망]",
+      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE56OUY2WUZTWENwSF9NbEJ4TWh1Q244cnE1WU1tbXp5aDZrNzFUZWFfWjNnMFUtYk1oNEMxdVJPZU1SZklsMUxaNHNPaUNVb1k5Y3RoYw?oc=5",
+      "source": "이투데이",
       "category": "환율 및 글로벌 원자재 시세"
     },
     {
-      "title": "[10월 3주차] 환율(FX) 전망",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFAxTWJIT3pMT0RrLTZUVE5nSmtVOVR1cW1yS2pIaDYzdlU4ckd1OFQ0eWFRZkN1TmFhM1dndWxmWWRaV2dNdWJFbVZqV2FqLXhEUEttS3cwa0lkTVktczVGNFpadHFQRWhuVl85Zg?oc=5",
-      "source": "KB Think",
+      "title": "\"반도체 꺾이면 환율 다시 뛴다…美 주식 비중 90% 바람직\"",
+      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9kemF6djlZN2FhSWRsZlN6SkR0R0VjbnQyUUs2VDEySHhIamFfTS1vc3l3Z1FlTzVZS0IzNUVsTTdMLUJ5dEVfck9JaXFVREdjV0xTbk42NGVEUTlBUDc5cg?oc=5",
+      "source": "뉴시스",
       "category": "환율 및 글로벌 원자재 시세"
     },
     {
@@ -117,6 +117,12 @@
       "category": "정부 지원금 및 정책 소식"
     },
     {
+      "title": "충북도, `도민과 함께가는 민생경제 대전환` 본격 추진",
+      "url": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE92SGhURkYtZ29Rd1ViN0YwMVRXQjNaNzdRS2NXR3hiWGZnbnRSOEdBVEhqN3pWSm9iYUdsX3JmaGo3NXUtbjV6eWJB?oc=5",
+      "source": "더뉴스코리아",
+      "category": "정부 지원금 및 정책 소식"
+    },
+    {
       "title": "보령시, 소상공인 사회보험료·고용보험료 지원으로 고정비 부담 낮춘다",
       "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE10NWVoUUd6RUViZ3BhTG5LTlJwQ3NWQjF2THRrMjZkZndhUmt6bzdGYVFwcUpPTmloYnpSUVFoZWtiQ1ExSmRvSXBXQXhoalhnSGpJMTAxMnlaMEwxX3ZaZ01hSGZRQQ?oc=5",
       "source": "https://www.kgdm.kr/",
@@ -132,6 +138,12 @@
       "title": "반도체 약세·유가 강세에 선물시장에서도 다우존스만 상승",
       "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE56QVhLXzRXUXo4ckd5NktaRGNsQkxsU1U3cENNM2VXSWwwZWRTZ1I5OWlfQlZRYk8zXy01b204bFN6ajAzazY5S2RlSF80dTZJc1VxS2hEVVRtS3diQjhUWmFmUk1LVFo1MFEwak1YQS1OTm9nTHMxUdIBeEFVX3lxTE1rWnpRS3JNS2ZiMk45TmltSlhBaS1yNUgxaUNlWmQ1am1rQTVIYnQwcW9zRm9HeloxYmMyTmdqVk5rY1FHaE90S3BDNHBUclMzOGlUV0VNNkZQLTFtYXB4ZjF0VXpLU3BFUGdFX3BWaDFPU0VITFYyTg?oc=5",
       "source": "MBC 뉴스",
+      "category": "미국 증시 / 글로벌 매크로"
+    },
+    {
+      "title": "[속보] 미국 증시 혼조세…다우 300포인트 상승, 나스닥·S&P500 약세",
+      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9obFBSWDlTamZ4WDRyNEZpUFFPdnVQd3JYX2lNNktVLVRnQV9MWXpCNnl0amhBTkxUa0QxTURaY2RPdjN4WDN6VkZ0UW1VNmM1LTlPd05LaDFTRVN2WWZMWnNNV0dsLUpq?oc=5",
+      "source": "CBC뉴스",
       "category": "미국 증시 / 글로벌 매크로"
     },
     {
@@ -156,12 +168,6 @@
       "title": "뉴욕증시 혼조 마감…마이크론 3.9% 하락에 나스닥 0.4%↓",
       "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9hVG9acVJfQXZpMjlKN2JqRzl6UWlhNUpCV1R2MUFybGpKNHhrMC10bjNuUVlMdWlkRThfN1lhREctYS16aDI2MTZqYTZfN0dGWmZQc1pQSmR0UXVIUXdEQmRn?oc=5",
       "source": "디지털데일리",
-      "category": "미국 증시 / 글로벌 매크로"
-    },
-    {
-      "title": "실적 기대에 다우 3일째 상승…유가·반도체 악재에 나스닥 하락",
-      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE92UXNMemFEMkxZNWx2T1FkM1NiMllMV25WelBhM0dCT0xNNHc4bXhoQWNjV0NkVE5CZWtrTG1UcWdzczB4bFBlQXRJcTVrOTR1RjdPZUJTLV82dw?oc=5",
-      "source": "경북매일",
       "category": "미국 증시 / 글로벌 매크로"
     },
     {
@@ -195,9 +201,9 @@
       "category": "야간선물 / 파생 / 투자시황"
     },
     {
-      "title": "호앙 리엣 중학교 남학생들이 소소한 행동을 통해 사랑을 전파하고 있습니다.",
-      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQUVNIa2lRa0xMaTFMbE93M3BkZ3Q2YnVjWVVsNlpTUW1jRU5uRVpwZVRtaDM0RlZ2QnBFU2RmZG03NmJqLWhZZnNLTkJwTXZsek9KV3VXbXRSbjhtS0M1Rk1LYjdlZGt1VmZLd0RQa25KSENmdktRdUJ5Vkloc19CU25qenp5RFBmb3NPb3FiaHowR01rMzNXWkN6Y2ZJaFNkVDMxc0tR?oc=5",
-      "source": "Vietnam.vn",
+      "title": "전체 화면에서 메뉴가 숨겨지나요? 스포츠 마틴 배팅 디시",
+      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBtbTN2VG4ySUhKU3FlWGNnWWdtTHVLT3hubE1rX19OM3gzTXVpMkVuOEU1YTJJNV9lNG5BYjlMRHJQSi0xMllsSmdDb2tIZU9MS3ZGMk9QaUs3MUFvbkFV?oc=5",
+      "source": "Calgary Roughnecks",
       "category": "야간선물 / 파생 / 투자시황"
     }
   ]
