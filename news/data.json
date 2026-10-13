@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-10-13T16:48:25.941874+00:00",
-  "updatedAtLabel": "2026년 10월 14일 01:48 KST",
+  "updatedAt": "2026-10-13T18:40:00.864764+00:00",
+  "updatedAtLabel": "2026년 10월 14일 03:39 KST",
   "items": [
     {
       "title": "[오늘의 증시] 10월 13일 코스피 코스닥",
@@ -21,6 +21,12 @@
       "category": "국내 증시 / 코스피 코스닥"
     },
     {
+      "title": "코스피·코스닥 5%대 동반 급락…장중 매도 사이드카 발동",
+      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5KcmQ4blpoTUtvU2NfS1FvZDEzaHVua0EyWmxUVUVhMkhETXBuMzk5a0NpcmZGR0pyUEdYNFAzWmxuUlBBeVJXMHV6V2V4aUxQdGxnWVZrbnpDVEc3MmtEWUFSQUFCQTjSAWpBVV95cUxPazVxRkRWb0JJblJ5RnZBZE9Eay16ZnVTTEJocTRmZm1jU2pwdFI5eXJ5aC0xbUhWOGtoRDdsc0x1LTJVZEFLS08tcHFvOWhGREhXeGRsb0RuWEZBdWtMWUdGU3lCTWhYc2RR?oc=5",
+      "source": "센트럴경제",
+      "category": "국내 증시 / 코스피 코스닥"
+    },
+    {
       "title": "“내년엔 코스피 1만2000 간다”…6000선도 무너졌는데 근거는 [오늘 나온 보고서]",
       "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9Vb21TWGZKRnB4NGg2dlBQQTVXSW9GNERZUG5vU0E1aHZydERETGh6M3Q0Z0xCSTQwZzY4TDJRR2s5Y0dvZHd1SnJYeUhQSVdXd1E?oc=5",
       "source": "매일경제 마켓",
@@ -30,12 +36,6 @@
       "title": "｢증시 레이더｣ 코스피 6035.35⋯반도체 투매에 장중 6천선 붕괴",
       "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBxcy1jMFZMcC1uSDNXOC1RZjRJV0tzOThoZHFNelhGV1Q2SExrMUlIcGpDUGVkV29PUi03WXFaWG5DT3FFZVRaT25aSUJQaE9ON1dBaHptZ3VqTmtxVFE?oc=5",
       "source": "포커스온경제",
-      "category": "국내 증시 / 코스피 코스닥"
-    },
-    {
-      "title": "코스피·코스닥 5%대 동반 급락…장중 매도 사이드카 발동",
-      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5KcmQ4blpoTUtvU2NfS1FvZDEzaHVua0EyWmxUVUVhMkhETXBuMzk5a0NpcmZGR0pyUEdYNFAzWmxuUlBBeVJXMHV6V2V4aUxQdGxnWVZrbnpDVEc3MmtEWUFSQUFCQTjSAWpBVV95cUxPazVxRkRWb0JJblJ5RnZBZE9Eay16ZnVTTEJocTRmZm1jU2pwdFI5eXJ5aC0xbUhWOGtoRDdsc0x1LTJVZEFLS08tcHFvOWhGREhXeGRsb0RuWEZBdWtMWUdGU3lCTWhYc2RR?oc=5",
-      "source": "센트럴경제",
       "category": "국내 증시 / 코스피 코스닥"
     },
     {
@@ -69,9 +69,9 @@
       "category": "환율 및 글로벌 원자재 시세"
     },
     {
-      "title": "\"반도체 꺾이면 환율 다시 뛴다…美 주식 비중 90% 바람직\"",
-      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9kemF6djlZN2FhSWRsZlN6SkR0R0VjbnQyUUs2VDEySHhIamFfTS1vc3l3Z1FlTzVZS0IzNUVsTTdMLUJ5dEVfck9JaXFVREdjV0xTbk42NGVEUTlBUDc5cg?oc=5",
-      "source": "뉴시스",
+      "title": "환율 2년 만에 최저인데 코스피는 추락…'원화 강세'의 역설",
+      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1iYVBvVkFuRmlCOEM3eDFObFZ6MTZXTHlWM2o1N3drSXdjb3NzUHZUUkdodjJqZVpHYWs3b0h3UHlaV0tRam9RcUtzVVE4YUx1YURGcU1PenBETzhOVktOV3NLNkM4Q3V4eWZxUGJR0gFzQVVfeXFMT2gxeVZlS29KS2R5NlViaDZsaFNsRWFIN0pEOWdWNHZiN1ktNE1tLVdXc1RpTEtVbDd6WFotTE9NOGxja0hFVTNpMGd2eENleC03UnZMTWZNaGd2THJwelpPY2Q4a1FhQXY0eDFkZl9WdWdxWQ?oc=5",
+      "source": "한국일보",
       "category": "환율 및 글로벌 원자재 시세"
     },
     {
@@ -123,15 +123,15 @@
       "category": "정부 지원금 및 정책 소식"
     },
     {
-      "title": "보령시, 소상공인 사회보험료·고용보험료 지원으로 고정비 부담 낮춘다",
-      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE10NWVoUUd6RUViZ3BhTG5LTlJwQ3NWQjF2THRrMjZkZndhUmt6bzdGYVFwcUpPTmloYnpSUVFoZWtiQ1ExSmRvSXBXQXhoalhnSGpJMTAxMnlaMEwxX3ZaZ01hSGZRQQ?oc=5",
-      "source": "https://www.kgdm.kr/",
-      "category": "정부 지원금 및 정책 소식"
-    },
-    {
       "title": "보령시, 소상공인 사회보험료 지원사업 신청 접수",
       "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9naGZnYjhGQkVLWmhLWXEyMWlMZlVLaVpNWFB2ak9LaVU5VzI3RlpuQXVTYVFObXNaQVk0dHNqamx5a1dRU0dnaUQwLU5NaFNVQ2xuUVJIejZHcTlZWDhna1JXb3RsODdtV1RVMmw5NVRYV3Z2?oc=5",
       "source": "글로벌뉴스통신GNA",
+      "category": "정부 지원금 및 정책 소식"
+    },
+    {
+      "title": "보령시, 소상공인 사회보험료·고용보험료 지원으로 고정비 부담 낮춘다",
+      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE10NWVoUUd6RUViZ3BhTG5LTlJwQ3NWQjF2THRrMjZkZndhUmt6bzdGYVFwcUpPTmloYnpSUVFoZWtiQ1ExSmRvSXBXQXhoalhnSGpJMTAxMnlaMEwxX3ZaZ01hSGZRQQ?oc=5",
+      "source": "https://www.kgdm.kr/",
       "category": "정부 지원금 및 정책 소식"
     },
     {
@@ -177,6 +177,12 @@
       "category": "야간선물 / 파생 / 투자시황"
     },
     {
+      "title": "‘광전달’ 관련주의 하락",
+      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE5uUFVRMzdTdFlLb2ZMMXkzS0ZqTTNhbHVDdGpnNkF2TGpKMk9fN0NubE5WUmRUNFd4c3ZQY3k5UGhFcy0zMUp6UUcwUG1pNnVleW9zajhhMTdQbktrM1BQWE1YMnlSbW10bWZCWk42Q21XaUJCT3V6V241ZFI?oc=5",
+      "source": "네이버 프리미엄콘텐츠",
+      "category": "야간선물 / 파생 / 투자시황"
+    },
+    {
       "title": "AI 자본조달 우려에 필반 2.6% 급락, 뉴욕증시 혼조",
       "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9lcTRWOUZ6UWJsaGNsLWFRMFBlVDRtMVRmVXFCb1Z3U3JwN3ZyUlpqTWRLdEhNakwwSTJqRDQwSko1T1FtamxYZ3N3TEo2RTlmWEhWQmozR2RDQ2xlT2hpZDZPYzRHTXBVdGZReGpKZ9IBb0FVX3lxTE9lcTRWOUZ6UWJsaGNsLWFRMFBlVDRtMVRmVXFCb1Z3U3JwN3ZyUlpqTWRLdEhNakwwSTJqRDQwSko1T1FtamxYZ3N3TEo2RTlmWEhWQmozR2RDQ2xlT2hpZDZPYzRHTXBVdGZReGpKZw?oc=5",
       "source": "글로벌E",
@@ -198,12 +204,6 @@
       "title": "유가 상승·반도체 약세 속 美증시 혼조 마감-[글로벌 마감 시황]",
       "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9NS0FIa0pCaF9lbS11WjhNblJOQjFCMVVKdWtySTRXS2VmYjUyMnhaWnhrRmlMWm5WUHI2RUkxZmZrOFlXLUd5TnZmZmR0NWxtd2VGYTQ0Z2tuRkdVUVdzWk5JQ19tVUZyRlc3MVlWZ01IcEFDN0Rz?oc=5",
       "source": "한국경제TV",
-      "category": "야간선물 / 파생 / 투자시황"
-    },
-    {
-      "title": "전체 화면에서 메뉴가 숨겨지나요? 스포츠 마틴 배팅 디시",
-      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBtbTN2VG4ySUhKU3FlWGNnWWdtTHVLT3hubE1rX19OM3gzTXVpMkVuOEU1YTJJNV9lNG5BYjlMRHJQSi0xMllsSmdDb2tIZU9MS3ZGMk9QaUs3MUFvbkFV?oc=5",
-      "source": "Calgary Roughnecks",
       "category": "야간선물 / 파생 / 투자시황"
     }
   ]
