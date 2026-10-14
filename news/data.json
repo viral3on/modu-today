@@ -1,11 +1,23 @@
 {
-  "updatedAt": "2026-10-14T08:30:41.101764+00:00",
-  "updatedAtLabel": "2026년 10월 14일 17:30 KST",
+  "updatedAt": "2026-10-14T10:57:04.035693+00:00",
+  "updatedAtLabel": "2026년 10월 14일 19:57 KST",
   "items": [
     {
-      "title": "코스피 6일 연속 하락",
-      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE1pUXNmSW5WYnpYVWl3Nk9namYwbFdaYk5GRU8xVzNReXRTeldzSkxqZEF1WGVmbWZkS0ZPWF9ScWRZbTlENXkyVkVfd3pyanh1TUpNUjEwSTlVU00z?oc=5",
+      "title": "[오늘의 증시] 10월 14일 코스피 코스닥",
+      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE9MT0dCRHJpUVN2YmZXR1k0Qmd6RVYxXzR0cjR4NjBlTGd2TFBMdTNFdi1UR3FYeS0zR0dySEIxanVUSDdlaV8wVkc4cw?oc=5",
+      "source": "뉴스1",
+      "category": "국내 증시 / 코스피 코스닥"
+    },
+    {
+      "title": "코스피·코스닥, 하락 마감",
+      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE1sUTE1QjFxRm9EUklKbGQ4SVNyM0NwdHg1dlZqc0tkcTlKelBCMXJFTXdpd0dMMkFuYVZscTY3TTZoT2NZbERzX2tzUTVEWldvd3lDVzhNMEJidzBS?oc=5",
       "source": "뉴스핌",
+      "category": "국내 증시 / 코스피 코스닥"
+    },
+    {
+      "title": "[증시 오늘] 코스피 0.44% 하락 6,008.81",
+      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5fSU1rNm9JMmpyMUQ4Y2VDbmg5dTFObjNKNW1VVW1aSHR0Y1lRamN2aUdjTXBiaVViWUZ3Y3Z3Q19FdnNDajlzY2hOYU1HWjJsRXhaWV85UEVuM2l1TGZGakIwMDBfb3M?oc=5",
+      "source": "빅터뉴스",
       "category": "국내 증시 / 코스피 코스닥"
     },
     {
@@ -15,27 +27,15 @@
       "category": "국내 증시 / 코스피 코스닥"
     },
     {
-      "title": "코스피, 5거래일 하락 끝 반등… 코스닥 820선 하락",
-      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE91VXczV25SSF9jQ2Jqd1lrbHNra0IxSk9jcW80UVhTdGF1UE4zV3E3dXFiRnZQSWFCZHFkYzg1Sk4tZFluZktRNDdmUTFZR0NZcmVsdmZqLXE2Q1ZhdDAxVHE1d09HMmdTTmc?oc=5",
+      "title": "코스피 6000 붕괴…삼성전자 6%대·SK하이닉스 8%대 하락 : 네이버 블로그",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQWDhoQkx1ZHFBVlRJalFqQ2NNdjBzMFNTQUxmNXFJcGQ3bDRsaFRhLXRwZlBBWnRaTkpiQlJVNml0VUpSenJocFpzVkRXR0oxUXlGOGNZYmpGakdSS1Y2RENXTGtKdG93NkVwUVZWeDZPYWRIb2lDWGR4TkJsYkRfenA1V2pTR3dkelNCVUNrbw?oc=5",
+      "source": "Naver Blog",
+      "category": "국내 증시 / 코스피 코스닥"
+    },
+    {
+      "title": "[포토] ‘코스피는 상승, 코스닥은 하락’",
+      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBQUGxkYzhycWFtQ0pKVXczaHRrZzNkYTZYbGFaYWtBZkZzMzYxMFlabjJraUpfaGtEYjNKcG5ZYnhzMVVhVmY1SFFYR0hZVWFVRXdiM3ozTGlWcHBWREZCU2lRQnRKV2xuU1E?oc=5",
       "source": "천지일보",
-      "category": "국내 증시 / 코스피 코스닥"
-    },
-    {
-      "title": "미 증시 약세에도 코스피 2%대 반등… 코스닥은 보합권 혼조",
-      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFA5UFBzemU1T1hfZkNvQzBlQmxJNUlmRThwTGxmMHNoY3piaHdITnNYcFVKcEZ5MUtPaTA4OWtla2xadTZab0ZrbE1xbXd1UUp4OUJkQ3NRODhCcF9ZRF9WRVc3SUJzRnM?oc=5",
-      "source": "M이코노미뉴스",
-      "category": "국내 증시 / 코스피 코스닥"
-    },
-    {
-      "title": "코스피, 외국인 매도에 6008선 마감···반도체 투심 위축",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5CbUNPY3F1bUlyaWw1NzREU2NGVEIyNW5IU04xN2lsQWptS3hQN3pGMVp2N0xoOVNZY01zbFlublZZQjVUeWNDVUt3LUZ4QWYtVGEwd09uNng5OGxBS3ZzQXlCV1F1aWltejVwbw?oc=5",
-      "source": "스마트비즈",
-      "category": "국내 증시 / 코스피 코스닥"
-    },
-    {
-      "title": "코스피 6008.81 마감…시총 상위 모두 떨어졌는데 상승한 '이 주식'",
-      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5vclBsQXhTU1BQM3RkSmhQOVduOUVQNnl6SGxjZWxGMTVwMjlRT3R4RmtySTcxV0lMNFRnOW9oZWwxdGNZUjFoTWVKNVpiT0pZNHZzakxn?oc=5",
-      "source": "위키트리",
       "category": "국내 증시 / 코스피 코스닥"
     },
     {
@@ -45,15 +45,15 @@
       "category": "환율 및 글로벌 원자재 시세"
     },
     {
-      "title": "외국인 증시 순매도·달러 실수요에 ↑⋯\"1340원대 중반서 등락\" [환율전망]",
-      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9pc1ZON3pKN2xad3l5SW0wbURrSW4wckpsQjdKSmkyQVhwaFA4dmZkSGlDVUM1S1RDM01IemttUVFDT0Uxd0FZODE4cUJhYUdWMTNnbg?oc=5",
-      "source": "이투데이",
+      "title": "원·달러 환율 1340원대 초반 등락…반도체 약세에 상승 압력",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1nSzVISkpqZDNIQl9kMzdDZ1NfTjJLay1WSE1qSkxrRnBFVnh3eG1aTWg3YWVDQWRTWUF4enNjVUM1X0hZOHlnSlpOOUtGcWdHaDk1TGJLQUY0cDZkVm9hd3M3YmNzMDY0RzFMdDkyU2PSAXRBVV95cUxOYzlvVEM1RHpKNnRLNHdKc0FoUnp4alNhOGZYUzlSWXQ2U2haRFI3V0E4MWJiX3lZM1BlM3pDdTBYaGY0ZGRVUGNVWjdDbkMxVkQwLU9XV25ETTd5akxDRVBlcWlMb3RPQVVpdlQwZnpQZmhSdg?oc=5",
+      "source": "팩트인뉴스",
       "category": "환율 및 글로벌 원자재 시세"
     },
     {
-      "title": "부산 제조업 경기 전망 4분기 '반등'…수출·내수 모두 호전",
-      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE8wX0N0djRNYU5OM2JReWplX0E0eWZ2Y21GYldMeWdUUENHWFh4Y1RLMUREN3Q4S1VES3JmdVBjXzQtUnBkcWxzTFkzVUZQejlzbnNlTzZ5czZVS1MtOExmR9IBYEFVX3lxTE8wX0N0djRNYU5OM2JReWplX0E0eWZ2Y21GYldMeWdUUENHWFh4Y1RLMUREN3Q4S1VES3JmdVBjXzQtUnBkcWxzTFkzVUZQejlzbnNlTzZ5czZVS1MtOExmRw?oc=5",
-      "source": "연합뉴스",
+      "title": "외국인 증시 순매도·달러 실수요에 ↑⋯\"1340원대 중반서 등락\" [환율전망]",
+      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9pc1ZON3pKN2xad3l5SW0wbURrSW4wckpsQjdKSmkyQVhwaFA4dmZkSGlDVUM1S1RDM01IemttUVFDT0Uxd0FZODE4cUJhYUdWMTNnbg?oc=5",
+      "source": "이투데이",
       "category": "환율 및 글로벌 원자재 시세"
     },
     {
@@ -87,27 +87,27 @@
       "category": "공모주 청약 및 IPO 일정"
     },
     {
-      "title": "IMA 가입했더니, 부가 혜택 와르르",
-      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBXOGswZXlQaGJiUi01VXdSdnhud2Y4Sk1mTzRBenYxT2FzRVp2SzdqUnZKZGl0Z0JQczJ2ZmdtbG81ZDJpRDZvV21xTzRrSUxkUV8tQmltMTlVREpHVEJuN3NfWEFNUnBrU0hfbkZrVWvSAXBBVV95cUxQVzhrMGV5UGhiYlItNVV3UnZ4bndmOEpNZk80QXp2MU9hc0Vadks3alJ2SmRpdGdCUHMydmZnbWxvNWQyaUQ2b1dtcU80a0lMZFFfLUJpbTE5VURKR1RCbjdzX1hBTVJwa1NIX25Ga1Vr?oc=5",
-      "source": "DFT 대한금융신문",
-      "category": "공모주 청약 및 IPO 일정"
-    },
-    {
-      "title": "[IPO] 엠에스바이오, '흑자 바이오' 경쟁력 통했다... 청약 1538대 1",
-      "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE5oc0owV1ZSR2FfV3dVX3I5MGhOSl9VQTlFNlpUc0VnYmZ6NkNTRDRqWkJkZlJnNVJxVy1ZT19VQWxna0lXdFdtV1lMTUxUVE8zaEo1T3AyZmhwODdad0s1ckd0UnlQNVQ4TFNQdGk3eDdKUdIBdkFVX3lxTFBKMUs1dDhtN3VMbGhzWFZqcFgyeEI0M0RNTm0wODVGcGM1UkZ5UUpWMW5hVTVZVG9QeWVBQV9jMlNCWGZQODFZaXQ3clRJNXRmNUxIbmxtanMyX3Zob09aaVNnV3RJclBlTWxvUi1sWTdJVWt6MXc?oc=5",
-      "source": "인베스트 | invest",
-      "category": "공모주 청약 및 IPO 일정"
-    },
-    {
       "title": "(10/14) 오늘의 관심종목 [홍라희 관장, 이재용 회장에 삼성전자 지분 2.6조 증여]",
       "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNVlBfYXdqUFRJLTZoOEVwdWtxREZ5M0RlZXJZbUIwaDRWU09XRE1RUnRlaF9WUVgyeDJmcGcyU1p4Q0F5cnhFOXl0cFAybGwwMUw1ZDRYdXY4R1VQejRUb05WY2lhVHZtU3BoUTB2aFZyYUJpejVzdkhDb0R6T0UxM2VHTDZ2RHVlNGJv?oc=5",
       "source": "네이버 프리미엄콘텐츠",
       "category": "공모주 청약 및 IPO 일정"
     },
     {
+      "title": "신영증권, 올해 일반기업 IPO 공모 1건…후속 딜은 언제",
+      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5TRDlNcEhrMXZRSXJUZ3RrcUdzeEd0V2FKejlyS2ZSdGpoZTFZQ1ZZVEl4UUtzblZVT1N5dk5rUUJJMjJaM1V4UVI4WFZIQXpiUW9Cd01TTnpkSVRNY09CTXZlNk9FUEtqdTBYRlhfbw?oc=5",
+      "source": "뉴스톱",
+      "category": "공모주 청약 및 IPO 일정"
+    },
+    {
       "title": "공모주 ‘큰손 사전 배정’…가격 낮출까, 특혜 만들까",
       "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTFBoQ3FRbWx6djdLSFZqSzBTeWpwNFhYTFhMbGlhWnVnVElKWHRublJsRFl4d09GNXB5bXp4OS0wdVVFZjRwRXlpbUI4V3NzckMwT2dDeHlINFVPcWRraUhzMGI5bmtRQVlRQ244OXpZVll5MFXSAXdBVV95cUxNcEt4ODdvRGJ5Qnd6Mmp2NVhwTWpUamlHdlNncnh5QnQzQjUzTDJzQjNTLUtqZXBZaU1ZTGpER3dDaUZIb3lpTTBEOVcxcTNFc3R6V2haVnVLdWwzLUJUVHdmWHBfd2IzQnFWM1Izend3b0NhOTlIOA?oc=5",
       "source": "스트레이트뉴스",
+      "category": "공모주 청약 및 IPO 일정"
+    },
+    {
+      "title": "인텔리빅스, 30일 코스닥 상장 목표로 공모 돌입…주식 76% 보호예수",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9UUnYyenV1R1RlZDBYd3NxR0lZVEJUZFJtNzZ2ZlhOSHdLUGZvSUt1S3VfREk0SEVrVFdSZFVrSFZNNlBQb1BWUGZpZFM1S3VTOWFHRkhLUmk3LXF4dDJaU1l1TjlpUjR1bjY2MG5panjSAXRBVV95cUxPOGpYTWgwUFJhYVFiUFRjYU9HQTdDa2hnM2RnaEhqZjhla1NUeTZzdGt1N2xJR2pSdGtUU2tUYzY3Y1dXZ1BqdGhnaTdKaHdBQW1OdXAycWFsTW1MUVdqVktBNnctbnJRTk84NkYtMGZZTzdfNQ?oc=5",
+      "source": "IT조선",
       "category": "공모주 청약 및 IPO 일정"
     },
     {
@@ -195,9 +195,9 @@
       "category": "야간선물 / 파생 / 투자시황"
     },
     {
-      "title": "코스피, 급락 충격 딛고 장 초반 2% 상승…6100선 회복",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBXM0NzMFpRWHlEdDUycE05QUZmT1U0N1JfYU5NaGVEWm85OUJuUy0yRjRjZ1YyeHVXM3J4LTQtTkUxcUpYb3lYTmJJRTg0cmlBaUdfUl9VbWZBcHpBRy1qaDdOcVMxX2x6WE0wdw?oc=5",
-      "source": "스페셜경제",
+      "title": "휴대폰 화면 밝기와 함께 점검할 마작 1996 가독성",
+      "url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxQZGFFcEdpU0hSUHdHemlXckRDMHlvVDZyeHc3S3R4MEV3THZORzJBcktxSDJ2bWNseGdLZ2UwTnlvOUpjQVk5UUR6SUV3UkVJSlFkQzlCUllWTFJOQ1U3ZnBEbndSWkk2QUxkTHpuVzlza1JGVG5XdVJGMjJaVTBPTVJMRy1NOFZ0ck1KdXhxbEVCSG9KU05iNHdsN2lycUhKZXpzQjJNaG1wYnN1eUh2Ri1rdFRMck5iYzZEdVlPUUpVQ0paYXJobXU4ejVqbjNTY1hVTFlpZDZ2alZLdEpHbkE4ZnQtUFJSN0EtczlR?oc=5",
+      "source": "Calgary Roughnecks",
       "category": "야간선물 / 파생 / 투자시황"
     }
   ]
