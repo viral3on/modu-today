@@ -1,11 +1,29 @@
 {
-  "updatedAt": "2026-10-16T10:25:32.534581+00:00",
-  "updatedAtLabel": "2026년 10월 16일 19:25 KST",
+  "updatedAt": "2026-10-16T13:50:03.042481+00:00",
+  "updatedAtLabel": "2026년 10월 16일 22:50 KST",
   "items": [
+    {
+      "title": "[오늘의증시] 10월16일 코스피 코스닥",
+      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE5kZ2R2RzJ5X0FUVU0zeU5CWmRTY0w2Y2NMY3Y1bENteDZVYXJNTWVvOWM2bGRNN1Q4S2xPXy1JSy1CaW9SU2NKTTVLMA?oc=5",
+      "source": "뉴스1",
+      "category": "국내 증시 / 코스피 코스닥"
+    },
     {
       "title": "연일 하락하는 코스피·코스닥...오늘 증시는?",
       "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE1fb3JXV2FuU3BTSHlpbHVwai1qQnpBWmJKa2dWTnhWUHpJSXh4cW9OM0ZEcEt6OUo3TGhLZzRCOUUyanMyWTE3ZFZyMDNndkZCQzVCbDdhb1Nhbk1sRFE?oc=5",
       "source": "YTN",
+      "category": "국내 증시 / 코스피 코스닥"
+    },
+    {
+      "title": "저가 매수 유입, 코스피 8일만 반등",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBwbEI3YkhtQl9jaUplX1lxQzJhakd0RG9EczZTblBNR1FpeEEzTnJjSGxkS0Z5VG5ERjBLSUFHUEdLSXdLMXZ2X0ZkRndSbjBxVU1Fb1o1SkJiazk2V2JMa1prTUUyaXRvbndaSw?oc=5",
+      "source": "KB Think",
+      "category": "국내 증시 / 코스피 코스닥"
+    },
+    {
+      "title": "코스피, 급락장 딛고 8거래일 만에 반등…2.05% 상승 마감",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1ObC1zdTllODVXWG96OFhiTVJUZWs2QWg4VGhDNTBQWWFTaFc4a3hfbEZ1U1R5c2JQcjlkbm5NVXlpb2xwcE1VSXlWT19GNElibVZibVloaWJYZjNIRjIxMnZ6Mk5rR3hWWWFjN0VYOGLSAXRBVV95cUxPdjBFQUNGeHp6bTRFaUV0RXR0aHlKWUFQTW5vOVAzR080aXNkQVRtX0s4MDJVMUFMdlVyODhzeGVGNkJHVndLSkU1djdBRV9rclFUZEwxTy1nSnEyWnBvY2luY2FRcGxuT2Q3Tmc0US1tejNZMA?oc=5",
+      "source": "산경투데이",
       "category": "국내 증시 / 코스피 코스닥"
     },
     {
@@ -18,24 +36,6 @@
       "title": "뉴욕증시 반등에 코스피·코스닥 동반 강세…8거래일만 숨통",
       "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE56RmwyWkRocjZRenV5YXpHWF8yQ0t6cHRHNnQwLXdtdVNiYVdGU0lsSzZrdEdaRFZPdWxaSGlSei1Gd2M2WjdVX0ZVVnJLMEJTM2RXODd6cGdYNG9tLVJSSzd6UEQ?oc=5",
       "source": "서울경제TV",
-      "category": "국내 증시 / 코스피 코스닥"
-    },
-    {
-      "title": "코스피·코스닥 반등 성공…코스피 5,660선 안착",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE45TzVmZDkydnV6T25MYXl1Q3hEZzZ4OEE5TGZQdTF1M1VSWkRscjBLbWotaV9KMldGM1VhTWx3dmVONm8xTmdJUkt3OWMyOXNyOVo0RmVUWndJT25EUmU3RUVwWGVEa1VKYWtwZg?oc=5",
-      "source": "프리진경제",
-      "category": "국내 증시 / 코스피 코스닥"
-    },
-    {
-      "title": "’전날 7% 폭락’ 코스피, 장중 3%대 반등…미 국채금리 하락세 영향",
-      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1WNE1ZU0NRa1pLZjJyNGJpbm85QjVQYnd2RlB4ZGtJcm5QaFp1bVFnZWUwNVpYMTBnSzVueTU5dnBVb25RTG40NzNySXFfTlVMZHpFVmYtYVVEZ3BUZkh5YVJhc1pZNVE?oc=5",
-      "source": "한겨레",
-      "category": "국내 증시 / 코스피 코스닥"
-    },
-    {
-      "title": "[마감시황] 코스피, 8거래일 만에 반등…코스닥 4.46% 급등",
-      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1tdGtmVFltWV9IS1o3WnBocHdpdGdBN3lWRkhzTm1YQUFzVjBJUjFuQldVeExDSnlvYjVpN2htMDZwTDJOTkN3ZkZqQVlUQVVIQkdjLUlnd3lLak54NExBMS10eUsyd0xRM1doX1NBUFQ?oc=5",
-      "source": "신아일보",
       "category": "국내 증시 / 코스피 코스닥"
     },
     {
@@ -87,27 +87,15 @@
       "category": "공모주 청약 및 IPO 일정"
     },
     {
-      "title": "[GJ포토] 배우 강훈, '심쿵 아이컨택'(쇼파드 Chopard)",
-      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE9HQm9hVl9ZZzdDS2otOWdTODB1T084WDhDVnpxek1USGtORmF3VUpJUkxXN1dtbmFURHFEQ3pGaVprakwyZWY0MTFLY1VuX0UyNjBVZThNQQ?oc=5",
-      "source": "디시인사이드",
-      "category": "공모주 청약 및 IPO 일정"
-    },
-    {
-      "title": "[GJ포토] 배우 박보영, '예쁨이 한가득'(쇼파드 Chopard)",
-      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE9iMW11VFdxcmxFVDBLb0xPZ0E4TTN3cU1VRy13Q0JERWZieGVmWXhFSG5kNS1CeVhtdTNrZXk0YzJMYmxVUVp1YXluRU5qRkRBMjM0NnJKVQ?oc=5",
-      "source": "디시인사이드",
-      "category": "공모주 청약 및 IPO 일정"
-    },
-    {
-      "title": "[GJ포토] 배우 박보영, '우아한 발걸음'(쇼파드 Chopard)",
-      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE9zY0U3bFVIdUUwTkRRQlNhbDRIMEpONk9EX1NEeEJ6VjNJNFQ0S3lUazBXeDdFbGFjMGRsZGZSaVZ4STZwRUJ6bjZldlY4OGlSMGJCYU5pYw?oc=5",
-      "source": "디시인사이드",
-      "category": "공모주 청약 및 IPO 일정"
-    },
-    {
       "title": "티앤이코리아, 공모가 상단 1만5300원 확정",
       "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5yb1BaS2FXbE4zYXlPZUhENFZlUFV6RVJIVU94TzZqdzlhN2h5X1FLQk9iUDZQdDBOU0FnOFJrMG1jdk9LRzFJdHFpUVE0ZjhCcWxsNWZ6Y3U3NzlPbG5TV0UxSC13enN0OXVma1Nsdw?oc=5",
       "source": "뉴스톱",
+      "category": "공모주 청약 및 IPO 일정"
+    },
+    {
+      "title": "[주간IPO] 10월 넷째 주, 유캐스트·티앤이코리아·크리에이츠 등 공모청약…엠비디 수요예측",
+      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTFBjdU41WElSSk9FV0NKSm1lOFQxcGxFLTdHdHNSdGo3WkYzUWhiMHVuU1F2MUpQbXk5bzVPQ1dtLV9NOUtiVkFSTkl3WlJvU2NodmN3MDZDSWdVV3c2aEw4MmZRcXRobGRiRDJ0U215RmR3U0k?oc=5",
+      "source": "소비자가 만드는 신문",
       "category": "공모주 청약 및 IPO 일정"
     },
     {
@@ -117,33 +105,21 @@
       "category": "정부 지원금 및 정책 소식"
     },
     {
-      "title": "변광용 거제시장 3선 취임 100일 인터뷰",
-      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE83ZzVxcXY0dHJLVktjNmZqMm9mSHhlXzBmY3luRGtkeHkwaXlkcTdOQS03bXN3bUFrSTNpRXBJeWVWRVZjcjJSSGlYbEloeVNkcGcyTkZVWGUwYm9rdUkwZGI3Q0JtdEh0?oc=5",
-      "source": "거제매일뉴스",
-      "category": "정부 지원금 및 정책 소식"
-    },
-    {
       "title": "[동향] 가뭄에 단비였던 ‘경영안정바우처’ 내년 예산엔 쏙 빠졌다",
       "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5kWmU5NnZURTVtNzBtaUE4ajRLdnlHaU5xaFJHN1lRU215dm51TTlhdWgzdE1wMkFsRFl1RlhnVFBRY1I1azMwZVg5cVYwV3poRGtKQ0YzbUpoVkFJekJXMjlFVDdZNDFCMGlBMnV1VQ?oc=5",
       "source": "아이러브PC방",
       "category": "정부 지원금 및 정책 소식"
     },
     {
-      "title": "부여군 소상공인 사회보험료 지원, 10월 30일까지 신청",
-      "url": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE03LXNLOWcwN254WEgtU0FBYjhOSFJVRHlDQVk4cmhOQUM2b2h1ak1FTkJNWmQ1RWhhdzB2cWxkNVZZZFVDY2F4bGlB?oc=5",
-      "source": "뉴스N연합",
+      "title": "변광용 거제시장 \"시민의 이익이 최우선\"",
+      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9VbU94NmsyV3VYUUZFMjZfNHdfMFc5bHNNd1IxcmU2NmhfdTRSZThOTDBGWHZVQWVPVXZyZHdoMTlyaUFSdHZmZlJRVDhFOGp4OWJweG0zbzFERWE0bGtSVTd6NGZDY3A3eEdyVU53?oc=5",
+      "source": "거제뉴스아이",
       "category": "정부 지원금 및 정책 소식"
     },
     {
       "title": "“지자체에다 왜 돈을 줍니까”…송전선로 지원금 논란",
       "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE90cWh4Qy1xYU1PMTFPeXZPR2dXRUN0RzNYTTNyVmczejJqU055VWZGVTlWenAtMmJXd0pzNDBTYkhQa1pnQjdFb3p4RHZ6SFE?oc=5",
       "source": "영암열린신문",
-      "category": "정부 지원금 및 정책 소식"
-    },
-    {
-      "title": "행정안전부와 지방자치단체의 저출산 지원사업 역할 배분이 요청된다",
-      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1jMkhXV2tTMVVUa3R3Z3B5MXcxTW43QTZSOTdkd3oycFNVQXJhMDNDZVNCbkRrcXNjX0MySndvMlV1clV6cGt1YS1CcGlrX1JwWi1SdEx5VXN0eXJncUpmYTNuMFhoVHUxNVIw?oc=5",
-      "source": "열린정책뉴스",
       "category": "정부 지원금 및 정책 소식"
     },
     {
@@ -171,21 +147,27 @@
       "category": "미국 증시 / 글로벌 매크로"
     },
     {
+      "title": "뉴욕증시, 상승세로 마감…나스닥 0.08%↑",
+      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBRLW9pQjNWY2J0MFJWbmxOTnBKOFFqZnFyQ1hGR2dtSTlLZWdjWHV4bEdqSW5OTnI2S2dfNzdTU2VTWTQ0ajlPaC1lZTRoTkph?oc=5",
+      "source": "블루밍비트",
+      "category": "미국 증시 / 글로벌 매크로"
+    },
+    {
       "title": "뉴욕증시, AI 투자 불안 딛고 반등…국채금리 하락에 3대 지수 상승",
       "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9OU0ZKWWctTmtIRFd4Y0ZOc25uSkdrdE1uaGRQZ3F1Z05tTkN3cURjRTM1cVRsdXVZbkxWc2xVQVl1elMxc09ZMHpvdzZDRjlWTy1fZVFEbWQ1SWZacnF0c3AyQTBrbjh5bkM1TTE0SkfSAXRBVV95cUxPbU9HM1R4NTNvNnR4V0ZNWHF6NU40WWMxeG5tNzlXX2ZSdUEzNFhYbld0UGFOM0FPV3FSQkpFYy1qNzV0ZHk2OVZmN3NuOEZ1LTNpMGExcEZnV3BpeXNWLUtPNmtELVVZUG5GRW9LVVNkZk9VeQ?oc=5",
       "source": "산경투데이",
       "category": "미국 증시 / 글로벌 매크로"
     },
     {
-      "title": "뉴욕증시, 혼조세로 전환…나스닥 0.27%↓",
-      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBWN2dYM0pzNDRsRlFadmlkTzhxMEtfTHo3R2pZMHkzNDR3Z2Y0TU9CWUF6VW1pMjE2TmUyaHV4aUxhcDJrSGx2XzVHdWZvN05C?oc=5",
-      "source": "블루밍비트",
-      "category": "미국 증시 / 글로벌 매크로"
-    },
-    {
       "title": "[오늘의 증시]5500선까지 밀린 코스피, 반격 나설까…야간선물 3.9% 급등",
       "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE8ydXpSemJhUTFVZzBRa1RuN1J6c2k5STZVQkltR2lKeEZLMk9oMWN1a25wUTAwd01vaHFxNmRBckhfTzNadHVraHBqbkt3eDFLYldhZkF2OWNLdzYzbjdfX9IBeEFVX3lxTE1hb3g3N0xEQWZzdDVwcXJDdkd2NlhuZ29KSnNMYlljQ3ZMUGc3bkUzMjI0VlpiX21PSGZSTUE5cDRjMVpSaDMwZFFXcHpaYlFsRF9Ua2lWUVl1enhwRThQNVp0TG5qVjlWT0ZaR3dtR3BBQ2NUUXVyUA?oc=5",
       "source": "뉴시스",
+      "category": "야간선물 / 파생 / 투자시황"
+    },
+    {
+      "title": "‘검은 목요일’ 지나 반등할까…야간선물 오른 코스피, 외인 수급 관건",
+      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOcVY1a2xUangzRHhQYmRNblR1ZWU3ZWhQT05VM3F6akpOUi0zVkEwMGZ5MlZuQ0hUdDdsNUo3V0ZVVWxOQ3NWRFJFd3p6WldzTVBRVjNIaFJQb1QzdFJxdkRRYjF2WEtxWFFFakl6Z0NKTnZobmw0NFhvM1FRSVNfdw?oc=5",
+      "source": "이데일리",
       "category": "야간선물 / 파생 / 투자시황"
     },
     {
@@ -201,21 +183,15 @@
       "category": "야간선물 / 파생 / 투자시황"
     },
     {
-      "title": "‘검은 목요일’ 지나 반등할까…야간선물 오른 코스피, 외인 수급 관건",
-      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOcVY1a2xUangzRHhQYmRNblR1ZWU3ZWhQT05VM3F6akpOUi0zVkEwMGZ5MlZuQ0hUdDdsNUo3V0ZVVWxOQ3NWRFJFd3p6WldzTVBRVjNIaFJQb1QzdFJxdkRRYjF2WEtxWFFFakl6Z0NKTnZobmw0NFhvM1FRSVNfdw?oc=5",
-      "source": "이데일리",
-      "category": "야간선물 / 파생 / 투자시황"
-    },
-    {
-      "title": "[마켓뷰] 휘청했던 코스피, 변동성 이어지나 반등 시도하나",
-      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBrUmo0T1pKWTl6TDh4aV9WNHk4cGZtQXVheGx3RC1zOWM1TDZaWFVRbllRc29fZHA4ZmtaSE94NlkzYnBjMFFJMUd3bm5YakJsMWtTQnVqSW1JXzlzZnR0TtIBYEFVX3lxTFBrUmo0T1pKWTl6TDh4aV9WNHk4cGZtQXVheGx3RC1zOWM1TDZaWFVRbllRc29fZHA4ZmtaSE94NlkzYnBjMFFJMUd3bm5YakJsMWtTQnVqSW1JXzlzZnR0Tg?oc=5",
-      "source": "연합뉴스",
-      "category": "야간선물 / 파생 / 투자시황"
-    },
-    {
       "title": "[모닝 리포트] \"코스피 폭락 뒤 반등 시도 전망…美 반도체주 낙폭 축소\"",
       "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE1xUjhoTnlIdDhYX21TUGhrVmJpOGhITlZqMVZXQTR4aTgwVnZJS3E0aF85YjZfOS1ELXZoMTBkMXNjbXF5YnJRNHYxU2gwRlBRbFFjcHNlWFBiaDNx?oc=5",
       "source": "뉴스핌",
+      "category": "야간선물 / 파생 / 투자시황"
+    },
+    {
+      "title": "[증시 포인트] 저가 매수세 유입 기대...반등 시도 전망",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1KOWZFRnZ3a3lGdGFabXlsYWlLbGZWY3dpVlFmYW8yRVFuTXEwVDBVRXNHazM5RjBKeEgzY2M5ZTZqQ1NfRm1teG5CeThLT2g4R1JJdlVHLTZSdEFmOEktQUlMMXVIU2NGZzJlN05Cb3U?oc=5",
+      "source": "오피니언뉴스",
       "category": "야간선물 / 파생 / 투자시황"
     }
   ]
