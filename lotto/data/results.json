@@ -1,32 +1,45 @@
 {
   "source": "동행복권 로또6/45 추첨결과",
   "source_url": "https://www.dhlottery.co.kr/lt645/result",
-  "updated_at": "2026-10-11T15:16:05+09:00",
+  "updated_at": "2026-10-17T20:50:58+09:00",
   "latest": {
-    "draw": 1245,
-    "date": "2026-10-10",
+    "draw": 1246,
+    "date": "2026-10-17",
     "numbers": [
-      4,
-      5,
-      25,
-      28,
-      32,
-      42
+      16,
+      22,
+      23,
+      24,
+      27,
+      28
     ],
-    "bonus": 12,
-    "first_winners": 10,
-    "first_prize": 3006515775,
-    "second_winners": 91,
-    "second_prize": 55064392,
-    "third_winners": 3102,
-    "third_prize": 1615365,
-    "fourth_winners": 163177,
+    "bonus": 6,
+    "first_winners": 16,
+    "first_prize": 1881025430,
+    "second_winners": 64,
+    "second_prize": 78376060,
+    "third_winners": 3350,
+    "third_prize": 1497334,
+    "fourth_winners": 155108,
     "fourth_prize": 50000,
-    "fifth_winners": 2786728,
+    "fifth_winners": 2608922,
     "fifth_prize": 5000,
-    "sales": 124358734000
+    "sales": 121857105000
   },
   "draws": [
+    {
+      "draw": 1246,
+      "date": "2026-10-17",
+      "numbers": [
+        16,
+        22,
+        23,
+        24,
+        27,
+        28
+      ],
+      "bonus": 6
+    },
     {
       "draw": 1245,
       "date": "2026-10-10",
@@ -1313,19 +1326,6 @@
         37
       ],
       "bonus": 32
-    },
-    {
-      "draw": 1146,
-      "date": "2024-11-16",
-      "numbers": [
-        6,
-        11,
-        17,
-        19,
-        40,
-        43
-      ],
-      "bonus": 28
     }
   ]
 }
