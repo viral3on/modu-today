@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-10-19T16:19:22.134529+00:00",
-  "updatedAtLabel": "2026년 10월 20일 01:19 KST",
+  "updatedAt": "2026-10-19T17:58:05.333457+00:00",
+  "updatedAtLabel": "2026년 10월 20일 02:58 KST",
   "items": [
     {
       "title": "코스피·코스닥 소폭 반등...한때 장중 5,500선 아래",
@@ -21,21 +21,21 @@
       "category": "국내 증시 / 코스피 코스닥"
     },
     {
-      "title": "코스피·코스닥, AI 우려 딛고 상승 마감",
-      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBvcjVib3poZ2hHZ3ZRaThkQ1Q5TE5ORkloMUthLWk3RHNkeElSRFZwRFJKLXQyZEJPY2g0cGR1RXp1TkhMcFVjSmVHRHdoMXJPWkFjcnllT0xCVUkydnJ3N0dSNHhtOWpmZ1E?oc=5",
-      "source": "천지일보",
-      "category": "국내 증시 / 코스피 코스닥"
-    },
-    {
       "title": "이달 세계증시 중 '꼴찌' 코스피…국내 상장사 10개 중 7개 하락",
       "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5vZmV4RzNfRU9JU09vUHJQUDlRU1lmdVI3Q0NVWGpPbGhsdnN2SmxNSkdXblJlLVhEYm5kbG1QcDlDVm5PVUVkZzBWZjlnYWNIRGRZcDczNVFJdVnSAWBBVV95cUxQWFpwMTRUSzFFbTNaNkZ4dy1ZZTVPWGNRelNGTDZUcDUxNjhsblJHUkV0WHo4RDdWclBLdjU4a0FEME9ydkJlZkRKS0xVeGpfY0JnSkduS2RkelRtMjFub1E?oc=5",
       "source": "연합뉴스",
       "category": "국내 증시 / 코스피 코스닥"
     },
     {
-      "title": "날개 잃은 코스피…상장종목 70%가 하락, 세계 증시 ‘꼴찌’",
-      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5JTUlWSEZMdzBRWVR2M2NjR1A0cU02MEVTeFJ0YUtRQXdaRHdPRDAtZzdsSENTT0RJY0QybUlDTkVOeVk5T2lXV21DbmI0SkVPelZSNWNJcXBkX3RETi12RTc1amluVjFNMU1WTkpCRdIBc0FVX3lxTE1jbHRkQVBySkw3eHFwOEJ4NDRHcS16RGFISjM5RU85ak1nSHUwel9JbnpBX1FzWGloMnRvYndxb1hSQ2trc2JEN3laQVl2T2ZTWVB5RmVsQWU0dGthdzlWRTc2cUpjTkRSc2c1aEl3ZGZZS28?oc=5",
-      "source": "시사저널",
+      "title": "코스피·코스닥, AI 우려 딛고 상승 마감",
+      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBvcjVib3poZ2hHZ3ZRaThkQ1Q5TE5ORkloMUthLWk3RHNkeElSRFZwRFJKLXQyZEJPY2g0cGR1RXp1TkhMcFVjSmVHRHdoMXJPWkFjcnllT0xCVUkydnJ3N0dSNHhtOWpmZ1E?oc=5",
+      "source": "천지일보",
+      "category": "국내 증시 / 코스피 코스닥"
+    },
+    {
+      "title": "[마감시황] 외국인 매도세 완화…코스피, 장 초반 3% 급락 딛고 1.8% 상승 마감",
+      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBnTWNwNU5yNmNuY181MTlGTHhMWG5yOXhEbHZLYkdWZkY5amlFOE94RXpEbDBlazNmcHRuRHFyV0o2Wi1XSU1mdDNIamtZRk53dXNKZXdqdkd1bUVX?oc=5",
+      "source": "뉴스핌",
       "category": "국내 증시 / 코스피 코스닥"
     },
     {
@@ -129,6 +129,12 @@
       "category": "정부 지원금 및 정책 소식"
     },
     {
+      "title": "뉴욕증시, 상승세로 전환…나스닥 1.36%↑",
+      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE83NnA5QVBHSGQ5NTNHQUNab2RVaWhrRjVyaE1QcEhYeHVhS1F0NzNfVlJKSWRfTlhRUTdGeHZZRUc3aXoxVG51ZU84Y2xqN3Ff?oc=5",
+      "source": "블루밍비트",
+      "category": "미국 증시 / 글로벌 매크로"
+    },
+    {
       "title": "[속보] 뉴욕증시, AI주 급락 딛고 반등… 나스닥 1.00%·S&P500 0.50% 상승",
       "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5DbVZaTTE5N0xxQXZ4NlZwSkpwY0FfQzI1YVdCdU50VnNEaXpEWFRldUhsV3JWbmU1WHhzYXJ2NFBTdEZlbV9wQlkxVV9QTXdUcUc1RWlyV3gwdC1uTGFLRUVqMjRTQnRsTWRFSWxR?oc=5",
       "source": "국제뉴스",
@@ -159,12 +165,6 @@
       "category": "미국 증시 / 글로벌 매크로"
     },
     {
-      "title": "[美특징주]머스크 \"美 어린이 모두에 스페이스X 1주 증여\"…개장전 '강보합'",
-      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNWjJlbS0xazVFM1R4d2pUT1V5bEYzQzNVRUhCQ2FrQ3lyYzRxUEtVMkZ0ZUphb2J4U1QzbTktdk8zN3EwVlAzQzg2ek5pbVpZNjVnRFhBNDkxM3lWNHVJRlRuZjNPMmhpTXZ3ek5TRGpBNUhEM19rQXZPSktjTW5TMw?oc=5",
-      "source": "이데일리",
-      "category": "미국 증시 / 글로벌 매크로"
-    },
-    {
       "title": "\"삼전닉스 실적 과거일 뿐\"…'코스피 4800선 추락' 경고 [분석+]",
       "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFAteGhrTHR0YnpWdTdmV2VBMGZNZWQzaEFZbG1FWWpFNHVObVZ0SWt2bmR5WTNyc2ZxUVo3OEN6blp3ZjV3blVOS3YwLTZJaW1GUkVlQzR3cllmdw?oc=5",
       "source": "한국경제",
@@ -177,15 +177,15 @@
       "category": "야간선물 / 파생 / 투자시황"
     },
     {
-      "title": "우려했던 '블랙 먼데이' 넘겼다…코스피·코스닥, 기관 매수세에 반등 성공",
-      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9nUnd6MFlyc3BEREFqUWVTMjJNaTlaRUpXamcyTzBqYW5BMFJjZFFVbGlwOGV5OVZHVDlBbmQ1dDQ4TGVUdHJ1Sm1VeENoZTR1NmFHMVR4dk1MY1A2MkVvUmE0N2ZqRHJLTm1Id0xaYw?oc=5",
-      "source": "프리진뉴스",
-      "category": "야간선물 / 파생 / 투자시황"
-    },
-    {
       "title": "[코스피 시험대] \"반등 하루 만에 또 암초\"…美 반도체 폭락·유가 급등에 코스피 '긴장'",
       "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5CdVFNNm52TVVYN3ZqbEZTYmctWkF1dzRHLWtZLWpac3A2WE5XTDhlUVJjWFdrTWh1RC16c2VYM3pxakdxbTI2Tnl6NUVnTE1EcWZTZUVmZmxDaWhLckc0TWxCQWNPcDh4?oc=5",
       "source": "CBC뉴스",
+      "category": "야간선물 / 파생 / 투자시황"
+    },
+    {
+      "title": "우려했던 '블랙 먼데이' 넘겼다…코스피·코스닥, 기관 매수세에 반등 성공",
+      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9nUnd6MFlyc3BEREFqUWVTMjJNaTlaRUpXamcyTzBqYW5BMFJjZFFVbGlwOGV5OVZHVDlBbmQ1dDQ4TGVUdHJ1Sm1VeENoZTR1NmFHMVR4dk1MY1A2MkVvUmE0N2ZqRHJLTm1Id0xaYw?oc=5",
+      "source": "프리진뉴스",
       "category": "야간선물 / 파생 / 투자시황"
     },
     {
