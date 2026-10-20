@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-10-20T16:02:20.245118+00:00",
-  "updatedAtLabel": "2026년 10월 21일 01:02 KST",
+  "updatedAt": "2026-10-20T23:34:02.182409+00:00",
+  "updatedAtLabel": "2026년 10월 21일 08:33 KST",
   "items": [
     {
       "title": "[오늘의증시] 10월 20일 코스피 코스닥",
@@ -27,15 +27,15 @@
       "category": "국내 증시 / 코스피 코스닥"
     },
     {
-      "title": "코스피·코스닥 동반 하락 출발…외국인·기관 매도세",
-      "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE1paUd6SXlrdnREaTlIZFBVVTdSLTQ1RnBqdE1xVF8tU1NCdC1yMGg3RVNuWUlJSlpsSzVac2dwUWpNRFN3ZGRxU3AzQ0dhNEQzeW5BMkJ2MWZ1cU1yU1lXNjNlMnFzOG5vY1VnSE52d3VkQQ?oc=5",
-      "source": "인더스트리뉴스",
-      "category": "국내 증시 / 코스피 코스닥"
-    },
-    {
       "title": "개미가 받아냈지만 역부족···코스피·코스닥 동반 급락",
       "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBNaHI0R2N6bGdKaWVKRDd1a3VEUlNmYzhWeWYwdExSMHFVNmZRZXJiYjVRZGtpQ2Yyd2NRemZrMlBqcDJ6UlZkYzFLN3prUkVrbVBGNXYybjRMOGdrNXlJTmdRWVVOWkU3Nm1Sbw?oc=5",
       "source": "스마트비즈",
+      "category": "국내 증시 / 코스피 코스닥"
+    },
+    {
+      "title": "뉴욕증시 반등에도 한국 증시는 급락…코스피·코스닥 동반 추락",
+      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5qMl8wZ05fazN2UEEzRlNyZVRmWl9fbFFfM1J3eXI2cUFwSFpjNHJ4ZTNoNURTOXZZNTlGYnVIRlhvb3FUb255MzBXb3Y1S1E2Y0RKc2I4MTFtZEJMQWZCaQ?oc=5",
+      "source": "https://www.theconnectmoney.com/",
       "category": "국내 증시 / 코스피 코스닥"
     },
     {
@@ -45,15 +45,27 @@
       "category": "환율 및 글로벌 원자재 시세"
     },
     {
-      "title": "위험선호 심리가 강달러 누른다⋯\"1330원 중심 소폭 하락\" [환율전망]",
-      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE00QTFLRGpUN1NUQVp3QmFCUlNqVkhoUk5Eb1pqOWRJZmtwbDNFNDdrRk1BV3Qtcm14aDZnVjc2alpaVjVRc0VOTkhLNHRMMlZ6VUcwdw?oc=5",
-      "source": "이투데이",
+      "title": "달러 약세에 반도체 네고까지…환율 1320원대 하락 압력",
+      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9vYUFmM25hTUFnTzFLRDJQNVlCM0tvMHZNUE4wMmozUUU0cng2Mm1LUm0tWkRyX0pGTHZJR2FFUk00N25SU25JQjF4WHlFTzVfZElJZ3ZfWUYtc21Mam1fY1YzS21FS1NlNGUtZzdWa2gxekE?oc=5",
+      "source": "마켓인",
       "category": "환율 및 글로벌 원자재 시세"
     },
     {
-      "title": "IMF가 본 내년 환율은 1,402원?…'예측' 아닌 '가정'이었다 |",
-      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBhWTIyQjdWenBPeVFJUUoySEgzbFRGeWZZN3ZsdEkwWGpIeV80eFZEMUYyeU9uWDljbVNGbThKNmVYX1RDWnFpNnZUdGlucEQ1ZC1pbENGcjJBWjhMa3F6RnJWSnlCb1dvNXVVVG1ZcUNQZUJu?oc=5",
+      "title": "IMF가 본 내년 환율은 1,402원?…'예측' 아닌 '가정'이었다",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9fWlFFN09sb3c4NXFpMFQ0RENrYXlLRXdiWDhYUzdvX2xWX2VOMmw0Zl9vaG1WUHd5VHRLcHB5S3o1bkdseWlfSk12czlNRDUzcW5Zc1JZdGpqZHVKR3F6V1k2Tzh3VXF4bGUtWkttWDk?oc=5",
       "source": "연합인포맥스",
+      "category": "환율 및 글로벌 원자재 시세"
+    },
+    {
+      "title": "원-달러 환율 2년여 만에 최저…수출 기업 달러 매도에 1320원대 ‘뚝’",
+      "url": "https://news.google.com/rss/articles/CBMickFVX3lxTFA1b0x3S3hxLTV3Tl9KUDRXREQ4V0I1cTd3aE9nZlNiOXZ4TGxzWk1wajZjVlFielFMVFFodXRHSU83ajdBQTBGRnZCek1GRWtDZUFMbldXMUswaThocDE3NXBKOFhUckwwSDJiUm8zUFM4Zw?oc=5",
+      "source": "한겨레",
+      "category": "환율 및 글로벌 원자재 시세"
+    },
+    {
+      "title": "위험자산 투심 반등에 수출업체 네고까지⋯\"1320원 초반 하락 후 반등\" [환율전망]",
+      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1kalNXd0k3NEhqSm1ndS1QYVdSUV9MSHZLSDg1YVdlZUVMdkhBYmlSZlVUYk5fTGtJWWRyaklwdk03N1BpU0JRYWtHeUR0NjZRckRPM0VWQzc3NFVUdmg1RHNFaEdZM0dqbVE0aTQ4VHIxT2hk?oc=5",
+      "source": "이투데이",
       "category": "환율 및 글로벌 원자재 시세"
     },
     {
@@ -63,16 +75,10 @@
       "category": "환율 및 글로벌 원자재 시세"
     },
     {
-      "title": "채권 전문가 93% \"10월 금리 동결\"⋯물가 하락 기대 '뚝'",
-      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5NNllvbFJvYWsyS1pFNzBULS1TaWZ6QjNsTWxLckhfUFZoRjVUYUJtVGhQb2NPaFQ2ZWkzMTBKWnY1MFNDRjFhMWw2T1AzZmFBTTAtSjFPeW1mcG5XT19fRlA1V01XUVl0b2c?oc=5",
-      "source": "금융소비자뉴스",
-      "category": "환율 및 글로벌 원자재 시세"
-    },
-    {
-      "title": "하나금융, 3분기 실적 개선 전망…비이자이익 변수",
-      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE04SDhzYVhaSmFYcUN0QkxCbVNqYUtnaVJnM3BYTFFFZ3g5Yk03ZnQzT3RxTm9HeVFrVU5mWkZBaVk3TFpvam1LRU9KRXUxZ0l2ejdDY3VNaENSYnBfSVNfVGlMdUw?oc=5",
-      "source": "서울경제TV",
-      "category": "환율 및 글로벌 원자재 시세"
+      "title": "가을 공모주 사볼까… AI·반도체 기업 줄줄이 출격",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNRW1NVDliYUE3OHluMm5LUkhFeTV6UDdNUWVEb3BzQmFGWGJlWFBjTjFBbWpVeE1hZkJIMVdnTmNKZ0tsMkVfam9JYVdTM0pJWWZETUVPYThaT3UyNlJVQ3FRMXI3bl9CUDhGS1FmcEZxZkVkOENOOEgxcGFhbGJZVjAySUIwZ1lJeWsw?oc=5",
+      "source": "조선일보",
+      "category": "공모주 청약 및 IPO 일정"
     },
     {
       "title": "[공모주 현황] 크리에이츠 공모주 청약 첫날 어땠나?…균등·비례 경쟁률은",
@@ -81,21 +87,15 @@
       "category": "공모주 청약 및 IPO 일정"
     },
     {
-      "title": "시니어 서비스 등 다양해지는 투자 연령 대응↑…신한투자증권 MTS - 머니투데이",
-      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE14NnlvQ3laOTFibldHLXVsX2tzajRRZFhiRDVsSmZTVUozdVo2NHhTdlhWRFBSclJKcHdzV3pPbE5WWWJKd191eEM3U3lvcVlwd1JJTzUwc0RWYWdzcFIxZVF1NjU0dUFteURWMk5n0gFuQVVfeXFMTXg2eW9DeVo5MWJuV0ctdWxfa3NqNFFkWGJENWxKZlNVSjN1WjY0eFN2WFZEUFJyUkpwd3NXek9sTlZZYkp3X3V4QzdTeW9xWXB3UklPNTBzRFZhZ3NwUjFlUXU2NTR1QW15RFYyTmc?oc=5",
-      "source": "머니투데이",
+      "title": "프리스핀 중 달라질 수 있는 파워볼 홍보 적용 규칙",
+      "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxQQ25hMTNTd1JIelFfNXFlb0huZ25zOHlndHowT09WRk1JWVBRcDNJSHdPNUlIUm1qMklFTjZNSFNSdEFfcXdfNHdDTnlCZzBJU05MNlNMcnRZbnRIOWI1UHdLanFNSVZ5OTZmU3pVaFcya1FGWnZPSk1GSGF2bHNyX3FoNGdNZ2pKd3A1YWdyaUdPVU4tSTFabW4wQmdIWUdCZG9uY2lTY3pCSUN3bngwckU5NkpBZ09jcl8yZUlGTVlWWjRiTERGWE5UeFdDazc3NUZydC1mR1gtaTgwVHc?oc=5",
+      "source": "Calgary Roughnecks",
       "category": "공모주 청약 및 IPO 일정"
     },
     {
-      "title": "가을 공모주 사볼까… AI·반도체 기업 줄줄이 출격",
-      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNRW1NVDliYUE3OHluMm5LUkhFeTV6UDdNUWVEb3BzQmFGWGJlWFBjTjFBbWpVeE1hZkJIMVdnTmNKZ0tsMkVfam9JYVdTM0pJWWZETUVPYThaT3UyNlJVQ3FRMXI3bl9CUDhGS1FmcEZxZkVkOENOOEgxcGFhbGJZVjAySUIwZ1lJeWsw?oc=5",
-      "source": "조선일보",
-      "category": "공모주 청약 및 IPO 일정"
-    },
-    {
-      "title": "붐비는 가을 공모주 시장...AI·반도체 기업 줄줄이 출격",
-      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOVkw0cXh4cXJzb2hOV0FxM2xFZXVHcmVMQTZwamE1RGhtOG9oWkREem00cWNUZmNDcUU0aV9PbkdfZlZ6ZDhnODBFamlQLWlzSmxrcno5dURzdkVwVERkcEV2eE9mRUxVMjdLUVpKUG1ISUh0dUFKX3ZjdkpLX3ZCNTBEQnlmT2p0TmZF?oc=5",
-      "source": "조선일보",
+      "title": "[공모주 현황] 티앤이코리아 공모주 첫날 균등·비례 경쟁률은?",
+      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBNYXRMNDh2anRDTnRWT003QjlpMHdnWlRRNzJ1X3lGLWh5UUYzU2dmVVFtak82SkJPNWduOFRFZGo1Y2dKSF93eTNrc3pnbE9UV2VTTHAtVnY5WUx2dzFWS1ZsQnZQRFJR?oc=5",
+      "source": "CBC뉴스",
       "category": "공모주 청약 및 IPO 일정"
     },
     {
@@ -105,9 +105,9 @@
       "category": "공모주 청약 및 IPO 일정"
     },
     {
-      "title": "3분기 기지개 켠 IPO 시장…4분기 '공모 러시'에 회복 기대감 커진다",
-      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9qeDJieFE3eWJnal9yRU84NTFvZW54cXZCdXU1VklELThPdHZ6RERJelZYelZxcTREMVR3S0t4STR6cUNuUThwbmExeHF0ZVJEM0pxRGF1U1dyZWdOd2FaSDgybTdZcnJNQVp3YVM5Ymg?oc=5",
-      "source": "신아일보",
+      "title": "\"상장 첫날 30% 뚝\"…증시 한파에 공모주도 '찬바람'",
+      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE9COXptQ2lUc2JsX09rVXlpZV9ZckU4S2tfUDJIM2VSb1p5eG9JdFdScm80cEw0cU9ZMV9uQTh6QWRmTGxvWEhjbFlnaUFiTWg3Y21WX1dITG9nRklMcElMQlVqRmw3YnVuejFTajY4WTh1anJva3BkU9IBeEFVX3lxTE9COXptQ2lUc2JsX09rVXlpZV9ZckU4S2tfUDJIM2VSb1p5eG9JdFdScm80cEw0cU9ZMV9uQTh6QWRmTGxvWEhjbFlnaUFiTWg3Y21WX1dITG9nRklMcElMQlVqRmw3YnVuejFTajY4WTh1anJva3BkUw?oc=5",
+      "source": "뉴시스",
       "category": "공모주 청약 및 IPO 일정"
     },
     {
@@ -117,46 +117,76 @@
       "category": "정부 지원금 및 정책 소식"
     },
     {
-      "title": "[율곡로] 제복에 대한 예우",
-      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5IWk9CNlZjSEM1aXhHNGxOSDVpdm1CTVB5OVFPSkI0MUY0Y0lPQVF0cDhRWWV4Q3hJTVNNNlAyZ0s4am9YM0Q3R1lUZVV1T2FBSHRYdUJjQ2xEbWlRUm1jWtIBYEFVX3lxTE5IWk9CNlZjSEM1aXhHNGxOSDVpdm1CTVB5OVFPSkI0MUY0Y0lPQVF0cDhRWWV4Q3hJTVNNNlAyZ0s4am9YM0Q3R1lUZVV1T2FBSHRYdUJjQ2xEbWlRUm1jWg?oc=5",
-      "source": "연합뉴스",
+      "title": "[청년이 희망이다]꿈과 희망이 현실이 되는, 청년이 만드는 행복도시 울산",
+      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5zajRhZ1htWEVGZzZ1dFprb041WHZDV3FteC1mTmw4WEZ5YzlYZ202TXlzSEhPMWRROVNoUGhfZmZrclgyZVNwVEFmQmNoRFRPWE9YRUQ0QXJaZ1dzUkY5TjNOU2pIbWh3SmNIaklR?oc=5",
+      "source": "울산일보",
       "category": "정부 지원금 및 정책 소식"
     },
     {
-      "title": "뉴욕증시, 반도체 반등 속 혼조 마감…나스닥 1.11%↑",
-      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE1YSjEzNFhiUDdZSURkU01mUktCZnBXUzFIT2RVd3dpSmc1dTdhSVBuWlktUk13aHdfLTBiUTctZG91MFRKeV8zQjVXeDNfSC1fYzFBUVVWRHUtYnM0?oc=5",
-      "source": "뉴스핌",
+      "title": "온라인 접수 (http //youth.jobaba.net) : 실제 경험자들의 조언",
+      "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNd24xczRZWDNIRXdXampENXhzaDJNTXBPQWx5UWdoV2QxXzJabk1PeDFMaGRNcFNiZ1d2N0tEQUtjUnZubV9YWmtHWnduWVY0ZGJlbVhreDI4TTJqZ0loSlNIdXVJc3BybFNxUlhPRXdQc3lHZjhVaVJYSXl0aW54NFhvZEtoYU0zdlJlaEpnUUt0YmNXaVNPemF6Z3FKV3lLdnlCdXpRQnlvSm8wRmlZNWt1QUpiWlZuQTVPaWtzVmNzUjkzVEU2NlpuTXhPUTFuNWZvMWY2cHV3eGM?oc=5",
+      "source": "Calgary Roughnecks",
+      "category": "정부 지원금 및 정책 소식"
+    },
+    {
+      "title": "유가 하락·호실적에 다우·S&P500 반등했지만…나스닥 부진 [뉴욕증시 브리핑]",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9wUm9NMWJPSHF6cDZYMUNZUXpnRE5lMHlLdVFtMEtuZ1RvWlhoVjNHaGJ1M3k1ZXF5NEpYd1hjSEJXcXNwdGFIOVdqY2tFcmlhbXFuMFo5U3N2UQ?oc=5",
+      "source": "한국경제",
       "category": "미국 증시 / 글로벌 매크로"
     },
     {
-      "title": "[뉴욕증시포커스] 반도체 반등에 혼조…나스닥 1.11% 상승",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1MS3dWeDJiekkyRWJJUWFjNVFlTUpsekVDTmRTdUpjd0pfend6N3JRNjVxNUlfUmZwcjMwU2EzUXhZa2E4RVBiV3VVdmxNRWJHN0RoenNWWXhIQVBmQ3dEcjhBQkVFbGE3d1BjWQ?oc=5",
-      "source": "굿모닝경제",
+      "title": "유가 하락·실적 기대에 다우 1.02%↑... 나스닥은 약보합 [뉴욕증시]",
+      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9rQ1ZJUmMyVFRRZU0teUJVRm5ia3lBV1k3cXE3OUx2QkxCVHg1YldTakFGT1dnb0VxMEpmNl92YXVVekhyUXpoVjIwcU81aW5IQlFxdGs1Z19YSmpQMFpWdGxOaF8?oc=5",
+      "source": "매일일보",
       "category": "미국 증시 / 글로벌 매크로"
     },
     {
-      "title": "[뉴욕 증시] 필리지수 9거래일만에↑… 기술주 반등에도 뉴욕 3대 지수 혼조 마감",
-      "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE01bWxxYUpYRlFkeFhtNE5TaGVFUDhfUVlWZm9GaF9wTFZGdmVuelEtMFJBREZBd1p1WkFhN3hwMlE1THZ2cjhZQXVJZ2w3cjFRaXhOTkZiNVFGWURyWkltaFcwOXpVSER5S25JRlNDVkgwQQ?oc=5",
-      "source": "한양경제",
+      "title": "[속보][뉴욕증시] 탄탄한 실적 힘입어 다우·S&P500 상승…나스닥, 약보합",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE43bUhlYXgzNm5UTDdEWlc5SVhwSllHQTVHOERjbU1vWkFGdEpHRlUxSlIwUjcwQlRuNGdhUm1CUzExaG5PVjV2cnNjd3pmSDdfSzBWSlVPQ0FwUQ?oc=5",
+      "source": "파이낸셜뉴스",
       "category": "미국 증시 / 글로벌 매크로"
     },
     {
-      "title": "뉴욕증시 '혼조'...AI주 반등 속, 나스닥·SK하이닉스ADR '껑충'",
-      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE04aDl0WW5xQURUdk12MGltbU44dGV0dFAwOUxKWm1kV1Q0SFROdlpQWGFoOGxXbzZNaFBHa2Jsd1k1NjhaQ094WVVFYnFIVkd4X3dkY2FxVWYyQ1ZlcWRlWlc3bzlaT2c0d1hIalFndWg4dlnSAXNBVV95cUxNOGg5dFlucUFEVHZNdjBpbW1OOHRldHRQMDlMSlptZFdUNEhUTnZaUFhhaDhsV282TWhQR2tibHdZNTY4WkNPeFlVRWJxSFZHeF93ZGNhcVVmMkNWZXFkZVpXN285Wk9nNHdYSGpRZ3VoOHZZ?oc=5",
-      "source": "초이스경제",
+      "title": "뉴욕증시, 기업 호실적·유가 반락 등에 다우 중심 반등세",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE4zV0ppejB1SjNERFJ6c3R3eGtReEZmZUVKZTlEMGJTTnVtbUxzU3dKdTA1NmNVVnE0ajBtb1Y1U091MlA0NHJITkgybDVjbExEV0RJblh5MmJwUdIBVEFVX3lxTFA4V3E5TktGWnp1NVhSb3hkZEVRdFdkMkppNlRYSEg3eS1UbFVQUGJPbzVaTW9CV0VGcjB6dVNWVlJpMFg1RWZaVzk0UlFwbVRfNlkyTg?oc=5",
+      "source": "더팩트",
       "category": "미국 증시 / 글로벌 매크로"
     },
     {
-      "title": "뉴욕증시, 나스닥지수 1.1% 상승…AI 저가 매수 영향",
-      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFA5dWJWbUE2M1cwbVU2MUxfc0x5MXZDVDJnWFJGWllWbWZSN05MOHluaDA0RU5oRlZNRUkxR0lJZ3AzX0VqajJLd0lkTFkwb1VXLVZaSWFVdWJHTHNna2c?oc=5",
-      "source": "동행미디어 시대",
+      "title": "AI주 주춤하자 헬스케어가 웃었다…뉴욕증시, 다우 1% 상승·나스닥 약보합",
+      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFAzckVieGNrMFN2OHFzbk53NzkzdVVfSnphMTI2dE1mR0R0bmFRUWx4TjNYOUp1dW5mVGF2enFQdEpkY1g5ZHhWbzFkNXJtcXdDMTJFUVdaa1hBQ1BCOEdUcA?oc=5",
+      "source": "www.theconnectmoney.com",
       "category": "미국 증시 / 글로벌 매크로"
     },
     {
-      "title": "[월가 레이더] AI 반등에 나스닥 1.1% 쑥…코어위브는 또 하락 '균열'",
-      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1INnhjaHVIWTk2djVwSVlyVXhRbE02RmVJNXdpY3FvV0E1QmZNdFl3eTRIQTdDRmk4TWhqallzUXBvSThUVkxIYXVLOHhrMFFvb1loWEU2MDNOSzhXa1g1cA?oc=5",
-      "source": "포커스온경제",
+      "title": "[뉴욕증시] 다우·S&P500 상승 마감…테슬라, 1.5%↑",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE4ydFZwclpYcjNpSklyX1NrVlJMOWdPM0h4SnotTjJTS1ptZ2VYdnB2QUlhTXNXVkdoTHRJaG9ya2VYUm9vWE9WbEl2NHF4MFhNY1M5eGY4emhCdw?oc=5",
+      "source": "파이낸셜뉴스",
       "category": "미국 증시 / 글로벌 매크로"
+    },
+    {
+      "title": "[오늘의 증시]코스피, 급락 딛고 반등할까…야간선물 1.8%↑",
+      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFA2YmRiNXhIcWplV3ROVzRZM3h0T0U5bmRfZjE4MGxCOS1sSDQzZGV3NVR6bC15cTZSTXJxYWNERWpmVmFHOGQxbEQ5bXdGWWlrZEd0Y3VnS2hhWTg1VUhiQtIBeEFVX3lxTFBLUGhkVVBMQ3hxU1l0T1lZeXRDX1ppNTFybkx5SFRBcDRvZ2pCVUFJWE5VS0E1SFE5dDJVX0w3WFNKSGpQR1o1cnJKRjlFVXI1VVdJVk9rTWNWRkxmeW54cV9TVlRWbjc0WFRkZnJqOTg2aU51TTZkVA?oc=5",
+      "source": "뉴시스",
+      "category": "야간선물 / 파생 / 투자시황"
+    },
+    {
+      "title": "[마켓뷰] 메타 실적발표 앞두고 뉴욕증시 혼조 마감…코스피 향방은",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFB2cXlJaEVmM0V6Q2E4am1VSFlycTNFLVZseHltSlF3U21vZDZkZk5TbFV0dmoxSEJlRGV1ZFZPd0o2ZTh0NlZzTFVDaDUwbktQUVVteGhWTno0bWfSAWBBVV95cUxNenQxb0NpQmJZUUlQUzhMWE5hdjhoTWpxZmhmdk9fZk9VZnFRLV85T1IwLWpUNl9sSjZac042SkZFZlhmU1lSd1llQzBBTFltTlVVblA0ZmZPR2gyay1EUWo?oc=5",
+      "source": "연합뉴스",
+      "category": "야간선물 / 파생 / 투자시황"
+    },
+    {
+      "title": "국채선물, 美·이란 기대감 속 혼조…10년물 5틱↓",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1xckxHUWdka01mcHpJNTFNd25vZ0hTTDEtVHoxb29FRnhuM3laeGdpUXlBN1UyaG5fbGxXUVB2VUVlXzNYS184cEFqWmhWUnlrOEFQNmIyb1FEc043cUdaNlY0ekpWVE45aVJhSVMtNm8?oc=5",
+      "source": "연합인포맥스",
+      "category": "야간선물 / 파생 / 투자시황"
+    },
+    {
+      "title": "코스피 3.73% 급락 뒤 반등할까…메타 실적에 쏠린 눈",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE0tLVEtUUtDaGxQczZFRE8wQ2tLSkxIckpad3UxZFpOZWJRQU1GemxrS09yOHdXSmY1QlJzeFhJN25xbHVudXRBcFB1eVRTd2h4WHdpZW1HWHNRdw?oc=5",
+      "source": "경북매일",
+      "category": "야간선물 / 파생 / 투자시황"
     },
     {
       "title": "금일 시황 간단 정리 & KOSPI 200 야간선물",
@@ -165,33 +195,9 @@
       "category": "야간선물 / 파생 / 투자시황"
     },
     {
-      "title": "국채선물, 美 국채 약세에 하락…10년물 31틱↓",
-      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE00X3R2UUVFdlVoSnVkcF9GOTRMeVhuX3ctZkRVNE9JaDNzeGhjc1BZRGVuVF9FLU5WRlBSdVlkVVVuOUhtZF9feTg1dzRUYU1RTTFrdS1naUhSTzBmTzF6TWVPbzlkbHV4aTc3U0FtWkQ?oc=5",
-      "source": "연합인포맥스",
-      "category": "야간선물 / 파생 / 투자시황"
-    },
-    {
-      "title": "美 금리 불확실성 vs 저가 매수세…코스피, 0.60% 내린 5700선 출발",
-      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOQjI5eGJPdVVOQWFENDJHLURxaTJCZTg5bzlQX2pkcTUyY0psajhwcU9XNTI4UVZNWENFSWIyc2lGZDF5eW9Ea3U5dThHX2ViRWJYR2dvejl0ang0ZXgta21pLWxSSWxyTGRGazZQYm40bVhJdGNldHNIM09KbE5sYjk5UXJzOHFK?oc=5",
-      "source": "글로벌이코노믹",
-      "category": "야간선물 / 파생 / 투자시황"
-    },
-    {
-      "title": "[오늘의 증시]AI·반도체 매수세 유입 속 코스피 반등 시도 전망…\"상단은 제한적\"",
-      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE0xUktqUWF6SndnRTRlZTE2S2ZRUk9PMlBOVlNkdlVKdHVqejJqdDl5bkNybVplS00tbVNpTnc5S295TEJTZmhnRXNRanBZWG9vclNvWFdPS3BCb1JhS0Iwb2ZhSmxuc09zQ08zOTRLY1lvekVDU2prSdIBeEFVX3lxTE0xUktqUWF6SndnRTRlZTE2S2ZRUk9PMlBOVlNkdlVKdHVqejJqdDl5bkNybVplS00tbVNpTnc5S295TEJTZmhnRXNRanBZWG9vclNvWFdPS3BCb1JhS0Iwb2ZhSmxuc09zQ08zOTRLY1lvekVDU2prSQ?oc=5",
-      "source": "뉴시스",
-      "category": "야간선물 / 파생 / 투자시황"
-    },
-    {
-      "title": "\"코스피 4800까지 추락할 수도\"…바닥 신호 안보인다는 증권사, 반등 타이밍은?",
-      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE0tOVRNSExmY1A0eGxwUkExRW1PSlZaX0V0TFJaRk56MTlXeF9xTG5hYkhBMG92bFFrUnZ6cDlKS3RYbDNIM0xOMEpFQWw0NVB5YWdPdFJpOEVUZw?oc=5",
-      "source": "파이낸셜뉴스",
-      "category": "야간선물 / 파생 / 투자시황"
-    },
-    {
-      "title": "위 믹스 업 비트 일반 진행과 추가 라운드 구분",
-      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1SZlJNclc5WkNPcU8yaGxJbjlmS2tsQnZ3TjJBVkFIUEw1VnpUN3VmcXRSS3dGT1Z6eGx3a2VERm1Gb255VjRwT2pIT3c3Vkh1RXY1WFpUQ3hBTHRKdjF4MTBObGJFUGptSFZBSGU3ak0?oc=5",
-      "source": "Calgary Roughnecks",
+      "title": "[10.21(수) 한국장 전망] KORU -4.87%·한국 국채 금리 상승, 코스피 하락 압력",
+      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE41LTR6dE5PTWdjMXJQeVRJMnAtUURoVDdrejhBV2lfd0FqMmtHbGx4UGNSeVZzVmJHWDNlZ29ZUEJ5RUd1R2tLU1JjZEtraWNVSUROVlJ1bkpRR2l4bEYwTl8xSEtTcWoxUGFLajJpdjFzM0dBTVE?oc=5",
+      "source": "주달",
       "category": "야간선물 / 파생 / 투자시황"
     }
   ]
