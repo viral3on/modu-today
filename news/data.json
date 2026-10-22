@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-10-22T08:25:33.938845+00:00",
-  "updatedAtLabel": "2026년 10월 22일 17:25 KST",
+  "updatedAt": "2026-10-22T10:56:09.909407+00:00",
+  "updatedAtLabel": "2026년 10월 22일 19:56 KST",
   "items": [
     {
       "title": "코스피·코스닥 2% 하락...5,600선도 위태",
@@ -15,9 +15,21 @@
       "category": "국내 증시 / 코스피 코스닥"
     },
     {
+      "title": "[오늘의 증시] 10월 22일 코스피 코스닥",
+      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTFBLYkpEdDZMbV8xUjJ0cGk2OW5RMFFRWlpKQlAwemJ1UjVTZ2Q0bmVSUFhFTEg2U0RZUTc2TXdtT1VfWHQ4VlYxOC14TQ?oc=5",
+      "source": "뉴스1",
+      "category": "국내 증시 / 코스피 코스닥"
+    },
+    {
       "title": "코스피, 美 증시 상승·한은 금리 동결에도 '5600선 붕괴'…코스닥 3.62%↓",
-      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9ETUo4eWRMVTZEOFhXekgxelE4RkVleGllSlNncDhrc0NoVGpNbEd0N05mRVB2OWpWNjFPQXNrcmxqcXc2VXFheEtQTS0zbHh6SkVrb1RSWDFobTVwa0dpanhSeFlmUQ?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9xZ2tHNC1wT0RzREZGTDMzNnFnbXhwWWZHSks1ZmJDSm5lUWlETHVFQWYtY0dLZG1MTzN4Uzc1OHVzc2RKWjZqdEtzSFpMa0wzWUV0VWx6S1JFc3VQdnhrWVBGN3J1djZiNDlYZA?oc=5",
       "source": "프라임경제",
+      "category": "국내 증시 / 코스피 코스닥"
+    },
+    {
+      "title": "반등이 무색해진 증시…코스피·코스닥, 외인·기관 매도에 3%대 동반 급락",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1XYm9JVXhoQS03Tl9ZVFA0RHZ6VGNZampIRDBLSkNENl9PbDBob3kwODRxM0dicTIwT19lakt4Z0RkR04xSzQtaTREVkliWERiMHF6UExIb1F3dE1tOENON1U4am05NDNLeTY2ag?oc=5",
+      "source": "프리진경제",
       "category": "국내 증시 / 코스피 코스닥"
     },
     {
@@ -27,21 +39,15 @@
       "category": "국내 증시 / 코스피 코스닥"
     },
     {
-      "title": "[증시 레이더] 코스피 ↓ 5,533.77⋯반도체 급락에 하루 만에 상승분 반납",
-      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE41U1ZVWU11bDNfSmltS2VaSXF1NmNud0RnTTduMmcyZ29ra1I0d0tjV3FHX0VDM0hneE0tOUJRbzUtZEJwWlNSR2p0WVZYR1Q0c2ZtQ3oyczBzZXVqY2c?oc=5",
-      "source": "포커스온경제",
-      "category": "국내 증시 / 코스피 코스닥"
-    },
-    {
-      "title": "코스피 5,700선 붕괴에도 급등주 속출…엇갈린 증시",
-      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1qREk0clF5WURPQkk4YWtXZms3ODI1OFEyQ3FjS2RHN0NEeF9IeE05NUJTLVBnakZ5N2hDVlc3anFnRS0ycXEtbEZQQ3o5VXpLbmVaU1dMMDB4ZzZwOTRER2RYMUZvUFnSAWpBVV95cUxQb1d5NnpVV3NqN1JLOEEwUVlTYkQ5bS1ySFdTNXhsSjJiLTdwS284STR4Q2J4MG1lendVcVk2bXhzQWtMNnhQdFp2RjBpM3Fya2Y1WVN6WVZDcjMwZjVJRnM1d2ZHUUEyS0ln?oc=5",
-      "source": "센트럴경제",
-      "category": "국내 증시 / 코스피 코스닥"
-    },
-    {
       "title": "[환율 전망] 변동성 줄어든 시장, 여전히 환율 하락에 무게",
       "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9hT1BUdWxOQTlETTdlS3hMWVVNRlJncFozYkNMM29QVWdnSzV5RC1EWm9JTnRMaXZkMVdTeW50T0NLUG5JQng2OTk0NG1tbUxWNkJUTGozbkw4d2xlakpmTw?oc=5",
       "source": "KB Think",
+      "category": "환율 및 글로벌 원자재 시세"
+    },
+    {
+      "title": "환율 1200원대 다시 오나…원화 강세에 수출 중소기업 비상",
+      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBpc25qRTM4RlU3b2VIM1BwYVRoU0ZZajVJUGhLRGtOdEpIeDBhRTN2UE9TSDd4V3k1T1d5XzBhYkJpQ2VkUklvcmlWbThPemhmR0FhRzNGRFBOUnczR3J6TnFLY1lROE0wb0E?oc=5",
+      "source": "중기이코노미",
       "category": "환율 및 글로벌 원자재 시세"
     },
     {
@@ -57,21 +63,15 @@
       "category": "환율 및 글로벌 원자재 시세"
     },
     {
-      "title": "Market Comment : 백투백 인상 후 숨고르기, 11월 기준금리 인상 재개 전망 | KB의 생각",
-      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5MSU5oTW5wOU9zMDlLcXJoSUV1Y1RxZEM3MTdWT1lHczNwQzBhNUpSSkdjMWlNVTJYOHp6clFCaDlqZHR1ZmZpQkNhbnlXd213YlBSZFpJdXNPZ01xWGtqY0hmVQ?oc=5",
-      "source": "KB Think",
-      "category": "환율 및 글로벌 원자재 시세"
-    },
-    {
-      "title": "원·달러 환율 하방 압력 우세...내년 1250~1420원 전망",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5ockxJMWZsTzJhekpDZ2lSdktYTUNIMU9nR2c4UjcyaHU0czVwVTZ3Qlk3a2xoTmo5TzFDTzRVbU03eEpZdlZONzVORDBPZ3lKLXV0a3NEb3ZCWk1OWkwwREo1QVRUNGNjYmJfcQ?oc=5",
-      "source": "메디컬투데이",
-      "category": "환율 및 글로벌 원자재 시세"
-    },
-    {
       "title": "IBK증권 \"삼성바이오, 원·달러 환율 하락에도 성장궤도 유지\"",
       "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBkWmpfakdmZnEtOWw0cXBwR0hlUHA1cEkxWnJVLV9rSjhCMWdadWc4aXFJN2l4TFpUejQyVDd1R3lCVHRJU0R6cEdXNlpyWHBmTWEwNFF6RGlacEdhSXJZVtIBYEFVX3lxTFBkWmpfakdmZnEtOWw0cXBwR0hlUHA1cEkxWnJVLV9rSjhCMWdadWc4aXFJN2l4TFpUejQyVDd1R3lCVHRJU0R6cEdXNlpyWHBmTWEwNFF6RGlacEdhSXJZVg?oc=5",
       "source": "연합뉴스",
+      "category": "환율 및 글로벌 원자재 시세"
+    },
+    {
+      "title": "Market Comment : 백투백 인상 후 숨고르기, 11월 기준금리 인상 재개 전망 | KB의 생각",
+      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5MSU5oTW5wOU9zMDlLcXJoSUV1Y1RxZEM3MTdWT1lHczNwQzBhNUpSSkdjMWlNVTJYOHp6clFCaDlqZHR1ZmZpQkNhbnlXd213YlBSZFpJdXNPZ01xWGtqY0hmVQ?oc=5",
+      "source": "KB Think",
       "category": "환율 및 글로벌 원자재 시세"
     },
     {
@@ -87,8 +87,8 @@
       "category": "공모주 청약 및 IPO 일정"
     },
     {
-      "title": "이에스티 공모주 청약 : 기관 79.19%가 상단 이상, 한 달 뒤 유통 45.21%",
-      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQdTR4MHdhOE41a1ctMWF0bm9QUG5MTm1SZUZQV3p6bkVTbEp1Wng3cHdOYkF6TTh1TFVHTXlvcjZNbDFxc3NkUm1NdkhOWUJwaUpzMldUWTJ5LS02M3Y3bVdVaXNPeEVEM2xqZGJTZWUtMFRudkw2YXk1UlloN1ROSGNmN0w3TFc1Wk9WT08xcw?oc=5",
+      "title": "[공모주분석] 정전척(ESC) 국산화 선봉장 '이에스티(E.S.T)'확정 공모가 12,400원과 0.24% 확약",
+      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPTnZuUmxCU3pjYUs4c3VGZ1JUTmpxZ2o4M1MyV3czczFfQ2ZrMlh1S005ck40MWszcnhnaGVwalYwOUp1S29RTFRLQTlBekY3ZEgxOE1rUG5IVTRiUElTaXBoM1U4S3ZkTkM4ZzBIenpGWjR5UDRxZlJnM1hiUm43VWExWQ?oc=5",
       "source": "네이버 프리미엄콘텐츠",
       "category": "공모주 청약 및 IPO 일정"
     },
@@ -99,14 +99,14 @@
       "category": "공모주 청약 및 IPO 일정"
     },
     {
-      "title": "[공모주 현황] AI 영상분석 기업 인텔리빅스, 코스닥 입성 앞두고 공모 절차 막바지…미래에셋증권 청약 접수",
-      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9FUjZqcmx3RnJWTVNnUGo2LURIWF9XZEZFMFAzRFlOZkhrdmJDNVQ5cXV6ZUNBOGJjdUdYNy1mSERRLXU4UU1PaTM0bjktSFN4Q0Vra0V4SE8zaGtacFlxQ1NILUtCVWpw?oc=5",
+      "title": "[공모주 투데이] 래블업 청약 1일차 종료, 균등 비례 경쟁률 각각 얼마?",
+      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE03QXdabDhxQ1k4My1IdFRXZ0VwUWREM0ZaZFFra1d2OU13RU9KWnVOZVBBSEdJdXJjQ1pXSFBIZ2loQzFHWEhGcmx2SWQ4X0wtSE5rVkpXWklQRzBwOFZ2dWxhSHNqNy04?oc=5",
       "source": "CBC뉴스",
       "category": "공모주 청약 및 IPO 일정"
     },
     {
-      "title": "[공모주 투데이] 래블업 청약 1일차 종료, 균등 비례 경쟁률 각각 얼마?",
-      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE03QXdabDhxQ1k4My1IdFRXZ0VwUWREM0ZaZFFra1d2OU13RU9KWnVOZVBBSEdJdXJjQ1pXSFBIZ2loQzFHWEhGcmx2SWQ4X0wtSE5rVkpXWklQRzBwOFZ2dWxhSHNqNy04?oc=5",
+      "title": "[공모주 현황] AI 영상분석 기업 인텔리빅스, 코스닥 입성 앞두고 공모 절차 막바지…미래에셋증권 청약 접수",
+      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9FUjZqcmx3RnJWTVNnUGo2LURIWF9XZEZFMFAzRFlOZkhrdmJDNVQ5cXV6ZUNBOGJjdUdYNy1mSERRLXU4UU1PaTM0bjktSFN4Q0Vra0V4SE8zaGtacFlxQ1NILUtCVWpw?oc=5",
       "source": "CBC뉴스",
       "category": "공모주 청약 및 IPO 일정"
     },
@@ -115,6 +115,12 @@
       "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE1MTWRqcmd1YzVXV2ppeFhHa0p5S3R3dndOVWZ0R2xIWTFOTE1ramZCNnQxc2NSOGRDd2N3VVRIaHV2V1dKMGM1UjhDeDRsY2ZDb3dwc0wtNGJFN2NwYmVBZms3QS1XLWlDNlJTM3lRRUF5QQ?oc=5",
       "source": "숙박매거진",
       "category": "정부 지원금 및 정책 소식"
+    },
+    {
+      "title": "기술기업 호실적에 상승했던 지수, 하락세로 돌아서",
+      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBrZUVYUEdON3ZPUFJrNFRKRzdfd2MwZlh4NDVYZ3E4ZkVpQ2hhWDZ2THVSbktNelA5RzU5bnBZWFEwdzZaeEZCZlhkc1J5T0xod095RFdiSVZ6VS04TmNpSndXRWNHZ2Rvd1RJR0NCZ2FwcUdjU3JDZ9IBeEFVX3lxTE1tYjR2OU9GNS0wdjMzeHpPejdpREFiZm96bnMyRmtYVnNFTUwzNThDMk45UHVYaVVuYjI4by1jam1aMldNWURnWkxRT1R0X245eEl5MFNNRnl0ZXNjQWcteGVRMDdyWV9ndi1aelBzaUdKM1RmOUJqbQ?oc=5",
+      "source": "MBC 뉴스",
+      "category": "미국 증시 / 글로벌 매크로"
     },
     {
       "title": "[뉴욕 증시] 스페이스X 훈풍에 나스닥 1.05% ↑… 뉴욕 3대 지수 상승 마감",
@@ -147,12 +153,6 @@
       "category": "미국 증시 / 글로벌 매크로"
     },
     {
-      "title": "[뉴욕증시] 스페이스X 호실적에 테슬라 합병설까지…나스닥 1.1%↑",
-      "url": "https://news.google.com/rss/articles/CBMi0wJBVV95cUxQNWROTnQ2bUt5UnRQekJ3bXVqclpjbEMzRDVrYldrT3JqaDYyUlBEZkRWLVJQZFd5bVNyRTByX0lqY1l5MjY0bkRwelZXMmt5TWk5TVZKdlVpbEQ0VG5PMWJNaUJ0a1lTdTVIYXBUTkJJaUlRNldGSGZPOHNxRXFkejZjRHd1UE1CVjU3QnF5SjJfcURPMnA2a3dQY2FHbm4yQjF3Mm1DbmE3c2hmLUFqTFRROWd6ckhEZVhNaTY5aHAwaUxOUWFLTEhWZlhQVVJMQ3lNRzVWN3ZKNG1qbWZ2YXV1d1NfbDFSX1gyVlIwV2podGxoeUFfU2pvdFo0WTZHTE5VQjh5cVh2VW5kWnE4a2pkeWk1M0pVN1ZkNEhGREdSTy1jTkcwcjBqck1uVFpqZ2RGTkU0dFRXTW9lWU9Nc2lzS2NyMGI4RXdybk1sLXlaNEU?oc=5",
-      "source": "중앙신문",
-      "category": "미국 증시 / 글로벌 매크로"
-    },
-    {
       "title": "코스피, 美 기술주 강세에도 약보합…5700선 등락 By EBN",
       "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5VNnB3SUFla0RhN18tVWdONU1JMmJjRHZkSWtLVVQzblpuUmJTOU1EbGRVV2pyYnRwb3VHd0FkT2FHLVhPbUphb0J6dnJtMEdNUnlfdzVqVkViVHJ1aS1PUG1aNTNWeHhac25LR1prNlY?oc=5",
       "source": "Investing.com 한국어",
@@ -165,12 +165,6 @@
       "category": "야간선물 / 파생 / 투자시황"
     },
     {
-      "title": "코스피, 전날 반등 차익실현에 하락 출발…5700선 등락",
-      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1PMTF4OWVuSGNuai1HWmlzYWIyVnJscXZHS0g1ak4tWnNZY0dSY3VPcEZVWGNFUEVZOXZOaGItMV9GQktVdDNwVjg3aGlZU0kxYW5PSjhuUzFYUTl0MGV1M0hBQXU?oc=5",
-      "source": "서울경제TV",
-      "category": "야간선물 / 파생 / 투자시황"
-    },
-    {
       "title": "\"코스피, 차익실현에 약세 출발 전망…반도체 업황은 긍정적\"",
       "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5Jcm9pRnBpUm1iOWl6ZEpXM2otZEpUQmdTWnR4d2JFbWJlT3hhVlZSM3FlX0hEUGt1ZjUyQ2tac25PZ3FoMlFOZXQySmdKeFQwVXEwSzVSSkVUN01JTUE?oc=5",
       "source": "뉴스투데이",
@@ -180,6 +174,12 @@
       "title": "[오늘의 증시]코스피, 어제 급등에 차익실현 부담…금통위·美 빅테크 실적 주목",
       "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1EQnN4Q3JoWDA4V09nLWp5Q28ySHlIMXhnUnQ2MUNRRlNvb1RaM0U0UTBlR3dJaGVZRHlIcmhPYzhQZURYWC1TUk90eWhZdDdsMUJuMHlLNmZ4Y08wZW45S1NwZi1zV3MtcUFKS3RMdThGOVJnZ3JXYtIBeEFVX3lxTE1EQnN4Q3JoWDA4V09nLWp5Q28ySHlIMXhnUnQ2MUNRRlNvb1RaM0U0UTBlR3dJaGVZRHlIcmhPYzhQZURYWC1TUk90eWhZdDdsMUJuMHlLNmZ4Y08wZW45S1NwZi1zV3MtcUFKS3RMdThGOVJnZ3JXYg?oc=5",
       "source": "뉴시스",
+      "category": "야간선물 / 파생 / 투자시황"
+    },
+    {
+      "title": "코스피, 전날 반등 차익실현에 하락 출발…5700선 등락",
+      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1PMTF4OWVuSGNuai1HWmlzYWIyVnJscXZHS0g1ak4tWnNZY0dSY3VPcEZVWGNFUEVZOXZOaGItMV9GQktVdDNwVjg3aGlZU0kxYW5PSjhuUzFYUTl0MGV1M0hBQXU?oc=5",
+      "source": "서울경제TV",
       "category": "야간선물 / 파생 / 투자시황"
     },
     {
