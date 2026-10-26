@@ -1,5 +1,5 @@
 {
-"updated_at":"2026-10-25T20:53+09:00",
+"updated_at":"2026-10-26T09:26+09:00",
 "apartments":[
 {"region_code":"51150","sido":"강원특별자치도","sigungu":"강릉시","region":"강원특별자치도 강릉시","dong":"견소동","apt":"송정한신"},
 {"region_code":"51150","sido":"강원특별자치도","sigungu":"강릉시","region":"강원특별자치도 강릉시","dong":"견소동","apt":"송정해변신도브래뉴아파트"},
@@ -4778,6 +4778,7 @@
 {"region_code":"41461","sido":"경기도","sigungu":"용인시 처인구","region":"경기도 용인시 처인구","dong":"김량장동","apt":"삼환"},
 {"region_code":"41461","sido":"경기도","sigungu":"용인시 처인구","region":"경기도 용인시 처인구","dong":"김량장동","apt":"삼환나우빌"},
 {"region_code":"41461","sido":"경기도","sigungu":"용인시 처인구","region":"경기도 용인시 처인구","dong":"김량장동","apt":"스위트홈아파트"},
+{"region_code":"41461","sido":"경기도","sigungu":"용인시 처인구","region":"경기도 용인시 처인구","dong":"김량장동","apt":"신양"},
 {"region_code":"41461","sido":"경기도","sigungu":"용인시 처인구","region":"경기도 용인시 처인구","dong":"김량장동","apt":"신우"},
 {"region_code":"41461","sido":"경기도","sigungu":"용인시 처인구","region":"경기도 용인시 처인구","dong":"김량장동","apt":"에스원스마트빌"},
 {"region_code":"41461","sido":"경기도","sigungu":"용인시 처인구","region":"경기도 용인시 처인구","dong":"김량장동","apt":"용인"},
@@ -16636,6 +16637,7 @@
 {"region_code":"11170","sido":"서울특별시","sigungu":"용산구","region":"서울특별시 용산구","dong":"문배동","apt":"CJ나인파크"},
 {"region_code":"11170","sido":"서울특별시","sigungu":"용산구","region":"서울특별시 용산구","dong":"문배동","apt":"G&P용산파크"},
 {"region_code":"11170","sido":"서울특별시","sigungu":"용산구","region":"서울특별시 용산구","dong":"문배동","apt":"리첸시아용산B"},
+{"region_code":"11170","sido":"서울특별시","sigungu":"용산구","region":"서울특별시 용산구","dong":"문배동","apt":"아크로타워"},
 {"region_code":"11170","sido":"서울특별시","sigungu":"용산구","region":"서울특별시 용산구","dong":"문배동","apt":"용산KCC웰츠타워"},
 {"region_code":"11170","sido":"서울특별시","sigungu":"용산구","region":"서울특별시 용산구","dong":"문배동","apt":"용산큐브"},
 {"region_code":"11170","sido":"서울특별시","sigungu":"용산구","region":"서울특별시 용산구","dong":"문배동","apt":"이안용산1차(103동)"},
