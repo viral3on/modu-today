@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-10-27T11:21:11.244037+00:00",
-  "updatedAtLabel": "2026년 10월 27일 20:21 KST",
+  "updatedAt": "2026-10-27T15:13:09.606208+00:00",
+  "updatedAtLabel": "2026년 10월 28일 00:13 KST",
   "items": [
     {
       "title": "[증시-마감] 앤트로픽이 되살린 반도체 투심…코스피 3%·코스닥 2%대 반등",
@@ -21,6 +21,12 @@
       "category": "국내 증시 / 코스피 코스닥"
     },
     {
+      "title": "코스피, 3% 반등해 5,638.34 마감…코스닥도 2.3% 올라",
+      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBQNE1VYUwteW5qTWlVeVZ2OWdVTS10SG54MTZ6UXNHd19lbGVyUld5VzRub2dTZFVmbHc5WDFFNm1YR3F5NVFuQVpZc2lRU1VXT0FTVjRXNm9XNk4ybGZLSNIBYEFVX3lxTFBQNE1VYUwteW5qTWlVeVZ2OWdVTS10SG54MTZ6UXNHd19lbGVyUld5VzRub2dTZFVmbHc5WDFFNm1YR3F5NVFuQVpZc2lRU1VXT0FTVjRXNm9XNk4ybGZLSA?oc=5",
+      "source": "연합뉴스",
+      "category": "국내 증시 / 코스피 코스닥"
+    },
+    {
       "title": "[마감시황] 외국인 순매수에 코스피 3% 급등…코스닥도 반등",
       "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE04ak5hMGJ5djRmUHBUY2RSTG02VE0yV1Z5MEkwVXdraVhua2RjUWxIRlh1NUZHR2U3WVVuWEZlUkozVTRKakp5RkUxaUlKNUxpUDU5SDBRZldrVjcx?oc=5",
       "source": "뉴스핌",
@@ -30,12 +36,6 @@
       "title": "코스피 3% 급등해 5630선 회복…외국인·기관 동반 매수",
       "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9ONWVaUHZVRFQwYmVRQzhIR0hrZnM5Tnh2R2o3Z1BYOGVqMEZYTkxpODEzd1FQZVlRZnNVRTlxODVrQXRuUXNKZXM3NkNyUW5lYUFoYXhvczBMS2ZJUTBTWHExX21GaEly?oc=5",
       "source": "www.ebn.co.kr",
-      "category": "국내 증시 / 코스피 코스닥"
-    },
-    {
-      "title": "코스피, '앤프로픽發 훈풍'에 3% 반등해 5,638.34 마감... 코스닥도 동반상승",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1feTNCV0k2Y0k1MG9aWlJ0ZUR1THYxQnpKOTljMFRpLVNNM2oxNEs3WHM5b28zR1VtZGg3Q216Vi12SUFaSkI2R0F1dVIydzhVVk5fWjNSNVJ1V2tKRUNicDV0VDJYdXI3ak1YMtIBcEFVX3lxTE9lRS00WGRKSFRoZ3Z4TnVzMm53dkp6NE8xaFZLWERoQ1NqOWx5SUJ5TzZ4OFc3UFVGWWJwUzJiWlBQQVgyZm9LUGFkczdTN1NXR1Y2UVN2cElTTDFHakxJNzlwZF9NTVBsdVJFN2k2aHk?oc=5",
-      "source": "글로벌경제신문",
       "category": "국내 증시 / 코스피 코스닥"
     },
     {
@@ -57,21 +57,21 @@
       "category": "환율 및 글로벌 원자재 시세"
     },
     {
-      "title": "증시 롤러코스터에도 원화는 '꿋꿋'…환율 1310원 갈까",
-      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5UQWhwSi1vNHhsQkJOQ1owd2J5TGszYTk1M1VOMUdqWlZhSHF3Q3dwY2xoRnBCT1RSaVFWeTVNSUM3XzBodlBGVmFNdGlkWGp0aFlEZUxpUmJTSVd4YjZz?oc=5",
-      "source": "MTN 머니투데이방송",
-      "category": "환율 및 글로벌 원자재 시세"
-    },
-    {
       "title": "원·달러 환율 1325원 돌파, 달러 강세 속 상단 제한",
       "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE94czdPWTZqZ19vT1hMUHRTc3FIcTFBb2JFd2JuN0RQaEhmLXlJSjlHV1dMcVh5dmhEbnJzODNPQ0tQb3pvWko0Z1Q1NVZGWWkyNFpKYWRHN2lwT0VrcjhQWFladWM0ZVo4?oc=5",
       "source": "https://www.2news.co.kr/",
       "category": "환율 및 글로벌 원자재 시세"
     },
     {
-      "title": "성장률 1.0% 예상 웃돌아…환율 1320원대서 달러 강세와 줄다리기",
-      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5sa0pRUTZaeWhiZ0NqZFVDVzBrcWFfMG9BTkpZUmRXb3hSa2ttVXdIZF8xRjNjWk1jd0hIT00zcEI4bUNDb2VzNS1aRXZBMXlCeWw1RTIySWxRM3VQczh5VUlSYTVVSnhGT0VEazBZYzRWT3M?oc=5",
-      "source": "마켓인",
+      "title": "증권가 \"내년 환율 연평균 1300원 안팎\"…올해보다 90~150원 낮아",
+      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1rMWN5X01fdDY3MUFjV1VwTnExczV5VTdaYVkxTHdtLWEzbUFaMFMydmhodjBBYjlUc0xBVXh3Wk9HbE5jSUw0YjN4bzFsTTY2V09aZ00zLTd0a2RRcTF5eQ?oc=5",
+      "source": "라온신문",
+      "category": "환율 및 글로벌 원자재 시세"
+    },
+    {
+      "title": "2026년, 2027~2028년 및 향후 EURUSD 예측 및 전망",
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxORi11ZUotZm1OV0JYQ0FDYjJyUGJuUGdNdEtub0FDZm44YVJ4b01CN2UyTTctUl92aUp5b2t0eDlheGFQVWR0SzRKZVFxWWtwQUNWa1VIcUZpVThxLWEyNS1LMGhwaTlqOUI3cWtlRzVIQVoydVc0TGpmaGdSZzBuNkRQd1JQeFhxSHg5cXZUNTQ4Zw?oc=5",
+      "source": "LiteFinance",
       "category": "환율 및 글로벌 원자재 시세"
     },
     {
@@ -81,9 +81,9 @@
       "category": "공모주 청약 및 IPO 일정"
     },
     {
-      "title": "\"몸값 2조 달러 노린다\"… 앤스로픽 공모주 청약 일정은",
-      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBMc09DdXJwUU1WdEkwbXFpWjhMd3RXUUNxYTd0c2NDT3Z2ajhHcmh3RDFpLVNQeWNqX3NTck82ZVVDUXBDTno2ZHZqTi0tZmpXZTdzVkV2ZVVyeElIaGZsNmpCRm1OenlWZFRKVXdB?oc=5",
-      "source": "국제뉴스",
+      "title": "크리에이츠 상장일 : 첫날 매도 가능 39.39%, 그중 73.0%가 기존 주주 몫",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNbkJjV2x6MC1LdTJJOXNPUUtGQ1I5cUxtWkRGM2NFdHlENkZPYTlqTkRsREhxQ0szd2plZHZjZU5YQnZQUkJxTkhRRjZyRl9UOUQzeUVhdEl1THl3ZlZTNzRwRjhOWDNnZGdhWHd4Q2FVbF9SRXB2bDdycU11YjlsUUdoRFNDV3c2S0NPX3V1Yw?oc=5",
+      "source": "네이버 프리미엄콘텐츠",
       "category": "공모주 청약 및 IPO 일정"
     },
     {
@@ -99,15 +99,15 @@
       "category": "공모주 청약 및 IPO 일정"
     },
     {
-      "title": "크리에이츠 상장일 : 첫날 매도 가능 39.39%, 그중 73.0%가 기존 주주 몫",
-      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNbkJjV2x6MC1LdTJJOXNPUUtGQ1I5cUxtWkRGM2NFdHlENkZPYTlqTkRsREhxQ0szd2plZHZjZU5YQnZQUkJxTkhRRjZyRl9UOUQzeUVhdEl1THl3ZlZTNzRwRjhOWDNnZGdhWHd4Q2FVbF9SRXB2bDdycU11YjlsUUdoRFNDV3c2S0NPX3V1Yw?oc=5",
-      "source": "네이버 프리미엄콘텐츠",
+      "title": "공모주 1주라도 더 받으려면?!! 균등·비례배정 100% 활용 비법과 주의사항",
+      "url": "https://news.google.com/rss/articles/CBMiQ0FVX3lxTE96SzdqRjVsUW81d1FIeGZuUnczTGxpb0tQNzdTSGREOHZoR21ocFM0U3V5Z0RxSFZ3TlJIMU1MaUFuQ2s?oc=5",
+      "source": "한국공공정책신문",
       "category": "공모주 청약 및 IPO 일정"
     },
     {
-      "title": "공모주 1주라도 더 받으려면?!! 균등·비례배정 100% 활용 비법과 주의사항",
-      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1pemhkYmtRZ19TQk5nZ2JRelNmNlgwVVRicFh4TjVqSVlYRFFDQkFHa0gxcDJkZG56NnNaeFhyd055QjV4SHBZSWhSRDlxUjQ?oc=5",
-      "source": "https://www.didimkorea.net/",
+      "title": "인텔리빅스 상장일 : 첫날 물량 11.86%, 보름 뒤와 6개월째가 진짜 고비",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPdmJqLWJ2RGtodzdHTl9CTmtYbjlleC1LYkI0VUFYTDFtQXdPdXl3QkFra2NJMm5wa1Z0OVdNREp4RG1meEFMdDJXREoyZ0RzUlhJMGhGeTFiVGUzOVhDQzQ5MVJ1d3lhV2NISjdWS0lScFBGc2docFVoeWdiU0FPOWZTZWhENW1lc1J3VmNCVQ?oc=5",
+      "source": "네이버 프리미엄콘텐츠",
       "category": "공모주 청약 및 IPO 일정"
     },
     {
@@ -141,15 +141,21 @@
       "category": "정부 지원금 및 정책 소식"
     },
     {
+      "title": "[속보] 뉴욕증시 3대 지수 동반 상승…나스닥 0.72% 올라, 다우·S&P500도 강세",
+      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9oN3g3czVTLVBKQm5WV2QyUHpWcjBmZmV6b25WclRfcG01NkZ4TFlDWU9UYlp2TG13bEk5QU4wbnAyaTFncHhMYWNIRzVUQnhaT0tjUkhwWHplRXM1VmNPaVF3NjZzV1JH?oc=5",
+      "source": "CBC뉴스",
+      "category": "미국 증시 / 글로벌 매크로"
+    },
+    {
       "title": "[뉴욕 증시] 앤트로픽 IPO 소식에 기대감↑… 3대 지수 일제히 상승 마감",
       "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE5lSlM5cElBN2JIN19tV2xiWHIxNUlNalVyRTQzQVBXYVlVNjlPdnc1QnVoc2MtVENzeHNZMklWVzFpOFNqMVpQTnc3dUFCUTJLSDFGaF9ydWFGY2tpWnNSdlY1d29GcXAxdVNabDZtQ3oyZw?oc=5",
       "source": "한양경제",
       "category": "미국 증시 / 글로벌 매크로"
     },
     {
-      "title": "[美특징주]GM, 11월에 NYSE 떠나 나스닥으로 이전…개장전↑",
-      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNdzFtUVpKOXZoVjE2a0Rra3NrancyYzhnUnJfS25tRlV6dVo2Y2ZNNGJqM1cxOTk1V0dpY3VBcEZuYU82c3ZYUC14VnRJVjRlSkdxT0FwR1FrcFdCMUt2eWhTdG9TdTVjSlhwdXdEQktVMlQ0TTM2VVpLWEhBbU8tTw?oc=5",
-      "source": "이데일리",
+      "title": "미국증시 선물 상승…나스닥 반등, FOMC·빅테크 실적 시험대",
+      "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE1ENXNSWVFqcnMxWkZoRlRmZ1paM1F2YVpiQ0toU1VFVUh2b0dvenhUeWhaTVlaOXAyVzR2RE9QRDFveWg2eEZyY3NlZUswWGo2Yzh5T0ZNZzZPcmJEanFjWVBmY2hETUxEX3lFako5b3p0Zw?oc=5",
+      "source": "톱스타뉴스",
       "category": "미국 증시 / 글로벌 매크로"
     },
     {
@@ -159,21 +165,15 @@
       "category": "미국 증시 / 글로벌 매크로"
     },
     {
-      "title": "뉴욕증시, 상승세로 전환…나스닥 0.98%↑",
-      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1GZV9YMEdtRkNiZVlFX2trcmZiWUJrTVZpUFVidTd0V3Y3em8wMmZQY0MwWGgyMzF4SUlRVVV6YWktV2FSMXZkZWE3RkE4VE9v?oc=5",
+      "title": "[美특징주]GM, 11월에 NYSE 떠나 나스닥으로 이전…개장전↑",
+      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNdzFtUVpKOXZoVjE2a0Rra3NrancyYzhnUnJfS25tRlV6dVo2Y2ZNNGJqM1cxOTk1V0dpY3VBcEZuYU82c3ZYUC14VnRJVjRlSkdxT0FwR1FrcFdCMUt2eWhTdG9TdTVjSlhwdXdEQktVMlQ0TTM2VVpLWEhBbU8tTw?oc=5",
+      "source": "이데일리",
+      "category": "미국 증시 / 글로벌 매크로"
+    },
+    {
+      "title": "뉴욕증시, 상승세로 마감…나스닥 0.83%↑",
+      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE50X01rb2d1SUFZSVkwTF9CazZrQXo2dVAzNC10VVh6Q2FqamFxZzhEcnNVSXVsRFI1akMzY3J0RzZiY0JFSlRCT3lReE8wTWhh?oc=5",
       "source": "블루밍비트",
-      "category": "미국 증시 / 글로벌 매크로"
-    },
-    {
-      "title": "[뉴욕마감]앤트로픽 IPO에 AI 투자심리 회복…나스닥 0.83% 상승",
-      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE56Zlo1SDFTdGdGQjhGT1hVMjFmUm5yNlJUUnB5TnlwTGJtWEc3WDRaRUlQQkZFdVBNRXo5UkZyeFAxWnhaNW5qeVJGLUo1dDVhaTg2TlM5ZExnN05FYk1zOWJqWUtFRnM?oc=5",
-      "source": "뉴스1",
-      "category": "미국 증시 / 글로벌 매크로"
-    },
-    {
-      "title": "뉴욕증시 일제히 상승 마감…앤트로픽 IPO에 나스닥 0.8% 상승",
-      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5OeUVvc0dVTUFjUXRCaUN3RDJPUGlSR0c5LWFVcHppME1RYlJkMU5ZdkpBLU5RQWNTRWktbTdjLURNWWlGNkk1SlZoRk1ETUpTXzJBYkJuTEpxazZXODlMU2l2OA?oc=5",
-      "source": "시사뉴스",
       "category": "미국 증시 / 글로벌 매크로"
     },
     {
@@ -201,15 +201,15 @@
       "category": "야간선물 / 파생 / 투자시황"
     },
     {
-      "title": "[오늘의 증시]코스피 반등 기대감…앤트로픽 IPO에 美반도체지수 2.8%↑",
-      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9YS0hOcFE0T0lKSnFtc2RZZi00QU9OclcyOGlXazBOOVNFWG1sYXB1ZGhiSGRYVTFodEpuZWozQU4wQmJManZhMTdoakF1dWRFY2J6Y1BVYUJhSFgwR09NcNIBeEFVX3lxTE42NmZ6TjVGUGd4NFBMTXVTRWZqOHlnS0tTVVVab1VnY09mRmN5d1JyT25yRG1GWDdEOExreERibmFucEZ3aHhyYVlKTEVxR3B3bEVCRG9WX2pqM2Z6U2thX1EyZU55UnF4Q0JTWGdsSU1rXzVhZDNZdw?oc=5",
-      "source": "뉴시스",
-      "category": "야간선물 / 파생 / 투자시황"
-    },
-    {
       "title": "[마켓뷰] 코스피, '앤트로픽발 훈풍'에 반등 시도하나",
       "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE8xalNjZUhDUkZzNXFMY3RKdERUS2xLZ1NrVlJLXy01cGMxMHpRVjFCbTBPbjNXTmhPU01wZkUwUzc1T29fN2M5MGRQOENKbHJSVm9LZmRVY01kVnfSAWBBVV95cUxOUEg3YVh4S2JWaWdJb2h6OFZ5bjdWb3pHdDVUdGdRanBRQkxYSU03RXRYWVdsSU8zNjNZcGY1Yk5BbkNjSVFVNHhWV3ctU0ozS19KQ3VJX3BLWGxLX1JmaTU?oc=5",
       "source": "연합뉴스",
+      "category": "야간선물 / 파생 / 투자시황"
+    },
+    {
+      "title": "[오늘의 증시]코스피 반등 기대감…앤트로픽 IPO에 美반도체지수 2.8%↑",
+      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9YS0hOcFE0T0lKSnFtc2RZZi00QU9OclcyOGlXazBOOVNFWG1sYXB1ZGhiSGRYVTFodEpuZWozQU4wQmJManZhMTdoakF1dWRFY2J6Y1BVYUJhSFgwR09NcNIBeEFVX3lxTE42NmZ6TjVGUGd4NFBMTXVTRWZqOHlnS0tTVVVab1VnY09mRmN5d1JyT25yRG1GWDdEOExreERibmFucEZ3aHhyYVlKTEVxR3B3bEVCRG9WX2pqM2Z6U2thX1EyZU55UnF4Q0JTWGdsSU1rXzVhZDNZdw?oc=5",
+      "source": "뉴시스",
       "category": "야간선물 / 파생 / 투자시황"
     }
   ]
