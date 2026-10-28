@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-10-28T11:55:19.849471+00:00",
-  "updatedAtLabel": "2026년 10월 28일 20:55 KST",
+  "updatedAt": "2026-10-28T15:49:00.190999+00:00",
+  "updatedAtLabel": "2026년 10월 29일 00:48 KST",
   "items": [
     {
       "title": "코스피 +6%대↑ 6,000선 탈환",
@@ -12,12 +12,6 @@
       "title": "[오늘의 증시] 10월 28일 코스피 코스닥",
       "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE1KSzhvMzhyNjRlNW51QjJ6TzJSM3VQOHBXUWFqU3A3UF9ab3FSdnVJcUkzUUo5VTc1VmVEckEtbjhvQWZRTGktNkw0OA?oc=5",
       "source": "뉴스1",
-      "category": "국내 증시 / 코스피 코스닥"
-    },
-    {
-      "title": "코스피 6000선 대폭발…삼전닉스 급등에 매수 사이드카",
-      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFA4bWxrRVFrV19fM3dLZ1hzUUFnMXFoek9JM0R2aG9GVlhaLVY0SktaaldxSktnWW9vdnJ4YVJqTU9IQ0V1bmpfdmdwZF9mTnVBM3FkNkJWNXZLNEJHYXR6akd6c3kzTTTSAWpBVV95cUxOa2l2WUtMYXlBVVlIbVktclBwRGZvQjF2SnVGeW5hRjlWQkpHMEpaYi1hUHJKXzEtUGVCeVZxcW9ZeVB6dnR3czJsaDVKTlNBUU1qX2V1Ql9sQkd5ZE0zcElocDA1WEdlQW9B?oc=5",
-      "source": "센트럴경제",
       "category": "국내 증시 / 코스피 코스닥"
     },
     {
@@ -33,9 +27,15 @@
       "category": "국내 증시 / 코스피 코스닥"
     },
     {
-      "title": "[마감시황] 코스피, SK하이닉스 역대급 실적에 6%대 급등…10거래일 만에 6000선 회복",
-      "url": "https://news.google.com/rss/articles/CBMickFVX3lxTFBVRWNhT3V6OWFlWjVNck1XRUFwbkY1aEZFOGZXamc2c1Vwb0F6cXZlN3B1X0hmMmNTYUdoOGlYYzVYNG5BV3VUTzd0MlBpMzA3QWFCZ2xobFFFdlJxVFZFbVJ2SEVDMWRwSERybjk2YUJwUQ?oc=5",
-      "source": "한양경제",
+      "title": "코스피, 반도체주 급등에 코스피 6000대 마감...코스닥도 3.69%↑",
+      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFA4VWNfTVVDemc1Z1FlNGYxMVBkZV9COERibjlCTmprTUZaUE1aeEFFa3JYb0Q0cjlybXZ2SFQyT3UxYkY1WUM4RmVfSjJuOTdfbzRSWGN6UEs0VDhGdjc5aQ?oc=5",
+      "source": "증권일보",
+      "category": "국내 증시 / 코스피 코스닥"
+    },
+    {
+      "title": "[AI MY 증시전망] \"SK하이닉스 실적 기대, 코스피 상승 출발 전망\"",
+      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5PbjluQTZ3UFRTT3RXajFqYUJ0bFNSamwya1BJTG5yQUpRaHBjTHRCQnk5VEQ1Tkt6VUxoTVVMYTM4ai0yQnk5dmp0WV9pTXBCRXZiSU1EUXA3bTJ6?oc=5",
+      "source": "뉴스핌",
       "category": "국내 증시 / 코스피 코스닥"
     },
     {
@@ -48,6 +48,12 @@
       "title": "원-달러 환율 큰 폭 상승…한 때 1340원 웃돌아",
       "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE5jaWRVeGNzbWpyR3RhT1pKbEpNaGdqWEJxczVtY3FrZHBwRlRYVWVMX1RDa2JOcmhMeERfR193b3ZEM2FIa1diZzdLWXVzYmhkbHB2QXJzNWdLOXRWZXdob2NfaGdSaEpsZzl3NlhXVlkxZw?oc=5",
       "source": "한겨레",
+      "category": "환율 및 글로벌 원자재 시세"
+    },
+    {
+      "title": "키움證 \"내년 달러-원 평균 1,355원…원화 강세의 역설 주목\" |",
+      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBUdk55TTRJeE1JUnZRa1RMX3FWenNIb1Rlal83VmRPX2o3OExTRW45b1RKbDAxQmo5LU5iS1BBUU1DenRGT2JjNlJLVEVFT3JYaGVSSWdSNXlabldYNzFfOFpxVU81MnREVXNNYU1FeDZxcndY?oc=5",
+      "source": "연합인포맥스",
       "category": "환율 및 글로벌 원자재 시세"
     },
     {
@@ -66,12 +72,6 @@
       "title": "반도체發 원화 강세 '부메랑'…車업계, 반등 기대에 찬물",
       "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFA4U1JiTHNBcExOLTlHa3lDVF9yX1VISzFpTHl0Nkd1QVhQb2VlRElmTjhNbnpSWHVncnFNNWF5cDZTTUJTTDhYM01TZFpaVXdSeUFIcDVWcFhTTFlON2lWbVhlWHU?oc=5",
       "source": "매일일보",
-      "category": "환율 및 글로벌 원자재 시세"
-    },
-    {
-      "title": "[리포트 브리핑]한화오션, '3Q26 리뷰: 환율 영향, 짧고 굵게? 길고 얇게?' Not Rated - 메리츠증권",
-      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE1HYmltVllhUlN5eHA3dzNWNDBHRnhUM3cwRTA1dVJBVFJ5VU9HUGYtdGJpRjhwZEZRVVMycG1aOWpSU3NvWTlTeUR2a1JCa3NyQVNhSnp4X0dSUXZx?oc=5",
-      "source": "뉴스핌",
       "category": "환율 및 글로벌 원자재 시세"
     },
     {
@@ -105,12 +105,6 @@
       "category": "공모주 청약 및 IPO 일정"
     },
     {
-      "title": "(10/28) 오늘의 관심종목 [미국 정부의 컨스털레이션 대상 50억 달러 금융 지원 제안 및 IEA 전력 수요 증가 전망]",
-      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNWlozY1MwbUE1Q2FLODgwcUV1MWJUWDJRX3J1VmYweU5rczNINDFWSWx2YmczXzJsNGxFdXJ1SFFMV2piYnI1R1pLM2Y5cHB4U1dlalRCTzUzNlRRSHdpczFYY3M4a3pDU3JVbFNfWk9XU2xlVWhRV2daSUhuNDBuYXo4aXBDSFJhXzBF?oc=5",
-      "source": "네이버 프리미엄콘텐츠",
-      "category": "공모주 청약 및 IPO 일정"
-    },
-    {
       "title": "코레오뉴스 운영사 코레오, 중기부 ‘LIPS II’ 시드립스 선정…정부지원금 6천만 원 확보",
       "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5uVnc1RjNnRWNPTFZKRHBwejJabjBGZi13TXZuTHN3WGhDUGN5b1I5SWN5cVJOeHRWVWp0eEFsdk5TZ1QxVkxSNDNiNklCRGU2Z084TktoVFhDRHZxaGRsbTF5R08?oc=5",
       "source": "https://www.ppss.kr/",
@@ -118,7 +112,7 @@
     },
     {
       "title": "한전, 인사·상생·글로벌 분야 성과…하반기 '수상 행진'",
-      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5pMUZhMjZFWnRZNFBvd0V1LURKbjVFdzBtd3drMmxIX01pbXF5ZWpjbHFMN3FpalVBSkl2MzQyWWpBVUM5bzBKMUFmbjN4SmNfZjhPSWdGWjlnbmZFaW9wcDVCRkRHbTVvWGFXNFdYZzQ?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9uejJhRjYwQU1uNXFHNEpLb2UzdG96cDd3T1lSRzhJZkhLZ0g0Zm1KcE5NS04yNFJicG01eFJfZVowaU42ZU5DRW1KN050bUtETThMSDdvcmdvazNwRzV4S3VON19VUENYeDRoVmVFTQ?oc=5",
       "source": "비즈트리뷴",
       "category": "정부 지원금 및 정책 소식"
     },
@@ -159,16 +153,10 @@
       "category": "미국 증시 / 글로벌 매크로"
     },
     {
-      "title": "[속보] 뉴욕증시 3대 지수 동반 상승…나스닥 0.72% 올라, 다우·S&P500도 강세",
-      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9oN3g3czVTLVBKQm5WV2QyUHpWcjBmZmV6b25WclRfcG01NkZ4TFlDWU9UYlp2TG13bEk5QU4wbnAyaTFncHhMYWNIRzVUQnhaT0tjUkhwWHplRXM1VmNPaVF3NjZzV1JH?oc=5",
-      "source": "CBC뉴스",
+      "title": "뉴욕증시, AI 투자 기대에 이틀째 상승…반도체주 강세에 나스닥 1.18%↑",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1QZ2gtQUJNYUR3MVpNbHJOdGk1U092Vmo3SHR1dDdkdFV4dzROeE9XWVNXUG1mQmNnYUJ2a0hxT0FXS1pvTGlKb0VjMmNOdG9uUERWeC0xYzJaekE2MlZ3LWZNLXBrRU56OFhNSzNEZzTSAXRBVV95cUxOU1FqS3NBQ3dvMnpYcmhjLU1IdExSaFJnWnNMdTg3SEs0U0I0cElRUFFIVndFUUZBNVM2T0s1d2J5dFJCQkc1MkRMbUlvMzhtQ25HTUZsRHBaMGR2MTNRa0lmZ3lnY2xYWFZzbmEyQzFQVmlsaA?oc=5",
+      "source": "산경투데이",
       "category": "미국 증시 / 글로벌 매크로"
-    },
-    {
-      "title": "[AI MY 증시전망] \"SK하이닉스 실적 기대, 코스피 상승 출발 전망\"",
-      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5PbjluQTZ3UFRTT3RXajFqYUJ0bFNSamwya1BJTG5yQUpRaHBjTHRCQnk5VEQ1Tkt6VUxoTVVMYTM4ai0yQnk5dmp0WV9pTXBCRXZiSU1EUXA3bTJ6?oc=5",
-      "source": "뉴스핌",
-      "category": "야간선물 / 파생 / 투자시황"
     },
     {
       "title": "앤트로픽 상장 기대와 빅테크 실적 훈풍에 뉴욕 증시 상승",
@@ -177,9 +165,21 @@
       "category": "야간선물 / 파생 / 투자시황"
     },
     {
+      "title": "국채선물, 美 국채 약보합 속 혼조…10년물 10틱↓",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9pSUV3b0NrQXg3NkVGVGI0aWxqaTlOeGMxVUdaa3JuVDJ6Q1Y4TllsT1hXQ3hnSjdnZjNxa2lUdjJGOWV2VlVqMmlJUHpKS1VMdVlTTHFKcWc0X0JjVFFtQV9iN2VDUGlrR3RHa1NsaDY?oc=5",
+      "source": "연합인포맥스",
+      "category": "야간선물 / 파생 / 투자시황"
+    },
+    {
       "title": "[오늘의 증시]코스피, 美 반도체주 훈풍에 상승 출발 전망…SK하이닉스 실적 주목",
       "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE9YajV6SU1XQjRMa0w4WUhIRjhGeEZxVjBEWE1qV0RzSEtfRGo1eWhIdXlGLXZOZ0FTTE1SYnplTXVELWpYRy1WYXNVbjJWaGptZFFvaFg0bzdIYUtES1RYTDN2TGlBSy1aVkdaZm5rSVBWVjJZWXFKNdIBeEFVX3lxTE9YajV6SU1XQjRMa0w4WUhIRjhGeEZxVjBEWE1qV0RzSEtfRGo1eWhIdXlGLXZOZ0FTTE1SYnplTXVELWpYRy1WYXNVbjJWaGptZFFvaFg0bzdIYUtES1RYTDN2TGlBSy1aVkdaZm5rSVBWVjJZWXFKNQ?oc=5",
       "source": "뉴시스",
+      "category": "야간선물 / 파생 / 투자시황"
+    },
+    {
+      "title": "관광도시 통영에서 10월의 마지막 날을",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPc1JwOUJ5Q1Zrc3ZVRU5ROGNjcXB6ekgxdjJLMGZEQW8xRW5NdUU5NHlxS3BiVnNlaDhuU0lBSU45d3pFTGh4NzdqMnJ0VWhFSmZ3Y3pVVEEySTJ3cTRoN3FicU1rZ1BoVUF5M1hHOUNBcHNISHJqVm9DcnpHemFGaURkOXRabnNzTlZR?oc=5",
+      "source": "국제신문",
       "category": "야간선물 / 파생 / 투자시황"
     },
     {
@@ -192,12 +192,6 @@
       "title": "\"반도체 중심 상승 출발 전망…하닉 실적·주주환원 방안 변수\"",
       "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOejctZExrQmlLTzJtR2c5RHBUT05kZkxORWNBT1plSVk3R0RSbGtuTS00Z01WTUdiWXdDMzdCUUxQLVgwN2RPbTRlcWJWdnpzN0JCejNPbE5BLWRZNEJDT2M4dlF0Y2tGNVhOYUZFMHJXaHU5LUxlNUxKUi1hb1d3Uw?oc=5",
       "source": "이데일리",
-      "category": "야간선물 / 파생 / 투자시황"
-    },
-    {
-      "title": "앤트로픽 증권신고서 & 삼성전자와 Micron의 주주환원",
-      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE5UeUR5aGh6UmlUTC1WV3k3U0g4YmttMUdTTTJXT0xFSC1kZGljaXFyQ1MzVFdsRjlMeFNzVV8zVC1mU013TEU1SjJZSU5EOUpkb2lTQUthOFNQN0YtT0hLMktQVHBLSVVLM0p5VUFYOGpSWWVQNkxFYlRSQ1o?oc=5",
-      "source": "네이버 프리미엄콘텐츠",
       "category": "야간선물 / 파생 / 투자시황"
     }
   ]
