@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-11-02T14:23:46.697152+00:00",
-  "updatedAtLabel": "2026년 11월 02일 23:23 KST",
+  "updatedAt": "2026-11-02T19:18:53.694357+00:00",
+  "updatedAtLabel": "2026년 11월 03일 04:18 KST",
   "items": [
     {
-      "title": "상승 마감한 코스피·코스닥",
-      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE85djZyUHpXb1IxRVpxblBtZkk1eWR4WUJURERrWUhfRTU2VHZLY1ZTZ2czR1hHQm41cnFTQlh1TGxJY2hsT0o5UEtnenE2aE42Q1o4QjNCSldEYlVn?oc=5",
+      "title": "코스피·코스닥, 상승 마감",
+      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFAzNDRYdHVPdjk2d2Fna3IzQ2JtWWo5X29BNi1pMjc0d01aNDFjTWlhbWN2UXFuSzVYWGxzUWZDVVBwM0RCMkd6RlZ6Nno1RFRRVXpVcnN0UHdvM2xX?oc=5",
       "source": "뉴스핌",
       "category": "국내 증시 / 코스피 코스닥"
     },
@@ -27,20 +27,20 @@
       "category": "국내 증시 / 코스피 코스닥"
     },
     {
+      "title": "[코스피 반등 마감] SK하이닉스 3.8%·삼성전자 1.8% 상승…기관 매수세 유입 속 코스닥도 1.4%↑",
+      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1DeGJadTBueU90QjhDYkE2TWV6MGQ1SGVTZUEzQlNsc0xJLTR6ck9acjk3UVkwUlRHU2tMV2pER0JkcWhwVjFyel9Eb0htZ3J6NWZXR3h4STBHbGJyY2EtTjIxZ2wxZGM5?oc=5",
+      "source": "CBC뉴스",
+      "category": "국내 증시 / 코스피 코스닥"
+    },
+    {
       "title": "코스피, 기관 '사자'에 5800선 회복…코스닥도 상승",
       "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1BLWpFS0M3M3FRM2dzLU5mbkJPcXVrcXNid2Z0Unh1N1dsN0lXallBcUI4a2haUzFubmxocUs0ODhpT2ZZMUNmV0YwVGFMcU4yU2dLQWZvUTNVeF9mNUFmVW4tNjFPRDhFMTRoUlZkONIBc0FVX3lxTE1LX0pfWG9PZkVFYWlLR3JvdC1tdDlFVHVJbE03bUNJQm5ETmJtYng5MjJJSUwxV0RpZm4yN0R2VWRfQUhzdVpoRXR4V00zeVgxNGc5eDFqTklwUlpyYmlHd1pPSU5DRDFCUDdncFZqdjljc1U?oc=5",
       "source": "뉴스웍스",
       "category": "국내 증시 / 코스피 코스닥"
     },
     {
-      "title": "美 기술주 급락 여파에 코스피·코스닥 동반 하락 … 삼전닉스 약세",
-      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQU0h4SFFUeDZ4SGgwYnRmZ2lZM01LandQMlZCcmxQY0RzcUJibHJrdkM0TU5aVTNNZVBRZFVPdmw2NWNTdWoyTWJyZXdvX3RRY3RyUXVFNV9Gd3owdEtaOFg3Z29QQWJ5QXVXNkNhdklNeVNOMEIxV2JuWExhRjhXMdIBgAFBVV95cUxQU0h4SFFUeDZ4SGgwYnRmZ2lZM01LandQMlZCcmxQY0RzcUJibHJrdkM0TU5aVTNNZVBRZFVPdmw2NWNTdWoyTWJyZXdvX3RRY3RyUXVFNV9Gd3owdEtaOFg3Z29QQWJ5QXVXNkNhdklNeVNOMEIxV2JuWExhRjhXMQ?oc=5",
-      "source": "뉴데일리",
-      "category": "국내 증시 / 코스피 코스닥"
-    },
-    {
-      "title": "미국 중간선거 이후 외환시장 변동성 확대 주의",
-      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE42Uzd2NVJPSHNsWGV0WHFocEk0OE9rRlFTckFtYUJDTGQwQkxCcmdpa3pVbktrcHRTWlZ6QXZlZURrNTVVeFBOZ0dXUHhoVEY3Z1pfQXJnSG1lNVNjQ0xMSUln?oc=5",
+      "title": "[환율 전망] 위험회피의 물결을 거꾸로 거슬러 오르는 원화",
+      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5YRUJ3T1JwdGp0VHdSQ3ltU2YzWF9VTTBCT1hIQXpNZlh4QzJIMnA3bEp4VThSYnlxeFVRaFhFQThQb3VucmN3UDhFZi0wMU1VcXZoeVZ6Z01DTDhjZ2JrUQ?oc=5",
       "source": "KB Think",
       "category": "환율 및 글로벌 원자재 시세"
     },
@@ -57,15 +57,15 @@
       "category": "환율 및 글로벌 원자재 시세"
     },
     {
-      "title": "[환율 전망] 위험회피의 물결을 거꾸로 거슬러 오르는 원화",
-      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5YRUJ3T1JwdGp0VHdSQ3ltU2YzWF9VTTBCT1hIQXpNZlh4QzJIMnA3bEp4VThSYnlxeFVRaFhFQThQb3VucmN3UDhFZi0wMU1VcXZoeVZ6Z01DTDhjZ2JrUQ?oc=5",
-      "source": "KB Think",
-      "category": "환율 및 글로벌 원자재 시세"
-    },
-    {
       "title": "원·달러 환율, 9.5원 오른 1343.8원 마감",
       "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE5NUmQ2cTlBMm1tZnJtYVpIZXdSRVRWN3d4UWhUTFV5cjhFNWtadmtTMGdwdWxla3kxRDlBdW80WGRjWDNQZVFBQ2JfMDlpRTZ1TVZQeV84dzFpaWIyRzVPcG9US3pvZG5oblZ3Q3h3X2pJay16NktQddIBeEFVX3lxTE5NUmQ2cTlBMm1tZnJtYVpIZXdSRVRWN3d4UWhUTFV5cjhFNWtadmtTMGdwdWxla3kxRDlBdW80WGRjWDNQZVFBQ2JfMDlpRTZ1TVZQeV84dzFpaWIyRzVPcG9US3pvZG5oblZ3Q3h3X2pJay16NktQdQ?oc=5",
       "source": "뉴시스",
+      "category": "환율 및 글로벌 원자재 시세"
+    },
+    {
+      "title": "미국 중간선거 이후 외환시장 변동성 확대 주의",
+      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE42Uzd2NVJPSHNsWGV0WHFocEk0OE9rRlFTckFtYUJDTGQwQkxCcmdpa3pVbktrcHRTWlZ6QXZlZURrNTVVeFBOZ0dXUHhoVEY3Z1pfQXJnSG1lNVNjQ0xMSUln?oc=5",
+      "source": "KB Think",
       "category": "환율 및 글로벌 원자재 시세"
     },
     {
@@ -87,21 +87,15 @@
       "category": "공모주 청약 및 IPO 일정"
     },
     {
-      "title": "이번주 공모주 청약, 동원파츠·바로팜 등 6개사 나선다",
-      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE15VVhXQ0lJNzlZcGJLeU9iQW9jTGpFOGNvVjFMM3VMS2VKNmpGREdCa2xDWnNmQ3V4UG5ZcmE4cmxLNklON0JfX2EtYUh6bXF5Tzg5eVNtbDFBTEllMVBZ?oc=5",
-      "source": "조세일보",
-      "category": "공모주 청약 및 IPO 일정"
-    },
-    {
       "title": "[공모주분석 A/S] 동원파츠 공모가 26,500원 상단 확정! 725억 오버행을 이겨낼 청약 전략",
       "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOS09xM3Y1bjVvcDY0d1FUb0dlMlZxWk9QSFpmWWNKT2stQ002RE1PWUdKMVI4amVXZ2RYYXduVlNob0JCUkVfRnhoRDdKNE9IaDl2TG5oaS1GbDJDVlJ4aUtDYXdDS1UxQ3ZiOHlLMTlBQmJqcW5lalI5dmFLazNJMl9QOA?oc=5",
       "source": "네이버 프리미엄콘텐츠",
       "category": "공모주 청약 및 IPO 일정"
     },
     {
-      "title": "11월 첫주 공모주 13곳 출격…새내기주 주가는 출렁",
-      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTFAxLWJ3NThFY1lzbWJGVklvbXpGcmZFdHRqMVJGLW5Ed3N0X1BtZTVqZVozU254R1U2N2F4MlRVSEZYWmtvQzZDZVFET0lwM25wamQtZVRnMTdSZU5mYnNRY2NDeFV6WEMzSDdQamRRQQ?oc=5",
-      "source": "뉴스톱",
+      "title": "이번주 공모주 청약, 동원파츠·바로팜 등 6개사 나선다",
+      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE15VVhXQ0lJNzlZcGJLeU9iQW9jTGpFOGNvVjFMM3VMS2VKNmpGREdCa2xDWnNmQ3V4UG5ZcmE4cmxLNklON0JfX2EtYUh6bXF5Tzg5eVNtbDFBTEllMVBZ?oc=5",
+      "source": "조세일보",
       "category": "공모주 청약 및 IPO 일정"
     },
     {
@@ -111,15 +105,15 @@
       "category": "공모주 청약 및 IPO 일정"
     },
     {
+      "title": "[11월 공모주 미리보기①] 희망 공모밴드 하회 공모가 등장",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE82MDZNelp2MV9tMTdYLVhGX0VlZ1hMaC1ORFVQanh5Qjh5a3QzZ3laWVRzS0tfbDA2WHd1endqRUE0STRnMElpcEFBeVV3VlJIbU0zQ3V6SjVRaWVDc01UUDFENndORUNVY29Z?oc=5",
+      "source": "대한데일리",
+      "category": "공모주 청약 및 IPO 일정"
+    },
+    {
       "title": "복지·청년·소상공인 지원 확대…이재명 대통령, 민생 안정 총력 [영상]",
       "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE4zV1Y1MDR1Q3o4bGxfbWp4OUlIUlFXRW5wSENCUVJMWDczeVlobmJiOUtYY2VYYjJLTWtoNVJlZkE1aEZFX0d0ZnhIUTJpSmJrQVI5bGNVSTA1T2M?oc=5",
       "source": "경기일보",
-      "category": "정부 지원금 및 정책 소식"
-    },
-    {
-      "title": "구리시, 입영 청년에게 지원금 20만 원 지급…병역의무 이행 응원",
-      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE81T0JNT2VyYkwxOWN0bHZ3TFA0RGVNclBHSkVISVROTkdkRmplNzRvMVluMlY3R25rZmZmSTNEOXpVb0tiRzNYVl9iN0NJMnFZZVVUdTYxTXdUdGs?oc=5",
-      "source": "연합뉴스",
       "category": "정부 지원금 및 정책 소식"
     },
     {
@@ -129,8 +123,14 @@
       "category": "정부 지원금 및 정책 소식"
     },
     {
+      "title": "구리시, 입영 청년에게 지원금 20만 원 지급…병역의무 이행 응원",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE81T0JNT2VyYkwxOWN0bHZ3TFA0RGVNclBHSkVISVROTkdkRmplNzRvMVluMlY3R25rZmZmSTNEOXpVb0tiRzNYVl9iN0NJMnFZZVVUdTYxTXdUdGs?oc=5",
+      "source": "연합뉴스",
+      "category": "정부 지원금 및 정책 소식"
+    },
+    {
       "title": "구리시, 입영 청년에게 지원금 20만원...구리사랑카드로 지급",
-      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFByUjVUZ0V0YlVkQ0QtLUJ0dHVMc29RaUFaZ0Fpbkw4OGhfT3RtVEFJbWlOYXdacllXOXNPYkoyNFdtZWxYQzJMWlgzTTU3VWNaVkczbzA0ZURSNXBnR211Sw?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE53UGlkRnc4Zzl5TkQ3YWp3N2o5N1BQYzlpQmdrWFJULUNPQjZKQmNLRGpkWFI3SkdXMmVYdlZnSU1UWGh2ZDVOV1RDN00yY1BTbUt3dlVGMkpRN3lweGc?oc=5",
       "source": "유교신문",
       "category": "정부 지원금 및 정책 소식"
     },
@@ -141,10 +141,28 @@
       "category": "정부 지원금 및 정책 소식"
     },
     {
-      "title": "정부가 편성한 2027 예산안 총지출은 820조 9천억 원, 올해보다 12.8% 증가",
-      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9TcTQwUDVScTctWV9veHlWTU9Qd0MwWWNJMUZSaGJxdExQYzFMWTFpeW4tZ2stUlU5b3A5Y3FsR0dwTHZhcm1aWWR3cm1lQWppa2ZkVFdod29IYUstSU9MOENYQ2o2SmFF?oc=5",
-      "source": "정경시사 FOCUS",
+      "title": "구리시, '구리사랑카드'로 입영 청년에 20만 원 지원",
+      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5XeXdIRUFvT3JNQmNoT2I5dmhDSFhQSmFpNmVvTXY5alJKSFV1SDRmWFJUUjN3OWktN0F4ZU9BNGR1VnVFY3lacGFaZkRaVGhKMDBtNUtwaVdTYVFKcktaZzZLRXNuSWFDTEZ6UGtR?oc=5",
+      "source": "국제뉴스",
       "category": "정부 지원금 및 정책 소식"
+    },
+    {
+      "title": "[속보] 뉴욕증시 반등…다우 0.81% 상승, 나스닥·S&P500 동반 강세",
+      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1fNTVmX1hzWEdtTEdYNFNuMVZhWFN0eDVLdlY3NnJGT2dCZlZGbVdkU2lLeFhFR0NJY1pLVmJXUmlpUW4xaGhYTUVZWnNySkNsVDdTNTQ1M2trU1FHYzhxVUdwQVl6M3VR?oc=5",
+      "source": "CBC뉴스",
+      "category": "미국 증시 / 글로벌 매크로"
+    },
+    {
+      "title": "뉴욕증시, 상승세로 전환…나스닥 0.12%↑",
+      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBINFZIM2tjZkxMYy04OTgwY1dISDFXYS12Z2FlUkw1dmJuVkpDWGROVUE2WjVyNFRwU3d1b3lUN0Z0RVBpb3V4dFd0dXNqUU1C?oc=5",
+      "source": "블루밍비트",
+      "category": "미국 증시 / 글로벌 매크로"
+    },
+    {
+      "title": "美나스닥 반등·유가 6% 급락…코스피 2.24% 상승에도 외국인 '삼전닉스' 수급 엇갈려",
+      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9sc2NaN2dza05xV3JGNWFGbE5VcmZFc3RIT251U0EzckZOUWRkRmlOX1pfVUdxQ0hvWVE1RGRnOV9QMkU4emtiMkN0TjN5THBIVFU5VnRhVmFTOGl1UlBYQ2UxZWNaYm8?oc=5",
+      "source": "녹색경제신문",
+      "category": "미국 증시 / 글로벌 매크로"
     },
     {
       "title": "[뉴욕 마켓 브리핑](2일)",
@@ -165,30 +183,6 @@
       "category": "미국 증시 / 글로벌 매크로"
     },
     {
-      "title": "뉴욕증시 선물 소폭 상승…AI주 불안 속 중간선거·고용지표 주시",
-      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9LVXZEWmFvdWpCeXJTUmJ2SVdfSXVVTEVEVnRhQ2dqN0NNSnZhbXc3SEs2QUNiUTFoam53dExISjIxcjMzUGxhb1JfcXlJZFRRSExyS01FZ2Y?oc=5",
-      "source": "뉴스1",
-      "category": "미국 증시 / 글로벌 매크로"
-    },
-    {
-      "title": "[뉴욕 인사이트] 인텔발 반도체 쇼크에 나스닥 2.86% 급락… 뉴욕증시 일제히 하락 마감 (영상)",
-      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFA5X3M3X1hWZFJCLTVpWFc3U2xlUG1EV2hUejY2bXl5RVhFYmRhMDhjZUw4R0NwTWkwbE05aHU0d2xfWG9Sck43c0xGQTItMFZTMS1zSnlBR21JN3Y4RDhiRw?oc=5",
-      "source": "Investing.com 한국어",
-      "category": "미국 증시 / 글로벌 매크로"
-    },
-    {
-      "title": "AI 실적 충격에 뉴욕증시 급락...유가 120달러 육박",
-      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5iS1FnX1F1cGxRWkJlX19lRjRpNDZid0I3cDVPX0FDbWpSb2tWV2s3SWtmSkhfS1hkNC05REVOOUQyR3VWSldYd2g5X1VYYWxzckVhYWp1NmpuUUFwNFY3dTBjSnpVZE1lUXB0dEZlbWhRdnc?oc=5",
-      "source": "마켓인",
-      "category": "미국 증시 / 글로벌 매크로"
-    },
-    {
-      "title": "美 기술주 급락에 코스피 부담…AI 투자 우려에 5700 사수전 예상 By EBN",
-      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9EUjh2MERrWjB4NDN0WDJ2Zl9MMnJKXzd0THZBUGIzSWVMbzUzWGhRRFB5THlLMUptak1ON2hVMkI4TkpsTWZIMV81cG9CczJGX2hPXzZXOXV1amV3MDVBSU01VVhYa0haOFFjN1dHRGk?oc=5",
-      "source": "Investing.com 한국어",
-      "category": "야간선물 / 파생 / 투자시황"
-    },
-    {
       "title": "인텔 28% 폭락…코스피, 11월 첫날도 ‘찬바람’",
       "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5tSS1OM19ETkJ2dHFDOGlmOHp2RFpSSF9uMEJRLThDUmRkMlpKMkRRLUVGTlNFTTVlRWhIMGtzRjBINVZBdFNzcl9UcVNoRlFvVVI2bVZlcWJHdw?oc=5",
       "source": "경북매일",
@@ -201,21 +195,27 @@
       "category": "야간선물 / 파생 / 투자시황"
     },
     {
-      "title": "[마켓뷰] 코스피, '인텔 급락 등 美증시 삭풍' 이어받나",
-      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE40MlpoXzdXOW13YWJXZkk5b3hqa0NxbDNEYUFRMHJnUkRKWGdrRXZXVWxzTWV6RWt1S2gxUzUyaG1FeDduQm1xUXFhYXl2dDNrb2Niak5DTEZ2RTFuUUQ1QtIBYEFVX3lxTE40MlpoXzdXOW13YWJXZkk5b3hqa0NxbDNEYUFRMHJnUkRKWGdrRXZXVWxzTWV6RWt1S2gxUzUyaG1FeDduQm1xUXFhYXl2dDNrb2Niak5DTEZ2RTFuUUQ1Qg?oc=5",
-      "source": "연합뉴스",
+      "title": "美 중간선거·AI 수익성 시험대…코스피, 반등 이어갈까 [주간 증시 전망]",
+      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9TcGFkVlJqd3hJelhtVllXZWdoaWRLVC1RSlBRb0VQSU9GLVZSU2c0cTFDOGxWWXBITkdDVXF3aUt3TmM5Z0diQ1FxQnRHOFA1VkHSAVNBVV95cUxQZ0I4MFQ5d3pudTdCT0NtUVRPREt0ZlFpQ2VDTFhlUklsZ0V4NklyOWFIc1NVZmxoQkpoMVRXaExpS3BvRVFIR1h1ZFJIOXNOazczUQ?oc=5",
+      "source": "서울경제",
+      "category": "야간선물 / 파생 / 투자시황"
+    },
+    {
+      "title": "[오늘의 증시]'인텔 쇼크'에 다시 커진 AI 의구심…코스피, 위기감 고조",
+      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE11WTlkMUl5WnRtcDZwRWdGTk45bU40TnRxLUI3c052LUg4RUE5dUZnbHctdUFBLUtRVnZwSExYbHc5RFFvNjRZRl9raE1Kd1BOY2RRZHpuZ1VrdzNUTTRjalpjNjZQeUdFaW9scW9jdUthVDZCSk01X9IBeEFVX3lxTE11WTlkMUl5WnRtcDZwRWdGTk45bU40TnRxLUI3c052LUg4RUE5dUZnbHctdUFBLUtRVnZwSExYbHc5RFFvNjRZRl9raE1Kd1BOY2RRZHpuZ1VrdzNUTTRjalpjNjZQeUdFaW9scW9jdUthVDZCSk01Xw?oc=5",
+      "source": "뉴시스",
+      "category": "야간선물 / 파생 / 투자시황"
+    },
+    {
+      "title": "美 기술주 급락에 코스피 부담…AI 투자 우려에 5700 사수전 예상 By EBN",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9EUjh2MERrWjB4NDN0WDJ2Zl9MMnJKXzd0THZBUGIzSWVMbzUzWGhRRFB5THlLMUptak1ON2hVMkI4TkpsTWZIMV81cG9CczJGX2hPXzZXOXV1amV3MDVBSU01VVhYa0haOFFjN1dHRGk?oc=5",
+      "source": "Investing.com 한국어",
       "category": "야간선물 / 파생 / 투자시황"
     },
     {
       "title": "코스피, 美 빅테크 쇼크에 하락 출발…5700선 붕괴",
       "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNcnZYN0IwRWMyZEpjVUpKQ0VrQV9uOHVFejRvcXRpRGFrSWtaYkxHRTVLYnp0RjBBY0g0M2V0ZVZRWlpuaV9GYTR2bWVWRlJJQm1RV0ltS1RndWJqaXZwOWdxNG5ZMzZMNTNTbk5zOHlVUmtjNklaR2VJZ2U5eS0yVGZRT3NWWXJf?oc=5",
       "source": "글로벌이코노믹",
-      "category": "야간선물 / 파생 / 투자시황"
-    },
-    {
-      "title": "팔 때인가?",
-      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE15bDNCaUxLd3RIcFA0YlI3Qi12NHZwZ2M5dE1OT2EyLXpiQ0FzbjlaRVBYR09EdndUbU9KcjdkU0Q2X2FXRFJuNXRnNFpPb3F6T0VvTTF4OWt4ZFBPV1pOeDJRaDR6S21aeDlyQmY5NGJaMEJuNzJXa1NXQ28?oc=5",
-      "source": "네이버 프리미엄콘텐츠",
       "category": "야간선물 / 파생 / 투자시황"
     }
   ]
