@@ -1,5 +1,5 @@
 {
-"updated_at":"2026-11-03T12:30+09:00",
+"updated_at":"2026-11-03T18:36+09:00",
 "apartments":[
 {"region_code":"51150","sido":"강원특별자치도","sigungu":"강릉시","region":"강원특별자치도 강릉시","dong":"견소동","apt":"강릉오션시티아이파크"},
 {"region_code":"51150","sido":"강원특별자치도","sigungu":"강릉시","region":"강원특별자치도 강릉시","dong":"견소동","apt":"송정한신"},
@@ -2926,6 +2926,7 @@
 {"region_code":"41113","sido":"경기도","sigungu":"수원시 권선구","region":"경기도 수원시 권선구","dong":"호매실동","apt":"호매실스타힐스"},
 {"region_code":"41113","sido":"경기도","sigungu":"수원시 권선구","region":"경기도 수원시 권선구","dong":"호매실동","apt":"호매실신미주"},
 {"region_code":"41113","sido":"경기도","sigungu":"수원시 권선구","region":"경기도 수원시 권선구","dong":"호매실동","apt":"호매실엔루체(N'LUCE)"},
+{"region_code":"41113","sido":"경기도","sigungu":"수원시 권선구","region":"경기도 수원시 권선구","dong":"호매실동","apt":"호매실한신"},
 {"region_code":"41117","sido":"경기도","sigungu":"수원시 영통구","region":"경기도 수원시 영통구","dong":"망포동","apt":"e편한세상영통2차(1단지)"},
 {"region_code":"41117","sido":"경기도","sigungu":"수원시 영통구","region":"경기도 수원시 영통구","dong":"망포동","apt":"e편한세상영통2차(2단지)"},
 {"region_code":"41117","sido":"경기도","sigungu":"수원시 영통구","region":"경기도 수원시 영통구","dong":"망포동","apt":"그대가센트럴파크"},
