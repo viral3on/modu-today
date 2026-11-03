@@ -1,13 +1,7 @@
 {
-  "updatedAt": "2026-11-03T10:35:16.730398+00:00",
-  "updatedAtLabel": "2026년 11월 03일 19:35 KST",
+  "updatedAt": "2026-11-03T13:23:14.361096+00:00",
+  "updatedAtLabel": "2026년 11월 03일 22:23 KST",
   "items": [
-    {
-      "title": "코스피, 美기술주 하락 영향에 3.6% 급락…코스닥도 4%↓(종합)",
-      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5iOGdTaWhmb1Fna0Nsd01GS0JzUF9JeVFjQzVEaEl6QnE1SC1idjByWmhPaVJ1WDZ0b1RPU2ZTX1g5Z1c0cm43TERxOGtTanUxZW1McnJ4OUhMN2Y1SUluZdIBYEFVX3lxTE5iOGdTaWhmb1Fna0Nsd01GS0JzUF9JeVFjQzVEaEl6QnE1SC1idjByWmhPaVJ1WDZ0b1RPU2ZTX1g5Z1c0cm43TERxOGtTanUxZW1McnJ4OUhMN2Y1SUluZQ?oc=5",
-      "source": "연합뉴스",
-      "category": "국내 증시 / 코스피 코스닥"
-    },
     {
       "title": "코스피·코스닥 3%대 급락…AI 투자 수익성 우려에 반도체주 '휘청'",
       "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5NdUhVTXJvVFNVcmRqTTc0WTJZaFhEVTBzaTM2WHRmS2tWcTRCMHRUczdmWE42QjBzN1NncjJ6amhwbVJMVjZuTG5oc0F1c0lnanphYkFmM21qZFoyeXlJYjJyT3E1a1E?oc=5",
@@ -16,20 +10,8 @@
     },
     {
       "title": "코스피·코스닥 낙폭 확대...장중 4%대 낙폭",
-      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1UVVNiYzhpTl8xU2FBRzVaM08zRmZVbHdCUGZQSEY4V0sxRTdEMTZnQWthSG40R0t0QkJScjE2c3RYQUdqMENad3Q1WFRMRmhXajhObDNuV3VPenl3d2tjcHdyQkd6d1puUWVKbjI4Q19qME51MHc?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5kWTFwQnRodGZqdWwzZFNROVQ5MTRhbEw2WlUwRktoUUYwcFdOazZmY1pxbHAwOUtJSkpDZzA5MmpuY3JaN2Q2cnV0NnVOUXJjdWdqRFRGLVIxcDdSNnc?oc=5",
       "source": "YTN",
-      "category": "국내 증시 / 코스피 코스닥"
-    },
-    {
-      "title": "코스피 3.59% 하락한 5648.79 마감…코스닥도 4%대 급락",
-      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1VcEtqYXVrYjFHdmkxMmUzVVpySzZCR2EyX0lOcUE0d3pZckxYWGFQRWNVaW5WdWVNNmI5c20zV0V0WWs0cVprQVczaGtlSjBHOTJrOXptOC00aWlqcFpwOTZVek45YVU?oc=5",
-      "source": "강원도민일보",
-      "category": "국내 증시 / 코스피 코스닥"
-    },
-    {
-      "title": "[마감시황] 코스피, 외국인·기관 '팔자'에 3%대 하락…5700선 아래로",
-      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBkejZhelhqbHU4WVBEVEZ4bWtTUGFMa2QyaG1fY1hvRzIyeE8tM3JqYXdmdlVvR3F5NGR3WlRuY3hQT0c5eTRIVnNNX0taZ3Y1SjVYNTd0aTZGU2Ra?oc=5",
-      "source": "뉴스핌",
       "category": "국내 증시 / 코스피 코스닥"
     },
     {
@@ -39,15 +21,39 @@
       "category": "국내 증시 / 코스피 코스닥"
     },
     {
+      "title": "[마감시황] 코스피, 외국인·기관 '팔자'에 3%대 하락…5700선 아래로",
+      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBkejZhelhqbHU4WVBEVEZ4bWtTUGFMa2QyaG1fY1hvRzIyeE8tM3JqYXdmdlVvR3F5NGR3WlRuY3hQT0c5eTRIVnNNX0taZ3Y1SjVYNTd0aTZGU2Ra?oc=5",
+      "source": "뉴스핌",
+      "category": "국내 증시 / 코스피 코스닥"
+    },
+    {
+      "title": "코스피 3.59% 급락…코스닥도 4%대 하락",
+      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1PaUhaZ3QzdVFZbGhxdnNSNmgyNENzWmpCVXNRcHExRG9CWm1KUEZYUlZ6SnlDVFFYY3p5bEFLVnF3dk50bEZSVDFoWUVWOWFXV3NmS3ZxZU9ucW9jR2p3RWI0LW10QUlGbVRod2w0RQ?oc=5",
+      "source": "진일보 | 전남일보",
+      "category": "국내 증시 / 코스피 코스닥"
+    },
+    {
+      "title": "코스피 3.59% 급락 마감…외국인 매도에 5,600선 턱걸이",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5GdlZMMGJLaUxQbVhoOEI4Y3BnX2FnbDdNSFJOS1FoY29jWkJFdkw0RXdIMlNkbUJ1RHdDa08yVzJaUlk4aGR4LUNNY3BkYW1zVE5RUWlSbHhnUXA3SUdkNGlvcjRvMFVEVENsTThIT3fSAXRBVV95cUxOSXAwOERTelBfT2tOVG5vS0N0a3BlOGF3ckpmdzFHR1ZvbmVld1diWng4QjBBNTJWY3dVTjFoZW9vOUFQbXIycFZ6ckVZdS1DVlN5aUlkTWZTT3JMSWRZNUQwTmhLMlVvakVtMlpVay0zQ3E3bA?oc=5",
+      "source": "산경투데이",
+      "category": "국내 증시 / 코스피 코스닥"
+    },
+    {
       "title": "[환율 전망] 환율 급등 배후, 외국인 환헤지가 업계의 정설",
       "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5EZXhLQ1BGOHdKdG8tR0h1SXVRWWJkLU55MHRQbjdmNU5KbW5Ld3EyV0lLOXB2R0RtbFdRZno5V1NZNmE4dVVUSkI0TGdzR2N0UElxdm9KeEtEbjZobF9ubA?oc=5",
       "source": "KB Think",
       "category": "환율 및 글로벌 원자재 시세"
     },
     {
-      "title": "피치 \"내년 달러-원 연평균 1,332원·연말 1,325원 전망\" |",
-      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5PQlFldVRDM3UybV9DLXBwd2dIY1JjbWVLcTFqM2RzS18tdC1tMUVRYkFRTGl1bzYwOElDTWJBbFpRMkRPNGNfck11WWxRdWRHYzY3WldpVWZZOEFrVTBHcF9ERjA4UVBCLXRZdFVWeVRGMExD?oc=5",
+      "title": "\"내년 달러-원 1,500원대 본다…대외 불확실성·외화 선호에 상저하고\" |",
+      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE82emhnWm5rSFpJaDhVRlYya1E1RTZnZ3hJNTNJSlk0aHRkWTA1SkpjWFRKUG8yTUliVDQ1R3A5XzAzekNuMVNubC1KWlh3aHMtZ1gxbVNnZS03TXdRYTQ2OEJna0ZoMnFEeXlCSVRiZmpuWVVS?oc=5",
       "source": "연합인포맥스",
+      "category": "환율 및 글로벌 원자재 시세"
+    },
+    {
+      "title": "피치 “2027년 원/달러 환율 1325원 전망”",
+      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5XcnZMNlNyN0pmandhbWw5Y044QnlZNjVIU0EtOXYybVZCNmVUaG9BZFVodmo0OEhrZkNFcy1Va1VCLU5SRW5hdGwtVThXMDgtN3VYam1JTHh4dmRfb2l3c1J0c1oxeDZDRENJYXZnMDlGMHc?oc=5",
+      "source": "스트레이트뉴스",
       "category": "환율 및 글로벌 원자재 시세"
     },
     {
@@ -63,22 +69,10 @@
       "category": "환율 및 글로벌 원자재 시세"
     },
     {
-      "title": "피치 “2027년 원/달러 환율 1325원 전망”",
-      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5XcnZMNlNyN0pmandhbWw5Y044QnlZNjVIU0EtOXYybVZCNmVUaG9BZFVodmo0OEhrZkNFcy1Va1VCLU5SRW5hdGwtVThXMDgtN3VYam1JTHh4dmRfb2l3c1J0c1oxeDZDRENJYXZnMDlGMHc?oc=5",
-      "source": "스트레이트뉴스",
+      "title": "피치 \"내년 달러-원 연평균 1,332원·연말 1,325원 전망\" |",
+      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5PQlFldVRDM3UybV9DLXBwd2dIY1JjbWVLcTFqM2RzS18tdC1tMUVRYkFRTGl1bzYwOElDTWJBbFpRMkRPNGNfck11WWxRdWRHYzY3WldpVWZZOEFrVTBHcF9ERjA4UVBCLXRZdFVWeVRGMExD?oc=5",
+      "source": "연합인포맥스",
       "category": "환율 및 글로벌 원자재 시세"
-    },
-    {
-      "title": "[11월 1주차] 환율(FX) 전망",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9fQkpaWk5YMUpKblQwZUpHdDZGYmg4bF9LdVlyM0hVNzVLaEFPT1pUZFpMWXFXUnZoQUhJU0dnSTAzZ3hrN24wd2k5WjluSExqWVh5eW9SWWJJYmQ2eHhoZWpXZXlnRFdieW1aRw?oc=5",
-      "source": "KB Think",
-      "category": "환율 및 글로벌 원자재 시세"
-    },
-    {
-      "title": "공모주 ‘옥석 가리기’ 뚜렷…절반 이상, 한 달 만에 공모가 밑돌아[월간 IPO]",
-      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE4yb0NZcWE2Q1dwc0NuOHdWZThnMG50QkpKUWp3WEkwdTExSG1UMVFqUG5iUnhJNTk1Qll1WE1tVFVPcG5fd3dqZ1RvRlNwdzBab2ZFYlRibURKX0U?oc=5",
-      "source": "에너지경제신문",
-      "category": "공모주 청약 및 IPO 일정"
     },
     {
       "title": "[공모주 청약] 넥스아이 첫날 일정 마무리…균등·비례 경쟁률 살펴보니",
@@ -87,8 +81,20 @@
       "category": "공모주 청약 및 IPO 일정"
     },
     {
+      "title": "공모주 ‘옥석 가리기’ 뚜렷…절반 이상, 한 달 만에 공모가 밑돌아[월간 IPO]",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE4yb0NZcWE2Q1dwc0NuOHdWZThnMG50QkpKUWp3WEkwdTExSG1UMVFqUG5iUnhJNTk1Qll1WE1tVFVPcG5fd3dqZ1RvRlNwdzBab2ZFYlRibURKX0U?oc=5",
+      "source": "에너지경제신문",
+      "category": "공모주 청약 및 IPO 일정"
+    },
+    {
+      "title": "IPO 공모주 ‘단타’ 막는다…장투 기관에 물량 사전배정",
+      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBiWEVMN2d3NFJBYnJjSXQ5VF9GZ2w1UkFhMUI3UHIzd0UtUXlZZmZNcjVvMXQ3azd4dVRnVjUwT0Z1b3Z0NG50X01hV3huX3pDaHc?oc=5",
+      "source": "매일경제 마켓",
+      "category": "공모주 청약 및 IPO 일정"
+    },
+    {
       "title": "\"공모주 6개월 이상 안 팔면 미리 배정\"…13일부터 코너스톤투자자 도입",
-      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBCZDlGbXhXSkhxRncxYlFRbWw1aDMzdmMwTkx6NFRiZDl1S1hsMjNVaW5hZ1pMWElEQ0g3NmVUUHlQMm54ZnBOSF9Mckh2WTh5cFV5SE1KMTJsSlkzcW5Pbg?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE9WSGJIZDBWTVhOVnE1MjNpaFB2WlVhaHNONEcwbUs0YjBkNzBRd21kYTZlS1NIaEVQSzFIRlJtUllNdURkNjNwVHdlem4wUlYyazZraFMxNF94STd3WFJBSTNZamRxZEdwdVBvT0hqMFZrdw?oc=5",
       "source": "프라임경제",
       "category": "공모주 청약 및 IPO 일정"
     },
@@ -105,10 +111,16 @@
       "category": "공모주 청약 및 IPO 일정"
     },
     {
-      "title": "IPO 공모주 ‘단타’ 막는다…장투 기관에 물량 사전배정",
-      "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTFBqbEs2Vk5GYVprcDZVQXAwTlR5QlZGaWlsanNKeDk1SnlkTzVfbUVZV20zWkJ1UmJhY0dta2Y4V2ZQbVlsaXc?oc=5",
-      "source": "매일경제",
-      "category": "공모주 청약 및 IPO 일정"
+      "title": "구리, 입영 청년 지원금 20만원 지급",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5HSWVMQ1NIQjltQk5Cc0huWHRZeF9qcEpodXVPMVMzTEpfUVRpeGtLRmxKaWo3NjVKRDVGV1BMWFpOMVBBa216TTlRajBFM21nc3ZwNFNBUF80SG9KcFRZS0p1aFEtWEw4YnlFctIBb0FVX3lxTE5KQm9pSlVLRGVtYTAxS2NRWWJPU1UtX0k1WkxKNFo3NWVVbndYenJPalNDRldYSF9kMWlTVzdxMjczUzVkeW14QXF0TVkzMkxYVkRIam5uMEtpYmtGMDlGRFhRbUdvN21YZTJ4WUpnOA?oc=5",
+      "source": "서울일보",
+      "category": "정부 지원금 및 정책 소식"
+    },
+    {
+      "title": "'예산안 줄다리기' 본격화...\"청년약탈기금\" \"억지선동\"",
+      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5FNDZDQzRDRmpEMEtTZlVDc2NpaFBlaTFkRTdxN2hOT1N2dGZMMDJELXJqQy1MelBZSmNRMDI3MUhsdjJScUgzREhkWHo3bnZrMkZEZHk3emF5eFdPY0E?oc=5",
+      "source": "YTN",
+      "category": "정부 지원금 및 정책 소식"
     },
     {
       "title": "李가 짚은 'V자 회복 속 K자 격차'…정부, '모두의 온기' 예산 짰다",
@@ -129,12 +141,6 @@
       "category": "정부 지원금 및 정책 소식"
     },
     {
-      "title": "구리시, 입영 청년에게 지원금 20만 원 지급",
-      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9GRWM3Vjh2SVprdU84VEdsOWg0OTV5b29ZMDc2UjJTOUxadm5MWkVlQ25UcmdITTNYUi1vZUNtSlVFcnVNRUxlbURDVVNkb3oyZjBueU10UDdhbE9ObmVaakJUYS1tZm5M?oc=5",
-      "source": "수도권지역뉴스",
-      "category": "정부 지원금 및 정책 소식"
-    },
-    {
       "title": "“소수의 성장 아닌 모두의 성장으로”...이재명 대통령 2027년도 정부 예산안 시정연설",
       "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1aT3pZNUtESWlta09MbUp3SDRfYkQ1WTk5bFIzcnhFZEI4VGx0SUs0V0hORW1WcFlwRnhfQ2ZraUt0NWxZYnRCdWRPcE5QSmlWdHR1UlFCaFBVaUVzM3ZpYkNmV09oR2N2Wm5JdjhMYnE?oc=5",
       "source": "더 데일리가드",
@@ -147,15 +153,15 @@
       "category": "미국 증시 / 글로벌 매크로"
     },
     {
-      "title": "뉴욕증시 혼조…유가 급락에도 기술주 이탈에 나스닥 1.07%↓",
-      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE10WDdaTUFLS1lWUkotRGpzM2R4Q21oSF9TSnU3bTlGRkg3bXNacnh4cDlPZldVdVoxc1VaV2xhbW9nc25sbldpSTFlSm1QOHpFc3hHdEpNWnNfMnFZN0VYTmVTZmI?oc=5",
-      "source": "서울경제TV",
+      "title": "AI 투자 우려로 흔들린 뉴욕 증시…다우·S&P500·나스닥이 보여주는 미국 시장 [더 나은 경제, SDGs]",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1PZUhBc2JmVG8yQjBFNlBFS3ZHdHZuMDBpQmNIWmIzWG1rd0VJbi1MejdQQ3Zvc0JzM3ZMdHlGUG1PVHZZYlFWX0x5c3I4d2tRQlNTTFpCdFFMdDhfUWxnc1QzWFlfRDI4bHdF0gFUQVVfeXFMUExnMWRtQk1qcW9JeEhOOThQNDIwRVBaazREZFRjaWx1SmxJMFZCQS02Zm0zM1Z1ZFlaRWdhVUx1aDd3N2xyMm9LWGRqYVJNY1FkTWpK?oc=5",
+      "source": "세계일보",
       "category": "미국 증시 / 글로벌 매크로"
     },
     {
-      "title": "[뉴욕증시포커스] 기술주 매도에 혼조…나스닥 1.07% 하락",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5IYXhGZzN0dlEwNDRianRNVmFodlR0SDhrSEV4aXNZdUZSMm1sbUxSWkQ1Q09QQUJtbnRyNmhSWDFqV2VjbTBfcE8xZmdzVUFYY2ZPQ0dXRUhfR01Oa3RrTWd5YVY0VEpfeVBWYg?oc=5",
-      "source": "굿모닝경제",
+      "title": "뉴욕증시 혼조…유가 급락에도 기술주 이탈에 나스닥 1.07%↓",
+      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE10WDdaTUFLS1lWUkotRGpzM2R4Q21oSF9TSnU3bTlGRkg3bXNacnh4cDlPZldVdVoxc1VaV2xhbW9nc25sbldpSTFlSm1QOHpFc3hHdEpNWnNfMnFZN0VYTmVTZmI?oc=5",
+      "source": "서울경제TV",
       "category": "미국 증시 / 글로벌 매크로"
     },
     {
@@ -165,15 +171,15 @@
       "category": "미국 증시 / 글로벌 매크로"
     },
     {
-      "title": "뉴욕증시 혼조 마감…기술주 약세에 나스닥 1.07% 하락",
-      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9oNDdQcnJTVERPaXItVWtwNGZjWmhwc0RXV0xjN3VWcUhtdGV0YU5TZ3BEZXVUak1LU2NWQzdlbFhwQXUzTEd1NmJ2SmI5aHYxeWs1aEl5ODV3dG5lclIwQXVTbVpjRXB5?oc=5",
-      "source": "www.ebn.co.kr",
+      "title": "[뉴욕증시포커스] 기술주 매도에 혼조…나스닥 1.07% 하락",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5IYXhGZzN0dlEwNDRianRNVmFodlR0SDhrSEV4aXNZdUZSMm1sbUxSWkQ1Q09QQUJtbnRyNmhSWDFqV2VjbTBfcE8xZmdzVUFYY2ZPQ0dXRUhfR01Oa3RrTWd5YVY0VEpfeVBWYg?oc=5",
+      "source": "굿모닝경제",
       "category": "미국 증시 / 글로벌 매크로"
     },
     {
-      "title": "뉴욕증시 혼조…AI 기술주 약세에 나스닥 1%↓, 국제유가 7% 급락",
-      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFBRMmR1SS1OVW9PekN0MWR5azhDU2FycDBLSmoxc0YyRWo1MkNJNjU5RVNKNGF1aHVYNEw4WVI1NGNmdnN5X0ozTl9TNU1STHVZREhHNkJTLVlUVlJVRlZ4Qi0yTEU?oc=5",
-      "source": "디지털데일리",
+      "title": "뉴욕증시 혼조 마감…기술주 약세에 나스닥 1.07% 하락",
+      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9oNDdQcnJTVERPaXItVWtwNGZjWmhwc0RXV0xjN3VWcUhtdGV0YU5TZ3BEZXVUak1LU2NWQzdlbFhwQXUzTEd1NmJ2SmI5aHYxeWs1aEl5ODV3dG5lclIwQXVTbVpjRXB5?oc=5",
+      "source": "www.ebn.co.kr",
       "category": "미국 증시 / 글로벌 매크로"
     },
     {
@@ -207,9 +213,9 @@
       "category": "야간선물 / 파생 / 투자시황"
     },
     {
-      "title": "[모닝 경제 브리핑] 美 증시, AI 투자 자금조달 부담에 반도체 재차 급락…필라델피아 반도체 3.37%↓, WTI는 7.4% 폭락",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFA5MTdoNTVuNkJ1cXFFUnY3UGRzRjRkM0drWWk4c3hTMEdwbEtRckVlb0VqWXVmQ0YtT2JmVllTN3Iybl9nbTJfLU5HOTRWNS1ILWs1em5lRV9Lb0JlbVJSNnlSR1BVNV8ySVpsQg?oc=5",
-      "source": "프리진경제",
+      "title": "어제 오른 코스피, 하루짜리였나…파랗게 질린 ‘이 숫자’ [내가샀다]",
+      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9FTjAyN2IzQTdINnZQY2VqVGVLOEV6enROWFlWUlRFNGowNVJBV3VCcllIRWZSMkFFQkJqNTVVNGFzWkNuMnF2aE01X29zNHBHQlYtdEU1bEx5N29Scmo1ZGdvTldZaXFpZFJVcTd6alRTZTROX3BTT1NScDdWdw?oc=5",
+      "source": "서울신문",
       "category": "야간선물 / 파생 / 투자시황"
     }
   ]
