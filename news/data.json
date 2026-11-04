@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-11-04T16:57:21.269943+00:00",
-  "updatedAtLabel": "2026년 11월 05일 01:57 KST",
+  "updatedAt": "2026-11-04T19:05:40.979952+00:00",
+  "updatedAtLabel": "2026년 11월 05일 04:05 KST",
   "items": [
     {
       "title": "장 내내 요동친 증시...코스피·코스닥 강세 마감",
@@ -21,8 +21,14 @@
       "category": "국내 증시 / 코스피 코스닥"
     },
     {
+      "title": "코스피·코스닥 동반 상승…삼성전자·SK하이닉스 강세 HLB는 털썩, 미국 '블루 쓰나미' 영향 주목",
+      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFA5VVd3MmhNNTc4b0lJN05xcUNsVDJ5Y016eGhWeGNRZ0xSUVE5ODVoYkhDZEY1QkV2Q0lmRDhKSlhzLXVCU1BHY2l1bmFzSTRlUHAwTFNYaWxaRFpKQUg2UEVwM2hCTXcw?oc=5",
+      "source": "CBC뉴스",
+      "category": "국내 증시 / 코스피 코스닥"
+    },
+    {
       "title": "출렁이던 코스피, 강보합 마감…코스닥은 1%대 상승",
-      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE1xT2E3OV93bGRkdWpvc3dxT09mRlNKU2k1TTJSZU50bUR3VDZsMDhZZVlwR0s3UkVDREFLZGFoTGZBUXR5SWM5SmVtN3Z1LTNEdkNwOWRnOVFmeEgzVXA3azVB?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE43MHRTcmVMWU1SNGNtQTZVekpYaXV6LXNRNk43cG5TYmVia3V0YVdtODBCTzA4SzhySFBEQy00VkVlZHN1cTY2YTVvaF9wZ2VKdVhGbHJkejl1aE1BWW12eQ?oc=5",
       "source": "아시아경제",
       "category": "국내 증시 / 코스피 코스닥"
     },
@@ -30,12 +36,6 @@
       "title": "'블루 웨이브' 공포에 증시도 파란불…외국인 매도 행렬 이유는 - 머니투데이",
       "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE03bjR2T01NNXI1SUdSRi1wOHg2Y3hMa1hmSHV6U0toTVNpalF1alFEc1FnQTBWdWtieHIxcEZKUmFqTGRIQUlxS0tjbG1RNEI3Sk43M2JQWTZFaFBiYVdkOUFZSlZyaHZi0gFuQVVfeXFMTnQ4dnlUb3NzeDNSTEx3a24zazdtczhvdmpzR1NmR1hFYktEM3dfUm04ODJPcGljUml4enQ4S0pKSTNWWVlUbXZfNXVjOHZVN3VaOXdhMURRZnc1MTFyZjJNX05INmFsX29BVzZnWlE?oc=5",
       "source": "머니투데이",
-      "category": "국내 증시 / 코스피 코스닥"
-    },
-    {
-      "title": "코스피, 美 반도체주 훈풍에 반등 출발 … 5730선 안착 시도",
-      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPZHNPdGN6X0xGOURrQWZoM1ZyLXZmVDRqQlQ3bDM4cDhXTks0NEtDLU1uNDY5NmRCWk45LVJ6ZkdfbUZRejdxc1lBUW9JaUhkNWVTcGZGaGVFakMwWG9Fbzl3S0wyb2pvRU96YXpjXzJuUjdlcXJMZnVZMEV3MEd6RNIBgAFBVV95cUxPZHNPdGN6X0xGOURrQWZoM1ZyLXZmVDRqQlQ3bDM4cDhXTks0NEtDLU1uNDY5NmRCWk45LVJ6ZkdfbUZRejdxc1lBUW9JaUhkNWVTcGZGaGVFakMwWG9Fbzl3S0wyb2pvRU96YXpjXzJuUjdlcXJMZnVZMEV3MEd6RA?oc=5",
-      "source": "뉴데일리",
       "category": "국내 증시 / 코스피 코스닥"
     },
     {
@@ -51,7 +51,7 @@
       "category": "환율 및 글로벌 원자재 시세"
     },
     {
-      "title": "미 중간선거 이후, 불확실성 커져…“외환시장 변동성 확대”",
+      "title": "미 중간선거 이후 “외환시장 변동성 커진다”",
       "url": "https://news.google.com/rss/articles/CBMickFVX3lxTFBmLXV2VkV1T1lDMmt1NGRRQlh0d3RBTnFNWkYybkxNLVoyQkl2dllhMkYtTTR6bHpvdzgwU0tBWjl6a1V3Wnl5NHk4UlNhLUFPNkxXTy0waVpFRTFFZl9YOHZWcmJva1Y4VG14aTdDSXYwUQ?oc=5",
       "source": "한겨레",
       "category": "환율 및 글로벌 원자재 시세"
@@ -129,6 +129,12 @@
       "category": "정부 지원금 및 정책 소식"
     },
     {
+      "title": "[美 중간선거] 개표 진행에 월가 '촉각'…민주당 약진 전망에 나스닥 선물 2%↓",
+      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFA3Z0MxMndjXzBJam9nbzBFRF92Q2liMkE4Sk8yVG4wV202Y2VBNUVacmZ3dFl0V3N4QmpNczRDdy1LY3ZMRl9uM2Iyc0hpbENiREpWQzgxaG5EZ1lh?oc=5",
+      "source": "뉴스핌",
+      "category": "미국 증시 / 글로벌 매크로"
+    },
+    {
       "title": "반도체주 '급반등' 속...미국증시, 나스닥·S&P500 '상승'",
       "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE40RmtfSkZrdHNfUnpuTkxWRzJNc2xpRXRjcFJwS3kzSHZtTnp6TTZoa2lrTmdNQ0NkRzZ2VVlJQnczbmpFYWd0SFAtVmVHU0xnaXN0Q0JybXd3OVpfcHhDLXFZSS1LS19ndG5tY1B0MHrSAXNBVV95cUxPaXRYWUdRR3ZVdlFOblZoampzS09vb2JiM2hsOGYyMkhodWpvQUhjSDlxR0FYNEdJdUlFYXFjYU90UklXZzU1MWxDNDUzWXFQLUJGQ2JPMXFGTXlJTW5PWi03eDN1VFV3dFZXV3RRbjhwZF80?oc=5",
       "source": "초이스경제",
@@ -141,15 +147,15 @@
       "category": "미국 증시 / 글로벌 매크로"
     },
     {
-      "title": "미 중간선거 결과 앞두고 뉴욕증시 혼조…다우지수 0.38%↓[뉴욕마감]",
-      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9zWldtanZ2c1drWFpOYjQtMldIeVo3ZGhRUVRJQ093S1ZrR0FLc3Y0RVVmWmFYT3BFVEhOUTJaT0ZISTdNZnRQN2todGF4M3h0Yl9VT0toZHRqaVRWXy1Z?oc=5",
-      "source": "MTN 머니투데이방송",
-      "category": "미국 증시 / 글로벌 매크로"
-    },
-    {
       "title": "[굿모닝! 글로벌 뉴욕증시] 엔비디아·AMD 저가 매수 몰렸다…나스닥 나흘 만에 반등",
       "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9WQXpuclBpOV9PVG90R2c4eExDS2pQTGVXNjhhUHowT2lWVFBrWHcyUVNmYkNFaFlZYlZYUVRTUmRrYzdlUVFpazFZY09jRjQtRnMzUmZETWJWY3h0c1oxQU1pV0t0VHktalBrQl80WQ?oc=5",
       "source": "뉴스퀘스트",
+      "category": "미국 증시 / 글로벌 매크로"
+    },
+    {
+      "title": "미 중간선거 결과 앞두고 뉴욕증시 혼조…다우지수 0.38%↓[뉴욕마감]",
+      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9zWldtanZ2c1drWFpOYjQtMldIeVo3ZGhRUVRJQ093S1ZrR0FLc3Y0RVVmWmFYT3BFVEhOUTJaT0ZISTdNZnRQN2todGF4M3h0Yl9VT0toZHRqaVRWXy1Z?oc=5",
+      "source": "MTN 머니투데이방송",
       "category": "미국 증시 / 글로벌 매크로"
     },
     {
@@ -159,27 +165,21 @@
       "category": "미국 증시 / 글로벌 매크로"
     },
     {
-      "title": "뉴욕증시, 美중간선거 당일 혼조 마감…반도체주 반등 나스닥 0.83%↑",
-      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE13aU5iV0ltZnNxUlNBZUZHY0ZIOExsWHZiMWdKNldsbmZES29WV2lEdWxIWHdsS3hZQ21LODVKZEppeFBEZktqMS1rZHpidERfUkJMNdIBVEFVX3lxTE13aU5iV0ltZnNxUlNBZUZHY0ZIOExsWHZiMWdKNldsbmZES29WV2lEdWxIWHdsS3hZQ21LODVKZEppeFBEZktqMS1rZHpidERfUkJMNQ?oc=5",
-      "source": "더팩트",
-      "category": "미국 증시 / 글로벌 매크로"
-    },
-    {
       "title": "美 중간선거 불확실성 해소…\"국내증시 업종별 차별화 장세 지속\" - 머니투데이",
       "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5kY21MNjV5WmNpOGF3SGw2MVdmbFdlbjZBTVRzR3RPNG1TbWJPT2hoYWN1bUVCM1cwZzllX2dTUmFZMThSbjVFMldkRUZKc213VG9sSndqMDRucDkxcUE4Uk53S2dMLUlfZXRTRk9R0gFuQVVfeXFMTmRjbUw2NXlaY2k4YXdIbDYxV2ZsV2VuNkFNVHNHdE80bVNtYk9PaGhhY3VtRUIzVzBnOWVfZ1NSYVkxOFJuNUUyV2RFRkpzbXdUb2xKd2owNG5wOTFxQThSTndLZ0wtSV9ldFNGT1E?oc=5",
       "source": "머니투데이",
       "category": "야간선물 / 파생 / 투자시황"
     },
     {
-      "title": "美반도체 반등에 코스피도 오를까…외국인 수급 관건",
-      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBHSURpTmQwQTIyenZjMFNLREVHcm9wQUhGMGRWN2FfY211QVJrWi1GRXZIcndTNU9LbVhWYnFCZnc1aUlVa1Z3RDUwOE5sbnNHNUU5aTlhREFSQQ?oc=5",
-      "source": "경북매일",
-      "category": "야간선물 / 파생 / 투자시황"
-    },
-    {
       "title": "월스트리트 모닝 브리핑: AMD가 반도체 반등 이어받아, 민주당 우세에 야간선물은 '브레이크'",
       "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9Md0pZckxFWFd0Sy1xRWRuZjFMeEt2M1U2bUJQdzlRQkk2Y0lCOTJCM3I0LUhjT1JvdXI3UzJMS0hRNkpER1lsYWZBYkZzTkN3V1NwVnNMQ0NHS1VFTWtkMHZ3bWFmbUxsajM3eUVjdnc4NUIzV05ZN1dGcXZIcjA?oc=5",
       "source": "PANews",
+      "category": "야간선물 / 파생 / 투자시황"
+    },
+    {
+      "title": "美반도체 반등에 코스피도 오를까…외국인 수급 관건",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBHSURpTmQwQTIyenZjMFNLREVHcm9wQUhGMGRWN2FfY211QVJrWi1GRXZIcndTNU9LbVhWYnFCZnc1aUlVa1Z3RDUwOE5sbnNHNUU5aTlhREFSQQ?oc=5",
+      "source": "경북매일",
       "category": "야간선물 / 파생 / 투자시황"
     },
     {
