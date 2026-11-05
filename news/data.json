@@ -1,17 +1,11 @@
 {
-  "updatedAt": "2026-11-05T13:47:44.236533+00:00",
-  "updatedAtLabel": "2026년 11월 05일 22:47 KST",
+  "updatedAt": "2026-11-05T17:13:11.004939+00:00",
+  "updatedAtLabel": "2026년 11월 06일 02:13 KST",
   "items": [
     {
       "title": "’美민주당 압승’에 韓증시 폭락…코스피·코스닥, 매도 사이드카",
       "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1yREdQdEV2dG1LQVlOYkhwX1VpS0pQdW40UVFxb0hsZkRTb21ZY2d6ZHBKZW04MHYtYzk1UUl5TWZEaldlVjZUa2RDckprb2pHV3ZSeEJuRWlVdHpnRE5YUVY0Mk4zUEk?oc=5",
       "source": "연합뉴스TV",
-      "category": "국내 증시 / 코스피 코스닥"
-    },
-    {
-      "title": "'블루웨이브 쇼크' 코스피·코스닥, 5%대 급락…반도체주 '추락'(종합)",
-      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE8yZERDaU43akRnMlR4M2Z3TThjclpndWNnN2JmME5kalM3NmF1NkRhekdKWElxdHU2Y3dFNWNGOW1zT2FKaGl1QnZmdHd3aVFKWmE4WW1DeUxPVzDSAWBBVV95cUxQSVFQbFdMT2ZhX1BBc29zblc3LUFYNk9EWHZLNGtmT1hkbVlnNkZPOGhZUGhsWHR4dE01Y19CQWlReVlXZHNDOWcyQWd4cjUtSDB4ZnVMdERNMXNIN25VRXk?oc=5",
-      "source": "연합뉴스",
       "category": "국내 증시 / 코스피 코스닥"
     },
     {
@@ -21,15 +15,21 @@
       "category": "국내 증시 / 코스피 코스닥"
     },
     {
-      "title": "'20만 전자'까지 위협받은 코스피...코스닥도 '매도 사이드카'",
-      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5oQnNIY281czViSkdQakRiUFUta2JKSGZodERPUTBLcFl4ZUVRdjZobWJEVXNKV202eDlCd2Z1RUtuNVc5Qk9HQlJ5LXhCQ19DRkQ2a1FoaEpCY3c1T3RIZ0s2Q25DMTAzRGFWdnVxNA?oc=5",
-      "source": "YTN",
+      "title": "‘블루웨이브 쇼크’에 코스피 급락…삼전 7%↓·하닉 9%↓",
+      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFA2QmdsLUhfcGVqeWw5ejBIRFVGemxETG1ud0N1SjRtMTdIeDhvSnNINjh2ank0dGVXeHJxaHpoVFduVERybHdFWXZ4RjZwdjVTZTRRcVR0TEkzTFZ6MF9mRlJwOHNuTTA?oc=5",
+      "source": "한겨레",
       "category": "국내 증시 / 코스피 코스닥"
     },
     {
-      "title": "‘블루 쓰나미’에 파랗게 질린 韓증시…코스피·코스닥 5%대 폭락",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9jdGpPSmlWSmZ0cGNYTkJhSkNZQkhqRUFBQ0NVcXd4YnJTTzVJSW8yTjM4T3BhVzV5SEF0X3VzdFUwRFZ6NlR0c2JUWWlYYXRoMjVxX3FYY1VfSHYzZXVXYUo2Uld2MUlGb1lQdQ?oc=5",
-      "source": "뉴시안",
+      "title": "'블루웨이브 쇼크' 코스피·코스닥, 5%대 급락…반도체주 '추락'(종합)",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE8yZERDaU43akRnMlR4M2Z3TThjclpndWNnN2JmME5kalM3NmF1NkRhekdKWElxdHU2Y3dFNWNGOW1zT2FKaGl1QnZmdHd3aVFKWmE4WW1DeUxPVzDSAWBBVV95cUxQSVFQbFdMT2ZhX1BBc29zblc3LUFYNk9EWHZLNGtmT1hkbVlnNkZPOGhZUGhsWHR4dE01Y19CQWlReVlXZHNDOWcyQWd4cjUtSDB4ZnVMdERNMXNIN25VRXk?oc=5",
+      "source": "연합뉴스",
+      "category": "국내 증시 / 코스피 코스닥"
+    },
+    {
+      "title": "'20만 전자'까지 위협받은 코스피...코스닥도 '매도 사이드카'",
+      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5oQnNIY281czViSkdQakRiUFUta2JKSGZodERPUTBLcFl4ZUVRdjZobWJEVXNKV202eDlCd2Z1RUtuNVc5Qk9HQlJ5LXhCQ19DRkQ2a1FoaEpCY3c1T3RIZ0s2Q25DMTAzRGFWdnVxNA?oc=5",
+      "source": "YTN",
       "category": "국내 증시 / 코스피 코스닥"
     },
     {
@@ -59,7 +59,7 @@
     {
       "title": "원/달러 1341.5원 마감 뒤 1338.5원 개장…연말 1300~1370원",
       "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1MZHhwRmt3YWlCcC1UbGcwLUNQODdHemJXYnhDd3ZMZWY3eW1ObnFWSmlsSGFEaTdvR25QS2NlZEpZT0xjLWkxRld1MUt1VkgzZUVwNlpEZEdVWmxuOG9ETUVXYnlsUEJPd1V3?oc=5",
-      "source": "www.issueon.co.kr",
+      "source": "ISSUE ON (이슈온)",
       "category": "환율 및 글로벌 원자재 시세"
     },
     {
@@ -111,6 +111,12 @@
       "category": "공모주 청약 및 IPO 일정"
     },
     {
+      "title": "[AI서머리] 코리아모빌리티, LIPS 매칭 융자 선정‧신보, KB국민은행과 청년창업 금융지원 협약",
+      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE9OVmZqVUJrZVBac0VQOEpWQ2FCQ2lfbkN2bVNHd0R2blVxeTlxQi1lLW9UYzFYcGNrSm5mOVYtOU5MeEpvMVVWNWp3ZURLazMzSnp6Q1MzTQ?oc=5",
+      "source": "스타트업레시피",
+      "category": "정부 지원금 및 정책 소식"
+    },
+    {
       "title": "폐업해도 남는 대출·철거비…소상공인 “상환유예·재취업 지원 필요”",
       "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5zWFJtajRaU1FoTGdoQVd3aW9WN3ZHZGx2RTUwWXliaXdrSDgwanpCRmswa1lPdlZjOWVWbVlQQUh3d0U0MGlpOF9OTlhibVd1UlpRUFlB?oc=5",
       "source": "헤럴드경제",
@@ -123,15 +129,21 @@
       "category": "정부 지원금 및 정책 소식"
     },
     {
+      "title": "뉴욕증시 급락 반전…나스닥 장중 4% 이상↓ 조정국면 진입",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1rUF9wVHpjMlAwcTZnNGpfMlNQenFwX1dVSjExRm90aHlwMGduM2hKS2VBYTd3eDByeXZmLUt6V1NmRmUwZHhJZGVfUmZyME82OUN4U2t0MmhBQWfSAWBBVV95cUxONmlGcld3ZnNzRFVwdXROT05nOU1vVHp2Zk55NGllSG5yc1F6WWRrUndWMWVfdVpqY2VrLU9ybUdTVjc5MHA0el9PVlliTXozR3RPMWtBQUtWTVB1Q2dmM1Q?oc=5",
+      "source": "연합뉴스",
+      "category": "미국 증시 / 글로벌 매크로"
+    },
+    {
       "title": "민주당 압승 예상에 급등했던 지수, 다우만 상승세 유지",
       "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE5Pa2NLeGppTDBSSFA5X2ZIQXd2bF9YNlg5MHg1LWhsWE1tc3BCYm0ybkYya19XMEttcWpWR3RCYVdrY2JIME1Qa1U2ZlBIMEF3alJEZmRsV0g2dmpuSlBMcG50dF9tMXlHSkhaV3FNNTRMTkF5XzNPbNIBeEFVX3lxTE1CdHRLS1QtbTQ4NUlBUUM1TVMwWW9FSlZDSWJ5M0t4VTd0NWYxY3BlV0lINVhlMTcwQ0h0aXdkTjAtS2JEd3h5NVRhUkQ0anJOSU1TUTVDZWFYOGN6M3NNT2ZCeDZrcC14SlZ4TnpGc1NLNGo0WkxfaA?oc=5",
       "source": "MBC 뉴스",
       "category": "미국 증시 / 글로벌 매크로"
     },
     {
-      "title": "나스닥100 선물, '블루 웨이브' 소화하며 하락…美 국채금리↓(상보) |",
-      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5acDUzbDN5VDlZY2IwYTNNRXdxUDRuMlpTYlNSRnl0Zmx1cXR1R1o3TmF3blpkaVlZWmV4bXd5d3VhcTNDR2JJVmVSVVYyNUtQbkxvUXZVZ1MyX2FtZnE2Wms4b2NOaVdPa2FNME1HemFEbHRK?oc=5",
-      "source": "연합인포맥스",
+      "title": "뉴욕증시 급락 반전…AI 규제 우려에 나스닥 장중 4.2% 폭락",
+      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9FblNXX004aGFQUVhJdHNqUXMzem5VMGZkZ1gxQUdDX1VLRl9DZDlwdkIyeHFlUmk2VGhEME9QQW13WkxMUkUwdFhjYWVSSjVocGRQZV9UN1E3cEx4aUNKNdIBeEFVX3lxTE1hSU0zSFBXRFJ0S05YUDR0anFlSFBweF84cm5Bd21aWlFQMGt5aXZWeDNnbVhxYUhBekNTa1poRjhidEkyTFNrS2RtQmR2VnBxbHl5WDRxVVlmbXRSaG5oVlRyUENHNmVCc01oUVpTdHNURTVWNW80eA?oc=5",
+      "source": "뉴시스",
       "category": "미국 증시 / 글로벌 매크로"
     },
     {
@@ -141,21 +153,15 @@
       "category": "미국 증시 / 글로벌 매크로"
     },
     {
-      "title": "[뉴스프레소] 뉴욕증시, 기술주 반등 속 혼조… 중간선거 결과는 - 머니투데이",
-      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE81dGpjclJ1NXdXazdfb01nTk9Fa3FMMzBONVJ6NXl3ZVlGTkt1UExuNm14NVpJM1hPNXFydXVsa0o3Z3dBRF8zenFoMXB2RmpZaXF6Y3ZucENrVElHV1FqTGhjZmRRdTQz0gFuQVVfeXFMTzNZcEZReVhsY3NmTUE3UkgtdHNESk9LREVRWHVySS1lRlVMY19PWlg0emhXN0JRcUEyaENEU1RDbU80LWQ5Q0NHSzRPdF92NFBrMlg1NVVHdEstTmhNRDRuQUxUOXBDNzZhSTNkOGc?oc=5",
-      "source": "머니투데이",
+      "title": "나스닥100 선물, '블루 웨이브' 소화하며 하락…美 국채금리↓(상보) |",
+      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5acDUzbDN5VDlZY2IwYTNNRXdxUDRuMlpTYlNSRnl0Zmx1cXR1R1o3TmF3blpkaVlZWmV4bXd5d3VhcTNDR2JJVmVSVVYyNUtQbkxvUXZVZ1MyX2FtZnE2Wms4b2NOaVdPa2FNME1HemFEbHRK?oc=5",
+      "source": "연합인포맥스",
       "category": "미국 증시 / 글로벌 매크로"
     },
     {
       "title": "[속보]뉴욕증시 다우 3.03% 급등…민주당 상·하원 장악에 나스닥·S&P500 동반 상승",
       "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5yZWVheVl0RjhmTkVMYkdZZXZDTUQ0QTVHaUxtN05DWDRvNG1ITDFnMDBfMVZYdTVNOWpQbU5ZZ24td1dKREFaWlBHZEI2Z1pRVHFYeGdqZXJTMUlSeEFvQlBkOXQtVXhH?oc=5",
       "source": "CBC뉴스",
-      "category": "미국 증시 / 글로벌 매크로"
-    },
-    {
-      "title": "뉴욕증시, 상승세로 전환…나스닥 2.02%↑",
-      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE5NRXFhbmhDTTNlVDQzQndNeHhGMTVqQTc5ZUhxclFhNmhkWmx4TktxNmdGakpwaWpOZDMydTN6a1NuajM1YVdhdzNMM2lvYnpQ?oc=5",
-      "source": "블루밍비트",
       "category": "미국 증시 / 글로벌 매크로"
     },
     {
