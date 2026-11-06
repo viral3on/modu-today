@@ -1,11 +1,35 @@
 {
-  "updatedAt": "2026-11-06T06:12:44.716457+00:00",
-  "updatedAtLabel": "2026년 11월 06일 15:12 KST",
+  "updatedAt": "2026-11-06T10:35:39.417395+00:00",
+  "updatedAtLabel": "2026년 11월 06일 19:35 KST",
   "items": [
+    {
+      "title": "코스피 -6%대·코스닥 -5%대↓",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5qZ1RnU0xPOW5rdGhyc0Y3dDlVdU5sQ3VkZmlHa09GY0oybmZ6by1JbU9xSjFOZXpDY3FqazRFT1o5a0xJSFhQZTFyeU9OOUt1cGN2eW0yNTZ5eGNWdDRvcEUzd0tWeVVxdVB4ag?oc=5",
+      "source": "KB Think",
+      "category": "국내 증시 / 코스피 코스닥"
+    },
+    {
+      "title": "[오늘의 증시] 11월 6일 코스피 코스닥",
+      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTFBTcU8ydlRxcW9ZUHVCUFVUQTUwYlRBY3JIM3JsQlpjVEZJT28tMWUwM2s4bm0zdHJMa01JLVRjQ25YemhZdWhaSWxTWQ?oc=5",
+      "source": "뉴스1",
+      "category": "국내 증시 / 코스피 코스닥"
+    },
     {
       "title": "'블루웨이브'에 급락장…코스피·코스닥 번갈아 매도사이드카 - 머니투데이",
       "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5IV0pRM1VNdWN1SHdjZ1B3WW5DYTMyTHNpc0Ryci1YeGs1Ynoxcm5kcXFwU3NDTmJBdU9TVGJqUFZqY2JwR3FSWlMxcUhVbm5TZTc3c3E4Rks2OXVBeFY5ekNWTE5peHJD0gFuQVVfeXFMT1BORVVuX3NqSDFCYVl5aHdvNTlvczdLVXR1SXlDY01CbkNQeEhwSlFEQ0x5R1ZJT3RwYmdKV256ak1sVHZtYzR0X0lFQUQ0ZThZYlBNVVRRVGdjVjJJNVFxZkFVZE9FZndabDZ0N0E?oc=5",
       "source": "머니투데이",
+      "category": "국내 증시 / 코스피 코스닥"
+    },
+    {
+      "title": "'검은 금요일'...코스피 6%·코스닥 5% 폭락",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9LVi11al85ckJIMW9KcDFnWE9PNUhYYnFLVG9qb2VhRGxGWXNCVF92SWxQQ0JRR3NOY1NKRzRnRjNtOThVUDFHX1YtWTZ3Y3VsNllJcFI5Uk91cUdodFJINE1BcVZRWFFnSVRR?oc=5",
+      "source": "BBS불교방송",
+      "category": "국내 증시 / 코스피 코스닥"
+    },
+    {
+      "title": "국내 증시 이틀째 패닉셀… 코스피 5059·코스닥 644 마감",
+      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9XZEVEb3QtbDZzcm1xR0IyWmVSV1pWUHhsWEpBTkc3aWxGUGEwN3FfZ1VvR2s1MnpzSWFsd3BteXA5bzFZZVA0X0x2VjdycEtTM3ljRDFWanRRdEpGaHFaMnhaZ1JVbnRPZ0NqaDQxVEhUbmPSAXNBVV95cUxPV2RFRG90LWw2c3JtcUdCMlplUldaVlB4bFhKQU5HN2lsRlBhMDdxX2dVb0drNTJ6c0lhbHdwbXlwOW8xWWVQNF9MdlY3cnBLUzN5Y0QxVmp0UXRKRmhxWjJ4WmdSVW50T2dDamg0MVRIVG5j?oc=5",
+      "source": "대전일보",
       "category": "국내 증시 / 코스피 코스닥"
     },
     {
@@ -15,32 +39,14 @@
       "category": "국내 증시 / 코스피 코스닥"
     },
     {
-      "title": "’美민주당 압승’에 韓증시 폭락…코스피·코스닥, 매도 사이드카",
-      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1yREdQdEV2dG1LQVlOYkhwX1VpS0pQdW40UVFxb0hsZkRTb21ZY2d6ZHBKZW04MHYtYzk1UUl5TWZEaldlVjZUa2RDckprb2pHV3ZSeEJuRWlVdHpnRE5YUVY0Mk4zUEk?oc=5",
-      "source": "연합뉴스TV",
-      "category": "국내 증시 / 코스피 코스닥"
+      "title": "주요국 환율 (FX) 전망",
+      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE8wcDhpTHpyZ281WUYzVURMWFB0Z2luV0w5OHh4NThKNnZ2ZHhCNk14VjNtQTFpX05WTnpxUG1PdHhMYkxMMG9PWi15NFBBcFJjOXdxdWFrdTdTRE4zTXpnaHMwTTVqZw?oc=5",
+      "source": "KB Think",
+      "category": "환율 및 글로벌 원자재 시세"
     },
     {
-      "title": "美 ‘블루 쓰나미’에 휩쓸린 韓 증시… 코스피 5000선 붕괴(종합)",
-      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1lT0ZES0dKZzlUMGtUMEVQbFV1aEFCVnk0ajAwVk1vdEpkaXZkQ2VRQXN2YkN3dGYwSFpxeE1lVDVTc1E5NkZTX2huTGtvVkk0aXBENVk3RTVIQ0l0WHEza1dpcVVXcXgwN0E?oc=5",
-      "source": "천지일보",
-      "category": "국내 증시 / 코스피 코스닥"
-    },
-    {
-      "title": "코스피·코스닥 덮친 '검은 금요일'…서킷브레이커·사이드카 연달아 발동(종합)",
-      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBISFJaZHc1MzRsaWNzR1gtaVF5b3lCaWVlcUl2ZmNWdXp2ZjhnNG9UVmRJLWNQMm1NbnRRVXJjRnhzT0tsRmtDZ2F1cmV0dnZZVVBNVlk2S2x0WEFmQUE?oc=5",
-      "source": "뉴스투데이",
-      "category": "국내 증시 / 코스피 코스닥"
-    },
-    {
-      "title": "코스피, 5000선 아래로…美 '블루 웨이브' 영향 급락",
-      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE9mYy1DZnI3TXM5QV9maElkZjA4bF9uNmlHQ3pvYlRZWWs4emRkM1ZiX0phSzVGX0VtSEc4QXlGcWRVbHhfeXFaS3dpNWk3MXk0Nks3Nlc2OXBjb1ZzZTl4bkRwRUpwNTRjRVlzMHRtYXlNYjR4Si1pUjAzOGE?oc=5",
-      "source": "금융신문",
-      "category": "국내 증시 / 코스피 코스닥"
-    },
-    {
-      "title": "[환율 전망] 쓰나미에 휩쓸린 반도체, 원화는 허우적",
-      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1TcVpWbWVUeG9EMmg0RGR4b0dNU2JTVm1yZzVvaU1pM05fUUZNaFZydHp3M1lpQkJIRlBsSklwVU96OWVoZldmc1ZXcmw3Wk1POEJDSHY4VGRKSllOXzV5VA?oc=5",
+      "title": "11월 글로벌 경제 및 금융시장 전망 : 순항 중인 세계경제, 미 선거 등 불확실성은 잔존",
+      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE5uNXgyTC13cF9jbUtXMzBsVzFOcU5NNjg3LUlwc2tuem1tUVctVkV4ZnJwLXlQN3hUS1NPNjE1SzVRN1cxNGM4NzREbk1NVEZNX1BVTy1iWDg0cG41VUZwTVB5ZWJodw?oc=5",
       "source": "KB Think",
       "category": "환율 및 글로벌 원자재 시세"
     },
@@ -48,6 +54,12 @@
       "title": "원·달러 환율 1340원대 공방 전망…반도체 수출 호조에도 외국인 이탈 변수",
       "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1Rd09rRmR1WmMySjVXWExVQllzNTZ4NFZvRmpnWV8zU2FqNEJ2OTFkMUxFMzUwMW5MR3lDT3ZpcVFvMWN6SzVmdE1lY241R2UxTDROel9Mb1VVUjFLX1hF?oc=5",
       "source": "조세일보",
+      "category": "환율 및 글로벌 원자재 시세"
+    },
+    {
+      "title": "1200원대 전망 무색해진 원·달러 환율..외국인 매도에 장중 1360원대 급등",
+      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1pQmRJYzhIZnpENzF5cGFwZTBITXowakQtbEVmczNReVh1N1RrT1Q0Q3ZZOVhqS2syT0hxbEtlM29VS1VQaFlmcGZhWkMyWTV2Snc?oc=5",
+      "source": "한국정경신문",
       "category": "환율 및 글로벌 원자재 시세"
     },
     {
@@ -63,32 +75,8 @@
       "category": "환율 및 글로벌 원자재 시세"
     },
     {
-      "title": "[외환+] '블루쓰나미'에 무너진 증시····원·달러 환율 1360원 근접",
-      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE51Q29RVHVjbHVCbHdwY0NqTTBNZlVhOVJETUFrZS16VHNBN1JTcVdsbTA5SDVaOVBXTFptbTBHWDI0U0VjMlpvWkxsT21mQU45ZDdPdmctV2h1SkNjYzVRVWFJVGtjLUZud3c?oc=5",
-      "source": "서울파이낸스",
-      "category": "환율 및 글로벌 원자재 시세"
-    },
-    {
-      "title": "원/달러 환율 1357원 급등, AI 규제 쇼크에 출렁",
-      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE91U1pIMVFRVExOQ1RsWGpaak9nUDB0WHFic2Npd2hZQTNFcDFub0JUWDlfRkRMbHlBbjRzMzdhUnhPd3pfbk0wNUYtOEs3dlRvRFJJTnVKNVdLQnJMblE?oc=5",
-      "source": "동행미디어 시대",
-      "category": "환율 및 글로벌 원자재 시세"
-    },
-    {
-      "title": "11월 공모주 청약 15곳 대기…10월 상장 9곳 중 5곳은 공모가 밑돌아",
-      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1LV0RvZVkzaTM5bTNSV29YU0tMWXRYZzZ4X191OVlUT1g0Vjl6UjFXd3RFY2U1T2hjb2JYR21VMlBjWXZDbS0xQ2x3U0dOWDdSYS1pOGlscUZiejdOQTR1Q2gxMng4TC1ickxV?oc=5",
-      "source": "ISSUE ON (이슈온)",
-      "category": "공모주 청약 및 IPO 일정"
-    },
-    {
-      "title": "[공모주 현황] 옵토닉스 청약 1일차 종료, 현재까지 균등·비례 경쟁률은?",
-      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBRRGJTLWQ4MVVjbG9ZVnc4SzhveTZISWJVeVFpQU10akNKMGk3Z3ZyZ3NJSmFvb3FsRnRiSWRadTZPWXRXbl92MXBETUdQTS0yQS1yb1E2Ty1nNWhHQktKb09MZ2FXS0ll?oc=5",
-      "source": "CBC뉴스",
-      "category": "공모주 청약 및 IPO 일정"
-    },
-    {
-      "title": "[공모주 마감] 영광와이케이엠씨 청약 2일차 마무리됐다, 균등·비례 '몇주 배정 받나?'",
-      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBCeVFrN1dQZjl3MGI3RVdXamRFdk1WaUlldWpUUkFzc1lDWUlPVW5vVFA4b2hUVGRLVUxWdUlNQ0czNW9zV3RIRWFybDdOTE1BSXV2dkVjek5ERDhxUjMtOUZ0MVlZUTdT?oc=5",
+      "title": "[공모주 현황] 에이엘로봇 청약 첫날 종료…균등배정 몇 주 가능할까?",
+      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBORVJzMmdBSHNpS3Y3OEpfMk5ua3d6LXBaLXJVMzVjX0NIc0VTM1ZValJiZ0ZEczY1OS1WMFgwcVhESUQ1dGNBT0tDZ0o0cVJBbmlzZzRtS0x6UlpLV1VqaEpNSE5ZMWJu?oc=5",
       "source": "CBC뉴스",
       "category": "공모주 청약 및 IPO 일정"
     },
@@ -99,33 +87,39 @@
       "category": "공모주 청약 및 IPO 일정"
     },
     {
+      "title": "11월 공모주 청약 15곳 대기…10월 상장 9곳 중 5곳은 공모가 밑돌아",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1LV0RvZVkzaTM5bTNSV29YU0tMWXRYZzZ4X191OVlUT1g0Vjl6UjFXd3RFY2U1T2hjb2JYR21VMlBjWXZDbS0xQ2x3U0dOWDdSYS1pOGlscUZiejdOQTR1Q2gxMng4TC1ickxV?oc=5",
+      "source": "ISSUE ON (이슈온)",
+      "category": "공모주 청약 및 IPO 일정"
+    },
+    {
+      "title": "[공모주 마감] 옵토닉스 청약 2일차도 마무리…균등·비례 각각 얼마?",
+      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1abGZmcnNkNUNhZVpiMkdZMUdDeTlMT2g5aGlVWHpvLXdPSXhwNGxhNmcyNWRBeG03U2tIdFR2NGYxaVNjQnBuT3dPV01GU1Y4VlJXOWZVeTc0T0VvVWt6bUxVTFlHamoz?oc=5",
+      "source": "CBC뉴스",
+      "category": "공모주 청약 및 IPO 일정"
+    },
+    {
       "title": "2026년 앤트로픽 IPO 공모 청약, 어디서 할까? 투자자에게 열려 있는 7개 주요 플랫폼 비교",
       "url": "https://news.google.com/rss/articles/CBMi0gNBVV95cUxNZUVKTlNXUFk4OFRHRlMwaU41dUNiaTZCbGRxdWdWNmRXdHhlbE5lMzc1NVJ5czdJWDBKZmJaaTVxY05qWTV5UDN4SUVPMFBpZ0dFYjdXczlmLTloRk03VXRCcTFGQ2lTSGJYZlN2cXZMSlBoekQ2bTFqbTd6dEV4NTlTNlpKX2REbFpobFRXZ2l2cDg3SzhtTUtfMnRGdXAzc3M4YURBMDZ2dTU4R1JPRUZScDM3aGM1Vlg5RGdZb2wtLVJmWEVpMnNfRWFkXzVpaVBxNDRWVW9rZ24yM2hxdzg2cGM0YjhxSW9RX0lmc0p4Z1RZWUYzNXc4WGFDVmdTX25tUjRfa3BhNVY4N1BaRFVJZHFDTHJVRGtaelN2djlLT3lWeUR5cy1zOGJ0ZjRESVZUUTZFMmo1RjMzVGp1VXVieVFaV3llY004dU9iWnpyUGVKMDJWbm5EMWlOMDVGaWc5TjRJX0h5SjRhY0NES3dxYW1xdEZlaWFHNDk2OFljVWdlMkx2d3V2ODREYTVIQ0R3SHlncXhuMG5XU2R3RW4wM0RjQjVNMVlZRjFZTzJITnhtWXJPZUlEcWhBZ2x2SWNtRG5XWXFkZzJneGpzbW5n?oc=5",
       "source": "Yellow.com",
       "category": "공모주 청약 및 IPO 일정"
     },
     {
-      "title": "동원파츠 증거금 8.2조 몰려…넥스아이는 하단 23.8% 밑돌아",
-      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBCYmFabmNwMGJKQjdQbGNFSXBjLVoyWjVSWS1LMHNvOXBJUVYycDRLbEF3Q2ZQcllBb29oU21pbDFYQzhidk1jU3hYS09kM25KODJPbmtGWTZSbXB5Q3JuYXdYWjA1T1Q1SjMw?oc=5",
-      "source": "ISSUE ON (이슈온)",
+      "title": "[공모주 현황] 영광와이케이엠씨, 1일차 청약 종료…균등·비례 경쟁률은?",
+      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE52U0Y3T0Y2WUY2TmREemZyMGN3VkxleHVDMlU2dDlMYkxrcHE4Y0kyRVB5RGE5ZThrVGlIdUUzaktuUnZGcWZDV3RnV3ZUcmRxel9fSDZvSlpoMGdBYzhlemZWbnV6SG90?oc=5",
+      "source": "CBC뉴스",
       "category": "공모주 청약 및 IPO 일정"
     },
     {
-      "title": "소상공인 지원금 50만원 아닌 25만원…2026년 대상·신청 방법",
-      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE42c1RMbTFkSENsSWFza2NMcEhvOUZObEw2UlQxeTRvMXhuZ3hqdDJqaV83UmNJYjhzY1VyMDQ0OEwwN0NQYXRiVDJHZHBudjdmYS1sYVNtckpReXJJRXVITUlWS2hHTXY5dzJn?oc=5",
-      "source": "https://www.diarypoint.com/",
+      "title": "소상공인 지원금 총정리 자격 요건과 온라인 신청 방법 안내 : 정책.지표",
+      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTFBkcW5NT185ZmtpUzVIWHNmOW14YUswQmlsdG9zNE5HaWZfVkhKcE5OWloxWWZMSXRJYmVzNVVTN3VrSU1ZRlFGemcxZw?oc=5",
+      "source": "재경일보",
       "category": "정부 지원금 및 정책 소식"
     },
     {
-      "title": "[AI서머리] 코리아모빌리티, LIPS 매칭 융자 선정‧신보, KB국민은행과 청년창업 금융지원 협약",
-      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE9OVmZqVUJrZVBac0VQOEpWQ2FCQ2lfbkN2bVNHd0R2blVxeTlxQi1lLW9UYzFYcGNrSm5mOVYtOU5MeEpvMVVWNWp3ZURLazMzSnp6Q1MzTQ?oc=5",
-      "source": "스타트업레시피",
-      "category": "정부 지원금 및 정책 소식"
-    },
-    {
-      "title": "폐업해도 남는 대출·철거비…소상공인 “상환유예·재취업 지원 필요”",
-      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5zWFJtajRaU1FoTGdoQVd3aW9WN3ZHZGx2RTUwWXliaXdrSDgwanpCRmswa1lPdlZjOWVWbVlQQUh3d0U0MGlpOF9OTlhibVd1UlpRUFlB?oc=5",
-      "source": "헤럴드경제",
+      "title": "2026 육아 지원금 총정리 부모급여 아동수당 신청 방법 : 정책.지표",
+      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE5rX2RQUVgxMWlUNk1KWGZ1cXRJam05akhCeUt5Zl9mdUZNUG1GWDBNTzlSYVVnek9XOHpNb1N2NEJGUXNWVlFseVBFZw?oc=5",
+      "source": "재경일보",
       "category": "정부 지원금 및 정책 소식"
     },
     {
@@ -147,21 +141,21 @@
       "category": "미국 증시 / 글로벌 매크로"
     },
     {
-      "title": "美나스닥 조정장 진입…S&P500 관세 쇼크 이후 최대 낙폭",
-      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE51ZlpPdjhjU1RHZUEwVUFUWV9kMFVkcXR2WUJmWU4wbEU5MFhmaXdFUGpJZTBUdVpVaG5hbk5PU0RseXVlU18zQnZoUERMdHBLWWVBdXBpWThZeWlzWDB6WGtaMllONFp4NjRodUFLWHN3X3dRdVdsT9IBeEFVX3lxTE51ZlpPdjhjU1RHZUEwVUFUWV9kMFVkcXR2WUJmWU4wbEU5MFhmaXdFUGpJZTBUdVpVaG5hbk5PU0RseXVlU18zQnZoUERMdHBLWWVBdXBpWThZeWlzWDB6WGtaMllONFp4NjRodUFLWHN3X3dRdVdsTw?oc=5",
-      "source": "뉴시스",
+      "title": "AI 규제 공포에 나스닥 5.5% 급락…작년 4월 이후 최대 낙폭",
+      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE92akgweGkwVkRtdk9jWEhwSTdjSWhQajQwby1OZnd6ODhGSkF3VTRXWjdKaVJfeElkMHFUUW1QWDZOYVUzdWJZbnN3enkzdEF4SUVUVzdFUWpVZlBySUh1cWVnaw?oc=5",
+      "source": "조세금융신문",
+      "category": "미국 증시 / 글로벌 매크로"
+    },
+    {
+      "title": "뉴욕증시, 중간선거발 'AI 발작'에 급락 마감…나스닥 5.5% 폭락",
+      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBtdDFQNGdaQXYwX1JJS3prcXZtX0QxcGRScE56R0dMbTV0Tm1YTzZuV0MxS2NacVg3elh6NUNpdTZFTVRkR2k1RXVoaHFXUEJfR3lvd04tUFZYT0R2?oc=5",
+      "source": "뉴스핌",
       "category": "미국 증시 / 글로벌 매크로"
     },
     {
       "title": "미 증시 덮친 ‘AI 규제’ 패닉셀링…나스닥 5.5%, S&P500 4.4% 폭락",
       "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE00ZUR0QkFtb1VhQmlfMFlhTU02bDZFR2ZEcGN0cmJPa1AzVE0wUWdYTjhiNmFNWlNNZkIxZDdZX1NJNngxYXVBRzFFQmw2eThCLXR3Zm9lU0Z1SVZXZ2R0a3ZHc3lIcDQ?oc=5",
       "source": "한겨레",
-      "category": "미국 증시 / 글로벌 매크로"
-    },
-    {
-      "title": "AI 규제 우려에 나스닥 5.5%·S&P500 4.4%↓",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE11cm0tbjRGV2xOM3Y0a0FtcUw5T0p6NXU4OTJuUE5QSHlKUHlPTmE4cFo3UW0yenlIRHYwN3ZYVUhjU3hlVGZjWENuaGJ2bDVpTmxuVEhzazFzY1AyRldDaUlUS2sxZ25KWTFvSNIBcEFVX3lxTFB4dS1GVHVJNkZWUVcwU2xWSEVkekNKMjJvLS1hODRfbzNzRUZzLWRkOERwYjZ2T2diRGVJN096RUNBSWQwOGNMSmMtaGVFWVRObVcwMEphMWpfT3JNMVVsNE1JMVVsWFBNNDQ0WW4wMU4?oc=5",
-      "source": "한국금융경제신문",
       "category": "미국 증시 / 글로벌 매크로"
     },
     {
