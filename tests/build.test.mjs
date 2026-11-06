@@ -44,6 +44,14 @@ test('public category navigation only includes categories with published posts',
   assert.ok(!reading([post]).includes('data-filter="IT"'));
   assert.ok(!home([],{items:[]},null).includes('/reading/?category='));
 });
+test('visible article dates use Korea time while machine timestamps retain the original instant',()=>{
+  const crossing={...post,publishedAt:'2026-11-06T23:00:00Z',updatedAt:'2026-11-06T23:30:00Z'};
+  for(const html of [article(crossing),reading([crossing]),home([crossing],{items:[]},null)]) {
+    assert.ok(html.includes('2026.11.07'));
+    assert.ok(!html.includes('2026.11.06'));
+  }
+  assert.ok(article(crossing).includes('datetime="2026-11-06T23:00:00Z"'));
+});
 test('home and reading share custom categories and the main navigation links to YouTube',()=>{
   const posts=[{...post,category:'AI·테크'},{...post,category:'AI·테크'},{...post,category:'새 주제 & <정보>'}];
   const html=home(posts,{items:[]},null);
