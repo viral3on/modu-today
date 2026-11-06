@@ -64,7 +64,7 @@ test('build preserves existing tool assets, excludes source and drafts, adds pub
   const temp=await fs.mkdtemp(path.join(os.tmpdir(),'modu-build-'));
   try {
     for(const dir of ['apt','lotto','calculator','games','youtube','assets','admin','lib','news','content','about','contact','privacy','terms'])await fs.cp(path.join(ROOT,dir),path.join(temp,dir),{recursive:true});
-    for(const file of ['sitemap.xml','robots.txt','ads.txt','yasun.html','skhynix-split-analysis.html'])await fs.copyFile(path.join(ROOT,file),path.join(temp,file));
+    for(const file of ['sitemap.xml','robots.txt','ads.txt','vercel.json','yasun.html','skhynix-split-analysis.html'])await fs.copyFile(path.join(ROOT,file),path.join(temp,file));
     // Reproduce the existing analytics-injection workflow, which edits source HTML after pushes.
     for(const file of ['yasun.html','skhynix-split-analysis.html'])await fs.appendFile(path.join(temp,file),'<script>window.va=window.va||function(){};</script><script defer src="/_vercel/insights/script.js"></script>');
     await fs.writeFile(path.join(temp,`content/posts/${post.id}.json`),JSON.stringify(post));
@@ -78,6 +78,12 @@ test('build preserves existing tool assets, excludes source and drafts, adds pub
     for(const file of ['apt/data/trades.json','lotto/data/results.json','calculator/theme.css'])assert.deepEqual(await fs.readFile(path.join(ROOT,file)),await fs.readFile(path.join(temp,'public',file)));
     await assert.rejects(read('content/posts/private-draft.json'));await assert.rejects(read('stock/data/scanner.json'));await assert.rejects(read('apt/update_apt.py'));
     assert.ok(!(await read('admin/index.html')).includes('/_vercel/insights'));
+    for(const file of ['index.html','reading/index.html',`reading/${post.id}/index.html`,'apt/index.html','lotto/index.html','youtube/index.html','games/index.html','tools/index.html','calculator/loan.html']) {
+      const html=await read(file);
+      assert.equal(html.split('pagead/js/adsbygoogle.js?client=ca-pub-6122968996738347').length-1,1,file);
+      assert.equal(html.split('name="google-adsense-account"').length-1,1,file);
+    }
+    for(const file of ['admin/index.html','news/index.html','stock/index.html','stock/guide/index.html','404.html','privacy/index.html','terms/index.html','contact/index.html','about/index.html'])assert.ok(!(await read(file)).includes('adsbygoogle'),file);
     assert.ok((await read('stock/index.html')).includes('noindex'));
     assert.ok((await read('apt/index.html')).includes('주요 메뉴'));
     const guidePath='/reading/6f88af15-31a0-4c06-9009-fc63f1a7ac18/';

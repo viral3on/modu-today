@@ -7,14 +7,16 @@ import commonjs from '@rollup/plugin-commonjs';
 import replace from '@rollup/plugin-replace';
 import {ID, SITE, validatePost, escape as e} from '../lib/content.mjs';
 import {header, page, home, reading, article, toolsPage, newsPage} from '../lib/site.mjs';
+import {applyAdsense, validateAdsenseConfig} from '../lib/adsense.mjs';
 
 export const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const ALLOWED = new Set(['.html','.css','.js','.mjs','.json','.png','.jpg','.jpeg','.webp','.gif','.svg','.ico','.woff','.woff2','.txt']);
 export async function build(root=ROOT, output=path.join(root,'public')) {
   // Only the generated output inside this checkout may be replaced.
   if(path.resolve(output)!==path.join(path.resolve(root),'public')) throw new Error('Unsafe output directory');
+  validateAdsenseConfig(JSON.parse(await fs.readFile(path.join(root,'vercel.json'),'utf8')),await fs.readFile(path.join(root,'ads.txt'),'utf8'));
   await fs.rm(output,{recursive:true,force:true}); await fs.mkdir(output,{recursive:true});
-  const write=async(rel,text)=>{const target=path.join(output,rel);await fs.mkdir(path.dirname(target),{recursive:true});await fs.writeFile(target,text);};
+  const write=async(rel,text)=>{const target=path.join(output,rel);await fs.mkdir(path.dirname(target),{recursive:true});await fs.writeFile(target,rel.endsWith('.html')?applyAdsense(String(text),rel.replaceAll(path.sep,'/')):text);};
   const copy=async(rel)=>{
     const entries=await fs.readdir(path.join(root,rel),{withFileTypes:true});
     for(const entry of entries) {
