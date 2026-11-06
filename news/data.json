@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-11-06T10:35:39.417395+00:00",
-  "updatedAtLabel": "2026년 11월 06일 19:35 KST",
+  "updatedAt": "2026-11-06T13:31:55.515909+00:00",
+  "updatedAtLabel": "2026년 11월 06일 22:31 KST",
   "items": [
     {
       "title": "코스피 -6%대·코스닥 -5%대↓",
@@ -21,15 +21,15 @@
       "category": "국내 증시 / 코스피 코스닥"
     },
     {
-      "title": "'검은 금요일'...코스피 6%·코스닥 5% 폭락",
-      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9LVi11al85ckJIMW9KcDFnWE9PNUhYYnFLVG9qb2VhRGxGWXNCVF92SWxQQ0JRR3NOY1NKRzRnRjNtOThVUDFHX1YtWTZ3Y3VsNllJcFI5Uk91cUdodFJINE1BcVZRWFFnSVRR?oc=5",
-      "source": "BBS불교방송",
-      "category": "국내 증시 / 코스피 코스닥"
-    },
-    {
       "title": "국내 증시 이틀째 패닉셀… 코스피 5059·코스닥 644 마감",
       "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9XZEVEb3QtbDZzcm1xR0IyWmVSV1pWUHhsWEpBTkc3aWxGUGEwN3FfZ1VvR2s1MnpzSWFsd3BteXA5bzFZZVA0X0x2VjdycEtTM3ljRDFWanRRdEpGaHFaMnhaZ1JVbnRPZ0NqaDQxVEhUbmPSAXNBVV95cUxPV2RFRG90LWw2c3JtcUdCMlplUldaVlB4bFhKQU5HN2lsRlBhMDdxX2dVb0drNTJ6c0lhbHdwbXlwOW8xWWVQNF9MdlY3cnBLUzN5Y0QxVmp0UXRKRmhxWjJ4WmdSVW50T2dDamg0MVRIVG5j?oc=5",
       "source": "대전일보",
+      "category": "국내 증시 / 코스피 코스닥"
+    },
+    {
+      "title": "'검은 금요일'...코스피 6%·코스닥 5% 폭락",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9LVi11al85ckJIMW9KcDFnWE9PNUhYYnFLVG9qb2VhRGxGWXNCVF92SWxQQ0JRR3NOY1NKRzRnRjNtOThVUDFHX1YtWTZ3Y3VsNllJcFI5Uk91cUdodFJINE1BcVZRWFFnSVRR?oc=5",
+      "source": "BBS불교방송",
       "category": "국내 증시 / 코스피 코스닥"
     },
     {
@@ -45,15 +45,15 @@
       "category": "환율 및 글로벌 원자재 시세"
     },
     {
-      "title": "11월 글로벌 경제 및 금융시장 전망 : 순항 중인 세계경제, 미 선거 등 불확실성은 잔존",
-      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE5uNXgyTC13cF9jbUtXMzBsVzFOcU5NNjg3LUlwc2tuem1tUVctVkV4ZnJwLXlQN3hUS1NPNjE1SzVRN1cxNGM4NzREbk1NVEZNX1BVTy1iWDg0cG41VUZwTVB5ZWJodw?oc=5",
-      "source": "KB Think",
-      "category": "환율 및 글로벌 원자재 시세"
-    },
-    {
       "title": "원·달러 환율 1340원대 공방 전망…반도체 수출 호조에도 외국인 이탈 변수",
       "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1Rd09rRmR1WmMySjVXWExVQllzNTZ4NFZvRmpnWV8zU2FqNEJ2OTFkMUxFMzUwMW5MR3lDT3ZpcVFvMWN6SzVmdE1lY241R2UxTDROel9Mb1VVUjFLX1hF?oc=5",
       "source": "조세일보",
+      "category": "환율 및 글로벌 원자재 시세"
+    },
+    {
+      "title": "11월 글로벌 경제 및 금융시장 전망 : 순항 중인 세계경제, 미 선거 등 불확실성은 잔존",
+      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE5uNXgyTC13cF9jbUtXMzBsVzFOcU5NNjg3LUlwc2tuem1tUVctVkV4ZnJwLXlQN3hUS1NPNjE1SzVRN1cxNGM4NzREbk1NVEZNX1BVTy1iWDg0cG41VUZwTVB5ZWJodw?oc=5",
+      "source": "KB Think",
       "category": "환율 및 글로벌 원자재 시세"
     },
     {
@@ -63,16 +63,22 @@
       "category": "환율 및 글로벌 원자재 시세"
     },
     {
+      "title": "원/달러 환율 1357원 급등, AI 규제 쇼크에 출렁",
+      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE91U1pIMVFRVExOQ1RsWGpaak9nUDB0WHFic2Npd2hZQTNFcDFub0JUWDlfRkRMbHlBbjRzMzdhUnhPd3pfbk0wNUYtOEs3dlRvRFJJTnVKNVdLQnJMblE?oc=5",
+      "source": "동행미디어 시대",
+      "category": "환율 및 글로벌 원자재 시세"
+    },
+    {
       "title": "美 중간선거 충격에 환율 1350원대 급등…연말엔 다시 내릴까",
       "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE80TVpyalJRdHAwRUNzWUxTd2lMVEVIQ3hCNnBLNXNRaHoydXRyT3Y4N1BRMXkzZkJ5dkM4UWp3Q0szN2ZIYTBqUGl4Ny1JdW5JU05nLdIBVEFVX3lxTE80TVpyalJRdHAwRUNzWUxTd2lMVEVIQ3hCNnBLNXNRaHoydXRyT3Y4N1BRMXkzZkJ5dkM4UWp3Q0szN2ZIYTBqUGl4Ny1JdW5JU05nLQ?oc=5",
       "source": "더팩트",
       "category": "환율 및 글로벌 원자재 시세"
     },
     {
-      "title": "[포커스] 달러는 주춤, 원화는 휘청…1350원대 환율 향방은",
-      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTFAyaHppRGVFZXRmYmZGemtrcFZ3S0FsVk9Fa0c3TzZrU1lJZXRULTRtOUNmcm5zeVJGOW56WG5CZUJSUmw3VVNJSndVdGI3ZWNZYldrVUItN2pDR0Q2WWlTd1g5a0VrazZhNFEtREp1QXJEQjA?oc=5",
-      "source": "오늘경제",
-      "category": "환율 및 글로벌 원자재 시세"
+      "title": "수천만원 묶여도 ‘0원’…공모주 청약 증거금도 이자 받나",
+      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1UNzdDRXJlZkVfdHlLdXVtVFdCRjUzeE5Ta3Y1MDFuYzRCaVpWNGNMUlctSnlrUEI2ZnVGeHZObjRackNQUjVyRXpjTEZXSURTNVc4bGdaWWtCOHE1ZzlMWlR4aw?oc=5",
+      "source": "쿠키뉴스",
+      "category": "공모주 청약 및 IPO 일정"
     },
     {
       "title": "[공모주 현황] 에이엘로봇 청약 첫날 종료…균등배정 몇 주 가능할까?",
@@ -84,12 +90,6 @@
       "title": "간식비 벌어보자…'옵토닉스' 청약, 오늘까지",
       "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1xM3AzS2gtYjBfZ21uVDFvRDh1WW5zYWZjVS05TUMxNHFaXzRWMGw2OFNfWUZFdXJ6UUdFSUljNmxZeWppS2dHcTJWUFNvZVd2ZXYxZU1R?oc=5",
       "source": "위키트리",
-      "category": "공모주 청약 및 IPO 일정"
-    },
-    {
-      "title": "11월 공모주 청약 15곳 대기…10월 상장 9곳 중 5곳은 공모가 밑돌아",
-      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1LV0RvZVkzaTM5bTNSV29YU0tMWXRYZzZ4X191OVlUT1g0Vjl6UjFXd3RFY2U1T2hjb2JYR21VMlBjWXZDbS0xQ2x3U0dOWDdSYS1pOGlscUZiejdOQTR1Q2gxMng4TC1ickxV?oc=5",
-      "source": "ISSUE ON (이슈온)",
       "category": "공모주 청약 및 IPO 일정"
     },
     {
@@ -117,15 +117,15 @@
       "category": "정부 지원금 및 정책 소식"
     },
     {
-      "title": "2026 육아 지원금 총정리 부모급여 아동수당 신청 방법 : 정책.지표",
-      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE5rX2RQUVgxMWlUNk1KWGZ1cXRJam05akhCeUt5Zl9mdUZNUG1GWDBNTzlSYVVnek9XOHpNb1N2NEJGUXNWVlFseVBFZw?oc=5",
-      "source": "재경일보",
-      "category": "정부 지원금 및 정책 소식"
-    },
-    {
       "title": "[속보]뉴욕증시 급락 마감…나스닥 -5.5%·S&P500 -4.3% - 머니투데이",
       "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1FRlNhMzE5b2kyVlhveE1OX3N2RkUtTTAxMkF4SFpIY3JUWmxDOXp2TDB4QUZkRHZweW1yYko4M1QxeG51aTZHZVZqcEo4czlvNDllYk84RmhfeW0yWk8yWDR0QjUteXJw0gFuQVVfeXFMUENybWZDeU1UVXZLMzZTSHIyVWFLYm1yaGQ4UEd2TTlZSXBDTjZXYmIzRlNJSE9tZHRKaGVsZWY5dDJmazM3MHVmTU1IZHg3YTdFYkMwX0E5eUxJb19GQldvb0JxZGVLUWJaUzlfU1E?oc=5",
       "source": "머니투데이",
+      "category": "미국 증시 / 글로벌 매크로"
+    },
+    {
+      "title": "AI 규제 공포, 나스닥 5.5%↓…머스크 관련주도 폭락",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFAxRGp2T3B4SElKdVNDaDFvN0tEZjV1eklPQkJ4dFNsVjZEUzFmOTltQ1Zpa3RGa00tbWpNMW4wXy1RWHlnQVZBbkRDM2NWVkRZdkVVa21ZRU5RZ00?oc=5",
+      "source": "KBS 뉴스",
       "category": "미국 증시 / 글로벌 매크로"
     },
     {
@@ -153,12 +153,6 @@
       "category": "미국 증시 / 글로벌 매크로"
     },
     {
-      "title": "미 증시 덮친 ‘AI 규제’ 패닉셀링…나스닥 5.5%, S&P500 4.4% 폭락",
-      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE00ZUR0QkFtb1VhQmlfMFlhTU02bDZFR2ZEcGN0cmJPa1AzVE0wUWdYTjhiNmFNWlNNZkIxZDdZX1NJNngxYXVBRzFFQmw2eThCLXR3Zm9lU0Z1SVZXZ2R0a3ZHc3lIcDQ?oc=5",
-      "source": "한겨레",
-      "category": "미국 증시 / 글로벌 매크로"
-    },
-    {
       "title": "코스피 야간선물 7%대 급락…美 기술주 투매 여파 - 머니투데이",
       "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBPTmszb3MxdHZSMzNsaGV2R1VWTnBfbUlQTEo3WEVsM3JtUExQRzJWRzRHSnNrYVk0TURwNFpidDBOMkk3ODZ4LUtST3BBaURGVG93WGZwSDJxLTNvTl9XSUNHVktDZldFaEdEREp4QnQwQkZCOXfSAXtBVV95cUxQX1RhLW1MelZNUzlJd0JTYWJ2UHBlcmptclIwT3VIWW53elU0dVIxZVBZeDNZNEIzb2JnbFZhb1NjQjlIRW5sTGktTEpEc2xMcnctS3h3d0EzdjFzdFowNzZrcjAxbFplQlZGcWJfLS1oUllwU25sOGpubGs?oc=5",
       "source": "머니투데이",
@@ -177,15 +171,15 @@
       "category": "야간선물 / 파생 / 투자시황"
     },
     {
-      "title": "미 반도체지수 12% 급락…코스피 5천선 방어 시험대",
-      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE45S21iYjk5Z3FjMlpPSGRCX2Nad2I5S0JQcVlQcmU5N3kxZm9oV3kwa3BfZW53OFFyMWhRYjNIWHVTdGc2eEtYWVlhRktmSHB2S3ZObUZETUVza3QweDFadUJlRTdST0E?oc=5",
-      "source": "청년일보",
-      "category": "야간선물 / 파생 / 투자시황"
-    },
-    {
       "title": "美 반도체주 폭락에 코스피 '5,000선' 위태…외국인 매도·유가 급등 겹악재",
       "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBkOHRyUmlfQTdtdmc5UEhyQU9XaFBxVTg3bWt0THR3RGdWTW5YeGx4MzNHSVVJTlQ5TWVJU3Iwb2VGZTk1eC1WRm55UWtUSVpObGkxdlRFbXpQdzA0VEZGNnZYNllkWk9uWWNzcDR5aG3SAXRBVV95cUxPNUNkZ2lrR3JqeGMzeEVNeEsyYzhaWU03THNlcHBqNUk0eVVROHhGUE1wc0tQc28zcnNtQTNjUHA0eEpoNlVNQ1NpRnI0Q3U1cW9vdGRERzltV3JwN1h5Z2c4VFh6eHBuQkNhNzZma1VxRTlHZQ?oc=5",
       "source": "산경투데이",
+      "category": "야간선물 / 파생 / 투자시황"
+    },
+    {
+      "title": "미 반도체지수 12% 급락…코스피 5천선 방어 시험대",
+      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE45S21iYjk5Z3FjMlpPSGRCX2Nad2I5S0JQcVlQcmU5N3kxZm9oV3kwa3BfZW53OFFyMWhRYjNIWHVTdGc2eEtYWVlhRktmSHB2S3ZObUZETUVza3QweDFadUJlRTdST0E?oc=5",
+      "source": "청년일보",
       "category": "야간선물 / 파생 / 투자시황"
     },
     {
