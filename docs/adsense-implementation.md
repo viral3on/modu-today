@@ -19,7 +19,7 @@ The `vercel.json` reading policy must equal the exported `READING_CSP`; the buil
 ## Account-side checks after approval
 
 1. Confirm AdSense Sites shows modu.today as **Ready**. This repository cannot grant approval or lift policy enforcement.
-2. In Ads �� By site �� modu.today, enable **Auto ads** and apply/save the settings. A site loader alone does not enable this account setting. Review formats and exclusions in the account preview.
+2. In Ads → By site → modu.today, enable **Auto ads** and apply/save the settings. A site loader alone does not enable this account setting. Review formats and exclusions in the account preview.
 3. Confirm the publisher ID in the account matches this repository and ads.txt, and resolve any account/payment/consent requirements reported by AdSense.
 4. Test home, one reading article and one calculator in a browser without an ad blocker. Confirm a single `adsbygoogle.js` load, no site CSP violations, and actual ad requests. A pre-approval 403 is not proof of a broken site loader.
 5. Check desktop/mobile placement and avoid clicking your own ads. Actual creative delivery and fill cannot be validated before the account/site are eligible.

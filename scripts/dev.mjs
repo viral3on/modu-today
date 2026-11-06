@@ -12,7 +12,7 @@ http.createServer(async(req,res)=>{
   const url=new URL(req.url,'http://localhost:4173');
   for(const rule of configuredHeaders)if(new RegExp('^'+rule.source+'$').test(url.pathname))for(const header of rule.headers)res.setHeader(header.key,header.value);
   if(url.pathname==='/api/editor') {
-    const chunks=[];let size=0;for await (const chunk of req){size+=chunk.length;if(size>MAX_IMAGE_REQUEST_BYTES){res.writeHead(413,{'Content-Type':'application/json'});res.end(JSON.stringify({error:'�̹����� ���ϴ� 3MB ���Ϸ� ������ �ּ���.'}));return;}chunks.push(chunk);}
+    const chunks=[];let size=0;for await (const chunk of req){size+=chunk.length;if(size>MAX_IMAGE_REQUEST_BYTES){res.writeHead(413,{'Content-Type':'application/json'});res.end(JSON.stringify({error:'이미지는 파일당 3MB 이하로 선택해 주세요.'}));return;}chunks.push(chunk);}
     req.body=Buffer.concat(chunks).toString('utf8');res.status=code=>{res.statusCode=code;return res;};res.json=data=>{res.setHeader('Content-Type','application/json');res.end(JSON.stringify(data));};return handler(req,res);
   }
   if(url.pathname==='/_vercel/insights/script.js'){res.writeHead(200,{'Content-Type':'text/javascript'});res.end('');return;}
