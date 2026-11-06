@@ -53,8 +53,10 @@ export async function build(root=ROOT, output=path.join(root,'public')) {
   // Legacy URLs remain reachable as dated, ad-free educational guides.
   for(const filename of ['yasun.html','skhynix-split-analysis.html']) {
     const html=await fs.readFile(path.join(root,filename),'utf8');
-    if(/adsbygoogle|googlesyndication|<iframe|<script/i.test(html))throw new Error(`Unexpected ad or embedded script in legacy guide: ${filename}`);
+    if(/adsbygoogle|googlesyndication/i.test(html))throw new Error(`Unexpected ad code in legacy guide: ${filename}`);
     const body=html.match(/<article\b[^>]*>([\s\S]*?)<\/article>/)?.[1];
+    // The analytics workflow may append scripts outside the article. The shared page adds analytics once.
+    if(body && /<iframe|<script/i.test(body))throw new Error(`Unexpected embedded script in legacy guide: ${filename}`);
     const title=html.match(/<h1>(.*?)<\/h1>/)?.[1];
     const description=html.match(/<meta name="description" content="([^"]*)"/)?.[1];
     if(!body||!title||!description)throw new Error(`Missing legacy guide content: ${filename}`);
