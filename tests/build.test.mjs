@@ -70,9 +70,22 @@ test('build preserves existing tool assets, excludes source and drafts, adds pub
     assert.ok(!(await read('admin/index.html')).includes('/_vercel/insights'));
     assert.ok((await read('stock/index.html')).includes('noindex'));
     assert.ok((await read('apt/index.html')).includes('주요 메뉴'));
+    const guidePath='/reading/6f88af15-31a0-4c06-9009-fc63f1a7ac18/';
+    assert.ok((await read('apt/index.html')).includes(guidePath));
+    assert.ok(sitemap.includes(guidePath));
+    for(const file of ['yasun.html','skhynix-split-analysis.html']) {
+      const guide=await read(file);
+      assert.ok(guide.includes('주요 메뉴'));
+      assert.ok(guide.includes('noindex,follow'));
+      assert.ok(!/adsbygoogle|googlesyndication|<iframe|href="\/stock\//i.test(guide));
+      assert.ok(!sitemap.includes(file));
+    }
+    assert.ok(!(await read('yasun.html')).includes('711.37'));
     const htmlArticle=await read('reading/html-article-123/index.html');
     assert.ok(htmlArticle.includes('<h2>HTML 발행 확인</h2>'));assert.ok(htmlArticle.includes('.modu-html-content .modu-html-body{color:red}'));
     assert.ok(!htmlArticle.includes('onerror'));assert.ok(!htmlArticle.includes('alert(1)'));assert.ok(sitemap.includes('/reading/html-article-123/'));
     assert.ok((await read('assets/content.mjs')).includes('sanitizeStylesheet'));assert.ok((await read('admin/editor.js')).includes('HTML + CSS'));
+    await fs.appendFile(path.join(temp,'yasun.html'),'<script src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>');
+    await assert.rejects(build(temp),/Unexpected ad or embedded script in legacy guide/);
   }finally{await fs.rm(temp,{recursive:true,force:true});}
 });

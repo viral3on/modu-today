@@ -24,6 +24,10 @@ export async function build(root=ROOT, output=path.join(root,'public')) {
       else if(ALLOWED.has(path.extname(entry.name))) {
         if(entry.name.endsWith('.html') && !rel.startsWith('admin')) {
           let html=await fs.readFile(path.join(root,sub),'utf8');
+          // Keep reading guidance outside the generated market-data summary.
+          if(sub.replaceAll(path.sep,'/')==='apt/index.html') {
+            html=html.replace('<section class="dashboard">',`<aside class="info" aria-label="거래 비교 안내"><div><strong>평균을 비교하기 전에</strong><p>검색 결과에는 면적·층이 다른 거래가 함께 포함될 수 있습니다. 브랜드명으로 찾았다면 단지와 법정동도 확인하세요. 거래 목록은 최대 300건이며 평균은 현재 검색 조건의 전체 결과를 기준으로 합니다.</p><a href="/reading/6f88af15-31a0-4c06-9009-fc63f1a7ac18/">평균·중앙값을 계산하는 실거래 비교 예제 →</a></div></aside><section class="dashboard">`);
+          }
           // Preserve all application scripts, input IDs and data sources.
           html=html.replace(/class="topbar"/,'class="topbar modu-legacy-nav"')
             .replace(/<(div|nav) class="modu-nav">/,'<$1 class="modu-nav modu-legacy-nav">')
@@ -46,11 +50,15 @@ export async function build(root=ROOT, output=path.join(root,'public')) {
   for(const entry of await fs.readdir(root)) {
     if(/^(google|naver).*\.html$/.test(entry)||entry==='ads.txt') await write(entry,await fs.readFile(path.join(root,entry)));
   }
-  // Keep legacy standalone URLs working without promoting them in search.
+  // Legacy URLs remain reachable as dated, ad-free educational guides.
   for(const filename of ['yasun.html','skhynix-split-analysis.html']) {
-    let html=await fs.readFile(path.join(root,filename),'utf8');
-    html=html.replace(/<meta\b[^>]*name=["']robots["'][^>]*>/gi,'').replace('</head>','<meta name="robots" content="noindex,follow"></head>');
-    await write(filename,html);
+    const html=await fs.readFile(path.join(root,filename),'utf8');
+    if(/adsbygoogle|googlesyndication|<iframe|<script/i.test(html))throw new Error(`Unexpected ad or embedded script in legacy guide: ${filename}`);
+    const body=html.match(/<article\b[^>]*>([\s\S]*?)<\/article>/)?.[1];
+    const title=html.match(/<h1>(.*?)<\/h1>/)?.[1];
+    const description=html.match(/<meta name="description" content="([^"]*)"/)?.[1];
+    if(!body||!title||!description)throw new Error(`Missing legacy guide content: ${filename}`);
+    await write(filename,page({title,description,path:`/${filename}`,noindex:true,body:`<article class="info-article">${body}</article>`}));
   }
   const posts=[];
   for(const filename of await fs.readdir(path.join(root,'content/posts'))) {
@@ -71,7 +79,7 @@ export async function build(root=ROOT, output=path.join(root,'public')) {
   await write('tools/index.html',toolsPage());
   await write('news/index.html',newsPage(news));
   for(const post of posts)await write(`reading/${post.id}/index.html`,article(post));
-  const about=`<h1>일상을 읽고, 생활을 더 편리하게</h1><p>MODU.TODAY는 일상에서 생기는 궁금함을 직접 확인하고 정리하는 읽을거리와 자주 쓰는 생활 도구를 함께 제공하는 공간입니다. 생활·IT·자동차·부동산·경제·주식·취미 등 주제의 경계를 두지 않습니다.</p><h2>읽을거리를 만드는 기준</h2><p>직접 작성한 설명과 경험, 비교 기준을 담습니다. 외부 자료를 인용할 때는 출처와 확인 시점을 밝히고, 확인된 사실과 의견을 구분합니다. 외부 기사 본문을 옮겨 붙이거나 자동으로 대량 생산한 글을 발행하지 않습니다.</p><p>글마다 작성일과 수정일을 표시합니다. 내용이 잘못되었거나 달라졌다면 문의 채널로 알려주세요. 확인 후 내용을 수정하고 필요한 경우 변경 이유를 본문에 남깁니다.</p><h2>생활에 바로 쓰는 정보</h2><h3><a href="/apt/">아파트 실거래가</a></h3><p>국토교통부 공개 자료를 바탕으로 지역·단지별 신고 거래를 찾을 수 있습니다. 면적·층·거래일을 함께 비교하고, 신고 지연·정정·계약 해제 가능성을 고려하세요.</p><h3><a href="/lotto/">로또 당첨정보</a></h3><p>동행복권 공개 결과를 기준으로 당첨번호, 회차별 기록, 당첨지역과 판매점 정보를 제공합니다. 번호 생성은 무작위이며 당첨을 예측하거나 확률을 높이지 않습니다. 최종 결과는 동행복권 공식 발표를 확인하세요.</p><h3><a href="/tools/">계산기와 기타 도구</a></h3><p>생활 계산기, 웹게임, YouTube 조회수 변화를 제공합니다. 계산 결과는 각 도구에 표시한 가정에 따른 참고값이며, YouTube 순위는 추적 대상의 관측값으로 공식 전체 순위가 아닙니다.</p><h2>자체 글과 외부 뉴스의 구분</h2><p><a href="/reading/">읽을거리</a>는 사이트가 직접 작성한 콘텐츠입니다. <a href="/news/">뉴스</a>는 외부 언론의 제목과 원문 링크를 자동 수집하는 보조 목록이며 독립적으로 취재한 기사가 아닙니다.</p><h2>문의와 정정</h2><p><a href="/contact/">문의 페이지</a>에서 이메일과 공개 오류 제보 경로를 확인할 수 있습니다. 개인정보를 포함한 문의는 공개 게시판에 올리지 마세요.</p>`;
+  const about=`<h1>일상을 읽고, 생활을 더 편리하게</h1><p>MODU.TODAY는 일상에서 생기는 궁금함을 직접 확인하고 정리하는 읽을거리와 자주 쓰는 생활 도구를 함께 제공하는 공간입니다. 생활·IT·자동차·부동산·경제·주식·취미 등 주제의 경계를 두지 않습니다.</p><h2>읽을거리를 만드는 기준</h2><p>직접 작성한 설명과 경험, 비교 기준을 담습니다. 외부 자료를 인용할 때는 출처와 확인 시점을 밝히고, 확인된 사실과 의견을 구분합니다. 외부 기사 본문을 옮겨 붙이거나 자동으로 대량 생산한 글을 발행하지 않습니다.</p><p>글마다 작성일과 수정일을 표시합니다. 내용이 잘못되었거나 달라졌다면 문의 채널로 알려주세요. 확인 후 내용을 수정하고 필요한 경우 변경 이유를 본문에 남깁니다.</p><h2>생활에 바로 쓰는 정보</h2><h3><a href="/apt/">아파트 실거래가</a></h3><p>국토교통부 공개 자료를 바탕으로 지역·단지별 신고 거래를 찾을 수 있습니다. 면적·층·거래일을 함께 비교하고, 신고 지연·정정·계약 해제 가능성을 고려하세요.</p><h3><a href="/lotto/">로또 당첨정보</a></h3><p>동행복권 공개 결과를 기준으로 당첨번호, 회차별 기록, 당첨지역과 판매점 정보를 제공합니다. 번호 생성은 무작위이며 당첨을 예측하거나 확률을 높이지 않습니다. 최종 결과는 동행복권 공식 발표를 확인하세요.</p><h3><a href="/tools/">계산기와 기타 도구</a></h3><p>생활 계산기, 웹게임, YouTube 조회수 변화를 제공합니다. 계산 결과는 각 도구에 표시한 가정에 따른 참고값이며, YouTube 순위는 추적 대상의 관측값으로 공식 전체 순위가 아닙니다.</p><h2>자체 글과 외부 뉴스의 구분</h2><p><a href="/reading/">읽을거리</a>는 사이트가 직접 작성한 콘텐츠입니다. <a href="/news/">뉴스</a>는 외부 언론의 제목과 원문 링크를 자동 수집하는 보조 목록이며 독립적으로 취재한 기사가 아닙니다.</p><h2>작성 책임과 자료 확인</h2><p>자체 글은 MODU.TODAY 편집부 명의로 발행하며, 내용에 대한 문의와 정정 요청은 운영자가 받습니다. 외부 전문가의 검토를 받은 것으로 표시하지 않습니다. 직접 해본 경험, 제공사의 발표, 편집부의 해석, 설명용 가상 예제는 본문에서 구분합니다.</p><p>시장가격·제품 사양처럼 바뀌는 정보는 자료 기준일과 원문 링크를 확인해 주세요. 작성일과 수정일은 다른 의미이며, 글이 수정되었다고 모든 수치가 수정일의 최신값인 것은 아닙니다.</p><h2>문의와 정정</h2><p><a href="/contact/">문의 페이지</a>에서 이메일과 공개 오류 제보 경로를 확인할 수 있습니다. 개인정보를 포함한 문의는 공개 게시판에 올리지 마세요.</p>`;
   await write('about/index.html',page({title:'사이트 소개',description:'MODU.TODAY의 읽을거리 편집 기준, 생활 도구의 데이터 출처, 오류 정정과 운영 방식을 안내합니다.',path:'/about/',body:`<article class="info-article">${about}</article>`}));
   for(const [slug,title] of [['contact','문의 및 오류 제보'],['privacy','개인정보처리방침'],['terms','이용안내']]) {
     const original=await fs.readFile(path.join(root,slug,'index.html'),'utf8');
