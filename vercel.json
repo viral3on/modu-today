@@ -84,5 +84,22 @@
     "api/editor.js": {
       "maxDuration": 60
     }
-  }
+  },
+  "redirects": [
+    {
+      "source": "/reading/6f88af15-31a0-4c06-9009-fc63f1a7ac18",
+      "destination": "/apt/guide/",
+      "permanent": true
+    },
+    {
+      "source": "/reading/6f88af15-31a0-4c06-9009-fc63f1a7ac18/",
+      "destination": "/apt/guide/",
+      "permanent": true
+    },
+    {
+      "source": "/reading/6f88af15-31a0-4c06-9009-fc63f1a7ac18/index.html",
+      "destination": "/apt/guide/",
+      "permanent": true
+    }
+  ]
 }

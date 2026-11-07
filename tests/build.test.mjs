@@ -86,9 +86,23 @@ test('build preserves existing tool assets, excludes source and drafts, adds pub
     for(const file of ['admin/index.html','news/index.html','stock/index.html','stock/guide/index.html','404.html','privacy/index.html','terms/index.html','contact/index.html','about/index.html'])assert.ok(!(await read(file)).includes('adsbygoogle'),file);
     assert.ok((await read('stock/index.html')).includes('noindex'));
     assert.ok((await read('apt/index.html')).includes('주요 메뉴'));
-    const guidePath='/reading/6f88af15-31a0-4c06-9009-fc63f1a7ac18/';
+    const guidePath='/apt/guide/';
+    const oldGuidePath='/reading/6f88af15-31a0-4c06-9009-fc63f1a7ac18/';
     assert.ok((await read('apt/index.html')).includes(guidePath));
-    assert.ok(sitemap.includes(guidePath));
+    assert.equal(sitemap.split(`<loc>https://modu.today${guidePath}</loc>`).length-1,1);
+    assert.ok(!sitemap.includes(oldGuidePath));
+    for(const file of ['index.html','reading/index.html','apt/index.html'])assert.ok(!(await read(file)).includes(oldGuidePath),file);
+    for(const file of ['index.html','reading/index.html'])assert.ok(!(await read(file)).includes('아파트 실거래가 이용 가이드'),file);
+    await assert.rejects(read(oldGuidePath.slice(1)+'index.html'));
+    const aptGuide=await read('apt/guide/index.html');
+    assert.ok(aptGuide.includes('<h1>아파트 실거래가 이용 가이드</h1>'));
+    assert.ok(aptGuide.includes('href="https://modu.today/apt/guide/"'));
+    assert.ok(aptGuide.includes('href="/apt/" aria-current="page"'));
+    assert.ok(aptGuide.includes('가상의 동일 단지 거래'));
+    assert.ok(!aptGuide.includes('BlogPosting'));
+    assert.equal(aptGuide.split('pagead/js/adsbygoogle.js?client=').length-1,1);
+    const config=JSON.parse(await fs.readFile(path.join(temp,'vercel.json'),'utf8'));
+    for(const source of [oldGuidePath.slice(0,-1),oldGuidePath,oldGuidePath+'index.html'])assert.ok(config.redirects.some(r=>r.source===source&&r.destination===guidePath&&r.permanent===true));
     for(const file of ['yasun.html','skhynix-split-analysis.html']) {
       const guide=await read(file);
       assert.ok(guide.includes('주요 메뉴'));
