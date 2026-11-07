@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import {createHandler} from '../api/editor.js';
 import {markdown,validatePost} from '../lib/content.mjs';
 
-const valid={title:'직접 써 본 기록',category:'생활',description:'생활에서 확인한 내용을 차근차근 기록한 글입니다.',image:'',imageAlt:'',tags:['기록'],body:'# 시작하기\n\n이 글은 테스트용 본문입니다. 실제 사용자에게 발행하지 않습니다. 입력과 저장의 흐름을 확인합니다.'};
+const valid={title:'직접 써 본 기록',category:'생활',description:'생활에서 확인한 내용을 차근차근 기록한 글입니다.',image:'/assets/og.png',imageAlt:'테스트 대표 이미지',tags:['기록'],body:'# 시작하기\n\n이 글은 테스트용 본문입니다. 실제 사용자에게 발행하지 않습니다. 입력과 저장의 흐름을 확인합니다.'};
 const request=(body,headers={})=>({method:'POST',body,headers:{origin:'https://modu.today','content-type':'application/json',authorization:'Bearer github_pat_abcdefghijklmnopqrstuvwxyz',...headers}});
 function response(){return {headers:{},setHeader(key,value){this.headers[key]=value;},status(code){this.code=code;return this;},json(value){this.data=value;}};}
 function github({admin=true,existing=null,status=200}={}) {
@@ -75,3 +75,10 @@ test('HTML publication retains editable source, format and CSS; invalid formats 
   const invalid=github(),failed=response();await createHandler(invalid.fetcher,{})(request({action:'publish',id:'article-123',post:{...post,format:'script'}}),failed);
   assert.equal(failed.code,400);assert.ok(!invalid.calls.some(c=>c.options.method==='PUT'));
 });
+
+ test('publishing rejects a missing thumbnail before writing to GitHub',async()=>{
+  const gh=github(),res=response();
+  await createHandler(gh.fetcher,{})(request({action:'publish',id:'article-123',post:{...valid,image:'',imageAlt:''}}),res);
+  assert.equal(res.code,400);
+  assert.match(res.data.error,/썸네일/);
+ });

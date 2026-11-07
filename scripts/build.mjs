@@ -76,7 +76,7 @@ export async function build(root=ROOT, output=path.join(root,'public')) {
     const post=JSON.parse(await fs.readFile(path.join(root,'content/posts',filename),'utf8'));
     // Fail closed: private drafts must never be copied into a deployment.
     if(post.status!=='published')continue;
-    validatePost(post);
+    validatePost(post, {requireImage:true});
     if(!ID.test(post.id)||filename!==`${post.id}.json`)throw new Error('Invalid article path');
     for(const date of [post.publishedAt,post.updatedAt,post.createdAt])if(!date||Number.isNaN(Date.parse(date)))throw new Error('Invalid article date');
     posts.push(post);

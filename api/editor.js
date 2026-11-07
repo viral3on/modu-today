@@ -71,7 +71,7 @@ export function createHandler(fetcher = fetch, environment = process.env, putBlo
       if (body.action !== 'publish') throw new HttpError(400, '지원하지 않는 작업입니다.');
       if ((existing?.sha || null) !== (body.sha || null)) throw new HttpError(409, '저장소의 글이 변경되었습니다. 초안을 내보낸 뒤 다시 불러와 주세요.');
       let fields;
-      try { fields = validatePost(body.post); } catch (error) { throw new HttpError(400, error.message); }
+      try { fields = validatePost(body.post, {requireImage:true}); } catch (error) { throw new HttpError(400, error.message); }
       const now = new Date().toISOString();
       const post = {...fields, id:body.id, status:'published', author:'MODU.TODAY 편집부', createdAt:previous?.createdAt || now, publishedAt:previous?.publishedAt || now, updatedAt:now};
       const result = await gh(path, {method:'PUT', body:JSON.stringify({
