@@ -1,43 +1,14 @@
-name: Auto Update Market News
+name: News collection retired
 
 on:
-  schedule:
-    # GitHub Actions cron uses UTC. KST: 06:00 / 09:00 / 12:00 / 15:00 / 18:00 / 21:00
-    - cron: '0 21 * * *'
-    - cron: '0 0 * * *'
-    - cron: '0 3 * * *'
-    - cron: '0 6 * * *'
-    - cron: '0 9 * * *'
-    - cron: '0 12 * * *'
   workflow_dispatch:
 
-concurrency:
-  group: modu-news-update
-  cancel-in-progress: false
+permissions:
+  contents: read
 
 jobs:
-  build:
+  notice:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
     steps:
-      - name: 저장소 체크아웃
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-      - name: 파이썬 환경 설정
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.10'
-      - name: 필수 라이브러리 설치
-        run: pip install feedparser
-      - name: Collect external news links without replacing editorial homepage
-        run: python update_news.py
-      - name: 변경사항 자동 커밋 및 푸시
-        run: |
-          git config --global user.name "MarketBot"
-          git config --global user.email "bot@example.com"
-          git add news/data.json
-          git commit -m "Update external news links" || exit 0
-          git pull --rebase origin main
-          git push
+      - name: Explain retired collection
+        run: echo "Automatic news collection ended on 2026-11-07. No data is fetched or published."

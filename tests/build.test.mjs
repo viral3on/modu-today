@@ -4,26 +4,21 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import os from 'node:os';
 import {build,ROOT} from '../scripts/build.mjs';
-import {home,article,reading,newsPage,validNewsItems,header} from '../lib/site.mjs';
+import {home,article,reading,newsPage,header} from '../lib/site.mjs';
 
-test('news migration artifacts cannot become news headings or generic article links',()=>{
-  const valid={category:'국내 증시 / 코스피 코스닥',title:'정상 기사 제목',source:'정상 언론사',url:'https://news.google.com/articles/valid'};
-  const malformed={category:'무료 웹게임',title:'기사 보기',source:'제목이 출처로 잘못 옮겨진 항목',url:'https://news.google.com/articles/legacy'};
-  const news={items:[malformed,{...valid,title:'기사 보기'},valid]};
-  assert.deepEqual(validNewsItems(news),[valid]);
-  for(const html of [newsPage(news),home([],news,null)]) {
-    assert.ok(html.includes('정상 기사 제목'));
-    assert.ok(html.includes('정상 언론사 · 외부 기사'));
-    assert.ok(!html.includes('무료 웹게임'));
-    assert.ok(!html.includes('>기사 보기<'));
-    assert.ok(!html.includes('/articles/legacy'));
-  }
+test('retired news never republishes external headlines or a news navigation item',()=>{
+  const news={items:[{title:'EXTERNAL_HEADLINE_SENTINEL',url:'https://news.google.com/articles/sample',source:'External'}]};
+  const html=newsPage(news);
+  assert.ok(html.includes('자동 뉴스 모음 운영을 종료했습니다'));
+  assert.ok(html.includes('noindex,follow'));
+  assert.ok(!html.includes('EXTERNAL_HEADLINE_SENTINEL'));
+  assert.ok(!header().includes('href="/news/"'));
 });
 
 const post={id:'sample-article-123',title:'샘플 테스트 글',category:'생활',description:'검색 결과와 메인 화면에서 확인할 글 요약입니다.',image:'',imageAlt:'',body:'# 소제목\n\n테스트로 작성한 본문이며 실제 발행할 글이 아닙니다. 생성 결과를 확인하는 테스트 전용 내용입니다.',tags:['기록'],status:'published',createdAt:'2026-09-01T00:00:00Z',publishedAt:'2026-09-01T00:00:00Z',updatedAt:'2026-09-02T00:00:00Z'};
-test('home keeps reading categories in the reading section; news stays last',()=>{
-  const html=home([post],{items:[]},{draw:100,numbers:[1,2,3,4,5,6],bonus:7});
-  const ids=['latest-reading','everyday-shortcuts','useful-tools','latest-news'];
+test('home leads with original reading and tools instead of syndicated news',()=>{
+  const html=home([post],{draw:100,numbers:[1,2,3,4,5,6],bonus:7});
+  const ids=['latest-reading','everyday-shortcuts','useful-tools','use-with-confidence'];
   const indexes=ids.map(id=>html.indexOf(`id="${id}"`));assert.ok(indexes.every((n,i)=>n>0&&(!i||n>indexes[i-1])));
   assert.match(html,/class="essential apt-feature" href="\/apt\/"/);assert.match(html,/class="essential lotto-feature" href="\/lotto\/"/);
   assert.ok(html.includes('/reading/?category=%EC%83%9D%ED%99%9C'));
@@ -38,15 +33,15 @@ test('article metadata and visible dates reflect the same content',()=>{
 });
 
 test('public category navigation only includes categories with published posts',()=>{
-  const html=home([post],{items:[]},null);
+  const html=home([post],null);
   assert.ok(html.includes('/reading/?category=%EC%83%9D%ED%99%9C'));
   assert.ok(!html.includes('/reading/?category=IT'));
   assert.ok(!reading([post]).includes('data-filter="IT"'));
-  assert.ok(!home([],{items:[]},null).includes('/reading/?category='));
+  assert.ok(!home([],null).includes('/reading/?category='));
 });
 test('visible article dates use Korea time while machine timestamps retain the original instant',()=>{
   const crossing={...post,publishedAt:'2026-11-06T23:00:00Z',updatedAt:'2026-11-06T23:30:00Z'};
-  for(const html of [article(crossing),reading([crossing]),home([crossing],{items:[]},null)]) {
+  for(const html of [article(crossing),reading([crossing]),home([crossing],null)]) {
     assert.ok(html.includes('2026.11.07'));
     assert.ok(!html.includes('2026.11.06'));
   }
@@ -54,7 +49,7 @@ test('visible article dates use Korea time while machine timestamps retain the o
 });
 test('home and reading share custom categories and the main navigation links to YouTube',()=>{
   const posts=[{...post,category:'AI·테크'},{...post,category:'AI·테크'},{...post,category:'새 주제 & <정보>'}];
-  const html=home(posts,{items:[]},null);
+  const html=home(posts,null);
   assert.equal(html.split(`href="/reading/?category=${encodeURIComponent('AI·테크')}"`).length-1,1);
   assert.ok(html.includes('새 주제 &amp; &lt;정보&gt;'));
   assert.ok(reading(posts).includes('data-filter="AI·테크"'));
@@ -70,8 +65,11 @@ test('build preserves existing tool assets, excludes source and drafts, adds pub
     await fs.writeFile(path.join(temp,`content/posts/${post.id}.json`),JSON.stringify(post));
     await fs.writeFile(path.join(temp,'content/posts/html-article-123.json'),JSON.stringify({...post,id:'html-article-123',format:'html',css:'body{color:red}',body:'<h2>HTML 발행 확인</h2><p>이미지와 표를 포함한 글을 서버에서 정리하여 출력하고 검색에서도 본문을 읽을 수 있는지 확인합니다.</p><img src="/assets/og.png" alt="확인용 이미지" onerror="alert(1)"><script>alert(1)</script>'}));
     await fs.writeFile(path.join(temp,'content/posts/private-draft.json'),JSON.stringify({...post,status:'draft',body:'SECRET DRAFT'}));
+    await fs.unlink(path.join(temp,'news/data.json')); // No dependence on retired RSS data.
     await build(temp);
     const read=rel=>fs.readFile(path.join(temp,'public',rel),'utf8');
+    await assert.rejects(read('news/data.json'));
+    assert.ok(!(await read('index.html')).includes('id="latest-news"'));
     const sitemap=await read('sitemap.xml');assert.ok(sitemap.includes(`/reading/${post.id}/`));
     for(const hidden of ['/admin/','/stock/','/news/','private-draft'])assert.ok(!sitemap.includes(hidden));
     assert.ok(!(await read('reading/index.html')).includes('SECRET DRAFT'));

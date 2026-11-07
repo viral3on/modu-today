@@ -156,7 +156,7 @@
       const diffPercent = ((diff / curPrice) * 100).toFixed(1);
 
       document.getElementById('finalAvgPrice').innerText = finalAvg.toLocaleString() + ' 원';
-      document.getElementById('priceDiffNote').innerText = `기존 대비 평단가 ${diff.toLocaleString()}원 (${diffPercent}%) 인하`;
+      document.getElementById('priceDiffNote').innerText = diff === 0 ? '기존 평균 단가와 같습니다.' : `기존 대비 평단가 ${Math.abs(diff).toLocaleString()}원 (${Math.abs(Number(diffPercent))}%) ${diff > 0 ? '인하' : '상승'}`;
       document.getElementById('displayTotalQty').innerText = totalQty.toLocaleString() + ' 주/개';
       document.getElementById('displayAddTotal').innerText = Math.round(addTotal).toLocaleString() + ' 원';
       document.getElementById('displayGrandTotal').innerText = Math.round(grandTotal).toLocaleString() + ' 원';
