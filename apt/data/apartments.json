@@ -1,5 +1,5 @@
 {
-"updated_at":"2026-11-07T22:25+09:00",
+"updated_at":"2026-11-08T10:31+09:00",
 "apartments":[
 {"region_code":"51150","sido":"강원특별자치도","sigungu":"강릉시","region":"강원특별자치도 강릉시","dong":"견소동","apt":"강릉오션시티아이파크"},
 {"region_code":"51150","sido":"강원특별자치도","sigungu":"강릉시","region":"강원특별자치도 강릉시","dong":"견소동","apt":"송정한신"},
@@ -554,6 +554,7 @@
 {"region_code":"51130","sido":"강원특별자치도","sigungu":"원주시","region":"강원특별자치도 원주시","dong":"우산동","apt":"원주신일유토빌"},
 {"region_code":"51130","sido":"강원특별자치도","sigungu":"원주시","region":"강원특별자치도 원주시","dong":"우산동","apt":"한라비발디"},
 {"region_code":"51130","sido":"강원특별자치도","sigungu":"원주시","region":"강원특별자치도 원주시","dong":"우산동","apt":"한라비발디2차"},
+{"region_code":"51130","sido":"강원특별자치도","sigungu":"원주시","region":"강원특별자치도 원주시","dong":"원동","apt":"두산위브더제니스센트럴원주"},
 {"region_code":"51130","sido":"강원특별자치도","sigungu":"원주시","region":"강원특별자치도 원주시","dong":"원동","apt":"원동주공1"},
 {"region_code":"51130","sido":"강원특별자치도","sigungu":"원주시","region":"강원특별자치도 원주시","dong":"원동","apt":"원동주공2"},
 {"region_code":"51130","sido":"강원특별자치도","sigungu":"원주시","region":"강원특별자치도 원주시","dong":"원동","apt":"원동진로"},
