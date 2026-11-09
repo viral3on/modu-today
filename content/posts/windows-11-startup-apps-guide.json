@@ -1,0 +1,20 @@
+{
+  "id": "windows-11-startup-apps-guide",
+  "title": "윈도우 11 켜고 나서 느리다면? 시작 앱부터 정리하는 방법",
+  "description": "로그인하자마자 여러 앱이 뜨는 PC에서 확인할 시작 앱 설정. 꺼도 되는 항목을 고르는 기준, 작업 관리자 확인법, 원상복구 순서를 안내합니다.",
+  "image": "/assets/editorial/win11-startup.jpg",
+  "imageAlt": "노트북과 앱 타일, 상승 화살표를 파랑과 노랑 판화 스타일로 표현한 시작 앱 정리 개념 이미지",
+  "tags": [
+    "윈도우11",
+    "시작앱",
+    "PC설정"
+  ],
+  "body": "\n<p>PC 전원을 켠 뒤 바탕화면은 나왔는데 메신저와 게임 실행기, 여러 알림이 한꺼번에 뜨나요? 이때는 ‘컴퓨터 전체가 느리다’고 결론 내리기 전에 <strong>로그인할 때 자동으로 실행되는 앱</strong>부터 살펴볼 만합니다. 매일 쓰는 앱은 남기고 가끔 쓰는 앱만 필요할 때 여는 방식입니다.</p>\n<p>이 글은 Microsoft Windows 11의 시작 앱 설정을 다룹니다. 설정을 끄는 것은 프로그램을 삭제하는 작업이 아닙니다. 회사나 학교에서 관리하는 PC라면 조직에서 정한 항목을 임의로 바꾸지 마세요.</p>\n<h2>1. 시작 앱 목록 열기</h2><div class=\"route\">시작 → 설정 → 앱 → 시작 프로그램</div>\n<ol><li>작업 표시줄의 <strong>시작</strong> 버튼을 누르고 <strong>설정</strong>을 엽니다.</li><li>왼쪽에서 <strong>앱</strong>을 선택한 뒤 <strong>시작 프로그램</strong> 항목으로 들어갑니다. 버전에 따라 ‘시작 앱’으로 표시될 수 있습니다.</li><li>찾기 어렵다면 설정 검색창에 <strong>시작</strong>을 입력해 관련 항목을 찾습니다.</li></ol>\n<p>영문 화면에서는 Apps → Startup입니다. 오른쪽 스위치가 On이면 로그인할 때 자동으로 시작하도록 설정된 상태이고, Off이면 자동 시작을 끈 상태입니다. 위 상자는 메뉴 경로 안내이며 실제 스크린샷은 아닙니다.</p>\n<h2>2. 전부 끄지 말고, 내가 아는 앱부터 고르기</h2>\n<p>목록에 많다는 이유만으로 모두 끄면 평소 필요했던 알림이나 동기화가 늦어질 수 있습니다. 다음 표는 앱 이름을 일괄 차단하는 목록이 아니라, 자신의 사용 습관을 판단하기 위한 기준입니다.</p>\n<table><thead><tr><th>사용 상황</th><th>검토 방향</th></tr></thead><tbody>\n<tr><td>주말에만 쓰는 게임 실행기</td><td>자동 시작을 끄고 게임할 때 직접 실행하는 방식 검토</td></tr>\n<tr><td>출근 직후 꼭 쓰는 메신저</td><td>즉시 알림이 필요하면 유지</td></tr>\n<tr><td>문서를 자동으로 올리는 동기화 앱</td><td>백업·동기화 흐름을 확인한 뒤 결정</td></tr>\n<tr><td>보안, 입력 장치, 회사 업무 관련이거나 정체를 모르는 항목</td><td>이 글만 보고 끄지 말고 용도와 관리 지침 먼저 확인</td></tr>\n</tbody></table>\n<p>예를 들어 일주일에 한 번 쓰는 편집 앱이 매일 로그인 때 떠 있다면 우선 검토 대상입니다. 반대로 매일 쓰는 업무 도구라면 시작 시간을 조금 줄이는 것보다 준비되어 있는 편이 편할 수 있습니다. 목표는 가장 적은 앱 수가 아니라 <strong>내가 원하지 않는 자동 실행을 줄이는 것</strong>입니다.</p>\n<h2>3. 한두 개만 끄고 다시 시작해 비교하기</h2>\n<ol><li>용도를 확실히 아는 앱 한두 개를 고르고 이름을 적어 둡니다.</li><li>해당 앱의 스위치를 <strong>끔</strong>으로 바꿉니다.</li><li>열어 둔 문서를 저장한 뒤 시작 메뉴의 전원 메뉴에서 <strong>다시 시작</strong>을 선택합니다.</li><li>로그인 후 원치 않는 창이 줄었는지, 필요한 앱을 직접 열 수 있는지 확인합니다.</li></ol>\n<p>체감 비교는 비슷한 조건에서 해보세요. 한 번은 업데이트가 진행 중이고 다른 한 번은 아무 작업이 없다면 결과를 비교하기 어렵습니다. ‘전원 버튼을 누른 시점’과 ‘로그인 후 사용 준비가 된 시점’도 구분해서 기록하면 어느 구간이 불편한지 더 명확해집니다.</p>\n<h2>4. 영향이 큰 앱은 작업 관리자에서 참고하기</h2>\n<p><strong>시작 버튼을 오른쪽 클릭 → 작업 관리자 → 시작 앱</strong>으로 들어가면 상태와 시작 영향 정보를 볼 수 있습니다. ‘높음’은 먼저 살펴볼 단서이지, 반드시 끄라는 판정은 아닙니다. ‘측정되지 않음’도 영향이 없다는 뜻은 아닙니다. Microsoft는 해당 항목의 영향 측정 데이터가 없음을 뜻한다고 설명합니다.</p>\n<p>설정 목록에 없는 앱이 계속 열린다면 해당 앱 자체의 ‘로그인 시 실행’ 설정도 확인하세요. 낯선 항목을 없애려고 레지스트리나 시스템 폴더부터 지울 필요는 없습니다.</p>\n<h2>불편해졌다면 이렇게 되돌리세요</h2>\n<p>같은 시작 프로그램 화면에서 적어 둔 앱을 다시 <strong>켬</strong>으로 바꾸면 됩니다. 메신저가 조용해졌거나 파일 동기화가 예상보다 늦다면 먼저 해당 앱을 직접 실행해 보고, 자동 실행이 필요한지 다시 결정하세요.</p>\n<p>몇 개를 정리해도 느린 증상이 그대로라면 더 많은 항목을 무작정 끄지 마세요. 로그인 이전부터 오래 걸리는지, 로그인 뒤 특정 앱만 느린지 기록해 다음 점검 범위를 좁히는 편이 낫습니다. 이 설정만으로 모든 부팅 지연을 해결하거나 일정한 속도 향상을 보장할 수는 없습니다.</p>\n<p><small>2026년 11월 9일 확인. 메뉴 위치는 Windows 버전에 따라 다를 수 있습니다. 출처: <a href=\"https://support.microsoft.com/en-us/windows/experience/startup-boot/configure-startup-applications-in-windows\">Microsoft 시작 앱 구성 안내</a>, <a href=\"https://www.microsoft.com/en-us/windows/learning-center/take-control-of-windows-startup\">Microsoft 시작 앱 관리 설명</a>. 사용 상황별 판단표와 비교 방법은 MODU.TODAY 편집부가 작성했습니다. 대표 이미지는 AI로 제작한 개념 이미지입니다.</small></p>",
+  "format": "html",
+  "css": "figure{margin:24px 0}figure img{display:block;max-width:100%;height:auto;margin:auto;border:1px solid #dbe3ed;border-radius:8px}figcaption{font-size:13px;color:#536174;line-height:1.7;margin-top:10px}.route{padding:20px;background:#eef4ff;border-left:4px solid #345bd5;border-radius:10px;font-size:18px;font-weight:700}.note{padding:16px;background:#fff7e5;border-radius:10px}",
+  "category": "IT",
+  "status": "published",
+  "updatedAt": "2026-11-09T10:26:07.000Z",
+  "publishedAt": "2026-11-09T10:26:07.000Z",
+  "createdAt": "2026-11-09T10:26:07.000Z"
+}
