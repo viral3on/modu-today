@@ -1,5 +1,5 @@
 {
-"updated_at":"2026-11-08T22:47+09:00",
+"updated_at":"2026-11-09T10:49+09:00",
 "apartments":[
 {"region_code":"51150","sido":"강원특별자치도","sigungu":"강릉시","region":"강원특별자치도 강릉시","dong":"견소동","apt":"강릉오션시티아이파크"},
 {"region_code":"51150","sido":"강원특별자치도","sigungu":"강릉시","region":"강원특별자치도 강릉시","dong":"견소동","apt":"송정한신"},
@@ -15110,6 +15110,7 @@
 {"region_code":"11350","sido":"서울특별시","sigungu":"노원구","region":"서울특별시 노원구","dong":"중계동","apt":"성원1"},
 {"region_code":"11350","sido":"서울특별시","sigungu":"노원구","region":"서울특별시 노원구","dong":"중계동","apt":"신동아(366)"},
 {"region_code":"11350","sido":"서울특별시","sigungu":"노원구","region":"서울특별시 노원구","dong":"중계동","apt":"신안"},
+{"region_code":"11350","sido":"서울특별시","sigungu":"노원구","region":"서울특별시 노원구","dong":"중계동","apt":"신일"},
 {"region_code":"11350","sido":"서울특별시","sigungu":"노원구","region":"서울특별시 노원구","dong":"중계동","apt":"양지마을(대림)1"},
 {"region_code":"11350","sido":"서울특별시","sigungu":"노원구","region":"서울특별시 노원구","dong":"중계동","apt":"양지마을(대림)2"},
 {"region_code":"11350","sido":"서울특별시","sigungu":"노원구","region":"서울특별시 노원구","dong":"중계동","apt":"염광"},
@@ -16709,6 +16710,7 @@
 {"region_code":"11470","sido":"서울특별시","sigungu":"양천구","region":"서울특별시 양천구","dong":"목동","apt":"행복자"},
 {"region_code":"11470","sido":"서울특별시","sigungu":"양천구","region":"서울특별시 양천구","dong":"목동","apt":"현대"},
 {"region_code":"11470","sido":"서울특별시","sigungu":"양천구","region":"서울특별시 양천구","dong":"목동","apt":"현대파크빌(907-23)"},
+{"region_code":"11470","sido":"서울특별시","sigungu":"양천구","region":"서울특별시 양천구","dong":"목동","apt":"현대하이페리온"},
 {"region_code":"11470","sido":"서울특별시","sigungu":"양천구","region":"서울특별시 양천구","dong":"신월동","apt":"거산"},
 {"region_code":"11470","sido":"서울특별시","sigungu":"양천구","region":"서울특별시 양천구","dong":"신월동","apt":"금강"},
 {"region_code":"11470","sido":"서울특별시","sigungu":"양천구","region":"서울특별시 양천구","dong":"신월동","apt":"금하뜨라네"},
@@ -19058,6 +19060,7 @@
 {"region_code":"28200","sido":"인천광역시","sigungu":"남동구","region":"인천광역시 남동구","dong":"만수동","apt":"만수주공5단지"},
 {"region_code":"28200","sido":"인천광역시","sigungu":"남동구","region":"인천광역시 남동구","dong":"만수동","apt":"만수주공6단지"},
 {"region_code":"28200","sido":"인천광역시","sigungu":"남동구","region":"인천광역시 남동구","dong":"만수동","apt":"벽산"},
+{"region_code":"28200","sido":"인천광역시","sigungu":"남동구","region":"인천광역시 남동구","dong":"만수동","apt":"산호(844-125)"},
 {"region_code":"28200","sido":"인천광역시","sigungu":"남동구","region":"인천광역시 남동구","dong":"만수동","apt":"삼부"},
 {"region_code":"28200","sido":"인천광역시","sigungu":"남동구","region":"인천광역시 남동구","dong":"만수동","apt":"삼용"},
 {"region_code":"28200","sido":"인천광역시","sigungu":"남동구","region":"인천광역시 남동구","dong":"만수동","apt":"삼익세라믹"},
