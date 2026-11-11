@@ -1,5 +1,5 @@
 {
-"updated_at":"2026-11-11T11:03+09:00",
+"updated_at":"2026-11-11T18:32+09:00",
 "apartments":[
 {"region_code":"51150","sido":"강원특별자치도","sigungu":"강릉시","region":"강원특별자치도 강릉시","dong":"견소동","apt":"강릉오션시티아이파크"},
 {"region_code":"51150","sido":"강원특별자치도","sigungu":"강릉시","region":"강원특별자치도 강릉시","dong":"견소동","apt":"송정한신"},
@@ -1101,6 +1101,7 @@
 {"region_code":"41281","sido":"경기도","sigungu":"고양시 덕양구","region":"경기도 고양시 덕양구","dong":"행신동","apt":"행신동문"},
 {"region_code":"41281","sido":"경기도","sigungu":"고양시 덕양구","region":"경기도 고양시 덕양구","dong":"행신동","apt":"행신벽산"},
 {"region_code":"41281","sido":"경기도","sigungu":"고양시 덕양구","region":"경기도 고양시 덕양구","dong":"행신동","apt":"행신파밀리에트라이하이"},
+{"region_code":"41281","sido":"경기도","sigungu":"고양시 덕양구","region":"경기도 고양시 덕양구","dong":"향동동","apt":"DMC 호반 써밋"},
 {"region_code":"41281","sido":"경기도","sigungu":"고양시 덕양구","region":"경기도 고양시 덕양구","dong":"향동동","apt":"DMC두산위브더퍼스트"},
 {"region_code":"41281","sido":"경기도","sigungu":"고양시 덕양구","region":"경기도 고양시 덕양구","dong":"향동동","apt":"DMC리슈빌더포레스트"},
 {"region_code":"41281","sido":"경기도","sigungu":"고양시 덕양구","region":"경기도 고양시 덕양구","dong":"향동동","apt":"DMC중흥S-클래스더센트럴"},
