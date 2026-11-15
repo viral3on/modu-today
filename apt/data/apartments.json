@@ -1,5 +1,5 @@
 {
-"updated_at":"2026-11-14T22:44+09:00",
+"updated_at":"2026-11-15T11:02+09:00",
 "apartments":[
 {"region_code":"51150","sido":"강원특별자치도","sigungu":"강릉시","region":"강원특별자치도 강릉시","dong":"견소동","apt":"강릉오션시티아이파크"},
 {"region_code":"51150","sido":"강원특별자치도","sigungu":"강릉시","region":"강원특별자치도 강릉시","dong":"견소동","apt":"송정한신"},
@@ -3131,6 +3131,7 @@
 {"region_code":"41111","sido":"경기도","sigungu":"수원시 장안구","region":"경기도 수원시 장안구","dong":"영화동","apt":"동성영화타운"},
 {"region_code":"41111","sido":"경기도","sigungu":"수원시 장안구","region":"경기도 수원시 장안구","dong":"영화동","apt":"수정"},
 {"region_code":"41111","sido":"경기도","sigungu":"수원시 장안구","region":"경기도 수원시 장안구","dong":"영화동","apt":"태영"},
+{"region_code":"41111","sido":"경기도","sigungu":"수원시 장안구","region":"경기도 수원시 장안구","dong":"율전동","apt":"건우2차"},
 {"region_code":"41111","sido":"경기도","sigungu":"수원시 장안구","region":"경기도 수원시 장안구","dong":"율전동","apt":"늘푸른벽산"},
 {"region_code":"41111","sido":"경기도","sigungu":"수원시 장안구","region":"경기도 수원시 장안구","dong":"율전동","apt":"대우이안"},
 {"region_code":"41111","sido":"경기도","sigungu":"수원시 장안구","region":"경기도 수원시 장안구","dong":"율전동","apt":"밤꽃마을뜨란채"},
