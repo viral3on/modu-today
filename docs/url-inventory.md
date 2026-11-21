@@ -47,7 +47,7 @@
 | https://modu.today/lotto/1148/ | ③ | 제외 | draw outside maintained history hub |
 | https://modu.today/lotto/1149/ | ③ | 제외 | draw outside maintained history hub |
 | https://modu.today/lotto/1150/ | ③ | 제외 | draw outside maintained history hub |
-| https://modu.today/lotto/1151/ | ③ | 포함 | 고유 회차 데이터: 기록 허브에 연결된 회차 유지 |
+| https://modu.today/lotto/1151/ | ③ | 제외 | draw outside maintained history hub |
 | https://modu.today/lotto/1152/ | ③ | 포함 | 고유 회차 데이터: 기록 허브에 연결된 회차 유지 |
 | https://modu.today/lotto/1153/ | ③ | 포함 | 고유 회차 데이터: 기록 허브에 연결된 회차 유지 |
 | https://modu.today/lotto/1154/ | ③ | 포함 | 고유 회차 데이터: 기록 허브에 연결된 회차 유지 |
@@ -147,6 +147,7 @@
 | https://modu.today/lotto/1248/ | ③ | 포함 | 고유 회차 데이터: 기록 허브에 연결된 회차 유지 |
 | https://modu.today/lotto/1249/ | ③ | 포함 | 고유 회차 데이터: 기록 허브에 연결된 회차 유지 |
 | https://modu.today/lotto/1250/ | ③ | 포함 | 고유 회차 데이터: 기록 허브에 연결된 회차 유지 |
+| https://modu.today/lotto/1251/ | ③ | 포함 | 고유 회차 데이터: 기록 허브에 연결된 회차 유지 |
 | https://modu.today/lotto/history/ | ② | 포함 | 서비스/탐색/신뢰 정보 |
 | https://modu.today/lotto/ | ② | 포함 | 서비스/탐색/신뢰 정보 |
 | https://modu.today/naver6e73a9fbc73e45bd5d7efab1c336bf9a.html | 보호 | 제외 | 인증 파일 수정 금지 |
