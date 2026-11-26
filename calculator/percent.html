@@ -154,16 +154,16 @@
 (() => {
   const ids=["p1a","p1b","p2a","p2b","p3a","p3b","p4a","p4b","p5a","p5b","p6a","p6b","p7target","p7pct"];
   const n=id=>{const raw=document.getElementById(id).value.replace(/,/g,"").trim();if(raw==="")return null;const val=Number(raw);return Number.isFinite(val)?val:null};
-  const fmt=value=>{if(!Number.isFinite(value))return"0";const abs=Math.abs(value);const maxDigits=abs<1?4:2;return value.toLocaleString("ko-KR",{maximumFractionDigits:maxDigits})};
-  const pct=value=>Number.isFinite(value)?fmt(value)+"%":"0%";
+  const fmt=value=>{if(value===null)return"값을 입력하세요";if(!Number.isFinite(value))return"계산 불가";const abs=Math.abs(value);const maxDigits=abs<1?4:2;return value.toLocaleString("ko-KR",{maximumFractionDigits:maxDigits})};
+  const pct=value=>value===null?"값을 입력하세요":Number.isFinite(value)?fmt(value)+"%":"계산 불가";
   function update(){let a,b,r;
-    a=n("p1a");b=n("p1b");r=(a!==null&&b!==null)?a*b/100:0;document.getElementById("p1r").textContent=fmt(r);
-    a=n("p2a");b=n("p2b");r=(a!==null&&b!==null&&b!==0)?a/b*100:0;document.getElementById("p2r").textContent=pct(r);
-    a=n("p3a");b=n("p3b");r=(a!==null&&b!==null&&a!==0)?(b-a)/Math.abs(a)*100:0;document.getElementById("p3r").textContent=pct(r);document.getElementById("p3s").textContent=r>0?"상승":r<0?"하락":"변화 없음";
-    a=n("p4a");b=n("p4b");document.getElementById("p4up").textContent=fmt((a!==null&&b!==null)?a*(1+b/100):0);document.getElementById("p4down").textContent=fmt((a!==null&&b!==null)?a*(1-b/100):0);
-    a=n("p5a");b=n("p5b");r=(a!==null&&b!==null&&a!==0)?(a-b)/a*100:0;document.getElementById("p5r").textContent=pct(r);document.getElementById("p5s").textContent="할인 금액 "+fmt((a!==null&&b!==null)?a-b:0);
-    a=n("p6a");b=n("p6b");const discounted=(a!==null&&b!==null)?a*(1-b/100):0;const saved=(a!==null&&b!==null)?a*b/100:0;document.getElementById("p6r").textContent=fmt(discounted);document.getElementById("p6s").textContent="절약 금액 "+fmt(saved);
-    a=n("p7target");b=n("p7pct");r=(a!==null&&b!==null&&b!==0)?a/(b/100):0;document.getElementById("p7r").textContent=fmt(r);
+    a=n("p1a");b=n("p1b");r=(a!==null&&b!==null)?a*b/100:null;document.getElementById("p1r").textContent=fmt(r);
+    a=n("p2a");b=n("p2b");r=(a===null||b===null)?null:b===0?NaN:a/b*100;document.getElementById("p2r").textContent=pct(r);
+    a=n("p3a");b=n("p3b");r=(a===null||b===null)?null:a===0?NaN:(b-a)/Math.abs(a)*100;document.getElementById("p3r").textContent=pct(r);document.getElementById("p3s").textContent=r===null?"":!Number.isFinite(r)?"기준값이 0이면 증감률을 계산할 수 없습니다":r>0?"상승":r<0?"하락":"변화 없음";
+    a=n("p4a");b=n("p4b");document.getElementById("p4up").textContent=fmt((a!==null&&b!==null)?a*(1+b/100):null);document.getElementById("p4down").textContent=fmt((a!==null&&b!==null)?a*(1-b/100):null);
+    a=n("p5a");b=n("p5b");r=(a===null||b===null)?null:a===0?NaN:(a-b)/a*100;document.getElementById("p5r").textContent=pct(r);document.getElementById("p5s").textContent="할인 금액 "+fmt((a!==null&&b!==null)?a-b:null);
+    a=n("p6a");b=n("p6b");const discounted=(a!==null&&b!==null)?a*(1-b/100):null;const saved=(a!==null&&b!==null)?a*b/100:null;document.getElementById("p6r").textContent=fmt(discounted);document.getElementById("p6s").textContent="절약 금액 "+fmt(saved);
+    a=n("p7target");b=n("p7pct");r=(a===null||b===null)?null:b===0?NaN:a/(b/100);document.getElementById("p7r").textContent=fmt(r);
   }
   ids.forEach(id=>document.getElementById(id).addEventListener("input",update));update();
 })();
